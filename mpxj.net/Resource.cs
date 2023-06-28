@@ -6,10 +6,10 @@ public class Resource
     internal readonly net.sf.mpxj.Resource _proxy;
 
     internal Resource(ProjectFile projectFile, net.sf.mpxj.Resource proxy)
-	{
+    {
         _projectFile = projectFile;
         _proxy = proxy;
-	}
+    }
 
     public Resource AddResource()
     {
@@ -460,9 +460,15 @@ public class Resource
         return _proxy.getStart(index);
     }
 
-    void setFinish(int index, java.util.Date value);
+    public void SetFinish(int index, java.util.Date value)
+    {
+        _proxy.setFinish(index, value);
+    }
 
-    java.util.Date getFinish(int index);
+    public java.util.Date GetFinish(int index)
+    {
+        return _proxy.getFinish(index);
+    }
 
     void setNumber(int index, java.lang.Number value);
 
@@ -578,6 +584,7 @@ public class Resource
         set => _proxy.setResourceID(value);
     }
 
+/* TODO: fix in version 12.0.0
     public bool ModifyOnIntegrate
     {
         get => _proxy.getModifyOnIntegrate();
@@ -589,6 +596,8 @@ public class Resource
         get => _proxy.getExpensesOnly();
         set => _proxy.setExpensesOnly(value);
     }
+*/
+
 
     public java.lang.Number PeriodDur
     {
@@ -626,19 +635,32 @@ public class Resource
         set => _proxy.setPhone(value);
     }
 
-    public bool Role
+    /* TODO: fix applied in 12.0.0
+        public bool Role
+        {
+            get => _proxy.getRole();
+            set => _proxy.setRole(value);
+        }
+    */
+    public void SetCostRateTable(int index, net.sf.mpxj.CostRateTable crt)
     {
-        get => _proxy.getRole();
-        set => _proxy.setRole(value);
+        _proxy.setCostRateTable(index, crt);
     }
 
-    void setCostRateTable(int index, CostRateTable crt);
+    public net.sf.mpxj.CostRateTable getCostRateTable(int index)
+    {
+        return _proxy.getCostRateTable(index);
+    }
 
-    net.sf.mpxj.CostRateTable getCostRateTable(int index);
+    public net.sf.mpxj.CostRateTableEntry GetCurrentCostRateTableEntry(int costRateTable)
+    {
+        return _proxy.getCurrentCostRateTableEntry(costRateTable);
+    }
 
-    net.sf.mpxj.CostRateTableEntry getCurrentCostRateTableEntry(int costRateTable);
-
-    public net.sf.mpxj.AvailabilityTable Availability();    
+    public net.sf.mpxj.AvailabilityTable Availability
+    {
+        get => _proxy.getAvailability();
+    }
 
     public java.lang.Number BudgetCost
     {
@@ -664,13 +686,25 @@ public class Resource
         set => _proxy.setBaselineBudgetWork(value);
     }
 
-    java.lang.Number getBaselineBudgetCost(int baselineNumber);
+    public java.lang.Number GetBaselineBudgetCost(int baselineNumber)
+    {
+        return _proxy.getBaselineBudgetCost(baselineNumber);
+    }
 
-    void setBaselineBudgetCost(int baselineNumber, java.lang.Number value);
+    public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value)
+    {
+        _proxy.setBaselineBudgetCost(baselineNumber, value);
+    }
 
-    net.sf.mpxj.Duration getBaselineBudgetWork(int baselineNumber);
+    public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber)
+    {
+        return _proxy.getBaselineBudgetWork(baselineNumber);
+    }
 
-    void setBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value);
+    public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value)
+    {
+        _proxy.setBaselineBudgetWork(baselineNumber, value);
+    }
 
     public string CostCenter
     {
