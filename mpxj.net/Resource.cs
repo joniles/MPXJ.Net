@@ -13,7 +13,7 @@ public class Resource
 
     public Resource AddResource()
     {
-        return _projectFile.ProxyObject(_proxy.addResource(), r => new Resource(_projectFile, r));
+        return _projectFile.ProxyObject(_proxy.addResource());
     }
 
     public void AddChildResource(Resource child)
@@ -445,7 +445,7 @@ public class Resource
 
     public Resource ParentResource
     {
-        get => _projectFile.ProxyObject(_proxy.getParentResource(), r => new Resource(_projectFile, r));
+        get => _projectFile.ProxyObject(_proxy.getParentResource());
         set => _proxy.setParentResource(value._proxy);
     }
 

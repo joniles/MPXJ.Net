@@ -17,6 +17,11 @@ public class ProjectFile
         return (N)_objectCache[o];
     }
 
+    internal Resource ProxyObject(net.sf.mpxj.Resource value)
+    {
+        return ProxyObject(value, r => new Resource(this, r));
+    }
+
     internal ProjectFile(net.sf.mpxj.ProjectFile file)
     {
         _proxy = file;
@@ -87,14 +92,14 @@ public class ProjectFile
         get => ProxyObject(_proxy.getProjectProperties(), p => new ProjectProperties(this, p));
     }
 
-    public net.sf.mpxj.Resource AddResource()
+    public Resource AddResource()
     {
-        return _proxy.addResource();
+        return ProxyObject(_proxy.addResource());
     }
 
-    public void RemoveResource(net.sf.mpxj.Resource resource)
+    public void RemoveResource(Resource resource)
     {
-        _proxy.removeResource(resource);
+        _proxy.removeResource(resource._proxy);
     }
 
     public net.sf.mpxj.ResourceContainer Resources
@@ -128,14 +133,14 @@ public class ProjectFile
         return _proxy.getTaskByUniqueID(id);
     }
 
-    public net.sf.mpxj.Resource GetResourceByID(java.lang.Integer id)
+    public Resource GetResourceByID(java.lang.Integer id)
     {
-        return _proxy.getResourceByID(id);
+        return ProxyObject(_proxy.getResourceByID(id));
     }
 
-    public net.sf.mpxj.Resource GetResourceByUniqueID(java.lang.Integer id)
+    public Resource GetResourceByUniqueID(java.lang.Integer id)
     {
-        return _proxy.getResourceByUniqueID(id);
+        return ProxyObject(_proxy.getResourceByUniqueID(id));
     }
 
     public void UpdateStructure()
