@@ -11,9 +11,9 @@ public class ProjectCalendarDays
         _proxy = proxy;
     }
 
-    public readonly net.sf.mpxj.DateRange DefaultWorkingMorning = net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING;
+    public readonly net.sf.mpxj.LocalTimeRange DefaultWorkingMorning = net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING;
 
-    public readonly net.sf.mpxj.DateRange DefaultWorkingAfternoon = net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON;
+    public readonly net.sf.mpxj.LocalTimeRange DefaultWorkingAfternoon = net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON;
 
     public string Name
     {
@@ -21,7 +21,7 @@ public class ProjectCalendarDays
         set => _proxy.setName(value);
     }
 
-    public ProjectCalendarHours GetCalendarHours(net.sf.mpxj.Day day)
+    public ProjectCalendarHours GetCalendarHours(java.time.DayOfWeek day)
     {
         return _projectFile.ProxyObject(_proxy.getCalendarHours(day), h => new ProjectCalendarHours(h));
     }
@@ -36,32 +36,32 @@ public class ProjectCalendarDays
         _proxy.addDefaultCalendarDays();
     }
 
-    public void AddDefaultCalendarHours(net.sf.mpxj.Day day)
+    public void AddDefaultCalendarHours(java.time.DayOfWeek day)
     {
         _proxy.addDefaultCalendarHours(day);
     }
 
-    public ProjectCalendarHours AddCalendarHours(net.sf.mpxj.Day day)
+    public ProjectCalendarHours AddCalendarHours(java.time.DayOfWeek day)
     {
         return _projectFile.ProxyObject(_proxy.addCalendarHours(day), h => new ProjectCalendarHours(h));
     }
 
-    public void RemoveCalendarHours(net.sf.mpxj.Day day)
+    public void RemoveCalendarHours(java.time.DayOfWeek day)
     {
         _proxy.removeCalendarHours(day);
     }
 
-    public net.sf.mpxj.DayType GetCalendarDayType(net.sf.mpxj.Day day)
+    public net.sf.mpxj.DayType GetCalendarDayType(java.time.DayOfWeek day)
     {
         return _proxy.getCalendarDayType(day);
     }
 
-    public void SetWorkingDay(net.sf.mpxj.Day day, bool working)
+    public void SetWorkingDay(java.time.DayOfWeek day, bool working)
     {
         _proxy.setWorkingDay(day, working);
     }
 
-    public void SetCalendarDayType(net.sf.mpxj.Day day, net.sf.mpxj.DayType type)
+    public void SetCalendarDayType(java.time.DayOfWeek day, net.sf.mpxj.DayType type)
     {
         _proxy.setCalendarDayType(day, type);
     }

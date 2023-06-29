@@ -143,12 +143,12 @@ public class ProjectFile
         _proxy.updateStructure();
     }
 
-    public java.util.Date EarliestStartDate
+    public java.time.LocalDateTime EarliestStartDate
     {
         get => _proxy.getEarliestStartDate();
     }
 
-    public java.util.Date LatestFinishDate
+    public java.time.LocalDateTime LatestFinishDate
     {
         get => _proxy.getLatestFinishDate();
     }

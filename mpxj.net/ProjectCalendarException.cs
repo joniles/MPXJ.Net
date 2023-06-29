@@ -17,13 +17,12 @@ public class ProjectCalendarException : ProjectCalendarHours
         set => _proxy.setName(value);
     }
 
-
-    public java.util.Date FromDate
+    public java.time.LocalDate FromDate
     {
         get => _proxy.getFromDate();
     }
 
-    public java.util.Date ToDate
+    public java.time.LocalDate ToDate
     {
         get => _proxy.getToDate();
     }

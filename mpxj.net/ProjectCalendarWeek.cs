@@ -9,7 +9,7 @@ public class ProjectCalendarWeek : ProjectCalendarDays
         _proxy = proxy;
     }
 
-    public net.sf.mpxj.DateRange DateRange
+    public net.sf.mpxj.LocalDateRange DateRange
     {
         get => _proxy.getDateRange();
         set => _proxy.setDateRange(value);

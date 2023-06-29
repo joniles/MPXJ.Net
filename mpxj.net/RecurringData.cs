@@ -14,13 +14,13 @@ public class RecurringData
         _proxy = new net.sf.mpxj.RecurringData();
     }
 
-    public java.util.Date StartDate
+    public java.time.LocalDate StartDate
     {
         get => _proxy.getStartDate();
         set => _proxy.setStartDate(value);
     }
 
-    public java.util.Date FinishDate
+    public java.time.LocalDate FinishDate
     {
         get => _proxy.getFinishDate();
         set => _proxy.setFinishDate(value);
@@ -46,16 +46,16 @@ public class RecurringData
 
     public bool WorkingDaysOnly
     {
-        get => _proxy.isWorkingDaysOnly();
+        get => _proxy.getWorkingDaysOnly();
         set => _proxy.setWorkingDaysOnly(value);
     }
 
-    public bool GetWeeklyDay(net.sf.mpxj.Day day)
+    public bool GetWeeklyDay(java.time.DayOfWeek day)
     {
         return _proxy.getWeeklyDay(day);
     }
 
-    public void SetWeeklyDay(net.sf.mpxj.Day day, bool value)
+    public void SetWeeklyDay(java.time.DayOfWeek day, bool value)
     {
         _proxy.setWeeklyDay(day, value);
     }
@@ -72,7 +72,7 @@ public class RecurringData
         set => _proxy.setFrequency(value);
     }
 
-    public net.sf.mpxj.Day DayOfWeek
+    public java.time.DayOfWeek DayOfWeek
     {
         get => _proxy.getDayOfWeek();
         set => _proxy.setDayOfWeek(value);
@@ -90,7 +90,7 @@ public class RecurringData
         set => _proxy.setMonthNumber(value);
     }
 
-    public java.util.Date[] Dates
+    public java.time.LocalDate[] Dates
     {
         get => _proxy.getDates();
     }
@@ -100,17 +100,17 @@ public class RecurringData
         get => _proxy.isValid();
     }
 
-    public java.util.Date CalculatedFirstDate
+    public java.time.LocalDate CalculatedFirstDate
     {
         get => _proxy.getCalculatedFirstDate();
     }
 
-    public java.util.Date CalculatedLastDate
+    public java.time.LocalDate CalculatedLastDate
     {
         get => _proxy.getCalculatedLastDate();
     }
 
-    public void SetYearlyAbsoluteFromDate(java.util.Date date)
+    public void SetYearlyAbsoluteFromDate(java.time.LocalDate date)
     {
         _proxy.setYearlyAbsoluteFromDate(date);
     }

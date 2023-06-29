@@ -1,6 +1,6 @@
 ﻿namespace org.mpxj;
 
-public class ProjectCalendarHours : ProxyList<net.sf.mpxj.DateRange>
+public class ProjectCalendarHours : ProxyList<net.sf.mpxj.LocalTimeRange>
 {
     internal ProjectCalendarHours(net.sf.mpxj.ProjectCalendarHours proxy) : base(proxy) { }
 

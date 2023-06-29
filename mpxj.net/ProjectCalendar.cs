@@ -78,12 +78,12 @@ public class ProjectCalendar : ProjectCalendarDays
         get => _proxy.getWorkWeeks();
     }
 
-    public ProjectCalendarException AddCalendarException(java.util.Date date)
+    public ProjectCalendarException AddCalendarException(java.time.LocalDate date)
     {
         return _projectFile.ProxyObject(_proxy.addCalendarException(date), e => new ProjectCalendarException(_projectFile, e));
     }
 
-    public ProjectCalendarException AddCalendarException(java.util.Date fromDate, java.util.Date toDate)
+    public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate)
     {
         return _projectFile.ProxyObject(_proxy.addCalendarException(fromDate, toDate), e => new ProjectCalendarException(_projectFile, e));
     }
@@ -124,62 +124,62 @@ public class ProjectCalendar : ProjectCalendarDays
         get => _proxy.getParentUniqueID();
     }
 
-    public net.sf.mpxj.Duration GetDuration(java.util.Date startDate, java.util.Date endDate)
+    public net.sf.mpxj.Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate)
     {
         return _proxy.getDuration(startDate, endDate);
     }
 
-    public java.util.Date GetStartTime(java.util.Date date)
+    public java.time.LocalTime GetStartTime(java.time.LocalDate date)
     {
         return _proxy.getStartTime(date);
     }
 
-    public java.util.Date GetFinishTime(java.util.Date date)
+    public java.time.LocalTime GetFinishTime(java.time.LocalDate date)
     {
         return _proxy.getFinishTime(date);
     }
 
-    public java.util.Date GetDate(java.util.Date startDate, net.sf.mpxj.Duration duration, bool returnNextWorkStart)
+    public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, net.sf.mpxj.Duration duration, bool returnNextWorkStart)
     {
         return _proxy.getDate(startDate, duration, returnNextWorkStart);
     }
 
-    public java.util.Date GetStartDate(java.util.Date finishDate, net.sf.mpxj.Duration duration)
-    {
-        return _proxy.getStartDate(finishDate, duration);
-    }
-
-    public java.util.Date GetNextWorkStart(java.util.Date date)
+    public java.time.LocalDateTime GetNextWorkStart(java.time.LocalDateTime date)
     {
         return _proxy.getNextWorkStart(date);
     }
 
-    java.util.Date GetPreviousWorkFinish(java.util.Date date)
+    java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date)
     {
         return _proxy.getPreviousWorkFinish(date);
     }
 
-    public net.sf.mpxj.DayType GetDayType(net.sf.mpxj.Day day)
+    public net.sf.mpxj.DayType GetDayType(java.time.DayOfWeek day)
     {
         return _proxy.getDayType(day);
     }
 
-    public bool IsWorkingDay(net.sf.mpxj.Day day)
+    public bool IsWorkingDay(java.time.DayOfWeek day)
     {
         return _proxy.isWorkingDay(day);
     }
 
-    public bool IsWorkingDate(java.util.Date date)
+    public bool IsWorkingDate(java.time.LocalDate date)
     {
         return _proxy.isWorkingDate(date);
     }
 
-    public ProjectCalendarHours GetHours(net.sf.mpxj.Day day)
+    public ProjectCalendarHours GetHours(java.time.DayOfWeek day)
     {
         return _projectFile.ProxyObject(_proxy.getHours(day), h => new ProjectCalendarHours(h));
     }
 
-    public ProjectCalendarHours GetHours(java.util.Date date)
+    public ProjectCalendarHours GetHours(java.time.LocalDate date)
+    {
+        return _projectFile.ProxyObject(_proxy.getHours(date), h => new ProjectCalendarHours(h));
+    }
+
+    public ProjectCalendarHours GetHours(java.time.LocalDateTime date)
     {
         return _projectFile.ProxyObject(_proxy.getHours(date), h => new ProjectCalendarHours(h));
     }
@@ -210,27 +210,27 @@ public class ProjectCalendar : ProjectCalendarDays
         _proxy.remove();
     }
 
-    public ProjectCalendarException GetException(java.util.Date date)
+    public ProjectCalendarException GetException(java.time.LocalDate date)
     {
         return _projectFile.ProxyObject(_proxy.getException(date), e => new ProjectCalendarException(_projectFile, e));
     }
 
-    public ProjectCalendarWeek GetWorkWeek(java.util.Date date)
+    public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date)
     {
         return _projectFile.ProxyObject(_proxy.getWorkWeek(date), w => new ProjectCalendarWeek(_projectFile, w));
     }
 
-    public net.sf.mpxj.Duration GetWork(net.sf.mpxj.Day day, net.sf.mpxj.TimeUnit format)
+    public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, net.sf.mpxj.TimeUnit format)
     {
         return _proxy.getWork(day, format);
     }
 
-    public net.sf.mpxj.Duration GetWork(java.util.Date date, net.sf.mpxj.TimeUnit format)
+    public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, net.sf.mpxj.TimeUnit format)
     {
         return _proxy.getWork(date, format);
     }
 
-    public net.sf.mpxj.Duration GetWork(java.util.Date startDate, java.util.Date endDate, net.sf.mpxj.TimeUnit format)
+    public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, net.sf.mpxj.TimeUnit format)
     {
         return _proxy.getWork(startDate, endDate, format);
     }

@@ -68,7 +68,7 @@ public class ProjectProperties
         set => _proxy.setTimeFormat(value);
     }
 
-    public java.util.Date DefaultStartTime
+    public java.time.LocalTime DefaultStartTime
     {
         get => _proxy.getDefaultStartTime();
         set => _proxy.setDefaultStartTime(value);
@@ -110,7 +110,7 @@ public class ProjectProperties
         set => _proxy.setBarTextDateFormat(value);
     }
 
-    public java.util.Date DefaultEndTime
+    public java.time.LocalTime DefaultEndTime
     {
         get => _proxy.getDefaultEndTime();
         set => _proxy.setDefaultEndTime(value);
@@ -146,13 +146,13 @@ public class ProjectProperties
         set => _proxy.setDefaultCalendar(value._proxy);
     }
 
-    public java.util.Date StartDate
+    public java.time.LocalDateTime StartDate
     {
         get => _proxy.getStartDate();
         set => _proxy.setStartDate(value);
     }
 
-    public java.util.Date FinishDate
+    public java.time.LocalDateTime FinishDate
     {
         get => _proxy.getFinishDate();
         set => _proxy.setFinishDate(value);
@@ -164,7 +164,7 @@ public class ProjectProperties
         set => _proxy.setScheduleFrom(value);
     }
 
-    public java.util.Date CurrentDate
+    public java.time.LocalDateTime CurrentDate
     {
         get => _proxy.getCurrentDate();
         set => _proxy.setCurrentDate(value);
@@ -242,25 +242,25 @@ public class ProjectProperties
         set => _proxy.setPercentageComplete(value);
     }
 
-    public java.util.Date BaselineStart
+    public java.time.LocalDateTime BaselineStart
     {
         get => _proxy.getBaselineStart();
         set => _proxy.setBaselineStart(value);
     }
 
-    public java.util.Date BaselineFinish
+    public java.time.LocalDateTime BaselineFinish
     {
         get => _proxy.getBaselineFinish();
         set => _proxy.setBaselineFinish(value);
     }
 
-    public java.util.Date ActualStart
+    public java.time.LocalDateTime ActualStart
     {
         get => _proxy.getActualStart();
         set => _proxy.setActualStart(value);
     }
 
-    public java.util.Date ActualFinish
+    public java.time.LocalDateTime ActualFinish
     {
         get => _proxy.getActualFinish();
         set => _proxy.setActualFinish(value);
@@ -416,13 +416,13 @@ public class ProjectProperties
         set => _proxy.setAutoAddNewResourcesAndTasks(value);
     }
 
-    public java.util.Date LastSaved
+    public java.time.LocalDateTime LastSaved
     {
         get => _proxy.getLastSaved();
         set => _proxy.setLastSaved(value);
     }
 
-    public java.util.Date StatusDate
+    public java.time.LocalDateTime StatusDate
     {
         get => _proxy.getStatusDate();
         set => _proxy.setStatusDate(value);
@@ -536,13 +536,13 @@ public class ProjectProperties
         set => _proxy.setEarnedValueMethod(value);
     }
 
-    public java.util.Date CreationDate
+    public java.time.LocalDateTime CreationDate
     {
         get => _proxy.getCreationDate();
         set => _proxy.setCreationDate(value);
     }
 
-    public java.util.Date ExtendedCreationDate
+    public java.time.LocalDateTime ExtendedCreationDate
     {
         get => _proxy.getExtendedCreationDate();
         set => _proxy.setExtendedCreationDate(value);
@@ -584,7 +584,7 @@ public class ProjectProperties
         set => _proxy.setNewTasksAreManual(value);
     }
 
-    public net.sf.mpxj.Day WeekStartDay
+    public java.time.DayOfWeek WeekStartDay
     {
         get => _proxy.getWeekStartDay();
         set => _proxy.setWeekStartDay(value);
@@ -613,18 +613,18 @@ public class ProjectProperties
         set => _proxy.setShowProjectSummaryTask(value);
     }
 
-    public java.util.Date BaselineDate
+    public java.time.LocalDateTime BaselineDate
     {
         get => _proxy.getBaselineDate();
         set => _proxy.setBaselineDate(value);
     }
 
-    public java.util.Date GetBaselineDate(int baselineNumber)
+    public java.time.LocalDateTime GetBaselineDate(int baselineNumber)
     {
         return _proxy.getBaselineDate(baselineNumber);
     }
 
-    public void setBaselineDate(int baselineNumber, java.util.Date date)
+    public void SetBaselineDate(int baselineNumber, java.time.LocalDateTime date)
     {
         _proxy.setBaselineDate(baselineNumber, date);
     }
@@ -641,7 +641,7 @@ public class ProjectProperties
         set => _proxy.setLastAuthor(value);
     }
 
-    public java.util.Date LastPrinted
+    public java.time.LocalDateTime LastPrinted
     {
         get => _proxy.getLastPrinted();
         set => _proxy.setLastPrinted(value);
@@ -779,19 +779,19 @@ public class ProjectProperties
         set => _proxy.setCriticalActivityType(value);
     }
 
-    public java.util.Date MustFinishBy
+    public java.time.LocalDateTime MustFinishBy
     {
         get => _proxy.getMustFinishBy();
         set => _proxy.setMustFinishBy(value);
     }
 
-    public java.util.Date ScheduledFinish
+    public java.time.LocalDateTime ScheduledFinish
     {
         get => _proxy.getScheduledFinish();
         set => _proxy.setScheduledFinish(value);
     }
 
-    public java.util.Date PlannedStart
+    public java.time.LocalDateTime PlannedStart
     {
         get => _proxy.getPlannedStart();
         set => _proxy.setPlannedStart(value);

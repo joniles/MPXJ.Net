@@ -26,7 +26,6 @@ public class Resource
         get => _proxy.getChildResources();
     }
 
-
     public string Name
     {
         get => _proxy.getName();
@@ -134,24 +133,24 @@ public class Resource
         set => _proxy.setOverAllocated(value);
     }
 
-    public java.util.Date AvailableFrom
+    public java.time.LocalDateTime AvailableFrom
     {
         get => _proxy.getAvailableFrom();
         set => _proxy.setAvailableFrom(value);
     }
 
-    public java.util.Date AvailableTo
+    public java.time.LocalDateTime AvailableTo
     {
         get => _proxy.getAvailableTo();
         set => _proxy.setAvailableTo(value);
     }
 
-    public java.util.Date Start
+    public java.time.LocalDateTime Start
     {
         get => _proxy.getStart();
     }
 
-    public java.util.Date Finish
+    public java.time.LocalDateTime Finish
     {
         get => _proxy.getFinish();
     }
@@ -336,7 +335,7 @@ public class Resource
     public string ActiveDirectoryGUID
     {
         get => _proxy.getActiveDirectoryGUID();
-        set => _proxy.setActveDirectoryGUID(value);
+        set => _proxy.setActiveDirectoryGUID(value);
     }
 
     public net.sf.mpxj.Duration ActualOvertimeWorkProtected
@@ -357,7 +356,7 @@ public class Resource
         set => _proxy.setBookingType(value);
     }
 
-    public java.util.Date CreationDate
+    public java.time.LocalDateTime CreationDate
     {
         get => _proxy.getCreationDate();
         set => _proxy.setCreationDate(value);
@@ -450,49 +449,85 @@ public class Resource
         set => _proxy.setParentResource(value._proxy);
     }
 
-    public void SetStart(int index, java.util.Date value)
+    public void SetStart(int index, java.time.LocalDateTime value)
     {
         _proxy.setStart(index, value);
     }
 
-    public java.util.Date GetStart(int index)
+    public java.time.LocalDateTime GetStart(int index)
     {
         return _proxy.getStart(index);
     }
 
-    public void SetFinish(int index, java.util.Date value)
+    public void SetFinish(int index, java.time.LocalDateTime value)
     {
         _proxy.setFinish(index, value);
     }
 
-    public java.util.Date GetFinish(int index)
+    public java.time.LocalDateTime GetFinish(int index)
     {
         return _proxy.getFinish(index);
     }
 
-    void setNumber(int index, java.lang.Number value);
+    public void SetNumber(int index, java.lang.Number value)
+    {
+        _proxy.setNumber(index, value);
+    }
 
-    java.lang.Number getNumber(int index);
+    public java.lang.Number GetNumber(int index)
+    {
+        return _proxy.getNumber(index);
+    }
 
-    void setDuration(int index, net.sf.mpxj.Duration value);
+    public void SetDuration(int index, net.sf.mpxj.Duration value)
+    {
+        _proxy.setDuration(index, value);
+    }
 
-    net.sf.mpxj.Duration getDuration(int index);
+    public net.sf.mpxj.Duration GetDuration(int index)
+    {
+        return _proxy.getDuration(index);
+    }
 
-    void setDate(int index, java.util.Date value);
+    public void SetDate(int index, java.time.LocalDateTime value)
+    {
+        _proxy.setDate(index, value);
+    }
 
-    java.util.Date getDate(int index);
+    public java.time.LocalDateTime GetDate(int index)
+    {
+        return _proxy.getDate(index);
+    }
 
-    void setCost(int index, java.lang.Number value);
+    public void SetCost(int index, java.lang.Number value)
+    {
+        _proxy.setCost(index, value);
+    }
 
-    java.lang.Number getCost(int index);
+    public java.lang.Number GetCost(int index)
+    {
+        return _proxy.getCost(index);
+    }
 
-    void setFlag(int index, bool value);
+    public void SetFlag(int index, bool value)
+    {
+        _proxy.setFlag(index, value);
+    }
 
-    bool getFlag(int index);
+    public bool GetFlag(int index)
+    {
+        return _proxy.getFlag(index);
+    }
 
-    void setOutlineCode(int index, string value);
+    public void SetOutlineCode(int index, string value)
+    {
+        _proxy.setOutlineCode(index, value);
+    }
 
-    string getOutlineCode(int index);
+    public string GetOutlineCode(int index)
+    {
+        return _proxy.getOutlineCode(index);
+    }
 
     public void Remove()
     {
@@ -516,37 +551,85 @@ public class Resource
         set => _proxy.setSubprojectResourceUniqueID(value);
     }
 
-    java.lang.Number getEnterpriseCost(int index);
+    public java.lang.Number GetEnterpriseCost(int index)
+    {
+        return _proxy.getEnterpriseCost(index);
+    }
 
-    void setEnterpriseCost(int index, java.lang.Number value);
+    public void SetEnterpriseCost(int index, java.lang.Number value)
+    {
+        _proxy.setEnterpriseCost(index, value);
+    }
 
-    java.util.Date getEnterpriseDate(int index);
+    public java.time.LocalDateTime GetEnterpriseDate(int index)
+    {
+        return _proxy.getEnterpriseDate(index);
+    }
 
-    void setEnterpriseDate(int index, java.util.Date value);
+    public void SetEnterpriseDate(int index, java.time.LocalDateTime value)
+    {
+        _proxy.setEnterpriseDate(index, value);
+    }
 
-    net.sf.mpxj.Duration getEnterpriseDuration(int index);
+    public net.sf.mpxj.Duration GetEnterpriseDuration(int index)
+    {
+        return _proxy.getEnterpriseDuration(index);
+    }
 
-    void setEnterpriseDuration(int index, net.sf.mpxj.Duration value);
+    public void SetEnterpriseDuration(int index, net.sf.mpxj.Duration value)
+    {
+        _proxy.setEnterpriseDuration(index, value);
+    }
 
-    bool getEnterpriseFlag(int index);
+    public bool GetEnterpriseFlag(int index)
+    {
+        return _proxy.getEnterpriseFlag(index);
+    }
 
-    void setEnterpriseFlag(int index, bool value);
+    public void SetEnterpriseFlag(int index, bool value)
+    {
+        _proxy.setEnterpriseFlag(index, value);
+    }
 
-    java.lang.Number getEnterpriseNumber(int index);
+    public java.lang.Number GetEnterpriseNumber(int index)
+    {
+        return _proxy.getEnterpriseNumber(index);
+    }
 
-    void setEnterpriseNumber(int index, java.lang.Number value);
+    public void SetEnterpriseNumber(int index, java.lang.Number value)
+    {
+        _proxy.setEnterpriseNumber(index, value);
+    }
 
-    string getEnterpriseText(int index);
+    public string GetEnterpriseText(int index)
+    {
+        return _proxy.getEnterpriseText(index);
+    }
 
-    void setEnterpriseText(int index, string value);
+    public void SetEnterpriseText(int index, string value)
+    {
+        _proxy.setEnterpriseText(index, value);
+    }
 
-    void setBaselineCost(int baselineNumber, java.lang.Number value);
+    public void SetBaselineCost(int baselineNumber, java.lang.Number value)
+    {
+        _proxy.setBaselineCost(baselineNumber, value);
+    }
 
-    void setBaselineWork(int baselineNumber, net.sf.mpxj.Duration value);
+    public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value)
+    {
+        _proxy.setBaselineWork(baselineNumber, value);
+    }
 
-    java.lang.Number getBaselineCost(int baselineNumber);
+    public java.lang.Number GetBaselineCost(int baselineNumber)
+    {
+        return _proxy.getBaselineCost(baselineNumber);
+    }
 
-    net.sf.mpxj.Duration getBaselineWork(int baselineNumber);
+    public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber)
+    {
+        return _proxy.getBaselineWork(baselineNumber);
+    }
 
     public bool Budget
     {
@@ -584,19 +667,19 @@ public class Resource
         set => _proxy.setResourceID(value);
     }
 
-/* TODO: fix in version 12.0.0
     public bool ModifyOnIntegrate
     {
         get => _proxy.getModifyOnIntegrate();
-        set => _proxy.setModifyOnIntegrate(value);
+        // TODO: fix in 12.0.1
+        /* set => _proxy.setModifyOnIntegrate(value);*/
     }
 
     public bool ExpensesOnly
     {
         get => _proxy.getExpensesOnly();
-        set => _proxy.setExpensesOnly(value);
+        // TODO: fix in 12.0.1
+        /*set => _proxy.setExpensesOnly(value); */
     }
-*/
 
 
     public java.lang.Number PeriodDur
