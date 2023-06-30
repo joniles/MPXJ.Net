@@ -1,19 +1,17 @@
 ﻿namespace org.mpxj;
 
-public class Resource
+public class Resource : AbstractFieldContainer
 {
-    internal readonly ProjectFile _projectFile;
-    internal readonly net.sf.mpxj.Resource _proxy;
+    internal new readonly net.sf.mpxj.Resource _proxy;
 
-    internal Resource(ProjectFile projectFile, net.sf.mpxj.Resource proxy)
+    internal Resource(ProjectFile projectFile, net.sf.mpxj.Resource proxy) : base(projectFile, proxy)
     {
-        _projectFile = projectFile;
         _proxy = proxy;
     }
 
     public Resource AddResource()
     {
-        return _projectFile.ProxyObject(_proxy.addResource());
+        return Parent.ProxyObject(_proxy.addResource());
     }
 
     public void AddChildResource(Resource child)
@@ -376,13 +374,13 @@ public class Resource
 
     public ProjectCalendar Calendar
     {
-        get => _projectFile.ProxyObject(_proxy.getCalendar());
+        get => Parent.ProxyObject(_proxy.getCalendar());
         set => _proxy.setCalendar(value._proxy);
     }
 
     public ProjectCalendar AddCalendar()
     {
-        return _projectFile.ProxyObject(_proxy.addCalendar());
+        return Parent.ProxyObject(_proxy.addCalendar());
     }
 
     public void SetText(int index, string value)
@@ -445,7 +443,7 @@ public class Resource
 
     public Resource ParentResource
     {
-        get => _projectFile.ProxyObject(_proxy.getParentResource());
+        get => Parent.ProxyObject(_proxy.getParentResource());
         set => _proxy.setParentResource(value._proxy);
     }
 
