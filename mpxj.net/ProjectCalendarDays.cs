@@ -23,7 +23,7 @@ public class ProjectCalendarDays
 
     public ProjectCalendarHours GetCalendarHours(java.time.DayOfWeek day)
     {
-        return _projectFile.ProxyObject(_proxy.getCalendarHours(day), h => new ProjectCalendarHours(h));
+        return _projectFile.ProxyObject(_proxy.getCalendarHours(day));
     }
 
     public void AddDefaultCalendarHours()
@@ -43,7 +43,7 @@ public class ProjectCalendarDays
 
     public ProjectCalendarHours AddCalendarHours(java.time.DayOfWeek day)
     {
-        return _projectFile.ProxyObject(_proxy.addCalendarHours(day), h => new ProjectCalendarHours(h));
+        return _projectFile.ProxyObject(_proxy.addCalendarHours(day));
     }
 
     public void RemoveCalendarHours(java.time.DayOfWeek day)

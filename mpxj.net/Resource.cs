@@ -376,13 +376,13 @@ public class Resource
 
     public ProjectCalendar Calendar
     {
-        get => _projectFile.ProxyObject(_proxy.getCalendar(), c => new ProjectCalendar(_projectFile, c));
+        get => _projectFile.ProxyObject(_proxy.getCalendar());
         set => _proxy.setCalendar(value._proxy);
     }
 
     public ProjectCalendar AddCalendar()
     {
-        return _projectFile.ProxyObject(_proxy.addCalendar(), c => new ProjectCalendar(_projectFile, c));
+        return _projectFile.ProxyObject(_proxy.addCalendar());
     }
 
     public void SetText(int index, string value)
@@ -718,13 +718,13 @@ public class Resource
         set => _proxy.setPhone(value);
     }
 
-    /* TODO: fix applied in 12.0.0
-        public bool Role
-        {
-            get => _proxy.getRole();
-            set => _proxy.setRole(value);
-        }
-    */
+    public bool Role
+    {
+        get => _proxy.getRole();
+        // TODO: fix in 12.0.1
+        /* set => _proxy.setRole(value); */
+    }
+    
     public void SetCostRateTable(int index, net.sf.mpxj.CostRateTable crt)
     {
         _proxy.setCostRateTable(index, crt);

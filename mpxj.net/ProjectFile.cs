@@ -1,4 +1,6 @@
-﻿namespace org.mpxj;
+﻿using net.sf.mpxj;
+
+namespace org.mpxj;
 
 public class ProjectFile
 {
@@ -7,7 +9,7 @@ public class ProjectFile
 
     public ProjectFile() : this(new net.sf.mpxj.ProjectFile()) { }
 
-    internal N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
+    private N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
     {
         if (!_objectCache.ContainsKey(o))
         {
@@ -20,6 +22,31 @@ public class ProjectFile
     internal Resource ProxyObject(net.sf.mpxj.Resource value)
     {
         return ProxyObject(value, r => new Resource(this, r));
+    }
+
+    internal ProjectCalendarWeek ProxyObject(net.sf.mpxj.ProjectCalendarWeek value)
+    {
+        return ProxyObject(value, w => new ProjectCalendarWeek(this, w));
+    }
+
+    internal ProjectCalendarException ProxyObject(net.sf.mpxj.ProjectCalendarException value)
+    {
+        return ProxyObject(value, e => new ProjectCalendarException(this, e));
+    }
+
+    internal ProjectCalendar ProxyObject(net.sf.mpxj.ProjectCalendar value)
+    {
+        return ProxyObject(value, c => new ProjectCalendar(this, c));
+    }
+
+    internal RecurringData ProxyObject(net.sf.mpxj.RecurringData value)
+    {
+        return ProxyObject(value, r => new RecurringData(r));
+    }
+
+    internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)
+    {
+        return ProxyObject(value, h => new ProjectCalendarHours(h));
     }
 
     internal ProjectFile(net.sf.mpxj.ProjectFile file)

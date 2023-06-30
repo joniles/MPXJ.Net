@@ -60,7 +60,7 @@ public class ProjectCalendar : ProjectCalendarDays
 
     public ProjectCalendarWeek AddWorkWeek()
     {
-        return _projectFile.ProxyObject(_proxy.addWorkWeek(), w => new ProjectCalendarWeek(_projectFile, w));
+        return _projectFile.ProxyObject(_proxy.addWorkWeek());
     }
 
     public void RemoveWorkWeek(ProjectCalendarWeek week)
@@ -80,17 +80,17 @@ public class ProjectCalendar : ProjectCalendarDays
 
     public ProjectCalendarException AddCalendarException(java.time.LocalDate date)
     {
-        return _projectFile.ProxyObject(_proxy.addCalendarException(date), e => new ProjectCalendarException(_projectFile, e));
+        return _projectFile.ProxyObject(_proxy.addCalendarException(date));
     }
 
     public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate)
     {
-        return _projectFile.ProxyObject(_proxy.addCalendarException(fromDate, toDate), e => new ProjectCalendarException(_projectFile, e));
+        return _projectFile.ProxyObject(_proxy.addCalendarException(fromDate, toDate));
     }
 
     public ProjectCalendarException AddCalendarException(RecurringData recurringData)
     {
-        return _projectFile.ProxyObject(_proxy.addCalendarException(recurringData._proxy), e => new ProjectCalendarException(_projectFile, e));
+        return _projectFile.ProxyObject(_proxy.addCalendarException(recurringData._proxy));
     }
 
     public void RemoveCalendarException(ProjectCalendarException exception)
@@ -115,7 +115,7 @@ public class ProjectCalendar : ProjectCalendarDays
 
     public ProjectCalendar Parent
     {
-        get => _projectFile.ProxyObject(_proxy.getParent(), c => new ProjectCalendar(_projectFile, c));
+        get => _projectFile.ProxyObject(_proxy.getParent());
         set => _proxy.setParent(value._proxy);
     }
 
@@ -171,17 +171,17 @@ public class ProjectCalendar : ProjectCalendarDays
 
     public ProjectCalendarHours GetHours(java.time.DayOfWeek day)
     {
-        return _projectFile.ProxyObject(_proxy.getHours(day), h => new ProjectCalendarHours(h));
+        return _projectFile.ProxyObject(_proxy.getHours(day));
     }
 
     public ProjectCalendarHours GetHours(java.time.LocalDate date)
     {
-        return _projectFile.ProxyObject(_proxy.getHours(date), h => new ProjectCalendarHours(h));
+        return _projectFile.ProxyObject(_proxy.getHours(date));
     }
 
     public ProjectCalendarHours GetHours(java.time.LocalDateTime date)
     {
-        return _projectFile.ProxyObject(_proxy.getHours(date), h => new ProjectCalendarHours(h));
+        return _projectFile.ProxyObject(_proxy.getHours(date));
     }
 
     public java.lang.Integer UniqueID
@@ -212,12 +212,12 @@ public class ProjectCalendar : ProjectCalendarDays
 
     public ProjectCalendarException GetException(java.time.LocalDate date)
     {
-        return _projectFile.ProxyObject(_proxy.getException(date), e => new ProjectCalendarException(_projectFile, e));
+        return _projectFile.ProxyObject(_proxy.getException(date));
     }
 
     public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date)
     {
-        return _projectFile.ProxyObject(_proxy.getWorkWeek(date), w => new ProjectCalendarWeek(_projectFile, w));
+        return _projectFile.ProxyObject(_proxy.getWorkWeek(date));
     }
 
     public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, net.sf.mpxj.TimeUnit format)

@@ -142,7 +142,7 @@ public class ProjectProperties
 
     public ProjectCalendar DefaultCalendar
     {
-        get => _projectFile.ProxyObject(_proxy.getDefaultCalendar(), c => new ProjectCalendar(_projectFile, c));
+        get => _projectFile.ProxyObject(_proxy.getDefaultCalendar());
         set => _proxy.setDefaultCalendar(value._proxy);
     }
 

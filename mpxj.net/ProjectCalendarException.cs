@@ -29,7 +29,7 @@ public class ProjectCalendarException : ProjectCalendarHours
 
     public RecurringData Recurring
     {
-        get => _projectFile.ProxyObject(_proxy.getRecurring(), r => new RecurringData(r));
+        get => _projectFile.ProxyObject(_proxy.getRecurring());
     }
 
     public bool Working

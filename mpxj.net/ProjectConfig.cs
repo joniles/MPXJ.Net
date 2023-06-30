@@ -100,13 +100,11 @@ public class ProjectConfig
         _proxy.updateAssignmentUniqueCounter();
     }
 
-    /* TODO: make BaselineStratgey public    
-        public net.sf.mpxj.BaselineStrategy BaselineStrategy()
-        {
-            get => _proxy.getBaselineStrategy();
-            set => _proxy.setBaselineStrategy(value);
-        }
-    */
+    public net.sf.mpxj.BaselineStrategy BaselineStrategy
+    {
+        get => _proxy.getBaselineStrategy();
+        set => _proxy.setBaselineStrategy(value);
+    }
 
     public string? SubprojectWorkingDirectory
     {
