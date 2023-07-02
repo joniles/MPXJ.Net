@@ -7,7 +7,7 @@ namespace org.mpxj
         internal readonly ProjectFile _projectFile;
         public ProjectEntityContainer JavaObject { get; }
 
-        public ProjectEntityContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityContainer javaObject)
+        internal ProjectEntityContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityContainer javaObject)
 		{
             _projectFile = projectFile;
             JavaObject = javaObject;
