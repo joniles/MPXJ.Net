@@ -51,6 +51,10 @@ namespace org.mpxj
             return ProxyObject(value, h => new ProjectCalendarHours(h));
         }
 
+        internal IList<Resource> ProxyResourceList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Resource, Resource>(this, l));
+        }
 
         internal object GenericProxyObject(object o)
         {
@@ -81,8 +85,7 @@ namespace org.mpxj
 
             }
 
-
-            throw new ArgumentException();
+            return o;
         }
 
         internal ProjectFile(net.sf.mpxj.ProjectFile file)

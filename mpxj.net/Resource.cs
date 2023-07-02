@@ -1,6 +1,9 @@
-﻿namespace org.mpxj
+﻿using System.Collections.Generic;
+
+
+namespace org.mpxj
 {
-    public class Resource : AbstractFieldContainer, IJavaObjectProxy<net.sf.mpxj.Resource>
+    public class Resource : AbstractFieldContainer, IProjectEntityWithID, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.Resource>
     {
         public new net.sf.mpxj.Resource JavaObject { get => (net.sf.mpxj.Resource)base.JavaObject; }
 
@@ -16,9 +19,9 @@
             JavaObject.addChildResource(child.JavaObject);
         }
 
-        public java.util.List ChildResources
+        public IList<Resource> ChildResources
         {
-            get => JavaObject.getChildResources();
+            get => Parent.ProxyResourceList(JavaObject.getChildResources());
         }
 
         public string Name
@@ -531,8 +534,7 @@
 
         public object GetFieldByAlias(string alias)
         {
-            // TODO: proxy the result
-            return JavaObject.getFieldByAlias(alias);
+            return Parent.GenericProxyObject(JavaObject.getFieldByAlias(alias));
         }
 
         public java.util.List TaskAssignments

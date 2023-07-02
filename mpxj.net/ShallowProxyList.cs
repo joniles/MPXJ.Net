@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace org.mpxj
 {
-    public class ProxyList<M> : IList<M>, IJavaObjectProxy<java.util.List>
+    public class ShallowProxyList<M> : IList<M>, IJavaObjectProxy<java.util.List>
     {
         public struct Enumerator : IEnumerator<M>, IDisposable, IEnumerator
         {
-            private readonly ProxyList<M> _list;
+            private readonly ShallowProxyList<M> _list;
 
             private java.util.Iterator _iter;
 
@@ -21,7 +21,7 @@ namespace org.mpxj
                 get => _current;
             }
 
-            internal Enumerator(ProxyList<M> list)
+            internal Enumerator(ShallowProxyList<M> list)
             {
                 _list = list;
                 _iter = list.JavaObject.iterator();
@@ -52,12 +52,12 @@ namespace org.mpxj
 
         public java.util.List JavaObject { get; }
 
-        public ProxyList()
+        public ShallowProxyList()
         {
             JavaObject = new java.util.ArrayList();
         }
 
-        internal ProxyList(java.util.List javaObject)
+        internal ShallowProxyList(java.util.List javaObject)
         {
             JavaObject = javaObject;
         }
