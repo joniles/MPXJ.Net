@@ -1,60 +1,60 @@
-﻿namespace org.mpxj;
-
-public class ProjectCalendarException : ProjectCalendarHours
+﻿namespace org.mpxj
 {
-    internal readonly ProjectFile _projectFile;
-    internal new readonly net.sf.mpxj.ProjectCalendarException _proxy;
-
-    internal ProjectCalendarException(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarException proxy) : base(proxy)
+    public class ProjectCalendarException : ProjectCalendarHours
     {
-        _projectFile = projectFile;
-        _proxy = proxy;
-    }
+        internal readonly ProjectFile _projectFile;
+        internal new readonly net.sf.mpxj.ProjectCalendarException _proxy;
 
-    public string Name
-    {
-        get => _proxy.getName();
-        set => _proxy.setName(value);
-    }
+        internal ProjectCalendarException(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarException proxy) : base(proxy)
+        {
+            _projectFile = projectFile;
+            _proxy = proxy;
+        }
 
-    public java.time.LocalDate FromDate
-    {
-        get => _proxy.getFromDate();
-    }
+        public string Name
+        {
+            get => _proxy.getName();
+            set => _proxy.setName(value);
+        }
 
-    public java.time.LocalDate ToDate
-    {
-        get => _proxy.getToDate();
-    }
+        public java.time.LocalDate FromDate
+        {
+            get => _proxy.getFromDate();
+        }
 
-    public RecurringData Recurring
-    {
-        get => _projectFile.ProxyObject(_proxy.getRecurring());
-    }
+        public java.time.LocalDate ToDate
+        {
+            get => _proxy.getToDate();
+        }
 
-    public bool Working
-    {
-        get => _proxy.getWorking();
-    }
+        public RecurringData Recurring
+        {
+            get => _projectFile.ProxyObject(_proxy.getRecurring());
+        }
 
-    public java.util.List ExpandedExceptions
-    {
-        get => _proxy.getExpandedExceptions();
-    }
+        public bool Working
+        {
+            get => _proxy.getWorking();
+        }
 
-    public bool Contains(java.util.Date date)
-    {
-        return _proxy.contains(date);
-    }
+        public java.util.List ExpandedExceptions
+        {
+            get => _proxy.getExpandedExceptions();
+        }
 
-    public bool Contains(ProjectCalendarException exception)
-    {
-        return _proxy.contains(exception._proxy);
-    }
+        public bool Contains(java.util.Date date)
+        {
+            return _proxy.contains(date);
+        }
 
-    public override string ToString()
-    {
-        return _proxy.toString();
+        public bool Contains(ProjectCalendarException exception)
+        {
+            return _proxy.contains(exception._proxy);
+        }
+
+        public override string ToString()
+        {
+            return _proxy.toString();
+        }
     }
 }
-

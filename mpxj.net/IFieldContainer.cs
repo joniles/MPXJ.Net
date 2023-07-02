@@ -1,14 +1,15 @@
-﻿namespace org.mpxj;
-
-public interface IFieldContainer
+﻿namespace org.mpxj
 {
-    public void Set(net.sf.mpxj.FieldType field, object value);
+    public interface IFieldContainer
+    {
+        void Set(net.sf.mpxj.FieldType field, object value);
 
-    public object Get(net.sf.mpxj.FieldType field);
+        object Get(net.sf.mpxj.FieldType field);
 
-    public object GetCachedValue(net.sf.mpxj.FieldType field);
+        object GetCachedValue(net.sf.mpxj.FieldType field);
 
-    public void AddFieldListener(net.sf.mpxj.listener.FieldListener listener);
+        void AddFieldListener(net.sf.mpxj.listener.FieldListener listener);
 
-    public void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener);
+        void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener);
+    }
 }

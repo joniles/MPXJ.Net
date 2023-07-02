@@ -1,37 +1,37 @@
-﻿namespace org.mpxj;
-
-public class AbstractFieldContainer : ProjectEntity, IFieldContainer
+﻿namespace org.mpxj
 {
-    internal readonly net.sf.mpxj.AbstractFieldContainer _proxy;
-
-    internal AbstractFieldContainer(ProjectFile file, net.sf.mpxj.AbstractFieldContainer proxy) : base(file)
+    public class AbstractFieldContainer : ProjectEntity, IFieldContainer
     {
-        _proxy = proxy;
-    }
+        internal readonly net.sf.mpxj.AbstractFieldContainer _proxy;
 
-    public void Set(net.sf.mpxj.FieldType field, object value)
-    {
-        _proxy.set(field, value);
-    }
+        internal AbstractFieldContainer(ProjectFile file, net.sf.mpxj.AbstractFieldContainer proxy) : base(file)
+        {
+            _proxy = proxy;
+        }
 
-    public object Get(net.sf.mpxj.FieldType field)
-    {
-        return _proxy.get(field);
-    }
+        public void Set(net.sf.mpxj.FieldType field, object value)
+        {
+            _proxy.set(field, value);
+        }
 
-    public object GetCachedValue(net.sf.mpxj.FieldType field)
-    {
-        return _proxy.getCachedValue(field);
-    }
+        public object Get(net.sf.mpxj.FieldType field)
+        {
+            return _proxy.get(field);
+        }
 
-    public void AddFieldListener(net.sf.mpxj.listener.FieldListener listener)
-    {
-        _proxy.addFieldListener(listener);
-    }
+        public object GetCachedValue(net.sf.mpxj.FieldType field)
+        {
+            return _proxy.getCachedValue(field);
+        }
 
-    public void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener)
-    {
-        _proxy.removeFieldListener(listener);
+        public void AddFieldListener(net.sf.mpxj.listener.FieldListener listener)
+        {
+            _proxy.addFieldListener(listener);
+        }
+
+        public void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener)
+        {
+            _proxy.removeFieldListener(listener);
+        }
     }
 }
-
