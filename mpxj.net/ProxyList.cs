@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace org.mpxj
 {
-    public class ProxyList<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>
+    public class ProxyList<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>, IJavaObjectProxy<java.util.List>
     {
         public struct Enumerator : IEnumerator<T>, IDisposable, IEnumerator
         {
@@ -24,7 +24,7 @@ namespace org.mpxj
             internal Enumerator(ProxyList<T> list)
             {
                 _list = list;
-                _iter = list._proxy.iterator();
+                _iter = list.JavaObject.iterator();
                 _current = default(T);
             }
 
@@ -45,37 +45,37 @@ namespace org.mpxj
 
             public void Reset()
             {
-                _iter = _list._proxy.iterator();
+                _iter = _list.JavaObject.iterator();
                 _current = default(T);
             }
         }
 
-        internal readonly java.util.List _proxy;
+        public java.util.List JavaObject { get; }
 
         public ProxyList()
         {
-            _proxy = new java.util.ArrayList();
+            JavaObject = new java.util.ArrayList();
         }
 
-        internal ProxyList(java.util.List proxy)
+        internal ProxyList(java.util.List javaObject)
         {
-            _proxy = proxy;
+            JavaObject = javaObject;
             var x = new List<int>();
         }
 
         public T this[int index]
         {
-            get => (T)_proxy.get(index);
-            set => _proxy.set(index, value);
+            get => (T)JavaObject.get(index);
+            set => JavaObject.set(index, value);
         }
 
         object IList.this[int index]
         {
-            get => _proxy.get(index);
-            set => _proxy.set(index, value);
+            get => JavaObject.get(index);
+            set => JavaObject.set(index, value);
         }
 
-        public int Count => _proxy.size();
+        public int Count => JavaObject.size();
 
         public bool IsReadOnly => false;
 
@@ -87,28 +87,28 @@ namespace org.mpxj
 
         public void Add(T item)
         {
-            _proxy.add(item);
+            JavaObject.add(item);
         }
 
         public int Add(object value)
         {
-            _proxy.add(value);
-            return _proxy.size() - 1;
+            JavaObject.add(value);
+            return JavaObject.size() - 1;
         }
 
         public void Clear()
         {
-            _proxy.clear();
+            JavaObject.clear();
         }
 
         public bool Contains(T item)
         {
-            return _proxy.contains(item);
+            return JavaObject.contains(item);
         }
 
         public bool Contains(object value)
         {
-            return _proxy.contains(value);
+            return JavaObject.contains(value);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
@@ -134,37 +134,37 @@ namespace org.mpxj
 
         public int IndexOf(T item)
         {
-            return _proxy.indexOf(item);
+            return JavaObject.indexOf(item);
         }
 
         public int IndexOf(object value)
         {
-            return _proxy.indexOf(value);
+            return JavaObject.indexOf(value);
         }
 
         public void Insert(int index, T item)
         {
-            _proxy.set(index, item);
+            JavaObject.set(index, item);
         }
 
         public void Insert(int index, object value)
         {
-            _proxy.set(index, value);
+            JavaObject.set(index, value);
         }
 
         public bool Remove(T item)
         {
-            return _proxy.remove(item);
+            return JavaObject.remove(item);
         }
 
         public void Remove(object value)
         {
-            _proxy.remove(value);
+            JavaObject.remove(value);
         }
 
         public void RemoveAt(int index)
         {
-            _proxy.remove(index);
+            JavaObject.remove(index);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

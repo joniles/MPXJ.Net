@@ -1,115 +1,115 @@
 ﻿namespace org.mpxj
 {
-    public class ProjectConfig
+    public class ProjectConfig : IJavaObjectProxy<net.sf.mpxj.ProjectConfig>
     {
-        internal readonly net.sf.mpxj.ProjectConfig _proxy;
+        public net.sf.mpxj.ProjectConfig JavaObject { get; }
 
-        internal ProjectConfig(net.sf.mpxj.ProjectConfig proxy)
+        internal ProjectConfig(net.sf.mpxj.ProjectConfig javaObject)
         {
-            _proxy = proxy;
+            JavaObject = javaObject;
         }
 
         public bool AutoWBS
         {
-            get => _proxy.getAutoWBS();
-            set => _proxy.setAutoWBS(value);
+            get => JavaObject.getAutoWBS();
+            set => JavaObject.setAutoWBS(value);
         }
 
         public bool AutoOutlineLevel
         {
-            get => _proxy.getAutoOutlineLevel();
-            set => _proxy.setAutoOutlineLevel(value);
+            get => JavaObject.getAutoOutlineLevel();
+            set => JavaObject.setAutoOutlineLevel(value);
         }
 
         public bool AutoOutlineNumber
         {
-            get => _proxy.getAutoOutlineNumber();
-            set => _proxy.setAutoOutlineNumber(value);
+            get => JavaObject.getAutoOutlineNumber();
+            set => JavaObject.setAutoOutlineNumber(value);
         }
 
         public bool AutoTaskUniqueID
         {
-            get => _proxy.getAutoTaskID();
-            set => _proxy.setAutoTaskID(value);
+            get => JavaObject.getAutoTaskID();
+            set => JavaObject.setAutoTaskID(value);
         }
 
         public bool AutoCalendarUniqueID
         {
-            get => _proxy.getAutoCalendarUniqueID();
-            set => _proxy.setAutoCalendarUniqueID(value);
+            get => JavaObject.getAutoCalendarUniqueID();
+            set => JavaObject.setAutoCalendarUniqueID(value);
         }
 
         public bool AutoAssignmentUniqueID
         {
-            get => _proxy.getAutoAssignmentUniqueID();
-            set => _proxy.setAutoAssignmentUniqueID(value);
+            get => JavaObject.getAutoAssignmentUniqueID();
+            set => JavaObject.setAutoAssignmentUniqueID(value);
         }
 
         public bool AutoTaskID
         {
-            get => _proxy.getAutoTaskID();
-            set => _proxy.setAutoTaskID(value);
+            get => JavaObject.getAutoTaskID();
+            set => JavaObject.setAutoTaskID(value);
         }
 
         public bool AutoResourceUniqueID
         {
-            get => _proxy.getAutoResourceUniqueID();
-            set => _proxy.setAutoResourceUniqueID(value);
+            get => JavaObject.getAutoResourceUniqueID();
+            set => JavaObject.setAutoResourceUniqueID(value);
         }
 
         public bool AutoResourceID
         {
-            get => _proxy.getAutoResourceID();
-            set => _proxy.setAutoResourceID(value);
+            get => JavaObject.getAutoResourceID();
+            set => JavaObject.setAutoResourceID(value);
         }
 
         public bool AutoRelationUniqueID
         {
-            get => _proxy.getAutoRelationUniqueID();
-            set => _proxy.setAutoRelationUniqueID(value);
+            get => JavaObject.getAutoRelationUniqueID();
+            set => JavaObject.setAutoRelationUniqueID(value);
         }
 
         public bool CompleteThroughIsNextWorkStart
         {
-            get => _proxy.getCompleteThroughIsNextWorkStart();
-            set => _proxy.setCompleteThroughIsNextWorkStart(value);
+            get => JavaObject.getCompleteThroughIsNextWorkStart();
+            set => JavaObject.setCompleteThroughIsNextWorkStart(value);
         }
 
         public void UpdateUniqueCounters()
         {
-            _proxy.updateUniqueCounters();
+            JavaObject.updateUniqueCounters();
         }
 
         public void UpdateTaskUniqueCounter()
         {
-            _proxy.updateTaskUniqueCounter();
+            JavaObject.updateTaskUniqueCounter();
         }
 
         public void UpdateResourceUniqueCounter()
         {
-            _proxy.updateResourceUniqueCounter();
+            JavaObject.updateResourceUniqueCounter();
         }
 
         public void UpdateCalendarUniqueCounter()
         {
-            _proxy.updateCalendarUniqueCounter();
+            JavaObject.updateCalendarUniqueCounter();
         }
 
         public void UpdateAssignmentUniqueCounter()
         {
-            _proxy.updateAssignmentUniqueCounter();
+            JavaObject.updateAssignmentUniqueCounter();
         }
 
         public net.sf.mpxj.BaselineStrategy BaselineStrategy
         {
-            get => _proxy.getBaselineStrategy();
-            set => _proxy.setBaselineStrategy(value);
+            get => JavaObject.getBaselineStrategy();
+            set => JavaObject.setBaselineStrategy(value);
         }
 
         public string SubprojectWorkingDirectory
         {
-            get => _proxy.getSubprojectWorkingDirectory()?.getCanonicalPath();
-            set => _proxy.setSubprojectWorkingDirectory(value == null ? null : new java.io.File(value));
+            get => JavaObject.getSubprojectWorkingDirectory()?.getCanonicalPath();
+            set => JavaObject.setSubprojectWorkingDirectory(value == null ? null : new java.io.File(value));
         }
     }
 }

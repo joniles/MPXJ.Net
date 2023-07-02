@@ -1,28 +1,25 @@
 ﻿namespace org.mpxj
 {
-    public class ProjectCalendarWeek : ProjectCalendarDays
+    public class ProjectCalendarWeek : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarWeek>
     {
-        internal new readonly net.sf.mpxj.ProjectCalendarWeek _proxy;
+        public new net.sf.mpxj.ProjectCalendarWeek JavaObject { get => (net.sf.mpxj.ProjectCalendarWeek)base.JavaObject; }
 
-        internal ProjectCalendarWeek(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarWeek proxy) : base(projectFile, proxy)
-        {
-            _proxy = proxy;
-        }
+        internal ProjectCalendarWeek(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(projectFile, javaObject) { }
 
         public net.sf.mpxj.LocalDateRange DateRange
         {
-            get => _proxy.getDateRange();
-            set => _proxy.setDateRange(value);
+            get => JavaObject.getDateRange();
+            set => JavaObject.setDateRange(value);
         }
 
         public java.util.List ConvertToRecurringExceptions(ProjectCalendar calendar)
         {
-            return _proxy.convertToRecurringExceptions(calendar._proxy);
+            return JavaObject.convertToRecurringExceptions(calendar.JavaObject);
         }
 
         public override string ToString()
         {
-            return _proxy.toString();
+            return JavaObject.toString();
         }
     }
 }

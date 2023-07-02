@@ -2,13 +2,13 @@
 {
     public class ProjectCalendarHours : ProxyList<net.sf.mpxj.LocalTimeRange>
     {
-        internal ProjectCalendarHours(net.sf.mpxj.ProjectCalendarHours proxy) : base(proxy) { }
+        internal ProjectCalendarHours(net.sf.mpxj.ProjectCalendarHours javaObject) : base(javaObject) { }
 
         public ProjectCalendarHours() : base(new net.sf.mpxj.ProjectCalendarHours()) { }
 
         public override string ToString()
         {
-            return _proxy.ToString();
+            return JavaObject.ToString();
         }
     }
 }

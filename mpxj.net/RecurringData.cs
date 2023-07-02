@@ -1,123 +1,123 @@
 ﻿namespace org.mpxj
 {
-    public class RecurringData
+    public class RecurringData : IJavaObjectProxy<net.sf.mpxj.RecurringData>
     {
-        internal readonly net.sf.mpxj.RecurringData _proxy;
+        public net.sf.mpxj.RecurringData JavaObject { get; }
 
-        internal RecurringData(net.sf.mpxj.RecurringData proxy)
+        internal RecurringData(net.sf.mpxj.RecurringData javaObject)
         {
-            _proxy = proxy;
+            JavaObject = javaObject;
         }
 
         public RecurringData()
         {
-            _proxy = new net.sf.mpxj.RecurringData();
+            JavaObject = new net.sf.mpxj.RecurringData();
         }
 
         public java.time.LocalDate StartDate
         {
-            get => _proxy.getStartDate();
-            set => _proxy.setStartDate(value);
+            get => JavaObject.getStartDate();
+            set => JavaObject.setStartDate(value);
         }
 
         public java.time.LocalDate FinishDate
         {
-            get => _proxy.getFinishDate();
-            set => _proxy.setFinishDate(value);
+            get => JavaObject.getFinishDate();
+            set => JavaObject.setFinishDate(value);
         }
 
         public java.lang.Integer tOccurrences
         {
-            get => _proxy.getOccurrences();
-            set => _proxy.setOccurrences(value);
+            get => JavaObject.getOccurrences();
+            set => JavaObject.setOccurrences(value);
         }
 
         public net.sf.mpxj.RecurrenceType RecurrenceType
         {
-            get => _proxy.getRecurrenceType();
-            set => _proxy.setRecurrenceType(value);
+            get => JavaObject.getRecurrenceType();
+            set => JavaObject.setRecurrenceType(value);
         }
 
         public bool UseEndDate
         {
-            get => _proxy.getUseEndDate();
-            set => _proxy.setUseEndDate(value);
+            get => JavaObject.getUseEndDate();
+            set => JavaObject.setUseEndDate(value);
         }
 
         public bool WorkingDaysOnly
         {
-            get => _proxy.getWorkingDaysOnly();
-            set => _proxy.setWorkingDaysOnly(value);
+            get => JavaObject.getWorkingDaysOnly();
+            set => JavaObject.setWorkingDaysOnly(value);
         }
 
         public bool GetWeeklyDay(java.time.DayOfWeek day)
         {
-            return _proxy.getWeeklyDay(day);
+            return JavaObject.getWeeklyDay(day);
         }
 
         public void SetWeeklyDay(java.time.DayOfWeek day, bool value)
         {
-            _proxy.setWeeklyDay(day, value);
+            JavaObject.setWeeklyDay(day, value);
         }
 
         public bool Relative
         {
-            get => _proxy.getRelative();
-            set => _proxy.setRelative(value);
+            get => JavaObject.getRelative();
+            set => JavaObject.setRelative(value);
         }
 
         public java.lang.Integer Frequency
         {
-            get => _proxy.getFrequency();
-            set => _proxy.setFrequency(value);
+            get => JavaObject.getFrequency();
+            set => JavaObject.setFrequency(value);
         }
 
         public java.time.DayOfWeek DayOfWeek
         {
-            get => _proxy.getDayOfWeek();
-            set => _proxy.setDayOfWeek(value);
+            get => JavaObject.getDayOfWeek();
+            set => JavaObject.setDayOfWeek(value);
         }
 
         public java.lang.Integer DayNumber
         {
-            get => _proxy.getDayNumber();
-            set => _proxy.setDayNumber(value);
+            get => JavaObject.getDayNumber();
+            set => JavaObject.setDayNumber(value);
         }
 
         public java.lang.Integer MonthNumber
         {
-            get => _proxy.getMonthNumber();
-            set => _proxy.setMonthNumber(value);
+            get => JavaObject.getMonthNumber();
+            set => JavaObject.setMonthNumber(value);
         }
 
         public java.time.LocalDate[] Dates
         {
-            get => _proxy.getDates();
+            get => JavaObject.getDates();
         }
 
         public bool Valid
         {
-            get => _proxy.isValid();
+            get => JavaObject.isValid();
         }
 
         public java.time.LocalDate CalculatedFirstDate
         {
-            get => _proxy.getCalculatedFirstDate();
+            get => JavaObject.getCalculatedFirstDate();
         }
 
         public java.time.LocalDate CalculatedLastDate
         {
-            get => _proxy.getCalculatedLastDate();
+            get => JavaObject.getCalculatedLastDate();
         }
 
         public void SetYearlyAbsoluteFromDate(java.time.LocalDate date)
         {
-            _proxy.setYearlyAbsoluteFromDate(date);
+            JavaObject.setYearlyAbsoluteFromDate(date);
         }
 
         public override string ToString()
         {
-            return _proxy.toString();
+            return JavaObject.toString();
         }
     }
 }

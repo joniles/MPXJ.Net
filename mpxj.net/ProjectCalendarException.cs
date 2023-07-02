@@ -1,60 +1,59 @@
 ﻿namespace org.mpxj
 {
-    public class ProjectCalendarException : ProjectCalendarHours
+    public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
     {
         internal readonly ProjectFile _projectFile;
-        internal new readonly net.sf.mpxj.ProjectCalendarException _proxy;
+        public new net.sf.mpxj.ProjectCalendarException JavaObject { get => (net.sf.mpxj.ProjectCalendarException)base.JavaObject; }
 
-        internal ProjectCalendarException(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarException proxy) : base(proxy)
+        internal ProjectCalendarException(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarException javaObject) : base(javaObject)
         {
             _projectFile = projectFile;
-            _proxy = proxy;
         }
 
         public string Name
         {
-            get => _proxy.getName();
-            set => _proxy.setName(value);
+            get => JavaObject.getName();
+            set => JavaObject.setName(value);
         }
 
         public java.time.LocalDate FromDate
         {
-            get => _proxy.getFromDate();
+            get => JavaObject.getFromDate();
         }
 
         public java.time.LocalDate ToDate
         {
-            get => _proxy.getToDate();
+            get => JavaObject.getToDate();
         }
 
         public RecurringData Recurring
         {
-            get => _projectFile.ProxyObject(_proxy.getRecurring());
+            get => _projectFile.ProxyObject(JavaObject.getRecurring());
         }
 
         public bool Working
         {
-            get => _proxy.getWorking();
+            get => JavaObject.getWorking();
         }
 
         public java.util.List ExpandedExceptions
         {
-            get => _proxy.getExpandedExceptions();
+            get => JavaObject.getExpandedExceptions();
         }
 
         public bool Contains(java.util.Date date)
         {
-            return _proxy.contains(date);
+            return JavaObject.contains(date);
         }
 
         public bool Contains(ProjectCalendarException exception)
         {
-            return _proxy.contains(exception._proxy);
+            return JavaObject.contains(exception.JavaObject);
         }
 
         public override string ToString()
         {
-            return _proxy.toString();
+            return JavaObject.toString();
         }
     }
 }
