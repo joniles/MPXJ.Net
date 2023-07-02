@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace org.mpxj
 {
-    public class ProjectFile: IJavaObjectProxy<net.sf.mpxj.ProjectFile>
+    public class ProjectFile : IJavaObjectProxy<net.sf.mpxj.ProjectFile>
     {
         public net.sf.mpxj.ProjectFile JavaObject { get; }
 
@@ -49,6 +49,40 @@ namespace org.mpxj
         internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)
         {
             return ProxyObject(value, h => new ProjectCalendarHours(h));
+        }
+
+
+        internal object GenericProxyObject(object o)
+        {
+            if (o == null)
+            {
+                return null;
+            }
+
+            switch (o.GetType().AssemblyQualifiedName)
+            {
+                case "net.sf.mpxj.Resource":
+                    return ProxyObject((net.sf.mpxj.Resource)o);
+
+                case "net.sf.mpxj.ProjectCalendarWeek":
+                    return ProxyObject((net.sf.mpxj.ProjectCalendarWeek)o);
+
+                case "net.sf.mpxj.ProjectCalendarException":
+                    return ProxyObject((net.sf.mpxj.ProjectCalendarException)o);
+
+                case "net.sf.mpxj.ProjectCalendar":
+                    return ProxyObject((net.sf.mpxj.ProjectCalendar)o);
+
+                case "net.sf.mpxj.RecurringData":
+                    return ProxyObject((net.sf.mpxj.RecurringData)o);
+
+                case "net.sf.mpxj.ProjectCalendarHours":
+                    return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
+
+            }
+
+
+            throw new ArgumentException();
         }
 
         internal ProjectFile(net.sf.mpxj.ProjectFile file)

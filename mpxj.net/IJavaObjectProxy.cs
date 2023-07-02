@@ -1,6 +1,6 @@
 ﻿namespace org.mpxj
 {
-	internal interface IJavaObjectProxy<M>
+	public interface IJavaObjectProxy<M>
 	{
 		M JavaObject { get; }
 	}
