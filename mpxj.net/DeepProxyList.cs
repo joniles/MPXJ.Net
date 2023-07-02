@@ -67,8 +67,8 @@ namespace org.mpxj
 
         public N this[int index]
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => (N)JavaObject.get(index);
+            set => JavaObject.set(index, value);
         }
 
         public int Count => JavaObject.size();
