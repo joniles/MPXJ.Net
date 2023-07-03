@@ -1,6 +1,6 @@
 ﻿namespace org.mpxj
 {
-	public class ProjectEntityWithIDContainer<N> : ProjectEntityContainer<N> where N : IProjectEntityWithID
+	public class ProjectEntityWithIDContainer<M, N> : ProjectEntityContainer<M, N> where N : IJavaObjectProxy<M>
     {
         internal ProjectEntityWithIDContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityWithIDContainer javaObject) : base(projectFile, javaObject) { }
 

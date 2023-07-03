@@ -170,8 +170,8 @@ namespace org.mpxj
 
         public net.sf.mpxj.ResourceContainer Resources
         {
+            // TODO: proxy this... and test!!
             get => JavaObject.getResources();
-
         }
 
         public net.sf.mpxj.ResourceAssignmentContainer ResourceAssignments

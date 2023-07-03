@@ -2,16 +2,11 @@
 
 namespace org.mpxj
 {
-	public class ProjectEntityContainer<N> : IProjectEntityContainer<N>, IJavaObjectProxy<net.sf.mpxj.ProjectEntityContainer>
+	public class ProjectEntityContainer<M, N> : DeepProxyList<M, N>, IProjectEntityContainer<N>, IJavaObjectProxy<net.sf.mpxj.ProjectEntityContainer> where N : IJavaObjectProxy<M>
 	{
-        internal readonly ProjectFile _projectFile;
-        public ProjectEntityContainer JavaObject { get; }
+        public new net.sf.mpxj.ProjectEntityContainer JavaObject { get => (net.sf.mpxj.ProjectEntityContainer)base.JavaObject; }
 
-        internal ProjectEntityContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityContainer javaObject)
-		{
-            _projectFile = projectFile;
-            JavaObject = javaObject;
-		}
+        internal ProjectEntityContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityContainer javaObject) : base(projectFile, javaObject) { }
 
         public N GetByUniqueID(java.lang.Integer id)
         {

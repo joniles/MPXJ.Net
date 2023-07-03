@@ -1,6 +1,6 @@
 ﻿namespace org.mpxj
 {
-    public class ResourceContainer : ProjectEntityWithIDContainer<Resource>
+    public class ResourceContainer : ProjectEntityWithIDContainer<net.sf.mpxj.Resource, Resource>
 	{
         public new net.sf.mpxj.ResourceContainer JavaObject { get => (net.sf.mpxj.ResourceContainer)base.JavaObject; }
 
