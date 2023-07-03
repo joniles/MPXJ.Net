@@ -912,432 +912,544 @@
             return JavaObject.getEnterpriseFlag(index);
         }
 
-        public void SetEnterpriseFlag(int index, bool value);
+        public void SetEnterpriseFlag(int index, bool value)
+        {
+            JavaObject.setEnterpriseFlag(index, value);
+        }
 
-        public java.lang.Number GetEnterpriseNumber(int index);
+        public java.lang.Number GetEnterpriseNumber(int index)
+        {
+            return JavaObject.getEnterpriseNumber(index);
+        }
 
-        public void SetEnterpriseNumber(int index, java.lang.Number value);
+        public void SetEnterpriseNumber(int index, java.lang.Number value)
+        {
+            JavaObject.setEnterpriseNumber(index, value);
+        }
 
-        public string GetEnterpriseText(int index);
+        public string GetEnterpriseText(int index)
+        {
+            return JavaObject.getEnterpriseText(index);
+        }
 
-        public void SetEnterpriseText(int index, string value);
+        public void SetEnterpriseText(int index, string value)
+        {
+            JavaObject.setEnterpriseText(index, value);
+        }
 
-        public void SetBaselineCost(int baselineNumber, java.lang.Number value);
+        public void SetBaselineCost(int baselineNumber, java.lang.Number value)
+        {
+            JavaObject.setBaselineCost(baselineNumber, value);
+        }
 
-        public void SetBaselineDuration(int baselineNumber, net.sf.mpxj.Duration value);
+        public void SetBaselineDuration(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineDuration(baselineNumber, value);
+        }
 
-        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineFinish(baselineNumber, value);
+        }
 
-        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineStart(baselineNumber, value); ;
+        }
 
-        public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value);
+        public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineWork(baselineNumber, value);
+        }
 
-        public java.lang.Number GetBaselineCost(int baselineNumber);
+        public java.lang.Number GetBaselineCost(int baselineNumber)
+        {
+            return JavaObject.getBaselineCost(baselineNumber);
+        }
 
-        public net.sf.mpxj.Duration GetBaselineDuration(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineDuration(int baselineNumber)
+        {
+            return JavaObject.getBaselineDuration(baselineNumber);
+        }
 
-        public string BaselineDurationText(int baselineNumber);
+        public string GetBaselineDurationText(int baselineNumber)
+        {
+            return JavaObject.getBaselineDurationText(baselineNumber);
+        }
 
-        public void SetBaselineDurationText(int baselineNumber, string value);
+        public void SetBaselineDurationText(int baselineNumber, string value)
+        {
+            JavaObject.setBaselineDurationText(baselineNumber, value);
+        }
 
-        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber)
+        {
+            return JavaObject.getBaselineFinish(baselineNumber);
+        }
 
-        public string GetBaselineFinishText(int baselineNumber);
+        public string GetBaselineFinishText(int baselineNumber)
+        {
+            return JavaObject.getBaselineFinishText(baselineNumber);
+        }
 
-        public void SetBaselineFinishText(int baselineNumber, string value);
+        public void SetBaselineFinishText(int baselineNumber, string value)
+        {
+            JavaObject.setBaselineFinishText(baselineNumber, value);
+        }
 
-        public java.time.LocalDateTime GetBaselineStart(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineStart(int baselineNumber)
+        {
+            return JavaObject.getBaselineStart(baselineNumber);
+        }
 
-        public string GetBaselineStartText(int baselineNumber);
+        public string GetBaselineStartText(int baselineNumber)
+        {
+            return JavaObject.getBaselineStartText(baselineNumber);
+        }
 
-        public void SetBaselineStartText(int baselineNumber, string value);
+        public void SetBaselineStartText(int baselineNumber, string value)
+        {
+            JavaObject.setBaselineStartText(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber)
+        {
+            return JavaObject.getBaselineWork(baselineNumber);
+        }
 
         public java.time.LocalDateTime CompleteThrough
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getCompleteThrough();
+            set => JavaObject.setCompleteThrough(value);
         }
 
         public java.time.LocalDateTime SummaryProgress
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSummaryProgress();
+            set => JavaObject.setSummaryProgress(value);
         }
 
         public java.util.UUID GUID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getGUID();
+            set => JavaObject.setGUID(value);
         }
 
         public net.sf.mpxj.TaskMode TaskMode
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getTaskMode();
+            set => JavaObject.setTaskMode(value);
         }
 
         public bool Active
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getActive();
+            set => JavaObject.setActive(value);
         }
 
         public net.sf.mpxj.Duration BaselineEstimatedDuration
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineEstimatedDuration();
+            set => JavaObject.setBaselineEstimatedDuration(value);
         }
 
-        public void SetBaselineEstimatedDuration(int baselineNumber, net.sf.mpxj.Duration value);
+        public void SetBaselineEstimatedDuration(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineEstimatedDuration(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.Duration GetBaselineEstimatedDuration(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineEstimatedDuration(int baselineNumber)
+        {
+            return JavaObject.getBaselineEstimatedDuration(baselineNumber);
+        }
 
         public java.time.LocalDateTime BaselineEstimatedStart
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineEstimatedStart();
+            set => JavaObject.setBaselineEstimatedStart(value);
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedStart(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineEstimatedStart(int baselineNumber)
+        {
+            return JavaObject.getBaselineEstimatedStart(baselineNumber);
+        }
 
-        public void SetBaselineEstimatedStart(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineEstimatedStart(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineEstimatedStart(baselineNumber, value);
+        }
 
         public java.time.LocalDateTime BaselineEstimatedFinish
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineEstimatedFinish();
+            set => JavaObject.setBaselineEstimatedFinish(value);
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedFinish(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineEstimatedFinish(int baselineNumber)
+        {
+            return JavaObject.getBaselineEstimatedFinish(baselineNumber);
+        }
 
-        public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineEstimatedFinish(baselineNumber, value);
+        }
 
         public java.lang.Number BaselineFixedCost
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineFixedCost();
+            set => JavaObject.setBaselineFixedCost(value);
         }
 
-        public void SetBaselineFixedCost(int baselineNumber, java.lang.Number value);
+        public void SetBaselineFixedCost(int baselineNumber, java.lang.Number value)
+        {
+            JavaObject.setBaselineFixedCost(baselineNumber, value);
+        }
 
-        public java.lang.Number GetBaselineFixedCost(int baselineNumber);
+        public java.lang.Number GetBaselineFixedCost(int baselineNumber)
+        {
+            return JavaObject.getBaselineFixedCost(baselineNumber);
+        }
 
         public net.sf.mpxj.AccrueType BaselineFixedCostAccrual
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineFixedCostAccrual();
+            set => JavaObject.setBaselineFixedCostAccrual(value);
         }
 
-        public void SetBaselineFixedCostAccrual(int baselineNumber, net.sf.mpxj.AccrueType value);
+        public void SetBaselineFixedCostAccrual(int baselineNumber, net.sf.mpxj.AccrueType value)
+        {
+            JavaObject.setBaselineFixedCostAccrual(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.AccrueType GetBaselineFixedCostAccrual(int baselineNumber);
+        public net.sf.mpxj.AccrueType GetBaselineFixedCostAccrual(int baselineNumber)
+        {
+            return JavaObject.getBaselineFixedCostAccrual(baselineNumber);
+        }
 
         public java.util.List ExpenseItems
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getExpenseItems();
+            set => JavaObject.setExpenseItems(value);
         }
 
         public java.lang.Number StoredMaterial
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getStoredMaterial();
+            set => JavaObject.setStoredMaterial(value);
         }
 
         public string FeatureOfWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getFeatureOfWork();
+            set => JavaObject.setFeatureOfWork(value);
         }
 
         public string CategoryOfWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getCategoryOfWork();
+            set => JavaObject.setCategoryOfWork(value);
         }
 
         public string PhaseOfWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPhaseOfWork();
+            set => JavaObject.setPhaseOfWork(value);
         }
 
         public string BidItem
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBidItem();
+            set => JavaObject.setBidItem(value);
         }
 
         public string ModOrClaimNumber
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getModOrClaimNumber();
+            set => JavaObject.setModOrClaimNumber(value);
         }
 
         public string WorkAreaCode
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getWorkAreaCode();
+            set => JavaObject.setWorkAreaCode(value);
         }
 
         public string ResponsibilityCode
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getResponsibilityCode();
+            set => JavaObject.setResponsibilityCode(value);
         }
 
         public java.lang.Integer WorkersPerDay
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getWorkersPerDay();
+            set => JavaObject.setWorkersPerDay(value);
         }
 
         public bool HammockCode
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getHammockCode();
+            set => JavaObject.setHammockCode(value);
         }
 
         public string Mail
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getMail();
+            set => JavaObject.setMail(value);
         }
 
         public string Section
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSection();
+            set => JavaObject.setSection(value);
         }
 
         public string Manager
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getManager();
+            set => JavaObject.setManager(value);
         }
 
         public string Department
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getDepartment();
+            set => JavaObject.setDepartment(value);
         }
 
         public java.lang.Number OverallPercentComplete
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getOverallPercentComplete();
+            set => JavaObject.setOverallPercentComplete(value);
         }
 
         public java.time.LocalDateTime PlannedFinish
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPlannedFinish();
+            set => JavaObject.setPlannedFinish(value);
         }
 
         public java.time.LocalDateTime PlannedStart
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPlannedStart();
+            set => JavaObject.setPlannedStart(value);
         }
 
         public net.sf.mpxj.Duration PlannedDuration
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPlannedDuration();
+            set => JavaObject.setPlannedDuration(value);
         }
 
         public net.sf.mpxj.Duration PlannedWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPlannedWork();
+            set => JavaObject.setPlannedWork(value);
         }
 
         public java.lang.Number PlannedCost
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPlannedCost();
+            set => JavaObject.setPlannedCost(value);
         }
 
         public java.time.LocalDateTime SuspendDate
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSuspendDate();
+            set => JavaObject.setSuspendDate(value);
         }
 
         public java.lang.Integer PrimaryResourceID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPrimaryResourceID();
+            set => JavaObject.setPrimaryResourceID(value);
         }
 
         public string CanonicalActivityID
         {
-            get => JavaObject.get
+            get => JavaObject.getCanonicalActivityID();
         }
 
         public string ActivityID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getActivityID();
+            set => JavaObject.setActivityID(value);
         }
 
         public net.sf.mpxj.PercentCompleteType PercentCompleteType
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getPercentCompleteType();
+            set => JavaObject.setPercentCompleteType(value);
         }
 
         public net.sf.mpxj.ActivityStatus ActivityStatus
         {
-            get => JavaObject.get
-            set => JavaObject.set
-        }
+            get => JavaObject.getActivityStatus();
+            set => JavaObject.setActivityStatus(value);
 
         public net.sf.mpxj.ActivityType ActivityType
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getActivityType();
+            set => JavaObject.setActivityType(value);
         }
 
         public bool LongestPath
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getLongestPath();
+            set => JavaObject.setLongestPath(value);
         }
 
         public java.time.LocalDateTime ExternalEarlyStart
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getExternalEarlyStart();
+            set => JavaObject.setExternalEarlyStart(value);
         }
 
         public java.time.LocalDateTime ExternalLateFinish
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getExternalLateFinish();
+            set => JavaObject.setExternalLateFinish(value);
         }
 
         public java.lang.Integer SprintID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSprintID();
+            set => JavaObject.setSprintID(value);
         }
 
         public java.lang.Integer BoardStatusID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBoardStatusID();
+            set => JavaObject.setBoardStatusID(value);
         }
 
         public bool ResponsePending
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getResponsePending();
+            set => JavaObject.setResponsePending(value);
         }
 
         public java.time.LocalDateTime ScheduledStart
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getScheduledStart();
+            set => JavaObject.setScheduledStart(value);
         }
 
         public java.time.LocalDateTime ScheduledFinish
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getScheduledFinish();
+            set => JavaObject.setScheduledFinish(value);
         }
 
         public net.sf.mpxj.Duration ScheduledDuration
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getScheduledDuration();
+            set => JavaObject.setScheduledDuration(value);
         }
 
         public java.lang.Number BudgetCost
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBudgetCost();
+            set => JavaObject.setBudgetCost(value);
         }
 
         public net.sf.mpxj.Duration BudgetWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBudgetWork();
+            set => JavaObject.setBudgetWork(value);
         }
 
         public java.lang.Number BaselineBudgetCost
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineBudgetCost();
+            set => JavaObject.setBaselineBudgetCost(value);
         }
 
         public net.sf.mpxj.Duration BaselineBudgetWork
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBaselineBudgetWork();
+            set => JavaObject.setBaselineBudgetWork(value);
         }
 
-        public java.lang.Number GetBaselineBudgetCost(int baselineNumber);
+        public java.lang.Number GetBaselineBudgetCost(int baselineNumber)
+        {
+            return JavaObject.getBaselineBudgetCost(baselineNumber);
+        }
 
-        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value);
+        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value)
+        {
+            JavaObject.setBaselineBudgetCost(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber)
+        {
+            return JavaObject.getBaselineBudgetWork(baselineNumber);
+        }
 
-        public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value);
+        public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineBudgetWork(baselineNumber, value);
+        }
 
         public java.lang.Integer SequenceNumber
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSequenceNumber();
+            set => JavaObject.setSequenceNumber(value);
         }
 
         public java.util.List Steps
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getSteps();
+            set => JavaObject.setSteps(value);
         }
 
         public java.lang.Integer LocationUniqueID
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getLocationUniqueID();
+            set => JavaObject.setLocationUniqueID(value);
         }
 
         public net.sf.mpxj.Location Location
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getLocation();
+            set => JavaObject.setLocation(value);
         }
 
         public string BarName
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getBarName();
+            set => JavaObject.setBarName(value);
         }
 
         public java.time.LocalDateTime ExpectedFinish
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getExpectedFinish();
+            set => JavaObject.setExpectedFinish(value);
         }
 
         public ProjectCalendar EffectiveCalendar
         {
-            get => JavaObject.get
-            set => JavaObject.set
+            get => JavaObject.getEffectiveCalendar();
         }
 
-        public string ToString();
-
-        public bool IsPredecessor(Task task);
-
-        public bool IsSucessor(Task task);
-
-        public bool hasChildTasks
+        public override string ToString()
         {
-            get => JavaObject.get
+            return JavaObject.toString();
+        }
+
+        public bool IsPredecessor(Task task)
+        {
+            return JavaObject.isPredecessor(task.JavaObject);
+        }
+
+        public bool IsSucessor(Task task)
+        {
+            return JavaObject.isSucessor(task.JavaObject);
+        }
+
+        public bool HasChildTasks
+        {
+            get => JavaObject.hasChildTasks();
         }
     }
 }
