@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class Tests
+    public class UniversalProjectReaderTests
     {
         [Test]
         public void Test1()

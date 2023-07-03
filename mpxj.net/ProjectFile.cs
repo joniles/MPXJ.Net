@@ -56,6 +56,11 @@ namespace org.mpxj
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Resource, Resource>(this, l));
         }
 
+        internal ResourceContainer ProxyObject(net.sf.mpxj.ResourceContainer value)
+        {
+            return ProxyObject(value, c => new ResourceContainer(this, c));
+        }
+
         internal object GenericProxyObject(object o)
         {
             if (o == null)
@@ -118,9 +123,9 @@ namespace org.mpxj
             get => JavaObject.getChildTasks();
         }
 
-        public java.util.List ChildResources
+        public IList<Resource> ChildResources
         {
-            get => JavaObject.getChildResources();
+            get => ProxyResourceList(JavaObject.getChildResources());
         }
 
         public net.sf.mpxj.TaskContainer Tasks
@@ -168,10 +173,9 @@ namespace org.mpxj
             JavaObject.removeResource(resource.JavaObject);
         }
 
-        public net.sf.mpxj.ResourceContainer Resources
+        public ResourceContainer Resources
         {
-            // TODO: proxy this... and test!!
-            get => JavaObject.getResources();
+            get => ProxyObject(JavaObject.getResources());
         }
 
         public net.sf.mpxj.ResourceAssignmentContainer ResourceAssignments
