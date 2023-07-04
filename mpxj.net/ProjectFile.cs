@@ -23,62 +23,67 @@ namespace org.mpxj
 
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
         {
-            return ProxyObject(value, r => new Resource(this, r));
+            return ProxyObject(value, v => new Resource(this, v));
         }
 
         internal ProjectCalendarWeek ProxyObject(net.sf.mpxj.ProjectCalendarWeek value)
         {
-            return ProxyObject(value, w => new ProjectCalendarWeek(this, w));
+            return ProxyObject(value, v => new ProjectCalendarWeek(this, v));
         }
 
         internal ProjectCalendarException ProxyObject(net.sf.mpxj.ProjectCalendarException value)
         {
-            return ProxyObject(value, e => new ProjectCalendarException(this, e));
+            return ProxyObject(value, v => new ProjectCalendarException(this, v));
         }
 
         internal ProjectCalendar ProxyObject(net.sf.mpxj.ProjectCalendar value)
         {
-            return ProxyObject(value, c => new ProjectCalendar(this, c));
+            return ProxyObject(value, v => new ProjectCalendar(this, v));
         }
 
         internal RecurringData ProxyObject(net.sf.mpxj.RecurringData value)
         {
-            return ProxyObject(value, r => new RecurringData(r));
+            return ProxyObject(value, v => new RecurringData(v));
         }
 
         internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)
         {
-            return ProxyObject(value, h => new ProjectCalendarHours(h));
+            return ProxyObject(value, v => new ProjectCalendarHours(v));
         }
 
         internal ResourceContainer ProxyObject(net.sf.mpxj.ResourceContainer value)
         {
-            return ProxyObject(value, c => new ResourceContainer(this, c));
+            return ProxyObject(value, v => new ResourceContainer(this, v));
         }
 
         internal TaskContainer ProxyObject(net.sf.mpxj.TaskContainer value)
         {
-            return ProxyObject(value, c => new TaskContainer(this, c));
+            return ProxyObject(value, v => new TaskContainer(this, v));
         }
 
         internal ResourceAssignmentContainer ProxyObject(net.sf.mpxj.ResourceAssignmentContainer value)
         {
-            return ProxyObject(value, c => new ResourceAssignmentContainer(this, c));
+            return ProxyObject(value, v => new ResourceAssignmentContainer(this, v));
         }
 
         internal Task ProxyObject(net.sf.mpxj.Task value)
         {
-            return ProxyObject(value, t => new Task(this, t));
+            return ProxyObject(value, v => new Task(this, v));
         }
 
         internal ProjectFile ProxyObject(net.sf.mpxj.ProjectFile value)
         {
-            return ProxyObject(value, f => new ProjectFile(f));
+            return ProxyObject(value, v => new ProjectFile(v));
         }
 
         internal ResourceAssignment ProxyObject(net.sf.mpxj.ResourceAssignment value)
         {
-            return ProxyObject(value, r => new ResourceAssignment(this, r));
+            return ProxyObject(value, v => new ResourceAssignment(this, v));
+        }
+
+        internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
+        {
+            return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
         }
 
         internal object GenericProxyObject(object o)
@@ -199,9 +204,9 @@ namespace org.mpxj
             return ProxyObject(JavaObject.addDefaultDerivedCalendar(), c => new ProjectCalendar(this, c));
         }
 
-        public net.sf.mpxj.ProjectCalendarContainer Calendars
+        public ProjectCalendarContainer Calendars
         {
-            get => JavaObject.getCalendars();
+            get => ProxyObject(JavaObject.getCalendars());
         }
 
         public ProjectProperties ProjectProperties
