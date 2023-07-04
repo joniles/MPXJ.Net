@@ -61,6 +61,11 @@ namespace org.mpxj
             return ProxyObject(value, c => new TaskContainer(this, c));
         }
 
+        internal ResourceAssignmentContainer ProxyObject(net.sf.mpxj.ResourceAssignmentContainer value)
+        {
+            return ProxyObject(value, c => new ResourceAssignmentContainer(this, c));
+        }
+
         internal Task ProxyObject(net.sf.mpxj.Task value)
         {
             return ProxyObject(value, t => new Task(this, t));
@@ -219,9 +224,9 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getResources());
         }
 
-        public net.sf.mpxj.ResourceAssignmentContainer ResourceAssignments
+        public ResourceAssignmentContainer ResourceAssignments
         {
-            get => JavaObject.getResourceAssignments();
+            get => ProxyObject(JavaObject.getResourceAssignments());
         }
 
         public ProjectCalendar GetCalendarByName(string calendarName)
