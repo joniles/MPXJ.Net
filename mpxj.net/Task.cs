@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using System.Collections.Generic;
+
+namespace org.mpxj
 {
     public class Task : AbstractFieldContainer, IProjectEntityWithID, IChildTaskContainer, IJavaObjectProxy<net.sf.mpxj.Task>
     {
@@ -361,6 +363,11 @@
             set => JavaObject.setNotesObject(value);
         }
 
+        public Task AddTask()
+        {            
+            return Parent.ProxyObject(JavaObject.addTask());
+        }
+
         public void SetNumber(int index, java.lang.Number value)
         {
             JavaObject.setNumber(index, value);
@@ -389,14 +396,14 @@
             set => JavaObject.setOutlineNumber(value);
         }
 
-        public java.util.List Predecessors
+        public IList<Task> Predecessors
         {
-            get => JavaObject.getPredecessors();
+            get => Parent.ProxyTaskList(JavaObject.getPredecessors());
         }
 
-        public java.util.List Successors
+        public IList<Task> Successors
         {
-            get => JavaObject.getSuccessors();
+            get => Parent.ProxyTaskList(JavaObject.getSuccessors());
         }
 
         public net.sf.mpxj.Priority Priority
@@ -569,7 +576,7 @@
 
         public Task ParentTask
         {
-            get => JavaObject.getParentTask();
+            get => Parent.ProxyObject(JavaObject.getParentTask());
         }
 
         public java.lang.Integer ParentTaskUniqueID
@@ -577,9 +584,9 @@
             get => JavaObject.getParentTaskUniqueID();
         }
 
-        public java.util.List ChildTasks
+        public IList<Task> ChildTasks
         {
-            get => JavaObject.getChildTasks();
+            get => Parent.ProxyTaskList(JavaObject.getChildTasks());
         }
 
         public bool Estimated
@@ -815,8 +822,8 @@
 
         public ProjectCalendar Calendar
         {
-            get => JavaObject.getCalendar();
-            set => JavaObject.setCalendar(value);
+            get => Parent.ProxyObject(JavaObject.getCalendar());
+            set => JavaObject.setCalendar(value.JavaObject);
         }
 
         public java.lang.Integer CalendarUniqueID
@@ -868,13 +875,13 @@
 
         public ProjectFile expandSubproject()
         {
-            return JavaObject.expandSubproject();
+            return Parent.ProxyObject(JavaObject.expandSubproject());
         }
 
         public ProjectFile SubprojectObject
         {
-            get => JavaObject.getSubprojectObject();
-            set => JavaObject.setSubprojectObject(value);
+            get => Parent.ProxyObject(JavaObject.getSubprojectObject());
+            set => JavaObject.setSubprojectObject(value.JavaObject);
         }
 
         public java.lang.Number GetEnterpriseCost(int index)
@@ -1187,12 +1194,13 @@
             set => JavaObject.setWorkersPerDay(value);
         }
 
+/* TODO: MPXJ 12.0.1
         public bool HammockCode
         {
             get => JavaObject.getHammockCode();
             set => JavaObject.setHammockCode(value);
         }
-
+*/
         public string Mail
         {
             get => JavaObject.getMail();
@@ -1286,6 +1294,7 @@
         {
             get => JavaObject.getActivityStatus();
             set => JavaObject.setActivityStatus(value);
+        }
 
         public net.sf.mpxj.ActivityType ActivityType
         {
@@ -1293,12 +1302,13 @@
             set => JavaObject.setActivityType(value);
         }
 
+/* TODO MPXJ 12.0.1
         public bool LongestPath
         {
             get => JavaObject.getLongestPath();
             set => JavaObject.setLongestPath(value);
         }
-
+*/
         public java.time.LocalDateTime ExternalEarlyStart
         {
             get => JavaObject.getExternalEarlyStart();
@@ -1429,7 +1439,7 @@
 
         public ProjectCalendar EffectiveCalendar
         {
-            get => JavaObject.getEffectiveCalendar();
+            get => Parent.ProxyObject(JavaObject.getEffectiveCalendar());
         }
 
         public override string ToString()
@@ -1453,4 +1463,3 @@
         }
     }
 }
-

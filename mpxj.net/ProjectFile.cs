@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace org.mpxj
 {
-    public class ProjectFile : IJavaObjectProxy<net.sf.mpxj.ProjectFile>
+    public class ProjectFile : IChildTaskContainer, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.ProjectFile>
     {
         public net.sf.mpxj.ProjectFile JavaObject { get; }
 
@@ -51,14 +51,19 @@ namespace org.mpxj
             return ProxyObject(value, h => new ProjectCalendarHours(h));
         }
 
-        internal IList<Resource> ProxyResourceList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Resource, Resource>(this, l));
-        }
-
         internal ResourceContainer ProxyObject(net.sf.mpxj.ResourceContainer value)
         {
             return ProxyObject(value, c => new ResourceContainer(this, c));
+        }
+
+        internal Task ProxyObject(net.sf.mpxj.Task value)
+        {
+            return ProxyObject(value, t => new Task(this, t));
+        }
+
+        internal ProjectFile ProxyObject(net.sf.mpxj.ProjectFile value)
+        {
+            return ProxyObject(value, f => new ProjectFile(f));
         }
 
         internal object GenericProxyObject(object o)
@@ -72,6 +77,9 @@ namespace org.mpxj
             {
                 case "net.sf.mpxj.Resource":
                     return ProxyObject((net.sf.mpxj.Resource)o);
+
+                case "net.sf.mpxj.Task":
+                    return ProxyObject((net.sf.mpxj.Task)o);
 
                 case "net.sf.mpxj.ProjectCalendarWeek":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarWeek)o);
@@ -93,6 +101,21 @@ namespace org.mpxj
             return o;
         }
 
+        internal IList<ProjectFile> ProxyProjectFileList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(this, l));
+        }
+
+        internal IList<Resource> ProxyResourceList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Resource, Resource>(this, l));
+        }
+
+        internal IList<Task> ProxyTaskList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Task, Task>(this, l));
+        }
+
         internal ProjectFile(net.sf.mpxj.ProjectFile file)
         {
             JavaObject = file;
@@ -103,14 +126,14 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getProjectConfig(), o => new ProjectConfig(o));
         }
 
-        public net.sf.mpxj.Task AddTask()
+        public Task AddTask()
         {
-            return JavaObject.addTask();
+            return ProxyObject(JavaObject.addTask());
         }
 
-        public void RemoveTask(net.sf.mpxj.Task task)
+        public void RemoveTask(Task task)
         {
-            JavaObject.removeTask(task);
+            JavaObject.removeTask(task.JavaObject);
         }
 
         public void ValidateUniqueIDsForMicrosoftProject()
@@ -118,9 +141,9 @@ namespace org.mpxj
             JavaObject.validateUniqueIDsForMicrosoftProject();
         }
 
-        public java.util.List ChildTasks
+        public IList<Task> ChildTasks
         {
-            get => JavaObject.getChildTasks();
+            get => ProxyTaskList(JavaObject.getChildTasks());
         }
 
         public IList<Resource> ChildResources
@@ -193,14 +216,14 @@ namespace org.mpxj
             return ProxyObject(JavaObject.getCalendarByUniqueID(calendarID), c => new ProjectCalendar(this, c));
         }
 
-        public net.sf.mpxj.Task GetTaskByID(java.lang.Integer id)
+        public Task GetTaskByID(java.lang.Integer id)
         {
-            return JavaObject.getTaskByID(id);
+            return ProxyObject(JavaObject.getTaskByID(id));
         }
 
-        public net.sf.mpxj.Task GetTaskByUniqueID(java.lang.Integer id)
+        public Task GetTaskByUniqueID(java.lang.Integer id)
         {
-            return JavaObject.getTaskByUniqueID(id);
+            return ProxyObject(JavaObject.getTaskByUniqueID(id));
         }
 
         public Resource GetResourceByID(java.lang.Integer id)
@@ -309,9 +332,9 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getBaselineCalendar(), c => new ProjectCalendar(this, c));
         }
 
-        public java.util.List Baselines
+        public IList<ProjectFile> Baselines
         {
-            get => JavaObject.getBaselines();
+            get => ProxyProjectFileList(JavaObject.getBaselines());
         }
 
         public void SetBaseline(ProjectFile baseline)
