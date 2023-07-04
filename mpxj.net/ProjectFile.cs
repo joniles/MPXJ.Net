@@ -71,6 +71,11 @@ namespace org.mpxj
             return ProxyObject(value, f => new ProjectFile(f));
         }
 
+        internal ResourceAssignment ProxyObject(net.sf.mpxj.ResourceAssignment value)
+        {
+            return ProxyObject(value, r => new ResourceAssignment(this, r));
+        }
+
         internal object GenericProxyObject(object o)
         {
             if (o == null)
@@ -85,6 +90,9 @@ namespace org.mpxj
 
                 case "net.sf.mpxj.Task":
                     return ProxyObject((net.sf.mpxj.Task)o);
+
+                case "net.sf.mpxj.ResourceAssignment":
+                    return ProxyObject((net.sf.mpxj.ResourceAssignment)o);
 
                 case "net.sf.mpxj.ProjectCalendarWeek":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarWeek)o);
@@ -119,6 +127,11 @@ namespace org.mpxj
         internal IList<Task> ProxyTaskList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Task, Task>(this, l));
+        }
+
+        internal IList<ResourceAssignment> ProxyResourceAssignmentList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(this, l));
         }
 
         internal ProjectFile(net.sf.mpxj.ProjectFile file)

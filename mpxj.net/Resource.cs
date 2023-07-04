@@ -24,6 +24,16 @@ namespace org.mpxj
             get => Parent.ProxyResourceList(JavaObject.getChildResources());
         }
 
+        public void AddResourceAssignment(ResourceAssignment assignment)
+        {
+            JavaObject.addResourceAssignment(assignment.JavaObject);
+        }
+
+        public IList<ResourceAssignment> TaskAssignments
+        {
+            get => Parent.ProxyResourceAssignmentList(JavaObject.getTaskAssignments());
+        }
+
         public string Name
         {
             get => JavaObject.getName();
@@ -535,11 +545,6 @@ namespace org.mpxj
         public object GetFieldByAlias(string alias)
         {
             return Parent.GenericProxyObject(JavaObject.getFieldByAlias(alias));
-        }
-
-        public java.util.List TaskAssignments
-        {
-            get => JavaObject.getTaskAssignments();
         }
 
         public java.lang.Integer SubprojectResourceUniqueID

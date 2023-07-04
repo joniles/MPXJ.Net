@@ -8,6 +8,50 @@ namespace org.mpxj
 
         internal Task(ProjectFile projectFile, net.sf.mpxj.Task javaObject) : base(projectFile, javaObject) { }
 
+        public net.sf.mpxj.RecurringTask AddRecurringTask()
+        {
+            return JavaObject.addRecurringTask();
+        }
+
+        public net.sf.mpxj.RecurringTask RecurringTask
+        {
+            get => JavaObject.getRecurringTask();
+        }
+
+        public java.util.List ActivityCodes
+        {
+            get => JavaObject.getActivityCodes();
+        }
+
+        public void AddActivityCode(net.sf.mpxj.ActivityCodeValue value)
+        {
+            JavaObject.addActivityCode(value);
+        }
+
+        public ResourceAssignment AddResourceAssignment(Resource resource)
+        {
+            return Parent.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
+        }
+
+        public void AddResourceAssignment(ResourceAssignment assignment)
+        {
+            JavaObject.addResourceAssignment(assignment.JavaObject);
+        }
+
+        public ResourceAssignment GetExistingResourceAssignment(Resource resource)
+        {
+            return Parent.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
+        }
+
+        public IList<ResourceAssignment> ResourceAssignments
+        {
+            get => Parent.ProxyResourceAssignmentList(JavaObject.getResourceAssignments());
+        }
+
+        public net.sf.mpxj.Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
+        {
+            return JavaObject.addPredecessor(targetTask.JavaObject, type, lag);
+        }
 
         public java.util.UUID SubprojectGUID
         {
@@ -366,6 +410,11 @@ namespace org.mpxj
         public Task AddTask()
         {            
             return Parent.ProxyObject(JavaObject.addTask());
+        }
+
+        public void RemoveChildTask(Task child)
+        {
+            JavaObject.removeChildTask(child.JavaObject);
         }
 
         public void SetNumber(int index, java.lang.Number value)

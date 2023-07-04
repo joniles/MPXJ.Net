@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace org.mpxj
+﻿namespace org.mpxj
 {
     public class ResourceAssignment : AbstractFieldContainer, IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ResourceAssignment>
     {
         public new net.sf.mpxj.ResourceAssignment JavaObject { get => (net.sf.mpxj.ResourceAssignment)base.JavaObject; }
 
-        internal ResourceAssignment(ProjectFile projectFile, net.sf.mpxj.Task javaObject) : base(projectFile, javaObject) { }
+        internal ResourceAssignment(ProjectFile projectFile, net.sf.mpxj.ResourceAssignment javaObject) : base(projectFile, javaObject) { }
 
         public net.sf.mpxj.ResourceAssignmentWorkgroupFields AddWorkgroupAssignment()
         {
@@ -218,13 +216,25 @@ namespace org.mpxj
             get => JavaObject.getHasTimephasedData();
         }
 
-        public void SetTimephasedBaselineWork(int index, net.sf.mpxj.TimephasedWorkContainer data);
+        public void SetTimephasedBaselineWork(int index, net.sf.mpxj.TimephasedWorkContainer data)
+        {
+            JavaObject.setTimephasedBaselineWork(index, data);
+        }
 
-        public void SetTimephasedBaselineCost(int index, net.sf.mpxj.TimephasedCostContainer data);
+        public void SetTimephasedBaselineCost(int index, net.sf.mpxj.TimephasedCostContainer data)
+        {
+            JavaObject.setTimephasedBaselineCost(index, data);
+        }
 
-        public java.util.List GetTimephasedBaselineWork(int index);
+        public java.util.List GetTimephasedBaselineWork(int index)
+        {
+            return JavaObject.getTimephasedBaselineWork(index);
+        }
 
-        public java.util.List GetTimephasedBaselineCost(int index);
+        public java.util.List GetTimephasedBaselineCost(int index)
+        {
+            return JavaObject.getTimephasedBaselineCost(index);
+        }
 
         public ProjectCalendar Calendar
         {
@@ -267,85 +277,205 @@ namespace org.mpxj
             set => JavaObject.setBaselineBudgetWork(value);
         }
 
-        public void SetBaselineCost(int baselineNumber, Number value);
+        public void SetBaselineCost(int baselineNumber, java.lang.Number value)
+        {
+            JavaObject.setBaselineCost(baselineNumber, value);
+        }
 
-        public void SetBaselineWork(int baselineNumber, Duration value);
+        public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineWork(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.Duration BaselineWork(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber)
+        {
+            return JavaObject.getBaselineWork(baselineNumber);
+        }
 
-        public java.lang.Number BaselineCost(int baselineNumber);
+        public java.lang.Number GetBaselineCost(int baselineNumber)
+        {
+            return JavaObject.getBaselineCost(baselineNumber);
+        }
 
-        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineStart(baselineNumber, value);
+        }
 
-        public java.time.LocalDateTime BaselineStart(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineStart(int baselineNumber)
+        {
+            return JavaObject.getBaselineStart(baselineNumber);
+        }
 
-        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value);
+        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value)
+        {
+            JavaObject.setBaselineFinish(baselineNumber, value);
+        }
 
-        public java.time.LocalDateTime BaselineFinish(int baselineNumber);
+        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber)
+        {
+            return JavaObject.getBaselineFinish(baselineNumber);
+        }
 
-        public void SetBaselineBudgetCost(int baselineNumber, Number value);
+        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value)
+        {
+            JavaObject.setBaselineBudgetCost(baselineNumber, value);
+        }
 
-        public void SetBaselineBudgetWork(int baselineNumber, Duration value);
+        public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setBaselineBudgetWork(baselineNumber, value);
+        }
 
-        public net.sf.mpxj.Duration BaselineBudgetWork(int baselineNumber);
+        public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber)
+        {
+            return JavaObject.getBaselineBudgetWork(baselineNumber);
+        }
 
-        public java.lang.Number BaselineBudgetCost(int baselineNumber);
+        public java.lang.Number GetBaselineBudgetCost(int baselineNumber)
+        {
+            return JavaObject.getBaselineBudgetCost(baselineNumber);
+        }
 
-        public void SetText(int index, string value);
+        public void SetText(int index, string value)
+        {
+            JavaObject.setText(index, value);
+        }
 
-        public string GetText(int index);
+        public string GetText(int index)
+        {
+            return JavaObject.getText(index);
+        }
 
-        public void SetStart(int index, java.time.LocalDateTime value);
+        public void SetStart(int index, java.time.LocalDateTime value)
+        {
+            JavaObject.setStart(index, value);
+        }
 
-        public java.time.LocalDateTime GetStart(int index);
+        public java.time.LocalDateTime GetStart(int index)
+        {
+            return JavaObject.getStart(index);
+        }
 
-        public void SetFinish(int index, java.time.LocalDateTime value);
+        public void SetFinish(int index, java.time.LocalDateTime value)
+        {
+            JavaObject.setFinish(index, value);
+        }
 
-        public java.time.LocalDateTime GetFinish(int index);
+        public java.time.LocalDateTime GetFinish(int index)
+        {
+            return JavaObject.getFinish(index);
+        }
 
-        public void SetDate(int index, java.time.LocalDateTime value);
+        public void SetDate(int index, java.time.LocalDateTime value)
+        {
+            JavaObject.setDate(index, value);
+        }
 
-        public java.time.LocalDateTime GetDate(int index);
+        public java.time.LocalDateTime GetDate(int index)
+        {
+            return JavaObject.getDate(index);
+        }
 
-        public void SetNumber(int index, Number value);
+        public void SetNumber(int index, java.lang.Number value)
+        {
+            JavaObject.setNumber(index, value);
+        }
 
-        public java.lang.Number GetNumber(int index);
+        public java.lang.Number GetNumber(int index)
+        {
+            return JavaObject.getNumber(index);
+        }
 
-        public void SetDuration(int index, Duration value);
+        public void SetDuration(int index, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setDuration(index, value);
+        }
 
-        public net.sf.mpxj.Duration Duration(int index);
+        public net.sf.mpxj.Duration GetDuration(int index)
+        {
+            return JavaObject.getDuration(index);
+        }
 
-        public void SetCost(int index, Number value);
+        public void SetCost(int index, java.lang.Number value)
+        {
+            JavaObject.setCost(index, value);
+        }
 
-        public java.lang.Number GetCost(int index);
+        public java.lang.Number GetCost(int index)
+        {
+            return JavaObject.getCost(index);
+        }
 
-        public void SetFlag(int index, bool value);
+        public void SetFlag(int index, bool value)
+        {
+            JavaObject.setFlag(index, value);
+        }
 
-        public bool GetFlag(int index);
+        public bool GetFlag(int index)
+        {
+            return JavaObject.getFlag(index);
+        }
 
-        public void SetEnterpriseCost(int index, Number value);
+        public void SetEnterpriseCost(int index, java.lang.Number value)
+        {
+            JavaObject.setEnterpriseCost(index, value);
+        }
 
-        public java.lang.Number GetEnterpriseCost(int index);
+        public java.lang.Number GetEnterpriseCost(int index)
+        {
+            return JavaObject.getEnterpriseCost(index);
+        }
 
-        public void SetEnterpriseDate(int index, java.time.LocalDateTime value);
+        public void SetEnterpriseDate(int index, java.time.LocalDateTime value)
+        {
+            JavaObject.setEnterpriseDate(index, value);
+        }
 
-        public java.time.LocalDateTime GetEnterpriseDate(int index);
+        public java.time.LocalDateTime GetEnterpriseDate(int index)
+        {
+            return JavaObject.getEnterpriseDate(index);
+        }
 
-        public void SetEnterpriseDuration(int index, Duration value);
+        public void SetEnterpriseDuration(int index, net.sf.mpxj.Duration value)
+        {
+            JavaObject.setEnterpriseDuration(index, value);
+        }
 
-        public net.sf.mpxj.Duration GetEnterpriseDuration(int index);
+        public net.sf.mpxj.Duration GetEnterpriseDuration(int index)
+        {
+            return JavaObject.getEnterpriseDuration(index);
+        }
 
-        public void SetEnterpriseFlag(int index, bool value);
+        public void SetEnterpriseFlag(int index, bool value)
+        {
+            JavaObject.setEnterpriseFlag(index, value);
+        }
 
-        public bool GetEnterpriseFlag(int index);
+        public bool GetEnterpriseFlag(int index)
+        {
+            return JavaObject.getEnterpriseFlag(index);
+        }
 
-        public void SetEnterpriseNumber(int index, Number value);
+        public void SetEnterpriseNumber(int index, java.lang.Number value)
+        {
+            JavaObject.setEnterpriseNumber(index, value);
+        }
 
-        public java.lang.Number GetEnterpriseNumber(int index);
+        public java.lang.Number GetEnterpriseNumber(int index)
+        {
+            return JavaObject.getEnterpriseNumber(index);
+        }
 
-        public void SetEnterpriseText(int index, string value);
+        public void SetEnterpriseText(int index, string value)
+        {
+            JavaObject.setEnterpriseText(index, value);
+        }
 
-        public public string EnterpriseText(int index);
+        public string GetEnterpriseText(int index)
+        {
+            return JavaObject.getEnterpriseText(index);
+        }
 
         public net.sf.mpxj.Duration RegularWork
         {
@@ -604,11 +734,22 @@ namespace org.mpxj
             set => JavaObject.setCostAccount(value);
         }
 
-        public net.sf.mpxj.Rate GetEffectiveRate(LocalDateTime date);
+        public net.sf.mpxj.Rate GetEffectiveRate(java.time.LocalDateTime date)
+        {
+            return JavaObject.getEffectiveRate(date);
+        }
 
-        public object GetFieldByAlias(string alias);
+        public object GetFieldByAlias(string alias)
+        {
+            // TODO: proxy
+            return JavaObject.getFieldByAlias(alias);
+        }
 
-        public void SetFieldByAlias(string alias, object value);
+        public void SetFieldByAlias(string alias, object value)
+        {
+            // TODO: proxy
+            JavaObject.setFieldByAlias(alias, value);
+        }
 
         public override string ToString()
         {
