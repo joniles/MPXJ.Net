@@ -721,10 +721,10 @@ namespace org.mpxj
             set => JavaObject.setACWP(value);
         }
 
-        public TimeUnit LevelingDelayFormat
+        public TimeUnit? LevelingDelayFormat
         {
-            get => (TimeUnit)JavaObject.getLevelingDelayFormat().getValue();
-            set => JavaObject.setLevelingDelayFormat(net.sf.mpxj.TimeUnit.getInstance((int)value));
+            get => JavaObject.getLevelingDelayFormat().ConvertType();
+            set => JavaObject.setLevelingDelayFormat(value.ConvertType());
         }
 
         public bool IgnoreResourceCalendar

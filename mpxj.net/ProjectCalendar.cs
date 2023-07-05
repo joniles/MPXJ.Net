@@ -146,14 +146,14 @@
             return JavaObject.getNextWorkStart(date);
         }
 
-        java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date)
+        public java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date)
         {
             return JavaObject.getPreviousWorkFinish(date);
         }
 
-        public DayType GetDayType(java.time.DayOfWeek day)
+        public DayType? GetDayType(java.time.DayOfWeek day)
         {
-            return (DayType)JavaObject.getDayType(day).getValue();
+            return JavaObject.getDayType(day).ConvertType();
         }
 
         public bool IsWorkingDay(java.time.DayOfWeek day)
@@ -219,17 +219,17 @@
 
         public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format)
         {
-            return JavaObject.getWork(day, net.sf.mpxj.TimeUnit.getInstance((int)format));
+            return JavaObject.getWork(day, format.ConvertType());
         }
 
         public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, TimeUnit format)
         {
-            return JavaObject.getWork(date, net.sf.mpxj.TimeUnit.getInstance((int)format));
+            return JavaObject.getWork(date, format.ConvertType());
         }
 
         public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format)
         {
-            return JavaObject.getWork(startDate, endDate, net.sf.mpxj.TimeUnit.getInstance((int)format));
+            return JavaObject.getWork(startDate, endDate, format.ConvertType());
         }
 
         public java.util.List DerivedCalendars
