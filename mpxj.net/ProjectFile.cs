@@ -116,6 +116,31 @@ namespace org.mpxj
             return ProxyObject(value, v => new CustomFieldContainer(v));
         }
 
+        internal ActivityCodeContainer ProxyObject(net.sf.mpxj.ActivityCodeContainer value)
+        {
+            return ProxyObject(value, v => new ActivityCodeContainer(v));
+        }
+
+        internal DataLinkContainer ProxyObject(net.sf.mpxj.DataLinkContainer value)
+        {
+            return ProxyObject(value, v => new DataLinkContainer(v));
+        }
+
+        internal ExpenseCategoryContainer ProxyObject(net.sf.mpxj.ExpenseCategoryContainer value)
+        {
+            return ProxyObject(value, v => new ExpenseCategoryContainer(v));
+        }
+
+        internal CostAccountContainer ProxyObject(net.sf.mpxj.CostAccountContainer value)
+        {
+            return ProxyObject(value, v => new CostAccountContainer(v));
+        }
+
+        internal UserDefinedFieldContainer ProxyObject(net.sf.mpxj.UserDefinedFieldContainer value)
+        {
+            return ProxyObject(value, v => new UserDefinedFieldContainer(v));
+        }
+
         internal object GenericProxyObject(object o)
         {
             if (o == null)
@@ -339,29 +364,29 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getCustomFields());
         }
 
-        public net.sf.mpxj.ActivityCodeContainer ActivityCodes
+        public ActivityCodeContainer ActivityCodes
         {
-            get => JavaObject.getActivityCodes();
+            get => ProxyObject(JavaObject.getActivityCodes());
         }
 
-        public net.sf.mpxj.DataLinkContainer DataLinks
+        public DataLinkContainer DataLinks
         {
-            get => JavaObject.getDataLinks();
+            get => ProxyObject(JavaObject.getDataLinks());
         }
 
-        public net.sf.mpxj.ExpenseCategoryContainer ExpenseCategories
+        public ExpenseCategoryContainer ExpenseCategories
         {
-            get => JavaObject.getExpenseCategories();
+            get => ProxyObject(JavaObject.getExpenseCategories());
         }
 
-        public net.sf.mpxj.CostAccountContainer CostAccounts
+        public CostAccountContainer CostAccounts
         {
-            get => JavaObject.getCostAccounts();
+            get => ProxyObject(JavaObject.getCostAccounts());
         }
 
-        public net.sf.mpxj.UserDefinedFieldContainer UserDefinedFields
+        public UserDefinedFieldContainer UserDefinedFields
         {
-            get => JavaObject.getUserDefinedFields();
+            get => ProxyObject(JavaObject.getUserDefinedFields());
         }
 
         public net.sf.mpxj.WorkContourContainer WorkContours
