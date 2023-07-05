@@ -1339,10 +1339,10 @@ namespace org.mpxj
             set => JavaObject.setPercentCompleteType(value);
         }
 
-        public net.sf.mpxj.ActivityStatus ActivityStatus
+        public ActivityStatus? ActivityStatus
         {
-            get => JavaObject.getActivityStatus();
-            set => JavaObject.setActivityStatus(value);
+            get => JavaObject.getActivityStatus().ConvertType();
+            set => JavaObject.setActivityStatus(value.ConvertType());
         }
 
         public net.sf.mpxj.ActivityType ActivityType

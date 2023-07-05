@@ -67,6 +67,22 @@ namespace org.mpxj
         {
             return value == null ? (EarnedValueMethod?)null : (EarnedValueMethod)value.getValue();
         }
+
+        // ActivityStatus
+        public static net.sf.mpxj.ActivityStatus ConvertType(this ActivityStatus value)
+        {
+            return net.sf.mpxj.ActivityStatus.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ActivityStatus ConvertType(this ActivityStatus? value)
+        {
+            return value == null ? null : net.sf.mpxj.ActivityStatus.values()[(int)value];
+        }
+
+        public static ActivityStatus? ConvertType(this net.sf.mpxj.ActivityStatus value)
+        {
+            return value == null ? (ActivityStatus?)null : (ActivityStatus)value.ordinal();
+        }
     }
 }
 
