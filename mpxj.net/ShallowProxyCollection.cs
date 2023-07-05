@@ -6,9 +6,9 @@ namespace org.mpxj
     {
         public new java.util.Collection JavaObject { get => (java.util.Collection)base.JavaObject; }
 
-        public int Count => throw new System.NotImplementedException();
+        public int Count => JavaObject.size();
 
-        public bool IsReadOnly => throw new System.NotImplementedException();
+        public bool IsReadOnly => false;
 
         public ShallowProxyCollection() : base(new java.util.ArrayList()) { }
 
