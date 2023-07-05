@@ -51,9 +51,9 @@
             JavaObject.removeCalendarHours(day);
         }
 
-        public net.sf.mpxj.DayType GetCalendarDayType(java.time.DayOfWeek day)
+        public DayType GetCalendarDayType(java.time.DayOfWeek day)
         {
-            return JavaObject.getCalendarDayType(day);
+            return (DayType)JavaObject.getCalendarDayType(day).getValue();
         }
 
         public void SetWorkingDay(java.time.DayOfWeek day, bool working)
@@ -61,9 +61,9 @@
             JavaObject.setWorkingDay(day, working);
         }
 
-        public void SetCalendarDayType(java.time.DayOfWeek day, net.sf.mpxj.DayType type)
+        public void SetCalendarDayType(java.time.DayOfWeek day, DayType type)
         {
-            JavaObject.setCalendarDayType(day, type);
+            JavaObject.setCalendarDayType(day, net.sf.mpxj.DayType.getInstance((int)type));
         }
     }
 }

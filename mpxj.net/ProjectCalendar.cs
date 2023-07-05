@@ -151,9 +151,9 @@
             return JavaObject.getPreviousWorkFinish(date);
         }
 
-        public net.sf.mpxj.DayType GetDayType(java.time.DayOfWeek day)
+        public DayType GetDayType(java.time.DayOfWeek day)
         {
-            return JavaObject.getDayType(day);
+            return (DayType)JavaObject.getDayType(day).getValue();
         }
 
         public bool IsWorkingDay(java.time.DayOfWeek day)
