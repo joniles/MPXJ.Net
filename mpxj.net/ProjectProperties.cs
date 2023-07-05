@@ -374,10 +374,10 @@ namespace org.mpxj
             set => JavaObject.setFiscalYearStart(value);
         }
 
-        public net.sf.mpxj.EarnedValueMethod DefaultTaskEarnedValueMethod
+        public EarnedValueMethod? DefaultTaskEarnedValueMethod
         {
-            get => JavaObject.getDefaultTaskEarnedValueMethod();
-            set => JavaObject.setDefaultTaskEarnedValueMethod(value);
+            get => JavaObject.getDefaultTaskEarnedValueMethod().ConvertType();
+            set => JavaObject.setDefaultTaskEarnedValueMethod(value.ConvertType());
         }
 
         public bool RemoveFileProperties
@@ -530,10 +530,10 @@ namespace org.mpxj
             set => JavaObject.setDefaultTaskType(value);
         }
 
-        public net.sf.mpxj.EarnedValueMethod EarnedValueMethod
+        public EarnedValueMethod? EarnedValueMethod
         {
-            get => JavaObject.getEarnedValueMethod();
-            set => JavaObject.setEarnedValueMethod(value);
+            get => JavaObject.getEarnedValueMethod().ConvertType();
+            set => JavaObject.setEarnedValueMethod(value.ConvertType());
         }
 
         public java.time.LocalDateTime CreationDate

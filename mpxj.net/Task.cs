@@ -739,10 +739,10 @@ namespace org.mpxj
             set => JavaObject.setPhysicalPercentComplete(value);
         }
 
-        public net.sf.mpxj.EarnedValueMethod EarnedValueMethod
+        public EarnedValueMethod? EarnedValueMethod
         {
-            get => JavaObject.getEarnedValueMethod();
-            set => JavaObject.setEarnedValueMethod(value);
+            get => JavaObject.getEarnedValueMethod().ConvertType();
+            set => JavaObject.setEarnedValueMethod(value.ConvertType());
         }
 
         public net.sf.mpxj.Duration ActualWorkProtected

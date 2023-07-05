@@ -51,6 +51,22 @@ namespace org.mpxj
         {
             return value == null ? (AccrueType?)null : (AccrueType)value.getValue();
         }
+
+        // EarnedValueMethod
+        public static net.sf.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod value)
+        {
+            return net.sf.mpxj.EarnedValueMethod.getInstance((int)value);
+        }
+
+        public static net.sf.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod? value)
+        {
+            return value == null ? null : net.sf.mpxj.EarnedValueMethod.getInstance((int)value);
+        }
+
+        public static EarnedValueMethod? ConvertType(this net.sf.mpxj.EarnedValueMethod value)
+        {
+            return value == null ? (EarnedValueMethod?)null : (EarnedValueMethod)value.getValue();
+        }
     }
 }
 
