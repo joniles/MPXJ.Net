@@ -35,6 +35,22 @@ namespace org.mpxj
         {
             return value == null ? (TimeUnit?) null : (TimeUnit)value.getValue();
         }
+
+        // AccrueType
+        public static net.sf.mpxj.AccrueType ConvertType(this AccrueType value)
+        {
+            return net.sf.mpxj.AccrueType.getInstance((int)value);
+        }
+
+        public static net.sf.mpxj.AccrueType ConvertType(this AccrueType? value)
+        {
+            return value == null ? null : net.sf.mpxj.AccrueType.getInstance((int)value);
+        }
+
+        public static AccrueType? ConvertType(this net.sf.mpxj.AccrueType value)
+        {
+            return value == null ? (AccrueType?)null : (AccrueType)value.getValue();
+        }
     }
 }
 

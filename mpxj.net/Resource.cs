@@ -169,10 +169,10 @@ namespace org.mpxj
             set => JavaObject.setCanLevel(value);
         }
 
-        public net.sf.mpxj.AccrueType AccrueAt
+        public AccrueType? AccrueAt
         {
-            get => JavaObject.getAccrueAt();
-            set => JavaObject.setAccrueAt(value);
+            get => JavaObject.getAccrueAt().ConvertType();
+            set => JavaObject.setAccrueAt(value.ConvertType());
         }
 
         public net.sf.mpxj.Duration Work

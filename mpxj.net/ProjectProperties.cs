@@ -548,10 +548,10 @@ namespace org.mpxj
             set => JavaObject.setExtendedCreationDate(value);
         }
 
-        public net.sf.mpxj.AccrueType DefaultFixedCostAccrual
+        public AccrueType? DefaultFixedCostAccrual
         {
-            get => JavaObject.getDefaultFixedCostAccrual();
-            set => JavaObject.setDefaultFixedCostAccrual(value);
+            get => JavaObject.getDefaultFixedCostAccrual().ConvertType();
+            set => JavaObject.setDefaultFixedCostAccrual(value.ConvertType());
         }
 
         public net.sf.mpxj.Duration CriticalSlackLimit

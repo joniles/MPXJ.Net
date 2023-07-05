@@ -797,10 +797,10 @@ namespace org.mpxj
             set => JavaObject.setActualOvertimeWork(value);
         }
 
-        public net.sf.mpxj.AccrueType FixedCostAccrual
+        public AccrueType? FixedCostAccrual
         {
-            get => JavaObject.getFixedCostAccrual();
-            set => JavaObject.setFixedCostAccrual(value);
+            get => JavaObject.getFixedCostAccrual().ConvertType();
+            set => JavaObject.setFixedCostAccrual(value.ConvertType());
         }
 
         public string Hyperlink
@@ -1167,20 +1167,20 @@ namespace org.mpxj
             return JavaObject.getBaselineFixedCost(baselineNumber);
         }
 
-        public net.sf.mpxj.AccrueType BaselineFixedCostAccrual
+        public AccrueType? BaselineFixedCostAccrual
         {
-            get => JavaObject.getBaselineFixedCostAccrual();
-            set => JavaObject.setBaselineFixedCostAccrual(value);
+            get => JavaObject.getBaselineFixedCostAccrual().ConvertType();
+            set => JavaObject.setBaselineFixedCostAccrual(value.ConvertType());
         }
 
-        public void SetBaselineFixedCostAccrual(int baselineNumber, net.sf.mpxj.AccrueType value)
+        public void SetBaselineFixedCostAccrual(int baselineNumber, AccrueType value)
         {
-            JavaObject.setBaselineFixedCostAccrual(baselineNumber, value);
+            JavaObject.setBaselineFixedCostAccrual(baselineNumber, value.ConvertType());
         }
 
-        public net.sf.mpxj.AccrueType GetBaselineFixedCostAccrual(int baselineNumber)
+        public AccrueType? GetBaselineFixedCostAccrual(int baselineNumber)
         {
-            return JavaObject.getBaselineFixedCostAccrual(baselineNumber);
+            return JavaObject.getBaselineFixedCostAccrual(baselineNumber).ConvertType();
         }
 
         public java.util.List ExpenseItems
