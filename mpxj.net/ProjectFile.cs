@@ -141,6 +141,21 @@ namespace org.mpxj
             return ProxyObject(value, v => new UserDefinedFieldContainer(v));
         }
 
+        internal WorkContourContainer ProxyObject(net.sf.mpxj.WorkContourContainer value)
+        {
+            return ProxyObject(value, v => new WorkContourContainer(v));
+        }
+
+        internal NotesTopicContainer ProxyObject(net.sf.mpxj.NotesTopicContainer value)
+        {
+            return ProxyObject(value, v => new NotesTopicContainer(v));
+        }
+
+        internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)
+        {
+            return ProxyObject(value, v => new LocationContainer(v));
+        }
+
         internal object GenericProxyObject(object o)
         {
             if (o == null)
@@ -389,19 +404,19 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getUserDefinedFields());
         }
 
-        public net.sf.mpxj.WorkContourContainer WorkContours
+        public WorkContourContainer WorkContours
         {
-            get => JavaObject.getWorkContours();
+            get => ProxyObject(JavaObject.getWorkContours());
         }
 
-        public net.sf.mpxj.NotesTopicContainer NotesTopics
+        public NotesTopicContainer NotesTopics
         {
-            get => JavaObject.getNotesTopics();
+            get => ProxyObject(JavaObject.getNotesTopics());
         }
 
-        public net.sf.mpxj.LocationContainer Locations
+        public LocationContainer Locations
         {
-            get => JavaObject.getLocations();
+            get => ProxyObject(JavaObject.getLocations());
         }
 
         public ProjectCalendar DefaultCalendar
