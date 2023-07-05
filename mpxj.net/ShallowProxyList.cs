@@ -1,66 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace org.mpxj
 {
-    public class ShallowProxyList<M> : IList<M>, IJavaObjectProxy<java.util.List>
+    public class ShallowProxyList<M> : ShallowProxyEnumerable<M>, IList<M>, IJavaObjectProxy<java.util.List>
     {
-        public struct Enumerator : IEnumerator<M>, IDisposable, IEnumerator
-        {
-            private readonly ShallowProxyList<M> _list;
+        public new java.util.List JavaObject { get => (java.util.List)base.JavaObject; }
 
-            private java.util.Iterator _iter;
+        public ShallowProxyList() : base(new java.util.ArrayList()) { }
 
-            private M _current;
-
-            public M Current => _current;
-
-            object IEnumerator.Current
-            {
-                get => _current;
-            }
-
-            internal Enumerator(ShallowProxyList<M> list)
-            {
-                _list = list;
-                _iter = list.JavaObject.iterator();
-                _current = default(M);
-            }
-
-            public void Dispose()
-            {
-            }
-
-            public bool MoveNext()
-            {
-                if (!_iter.hasNext())
-                {
-                    return false;
-                }
-
-                _current = (M)_iter.next();
-                return true;
-            }
-
-            public void Reset()
-            {
-                _iter = _list.JavaObject.iterator();
-                _current = default(M);
-            }
-        }
-
-        public java.util.List JavaObject { get; }
-
-        public ShallowProxyList()
-        {
-            JavaObject = new java.util.ArrayList();
-        }
-
-        internal ShallowProxyList(java.util.List javaObject)
-        {
-            JavaObject = javaObject;
-        }
+        internal ShallowProxyList(java.util.List javaObject) : base(javaObject) { }
 
         public M this[int index]
         {
@@ -101,11 +49,6 @@ namespace org.mpxj
             }
         }
 
-        public IEnumerator<M> GetEnumerator()
-        {
-            return new Enumerator(this);
-        }
-
         public int IndexOf(M item)
         {
             return JavaObject.indexOf(item);
@@ -124,11 +67,6 @@ namespace org.mpxj
         public void RemoveAt(int index)
         {
             JavaObject.remove(index);
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return new Enumerator(this);
         }
     }
 }
