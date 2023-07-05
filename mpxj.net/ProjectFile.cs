@@ -101,6 +101,11 @@ namespace org.mpxj
             return ProxyObject(value, v => new FilterContainer(v));
         }
 
+        internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
+        {
+            return ProxyObject(value, v => new GroupContainer(v));
+        }
+
         internal object GenericProxyObject(object o)
         {
             if (o == null)
@@ -309,9 +314,9 @@ namespace org.mpxj
             get => ProxyObject(JavaObject.getFilters());
         }
 
-        public net.sf.mpxj.GroupContainer Groups
+        public GroupContainer Groups
         {
-            get => JavaObject.getGroups();
+            get => ProxyObject(JavaObject.getGroups());
         }
 
         public net.sf.mpxj.EventManager EventManager
