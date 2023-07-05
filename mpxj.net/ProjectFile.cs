@@ -66,6 +66,11 @@ namespace org.mpxj
             return ProxyObject(value, v => new ResourceAssignmentContainer(this, v));
         }
 
+        internal ViewContainer ProxyObject(net.sf.mpxj.ViewContainer value)
+        {
+            return ProxyObject(value, v => new ViewContainer(v));
+        }
+
         internal Task ProxyObject(net.sf.mpxj.Task value)
         {
             return ProxyObject(value, v => new Task(this, v));
@@ -84,6 +89,16 @@ namespace org.mpxj
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
+        }
+
+        internal TableContainer ProxyObject(net.sf.mpxj.TableContainer value)
+        {
+            return ProxyObject(value, v => new TableContainer(v));
+        }
+
+        internal FilterContainer ProxyObject(net.sf.mpxj.FilterContainer value)
+        {
+            return ProxyObject(value, v => new FilterContainer(v));
         }
 
         internal object GenericProxyObject(object o)
@@ -279,19 +294,19 @@ namespace org.mpxj
             get => JavaObject.getLatestFinishDate();
         }
 
-        public net.sf.mpxj.ViewContainer Views
+        public ViewContainer Views
         {
-            get => JavaObject.getViews();
+            get => ProxyObject(JavaObject.getViews());
         }
 
-        public net.sf.mpxj.TableContainer Tables
+        public TableContainer Tables
         {
-            get => JavaObject.getTables();
+            get => ProxyObject(JavaObject.getTables());
         }
 
-        public net.sf.mpxj.FilterContainer Filters
+        public FilterContainer Filters
         {
-            get => JavaObject.getFilters();
+            get => ProxyObject(JavaObject.getFilters());
         }
 
         public net.sf.mpxj.GroupContainer Groups
