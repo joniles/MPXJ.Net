@@ -217,19 +217,19 @@
             return _projectFile.ProxyObject(JavaObject.getWorkWeek(date));
         }
 
-        public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, net.sf.mpxj.TimeUnit format)
+        public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format)
         {
-            return JavaObject.getWork(day, format);
+            return JavaObject.getWork(day, net.sf.mpxj.TimeUnit.getInstance((int)format));
         }
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, net.sf.mpxj.TimeUnit format)
+        public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, TimeUnit format)
         {
-            return JavaObject.getWork(date, format);
+            return JavaObject.getWork(date, net.sf.mpxj.TimeUnit.getInstance((int)format));
         }
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, net.sf.mpxj.TimeUnit format)
+        public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format)
         {
-            return JavaObject.getWork(startDate, endDate, format);
+            return JavaObject.getWork(startDate, endDate, net.sf.mpxj.TimeUnit.getInstance((int)format));
         }
 
         public java.util.List DerivedCalendars

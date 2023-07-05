@@ -13,10 +13,10 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.TimeUnit DefaultDurationUnits
+        public TimeUnit DefaultDurationUnits
         {
-            get => JavaObject.getDefaultDurationUnits();
-            set => JavaObject.setDefaultDurationUnits(value);
+            get => (TimeUnit)JavaObject.getDefaultDurationUnits().getValue();
+            set => JavaObject.setDefaultDurationUnits(net.sf.mpxj.TimeUnit.getInstance((int)value));
         }
 
         public bool DefaultDurationIsFixed
@@ -25,10 +25,10 @@ namespace org.mpxj
             set => JavaObject.setDefaultDurationIsFixed(value);
         }
 
-        public net.sf.mpxj.TimeUnit DefaultWorkUnits
+        public TimeUnit DefaultWorkUnits
         {
-            get => JavaObject.getDefaultWorkUnits();
-            set => JavaObject.setDefaultWorkUnits(value);
+            get => (TimeUnit)JavaObject.getDefaultWorkUnits().getValue();
+            set => JavaObject.setDefaultWorkUnits(net.sf.mpxj.TimeUnit.getInstance((int)value));
         }
 
         public net.sf.mpxj.Rate DefaultStandardRate

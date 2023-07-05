@@ -241,10 +241,10 @@
             get => Parent.ProxyObject(JavaObject.getCalendar());
         }
 
-        public net.sf.mpxj.TimeUnit VariableRateUnits
+        public TimeUnit VariableRateUnits
         {
-            get => JavaObject.getVariableRateUnits();
-            set => JavaObject.setVariableRateUnits(value);
+            get => (TimeUnit)JavaObject.getVariableRateUnits().getValue();
+            set => JavaObject.setVariableRateUnits(net.sf.mpxj.TimeUnit.getInstance((int)value));
         }
 
         public java.lang.Integer TaskUniqueID
