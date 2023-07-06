@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class ProjectCalendar : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
+    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
     {
         public new net.sf.mpxj.ProjectCalendar JavaObject { get => (net.sf.mpxj.ProjectCalendar)base.JavaObject; }
 
