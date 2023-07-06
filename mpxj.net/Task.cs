@@ -923,7 +923,7 @@ namespace org.mpxj
             JavaObject.remove();
         }
 
-        public ProjectFile expandSubproject()
+        public ProjectFile ExpandSubproject()
         {
             return _proxyManager.ProxyObject(JavaObject.expandSubproject());
         }
