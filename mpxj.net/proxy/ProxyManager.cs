@@ -123,6 +123,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Step(this, v));
         }
 
+        internal Location ProxyObject(net.sf.mpxj.Location value)
+        {
+            return ProxyObject(value, v => new Location(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -190,7 +195,7 @@ namespace org.mpxj.proxy
 
         internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)
         {
-            return ProxyObject(value, v => new LocationContainer(v));
+            return ProxyObject(value, v => new LocationContainer(this, v));
         }
 
         internal object GenericProxyObject(object o)
@@ -200,6 +205,7 @@ namespace org.mpxj.proxy
                 return null;
             }
 
+            // TODO: complete this switch statement
             switch (o.GetType().AssemblyQualifiedName)
             {
                 case "net.sf.mpxj.Resource":

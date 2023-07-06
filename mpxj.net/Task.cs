@@ -1471,10 +1471,10 @@ namespace org.mpxj
             set => JavaObject.setLocationUniqueID(value);
         }
 
-        public net.sf.mpxj.Location Location
+        public Location Location
         {
-            get => JavaObject.getLocation();
-            set => JavaObject.setLocation(value);
+            get => _proxyManager.ProxyObject(JavaObject.getLocation());
+            set => JavaObject.setLocation(value.JavaObject);
         }
 
         public string BarName
