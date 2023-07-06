@@ -1458,10 +1458,11 @@ namespace org.mpxj
             set => JavaObject.setSequenceNumber(value);
         }
 
-        public java.util.List Steps
+        public IList<Step> Steps
         {
-            get => JavaObject.getSteps();
-            set => JavaObject.setSteps(value);
+            get => _proxyManager.ProxyStepList(JavaObject.getSteps());
+            // TODO: list conversion - move away from list-based setters?
+            //set => JavaObject.setSteps(value);
         }
 
         public java.lang.Integer LocationUniqueID

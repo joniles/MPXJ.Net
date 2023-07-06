@@ -118,6 +118,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new ExpenseItem(this, v));
         }
 
+        internal Step ProxyObject(net.sf.mpxj.Step value)
+        {
+            return ProxyObject(value, v => new Step(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -259,6 +264,11 @@ namespace org.mpxj.proxy
         internal IList<ExpenseItem> ProxyExpenseItemList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(this, l));
+        }
+
+        internal IList<Step> ProxyStepList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Step, Step>(this, l));
         }
     }
 }
