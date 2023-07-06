@@ -49,9 +49,9 @@ namespace org.mpxj
             get => _proxyManager.ProxyResourceAssignmentList(JavaObject.getResourceAssignments());
         }
 
-        public net.sf.mpxj.Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
+        public Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
         {
-            return JavaObject.addPredecessor(targetTask.JavaObject, type, lag);
+            return _proxyManager.ProxyObject(JavaObject.addPredecessor(targetTask.JavaObject, type, lag));
         }
 
         public java.util.UUID SubprojectGUID
@@ -446,14 +446,14 @@ namespace org.mpxj
             set => JavaObject.setOutlineNumber(value);
         }
 
-        public IList<Task> Predecessors
+        public IList<Relation> Predecessors
         {
-            get => _proxyManager.ProxyTaskList(JavaObject.getPredecessors());
+            get => _proxyManager.ProxyRelationList(JavaObject.getPredecessors());
         }
 
-        public IList<Task> Successors
+        public IList<Relation> Successors
         {
-            get => _proxyManager.ProxyTaskList(JavaObject.getSuccessors());
+            get => _proxyManager.ProxyRelationList(JavaObject.getSuccessors());
         }
 
         public net.sf.mpxj.Priority Priority
