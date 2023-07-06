@@ -113,6 +113,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Relation(this, v));
         }
 
+        internal ExpenseItem ProxyObject(net.sf.mpxj.ExpenseItem value)
+        {
+            return ProxyObject(value, v => new ExpenseItem(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -249,6 +254,11 @@ namespace org.mpxj.proxy
         internal IList<Relation> ProxyRelationList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Relation, Relation>(this, l));
+        }
+
+        internal IList<ExpenseItem> ProxyExpenseItemList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(this, l));
         }
     }
 }

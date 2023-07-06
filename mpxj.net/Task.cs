@@ -1184,10 +1184,11 @@ namespace org.mpxj
             return JavaObject.getBaselineFixedCostAccrual(baselineNumber).ConvertType();
         }
 
-        public java.util.List ExpenseItems
+        public IList<ExpenseItem> ExpenseItems
         {
-            get => JavaObject.getExpenseItems();
-            set => JavaObject.setExpenseItems(value);
+            get => _proxyManager.ProxyExpenseItemList(JavaObject.getExpenseItems());
+            // TODO: list conversion - move away from list-based setters?
+            //set => JavaObject.setExpenseItems(value);
         }
 
         public java.lang.Number StoredMaterial
