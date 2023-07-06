@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace org.mpxj
+namespace org.mpxj.proxy
 {
 	public class ShallowProxyEnumerable<M> : IEnumerable<M>, IJavaObjectProxy<java.lang.Iterable>
     {

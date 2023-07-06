@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
 	public class ProjectEntityWithIDContainer<M, N> : ProjectEntityContainer<M, N> where N : IJavaObjectProxy<M>
     {

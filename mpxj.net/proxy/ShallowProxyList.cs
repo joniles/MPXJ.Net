@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace org.mpxj
+namespace org.mpxj.proxy
 {
     public class ShallowProxyList<M> : ShallowProxyCollection<M>, IList<M>, IJavaObjectProxy<java.util.List>
     {

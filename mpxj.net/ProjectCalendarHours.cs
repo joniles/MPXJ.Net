@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class ProjectCalendarHours : ShallowProxyList<net.sf.mpxj.LocalTimeRange>
     {

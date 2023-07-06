@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using net.sf.mpxj.MpxjUtilities;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {

@@ -1,4 +1,4 @@
-﻿using net.sf.mpxj;
+﻿using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -9,7 +9,7 @@ namespace org.mpxj
 
         internal NotesTopicContainer(net.sf.mpxj.NotesTopicContainer javaObject) : base(javaObject) { }
 
-        public NotesTopic DefaultTopic
+        public net.sf.mpxj.NotesTopic DefaultTopic
         {
             get => JavaObject.getDefaultTopic();
         }

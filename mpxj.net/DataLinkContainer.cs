@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class DataLinkContainer : ShallowProxyList<net.sf.mpxj.DataLink>, IJavaObjectProxy<net.sf.mpxj.DataLinkContainer>
     {

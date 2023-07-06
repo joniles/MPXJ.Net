@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace org.mpxj
+﻿namespace org.mpxj
 {
-	internal static class ExtensionMethods
+	internal static class EnumExtensionMethods
 	{
         // DayType
         public static net.sf.mpxj.DayType ConvertType(this DayType value)

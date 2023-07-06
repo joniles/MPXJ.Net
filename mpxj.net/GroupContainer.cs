@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class GroupContainer : ShallowProxyList<net.sf.mpxj.Group>, IJavaObjectProxy<net.sf.mpxj.GroupContainer>
     {

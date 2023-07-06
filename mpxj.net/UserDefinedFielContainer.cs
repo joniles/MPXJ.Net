@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class UserDefinedFieldContainer : ShallowProxyCollection<net.sf.mpxj.UserDefinedField>, IJavaObjectProxy<net.sf.mpxj.UserDefinedFieldContainer>
     {

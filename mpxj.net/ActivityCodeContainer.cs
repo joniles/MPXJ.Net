@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class ActivityCodeContainer : ShallowProxyList<net.sf.mpxj.ActivityCode>, IJavaObjectProxy<net.sf.mpxj.ActivityCodeContainer>
     {

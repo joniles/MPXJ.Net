@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class CustomFieldContainer : ShallowProxyEnumerable<net.sf.mpxj.CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {

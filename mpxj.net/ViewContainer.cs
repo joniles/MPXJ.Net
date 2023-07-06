@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
 	public class ViewContainer : ShallowProxyList<net.sf.mpxj.View>, IJavaObjectProxy<net.sf.mpxj.ViewContainer>
 	{

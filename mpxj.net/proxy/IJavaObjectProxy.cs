@@ -1,4 +1,4 @@
-﻿namespace org.mpxj
+﻿namespace org.mpxj.proxy
 {
 	public interface IJavaObjectProxy<M>
 	{

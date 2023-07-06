@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     // TODO: ProjectEntityContainer
     public class ExpenseCategoryContainer : ShallowProxyList<net.sf.mpxj.ExpenseCategory>, IJavaObjectProxy<net.sf.mpxj.ExpenseCategoryContainer>

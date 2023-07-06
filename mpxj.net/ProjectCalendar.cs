@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class ProjectCalendar : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
     {

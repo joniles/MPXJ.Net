@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     // TODO: ProjectEntityContainer
     public class LocationContainer : ShallowProxyList<net.sf.mpxj.Location>, IJavaObjectProxy<net.sf.mpxj.LocationContainer>

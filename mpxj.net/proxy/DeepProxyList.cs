@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace org.mpxj
+namespace org.mpxj.proxy
 {
 	public class DeepProxyList<M, N> : IList<N>, IJavaObjectProxy<java.util.List> where N : IJavaObjectProxy<M>
     {

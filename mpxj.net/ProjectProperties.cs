@@ -1,4 +1,4 @@
-﻿using java.util;
+﻿using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -494,7 +494,7 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public UUID GUID
+        public java.util.UUID GUID
         {
             get => JavaObject.getGUID();
             set => JavaObject.setGUID(value);

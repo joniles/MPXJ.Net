@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using org.mpxj.proxy;
+using System.Collections.Generic;
 
 namespace org.mpxj
 {

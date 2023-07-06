@@ -1,4 +1,4 @@
-﻿using net.sf.mpxj;
+﻿using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -14,4 +14,3 @@ namespace org.mpxj
         }
     }
 }
-

@@ -1,4 +1,6 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     // TODO: ProjectEntityContainer
     public class WorkContourContainer : ShallowProxyList<net.sf.mpxj.WorkContour>, IJavaObjectProxy<net.sf.mpxj.WorkContourContainer>
