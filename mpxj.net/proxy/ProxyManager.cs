@@ -133,6 +133,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new LocalDateTimeRange(v));
         }
 
+        internal Notes ProxyObject(net.sf.mpxj.Notes value)
+        {
+            return ProxyObject(value, v => new Notes(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));

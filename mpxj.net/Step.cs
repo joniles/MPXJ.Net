@@ -60,10 +60,10 @@ namespace org.mpxj
             set => JavaObject.setDescription(value);
         }
 
-        public net.sf.mpxj.Notes DescriptionObject
+        public Notes DescriptionObject
         {
-            get => JavaObject.getDescriptionObject();
-            set => JavaObject.setDescriptionObject(value);
+            get => _proxyManager.ProxyObject(JavaObject.getDescriptionObject());
+            set => JavaObject.setDescriptionObject(value.JavaObject);
         }
 
         public bool Complete

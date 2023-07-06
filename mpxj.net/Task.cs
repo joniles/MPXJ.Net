@@ -402,10 +402,10 @@ namespace org.mpxj
             set => JavaObject.setNotes(value);
         }
 
-        public net.sf.mpxj.Notes NotesObject
+        public Notes NotesObject
         {
-            get => JavaObject.getNotesObject();
-            set => JavaObject.setNotesObject(value);
+            get => _proxyManager.ProxyObject(JavaObject.getNotesObject());
+            set => JavaObject.setNotesObject(value.JavaObject);
         }
 
         public Task AddTask()
