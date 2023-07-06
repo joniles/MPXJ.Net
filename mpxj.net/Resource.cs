@@ -727,19 +727,19 @@ namespace org.mpxj
             /* set => JavaObject.setRole(value); */
         }
 
-        public void SetCostRateTable(int index, net.sf.mpxj.CostRateTable crt)
+        public void SetCostRateTable(int index, CostRateTable crt)
         {
-            JavaObject.setCostRateTable(index, crt);
+            JavaObject.setCostRateTable(index, crt.JavaObject);
         }
 
-        public net.sf.mpxj.CostRateTable getCostRateTable(int index)
+        public CostRateTable GetCostRateTable(int index)
         {
-            return JavaObject.getCostRateTable(index);
+            return _proxyManager.ProxyObject(JavaObject.getCostRateTable(index));
         }
 
-        public net.sf.mpxj.CostRateTableEntry GetCurrentCostRateTableEntry(int costRateTable)
+        public CostRateTableEntry GetCurrentCostRateTableEntry(int costRateTable)
         {
-            return JavaObject.getCurrentCostRateTableEntry(costRateTable);
+            return _proxyManager.ProxyObject(JavaObject.getCurrentCostRateTableEntry(costRateTable));
         }
 
         public net.sf.mpxj.AvailabilityTable Availability

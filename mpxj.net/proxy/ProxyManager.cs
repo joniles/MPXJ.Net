@@ -133,6 +133,16 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new LocalDateTimeRange(v));
         }
 
+        internal CostRateTableEntry ProxyObject(net.sf.mpxj.CostRateTableEntry value)
+        {
+            return ProxyObject(value, v => new CostRateTableEntry(v));
+        }
+
+        internal CostRateTable ProxyObject(net.sf.mpxj.CostRateTable value)
+        {
+            return ProxyObject(value, v => new CostRateTable(this, v));
+        }
+
         internal Notes ProxyObject(net.sf.mpxj.Notes value)
         {
             return ProxyObject(value, v => new Notes(v));
@@ -291,7 +301,6 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(this, l));
         }
-
     }
 }
 
