@@ -912,10 +912,11 @@ namespace org.mpxj
             JavaObject.setFieldByAlias(alias, value);
         }
 
-        public java.util.List Splits
+        public IList<LocalDateTimeRange> Splits
         {
-            get => JavaObject.getSplits();
-            set => JavaObject.setSplits(value);
+            get => _proxyManager.ProxyLocalDateTimeRangeList(JavaObject.getSplits());
+            // TODO: list assignment
+            //set => JavaObject.setSplits(value);
         }
 
         public void Remove()

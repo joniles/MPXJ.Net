@@ -128,6 +128,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Location(this, v));
         }
 
+        internal LocalDateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
+        {
+            return ProxyObject(value, v => new LocalDateTimeRange(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -276,6 +281,12 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Step, Step>(this, l));
         }
+
+        internal IList<LocalDateTimeRange> ProxyLocalDateTimeRangeList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(this, l));
+        }
+
     }
 }
 
