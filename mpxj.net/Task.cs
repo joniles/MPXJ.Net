@@ -19,14 +19,14 @@ namespace org.mpxj
             get => _proxyManager.ProxyObject(JavaObject.getRecurringTask());
         }
 
-        public java.util.List ActivityCodes
+        public IList<ActivityCodeValue> ActivityCodes
         {
-            get => JavaObject.getActivityCodes();
+            get => _proxyManager.ProxyActivityCodeValueList(JavaObject.getActivityCodes());
         }
 
-        public void AddActivityCode(net.sf.mpxj.ActivityCodeValue value)
+        public void AddActivityCode(ActivityCodeValue value)
         {
-            JavaObject.addActivityCode(value);
+            JavaObject.addActivityCode(value.JavaObject);
         }
 
         public ResourceAssignment AddResourceAssignment(Resource resource)

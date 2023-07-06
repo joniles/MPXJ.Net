@@ -103,6 +103,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new ResourceAssignment(this, v));
         }
 
+        internal ActivityCodeValue ProxyObject(net.sf.mpxj.ActivityCodeValue value)
+        {
+            return ProxyObject(value, v => new ActivityCodeValue(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -229,6 +234,11 @@ namespace org.mpxj.proxy
         internal IList<ResourceAssignment> ProxyResourceAssignmentList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(this, l));
+        }
+
+        internal IList<ActivityCodeValue> ProxyActivityCodeValueList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(this, l));
         }
     }
 }
