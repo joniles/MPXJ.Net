@@ -7,16 +7,16 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.Task JavaObject { get => (net.sf.mpxj.Task)base.JavaObject; }
 
-        internal Task(ProjectFile projectFile, net.sf.mpxj.Task javaObject) : base(projectFile, javaObject) { }
+        internal Task(ProxyManager proxyManager, net.sf.mpxj.Task javaObject) : base(proxyManager, javaObject) { }
 
         public RecurringTask AddRecurringTask()
         {
-            return Parent.ProxyObject(JavaObject.addRecurringTask());
+            return _proxyManager.ProxyObject(JavaObject.addRecurringTask());
         }
 
         public RecurringTask RecurringTask
         {
-            get => Parent.ProxyObject(JavaObject.getRecurringTask());
+            get => _proxyManager.ProxyObject(JavaObject.getRecurringTask());
         }
 
         public java.util.List ActivityCodes
@@ -31,7 +31,7 @@ namespace org.mpxj
 
         public ResourceAssignment AddResourceAssignment(Resource resource)
         {
-            return Parent.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
+            return _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
         }
 
         public void AddResourceAssignment(ResourceAssignment assignment)
@@ -41,12 +41,12 @@ namespace org.mpxj
 
         public ResourceAssignment GetExistingResourceAssignment(Resource resource)
         {
-            return Parent.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
+            return _proxyManager.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
         }
 
         public IList<ResourceAssignment> ResourceAssignments
         {
-            get => Parent.ProxyResourceAssignmentList(JavaObject.getResourceAssignments());
+            get => _proxyManager.ProxyResourceAssignmentList(JavaObject.getResourceAssignments());
         }
 
         public net.sf.mpxj.Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
@@ -410,7 +410,7 @@ namespace org.mpxj
 
         public Task AddTask()
         {            
-            return Parent.ProxyObject(JavaObject.addTask());
+            return _proxyManager.ProxyObject(JavaObject.addTask());
         }
 
         public void RemoveChildTask(Task child)
@@ -448,12 +448,12 @@ namespace org.mpxj
 
         public IList<Task> Predecessors
         {
-            get => Parent.ProxyTaskList(JavaObject.getPredecessors());
+            get => _proxyManager.ProxyTaskList(JavaObject.getPredecessors());
         }
 
         public IList<Task> Successors
         {
-            get => Parent.ProxyTaskList(JavaObject.getSuccessors());
+            get => _proxyManager.ProxyTaskList(JavaObject.getSuccessors());
         }
 
         public net.sf.mpxj.Priority Priority
@@ -626,7 +626,7 @@ namespace org.mpxj
 
         public Task ParentTask
         {
-            get => Parent.ProxyObject(JavaObject.getParentTask());
+            get => _proxyManager.ProxyObject(JavaObject.getParentTask());
         }
 
         public java.lang.Integer ParentTaskUniqueID
@@ -636,7 +636,7 @@ namespace org.mpxj
 
         public IList<Task> ChildTasks
         {
-            get => Parent.ProxyTaskList(JavaObject.getChildTasks());
+            get => _proxyManager.ProxyTaskList(JavaObject.getChildTasks());
         }
 
         public bool Estimated
@@ -872,7 +872,7 @@ namespace org.mpxj
 
         public ProjectCalendar Calendar
         {
-            get => Parent.ProxyObject(JavaObject.getCalendar());
+            get => _proxyManager.ProxyObject(JavaObject.getCalendar());
             set => JavaObject.setCalendar(value.JavaObject);
         }
 
@@ -925,12 +925,12 @@ namespace org.mpxj
 
         public ProjectFile expandSubproject()
         {
-            return Parent.ProxyObject(JavaObject.expandSubproject());
+            return _proxyManager.ProxyObject(JavaObject.expandSubproject());
         }
 
         public ProjectFile SubprojectObject
         {
-            get => Parent.ProxyObject(JavaObject.getSubprojectObject());
+            get => _proxyManager.ProxyObject(JavaObject.getSubprojectObject());
             set => JavaObject.setSubprojectObject(value.JavaObject);
         }
 
@@ -1489,7 +1489,7 @@ namespace org.mpxj
 
         public ProjectCalendar EffectiveCalendar
         {
-            get => Parent.ProxyObject(JavaObject.getEffectiveCalendar());
+            get => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
         }
 
         public override string ToString()

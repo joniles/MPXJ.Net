@@ -1,14 +1,16 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
     public class ResourceContainer : ProjectEntityWithIDContainer<net.sf.mpxj.Resource, Resource>
 	{
         public new net.sf.mpxj.ResourceContainer JavaObject { get => (net.sf.mpxj.ResourceContainer)base.JavaObject; }
 
-        internal ResourceContainer(ProjectFile projectFile, net.sf.mpxj.ResourceContainer javaObject) : base(projectFile, javaObject) { }
+        internal ResourceContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceContainer javaObject) : base(proxyManager, javaObject) { }
 
         public Resource Add()
         {
-            return _projectFile.ProxyObject(JavaObject.add());
+            return _proxyManager.ProxyObject(JavaObject.add());
         }
 
         public void UpdateStructure()

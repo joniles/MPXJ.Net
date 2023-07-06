@@ -7,11 +7,11 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.Resource JavaObject { get => (net.sf.mpxj.Resource)base.JavaObject; }
 
-        internal Resource(ProjectFile projectFile, net.sf.mpxj.Resource proxy) : base(projectFile, proxy) { }
+        internal Resource(ProxyManager proxyManager, net.sf.mpxj.Resource javaObject) : base(proxyManager, javaObject) { }
 
         public Resource AddResource()
         {
-            return Parent.ProxyObject(JavaObject.addResource());
+            return _proxyManager.ProxyObject(JavaObject.addResource());
         }
 
         public void AddChildResource(Resource child)
@@ -21,7 +21,7 @@ namespace org.mpxj
 
         public IList<Resource> ChildResources
         {
-            get => Parent.ProxyResourceList(JavaObject.getChildResources());
+            get => _proxyManager.ProxyResourceList(JavaObject.getChildResources());
         }
 
         public void AddResourceAssignment(ResourceAssignment assignment)
@@ -31,7 +31,7 @@ namespace org.mpxj
 
         public IList<ResourceAssignment> TaskAssignments
         {
-            get => Parent.ProxyResourceAssignmentList(JavaObject.getTaskAssignments());
+            get => _proxyManager.ProxyResourceAssignmentList(JavaObject.getTaskAssignments());
         }
 
         public string Name
@@ -384,13 +384,13 @@ namespace org.mpxj
 
         public ProjectCalendar Calendar
         {
-            get => Parent.ProxyObject(JavaObject.getCalendar());
+            get => _proxyManager.ProxyObject(JavaObject.getCalendar());
             set => JavaObject.setCalendar(value.JavaObject);
         }
 
         public ProjectCalendar AddCalendar()
         {
-            return Parent.ProxyObject(JavaObject.addCalendar());
+            return _proxyManager.ProxyObject(JavaObject.addCalendar());
         }
 
         public void SetText(int index, string value)
@@ -453,7 +453,7 @@ namespace org.mpxj
 
         public Resource ParentResource
         {
-            get => Parent.ProxyObject(JavaObject.getParentResource());
+            get => _proxyManager.ProxyObject(JavaObject.getParentResource());
             set => JavaObject.setParentResource(value.JavaObject);
         }
 
@@ -544,7 +544,7 @@ namespace org.mpxj
 
         public object GetFieldByAlias(string alias)
         {
-            return Parent.GenericProxyObject(JavaObject.getFieldByAlias(alias));
+            return _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
         }
 
         public java.lang.Integer SubprojectResourceUniqueID

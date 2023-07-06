@@ -6,7 +6,7 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.ProjectCalendar JavaObject { get => (net.sf.mpxj.ProjectCalendar)base.JavaObject; }
 
-        internal ProjectCalendar(ProjectFile projectFile, net.sf.mpxj.ProjectCalendar javaObject) : base(projectFile, javaObject) { }
+        internal ProjectCalendar(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
 
         public java.lang.Integer MinutesPerDay
         {
@@ -59,7 +59,7 @@ namespace org.mpxj
 
         public ProjectCalendarWeek AddWorkWeek()
         {
-            return _projectFile.ProxyObject(JavaObject.addWorkWeek());
+            return _proxyManager.ProxyObject(JavaObject.addWorkWeek());
         }
 
         public void RemoveWorkWeek(ProjectCalendarWeek week)
@@ -79,17 +79,17 @@ namespace org.mpxj
 
         public ProjectCalendarException AddCalendarException(java.time.LocalDate date)
         {
-            return _projectFile.ProxyObject(JavaObject.addCalendarException(date));
+            return _proxyManager.ProxyObject(JavaObject.addCalendarException(date));
         }
 
         public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate)
         {
-            return _projectFile.ProxyObject(JavaObject.addCalendarException(fromDate, toDate));
+            return _proxyManager.ProxyObject(JavaObject.addCalendarException(fromDate, toDate));
         }
 
         public ProjectCalendarException AddCalendarException(RecurringData recurringData)
         {
-            return _projectFile.ProxyObject(JavaObject.addCalendarException(recurringData.JavaObject));
+            return _proxyManager.ProxyObject(JavaObject.addCalendarException(recurringData.JavaObject));
         }
 
         public void RemoveCalendarException(ProjectCalendarException exception)
@@ -114,7 +114,7 @@ namespace org.mpxj
 
         public ProjectCalendar Parent
         {
-            get => _projectFile.ProxyObject(JavaObject.getParent());
+            get => _proxyManager.ProxyObject(JavaObject.getParent());
             set => JavaObject.setParent(value.JavaObject);
         }
 
@@ -170,17 +170,17 @@ namespace org.mpxj
 
         public ProjectCalendarHours GetHours(java.time.DayOfWeek day)
         {
-            return _projectFile.ProxyObject(JavaObject.getHours(day));
+            return _proxyManager.ProxyObject(JavaObject.getHours(day));
         }
 
         public ProjectCalendarHours GetHours(java.time.LocalDate date)
         {
-            return _projectFile.ProxyObject(JavaObject.getHours(date));
+            return _proxyManager.ProxyObject(JavaObject.getHours(date));
         }
 
         public ProjectCalendarHours GetHours(java.time.LocalDateTime date)
         {
-            return _projectFile.ProxyObject(JavaObject.getHours(date));
+            return _proxyManager.ProxyObject(JavaObject.getHours(date));
         }
 
         public java.lang.Integer UniqueID
@@ -211,12 +211,12 @@ namespace org.mpxj
 
         public ProjectCalendarException GetException(java.time.LocalDate date)
         {
-            return _projectFile.ProxyObject(JavaObject.getException(date));
+            return _proxyManager.ProxyObject(JavaObject.getException(date));
         }
 
         public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date)
         {
-            return _projectFile.ProxyObject(JavaObject.getWorkWeek(date));
+            return _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
         }
 
         public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format)
@@ -246,7 +246,7 @@ namespace org.mpxj
 
         public ProjectFile ParentFile
         {
-            get => _projectFile;
+            get => _proxyManager.ProjectFile;
         }
 
         public bool Derived

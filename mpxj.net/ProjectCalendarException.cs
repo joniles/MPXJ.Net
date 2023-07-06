@@ -4,12 +4,12 @@ namespace org.mpxj
 {
     public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
     {
-        internal readonly ProjectFile _projectFile;
+        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ProjectCalendarException JavaObject { get => (net.sf.mpxj.ProjectCalendarException)base.JavaObject; }
 
-        internal ProjectCalendarException(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarException javaObject) : base(javaObject)
+        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(javaObject)
         {
-            _projectFile = projectFile;
+            _proxyManager = proxyManager;
         }
 
         public string Name
@@ -30,7 +30,7 @@ namespace org.mpxj
 
         public RecurringData Recurring
         {
-            get => _projectFile.ProxyObject(JavaObject.getRecurring());
+            get => _proxyManager.ProxyObject(JavaObject.getRecurring());
         }
 
         public bool Working

@@ -1,12 +1,16 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
 	public class ProjectEntity
 	{
-		public ProjectFile Parent { get; }
+		internal readonly ProxyManager _proxyManager;
 
-		public ProjectEntity(ProjectFile parent)
+		public ProjectFile Parent { get => _proxyManager.ProjectFile; }
+
+		internal ProjectEntity(ProxyManager proxyManager)
 		{
-			Parent = parent;
+			_proxyManager = proxyManager;
 		}
 	}
 }

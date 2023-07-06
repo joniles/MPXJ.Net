@@ -4,12 +4,12 @@ namespace org.mpxj
 {
     public class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
     {
-        internal readonly ProjectFile _projectFile;
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ProjectCalendarDays JavaObject { get; }
 
-        internal ProjectCalendarDays(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarDays javaObject)
+        internal ProjectCalendarDays(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarDays javaObject)
         {
-            _projectFile = projectFile;
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -25,7 +25,7 @@ namespace org.mpxj
 
         public ProjectCalendarHours GetCalendarHours(java.time.DayOfWeek day)
         {
-            return _projectFile.ProxyObject(JavaObject.getCalendarHours(day));
+            return _proxyManager.ProxyObject(JavaObject.getCalendarHours(day));
         }
 
         public void AddDefaultCalendarHours()
@@ -45,7 +45,7 @@ namespace org.mpxj
 
         public ProjectCalendarHours AddCalendarHours(java.time.DayOfWeek day)
         {
-            return _projectFile.ProxyObject(JavaObject.addCalendarHours(day));
+            return _proxyManager.ProxyObject(JavaObject.addCalendarHours(day));
         }
 
         public void RemoveCalendarHours(java.time.DayOfWeek day)

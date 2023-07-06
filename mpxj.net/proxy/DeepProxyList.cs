@@ -39,7 +39,7 @@ namespace org.mpxj.proxy
                     return false;
                 }
 
-                _current = (NE)_list._projectFile.GenericProxyObject(_iter.next());
+                _current = (NE)_list._proxyManager.GenericProxyObject(_iter.next());
                 return true;
             }
 
@@ -50,18 +50,18 @@ namespace org.mpxj.proxy
             }
         }
 
-        internal readonly ProjectFile _projectFile;
+        internal readonly ProxyManager _proxyManager;
         public java.util.List JavaObject { get; }
 
-        public DeepProxyList(ProjectFile projectFile)
+        internal DeepProxyList(ProxyManager proxyManager)
         {
-            _projectFile = projectFile;
+            _proxyManager = proxyManager;
             JavaObject = new java.util.ArrayList();
         }
 
-        internal DeepProxyList(ProjectFile projectFile, java.util.List javaObject)
+        internal DeepProxyList(ProxyManager proxyManager, java.util.List javaObject)
         {
-            _projectFile = projectFile;
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 

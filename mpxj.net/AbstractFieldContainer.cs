@@ -6,7 +6,7 @@ namespace org.mpxj
     {
         public net.sf.mpxj.AbstractFieldContainer JavaObject { get; }
 
-        internal AbstractFieldContainer(ProjectFile file, net.sf.mpxj.AbstractFieldContainer javaObject) : base(file)
+        internal AbstractFieldContainer(ProxyManager proxyManager, net.sf.mpxj.AbstractFieldContainer javaObject) : base(proxyManager)
         {
             JavaObject = javaObject;
         }

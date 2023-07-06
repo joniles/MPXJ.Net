@@ -4,12 +4,12 @@ namespace org.mpxj
 {
     public class ProjectProperties : IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
     {
-        internal readonly ProjectFile _projectFile;
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ProjectProperties JavaObject { get; }
 
-        internal ProjectProperties(ProjectFile projectFile, net.sf.mpxj.ProjectProperties javaObject)
+        internal ProjectProperties(ProxyManager proxyManager, net.sf.mpxj.ProjectProperties javaObject)
         {
-            _projectFile = projectFile;
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -142,7 +142,7 @@ namespace org.mpxj
 
         public ProjectCalendar DefaultCalendar
         {
-            get => _projectFile.ProxyObject(JavaObject.getDefaultCalendar());
+            get => _proxyManager.ProxyObject(JavaObject.getDefaultCalendar());
             set => JavaObject.setDefaultCalendar(value.JavaObject);
         }
 

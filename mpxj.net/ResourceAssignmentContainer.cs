@@ -1,10 +1,12 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
 	public class ResourceAssignmentContainer : ProjectEntityContainer<net.sf.mpxj.ResourceAssignment, ResourceAssignment>
     {
         public new net.sf.mpxj.ResourceAssignmentContainer JavaObject { get => (net.sf.mpxj.ResourceAssignmentContainer)base.JavaObject; }
 
-        internal ResourceAssignmentContainer(ProjectFile projectFile, net.sf.mpxj.ResourceAssignmentContainer javaObject) : base(projectFile, javaObject) { }
+        internal ResourceAssignmentContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentContainer javaObject) : base(proxyManager, javaObject) { }
 
         public java.util.Set PopulatedFields
         {

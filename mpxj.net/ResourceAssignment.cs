@@ -6,7 +6,7 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.ResourceAssignment JavaObject { get => (net.sf.mpxj.ResourceAssignment)base.JavaObject; }
 
-        internal ResourceAssignment(ProjectFile projectFile, net.sf.mpxj.ResourceAssignment javaObject) : base(projectFile, javaObject) { }
+        internal ResourceAssignment(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignment javaObject) : base(proxyManager, javaObject) { }
 
         public net.sf.mpxj.ResourceAssignmentWorkgroupFields AddWorkgroupAssignment()
         {
@@ -122,12 +122,12 @@ namespace org.mpxj
 
         public Task Task
         {
-            get => Parent.ProxyObject(JavaObject.getTask());
+            get => _proxyManager.ProxyObject(JavaObject.getTask());
         }
 
         public Resource Resource
         {
-            get => Parent.ProxyObject(JavaObject.getResource());
+            get => _proxyManager.ProxyObject(JavaObject.getResource());
         }
 
         public net.sf.mpxj.WorkContour WorkContour
@@ -167,7 +167,7 @@ namespace org.mpxj
 
         public Resource Role
         {
-            get => Parent.ProxyObject(JavaObject.getRole());
+            get => _proxyManager.ProxyObject(JavaObject.getRole());
             set => JavaObject.setRole(value.JavaObject);
         }
 
@@ -240,7 +240,7 @@ namespace org.mpxj
 
         public ProjectCalendar Calendar
         {
-            get => Parent.ProxyObject(JavaObject.getCalendar());
+            get => _proxyManager.ProxyObject(JavaObject.getCalendar());
         }
 
         public TimeUnit? VariableRateUnits

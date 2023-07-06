@@ -6,11 +6,11 @@ namespace org.mpxj
 	{
         public new net.sf.mpxj.ProjectEntityContainer JavaObject { get => (net.sf.mpxj.ProjectEntityContainer)base.JavaObject; }
 
-        internal ProjectEntityContainer(ProjectFile projectFile, net.sf.mpxj.ProjectEntityContainer javaObject) : base(projectFile, javaObject) { }
+        internal ProjectEntityContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectEntityContainer javaObject) : base(proxyManager, javaObject) { }
 
         public N GetByUniqueID(java.lang.Integer id)
         {
-            return (N)_projectFile.GenericProxyObject(JavaObject.getByUniqueID(id));    
+            return (N)_proxyManager.GenericProxyObject(JavaObject.getByUniqueID(id));    
         }
     }
 }

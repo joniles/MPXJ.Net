@@ -6,7 +6,7 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.ProjectCalendarWeek JavaObject { get => (net.sf.mpxj.ProjectCalendarWeek)base.JavaObject; }
 
-        internal ProjectCalendarWeek(ProjectFile projectFile, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(projectFile, javaObject) { }
+        internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 
         public net.sf.mpxj.LocalDateRange DateRange
         {
