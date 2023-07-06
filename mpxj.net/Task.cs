@@ -8,14 +8,14 @@ namespace org.mpxj
 
         internal Task(ProjectFile projectFile, net.sf.mpxj.Task javaObject) : base(projectFile, javaObject) { }
 
-        public net.sf.mpxj.RecurringTask AddRecurringTask()
+        public RecurringTask AddRecurringTask()
         {
-            return JavaObject.addRecurringTask();
+            return Parent.ProxyObject(JavaObject.addRecurringTask());
         }
 
-        public net.sf.mpxj.RecurringTask RecurringTask
+        public RecurringTask RecurringTask
         {
-            get => JavaObject.getRecurringTask();
+            get => Parent.ProxyObject(JavaObject.getRecurringTask());
         }
 
         public java.util.List ActivityCodes
