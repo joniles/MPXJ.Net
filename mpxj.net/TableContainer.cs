@@ -2,11 +2,11 @@
 
 namespace org.mpxj
 {
-    public class TableContainer : ShallowProxyList<net.sf.mpxj.Table>, IJavaObjectProxy<net.sf.mpxj.TableContainer>
+    public class TableContainer : DeepProxyList<net.sf.mpxj.Table, Table>
     {
         public new net.sf.mpxj.TableContainer JavaObject { get => (net.sf.mpxj.TableContainer)base.JavaObject; }
 
-        internal TableContainer(net.sf.mpxj.TableContainer javaObject) : base(javaObject) { }
+        internal TableContainer(ProxyManager proxyManager, net.sf.mpxj.TableContainer javaObject) : base(proxyManager, javaObject) { }
 
         public net.sf.mpxj.Table GetTaskTableByName(string name)
         {

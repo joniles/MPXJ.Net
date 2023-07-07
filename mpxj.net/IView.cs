@@ -13,6 +13,6 @@ namespace org.mpxj
 
         string TableName { get; }
 
-        net.sf.mpxj.Table Table { get; }
+        Table Table { get; }
     }
 }

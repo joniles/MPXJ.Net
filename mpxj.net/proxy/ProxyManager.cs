@@ -85,7 +85,7 @@ namespace org.mpxj.proxy
 
         internal ViewContainer ProxyObject(net.sf.mpxj.ViewContainer value)
         {
-            return ProxyObject(value, v => new ViewContainer(v));
+            return ProxyObject(value, v => new ViewContainer(this, v));
         }
 
         internal Task ProxyObject(net.sf.mpxj.Task value)
@@ -173,6 +173,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new CostAccount(this, v));
         }
 
+        internal Table ProxyObject(net.sf.mpxj.Table value)
+        {
+            return ProxyObject(value, v => new Table(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -180,7 +185,7 @@ namespace org.mpxj.proxy
 
         internal TableContainer ProxyObject(net.sf.mpxj.TableContainer value)
         {
-            return ProxyObject(value, v => new TableContainer(v));
+            return ProxyObject(value, v => new TableContainer(this, v));
         }
 
         internal FilterContainer ProxyObject(net.sf.mpxj.FilterContainer value)
