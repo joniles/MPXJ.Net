@@ -158,6 +158,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Notes(v));
         }
 
+        internal ResourceAssignmentWorkgroupFields ProxyObject(net.sf.mpxj.ResourceAssignmentWorkgroupFields value)
+        {
+            return ProxyObject(value, v => new ResourceAssignmentWorkgroupFields(v));
+        }
+        
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));

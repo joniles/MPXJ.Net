@@ -8,9 +8,9 @@ namespace org.mpxj
 
         internal ResourceAssignment(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignment javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.ResourceAssignmentWorkgroupFields AddWorkgroupAssignment()
+        public ResourceAssignmentWorkgroupFields AddWorkgroupAssignment()
         {
-            return JavaObject.addWorkgroupAssignment();
+            return _proxyManager.ProxyObject(JavaObject.addWorkgroupAssignment());
         }
 
         public java.lang.Integer UniqueID
@@ -115,9 +115,9 @@ namespace org.mpxj
             set => JavaObject.setResourceUniqueID(value);
         }
 
-        public net.sf.mpxj.ResourceAssignmentWorkgroupFields WorkgroupAssignment
+        public ResourceAssignmentWorkgroupFields WorkgroupAssignment
         {
-            get => JavaObject.getWorkgroupAssignment();
+            get => _proxyManager.ProxyObject(JavaObject.getWorkgroupAssignment());
         }
 
         public Task Task
@@ -665,9 +665,9 @@ namespace org.mpxj
             set => JavaObject.setCostRateTableIndex(value);
         }
 
-        public net.sf.mpxj.CostRateTable CostRateTable
+        public CostRateTable CostRateTable
         {
-            get => JavaObject.getCostRateTable();
+            get => _proxyManager.ProxyObject(JavaObject.getCostRateTable());
         }
 
         public string HyperlinkScreenTip
