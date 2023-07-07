@@ -168,6 +168,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new WorkContour(v));
         }
 
+        internal CostAccount ProxyObject(net.sf.mpxj.CostAccount value)
+        {
+            return ProxyObject(value, v => new CostAccount(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -215,7 +220,7 @@ namespace org.mpxj.proxy
 
         internal CostAccountContainer ProxyObject(net.sf.mpxj.CostAccountContainer value)
         {
-            return ProxyObject(value, v => new CostAccountContainer(v));
+            return ProxyObject(value, v => new CostAccountContainer(this, v));
         }
 
         internal UserDefinedFieldContainer ProxyObject(net.sf.mpxj.UserDefinedFieldContainer value)

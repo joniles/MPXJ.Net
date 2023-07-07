@@ -730,10 +730,10 @@ namespace org.mpxj
             set => JavaObject.setCostAccountUniqueID(value);
         }
 
-        public net.sf.mpxj.CostAccount CostAccount
+        public CostAccount CostAccount
         {
-            get => JavaObject.getCostAccount();
-            set => JavaObject.setCostAccount(value);
+            get => _proxyManager.ProxyObject(JavaObject.getCostAccount());
+            set => JavaObject.setCostAccount(value.JavaObject);
         }
 
         public net.sf.mpxj.Rate GetEffectiveRate(java.time.LocalDateTime date)
