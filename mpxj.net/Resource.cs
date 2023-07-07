@@ -742,9 +742,9 @@ namespace org.mpxj
             return _proxyManager.ProxyObject(JavaObject.getCurrentCostRateTableEntry(costRateTable));
         }
 
-        public net.sf.mpxj.AvailabilityTable Availability
+        public AvailabilityTable Availability
         {
-            get => JavaObject.getAvailability();
+            get => _proxyManager.ProxyObject(JavaObject.getAvailability());
         }
 
         public java.lang.Number BudgetCost

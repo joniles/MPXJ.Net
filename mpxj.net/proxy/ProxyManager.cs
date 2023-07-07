@@ -143,6 +143,16 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new CostRateTable(this, v));
         }
 
+        internal Availability ProxyObject(net.sf.mpxj.Availability value)
+        {
+            return ProxyObject(value, v => new Availability(this, v));
+        }
+
+        internal AvailabilityTable ProxyObject(net.sf.mpxj.AvailabilityTable value)
+        {
+            return ProxyObject(value, v => new AvailabilityTable(this, v));
+        }
+
         internal Notes ProxyObject(net.sf.mpxj.Notes value)
         {
             return ProxyObject(value, v => new Notes(v));
