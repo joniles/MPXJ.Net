@@ -178,6 +178,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Table(v));
         }
 
+        internal Filter ProxyObject(net.sf.mpxj.Filter value)
+        {
+            return ProxyObject(value, v => new Filter(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -190,7 +195,7 @@ namespace org.mpxj.proxy
 
         internal FilterContainer ProxyObject(net.sf.mpxj.FilterContainer value)
         {
-            return ProxyObject(value, v => new FilterContainer(v));
+            return ProxyObject(value, v => new FilterContainer(this, v));
         }
 
         internal EventManager ProxyObject(net.sf.mpxj.EventManager value)
@@ -330,6 +335,11 @@ namespace org.mpxj.proxy
         internal IList<LocalDateTimeRange> ProxyLocalDateTimeRangeList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(this, l));
+        }
+
+        internal IList<Filter> ProxyFilterList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Filter, Filter>(this, l));
         }
     }
 }
