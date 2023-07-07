@@ -2,11 +2,11 @@
 
 namespace org.mpxj
 {
-	public class ViewContainer : ShallowProxyList<net.sf.mpxj.View>, IJavaObjectProxy<net.sf.mpxj.ViewContainer>
-	{
+	public class ViewContainer : DeepProxyList<net.sf.mpxj.View, IView>
+    {
         public new net.sf.mpxj.ViewContainer JavaObject { get => (net.sf.mpxj.ViewContainer)base.JavaObject; }
 
-        internal ViewContainer(net.sf.mpxj.ViewContainer javaObject) : base(javaObject) { }
+        internal ViewContainer(ProxyManager proxyManager, net.sf.mpxj.ViewContainer javaObject) : base(proxyManager, javaObject) { }
 
         public net.sf.mpxj.ViewState ViewState
         {
