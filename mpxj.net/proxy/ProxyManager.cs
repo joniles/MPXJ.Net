@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-	internal class ProxyManager
-	{
+    internal class ProxyManager
+    {
         private readonly Dictionary<object, object> _objectCache = new Dictionary<object, object>();
         internal ProjectFile ProjectFile { get; }
 
@@ -162,7 +162,12 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, v => new ResourceAssignmentWorkgroupFields(v));
         }
-        
+
+        internal WorkContour ProxyObject(net.sf.mpxj.WorkContour value)
+        {
+            return ProxyObject(value, v => new WorkContour(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -220,7 +225,7 @@ namespace org.mpxj.proxy
 
         internal WorkContourContainer ProxyObject(net.sf.mpxj.WorkContourContainer value)
         {
-            return ProxyObject(value, v => new WorkContourContainer(v));
+            return ProxyObject(value, v => new WorkContourContainer(this, v));
         }
 
         internal NotesTopicContainer ProxyObject(net.sf.mpxj.NotesTopicContainer value)

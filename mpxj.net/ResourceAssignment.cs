@@ -130,10 +130,10 @@ namespace org.mpxj
             get => _proxyManager.ProxyObject(JavaObject.getResource());
         }
 
-        public net.sf.mpxj.WorkContour WorkContour
+        public WorkContour WorkContour
         {
-            get => JavaObject.getWorkContour();
-            set => JavaObject.setWorkContour(value);
+            get => _proxyManager.ProxyObject(JavaObject.getWorkContour());
+            set => JavaObject.setWorkContour(value.JavaObject);
         }
 
         public void Remove()
