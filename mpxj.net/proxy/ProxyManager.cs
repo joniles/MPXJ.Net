@@ -185,7 +185,12 @@ namespace org.mpxj.proxy
 
         internal Group ProxyObject(net.sf.mpxj.Group value)
         {
-            return ProxyObject(value, v => new Group(v));
+            return ProxyObject(value, v => new Group(this, v));
+        }
+
+        internal GroupClause ProxyObject(net.sf.mpxj.GroupClause value)
+        {
+            return ProxyObject(value, v => new GroupClause(v));
         }
 
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
@@ -346,6 +351,12 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Filter, Filter>(this, l));
         }
+
+        internal IList<GroupClause> ProxyGroupClauseList(java.util.List value)
+        {
+            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.GroupClause, GroupClause>(this, l));
+        }
+
     }
 }
 

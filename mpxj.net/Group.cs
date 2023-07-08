@@ -1,13 +1,16 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
     public class Group : IJavaObjectProxy<net.sf.mpxj.Group>
     {
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Group JavaObject { get; }
 
-        internal Group(net.sf.mpxj.Group javaObject)
+        internal Group(ProxyManager proxyManager, net.sf.mpxj.Group javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -31,14 +34,14 @@ namespace org.mpxj
             get => JavaObject.getShowSummaryTasks();
         }
 
-        public void AddGroupClause(net.sf.mpxj.GroupClause clause)
+        public void AddGroupClause(GroupClause clause)
         {
-            JavaObject.addGroupClause(clause);
+            JavaObject.addGroupClause(clause.JavaObject);
         }
 
-        public java.util.List GroupClauses
+        public IList<GroupClause> GroupClauses
         {
-            get => JavaObject.getGroupClauses();
+            get => _proxyManager.ProxyGroupClauseList(JavaObject.getGroupClauses());
         }
 
         public new string ToString()
