@@ -2,15 +2,15 @@
 
 namespace org.mpxj
 {
-    public class GroupContainer : ShallowProxyList<net.sf.mpxj.Group>, IJavaObjectProxy<net.sf.mpxj.GroupContainer>
+    public class GroupContainer : DeepProxyList<net.sf.mpxj.Group, Group>
     {
         public new net.sf.mpxj.GroupContainer JavaObject { get => (net.sf.mpxj.GroupContainer)base.JavaObject; }
 
-        internal GroupContainer(net.sf.mpxj.GroupContainer javaObject) : base(javaObject) { }
+        internal GroupContainer(ProxyManager proxyManager, net.sf.mpxj.GroupContainer javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.Group GetByName(string name)
+        public Group GetByName(string name)
         {
-            return JavaObject.getByName(name);
+            return _proxyManager.ProxyObject(JavaObject.getByName(name));
         }
     }
 }

@@ -183,6 +183,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Filter(v));
         }
 
+        internal Group ProxyObject(net.sf.mpxj.Group value)
+        {
+            return ProxyObject(value, v => new Group(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -205,7 +210,7 @@ namespace org.mpxj.proxy
 
         internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
         {
-            return ProxyObject(value, v => new GroupContainer(v));
+            return ProxyObject(value, v => new GroupContainer(this, v));
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
