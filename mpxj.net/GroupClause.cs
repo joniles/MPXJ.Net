@@ -2,6 +2,7 @@
 
 namespace org.mpxj
 {
+    // TODO: Look at recreating this class as a hierarchy to allow the differt types to be expressed correctly
     public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
     {
         public net.sf.mpxj.GroupClause JavaObject { get; }
@@ -40,10 +41,9 @@ namespace org.mpxj
             set => JavaObject.setFont(value);
         }
 
-        public java.lang.Number GroupInterval
-        {
-            // TODO: Remove cast with MPXJ 12.0.1
-            get => (java.lang.Number)JavaObject.getGroupInterval();
+        public object GroupInterval
+        {            
+            get => JavaObject.getGroupInterval();
             set => JavaObject.setGroupInterval(value);
         }
 
