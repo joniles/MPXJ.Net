@@ -208,6 +208,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new CustomField(v));
         }
 
+        internal ExpenseCategory ProxyObject(net.sf.mpxj.ExpenseCategory value)
+        {
+            return ProxyObject(value, v => new ExpenseCategory(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -250,7 +255,7 @@ namespace org.mpxj.proxy
 
         internal ExpenseCategoryContainer ProxyObject(net.sf.mpxj.ExpenseCategoryContainer value)
         {
-            return ProxyObject(value, v => new ExpenseCategoryContainer(v));
+            return ProxyObject(value, v => new ExpenseCategoryContainer(this, v));
         }
 
         internal CostAccountContainer ProxyObject(net.sf.mpxj.CostAccountContainer value)
