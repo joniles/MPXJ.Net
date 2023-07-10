@@ -1,26 +1,27 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class CustomFieldContainer : ShallowProxyEnumerable<net.sf.mpxj.CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
+    public class CustomFieldContainer : DeepProxyEnumerable<CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {
         public new net.sf.mpxj.CustomFieldContainer JavaObject { get => (net.sf.mpxj.CustomFieldContainer)base.JavaObject; }
 
-        internal CustomFieldContainer(net.sf.mpxj.CustomFieldContainer javaObject) : base(javaObject) { }
+        internal CustomFieldContainer(ProxyManager proxyManager, net.sf.mpxj.CustomFieldContainer javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.CustomField Get(net.sf.mpxj.FieldType field)
+        public CustomField Get(net.sf.mpxj.FieldType field)
         {
-            return JavaObject.get(field);
+            return _proxyManager.ProxyObject(JavaObject.get(field));
         }
 
-        public net.sf.mpxj.CustomField GetOrCreate(net.sf.mpxj.FieldType field)
+        public CustomField GetOrCreate(net.sf.mpxj.FieldType field)
         {
-            return JavaObject.getOrCreate(field);
+            return _proxyManager.ProxyObject(JavaObject.getOrCreate(field));
         }
 
-        public net.sf.mpxj.CustomField Add(net.sf.mpxj.FieldType field)
+        public CustomField Add(net.sf.mpxj.FieldType field)
         {
-            return JavaObject.add(field);
+            return _proxyManager.ProxyObject(JavaObject.add(field));
         }
 
         public net.sf.mpxj.FieldType GetFieldTypeByAlias(net.sf.mpxj.FieldTypeClass typeClass, string alias)
@@ -28,9 +29,9 @@ namespace org.mpxj
             return JavaObject.getFieldTypeByAlias(typeClass, alias);
         }
 
-        public java.util.List GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
+        public IList<CustomField> GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
         {
-            return JavaObject.getCustomFieldsByFieldTypeClass(typeClass);
+            return _proxyManager.ProxyCustomFieldList(JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
         }
 
         public int Size()
