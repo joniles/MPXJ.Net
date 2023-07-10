@@ -1,31 +1,32 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class UserDefinedFieldContainer : ShallowProxyCollection<net.sf.mpxj.UserDefinedField>, IJavaObjectProxy<net.sf.mpxj.UserDefinedFieldContainer>
+    public class UserDefinedFieldContainer : DeepProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>, IJavaObjectProxy<net.sf.mpxj.UserDefinedFieldContainer>
     {
         public new net.sf.mpxj.UserDefinedFieldContainer JavaObject { get => (net.sf.mpxj.UserDefinedFieldContainer)base.JavaObject; }
 
-        internal UserDefinedFieldContainer(net.sf.mpxj.UserDefinedFieldContainer javaObject) : base(javaObject) { }
+        internal UserDefinedFieldContainer(ProxyManager proxyManager, net.sf.mpxj.UserDefinedFieldContainer javaObject) : base(proxyManager, javaObject) { }
 
-        public java.util.Collection TaskFields
+        public ICollection<UserDefinedField> TaskFields
         {
-            get => JavaObject.getTaskFields();
+            get => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(JavaObject.getTaskFields());
         }
 
-        public java.util.Collection ResourceFields
+        public ICollection<UserDefinedField> ResourceFields
         {
-            get => JavaObject.getResourceFields();
+            get => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(JavaObject.getResourceFields());
         }
 
-        public java.util.Collection AssignmentFields
+        public ICollection<UserDefinedField> AssignmentFields
         {
-            get => JavaObject.getAssignmentFields();
+            get => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(JavaObject.getAssignmentFields());
         }
 
-        public java.util.Collection ProjectFields
+        public ICollection<UserDefinedField> ProjectFields
         {
-            get => JavaObject.getProjectFields();
+            get => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(JavaObject.getProjectFields());
         }
     }
 }

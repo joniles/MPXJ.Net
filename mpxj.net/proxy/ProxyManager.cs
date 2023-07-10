@@ -265,7 +265,7 @@ namespace org.mpxj.proxy
 
         internal UserDefinedFieldContainer ProxyObject(net.sf.mpxj.UserDefinedFieldContainer value)
         {
-            return ProxyObject(value, v => new UserDefinedFieldContainer(v));
+            return ProxyObject(value, v => new UserDefinedFieldContainer(this, v));
         }
 
         internal WorkContourContainer ProxyObject(net.sf.mpxj.WorkContourContainer value)
@@ -325,6 +325,11 @@ namespace org.mpxj.proxy
         internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
         {
             return ProxyObject(value, l => new DeepProxyList<M, N>(this, l));
+        }
+
+        internal ICollection<N> ProxyCollection<M, N>(java.util.Collection value) where N : IJavaObjectProxy<M>
+        {
+            return ProxyObject(value, l => new DeepProxyCollection<M, N>(this, l));
         }
     }
 }
