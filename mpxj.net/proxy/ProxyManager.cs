@@ -103,6 +103,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new ResourceAssignment(this, v));
         }
 
+        internal ActivityCode ProxyObject(net.sf.mpxj.ActivityCode value)
+        {
+            return ProxyObject(value, v => new ActivityCode(this, v));
+        }
+
         internal ActivityCodeValue ProxyObject(net.sf.mpxj.ActivityCodeValue value)
         {
             return ProxyObject(value, v => new ActivityCodeValue(this, v));
@@ -230,7 +235,7 @@ namespace org.mpxj.proxy
 
         internal ActivityCodeContainer ProxyObject(net.sf.mpxj.ActivityCodeContainer value)
         {
-            return ProxyObject(value, v => new ActivityCodeContainer(v));
+            return ProxyObject(value, v => new ActivityCodeContainer(this, v));
         }
 
         internal DataLinkContainer ProxyObject(net.sf.mpxj.DataLinkContainer value)

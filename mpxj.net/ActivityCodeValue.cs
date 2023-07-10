@@ -14,9 +14,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.ActivityCode Type
+        public ActivityCode Type
         {
-            get => JavaObject.getType();
+            get => _proxyManager.ProxyObject(JavaObject.getType());
         }
 
         public java.lang.Integer UniqueID

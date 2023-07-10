@@ -2,10 +2,10 @@
 
 namespace org.mpxj
 {
-    public class ActivityCodeContainer : ShallowProxyList<net.sf.mpxj.ActivityCode>, IJavaObjectProxy<net.sf.mpxj.ActivityCodeContainer>
+    public class ActivityCodeContainer : DeepProxyList<net.sf.mpxj.ActivityCode, ActivityCode>
     {
         public new net.sf.mpxj.ActivityCodeContainer JavaObject { get => (net.sf.mpxj.ActivityCodeContainer)base.JavaObject; }
 
-        internal ActivityCodeContainer(net.sf.mpxj.ActivityCodeContainer javaObject) : base(javaObject) { }
+        internal ActivityCodeContainer(ProxyManager proxyManager, net.sf.mpxj.ActivityCodeContainer javaObject) : base(proxyManager, javaObject) { }
     }
 }
