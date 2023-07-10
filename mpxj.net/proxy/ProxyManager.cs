@@ -198,6 +198,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new GroupClause(v));
         }
 
+        internal DataLink ProxyObject(net.sf.mpxj.DataLink value)
+        {
+            return ProxyObject(value, v => new DataLink(v));
+        }
+
         internal CustomField ProxyObject(net.sf.mpxj.CustomField value)
         {
             return ProxyObject(value, v => new CustomField(v));
@@ -240,7 +245,7 @@ namespace org.mpxj.proxy
 
         internal DataLinkContainer ProxyObject(net.sf.mpxj.DataLinkContainer value)
         {
-            return ProxyObject(value, v => new DataLinkContainer(v));
+            return ProxyObject(value, v => new DataLinkContainer(this, v));
         }
 
         internal ExpenseCategoryContainer ProxyObject(net.sf.mpxj.ExpenseCategoryContainer value)
@@ -370,6 +375,12 @@ namespace org.mpxj.proxy
         internal IList<CustomField> ProxyCustomFieldList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.CustomField, CustomField>(this, l));
+        }
+
+        // TODO
+        internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
+        {
+            return ProxyObject(value, l => new DeepProxyList<M, N>(this, l));
         }
     }
 }
