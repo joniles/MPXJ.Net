@@ -322,72 +322,9 @@ namespace org.mpxj.proxy
             return o;
         }
 
-/*
-        internal IList<ProjectFile> ProxyProjectFileList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(this, l));
-        }
-
-        internal IList<Resource> ProxyResourceList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Resource, Resource>(this, l));
-        }
-
-        internal IList<Task> ProxyTaskList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Task, Task>(this, l));
-        }
-
-        internal IList<ResourceAssignment> ProxyResourceAssignmentList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(this, l));
-        }
-
-        internal IList<ActivityCodeValue> ProxyActivityCodeValueList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(this, l));
-        }
-
-        internal IList<Relation> ProxyRelationList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Relation, Relation>(this, l));
-        }
-
-        internal IList<ExpenseItem> ProxyExpenseItemList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(this, l));
-        }
-
-        internal IList<Step> ProxyStepList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Step, Step>(this, l));
-        }
-
-        internal IList<LocalDateTimeRange> ProxyLocalDateTimeRangeList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(this, l));
-        }
-
-        internal IList<Filter> ProxyFilterList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.Filter, Filter>(this, l));
-        }
-
-        internal IList<GroupClause> ProxyGroupClauseList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.GroupClause, GroupClause>(this, l));
-        }
-
-        internal IList<CustomField> ProxyCustomFieldList(java.util.List value)
-        {
-            return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.CustomField, CustomField>(this, l));
-        }
-*/
-
         internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
         {
             return ProxyObject(value, l => new DeepProxyList<M, N>(this, l));
         }
     }
 }
-
