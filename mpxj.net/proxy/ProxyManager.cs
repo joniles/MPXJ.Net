@@ -218,6 +218,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new NotesTopic(v));
         }
 
+        internal ViewState ProxyObject(net.sf.mpxj.ViewState value)
+        {
+            return ProxyObject(value, v => new ViewState(this, v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));

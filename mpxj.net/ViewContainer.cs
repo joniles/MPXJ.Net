@@ -8,10 +8,10 @@ namespace org.mpxj
 
         internal ViewContainer(ProxyManager proxyManager, net.sf.mpxj.ViewContainer javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.ViewState ViewState
+        public ViewState ViewState
         {
-            get => JavaObject.getViewState();
-            set => JavaObject.setViewState(value);
+            get => _proxyManager.ProxyObject(JavaObject.getViewState());
+            set => JavaObject.setViewState(value.JavaObject);
         }
     }
 }
