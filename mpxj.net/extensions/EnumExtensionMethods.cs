@@ -81,6 +81,22 @@
         {
             return value == null ? (ActivityStatus?)null : (ActivityStatus)value.ordinal();
         }
+
+        // FieldTypeClass
+        public static net.sf.mpxj.FieldTypeClass ConvertType(this FieldTypeClass value)
+        {
+            return net.sf.mpxj.FieldTypeClass.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.FieldTypeClass ConvertType(this FieldTypeClass? value)
+        {
+            return value == null ? null : net.sf.mpxj.FieldTypeClass.values()[(int)value];
+        }
+
+        public static FieldTypeClass? ConvertType(this net.sf.mpxj.FieldTypeClass value)
+        {
+            return value == null ? (FieldTypeClass?)null : (FieldTypeClass)value.ordinal();
+        }
     }
 }
 

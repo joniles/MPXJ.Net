@@ -24,9 +24,9 @@ namespace org.mpxj
             return _proxyManager.ProxyObject(JavaObject.add(field));
         }
 
-        public net.sf.mpxj.FieldType GetFieldTypeByAlias(net.sf.mpxj.FieldTypeClass typeClass, string alias)
+        public net.sf.mpxj.FieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias)
         {
-            return JavaObject.getFieldTypeByAlias(typeClass, alias);
+            return JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias);
         }
 
         public IList<CustomField> GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
