@@ -57,7 +57,7 @@ namespace org.mpxj
 
         public IList<ActivityCodeValue> ChildValues
         {
-            get => _proxyManager.ProxyActivityCodeValueList(JavaObject.getChildValues());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(JavaObject.getChildValues());
         }
 
         public new string ToString()

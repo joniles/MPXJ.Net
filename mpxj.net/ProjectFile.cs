@@ -39,12 +39,12 @@ namespace org.mpxj
 
         public IList<Task> ChildTasks
         {
-            get => ProxyManager.ProxyTaskList(JavaObject.getChildTasks());
+            get => ProxyManager.ProxyList<net.sf.mpxj.Task, Task>(JavaObject.getChildTasks());
         }
 
         public IList<Resource> ChildResources
         {
-            get => ProxyManager.ProxyResourceList(JavaObject.getChildResources());
+            get => ProxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(JavaObject.getChildResources());
         }
 
         public TaskContainer Tasks
@@ -230,7 +230,7 @@ namespace org.mpxj
 
         public IList<ProjectFile> Baselines
         {
-            get => ProxyManager.ProxyProjectFileList(JavaObject.getBaselines());
+            get => ProxyManager.ProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(JavaObject.getBaselines());
         }
 
         public void SetBaseline(ProjectFile baseline)

@@ -41,7 +41,7 @@ namespace org.mpxj
 
         public IList<GroupClause> GroupClauses
         {
-            get => _proxyManager.ProxyGroupClauseList(JavaObject.getGroupClauses());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GroupClause, GroupClause>(JavaObject.getGroupClauses());
         }
 
         public new string ToString()

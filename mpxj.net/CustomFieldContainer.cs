@@ -31,7 +31,7 @@ namespace org.mpxj
 
         public IList<CustomField> GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
         {
-            return _proxyManager.ProxyCustomFieldList(JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
+            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
         }
 
         public int Size()

@@ -21,7 +21,7 @@ namespace org.mpxj
 
         public IList<Resource> ChildResources
         {
-            get => _proxyManager.ProxyResourceList(JavaObject.getChildResources());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(JavaObject.getChildResources());
         }
 
         public void AddResourceAssignment(ResourceAssignment assignment)
@@ -31,7 +31,7 @@ namespace org.mpxj
 
         public IList<ResourceAssignment> TaskAssignments
         {
-            get => _proxyManager.ProxyResourceAssignmentList(JavaObject.getTaskAssignments());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(JavaObject.getTaskAssignments());
         }
 
         public string Name

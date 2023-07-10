@@ -61,12 +61,12 @@ namespace org.mpxj
 
         public IList<ActivityCodeValue> Values
         {
-            get => _proxyManager.ProxyActivityCodeValueList(JavaObject.getValues());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(JavaObject.getValues());
         }
 
         public IList<ActivityCodeValue> ChildValues
         {
-            get => _proxyManager.ProxyActivityCodeValueList(JavaObject.getChildValues());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(JavaObject.getChildValues());
         }
     }
 }

@@ -317,6 +317,7 @@ namespace org.mpxj.proxy
             return o;
         }
 
+/*
         internal IList<ProjectFile> ProxyProjectFileList(java.util.List value)
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(this, l));
@@ -376,8 +377,8 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new DeepProxyList<net.sf.mpxj.CustomField, CustomField>(this, l));
         }
+*/
 
-        // TODO
         internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
         {
             return ProxyObject(value, l => new DeepProxyList<M, N>(this, l));
