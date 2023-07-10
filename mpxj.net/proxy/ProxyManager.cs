@@ -213,6 +213,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new ExpenseCategory(v));
         }
 
+        internal NotesTopic ProxyObject(net.sf.mpxj.NotesTopic value)
+        {
+            return ProxyObject(value, v => new NotesTopic(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
@@ -275,7 +280,7 @@ namespace org.mpxj.proxy
 
         internal NotesTopicContainer ProxyObject(net.sf.mpxj.NotesTopicContainer value)
         {
-            return ProxyObject(value, v => new NotesTopicContainer(v));
+            return ProxyObject(value, v => new NotesTopicContainer(this, v));
         }
 
         internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)

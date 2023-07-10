@@ -2,16 +2,15 @@
 
 namespace org.mpxj
 {
-    // TODO: ProjectEntityContainer
-    public class NotesTopicContainer : ShallowProxyList<net.sf.mpxj.NotesTopic>, IJavaObjectProxy<net.sf.mpxj.NotesTopicContainer>
+    public class NotesTopicContainer : ProjectEntityContainer<net.sf.mpxj.NotesTopic, NotesTopic>
     {
         public new net.sf.mpxj.NotesTopicContainer JavaObject { get => (net.sf.mpxj.NotesTopicContainer)base.JavaObject; }
 
-        internal NotesTopicContainer(net.sf.mpxj.NotesTopicContainer javaObject) : base(javaObject) { }
+        internal NotesTopicContainer(ProxyManager proxyManager, net.sf.mpxj.NotesTopicContainer javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.NotesTopic DefaultTopic
+        public NotesTopic DefaultTopic
         {
-            get => JavaObject.getDefaultTopic();
+            get => _proxyManager.ProxyObject(JavaObject.getDefaultTopic());
         }
     }
 }
