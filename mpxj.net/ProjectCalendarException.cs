@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -38,9 +39,9 @@ namespace org.mpxj
             get => JavaObject.getWorking();
         }
 
-        public java.util.List ExpandedExceptions
+        public IList<ProjectCalendarException> ExpandedExceptions
         {
-            get => JavaObject.getExpandedExceptions();
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.getExpandedExceptions());
         }
 
         public bool Contains(java.util.Date date)

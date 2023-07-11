@@ -29,9 +29,9 @@ namespace org.mpxj
             get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(JavaObject.getResourceFilters());
         }
 
-        public java.util.List TaskFilters
+        public IList<Filter> TaskFilters
         {
-            get => JavaObject.getResourceFilters();
+            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(JavaObject.getTaskFilters());
         }
 
         public Filter GetFilterByName(string name)

@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -14,9 +15,9 @@ namespace org.mpxj
             set => JavaObject.setDateRange(value);
         }
 
-        public java.util.List ConvertToRecurringExceptions(ProjectCalendar calendar)
+        public IList<ProjectCalendarException> ConvertToRecurringExceptions(ProjectCalendar calendar)
         {
-            return JavaObject.convertToRecurringExceptions(calendar.JavaObject);
+            return _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.convertToRecurringExceptions(calendar.JavaObject));
         }
 
         public override string ToString()

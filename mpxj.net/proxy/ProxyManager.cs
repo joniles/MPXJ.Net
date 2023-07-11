@@ -180,7 +180,7 @@ namespace org.mpxj.proxy
 
         internal Table ProxyObject(net.sf.mpxj.Table value)
         {
-            return ProxyObject(value, v => new Table(v));
+            return ProxyObject(value, v => new Table(this, v));
         }
 
         internal Filter ProxyObject(net.sf.mpxj.Filter value)
@@ -276,6 +276,11 @@ namespace org.mpxj.proxy
         internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
         {
             return ProxyObject(value, v => new GroupContainer(this, v));
+        }
+
+        internal Column ProxyObject(net.sf.mpxj.Column value)
+        {
+            return ProxyObject(value, v => new Column(v));
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)

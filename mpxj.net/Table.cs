@@ -1,13 +1,16 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
 	public class Table : IJavaObjectProxy<net.sf.mpxj.Table>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Table JavaObject { get; }
 
-        internal Table(net.sf.mpxj.Table javaObject)
+        internal Table(ProxyManager proxyManager, net.sf.mpxj.Table javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -29,14 +32,14 @@ namespace org.mpxj
             set => JavaObject.setResourceFlag(value);
         }
 
-        public void AddColumn(net.sf.mpxj.Column column)
+        public void AddColumn(Column column)
         {
-            JavaObject.addColumn(column);
+            JavaObject.addColumn(column.JavaObject);
         }
 
-        public java.util.List Columns
+        public IList<Column> Columns
         {
-            get => JavaObject.getColumns();
+            get => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(JavaObject.getColumns());
         }
 
         public new string ToString()

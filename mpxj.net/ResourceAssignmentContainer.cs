@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -13,9 +14,9 @@ namespace org.mpxj
             get => JavaObject.getPopulatedFields();
         }
 
-        public java.util.List CustomFields
+        public IList<CustomField> CustomFields
         {
-            get => JavaObject.getCustomFields();
+            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(JavaObject.getCustomFields());
         }
 
         public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias)
