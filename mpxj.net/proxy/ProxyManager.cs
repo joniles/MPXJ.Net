@@ -223,6 +223,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new ViewState(this, v));
         }
 
+        internal CustomFieldValueItem ProxyObject(net.sf.mpxj.mpp.CustomFieldValueItem value)
+        {
+            return ProxyObject(value, v => new CustomFieldValueItem(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));

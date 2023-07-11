@@ -39,24 +39,24 @@ namespace org.mpxj
             return JavaObject.size();
         }
 
-        public net.sf.mpxj.mpp.CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int uniqueID)
+        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int uniqueID)
         {
-            return JavaObject.getCustomFieldValueItemByUniqueID(uniqueID);
+            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID));
         }
 
-        public net.sf.mpxj.mpp.CustomFieldValueItem GetCustomFieldValueItemByGuid(java.util.UUID guid)
+        public CustomFieldValueItem GetCustomFieldValueItemByGuid(java.util.UUID guid)
         {
-            return JavaObject.getCustomFieldValueItemByGuid(guid);
+            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid));
         }
 
-        public void RegisterValue(net.sf.mpxj.mpp.CustomFieldValueItem item)
+        public void RegisterValue(CustomFieldValueItem item)
         {
-            JavaObject.registerValue(item);
+            JavaObject.registerValue(item.JavaObject);
         }
 
-        public void DeregisterValue(net.sf.mpxj.mpp.CustomFieldValueItem item)
+        public void DeregisterValue(CustomFieldValueItem item)
         {
-            JavaObject.deregisterValue(item);
+            JavaObject.deregisterValue(item.JavaObject);
         }
     }
 }
