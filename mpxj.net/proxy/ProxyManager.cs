@@ -248,6 +248,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new CustomFieldValueMask(v));
         }
 
+        internal GenericCriteriaPrompt ProxyObject(net.sf.mpxj.GenericCriteriaPrompt value)
+        {
+            return ProxyObject(value, v => new GenericCriteriaPrompt(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));

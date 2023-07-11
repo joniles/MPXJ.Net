@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -52,9 +53,9 @@ namespace org.mpxj
         // TODO: handle Map
         //bool evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);(value);
 
-        public java.util.List Prompts
+        public IList<GenericCriteriaPrompt> Prompts
         {
-            get => JavaObject.getPrompts();
+            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(JavaObject.getPrompts());
             // TODO: handle list assignment
             //set => JavaObject.set
         }
