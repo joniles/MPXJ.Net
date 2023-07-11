@@ -23,6 +23,16 @@ namespace org.mpxj.proxy
             return (N)_objectCache[o];
         }
 
+        internal int? ProxyObject(java.lang.Integer value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+
+            return value.intValue();
+        }
+
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
         {
             return ProxyObject(value, v => new Resource(this, v));
