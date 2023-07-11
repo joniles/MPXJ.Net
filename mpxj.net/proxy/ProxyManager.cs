@@ -205,7 +205,7 @@ namespace org.mpxj.proxy
 
         internal CustomField ProxyObject(net.sf.mpxj.CustomField value)
         {
-            return ProxyObject(value, v => new CustomField(v));
+            return ProxyObject(value, v => new CustomField(this, v));
         }
 
         internal ExpenseCategory ProxyObject(net.sf.mpxj.ExpenseCategory value)
@@ -226,6 +226,11 @@ namespace org.mpxj.proxy
         internal CustomFieldValueItem ProxyObject(net.sf.mpxj.mpp.CustomFieldValueItem value)
         {
             return ProxyObject(value, v => new CustomFieldValueItem(v));
+        }
+
+        internal GraphicalIndicator ProxyObject(net.sf.mpxj.GraphicalIndicator value)
+        {
+            return ProxyObject(value, v => new GraphicalIndicator(v));
         }
 
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)

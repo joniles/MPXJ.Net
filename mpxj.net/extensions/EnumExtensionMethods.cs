@@ -97,6 +97,22 @@
         {
             return value == null ? (FieldTypeClass?)null : (FieldTypeClass)value.ordinal();
         }
+
+        // CustomFieldValueDataType
+        public static net.sf.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType value)
+        {
+            return net.sf.mpxj.CustomFieldValueDataType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType? value)
+        {
+            return value == null ? null : net.sf.mpxj.CustomFieldValueDataType.values()[(int)value];
+        }
+
+        public static CustomFieldValueDataType? ConvertType(this net.sf.mpxj.CustomFieldValueDataType value)
+        {
+            return value == null ? (CustomFieldValueDataType?)null : (CustomFieldValueDataType)value.ordinal();
+        }
     }
 }
 

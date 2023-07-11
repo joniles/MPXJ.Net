@@ -45,10 +45,10 @@ namespace org.mpxj
             set => JavaObject.setGUID(value);
         }
 
-        public net.sf.mpxj.CustomFieldValueDataType Type
+        public CustomFieldValueDataType? Type
         {
-            get => JavaObject.getType();
-            set => JavaObject.setType(value);
+            get => JavaObject.getType().ConvertType();
+            set => JavaObject.setType(value.ConvertType());
         }
 
         public bool Collapsed

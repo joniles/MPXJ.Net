@@ -1,6 +1,8 @@
-﻿namespace org.mpxj
+﻿using org.mpxj.proxy;
+
+namespace org.mpxj
 {
-    public interface IFieldContainer
+    public interface IFieldContainer : IJavaObjectProxy<net.sf.mpxj.FieldContainer>
     {
         void Set(net.sf.mpxj.FieldType field, object value);
 

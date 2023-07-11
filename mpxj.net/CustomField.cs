@@ -4,10 +4,12 @@ namespace org.mpxj
 {
     public class CustomField : IJavaObjectProxy<net.sf.mpxj.CustomField>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.CustomField JavaObject { get; }
 
-        internal CustomField(net.sf.mpxj.CustomField javaObject)
+        internal CustomField(ProxyManager proxyManager, net.sf.mpxj.CustomField javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -21,9 +23,9 @@ namespace org.mpxj
             get => JavaObject.getLookupTable();
         }
 
-        public net.sf.mpxj.GraphicalIndicator GraphicalIndicator
+        public GraphicalIndicator GraphicalIndicator
         {
-            get => JavaObject.getGraphicalIndicator();
+            get => _proxyManager.ProxyObject(JavaObject.getGraphicalIndicator());
         }
 
         public string Alias
