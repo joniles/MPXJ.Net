@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -40,9 +41,9 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public java.util.List Masks
+        public IList<CustomFieldValueMask> Masks
         {
-            get => JavaObject.getMasks();
+            get => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(JavaObject.getMasks());
         }
 
         public new string ToString()

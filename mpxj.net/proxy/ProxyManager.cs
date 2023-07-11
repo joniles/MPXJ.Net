@@ -243,6 +243,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new GraphicalIndicatorCriteria(this, v));
         }
 
+        internal CustomFieldValueMask ProxyObject(net.sf.mpxj.CustomFieldValueMask value)
+        {
+            return ProxyObject(value, v => new CustomFieldValueMask(v));
+        }
+
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
