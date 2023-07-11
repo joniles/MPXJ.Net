@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -44,9 +45,9 @@ namespace org.mpxj
             return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID));
         }
 
-        public CustomFieldValueItem GetCustomFieldValueItemByGuid(java.util.UUID guid)
+        public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid guid)
         {
-            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid));
+            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
         }
 
         public void RegisterValue(CustomFieldValueItem item)

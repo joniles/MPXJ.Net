@@ -1,4 +1,5 @@
 ﻿using org.mpxj.proxy;
+using System;
 using System.Collections.Generic;
 
 namespace org.mpxj
@@ -54,10 +55,10 @@ namespace org.mpxj
             return _proxyManager.ProxyObject(JavaObject.addPredecessor(targetTask.JavaObject, type, lag));
         }
 
-        public java.util.UUID SubprojectGUID
+        public Guid? SubprojectGUID
         {
-            get => JavaObject.getSubprojectGUID();
-            set => JavaObject.setSubprojectGUID(value);
+            get => JavaObject.getSubprojectGUID().ConvertType();
+            set => JavaObject.setSubprojectGUID(value.ConvertType());
         }
 
         public java.lang.Number PercentageComplete
@@ -1087,10 +1088,10 @@ namespace org.mpxj
             set => JavaObject.setSummaryProgress(value);
         }
 
-        public java.util.UUID GUID
+        public Guid? GUID
         {
-            get => JavaObject.getGUID();
-            set => JavaObject.setGUID(value);
+            get => JavaObject.getGUID().ConvertType();
+            set => JavaObject.setGUID(value.ConvertType());
         }
 
         public net.sf.mpxj.TaskMode TaskMode

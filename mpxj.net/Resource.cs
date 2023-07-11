@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -639,10 +640,10 @@ namespace org.mpxj
             set => JavaObject.setBudget(value);
         }
 
-        public java.util.UUID GUID
+        public Guid? GUID
         {
-            get => JavaObject.getGUID();
-            set => JavaObject.setGUID(value);
+            get => JavaObject.getGUID().ConvertType();
+            set => JavaObject.setGUID(value.ConvertType());
         }
 
         public string Unit
