@@ -4,10 +4,12 @@ namespace org.mpxj
 {
     public class Filter : IJavaObjectProxy<net.sf.mpxj.Filter>
     {
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Filter JavaObject { get; }
 
-        internal Filter(net.sf.mpxj.Filter javaObject)
+        internal Filter(ProxyManager proxyManager, net.sf.mpxj.Filter javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -23,16 +25,16 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        bool ShowRelatedSummaryRows
+        public bool ShowRelatedSummaryRows
         {
             get => JavaObject.getShowRelatedSummaryRows();
             set => JavaObject.setShowRelatedSummaryRows(value);
         }
 
-        public net.sf.mpxj.GenericCriteria Criteria
+        public GenericCriteria Criteria
         {
-            get => JavaObject.getCriteria();
-            set => JavaObject.setCriteria(value);
+            get => _proxyManager.ProxyObject(JavaObject.getCriteria());
+            set => JavaObject.setCriteria(value.JavaObject);
         }
 
         public bool IsTaskFilter

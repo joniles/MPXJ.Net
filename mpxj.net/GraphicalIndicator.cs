@@ -1,13 +1,16 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-	public class GraphicalIndicator : IJavaObjectProxy<net.sf.mpxj.GraphicalIndicator>
+    public class GraphicalIndicator : IJavaObjectProxy<net.sf.mpxj.GraphicalIndicator>
     {
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.GraphicalIndicator JavaObject { get; }
 
-        internal GraphicalIndicator(net.sf.mpxj.GraphicalIndicator javaObject)
+        internal GraphicalIndicator(ProxyManager proxyManager, net.sf.mpxj.GraphicalIndicator javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -28,19 +31,19 @@ namespace org.mpxj
             set => JavaObject.setDisplayGraphicalIndicators(value);
         }
 
-        public java.util.List NonSummaryRowCriteria
+        public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria
         {
-            get => JavaObject.getNonSummaryRowCriteria();
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getNonSummaryRowCriteria());
         }
 
-        public java.util.List ProjectSummaryCriteria
+        public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria
         {
-            get => JavaObject.getProjectSummaryCriteria();
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getProjectSummaryCriteria());
         }
 
-        public java.util.List SummaryRowCriteria
+        public IList<GraphicalIndicatorCriteria> SummaryRowCriteria
         {
-            get => JavaObject.getSummaryRowCriteria();
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getSummaryRowCriteria());
         }
 
         public bool ProjectSummaryInheritsFromSummaryRows
@@ -61,19 +64,19 @@ namespace org.mpxj
             set => JavaObject.setShowDataValuesInToolTips(value);
         }
 
-        public void AddNonSummaryRowCriteria(net.sf.mpxj.GraphicalIndicatorCriteria criteria)
+        public void AddNonSummaryRowCriteria(GraphicalIndicatorCriteria criteria)
         {
-            JavaObject.addNonSummaryRowCriteria(criteria);
+            JavaObject.addNonSummaryRowCriteria(criteria.JavaObject);
         }
 
-        public void AddSummaryRowCriteria(net.sf.mpxj.GraphicalIndicatorCriteria criteria)
+        public void AddSummaryRowCriteria(GraphicalIndicatorCriteria criteria)
         {
-            JavaObject.addSummaryRowCriteria(criteria);
+            JavaObject.addSummaryRowCriteria(criteria.JavaObject);
         }
 
-        public void AddProjectSummaryCriteria(net.sf.mpxj.GraphicalIndicatorCriteria criteria)
+        public void AddProjectSummaryCriteria(GraphicalIndicatorCriteria criteria)
         {
-            JavaObject.addProjectSummaryCriteria(criteria);
+            JavaObject.addProjectSummaryCriteria(criteria.JavaObject);
         }
 
         public new string ToString()

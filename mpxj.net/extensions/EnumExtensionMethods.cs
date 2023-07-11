@@ -113,6 +113,22 @@
         {
             return value == null ? (CustomFieldValueDataType?)null : (CustomFieldValueDataType)value.ordinal();
         }
+
+        // TestOperator
+        public static net.sf.mpxj.TestOperator ConvertType(this TestOperator value)
+        {
+            return net.sf.mpxj.TestOperator.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.TestOperator ConvertType(this TestOperator? value)
+        {
+            return value == null ? null : net.sf.mpxj.TestOperator.values()[(int)value];
+        }
+
+        public static TestOperator? ConvertType(this net.sf.mpxj.TestOperator value)
+        {
+            return value == null ? (TestOperator?)null : (TestOperator)value.ordinal();
+        }
     }
 }
 

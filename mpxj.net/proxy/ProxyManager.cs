@@ -185,7 +185,7 @@ namespace org.mpxj.proxy
 
         internal Filter ProxyObject(net.sf.mpxj.Filter value)
         {
-            return ProxyObject(value, v => new Filter(v));
+            return ProxyObject(value, v => new Filter(this, v));
         }
 
         internal Group ProxyObject(net.sf.mpxj.Group value)
@@ -230,7 +230,17 @@ namespace org.mpxj.proxy
 
         internal GraphicalIndicator ProxyObject(net.sf.mpxj.GraphicalIndicator value)
         {
-            return ProxyObject(value, v => new GraphicalIndicator(v));
+            return ProxyObject(value, v => new GraphicalIndicator(this, v));
+        }
+
+        internal GenericCriteria ProxyObject(net.sf.mpxj.GenericCriteria value)
+        {
+            return ProxyObject(value, v => new GenericCriteria(this, v));
+        }
+
+        internal GraphicalIndicatorCriteria ProxyObject(net.sf.mpxj.GraphicalIndicatorCriteria value)
+        {
+            return ProxyObject(value, v => new GraphicalIndicatorCriteria(this, v));
         }
 
         internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
