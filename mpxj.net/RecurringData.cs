@@ -117,9 +117,6 @@ namespace org.mpxj
             JavaObject.setYearlyAbsoluteFromDate(date);
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

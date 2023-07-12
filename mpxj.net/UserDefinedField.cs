@@ -49,10 +49,7 @@ namespace org.mpxj
             //get => JavaObject.getUnitsType();
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

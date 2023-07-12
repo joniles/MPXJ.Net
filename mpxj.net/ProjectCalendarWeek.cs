@@ -20,9 +20,6 @@ namespace org.mpxj
             return _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.convertToRecurringExceptions(calendar.JavaObject));
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

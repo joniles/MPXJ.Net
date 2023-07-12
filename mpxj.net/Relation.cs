@@ -39,10 +39,7 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

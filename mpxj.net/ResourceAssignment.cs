@@ -756,10 +756,7 @@ namespace org.mpxj
             JavaObject.setFieldByAlias(alias, value);
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

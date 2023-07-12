@@ -1495,10 +1495,7 @@ namespace org.mpxj
             get => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
 
         public bool IsPredecessor(Task task)
         {
