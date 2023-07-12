@@ -22,35 +22,17 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public java.lang.Integer SequenceNumber
-        {
-            get => JavaObject.getSequenceNumber();
-        }
+        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public bool AvailableForEPS
-        {
-            get => JavaObject.getAvailableForEPS();
-        }
+        public bool AvailableForEPS => JavaObject.getAvailableForEPS();
 
-        public bool AvailableForProject
-        {
-            get => JavaObject.getAvailableForProject();
-        }
+        public bool AvailableForProject => JavaObject.getAvailableForProject();
 
-        public bool AvailableForWBS
-        {
-            get => JavaObject.getAvailableForWBS();
-        }
+        public bool AvailableForWBS => JavaObject.getAvailableForWBS();
 
-        public bool AvailableForActivity
-        {
-            get => JavaObject.getAvailableForActivity();
-        }
+        public bool AvailableForActivity => JavaObject.getAvailableForActivity();
     }
 }
 

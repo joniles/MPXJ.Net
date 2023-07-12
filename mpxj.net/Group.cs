@@ -19,30 +19,15 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.Group(id, name, showSummaryTasks);
         }
 
-        public java.lang.Integer ID
-        {
-            get => JavaObject.getID();
-        }
+        public java.lang.Integer ID => JavaObject.getID();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public bool ShowSummaryTasks
-        {
-            get => JavaObject.getShowSummaryTasks();
-        }
+        public bool ShowSummaryTasks => JavaObject.getShowSummaryTasks();
 
-        public void AddGroupClause(GroupClause clause)
-        {
-            JavaObject.addGroupClause(clause.JavaObject);
-        }
+        public void AddGroupClause(GroupClause clause) => JavaObject.addGroupClause(clause.JavaObject);
 
-        public IList<GroupClause> GroupClauses
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GroupClause, GroupClause>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getGroupClauses());
-        }
+        public IList<GroupClause> GroupClauses => _proxyManager.ProxyList<net.sf.mpxj.GroupClause, GroupClause>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getGroupClauses());
 
         public override string ToString() => JavaObject.toString();
     }

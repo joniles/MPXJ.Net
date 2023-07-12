@@ -16,20 +16,11 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.LocalTimeRange(start, end);
         }
 
-        public java.time.LocalTime Start
-        {
-            get => JavaObject.getStart();
-        }
+        public java.time.LocalTime Start => JavaObject.getStart();
 
-        public java.time.LocalTime End
-        {
-            get => JavaObject.getEnd();
-        }
+        public java.time.LocalTime End => JavaObject.getEnd();
 
-        public long DurationAsMilliseconds
-        {
-            get => JavaObject.getDurationAsMilliseconds();
-        }
+        public long DurationAsMilliseconds => JavaObject.getDurationAsMilliseconds();
 
         public override string ToString() => JavaObject.toString();
     }

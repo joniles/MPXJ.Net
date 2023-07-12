@@ -8,9 +8,6 @@ namespace org.mpxj
 
         internal NotesTopicContainer(ProxyManager proxyManager, net.sf.mpxj.NotesTopicContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public NotesTopic DefaultTopic
-        {
-            get => _fromJava(JavaObject.getDefaultTopic());
-        }
+        public NotesTopic DefaultTopic => _fromJava(JavaObject.getDefaultTopic());
     }
 }

@@ -9,30 +9,15 @@ namespace org.mpxj
 
         internal ProjectCalendar(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
 
-        public java.lang.Integer MinutesPerDay
-        {
-            get => JavaObject.getMinutesPerDay();
-        }
+        public java.lang.Integer MinutesPerDay => JavaObject.getMinutesPerDay();
 
-        public java.lang.Integer MinutesPerWeek
-        {
-            get => JavaObject.getMinutesPerWeek();
-        }
+        public java.lang.Integer MinutesPerWeek => JavaObject.getMinutesPerWeek();
 
-        public java.lang.Integer MinutesPerMonth
-        {
-            get => JavaObject.getMinutesPerMonth();
-        }
+        public java.lang.Integer MinutesPerMonth => JavaObject.getMinutesPerMonth();
 
-        public java.lang.Integer MinutesPerYear
-        {
-            get => JavaObject.getMinutesPerYear();
-        }
+        public java.lang.Integer MinutesPerYear => JavaObject.getMinutesPerYear();
 
-        public java.lang.Integer DaysPerMonth
-        {
-            get => JavaObject.getDaysPerMonth();
-        }
+        public java.lang.Integer DaysPerMonth => JavaObject.getDaysPerMonth();
 
         public java.lang.Integer CalendarMinutesPerDay
         {
@@ -58,60 +43,27 @@ namespace org.mpxj
             set => JavaObject.setCalendarMinutesPerYear(value);
         }
 
-        public ProjectCalendarWeek AddWorkWeek()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addWorkWeek());
-        }
+        public ProjectCalendarWeek AddWorkWeek() => _proxyManager.ProxyObject(JavaObject.addWorkWeek());
 
-        public void RemoveWorkWeek(ProjectCalendarWeek week)
-        {
-            JavaObject.removeWorkWeek(week.JavaObject);
-        }
+        public void RemoveWorkWeek(ProjectCalendarWeek week) => JavaObject.removeWorkWeek(week.JavaObject);
 
-        public void ClearWorkWeeks()
-        {
-            JavaObject.clearWorkWeeks();
-        }
+        public void ClearWorkWeeks() => JavaObject.clearWorkWeeks();
 
-        public IList<ProjectCalendarWeek> WorkWeeks
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkWeeks());
-        }
+        public IList<ProjectCalendarWeek> WorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkWeeks());
 
-        public ProjectCalendarException AddCalendarException(java.time.LocalDate date)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addCalendarException(date));
-        }
+        public ProjectCalendarException AddCalendarException(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.addCalendarException(date));
 
-        public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addCalendarException(fromDate, toDate));
-        }
+        public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate) => _proxyManager.ProxyObject(JavaObject.addCalendarException(fromDate, toDate));
 
-        public ProjectCalendarException AddCalendarException(RecurringData recurringData)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addCalendarException(recurringData.JavaObject));
-        }
+        public ProjectCalendarException AddCalendarException(RecurringData recurringData) => _proxyManager.ProxyObject(JavaObject.addCalendarException(recurringData.JavaObject));
 
-        public void RemoveCalendarException(ProjectCalendarException exception)
-        {
-            JavaObject.removeCalendarException(exception.JavaObject);
-        }
+        public void RemoveCalendarException(ProjectCalendarException exception) => JavaObject.removeCalendarException(exception.JavaObject);
 
-        public void ClearCalendarExceptions()
-        {
-            JavaObject.clearCalendarExceptions();
-        }
+        public void ClearCalendarExceptions() => JavaObject.clearCalendarExceptions();
 
-        public IList<ProjectCalendarException> CalendarExceptions
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCalendarExceptions());
-        }
+        public IList<ProjectCalendarException> CalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCalendarExceptions());
 
-        public IList<ProjectCalendarException> ExpandedCalendarExceptions
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
-        }
+        public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
 
         public ProjectCalendar Parent
         {
@@ -119,70 +71,31 @@ namespace org.mpxj
             set => JavaObject.setParent(value.JavaObject);
         }
 
-        public java.lang.Integer ParentUniqueID
-        {
-            get => JavaObject.getParentUniqueID();
-        }
+        public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
 
-        public net.sf.mpxj.Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate)
-        {
-            return JavaObject.getDuration(startDate, endDate);
-        }
+        public net.sf.mpxj.Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => JavaObject.getDuration(startDate, endDate);
 
-        public java.time.LocalTime GetStartTime(java.time.LocalDate date)
-        {
-            return JavaObject.getStartTime(date);
-        }
+        public java.time.LocalTime GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date);
 
-        public java.time.LocalTime GetFinishTime(java.time.LocalDate date)
-        {
-            return JavaObject.getFinishTime(date);
-        }
+        public java.time.LocalTime GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date);
 
-        public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, net.sf.mpxj.Duration duration, bool returnNextWorkStart)
-        {
-            return JavaObject.getDate(startDate, duration, returnNextWorkStart);
-        }
+        public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, net.sf.mpxj.Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate, duration, returnNextWorkStart);
 
-        public java.time.LocalDateTime GetNextWorkStart(java.time.LocalDateTime date)
-        {
-            return JavaObject.getNextWorkStart(date);
-        }
+        public java.time.LocalDateTime GetNextWorkStart(java.time.LocalDateTime date) => JavaObject.getNextWorkStart(date);
 
-        public java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date)
-        {
-            return JavaObject.getPreviousWorkFinish(date);
-        }
+        public java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date) => JavaObject.getPreviousWorkFinish(date);
 
-        public DayType? GetDayType(java.time.DayOfWeek day)
-        {
-            return JavaObject.getDayType(day).ConvertType();
-        }
+        public DayType? GetDayType(java.time.DayOfWeek day) => JavaObject.getDayType(day).ConvertType();
 
-        public bool IsWorkingDay(java.time.DayOfWeek day)
-        {
-            return JavaObject.isWorkingDay(day);
-        }
+        public bool IsWorkingDay(java.time.DayOfWeek day) => JavaObject.isWorkingDay(day);
 
-        public bool IsWorkingDate(java.time.LocalDate date)
-        {
-            return JavaObject.isWorkingDate(date);
-        }
+        public bool IsWorkingDate(java.time.LocalDate date) => JavaObject.isWorkingDate(date);
 
-        public ProjectCalendarHours GetHours(java.time.DayOfWeek day)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getHours(day));
-        }
+        public ProjectCalendarHours GetHours(java.time.DayOfWeek day) => _proxyManager.ProxyObject(JavaObject.getHours(day));
 
-        public ProjectCalendarHours GetHours(java.time.LocalDate date)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getHours(date));
-        }
+        public ProjectCalendarHours GetHours(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
 
-        public ProjectCalendarHours GetHours(java.time.LocalDateTime date)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getHours(date));
-        }
+        public ProjectCalendarHours GetHours(java.time.LocalDateTime date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
 
         public java.lang.Integer UniqueID
         {
@@ -190,70 +103,31 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public IList<Task> Tasks
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTasks());
-        }
+        public IList<Task> Tasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTasks());
 
-        public IList<Resource> Resources
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResources());
-        }
+        public IList<Resource> Resources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResources());
 
-        public int ResourceCount
-        {
-            get => JavaObject.getResourceCount();
-        }
+        public int ResourceCount => JavaObject.getResourceCount();
 
-        public void Remove()
-        {
-            JavaObject.remove();
-        }
+        public void Remove() => JavaObject.remove();
 
-        public ProjectCalendarException GetException(java.time.LocalDate date)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getException(date));
-        }
+        public ProjectCalendarException GetException(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getException(date));
 
-        public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
-        }
+        public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
 
-        public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format)
-        {
-            return JavaObject.getWork(day, format.ConvertType());
-        }
+        public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format) => JavaObject.getWork(day, format.ConvertType());
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, TimeUnit format)
-        {
-            return JavaObject.getWork(date, format.ConvertType());
-        }
+        public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, TimeUnit format) => JavaObject.getWork(date, format.ConvertType());
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format)
-        {
-            return JavaObject.getWork(startDate, endDate, format.ConvertType());
-        }
+        public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format) => JavaObject.getWork(startDate, endDate, format.ConvertType());
 
-        public IList<ProjectCalendar> DerivedCalendars
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
-        }
+        public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
 
-        public ProjectFile ParentFile
-        {
-            get => _proxyManager.ProjectFile;
-        }
+        public ProjectFile ParentFile => _proxyManager.ProjectFile;
 
-        public bool Derived
-        {
-            get => JavaObject.isDerived();
-        }
+        public bool Derived => JavaObject.isDerived();
 
         public net.sf.mpxj.CalendarType Type
         {
@@ -268,4 +142,3 @@ namespace org.mpxj
         }
     }
 }
-

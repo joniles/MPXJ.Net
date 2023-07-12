@@ -14,10 +14,7 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int Evaluate(IFieldContainer container)
-        {
-            return JavaObject.evaluate(container.JavaObject);
-        }
+        public int Evaluate(IFieldContainer container) => JavaObject.evaluate(container.JavaObject);
 
         public net.sf.mpxj.FieldType FieldType
         {
@@ -31,20 +28,11 @@ namespace org.mpxj
             set => JavaObject.setDisplayGraphicalIndicators(value);
         }
 
-        public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
-        }
+        public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
 
-        public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjectSummaryCriteria());
-        }
+        public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjectSummaryCriteria());
 
-        public IList<GraphicalIndicatorCriteria> SummaryRowCriteria
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
-        }
+        public IList<GraphicalIndicatorCriteria> SummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
 
         public bool ProjectSummaryInheritsFromSummaryRows
         {
@@ -64,20 +52,11 @@ namespace org.mpxj
             set => JavaObject.setShowDataValuesInToolTips(value);
         }
 
-        public void AddNonSummaryRowCriteria(GraphicalIndicatorCriteria criteria)
-        {
-            JavaObject.addNonSummaryRowCriteria(criteria.JavaObject);
-        }
+        public void AddNonSummaryRowCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addNonSummaryRowCriteria(criteria.JavaObject);
 
-        public void AddSummaryRowCriteria(GraphicalIndicatorCriteria criteria)
-        {
-            JavaObject.addSummaryRowCriteria(criteria.JavaObject);
-        }
+        public void AddSummaryRowCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addSummaryRowCriteria(criteria.JavaObject);
 
-        public void AddProjectSummaryCriteria(GraphicalIndicatorCriteria criteria)
-        {
-            JavaObject.addProjectSummaryCriteria(criteria.JavaObject);
-        }
+        public void AddProjectSummaryCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addProjectSummaryCriteria(criteria.JavaObject);
 
         public override string ToString() => JavaObject.toString();
     }

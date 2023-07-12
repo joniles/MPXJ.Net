@@ -16,10 +16,7 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.DataLink(id);
         }
 
-        public string ID
-        {
-            get => JavaObject.getID();
-        }
+        public string ID => JavaObject.getID();
 
         public net.sf.mpxj.FieldType SourceField
         {

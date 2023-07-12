@@ -11,15 +11,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.time.LocalDateTime Start
-        {
-            get => JavaObject.getStart();
-        }
+        public java.time.LocalDateTime Start => JavaObject.getStart();
 
-        public java.time.LocalDateTime End
-        {
-            get => JavaObject.getEnd();
-        }
+        public java.time.LocalDateTime End => JavaObject.getEnd();
     }
 }
 

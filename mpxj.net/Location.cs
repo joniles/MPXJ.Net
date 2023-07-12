@@ -20,70 +20,31 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public string AddressLine1
-        {
-            get => JavaObject.getAddressLine1();
-        }
+        public string AddressLine1 => JavaObject.getAddressLine1();
 
-        public string AddressLine2
-        {
-            get => JavaObject.getAddressLine2();
-        }
+        public string AddressLine2 => JavaObject.getAddressLine2();
 
-        public string AddressLine3
-        {
-            get => JavaObject.getAddressLine3();
-        }
+        public string AddressLine3 => JavaObject.getAddressLine3();
 
-        public string City
-        {
-            get => JavaObject.getCity();
-        }
+        public string City => JavaObject.getCity();
 
-        public string Country
-        {
-            get => JavaObject.getCountry();
-        }
+        public string Country => JavaObject.getCountry();
 
-        public string CountryCode
-        {
-            get => JavaObject.getCountryCode();
-        }
+        public string CountryCode => JavaObject.getCountryCode();
 
-        public java.lang.Double Latitude
-        {
-            get => JavaObject.getLatitude();
-        }
+        public java.lang.Double Latitude => JavaObject.getLatitude();
 
-        public java.lang.Double Longitude
-        {
-            get => JavaObject.getLongitude();
-        }
+        public java.lang.Double Longitude => JavaObject.getLongitude();
 
-        public string Municipality
-        {
-            get => JavaObject.getMunicipality();
-        }
+        public string Municipality => JavaObject.getMunicipality();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public string PostalCode
-        {
-            get => JavaObject.getPostalCode();
-        }
+        public string PostalCode => JavaObject.getPostalCode();
 
-        public string State
-        {
-            get => JavaObject.getState();
-        }
+        public string State => JavaObject.getState();
 
-        public string StateCode
-        {
-            get => JavaObject.getStateCode();
-        }
+        public string StateCode => JavaObject.getStateCode();
     }
 }
 

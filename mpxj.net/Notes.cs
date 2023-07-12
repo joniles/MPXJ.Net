@@ -18,10 +18,7 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.Notes(text);
         }
 
-        public bool Empty
-        {
-            get => JavaObject.isEmpty();
-        }
+        public bool Empty => JavaObject.isEmpty();
 
         public override string ToString() => JavaObject.toString();
     }

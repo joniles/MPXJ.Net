@@ -32,30 +32,18 @@ namespace org.mpxj
             set => JavaObject.setOperator(value.ConvertType());
         }
 
-        public object GetValue(int index)
-        {
-            // TODO: proxy
-            return JavaObject.getValue(index);
-        }
+        // TODO: proxy
+        public object GetValue(int index) => JavaObject.getValue(index);
 
-        public void SetRightValue(int index, object value)
-        {
-            // TODO: proxy
-            JavaObject.setRightValue(index, value);
-        }
+        // TODO: proxy
+        public void SetRightValue(int index, object value) => JavaObject.setRightValue(index, value);
 
         // TODO handle map
         //public bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);
 
-        public IList<GenericCriteria> CriteriaList
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCriteriaList());
-        }
+        public IList<GenericCriteria> CriteriaList => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCriteriaList());
 
-        public void AddCriteria(GenericCriteria criteria)
-        {
-            JavaObject.addCriteria(criteria.JavaObject);
-        }
+        public void AddCriteria(GenericCriteria criteria) => JavaObject.addCriteria(criteria.JavaObject);
 
         public override string ToString() => JavaObject.toString();
     }

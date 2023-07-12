@@ -14,34 +14,16 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public void AddFilter(Filter filter)
-        {
-            JavaObject.addFilter(filter.JavaObject);
-        }
+        public void AddFilter(Filter filter) => JavaObject.addFilter(filter.JavaObject);
 
-        public void RemoveFilter(string filterName)
-        {
-            JavaObject.removeFilter(filterName);
-        }
+        public void RemoveFilter(string filterName) => JavaObject.removeFilter(filterName);
 
-        public IList<Filter> ResourceFilters
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceFilters());
-        }
+        public IList<Filter> ResourceFilters => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceFilters());
 
-        public IList<Filter> TaskFilters
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskFilters());
-        }
+        public IList<Filter> TaskFilters => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskFilters());
 
-        public Filter GetFilterByName(string name)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getFilterByName(name));
-        }
+        public Filter GetFilterByName(string name) => _proxyManager.ProxyObject(JavaObject.getFilterByName(name));
 
-        public Filter GetFilterByID(java.lang.Integer id)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getFilterByID(id));
-        }
+        public Filter GetFilterByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getFilterByID(id));
     }
 }
