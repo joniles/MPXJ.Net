@@ -6,7 +6,7 @@ namespace org.mpxj
 	{
 		internal readonly ProxyManager _proxyManager;
 
-		public ProjectFile Parent { get => _proxyManager.ProjectFile; }
+		public ProjectFile Parent => _proxyManager.ProjectFile;
 
 		internal ProjectEntity(ProxyManager proxyManager)
 		{

@@ -4,7 +4,7 @@ namespace org.mpxj
 {
 	public class ProjectCalendarContainer : ProjectEntityContainer<net.sf.mpxj.ProjectCalendar, ProjectCalendar>
     {
-        public new net.sf.mpxj.ProjectCalendarContainer JavaObject { get => (net.sf.mpxj.ProjectCalendarContainer)base.JavaObject; }
+        public new net.sf.mpxj.ProjectCalendarContainer JavaObject => (net.sf.mpxj.ProjectCalendarContainer)base.JavaObject;
 
         internal ProjectCalendarContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 

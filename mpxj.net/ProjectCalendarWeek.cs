@@ -5,7 +5,7 @@ namespace org.mpxj
 {
     public class ProjectCalendarWeek : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarWeek>
     {
-        public new net.sf.mpxj.ProjectCalendarWeek JavaObject { get => (net.sf.mpxj.ProjectCalendarWeek)base.JavaObject; }
+        public new net.sf.mpxj.ProjectCalendarWeek JavaObject => (net.sf.mpxj.ProjectCalendarWeek)base.JavaObject;
 
         internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 

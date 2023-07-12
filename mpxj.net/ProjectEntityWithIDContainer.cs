@@ -7,7 +7,7 @@ namespace org.mpxj
     {
         internal ProjectEntityWithIDContainer(Func<M, N> fromJava, Func<N, M> toJava, net.sf.mpxj.ProjectEntityWithIDContainer javaObject) : base(fromJava, toJava, javaObject) { }
 
-        public new net.sf.mpxj.ProjectEntityWithIDContainer JavaObject { get => (net.sf.mpxj.ProjectEntityWithIDContainer)base.JavaObject; }
+        public new net.sf.mpxj.ProjectEntityWithIDContainer JavaObject => (net.sf.mpxj.ProjectEntityWithIDContainer)base.JavaObject;
 
         public N GetByID(java.lang.Integer id)
         {

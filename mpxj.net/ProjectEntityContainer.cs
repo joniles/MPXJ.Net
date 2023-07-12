@@ -5,7 +5,7 @@ namespace org.mpxj
 {
 	public class ProjectEntityContainer<M, N> : ProxyList<M, N>, IProjectEntityContainer<N>, IJavaObjectProxy<net.sf.mpxj.ProjectEntityContainer> where N : IJavaObjectProxy<M>
 	{
-        public new net.sf.mpxj.ProjectEntityContainer JavaObject { get => (net.sf.mpxj.ProjectEntityContainer)base.JavaObject; }
+        public new net.sf.mpxj.ProjectEntityContainer JavaObject => (net.sf.mpxj.ProjectEntityContainer)base.JavaObject;
 
         internal ProjectEntityContainer(Func<M, N> fromJava, Func<N, M> toJava, net.sf.mpxj.ProjectEntityContainer javaObject) : base(fromJava, toJava, javaObject) { }
 
