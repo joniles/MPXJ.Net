@@ -18,7 +18,7 @@ namespace org.mpxj
 
         public CostAccount(ProjectFile file, java.lang.Integer uniqueID, string id, string name, string description, java.lang.Integer sequenceNumber)
         {
-            _proxyManager = file.ProxyManager;
+            _proxyManager = file._proxyManager;
             JavaObject = new net.sf.mpxj.CostAccount(uniqueID, id, name, description, sequenceNumber);
         }
 
