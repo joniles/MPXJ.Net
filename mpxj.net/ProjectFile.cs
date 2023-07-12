@@ -17,205 +17,85 @@ namespace org.mpxj
             JavaObject = file;
         }
 
-        public ProjectConfig ProjectConfig
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getProjectConfig());
-        }
+        public ProjectConfig ProjectConfig => _proxyManager.ProxyObject(JavaObject.getProjectConfig());
 
-        public Task AddTask()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addTask());
-        }
+        public Task AddTask() => _proxyManager.ProxyObject(JavaObject.addTask());
 
-        public void RemoveTask(Task task)
-        {
-            JavaObject.removeTask(task.JavaObject);
-        }
+        public void RemoveTask(Task task) => JavaObject.removeTask(task.JavaObject);
 
-        public void ValidateUniqueIDsForMicrosoftProject()
-        {
-            JavaObject.validateUniqueIDsForMicrosoftProject();
-        }
+        public void ValidateUniqueIDsForMicrosoftProject() => JavaObject.validateUniqueIDsForMicrosoftProject();
 
-        public IList<Task> ChildTasks
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
-        }
+        public IList<Task> ChildTasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
 
-        public IList<Resource> ChildResources
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
-        }
+        public IList<Resource> ChildResources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
 
-        public TaskContainer Tasks
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTasks());
-        }
+        public TaskContainer Tasks => _proxyManager.ProxyObject(JavaObject.getTasks());
 
-        public ProjectCalendar AddCalendar()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addCalendar());
-        }
+        public ProjectCalendar AddCalendar() => _proxyManager.ProxyObject(JavaObject.addCalendar());
 
-        public void RemoveCalendar(ProjectCalendar calendar)
-        {
-            JavaObject.removeCalendar(calendar.JavaObject);
-        }
+        public void RemoveCalendar(ProjectCalendar calendar) => JavaObject.removeCalendar(calendar.JavaObject);
 
-        public ProjectCalendar AddDefaultBaseCalendar()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addDefaultBaseCalendar());
-        }
+        public ProjectCalendar AddDefaultBaseCalendar() => _proxyManager.ProxyObject(JavaObject.addDefaultBaseCalendar());
 
-        public ProjectCalendar AddDefaultDerivedCalendar()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addDefaultDerivedCalendar());
-        }
+        public ProjectCalendar AddDefaultDerivedCalendar() => _proxyManager.ProxyObject(JavaObject.addDefaultDerivedCalendar());
 
-        public ProjectCalendarContainer Calendars
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getCalendars());
-        }
+        public ProjectCalendarContainer Calendars => _proxyManager.ProxyObject(JavaObject.getCalendars());
 
-        public ProjectProperties ProjectProperties
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getProjectProperties());
-        }
+        public ProjectProperties ProjectProperties => _proxyManager.ProxyObject(JavaObject.getProjectProperties());
 
-        public Resource AddResource()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addResource());
-        }
+        public Resource AddResource() => _proxyManager.ProxyObject(JavaObject.addResource());
 
-        public void RemoveResource(Resource resource)
-        {
-            JavaObject.removeResource(resource.JavaObject);
-        }
+        public void RemoveResource(Resource resource) => JavaObject.removeResource(resource.JavaObject);
 
-        public ResourceContainer Resources
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getResources());
-        }
+        public ResourceContainer Resources => _proxyManager.ProxyObject(JavaObject.getResources());
 
-        public ResourceAssignmentContainer ResourceAssignments
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getResourceAssignments());
-        }
+        public ResourceAssignmentContainer ResourceAssignments => _proxyManager.ProxyObject(JavaObject.getResourceAssignments());
 
-        public ProjectCalendar GetCalendarByName(string calendarName)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getCalendarByName(calendarName));
-        }
+        public ProjectCalendar GetCalendarByName(string calendarName) => _proxyManager.ProxyObject(JavaObject.getCalendarByName(calendarName));
 
-        public ProjectCalendar GetCalendarByUniqueID(java.lang.Integer calendarID)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getCalendarByUniqueID(calendarID));
-        }
+        public ProjectCalendar GetCalendarByUniqueID(java.lang.Integer calendarID) => _proxyManager.ProxyObject(JavaObject.getCalendarByUniqueID(calendarID));
 
-        public Task GetTaskByID(java.lang.Integer id)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getTaskByID(id));
-        }
+        public Task GetTaskByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getTaskByID(id));
 
-        public Task GetTaskByUniqueID(java.lang.Integer id)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getTaskByUniqueID(id));
-        }
+        public Task GetTaskByUniqueID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getTaskByUniqueID(id));
 
-        public Resource GetResourceByID(java.lang.Integer id)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getResourceByID(id));
-        }
+        public Resource GetResourceByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getResourceByID(id));
 
-        public Resource GetResourceByUniqueID(java.lang.Integer id)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getResourceByUniqueID(id));
-        }
+        public Resource GetResourceByUniqueID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getResourceByUniqueID(id));
 
-        public void UpdateStructure()
-        {
-            JavaObject.updateStructure();
-        }
+        public void UpdateStructure() => JavaObject.updateStructure();
 
-        public java.time.LocalDateTime EarliestStartDate
-        {
-            get => JavaObject.getEarliestStartDate();
-        }
+        public java.time.LocalDateTime EarliestStartDate => JavaObject.getEarliestStartDate();
 
-        public java.time.LocalDateTime LatestFinishDate
-        {
-            get => JavaObject.getLatestFinishDate();
-        }
+        public java.time.LocalDateTime LatestFinishDate => JavaObject.getLatestFinishDate();
 
-        public ViewContainer Views
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getViews());
-        }
+        public ViewContainer Views => _proxyManager.ProxyObject(JavaObject.getViews());
 
-        public TableContainer Tables
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTables());
-        }
+        public TableContainer Tables => _proxyManager.ProxyObject(JavaObject.getTables());
 
-        public FilterContainer Filters
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getFilters());
-        }
+        public FilterContainer Filters => _proxyManager.ProxyObject(JavaObject.getFilters());
 
-        public GroupContainer Groups
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getGroups());
-        }
+        public GroupContainer Groups => _proxyManager.ProxyObject(JavaObject.getGroups());
 
-        public EventManager EventManager
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getEventManager());
-        }
+        public EventManager EventManager => _proxyManager.ProxyObject(JavaObject.getEventManager());
 
-        public CustomFieldContainer CustomFields
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getCustomFields());
-        }
+        public CustomFieldContainer CustomFields => _proxyManager.ProxyObject(JavaObject.getCustomFields());
 
-        public ActivityCodeContainer ActivityCodes
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getActivityCodes());
-        }
+        public ActivityCodeContainer ActivityCodes => _proxyManager.ProxyObject(JavaObject.getActivityCodes());
 
-        public DataLinkContainer DataLinks
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getDataLinks());
-        }
+        public DataLinkContainer DataLinks => _proxyManager.ProxyObject(JavaObject.getDataLinks());
 
-        public ExpenseCategoryContainer ExpenseCategories
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getExpenseCategories());
-        }
+        public ExpenseCategoryContainer ExpenseCategories => _proxyManager.ProxyObject(JavaObject.getExpenseCategories());
 
-        public CostAccountContainer CostAccounts
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getCostAccounts());
-        }
+        public CostAccountContainer CostAccounts => _proxyManager.ProxyObject(JavaObject.getCostAccounts());
 
-        public UserDefinedFieldContainer UserDefinedFields
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getUserDefinedFields());
-        }
+        public UserDefinedFieldContainer UserDefinedFields => _proxyManager.ProxyObject(JavaObject.getUserDefinedFields());
 
-        public WorkContourContainer WorkContours
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getWorkContours());
-        }
+        public WorkContourContainer WorkContours => _proxyManager.ProxyObject(JavaObject.getWorkContours());
 
-        public NotesTopicContainer NotesTopics
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getNotesTopics());
-        }
+        public NotesTopicContainer NotesTopics => _proxyManager.ProxyObject(JavaObject.getNotesTopics());
 
-        public LocationContainer Locations
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getLocations());
-        }
+        public LocationContainer Locations => _proxyManager.ProxyObject(JavaObject.getLocations());
 
         public ProjectCalendar DefaultCalendar
         {
@@ -223,45 +103,21 @@ namespace org.mpxj
             set => JavaObject.setDefaultCalendar(value.JavaObject);
         }
 
-        public ProjectCalendar BaselineCalendar
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());
-        }
+        public ProjectCalendar BaselineCalendar => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());
 
-        public IList<ProjectFile> Baselines
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getBaselines());
-        }
+        public IList<ProjectFile> Baselines => _proxyManager.ProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getBaselines());
 
-        public void SetBaseline(ProjectFile baseline)
-        {
-            JavaObject.setBaseline(baseline.JavaObject);
-        }
+        public void SetBaseline(ProjectFile baseline) => JavaObject.setBaseline(baseline.JavaObject);
 
-        public void SetBaseline(ProjectFile baseline, int index)
-        {
-            JavaObject.setBaseline(baseline.JavaObject, index);
-        }
+        public void SetBaseline(ProjectFile baseline, int index) => JavaObject.setBaseline(baseline.JavaObject, index);
 
-        public void ClearBaseline()
-        {
-            JavaObject.clearBaseline();
-        }
+        public void ClearBaseline() => JavaObject.clearBaseline();
 
-        public void ClearBaseline(int index)
-        {
-            JavaObject.clearBaseline(index);
-        }
+        public void ClearBaseline(int index) => JavaObject.clearBaseline(index);
 
         // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields
-        //{
-        //    get => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
-        //}
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
 
-        public void ExpandSubprojects()
-        {
-            JavaObject.expandSubprojects();
-        }
+        public void ExpandSubprojects() => JavaObject.expandSubprojects();
     }
 }

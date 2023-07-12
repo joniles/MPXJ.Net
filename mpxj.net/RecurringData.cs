@@ -52,15 +52,9 @@ namespace org.mpxj
             set => JavaObject.setWorkingDaysOnly(value);
         }
 
-        public bool GetWeeklyDay(java.time.DayOfWeek day)
-        {
-            return JavaObject.getWeeklyDay(day);
-        }
+        public bool GetWeeklyDay(java.time.DayOfWeek day) => JavaObject.getWeeklyDay(day);
 
-        public void SetWeeklyDay(java.time.DayOfWeek day, bool value)
-        {
-            JavaObject.setWeeklyDay(day, value);
-        }
+        public void SetWeeklyDay(java.time.DayOfWeek day, bool value) => JavaObject.setWeeklyDay(day, value);
 
         public bool Relative
         {
@@ -92,30 +86,15 @@ namespace org.mpxj
             set => JavaObject.setMonthNumber(value);
         }
 
-        public java.time.LocalDate[] Dates
-        {
-            get => JavaObject.getDates();
-        }
+        public java.time.LocalDate[] Dates => JavaObject.getDates();
 
-        public bool Valid
-        {
-            get => JavaObject.isValid();
-        }
+        public bool Valid => JavaObject.isValid();
 
-        public java.time.LocalDate CalculatedFirstDate
-        {
-            get => JavaObject.getCalculatedFirstDate();
-        }
+        public java.time.LocalDate CalculatedFirstDate => JavaObject.getCalculatedFirstDate();
 
-        public java.time.LocalDate CalculatedLastDate
-        {
-            get => JavaObject.getCalculatedLastDate();
-        }
+        public java.time.LocalDate CalculatedLastDate => JavaObject.getCalculatedLastDate();
 
-        public void SetYearlyAbsoluteFromDate(java.time.LocalDate date)
-        {
-            JavaObject.setYearlyAbsoluteFromDate(date);
-        }
+        public void SetYearlyAbsoluteFromDate(java.time.LocalDate date) => JavaObject.setYearlyAbsoluteFromDate(date);
 
         public override string ToString() => JavaObject.toString();
     }

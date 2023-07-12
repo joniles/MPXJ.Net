@@ -598,11 +598,8 @@ namespace org.mpxj
             set => JavaObject.setCurrencyCode(value);
         }
 
-        public IDictionary<string, object> CustomProperties
-        {
-            // TODO: inverse of proxy to allow values to be written back
-            get => _proxyManager.ProxyDictionary<string, object, string, object>(k => k, k => k, v => _proxyManager.GenericProxyObject(v), v => v, JavaObject.getCustomProperties());
-        }
+        // TODO: inverse of proxy to allow values to be written back
+        public IDictionary<string, object> CustomProperties => _proxyManager.ProxyDictionary<string, object, string, object>(k => k, k => k, v => _proxyManager.GenericProxyObject(v), v => v, JavaObject.getCustomProperties());
 
         public string HyperlinkBase
         {
@@ -622,15 +619,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineDate(value);
         }
 
-        public java.time.LocalDateTime GetBaselineDate(int baselineNumber)
-        {
-            return JavaObject.getBaselineDate(baselineNumber);
-        }
+        public java.time.LocalDateTime GetBaselineDate(int baselineNumber) => JavaObject.getBaselineDate(baselineNumber);
 
-        public void SetBaselineDate(int baselineNumber, java.time.LocalDateTime date)
-        {
-            JavaObject.setBaselineDate(baselineNumber, date);
-        }
+        public void SetBaselineDate(int baselineNumber, java.time.LocalDateTime date) => JavaObject.setBaselineDate(baselineNumber, date);
 
         public string Template
         {
@@ -818,15 +809,9 @@ namespace org.mpxj
             set => JavaObject.setResourcePoolFile(value);
         }
 
-        public ProjectFile ResourcePoolObject
-        {
-            get => new ProjectFile(JavaObject.getResourcePoolObject());
-        }
+        public ProjectFile ResourcePoolObject => new ProjectFile(JavaObject.getResourcePoolObject());
 
         // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields
-        //{
-        //    get => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
-        //}
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
     }
 }
