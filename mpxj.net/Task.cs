@@ -6,54 +6,27 @@ namespace org.mpxj
 {
     public class Task : AbstractFieldContainer, IProjectEntityWithID, IChildTaskContainer, IJavaObjectProxy<net.sf.mpxj.Task>
     {
-        public new net.sf.mpxj.Task JavaObject { get => (net.sf.mpxj.Task)base.JavaObject; }
+        public new net.sf.mpxj.Task JavaObject => (net.sf.mpxj.Task)base.JavaObject;
 
         internal Task(ProxyManager proxyManager, net.sf.mpxj.Task javaObject) : base(proxyManager, javaObject) { }
 
-        public RecurringTask AddRecurringTask()
-        {
-            return _proxyManager.ProxyObject(JavaObject.addRecurringTask());
-        }
+        public RecurringTask AddRecurringTask() => _proxyManager.ProxyObject(JavaObject.addRecurringTask());
 
-        public RecurringTask RecurringTask
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getRecurringTask());
-        }
+        public RecurringTask RecurringTask => _proxyManager.ProxyObject(JavaObject.getRecurringTask());
 
-        public IList<ActivityCodeValue> ActivityCodes
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getActivityCodes());
-        }
+        public IList<ActivityCodeValue> ActivityCodes => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getActivityCodes());
 
-        public void AddActivityCode(ActivityCodeValue value)
-        {
-            JavaObject.addActivityCode(value.JavaObject);
-        }
+        public void AddActivityCode(ActivityCodeValue value) => JavaObject.addActivityCode(value.JavaObject);
 
-        public ResourceAssignment AddResourceAssignment(Resource resource)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
-        }
+        public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
 
-        public void AddResourceAssignment(ResourceAssignment assignment)
-        {
-            JavaObject.addResourceAssignment(assignment.JavaObject);
-        }
+        public void AddResourceAssignment(ResourceAssignment assignment) => JavaObject.addResourceAssignment(assignment.JavaObject);
 
-        public ResourceAssignment GetExistingResourceAssignment(Resource resource)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
-        }
+        public ResourceAssignment GetExistingResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
 
-        public IList<ResourceAssignment> ResourceAssignments
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceAssignments());
-        }
+        public IList<ResourceAssignment> ResourceAssignments => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceAssignments());
 
-        public Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addPredecessor(targetTask.JavaObject, type, lag));
-        }
+        public Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag) => _proxyManager.ProxyObject(JavaObject.addPredecessor(targetTask.JavaObject, type, lag));
 
         public Guid? SubprojectGUID
         {
@@ -247,15 +220,9 @@ namespace org.mpxj
             set => JavaObject.setDurationText(value);
         }
 
-        public void SetDuration(int index, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setDuration(index, value);
-        }
+        public void SetDuration(int index, net.sf.mpxj.Duration value) => JavaObject.setDuration(index, value);
 
-        public net.sf.mpxj.Duration GetDuration(int index)
-        {
-            return JavaObject.getDuration(index);
-        }
+        public net.sf.mpxj.Duration GetDuration(int index) => JavaObject.getDuration(index);
 
         public net.sf.mpxj.Duration DurationVariance
         {
@@ -299,15 +266,9 @@ namespace org.mpxj
             set => JavaObject.setFinishText(value);
         }
 
-        public void SetFinish(int index, java.time.LocalDateTime value)
-        {
-            JavaObject.setFinish(index, value);
-        }
+        public void SetFinish(int index, java.time.LocalDateTime value) => JavaObject.setFinish(index, value);
 
-        public java.time.LocalDateTime GetFinish(int index)
-        {
-            return JavaObject.getFinish(index);
-        }
+        public java.time.LocalDateTime GetFinish(int index) => JavaObject.getFinish(index);
 
         public net.sf.mpxj.Duration FinishVariance
         {
@@ -321,15 +282,9 @@ namespace org.mpxj
             set => JavaObject.setFixedCost(value);
         }
 
-        public void SetFlag(int index, bool value)
-        {
-            JavaObject.setFlag(index, value);
-        }
+        public void SetFlag(int index, bool value) => JavaObject.setFlag(index, value);
 
-        public bool GetFlag(int index)
-        {
-            return JavaObject.getFlag(index);
-        }
+        public bool GetFlag(int index) => JavaObject.getFlag(index);
 
         public net.sf.mpxj.Duration FreeSlack
         {
@@ -409,25 +364,13 @@ namespace org.mpxj
             set => JavaObject.setNotesObject(value.JavaObject);
         }
 
-        public Task AddTask()
-        {            
-            return _proxyManager.ProxyObject(JavaObject.addTask());
-        }
+        public Task AddTask() => _proxyManager.ProxyObject(JavaObject.addTask());
 
-        public void RemoveChildTask(Task child)
-        {
-            JavaObject.removeChildTask(child.JavaObject);
-        }
+        public void RemoveChildTask(Task child) => JavaObject.removeChildTask(child.JavaObject);
 
-        public void SetNumber(int index, java.lang.Number value)
-        {
-            JavaObject.setNumber(index, value);
-        }
+        public void SetNumber(int index, java.lang.Number value) => JavaObject.setNumber(index, value);
 
-        public java.lang.Number GetNumber(int index)
-        {
-            return JavaObject.getNumber(index);
-        }
+        public java.lang.Number GetNumber(int index) => JavaObject.getNumber(index);
 
         public java.lang.Integer Objects
         {
@@ -447,15 +390,9 @@ namespace org.mpxj
             set => JavaObject.setOutlineNumber(value);
         }
 
-        public IList<Relation> Predecessors
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPredecessors());
-        }
+        public IList<Relation> Predecessors => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPredecessors());
 
-        public IList<Relation> Successors
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSuccessors());
-        }
+        public IList<Relation> Successors => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSuccessors());
 
         public net.sf.mpxj.Priority Priority
         {
@@ -529,15 +466,9 @@ namespace org.mpxj
             set => JavaObject.setStartText(value);
         }
 
-        public void SetStart(int index, java.time.LocalDateTime value)
-        {
-            JavaObject.setStart(index, value);
-        }
+        public void SetStart(int index, java.time.LocalDateTime value) => JavaObject.setStart(index, value);
 
-        public java.time.LocalDateTime GetStart(int index)
-        {
-            return JavaObject.getStart(index);
-        }
+        public java.time.LocalDateTime GetStart(int index) => JavaObject.getStart(index);
 
         public net.sf.mpxj.Duration StartVariance
         {
@@ -569,25 +500,13 @@ namespace org.mpxj
             set => JavaObject.setSV(value);
         }
 
-        public void SetText(int index, string value)
-        {
-            JavaObject.setText(index, value);
-        }
+        public void SetText(int index, string value) => JavaObject.setText(index, value);
 
-        public string GetText(int index)
-        {
-            return JavaObject.getText(index);
-        }
+        public string GetText(int index) => JavaObject.getText(index);
 
-        public void SetOutlineCode(int index, string value)
-        {
-            JavaObject.setOutlineCode(index, value);
-        }
+        public void SetOutlineCode(int index, string value) => JavaObject.setOutlineCode(index, value);
 
-        public string GetOutlineCode(int index)
-        {
-            return JavaObject.getOutlineCode(index);
-        }
+        public string GetOutlineCode(int index) => JavaObject.getOutlineCode(index);
 
         public net.sf.mpxj.Duration TotalSlack
         {
@@ -625,20 +544,11 @@ namespace org.mpxj
             set => JavaObject.setWorkVariance(value);
         }
 
-        public Task ParentTask
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getParentTask());
-        }
+        public Task ParentTask => _proxyManager.ProxyObject(JavaObject.getParentTask());
 
-        public java.lang.Integer ParentTaskUniqueID
-        {
-            get => JavaObject.getParentTaskUniqueID();
-        }
+        public java.lang.Integer ParentTaskUniqueID => JavaObject.getParentTaskUniqueID();
 
-        public IList<Task> ChildTasks
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
-        }
+        public IList<Task> ChildTasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
 
         public bool Estimated
         {
@@ -712,10 +622,7 @@ namespace org.mpxj
             set => JavaObject.setExternalTask(value);
         }
 
-        public bool ExternalProject
-        {
-            get => JavaObject.getExternalProject();
-        }
+        public bool ExternalProject => JavaObject.getExternalProject();
 
         public java.lang.Number ACWP
         {
@@ -771,15 +678,9 @@ namespace org.mpxj
             set => JavaObject.setEffortDriven(value);
         }
 
-        public java.time.LocalDateTime GetDate(int index)
-        {
-            return JavaObject.getDate(index);
-        }
+        public java.time.LocalDateTime GetDate(int index) => JavaObject.getDate(index);
 
-        public void SetDate(int index, java.time.LocalDateTime value)
-        {
-            JavaObject.setDate(index, value);
-        }
+        public void SetDate(int index, java.time.LocalDateTime value) => JavaObject.setDate(index, value);
 
         public java.lang.Number OvertimeCost
         {
@@ -901,16 +802,10 @@ namespace org.mpxj
             set => JavaObject.setFinishSlack(value);
         }
 
-        public object GetFieldByAlias(string alias)
-        {
-            return _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
-        }
+        public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
 
-        public void SetFieldByAlias(string alias, object value)
-        {
-            // TODO proxy arg
-            JavaObject.setFieldByAlias(alias, value);
-        }
+        // TODO proxy arg
+        public void SetFieldByAlias(string alias, object value) => JavaObject.setFieldByAlias(alias, value);
 
         public IList<LocalDateTimeRange> Splits
         {
@@ -919,15 +814,9 @@ namespace org.mpxj
             //set => JavaObject.setSplits(value);
         }
 
-        public void Remove()
-        {
-            JavaObject.remove();
-        }
+        public void Remove() => JavaObject.remove();
 
-        public ProjectFile ExpandSubproject()
-        {
-            return _proxyManager.ProxyObject(JavaObject.expandSubproject());
-        }
+        public ProjectFile ExpandSubproject() => _proxyManager.ProxyObject(JavaObject.expandSubproject());
 
         public ProjectFile SubprojectObject
         {
@@ -935,145 +824,61 @@ namespace org.mpxj
             set => JavaObject.setSubprojectObject(value.JavaObject);
         }
 
-        public java.lang.Number GetEnterpriseCost(int index)
-        {
-            return JavaObject.getEnterpriseCost(index);
-        }
+        public java.lang.Number GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index);
 
-        public void SetEnterpriseCost(int index, java.lang.Number value)
-        {
-            JavaObject.setEnterpriseCost(index, value);
-        }
+        public void SetEnterpriseCost(int index, java.lang.Number value) => JavaObject.setEnterpriseCost(index, value);
 
-        public java.time.LocalDateTime GetEnterpriseDate(int index)
-        {
-            return JavaObject.getEnterpriseDate(index);
-        }
+        public java.time.LocalDateTime GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index);
 
-        public void SetEnterpriseDate(int index, java.time.LocalDateTime value)
-        {
-            JavaObject.setEnterpriseDate(index, value);
-        }
+        public void SetEnterpriseDate(int index, java.time.LocalDateTime value) => JavaObject.setEnterpriseDate(index, value);
 
-        public net.sf.mpxj.Duration GetEnterpriseDuration(int index)
-        {
-            return JavaObject.getEnterpriseDuration(index);
-        }
+        public net.sf.mpxj.Duration GetEnterpriseDuration(int index) => JavaObject.getEnterpriseDuration(index);
 
-        public void SetEnterpriseDuration(int index, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setEnterpriseDuration(index, value);
-        }
+        public void SetEnterpriseDuration(int index, net.sf.mpxj.Duration value) => JavaObject.setEnterpriseDuration(index, value);
 
-        public bool GetEnterpriseFlag(int index)
-        {
-            return JavaObject.getEnterpriseFlag(index);
-        }
+        public bool GetEnterpriseFlag(int index) => JavaObject.getEnterpriseFlag(index);
 
-        public void SetEnterpriseFlag(int index, bool value)
-        {
-            JavaObject.setEnterpriseFlag(index, value);
-        }
+        public void SetEnterpriseFlag(int index, bool value) => JavaObject.setEnterpriseFlag(index, value);
 
-        public java.lang.Number GetEnterpriseNumber(int index)
-        {
-            return JavaObject.getEnterpriseNumber(index);
-        }
+        public java.lang.Number GetEnterpriseNumber(int index) => JavaObject.getEnterpriseNumber(index);
 
-        public void SetEnterpriseNumber(int index, java.lang.Number value)
-        {
-            JavaObject.setEnterpriseNumber(index, value);
-        }
+        public void SetEnterpriseNumber(int index, java.lang.Number value) => JavaObject.setEnterpriseNumber(index, value);
 
-        public string GetEnterpriseText(int index)
-        {
-            return JavaObject.getEnterpriseText(index);
-        }
+        public string GetEnterpriseText(int index) => JavaObject.getEnterpriseText(index);
 
-        public void SetEnterpriseText(int index, string value)
-        {
-            JavaObject.setEnterpriseText(index, value);
-        }
+        public void SetEnterpriseText(int index, string value) => JavaObject.setEnterpriseText(index, value);
 
-        public void SetBaselineCost(int baselineNumber, java.lang.Number value)
-        {
-            JavaObject.setBaselineCost(baselineNumber, value);
-        }
+        public void SetBaselineCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineCost(baselineNumber, value);
 
-        public void SetBaselineDuration(int baselineNumber, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setBaselineDuration(baselineNumber, value);
-        }
+        public void SetBaselineDuration(int baselineNumber, net.sf.mpxj.Duration value) => JavaObject.setBaselineDuration(baselineNumber, value);
 
-        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value)
-        {
-            JavaObject.setBaselineFinish(baselineNumber, value);
-        }
+        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineFinish(baselineNumber, value);
 
-        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value)
-        {
-            JavaObject.setBaselineStart(baselineNumber, value); ;
-        }
+        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineStart(baselineNumber, value);
 
-        public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setBaselineWork(baselineNumber, value);
-        }
+        public void SetBaselineWork(int baselineNumber, net.sf.mpxj.Duration value) => JavaObject.setBaselineWork(baselineNumber, value);
 
-        public java.lang.Number GetBaselineCost(int baselineNumber)
-        {
-            return JavaObject.getBaselineCost(baselineNumber);
-        }
+        public java.lang.Number GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber);
 
-        public net.sf.mpxj.Duration GetBaselineDuration(int baselineNumber)
-        {
-            return JavaObject.getBaselineDuration(baselineNumber);
-        }
+        public net.sf.mpxj.Duration GetBaselineDuration(int baselineNumber) => JavaObject.getBaselineDuration(baselineNumber);
 
-        public string GetBaselineDurationText(int baselineNumber)
-        {
-            return JavaObject.getBaselineDurationText(baselineNumber);
-        }
+        public string GetBaselineDurationText(int baselineNumber) => JavaObject.getBaselineDurationText(baselineNumber);
 
-        public void SetBaselineDurationText(int baselineNumber, string value)
-        {
-            JavaObject.setBaselineDurationText(baselineNumber, value);
-        }
+        public void SetBaselineDurationText(int baselineNumber, string value) => JavaObject.setBaselineDurationText(baselineNumber, value);
 
-        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber)
-        {
-            return JavaObject.getBaselineFinish(baselineNumber);
-        }
+        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber);
 
-        public string GetBaselineFinishText(int baselineNumber)
-        {
-            return JavaObject.getBaselineFinishText(baselineNumber);
-        }
+        public string GetBaselineFinishText(int baselineNumber) => JavaObject.getBaselineFinishText(baselineNumber);
 
-        public void SetBaselineFinishText(int baselineNumber, string value)
-        {
-            JavaObject.setBaselineFinishText(baselineNumber, value);
-        }
+        public void SetBaselineFinishText(int baselineNumber, string value) => JavaObject.setBaselineFinishText(baselineNumber, value);
 
-        public java.time.LocalDateTime GetBaselineStart(int baselineNumber)
-        {
-            return JavaObject.getBaselineStart(baselineNumber);
-        }
+        public java.time.LocalDateTime GetBaselineStart(int baselineNumber) => JavaObject.getBaselineStart(baselineNumber);
 
-        public string GetBaselineStartText(int baselineNumber)
-        {
-            return JavaObject.getBaselineStartText(baselineNumber);
-        }
+        public string GetBaselineStartText(int baselineNumber) => JavaObject.getBaselineStartText(baselineNumber);
 
-        public void SetBaselineStartText(int baselineNumber, string value)
-        {
-            JavaObject.setBaselineStartText(baselineNumber, value);
-        }
+        public void SetBaselineStartText(int baselineNumber, string value) => JavaObject.setBaselineStartText(baselineNumber, value);
 
-        public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber)
-        {
-            return JavaObject.getBaselineWork(baselineNumber);
-        }
+        public net.sf.mpxj.Duration GetBaselineWork(int baselineNumber) => JavaObject.getBaselineWork(baselineNumber);
 
         public java.time.LocalDateTime CompleteThrough
         {
@@ -1111,15 +916,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineEstimatedDuration(value);
         }
 
-        public void SetBaselineEstimatedDuration(int baselineNumber, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setBaselineEstimatedDuration(baselineNumber, value);
-        }
+        public void SetBaselineEstimatedDuration(int baselineNumber, net.sf.mpxj.Duration value) => JavaObject.setBaselineEstimatedDuration(baselineNumber, value);
 
-        public net.sf.mpxj.Duration GetBaselineEstimatedDuration(int baselineNumber)
-        {
-            return JavaObject.getBaselineEstimatedDuration(baselineNumber);
-        }
+        public net.sf.mpxj.Duration GetBaselineEstimatedDuration(int baselineNumber) => JavaObject.getBaselineEstimatedDuration(baselineNumber);
 
         public java.time.LocalDateTime BaselineEstimatedStart
         {
@@ -1127,15 +926,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineEstimatedStart(value);
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedStart(int baselineNumber)
-        {
-            return JavaObject.getBaselineEstimatedStart(baselineNumber);
-        }
+        public java.time.LocalDateTime GetBaselineEstimatedStart(int baselineNumber) => JavaObject.getBaselineEstimatedStart(baselineNumber);
 
-        public void SetBaselineEstimatedStart(int baselineNumber, java.time.LocalDateTime value)
-        {
-            JavaObject.setBaselineEstimatedStart(baselineNumber, value);
-        }
+        public void SetBaselineEstimatedStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineEstimatedStart(baselineNumber, value);
 
         public java.time.LocalDateTime BaselineEstimatedFinish
         {
@@ -1143,15 +936,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineEstimatedFinish(value);
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedFinish(int baselineNumber)
-        {
-            return JavaObject.getBaselineEstimatedFinish(baselineNumber);
-        }
+        public java.time.LocalDateTime GetBaselineEstimatedFinish(int baselineNumber) => JavaObject.getBaselineEstimatedFinish(baselineNumber);
 
-        public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value)
-        {
-            JavaObject.setBaselineEstimatedFinish(baselineNumber, value);
-        }
+        public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineEstimatedFinish(baselineNumber, value);
 
         public java.lang.Number BaselineFixedCost
         {
@@ -1159,15 +946,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineFixedCost(value);
         }
 
-        public void SetBaselineFixedCost(int baselineNumber, java.lang.Number value)
-        {
-            JavaObject.setBaselineFixedCost(baselineNumber, value);
-        }
+        public void SetBaselineFixedCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineFixedCost(baselineNumber, value);
 
-        public java.lang.Number GetBaselineFixedCost(int baselineNumber)
-        {
-            return JavaObject.getBaselineFixedCost(baselineNumber);
-        }
+        public java.lang.Number GetBaselineFixedCost(int baselineNumber) => JavaObject.getBaselineFixedCost(baselineNumber);
 
         public AccrueType? BaselineFixedCostAccrual
         {
@@ -1175,15 +956,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineFixedCostAccrual(value.ConvertType());
         }
 
-        public void SetBaselineFixedCostAccrual(int baselineNumber, AccrueType value)
-        {
-            JavaObject.setBaselineFixedCostAccrual(baselineNumber, value.ConvertType());
-        }
+        public void SetBaselineFixedCostAccrual(int baselineNumber, AccrueType value) => JavaObject.setBaselineFixedCostAccrual(baselineNumber, value.ConvertType());
 
-        public AccrueType? GetBaselineFixedCostAccrual(int baselineNumber)
-        {
-            return JavaObject.getBaselineFixedCostAccrual(baselineNumber).ConvertType();
-        }
+        public AccrueType? GetBaselineFixedCostAccrual(int baselineNumber) => JavaObject.getBaselineFixedCostAccrual(baselineNumber).ConvertType();
 
         public IList<ExpenseItem> ExpenseItems
         {
@@ -1246,13 +1021,13 @@ namespace org.mpxj
             set => JavaObject.setWorkersPerDay(value);
         }
 
-/* TODO: MPXJ 12.0.1
-        public bool HammockCode
-        {
-            get => JavaObject.getHammockCode();
-            set => JavaObject.setHammockCode(value);
-        }
-*/
+        /* TODO: MPXJ 12.0.1
+                public bool HammockCode
+                {
+                    get => JavaObject.getHammockCode();
+                    set => JavaObject.setHammockCode(value);
+                }
+        */
         public string Mail
         {
             get => JavaObject.getMail();
@@ -1354,13 +1129,13 @@ namespace org.mpxj
             set => JavaObject.setActivityType(value);
         }
 
-/* TODO MPXJ 12.0.1
-        public bool LongestPath
-        {
-            get => JavaObject.getLongestPath();
-            set => JavaObject.setLongestPath(value);
-        }
-*/
+        /* TODO MPXJ 12.0.1
+                public bool LongestPath
+                {
+                    get => JavaObject.getLongestPath();
+                    set => JavaObject.setLongestPath(value);
+                }
+        */
         public java.time.LocalDateTime ExternalEarlyStart
         {
             get => JavaObject.getExternalEarlyStart();
@@ -1433,25 +1208,13 @@ namespace org.mpxj
             set => JavaObject.setBaselineBudgetWork(value);
         }
 
-        public java.lang.Number GetBaselineBudgetCost(int baselineNumber)
-        {
-            return JavaObject.getBaselineBudgetCost(baselineNumber);
-        }
+        public java.lang.Number GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber);
 
-        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value)
-        {
-            JavaObject.setBaselineBudgetCost(baselineNumber, value);
-        }
+        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineBudgetCost(baselineNumber, value);
 
-        public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber)
-        {
-            return JavaObject.getBaselineBudgetWork(baselineNumber);
-        }
+        public net.sf.mpxj.Duration GetBaselineBudgetWork(int baselineNumber) => JavaObject.getBaselineBudgetWork(baselineNumber);
 
-        public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value)
-        {
-            JavaObject.setBaselineBudgetWork(baselineNumber, value);
-        }
+        public void SetBaselineBudgetWork(int baselineNumber, net.sf.mpxj.Duration value) => JavaObject.setBaselineBudgetWork(baselineNumber, value);
 
         public java.lang.Integer SequenceNumber
         {
@@ -1490,26 +1253,14 @@ namespace org.mpxj
             set => JavaObject.setExpectedFinish(value);
         }
 
-        public ProjectCalendar EffectiveCalendar
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
-        }
+        public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
 
         public override string ToString() => JavaObject.toString();
 
-        public bool IsPredecessor(Task task)
-        {
-            return JavaObject.isPredecessor(task.JavaObject);
-        }
+        public bool IsPredecessor(Task task) => JavaObject.isPredecessor(task.JavaObject);
 
-        public bool IsSucessor(Task task)
-        {
-            return JavaObject.isSucessor(task.JavaObject);
-        }
+        public bool IsSucessor(Task task) => JavaObject.isSucessor(task.JavaObject);
 
-        public bool HasChildTasks
-        {
-            get => JavaObject.hasChildTasks();
-        }
+        public bool HasChildTasks => JavaObject.hasChildTasks();
     }
 }
