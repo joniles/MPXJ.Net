@@ -65,7 +65,7 @@ namespace org.mpxj.proxy
 
         internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)
         {
-            return ProxyObject(value, v => new ProjectCalendarHours(v));
+            return ProxyObject(value, v => new ProjectCalendarHours(this, v));
         }
 
         internal ProjectConfig ProxyObject(net.sf.mpxj.ProjectConfig value)
@@ -141,6 +141,11 @@ namespace org.mpxj.proxy
         internal Location ProxyObject(net.sf.mpxj.Location value)
         {
             return ProxyObject(value, v => new Location(this, v));
+        }
+
+        internal LocalTimeRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
+        {
+            return ProxyObject(value, v => new LocalTimeRange(v));
         }
 
         internal LocalDateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)

@@ -5,13 +5,9 @@ namespace org.mpxj
 {
     public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
     {
-        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ProjectCalendarException JavaObject { get => (net.sf.mpxj.ProjectCalendarException)base.JavaObject; }
 
-        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(javaObject)
-        {
-            _proxyManager = proxyManager;
-        }
+        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject) { }
 
         public string Name
         {

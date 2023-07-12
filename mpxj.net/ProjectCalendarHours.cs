@@ -2,11 +2,9 @@
 
 namespace org.mpxj
 {
-    public class ProjectCalendarHours : ShallowProxyList<net.sf.mpxj.LocalTimeRange>
+    public class ProjectCalendarHours : DeepProxyList<net.sf.mpxj.LocalTimeRange, LocalTimeRange>
     {
-        internal ProjectCalendarHours(net.sf.mpxj.ProjectCalendarHours javaObject) : base(javaObject) { }
-
-        public ProjectCalendarHours() : base(new net.sf.mpxj.ProjectCalendarHours()) { }
+        internal ProjectCalendarHours(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarHours javaObject) : base(proxyManager, javaObject) { }
 
         public override string ToString()
         {
