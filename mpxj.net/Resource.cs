@@ -548,6 +548,12 @@ namespace org.mpxj
             return _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
         }
 
+        public void SetFieldByAlias(string alias, object value)
+        {
+            // TODO proxy arg
+            JavaObject.setFieldByAlias(alias, value);
+        }
+
         public java.lang.Integer SubprojectResourceUniqueID
         {
             get => JavaObject.getSubprojectResourceUniqueID();

@@ -903,8 +903,7 @@ namespace org.mpxj
 
         public object GetFieldByAlias(string alias)
         {
-            // TODO: proxy result
-            return JavaObject.getFieldByAlias(alias);
+            return _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
         }
 
         public void SetFieldByAlias(string alias, object value)
