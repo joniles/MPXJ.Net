@@ -33,17 +33,17 @@ namespace org.mpxj
 
         public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getNonSummaryRowCriteria());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
         }
 
         public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getProjectSummaryCriteria());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjectSummaryCriteria());
         }
 
         public IList<GraphicalIndicatorCriteria> SummaryRowCriteria
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(JavaObject.getSummaryRowCriteria());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
         }
 
         public bool ProjectSummaryInheritsFromSummaryRows

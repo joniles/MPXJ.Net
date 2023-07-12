@@ -6,6 +6,6 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.ExpenseCategoryContainer JavaObject { get => (net.sf.mpxj.ExpenseCategoryContainer)base.JavaObject; }
 
-        internal ExpenseCategoryContainer(ProxyManager proxyManager, net.sf.mpxj.ExpenseCategoryContainer javaObject) : base(proxyManager, javaObject) { }
+        internal ExpenseCategoryContainer(ProxyManager proxyManager, net.sf.mpxj.ExpenseCategoryContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
     }
 }

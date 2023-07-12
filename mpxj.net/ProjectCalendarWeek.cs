@@ -17,7 +17,7 @@ namespace org.mpxj
 
         public IList<ProjectCalendarException> ConvertToRecurringExceptions(ProjectCalendar calendar)
         {
-            return _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.convertToRecurringExceptions(calendar.JavaObject));
+            return _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.convertToRecurringExceptions(calendar.JavaObject));
         }
 
         public override string ToString()

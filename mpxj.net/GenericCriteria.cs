@@ -49,7 +49,7 @@ namespace org.mpxj
 
         public IList<GenericCriteria> CriteriaList
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(JavaObject.getCriteriaList());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCriteriaList());
         }
 
         public void AddCriteria(GenericCriteria criteria)

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-	public class ProxyEnumerable<N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
+	public class ProxyEnumerable<M, N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
     {
         public struct Enumerator : IEnumerator<N>, IDisposable, IEnumerator
         {
-            private readonly ProxyEnumerable<N> _list;
+            private readonly ProxyEnumerable<M,N> _list;
 
             private java.util.Iterator _iter;
 
@@ -21,7 +21,7 @@ namespace org.mpxj.proxy
                 get => _current;
             }
 
-            internal Enumerator(ProxyEnumerable<N> list)
+            internal Enumerator(ProxyEnumerable<M, N> list)
             {
                 _list = list;
                 _iter = list.JavaObject.iterator();
@@ -39,7 +39,7 @@ namespace org.mpxj.proxy
                     return false;
                 }
 
-                _current = (N)_list._proxyManager.GenericProxyObject(_iter.next());
+                _current = (N)_list._fromJava((M)_iter.next());
                 return true;
             }
 
@@ -50,12 +50,14 @@ namespace org.mpxj.proxy
             }
         }
 
-        internal readonly ProxyManager _proxyManager;
+        internal readonly Func<M, N> _fromJava;
+        internal readonly Func<N, M> _toJava;
         public java.lang.Iterable JavaObject { get; }
 
-        internal ProxyEnumerable(ProxyManager proxyManager, java.lang.Iterable javaObject)
+        internal ProxyEnumerable(Func<M, N> fromJava, Func<N, M> toJava, java.lang.Iterable javaObject)
         {
-            _proxyManager = proxyManager;
+            _fromJava = fromJava;
+            _toJava = toJava;
             JavaObject = javaObject;
         }
 

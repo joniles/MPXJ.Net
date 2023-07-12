@@ -39,7 +39,7 @@ namespace org.mpxj
 
         public IList<Column> Columns
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(JavaObject.getColumns());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
         }
 
         public new string ToString()

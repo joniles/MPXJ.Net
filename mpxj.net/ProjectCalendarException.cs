@@ -5,9 +5,13 @@ namespace org.mpxj
 {
     public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
     {
+        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ProjectCalendarException JavaObject { get => (net.sf.mpxj.ProjectCalendarException)base.JavaObject; }
 
-        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject) { }
+        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject)
+        {
+            _proxyManager = proxyManager;
+        }
 
         public string Name
         {
@@ -37,7 +41,7 @@ namespace org.mpxj
 
         public IList<ProjectCalendarException> ExpandedExceptions
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.getExpandedExceptions());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedExceptions());
         }
 
         public bool Contains(java.time.LocalDate date)

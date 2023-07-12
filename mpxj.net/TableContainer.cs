@@ -6,16 +6,16 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.TableContainer JavaObject { get => (net.sf.mpxj.TableContainer)base.JavaObject; }
 
-        internal TableContainer(ProxyManager proxyManager, net.sf.mpxj.TableContainer javaObject) : base(proxyManager, javaObject) { }
+        internal TableContainer(ProxyManager proxyManager, net.sf.mpxj.TableContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
-        public net.sf.mpxj.Table GetTaskTableByName(string name)
+        public Table GetTaskTableByName(string name)
         {
-            return JavaObject.getTaskTableByName(name);
+            return _fromJava(JavaObject.getTaskTableByName(name));
         }
 
-        public net.sf.mpxj.Table GetResourceTableByName(string name)
+        public Table GetResourceTableByName(string name)
         {
-            return JavaObject.getResourceTableByName(name);
+            return _fromJava(JavaObject.getResourceTableByName(name));
         }
     }
 }

@@ -6,11 +6,11 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.GroupContainer JavaObject { get => (net.sf.mpxj.GroupContainer)base.JavaObject; }
 
-        internal GroupContainer(ProxyManager proxyManager, net.sf.mpxj.GroupContainer javaObject) : base(proxyManager, javaObject) { }
+        internal GroupContainer(ProxyManager proxyManager, net.sf.mpxj.GroupContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
         public Group GetByName(string name)
         {
-            return _proxyManager.ProxyObject(JavaObject.getByName(name));
+            return _fromJava(JavaObject.getByName(name));
         }
     }
 }

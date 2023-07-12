@@ -6,11 +6,11 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.CostRateTable JavaObject { get => (net.sf.mpxj.CostRateTable)base.JavaObject; }
 
-        internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager, javaObject) { }
+        internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
         public CostRateTableEntry GetEntryByDate(java.time.LocalDateTime date)
         {
-            return _proxyManager.ProxyObject(JavaObject.getEntryByDate(date));
+            return _fromJava(JavaObject.getEntryByDate(date));
         }
 
         public int GetIndexByDate(java.time.LocalDateTime date)

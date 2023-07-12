@@ -4,25 +4,29 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class CustomFieldContainer : ProxyEnumerable<CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
+    public class CustomFieldContainer : ProxyEnumerable<net.sf.mpxj.CustomField, CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {
+        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.CustomFieldContainer JavaObject { get => (net.sf.mpxj.CustomFieldContainer)base.JavaObject; }
 
-        internal CustomFieldContainer(ProxyManager proxyManager, net.sf.mpxj.CustomFieldContainer javaObject) : base(proxyManager, javaObject) { }
+        internal CustomFieldContainer(ProxyManager proxyManager, net.sf.mpxj.CustomFieldContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
+        {
+            _proxyManager = proxyManager;
+        }
 
         public CustomField Get(net.sf.mpxj.FieldType field)
         {
-            return _proxyManager.ProxyObject(JavaObject.get(field));
+            return _fromJava(JavaObject.get(field));
         }
 
         public CustomField GetOrCreate(net.sf.mpxj.FieldType field)
         {
-            return _proxyManager.ProxyObject(JavaObject.getOrCreate(field));
+            return _fromJava(JavaObject.getOrCreate(field));
         }
 
         public CustomField Add(net.sf.mpxj.FieldType field)
         {
-            return _proxyManager.ProxyObject(JavaObject.add(field));
+            return _fromJava(JavaObject.add(field));
         }
 
         public net.sf.mpxj.FieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias)
@@ -32,7 +36,7 @@ namespace org.mpxj
 
         public IList<CustomField> GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
         {
-            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
+            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
         }
 
         public int Size()

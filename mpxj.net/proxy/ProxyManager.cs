@@ -308,6 +308,17 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new TimephasedCost(v));
         }
 
+        internal IView ProxyObject(net.sf.mpxj.View value)
+        {
+            // TODO: implement view hierarchy
+            return null;
+        }
+
+        internal UserDefinedField ProxyObject(net.sf.mpxj.UserDefinedField value)
+        {
+            return ProxyObject(value, v => new UserDefinedField(v));
+        }
+
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));
@@ -392,19 +403,19 @@ namespace org.mpxj.proxy
             return o;
         }
 
-        internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
+        internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new ProxyList<M, N>(this, l));
+            return ProxyObject(value, l => new ProxyList<M, N>(fromJava, toJava, l));
         }
 
-        internal ICollection<N> ProxyCollection<M, N>(java.util.Collection value) where N : IJavaObjectProxy<M>
+        internal ICollection<N> ProxyCollection<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new ProxyCollection<M, N>(this, l));
+            return ProxyObject(value, l => new ProxyCollection<M, N>(fromJava, toJava, l));
         }
 
-        internal ISet<N> ProxySet<M, N>(java.util.Set value) where N : IJavaObjectProxy<M>
+        internal ISet<N> ProxySet<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new ProxySet<M, N>(this, l));
+            return ProxyObject(value, l => new ProxySet<M, N>(fromJava, toJava, l));
         }
     }
 }

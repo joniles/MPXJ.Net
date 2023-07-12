@@ -43,7 +43,7 @@ namespace org.mpxj
 
         public IList<CustomFieldValueMask> Masks
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(JavaObject.getMasks());
+            get => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getMasks());
         }
 
         public new string ToString()

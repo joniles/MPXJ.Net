@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-    public class ProxyCollection<M, N> : ProxyEnumerable<N>, ICollection<N>, IJavaObjectProxy<java.util.Collection> where N : IJavaObjectProxy<M>
+    public class ProxyCollection<M, N> : ProxyEnumerable<M, N>, ICollection<N>, IJavaObjectProxy<java.util.Collection>
     {
         public new java.util.Collection JavaObject { get => (java.util.Collection)base.JavaObject; }
 
@@ -10,11 +11,11 @@ namespace org.mpxj.proxy
 
         public bool IsReadOnly => false;
 
-        internal ProxyCollection(ProxyManager proxyManager, java.util.Collection javaObject) : base(proxyManager, javaObject) { }
+        internal ProxyCollection(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection javaObject) : base(fromJava, toJava, javaObject) { }
 
         public void Add(N item)
         {
-            JavaObject.add(item.JavaObject);
+            JavaObject.add(_toJava(item));
         }
 
         public void Clear()
@@ -24,7 +25,7 @@ namespace org.mpxj.proxy
 
         public bool Contains(N item)
         {
-            return JavaObject.contains(item.JavaObject);
+            return JavaObject.contains(_toJava(item));
         }
 
         public void CopyTo(N[] array, int arrayIndex)
@@ -37,7 +38,7 @@ namespace org.mpxj.proxy
 
         public bool Remove(N item)
         {
-            return JavaObject.remove(item.JavaObject);
+            return JavaObject.remove(_toJava(item));
         }
     }
 }

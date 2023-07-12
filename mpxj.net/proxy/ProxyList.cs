@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
@@ -6,7 +7,7 @@ namespace org.mpxj.proxy
     {
         public new java.util.List JavaObject { get => (java.util.List)base.JavaObject; }
 
-        internal ProxyList(ProxyManager proxyManager, java.util.List javaObject) : base(proxyManager, javaObject) { }
+        internal ProxyList(Func<M, N> fromJava, Func<N, M> toJava, java.util.List javaObject) : base(fromJava, toJava, javaObject) { }
 
         public N this[int index]
         {

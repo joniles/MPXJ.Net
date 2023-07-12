@@ -5,13 +5,17 @@ namespace org.mpxj
 {
     public class TaskContainer : ProjectEntityWithIDContainer<net.sf.mpxj.Task, Task>
     {
+        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.TaskContainer JavaObject { get => (net.sf.mpxj.TaskContainer)base.JavaObject; }
 
-        internal TaskContainer(ProxyManager proxyManager, net.sf.mpxj.TaskContainer javaObject) : base(proxyManager, javaObject) { }
+        internal TaskContainer(ProxyManager proxyManager, net.sf.mpxj.TaskContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
+        {
+            _proxyManager = proxyManager;
+        }
 
         public Task Add()
         {
-            return _proxyManager.ProxyObject(JavaObject.add());
+            return _fromJava(JavaObject.add());
         }
 
         public void UpdateStructure()
@@ -27,7 +31,7 @@ namespace org.mpxj
 
         public IList<CustomField> CustomFields
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(JavaObject.getCustomFields());
+            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFields());
         }
 
         public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias)

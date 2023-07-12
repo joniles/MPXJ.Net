@@ -6,11 +6,11 @@ namespace org.mpxj
     {
         public new net.sf.mpxj.AvailabilityTable JavaObject { get => (net.sf.mpxj.AvailabilityTable)base.JavaObject; }
 
-        internal AvailabilityTable(ProxyManager proxyManager, net.sf.mpxj.AvailabilityTable javaObject) : base(proxyManager, javaObject) { }
+        internal AvailabilityTable(ProxyManager proxyManager, net.sf.mpxj.AvailabilityTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
         public Availability GetEntryByDate(java.time.LocalDateTime date)
         {
-            return _proxyManager.ProxyObject(JavaObject.getEntryByDate(date));
+            return _fromJava(JavaObject.getEntryByDate(date));
         }
     }
 }

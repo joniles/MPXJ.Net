@@ -8,7 +8,7 @@ namespace org.mpxj.proxy
     {
         public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
 
-        internal ProxySet(ProxyManager proxyManager, java.util.Set javaObject) : base(proxyManager, javaObject) { }
+        internal ProxySet(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set javaObject) : base(fromJava, toJava, javaObject) { }
 
         bool ISet<N>.Add(N item)
         {

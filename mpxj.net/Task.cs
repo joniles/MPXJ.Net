@@ -22,7 +22,7 @@ namespace org.mpxj
 
         public IList<ActivityCodeValue> ActivityCodes
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(JavaObject.getActivityCodes());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getActivityCodes());
         }
 
         public void AddActivityCode(ActivityCodeValue value)
@@ -47,7 +47,7 @@ namespace org.mpxj
 
         public IList<ResourceAssignment> ResourceAssignments
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(JavaObject.getResourceAssignments());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceAssignments());
         }
 
         public Relation AddPredecessor(Task targetTask, net.sf.mpxj.RelationType type, net.sf.mpxj.Duration lag)
@@ -449,12 +449,12 @@ namespace org.mpxj
 
         public IList<Relation> Predecessors
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(JavaObject.getPredecessors());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPredecessors());
         }
 
         public IList<Relation> Successors
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(JavaObject.getSuccessors());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSuccessors());
         }
 
         public net.sf.mpxj.Priority Priority
@@ -637,7 +637,7 @@ namespace org.mpxj
 
         public IList<Task> ChildTasks
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(JavaObject.getChildTasks());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
         }
 
         public bool Estimated
@@ -915,7 +915,7 @@ namespace org.mpxj
 
         public IList<LocalDateTimeRange> Splits
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(JavaObject.getSplits());
+            get => _proxyManager.ProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSplits());
             // TODO: list assignment
             //set => JavaObject.setSplits(value);
         }
@@ -1188,7 +1188,7 @@ namespace org.mpxj
 
         public IList<ExpenseItem> ExpenseItems
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(JavaObject.getExpenseItems());
+            get => _proxyManager.ProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpenseItems());
             // TODO: list conversion - move away from list-based setters?
             //set => JavaObject.setExpenseItems(value);
         }
@@ -1462,7 +1462,7 @@ namespace org.mpxj
 
         public IList<Step> Steps
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Step, Step>(JavaObject.getSteps());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Step, Step>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSteps());
             // TODO: list conversion - move away from list-based setters?
             //set => JavaObject.setSteps(value);
         }

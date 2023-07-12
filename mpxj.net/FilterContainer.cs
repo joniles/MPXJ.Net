@@ -26,12 +26,12 @@ namespace org.mpxj
 
         public IList<Filter> ResourceFilters
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(JavaObject.getResourceFilters());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceFilters());
         }
 
         public IList<Filter> TaskFilters
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(JavaObject.getTaskFilters());
+            get => _proxyManager.ProxyList<net.sf.mpxj.Filter, Filter>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskFilters());
         }
 
         public Filter GetFilterByName(string name)

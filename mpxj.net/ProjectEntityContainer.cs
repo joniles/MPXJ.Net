@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -6,11 +7,11 @@ namespace org.mpxj
 	{
         public new net.sf.mpxj.ProjectEntityContainer JavaObject { get => (net.sf.mpxj.ProjectEntityContainer)base.JavaObject; }
 
-        internal ProjectEntityContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectEntityContainer javaObject) : base(proxyManager, javaObject) { }
+        internal ProjectEntityContainer(Func<M, N> fromJava, Func<N, M> toJava, net.sf.mpxj.ProjectEntityContainer javaObject) : base(fromJava, toJava, javaObject) { }
 
         public N GetByUniqueID(java.lang.Integer id)
         {
-            return (N)_proxyManager.GenericProxyObject(JavaObject.getByUniqueID(id));    
+            return _fromJava((M)JavaObject.getByUniqueID(id));    
         }
     }
 }

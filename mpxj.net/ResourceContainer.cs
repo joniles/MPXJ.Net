@@ -5,9 +5,13 @@ namespace org.mpxj
 {
     public class ResourceContainer : ProjectEntityWithIDContainer<net.sf.mpxj.Resource, Resource>
 	{
+        internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ResourceContainer JavaObject { get => (net.sf.mpxj.ResourceContainer)base.JavaObject; }
 
-        internal ResourceContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceContainer javaObject) : base(proxyManager, javaObject) { }
+        internal ResourceContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
+        {
+            _proxyManager = proxyManager;
+        }
 
         public Resource Add()
         {
@@ -27,7 +31,7 @@ namespace org.mpxj
 
         public IList<CustomField> CustomFields
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(JavaObject.getCustomFields());
+            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFields());
         }
 
         public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias)

@@ -55,7 +55,7 @@ namespace org.mpxj
 
         public IList<GenericCriteriaPrompt> Prompts
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(JavaObject.getPrompts());
+            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
             // TODO: handle list assignment
             //set => JavaObject.set
         }
