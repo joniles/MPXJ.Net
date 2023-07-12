@@ -6,7 +6,7 @@
 
         string Name { get; }
 
-        net.sf.mpxj.DataType DataType { get; }
+        DataType? DataType { get; }
 
         IFieldType UnitsType { get; }
     }

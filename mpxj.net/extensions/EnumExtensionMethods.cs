@@ -145,6 +145,22 @@
         {
             return value == null ? (ActivityCodeScope?)null : (ActivityCodeScope)value.ordinal();
         }
+
+        // DataType
+        public static net.sf.mpxj.DataType ConvertType(this DataType value)
+        {
+            return net.sf.mpxj.DataType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.DataType ConvertType(this DataType? value)
+        {
+            return value == null ? null : net.sf.mpxj.DataType.values()[(int)value];
+        }
+
+        public static DataType? ConvertType(this net.sf.mpxj.DataType value)
+        {
+            return value == null ? (DataType?)null : (DataType)value.ordinal();
+        }
     }
 }
 
