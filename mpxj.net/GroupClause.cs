@@ -5,10 +5,12 @@ namespace org.mpxj
     // TODO: Look at recreating this class as a hierarchy to allow the differt types to be expressed correctly
     public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.GroupClause JavaObject { get; }
 
-        internal GroupClause(net.sf.mpxj.GroupClause javaObject)
+        internal GroupClause(ProxyManager proxyManager, net.sf.mpxj.GroupClause javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -35,10 +37,10 @@ namespace org.mpxj
             set => JavaObject.setField(value);
         }
 
-        public net.sf.mpxj.mpp.FontStyle Font
+        public FontStyle Font
         {
-            get => JavaObject.getFont();
-            set => JavaObject.setFont(value);
+            get => _proxyManager.ProxyObject(JavaObject.getFont());
+            set => JavaObject.setFont(value.JavaObject);
         }
 
         public object GroupInterval

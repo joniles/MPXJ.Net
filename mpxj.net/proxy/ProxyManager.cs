@@ -210,7 +210,7 @@ namespace org.mpxj.proxy
 
         internal GroupClause ProxyObject(net.sf.mpxj.GroupClause value)
         {
-            return ProxyObject(value, v => new GroupClause(v));
+            return ProxyObject(value, v => new GroupClause(this, v));
         }
 
         internal DataLink ProxyObject(net.sf.mpxj.DataLink value)
@@ -317,6 +317,11 @@ namespace org.mpxj.proxy
         internal UserDefinedField ProxyObject(net.sf.mpxj.UserDefinedField value)
         {
             return ProxyObject(value, v => new UserDefinedField(v));
+        }
+
+        internal FontStyle ProxyObject(net.sf.mpxj.mpp.FontStyle value)
+        {
+            return ProxyObject(value, v => new FontStyle(v));
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
