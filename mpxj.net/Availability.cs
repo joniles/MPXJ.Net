@@ -13,15 +13,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public LocalDateTimeRange Range
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getRange());
-        }
+        public LocalDateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
 
-        public java.lang.Number Units
-        {
-            get => JavaObject.getUnits();
-        }
+        public java.lang.Number Units => JavaObject.getUnits();
     }
 }
 

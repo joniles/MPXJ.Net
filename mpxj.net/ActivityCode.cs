@@ -14,60 +14,30 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.lang.Integer UniqueID
-        {
-            get => JavaObject.getUniqueID();
-        }
+        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
 
-        public ActivityCodeScope? Scope
-        {
-            get => JavaObject.getScope().ConvertType();
-        }
+        public ActivityCodeScope? Scope => JavaObject.getScope().ConvertType();
 
-        public java.lang.Integer ScopeProjectUniqueID
-        {
-            get => JavaObject.getScopeProjectUniqueID();
-        }
+        public java.lang.Integer ScopeProjectUniqueID => JavaObject.getScopeProjectUniqueID();
 
-        public java.lang.Integer ScopeEpsUniqueID
-        {
-            get => JavaObject.getScopeEpsUniqueID();
-        }
+        public java.lang.Integer ScopeEpsUniqueID => JavaObject.getScopeEpsUniqueID();
 
-        public java.lang.Integer SequenceNumber
-        {
-            get => JavaObject.getSequenceNumber();
-        }
+        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public bool Secure
-        {
-            get => JavaObject.getSecure();
-        }
+        public bool Secure => JavaObject.getSecure();
 
-        public java.lang.Integer MaxLength
-        {
-            get => JavaObject.getMaxLength();
-        }
+        public java.lang.Integer MaxLength => JavaObject.getMaxLength();
 
         public ActivityCodeValue AddValue(java.lang.Integer uniqueID, java.lang.Integer sequenceNumber, string name, string description, java.awt.Color color)
         {
             return _proxyManager.ProxyObject(JavaObject.addValue(uniqueID, sequenceNumber, name, description, color));
         }
 
-        public IList<ActivityCodeValue> Values
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
-        }
+        public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 
-        public IList<ActivityCodeValue> ChildValues
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
-        }
+        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
     }
 }
 

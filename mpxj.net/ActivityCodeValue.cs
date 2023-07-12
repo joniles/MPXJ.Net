@@ -14,35 +14,17 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public ActivityCode Type
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getType());
-        }
+        public ActivityCode Type => _proxyManager.ProxyObject(JavaObject.getType());
 
-        public java.lang.Integer UniqueID
-        {
-            get => JavaObject.getUniqueID();
-        }
+        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
 
-        public java.lang.Integer SequenceNumber
-        {
-            get => JavaObject.getSequenceNumber();
-        }
+        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public string Description
-        {
-            get => JavaObject.getDescription();
-        }
+        public string Description => JavaObject.getDescription();
 
-        public java.awt.Color Color
-        {
-            get => JavaObject.getColor();
-        }
+        public java.awt.Color Color => JavaObject.getColor();
 
         public ActivityCodeValue Parent
         {
@@ -50,15 +32,9 @@ namespace org.mpxj
             set => JavaObject.setParent(value.JavaObject);
         }
 
-        public java.lang.Integer ParentUniqueID
-        {
-            get => JavaObject.getParentUniqueID();
-        }
+        public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
 
-        public IList<ActivityCodeValue> ChildValues
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
-        }
+        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public new string ToString()
         {

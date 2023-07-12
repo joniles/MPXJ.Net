@@ -14,20 +14,11 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.FieldType FieldType
-        {
-            get => JavaObject.getFieldType();
-        }
+        public net.sf.mpxj.FieldType FieldType => JavaObject.getFieldType();
 
-        public net.sf.mpxj.CustomFieldLookupTable LookupTable
-        {
-            get => JavaObject.getLookupTable();
-        }
+        public net.sf.mpxj.CustomFieldLookupTable LookupTable => JavaObject.getLookupTable();
 
-        public GraphicalIndicator GraphicalIndicator
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getGraphicalIndicator());
-        }
+        public GraphicalIndicator GraphicalIndicator => _proxyManager.ProxyObject(JavaObject.getGraphicalIndicator());
 
         public string Alias
         {
@@ -41,10 +32,7 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public IList<CustomFieldValueMask> Masks
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getMasks());
-        }
+        public IList<CustomFieldValueMask> Masks => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getMasks());
 
         public new string ToString()
         {

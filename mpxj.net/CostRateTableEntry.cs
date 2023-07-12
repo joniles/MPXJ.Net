@@ -11,35 +11,20 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.time.LocalDateTime StartDate
-        {
-            get => JavaObject.getStartDate();
-        }
+        public java.time.LocalDateTime StartDate => JavaObject.getStartDate();
 
-        public java.time.LocalDateTime EndDate
-        {
-            get => JavaObject.getEndDate();
-        }
+        public java.time.LocalDateTime EndDate => JavaObject.getEndDate();
 
         public net.sf.mpxj.Rate GetRate(int index)
         {
             return JavaObject.getRate(index);
         }
 
-        public net.sf.mpxj.Rate StandardRate
-        {
-            get => JavaObject.getStandardRate();
-        }
+        public net.sf.mpxj.Rate StandardRate => JavaObject.getStandardRate();
 
-        public net.sf.mpxj.Rate OvertimeRate
-        {
-            get => JavaObject.getOvertimeRate();
-        }
+        public net.sf.mpxj.Rate OvertimeRate => JavaObject.getOvertimeRate();
 
-        public java.lang.Number CostPerUse
-        {
-            get => JavaObject.getCostPerUse();
-        }
+        public java.lang.Number CostPerUse => JavaObject.getCostPerUse();
     }
 }
 
