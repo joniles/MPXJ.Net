@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net462;netcoreapp3.1</TargetFrameworks>
     <RootNamespace>org.mpxj</RootNamespace>
   </PropertyGroup>
 
@@ -15,5 +15,8 @@
   <ItemGroup>
     <Folder Include="proxy\" />
     <Folder Include="extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Portable.System.DateTimeOnly" Version="7.0.1" />
   </ItemGroup>
 </Project>
