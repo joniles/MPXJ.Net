@@ -44,7 +44,12 @@ namespace org.mpxj
             get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.getExpandedExceptions());
         }
 
-        public bool Contains(java.util.Date date)
+        public bool Contains(java.time.LocalDate date)
+        {
+            return JavaObject.contains(date);
+        }
+
+        public bool Contains(java.time.LocalDateTime date)
         {
             return JavaObject.contains(date);
         }

@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -72,9 +73,9 @@ namespace org.mpxj
             JavaObject.clearWorkWeeks();
         }
 
-        public java.util.List WorkWeeks
+        public IList<ProjectCalendarWeek> WorkWeeks
         {
-            get => JavaObject.getWorkWeeks();
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(JavaObject.getWorkWeeks());
         }
 
         public ProjectCalendarException AddCalendarException(java.time.LocalDate date)
@@ -102,14 +103,14 @@ namespace org.mpxj
             JavaObject.clearCalendarExceptions();
         }
 
-        public java.util.List CalendarExceptions
+        public IList<ProjectCalendarException> CalendarExceptions
         {
-            get => JavaObject.getCalendarExceptions();
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.getCalendarExceptions());
         }
 
-        public java.util.List ExpandedCalendarExceptions
+        public IList<ProjectCalendarException> ExpandedCalendarExceptions
         {
-            get => JavaObject.getExpandedCalendarExceptions();
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(JavaObject.getExpandedCalendarExceptions());
         }
 
         public ProjectCalendar Parent
@@ -189,14 +190,14 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public java.util.List Tasks
+        public IList<Task> Tasks
         {
-            get => JavaObject.getTasks();
+            get => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(JavaObject.getTasks());
         }
 
-        public java.util.List Resources
+        public IList<Resource> Resources
         {
-            get => JavaObject.getResources();
+            get => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(JavaObject.getResources());
         }
 
         public int ResourceCount
@@ -234,9 +235,9 @@ namespace org.mpxj
             return JavaObject.getWork(startDate, endDate, format.ConvertType());
         }
 
-        public java.util.List DerivedCalendars
+        public IList<ProjectCalendar> DerivedCalendars
         {
-            get => JavaObject.getDerivedCalendars();
+            get => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(JavaObject.getDerivedCalendars());
         }
 
         public override string ToString()
