@@ -19,10 +19,7 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public Task Task
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTask());
-        }
+        public Task Task => _proxyManager.ProxyObject(JavaObject.getTask());
 
         public java.lang.Integer UniqueID
         {
@@ -66,10 +63,7 @@ namespace org.mpxj
             set => JavaObject.setDescriptionObject(value.JavaObject);
         }
 
-        public bool Complete
-        {
-            get => JavaObject.getComplete();
-        }
+        public bool Complete => JavaObject.getComplete();
     }
 }
 

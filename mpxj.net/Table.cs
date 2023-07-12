@@ -32,15 +32,9 @@ namespace org.mpxj
             set => JavaObject.setResourceFlag(value);
         }
 
-        public void AddColumn(Column column)
-        {
-            JavaObject.addColumn(column.JavaObject);
-        }
+        public void AddColumn(Column column) => JavaObject.addColumn(column.JavaObject);
 
-        public IList<Column> Columns
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
-        }
+        public IList<Column> Columns => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
 
         public override string ToString() => JavaObject.toString();
     }

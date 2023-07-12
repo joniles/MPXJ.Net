@@ -6,7 +6,7 @@ namespace org.mpxj
     public class ResourceAssignmentContainer : ProjectEntityContainer<net.sf.mpxj.ResourceAssignment, ResourceAssignment>
     {
         internal readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.ResourceAssignmentContainer JavaObject { get => (net.sf.mpxj.ResourceAssignmentContainer)base.JavaObject; }
+        public new net.sf.mpxj.ResourceAssignmentContainer JavaObject => (net.sf.mpxj.ResourceAssignmentContainer)base.JavaObject;
 
         internal ResourceAssignmentContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
         {
@@ -14,19 +14,10 @@ namespace org.mpxj
         }
 
         // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields
-        //{
-        //    get => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
-        //}
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
 
-        public IList<CustomField> CustomFields
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFields());
-        }
+        public IList<CustomField> CustomFields => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFields());
 
-        public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias)
-        {
-            return JavaObject.getFieldTypeByAlias(alias);
-        }
+        public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias) => JavaObject.getFieldTypeByAlias(alias);
     }
 }
