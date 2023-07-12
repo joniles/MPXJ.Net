@@ -6,6 +6,45 @@ namespace org.mpxj.proxy
 {
     public class ProxyDictionary<MK, MV, NK, NV> : IDictionary<NK, NV>, IJavaObjectProxy<java.util.Map>
     {
+        public struct Enumerator : IEnumerator<KeyValuePair<NK, NV>>
+        {
+            private readonly ProxyDictionary<MK, MV, NK, NV> _dictionary;
+            private java.util.Iterator _iterator;
+            private KeyValuePair<NK, NV> _current;
+
+            public KeyValuePair<NK, NV> Current => _current;
+            object IEnumerator.Current => _current;
+
+            internal Enumerator(ProxyDictionary<MK, MV, NK, NV> dictionary)
+            {
+                _dictionary = dictionary;
+                _iterator = _dictionary.JavaObject.entrySet().iterator();
+                _current = default;
+            }
+
+            public void Dispose()
+            {
+                
+            }
+
+            public bool MoveNext()
+            {
+                if (!_iterator.hasNext())
+                {
+                    return false;
+                }
+
+                var entry = (java.util.Map.Entry)_iterator.next();
+                _current = new KeyValuePair<NK, NV>(_dictionary._keyFromJava((MK)entry.getKey()), _dictionary._valueFromJava((MV)entry.getValue()));
+                return true;
+            }
+
+            public void Reset()
+            {
+                _iterator = _dictionary.JavaObject.entrySet().iterator();
+            }
+        }
+
         internal readonly ProxyManager _proxyManager;
         internal readonly Func<MK, NK> _keyFromJava;
         internal readonly Func<NK, MK> _keyToJava;
@@ -112,12 +151,12 @@ namespace org.mpxj.proxy
 
         public IEnumerator<KeyValuePair<NK, NV>> GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return new Enumerator(this);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return new Enumerator(this);
         }
     }
 }
