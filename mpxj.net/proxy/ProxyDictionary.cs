@@ -100,7 +100,14 @@ namespace org.mpxj.proxy
 
         public bool TryGetValue(NK key, out NV value)
         {
-            throw new System.NotImplementedException();
+            var javaKey = _keyToJava(key);
+            if (JavaObject.containsKey(javaKey))
+            {
+                value = _valueFromJava((MV)JavaObject.get(javaKey));
+                return true;
+            }
+            value = default;
+            return false;
         }
 
         public IEnumerator<KeyValuePair<NK, NV>> GetEnumerator()
