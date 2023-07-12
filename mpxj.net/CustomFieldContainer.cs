@@ -4,7 +4,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class CustomFieldContainer : DeepProxyEnumerable<CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
+    public class CustomFieldContainer : ProxyEnumerable<CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {
         public new net.sf.mpxj.CustomFieldContainer JavaObject { get => (net.sf.mpxj.CustomFieldContainer)base.JavaObject; }
 

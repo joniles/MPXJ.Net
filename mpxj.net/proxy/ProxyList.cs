@@ -2,11 +2,11 @@
 
 namespace org.mpxj.proxy
 {
-	public class DeepProxyList<M, N> : DeepProxyCollection<M, N>, IList<N>, IJavaObjectProxy<java.util.List> where N : IJavaObjectProxy<M>
+	public class ProxyList<M, N> : ProxyCollection<M, N>, IList<N>, IJavaObjectProxy<java.util.List> where N : IJavaObjectProxy<M>
     {
         public new java.util.List JavaObject { get => (java.util.List)base.JavaObject; }
 
-        internal DeepProxyList(ProxyManager proxyManager, java.util.List javaObject) : base(proxyManager, javaObject) { }
+        internal ProxyList(ProxyManager proxyManager, java.util.List javaObject) : base(proxyManager, javaObject) { }
 
         public N this[int index]
         {

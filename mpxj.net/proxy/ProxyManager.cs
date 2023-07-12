@@ -394,17 +394,17 @@ namespace org.mpxj.proxy
 
         internal IList<N> ProxyList<M, N>(java.util.List value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new DeepProxyList<M, N>(this, l));
+            return ProxyObject(value, l => new ProxyList<M, N>(this, l));
         }
 
         internal ICollection<N> ProxyCollection<M, N>(java.util.Collection value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new DeepProxyCollection<M, N>(this, l));
+            return ProxyObject(value, l => new ProxyCollection<M, N>(this, l));
         }
 
         internal ISet<N> ProxySet<M, N>(java.util.Set value) where N : IJavaObjectProxy<M>
         {
-            return ProxyObject(value, l => new DeepProxySet<M, N>(this, l));
+            return ProxyObject(value, l => new ProxySet<M, N>(this, l));
         }
     }
 }

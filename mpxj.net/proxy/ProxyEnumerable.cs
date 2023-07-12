@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-	public class DeepProxyEnumerable<N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
+	public class ProxyEnumerable<N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
     {
         public struct Enumerator : IEnumerator<N>, IDisposable, IEnumerator
         {
-            private readonly DeepProxyEnumerable<N> _list;
+            private readonly ProxyEnumerable<N> _list;
 
             private java.util.Iterator _iter;
 
@@ -21,7 +21,7 @@ namespace org.mpxj.proxy
                 get => _current;
             }
 
-            internal Enumerator(DeepProxyEnumerable<N> list)
+            internal Enumerator(ProxyEnumerable<N> list)
             {
                 _list = list;
                 _iter = list.JavaObject.iterator();
@@ -53,7 +53,7 @@ namespace org.mpxj.proxy
         internal readonly ProxyManager _proxyManager;
         public java.lang.Iterable JavaObject { get; }
 
-        internal DeepProxyEnumerable(ProxyManager proxyManager, java.lang.Iterable javaObject)
+        internal ProxyEnumerable(ProxyManager proxyManager, java.lang.Iterable javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;

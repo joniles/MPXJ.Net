@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class DataLinkContainer : DeepProxyEnumerable<DataLink>, IJavaObjectProxy<net.sf.mpxj.DataLinkContainer>
+    public class DataLinkContainer : ProxyEnumerable<DataLink>, IJavaObjectProxy<net.sf.mpxj.DataLinkContainer>
     {
         public new net.sf.mpxj.DataLinkContainer JavaObject { get => (net.sf.mpxj.DataLinkContainer)base.JavaObject; }
 

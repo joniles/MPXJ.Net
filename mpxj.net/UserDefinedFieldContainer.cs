@@ -3,7 +3,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class UserDefinedFieldContainer : DeepProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>, IJavaObjectProxy<net.sf.mpxj.UserDefinedFieldContainer>
+    public class UserDefinedFieldContainer : ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>, IJavaObjectProxy<net.sf.mpxj.UserDefinedFieldContainer>
     {
         public new net.sf.mpxj.UserDefinedFieldContainer JavaObject { get => (net.sf.mpxj.UserDefinedFieldContainer)base.JavaObject; }
 

@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class CostRateTable : DeepProxyList<net.sf.mpxj.CostRateTableEntry, CostRateTableEntry>
+    public class CostRateTable : ProxyList<net.sf.mpxj.CostRateTableEntry, CostRateTableEntry>
     {
         public new net.sf.mpxj.CostRateTable JavaObject { get => (net.sf.mpxj.CostRateTable)base.JavaObject; }
 

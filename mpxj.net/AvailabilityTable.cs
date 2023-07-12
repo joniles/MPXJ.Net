@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class AvailabilityTable : DeepProxyList<net.sf.mpxj.Availability, Availability>
+    public class AvailabilityTable : ProxyList<net.sf.mpxj.Availability, Availability>
     {
         public new net.sf.mpxj.AvailabilityTable JavaObject { get => (net.sf.mpxj.AvailabilityTable)base.JavaObject; }
 

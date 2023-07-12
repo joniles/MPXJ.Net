@@ -2,7 +2,7 @@
 
 namespace org.mpxj.proxy
 {
-    public class DeepProxyCollection<M, N> : DeepProxyEnumerable<N>, ICollection<N>, IJavaObjectProxy<java.util.Collection> where N : IJavaObjectProxy<M>
+    public class ProxyCollection<M, N> : ProxyEnumerable<N>, ICollection<N>, IJavaObjectProxy<java.util.Collection> where N : IJavaObjectProxy<M>
     {
         public new java.util.Collection JavaObject { get => (java.util.Collection)base.JavaObject; }
 
@@ -10,7 +10,7 @@ namespace org.mpxj.proxy
 
         public bool IsReadOnly => false;
 
-        internal DeepProxyCollection(ProxyManager proxyManager, java.util.Collection javaObject) : base(proxyManager, javaObject) { }
+        internal ProxyCollection(ProxyManager proxyManager, java.util.Collection javaObject) : base(proxyManager, javaObject) { }
 
         public void Add(N item)
         {

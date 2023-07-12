@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-	public class ViewContainer : DeepProxyList<net.sf.mpxj.View, IView>
+	public class ViewContainer : ProxyList<net.sf.mpxj.View, IView>
     {
         public new net.sf.mpxj.ViewContainer JavaObject { get => (net.sf.mpxj.ViewContainer)base.JavaObject; }
 

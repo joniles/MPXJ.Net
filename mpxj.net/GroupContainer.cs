@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class GroupContainer : DeepProxyList<net.sf.mpxj.Group, Group>
+    public class GroupContainer : ProxyList<net.sf.mpxj.Group, Group>
     {
         public new net.sf.mpxj.GroupContainer JavaObject { get => (net.sf.mpxj.GroupContainer)base.JavaObject; }
 

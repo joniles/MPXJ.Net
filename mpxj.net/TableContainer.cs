@@ -2,7 +2,7 @@
 
 namespace org.mpxj
 {
-    public class TableContainer : DeepProxyList<net.sf.mpxj.Table, Table>
+    public class TableContainer : ProxyList<net.sf.mpxj.Table, Table>
     {
         public new net.sf.mpxj.TableContainer JavaObject { get => (net.sf.mpxj.TableContainer)base.JavaObject; }
 

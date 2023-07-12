@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace org.mpxj.proxy
 {
     // TODO: implement incomplete methods
-	public class DeepProxySet<M, N> : DeepProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set> where N : IJavaObjectProxy<M>
+	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set> where N : IJavaObjectProxy<M>
     {
         public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
 
-        internal DeepProxySet(ProxyManager proxyManager, java.util.Set javaObject) : base(proxyManager, javaObject) { }
+        internal ProxySet(ProxyManager proxyManager, java.util.Set javaObject) : base(proxyManager, javaObject) { }
 
         bool ISet<N>.Add(N item)
         {
