@@ -401,5 +401,10 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new DeepProxyCollection<M, N>(this, l));
         }
+
+        internal ISet<N> ProxySet<M, N>(java.util.Set value) where N : IJavaObjectProxy<M>
+        {
+            return ProxyObject(value, l => new DeepProxySet<M, N>(this, l));
+        }
     }
 }

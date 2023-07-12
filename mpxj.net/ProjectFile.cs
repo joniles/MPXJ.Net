@@ -253,10 +253,11 @@ namespace org.mpxj
             JavaObject.clearBaseline(index);
         }
 
-        public java.util.Set PopulatedFields
-        {
-            get => JavaObject.getPopulatedFields();
-        }
+        // TODO: FieldType implementation
+        //public ISet<IFieldType> PopulatedFields
+        //{
+        //    get => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
+        //}
 
         public void ExpandSubprojects()
         {

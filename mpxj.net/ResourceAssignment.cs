@@ -220,15 +220,17 @@ namespace org.mpxj
             get => JavaObject.getHasTimephasedData();
         }
 
-        public void SetTimephasedBaselineWork(int index, net.sf.mpxj.TimephasedWorkContainer data)
-        {
-            JavaObject.setTimephasedBaselineWork(index, data);
-        }
+        // TODO: implement as required
+        //public void SetTimephasedBaselineWork(int index, net.sf.mpxj.TimephasedWorkContainer data)
+        //{
+        //    JavaObject.setTimephasedBaselineWork(index, data);
+        //}
 
-        public void SetTimephasedBaselineCost(int index, net.sf.mpxj.TimephasedCostContainer data)
-        {
-            JavaObject.setTimephasedBaselineCost(index, data);
-        }
+        // TODO: implement as required
+        //public void SetTimephasedBaselineCost(int index, net.sf.mpxj.TimephasedCostContainer data)
+        //{
+        //    JavaObject.setTimephasedBaselineCost(index, data);
+        //}
 
         public IList<TimephasedWork> GetTimephasedBaselineWork(int index)
         {
