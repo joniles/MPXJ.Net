@@ -7,7 +7,7 @@ namespace org.mpxj
     public class CustomFieldContainer : ProxyEnumerable<net.sf.mpxj.CustomField, CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {
         internal readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.CustomFieldContainer JavaObject { get => (net.sf.mpxj.CustomFieldContainer)base.JavaObject; }
+        public new net.sf.mpxj.CustomFieldContainer JavaObject => (net.sf.mpxj.CustomFieldContainer)base.JavaObject;
 
         internal CustomFieldContainer(ProxyManager proxyManager, net.sf.mpxj.CustomFieldContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
         {

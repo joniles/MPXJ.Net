@@ -59,9 +59,6 @@ namespace org.mpxj
             return JavaObject.contains(exception.JavaObject);
         }
 
-        public override string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

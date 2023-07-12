@@ -27,10 +27,7 @@ namespace org.mpxj
 
         public net.sf.mpxj.mpp.BackgroundPattern BackgroundPattern => JavaObject.getBackgroundPattern();
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

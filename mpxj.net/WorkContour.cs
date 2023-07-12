@@ -52,7 +52,7 @@ namespace org.mpxj
             get => JavaObject.isContourDefault();
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             return JavaObject.toString();
         }

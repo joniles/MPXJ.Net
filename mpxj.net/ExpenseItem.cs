@@ -31,10 +31,7 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public java.lang.Integer AccountUniqueID
-        {
-            get => JavaObject.getAccountUniqueID();
-        }
+        public java.lang.Integer AccountUniqueID => JavaObject.getAccountUniqueID();
 
         public CostAccount Account
         {
@@ -42,10 +39,7 @@ namespace org.mpxj
             set => JavaObject.setAccount(value.JavaObject);
         }
 
-        public java.lang.Integer CategoryUniqueID
-        {
-            get => JavaObject.getCategoryUniqueID();
-        }
+        public java.lang.Integer CategoryUniqueID => JavaObject.getCategoryUniqueID();
 
         public ExpenseCategory Category
         {
@@ -53,10 +47,7 @@ namespace org.mpxj
             set => JavaObject.setCategory(value.JavaObject);
         }
 
-        public Task Task
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTask());
-        }
+        public Task Task => _proxyManager.ProxyObject(JavaObject.getTask());
 
         public string Description
         {
@@ -148,9 +139,6 @@ namespace org.mpxj
             set => JavaObject.setUnitOfMeasure(value);
         }
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

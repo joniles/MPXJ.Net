@@ -41,7 +41,7 @@ namespace org.mpxj
             set => JavaObject.setFinish(value);
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             return JavaObject.ToString();
         }

@@ -42,7 +42,7 @@ namespace org.mpxj
             get => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             return JavaObject.toString();
         }

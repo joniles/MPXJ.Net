@@ -17,10 +17,7 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.mpp.CustomFieldValueItem(uniqueID);
         }
 
-        public java.lang.Integer UniqueID
-        {
-            get => JavaObject.getUniqueID();
-        }
+        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
 
         public object Value
         {
@@ -58,9 +55,6 @@ namespace org.mpxj
             set => JavaObject.setCollapsed(value);
         }
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

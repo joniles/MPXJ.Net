@@ -22,10 +22,7 @@ namespace org.mpxj
             return JavaObject.getIndicator();
         }
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

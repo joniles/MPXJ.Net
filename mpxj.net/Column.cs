@@ -46,9 +46,6 @@ namespace org.mpxj
             set => JavaObject.setWidth(value);
         }
 
-        public new string ToString()
-        {
-            return JavaObject.ToString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

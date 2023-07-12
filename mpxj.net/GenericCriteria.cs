@@ -57,10 +57,7 @@ namespace org.mpxj
             JavaObject.addCriteria(criteria.JavaObject);
         }
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

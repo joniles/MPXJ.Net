@@ -31,10 +31,7 @@ namespace org.mpxj
             get => JavaObject.getDurationAsMilliseconds();
         }
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 

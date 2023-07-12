@@ -16,29 +16,14 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.CustomFieldValueMask(length, level, separator, type.ConvertType());
         }
 
-        public int Length
-        {
-            get => JavaObject.getLength();
-        }
+        public int Length => JavaObject.getLength();
 
-        public int Level
-        {
-            get => JavaObject.getLevel();
-        }
+        public int Level => JavaObject.getLevel();
 
-        public string Separator
-        {
-            get => JavaObject.getSeparator();
-        }
+        public string Separator => JavaObject.getSeparator();
 
-        public CustomFieldValueDataType? Type
-        {
-            get => JavaObject.getType().ConvertType();
-        }
+        public CustomFieldValueDataType? Type => JavaObject.getType().ConvertType();
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }

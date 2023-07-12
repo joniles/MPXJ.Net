@@ -22,20 +22,11 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public java.lang.Integer SequenceNumber
-        {
-            get => JavaObject.getSequenceNumber();
-        }
+        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
 
-        public new string ToString()
-        {
-            return JavaObject.toString();
-        }
+        public override string ToString() => JavaObject.toString();
     }
 }
 
