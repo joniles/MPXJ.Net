@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -184,34 +185,34 @@ namespace org.mpxj
             set => JavaObject.setRateSource(value);
         }
 
-        public java.util.List TimephasedActualWork
+        public IList<TimephasedWork> TimephasedActualWork
         {
-            get => JavaObject.getTimephasedActualWork();
+            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(JavaObject.getTimephasedActualWork());
         }
 
-        public java.util.List TimephasedWork
+        public IList<TimephasedWork> TimephasedWork
         {
-            get => JavaObject.getTimephasedWork();
+            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(JavaObject.getTimephasedWork());
         }
 
-        public java.util.List TimephasedOvertimeWork
+        public IList<TimephasedWork> TimephasedOvertimeWork
         {
-            get => JavaObject.getTimephasedOvertimeWork();
+            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(JavaObject.getTimephasedOvertimeWork());
         }
 
-        public java.util.List TimephasedActualOvertimeWork
+        public IList<TimephasedWork> TimephasedActualOvertimeWork
         {
-            get => JavaObject.getTimephasedActualOvertimeWork();
+            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(JavaObject.getTimephasedActualOvertimeWork());
         }
 
-        public java.util.List TimephasedCost
+        public IList<TimephasedCost> TimephasedCost
         {
-            get => JavaObject.getTimephasedCost();
+            get => _proxyManager.ProxyList < net.sf.mpxj.TimephasedCost, TimephasedCost>(JavaObject.getTimephasedCost());
         }
 
-        public java.util.List TimephasedActualCost
+        public IList<TimephasedCost> TimephasedActualCost
         {
-            get => JavaObject.getTimephasedActualCost();
+            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(JavaObject.getTimephasedActualCost());
         }
 
         public bool HasTimephasedData
@@ -229,14 +230,14 @@ namespace org.mpxj
             JavaObject.setTimephasedBaselineCost(index, data);
         }
 
-        public java.util.List GetTimephasedBaselineWork(int index)
+        public IList<TimephasedWork> GetTimephasedBaselineWork(int index)
         {
-            return JavaObject.getTimephasedBaselineWork(index);
+            return _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(JavaObject.getTimephasedBaselineWork(index));
         }
 
-        public java.util.List GetTimephasedBaselineCost(int index)
+        public IList<TimephasedCost> GetTimephasedBaselineCost(int index)
         {
-            return JavaObject.getTimephasedBaselineCost(index);
+            return _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(JavaObject.getTimephasedBaselineCost(index));
         }
 
         public ProjectCalendar Calendar

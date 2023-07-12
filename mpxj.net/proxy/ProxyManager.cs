@@ -298,6 +298,16 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Column(v));
         }
 
+        internal TimephasedWork ProxyObject(net.sf.mpxj.TimephasedWork value)
+        {
+            return ProxyObject(value, v => new TimephasedWork(v));
+        }
+
+        internal TimephasedCost ProxyObject(net.sf.mpxj.TimephasedCost value)
+        {
+            return ProxyObject(value, v => new TimephasedCost(v));
+        }
+
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));

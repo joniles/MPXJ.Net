@@ -2,14 +2,10 @@
 
 namespace org.mpxj
 {
-	public class TimephasedWork : IJavaObjectProxy<net.sf.mpxj.TimephasedWork>
+	public class TimephasedWork : TimephasedItem<net.sf.mpxj.Duration>, IJavaObjectProxy<net.sf.mpxj.TimephasedWork>
     {
-        public net.sf.mpxj.TimephasedWork JavaObject { get; }
+        public new net.sf.mpxj.TimephasedWork JavaObject { get => (net.sf.mpxj.TimephasedWork)base.JavaObject; }
 
-        internal TimephasedWork(net.sf.mpxj.TimephasedWork javaObject)
-        {
-            JavaObject = javaObject;
-        }
+        internal TimephasedWork(net.sf.mpxj.TimephasedWork javaObject) : base(javaObject) { }
 	}
 }
-
