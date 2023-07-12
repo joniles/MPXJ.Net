@@ -129,6 +129,22 @@
         {
             return value == null ? (TestOperator?)null : (TestOperator)value.ordinal();
         }
+
+        // ActivityCodeScope
+        public static net.sf.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope value)
+        {
+            return net.sf.mpxj.ActivityCodeScope.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope? value)
+        {
+            return value == null ? null : net.sf.mpxj.ActivityCodeScope.values()[(int)value];
+        }
+
+        public static ActivityCodeScope? ConvertType(this net.sf.mpxj.ActivityCodeScope value)
+        {
+            return value == null ? (ActivityCodeScope?)null : (ActivityCodeScope)value.ordinal();
+        }
     }
 }
 

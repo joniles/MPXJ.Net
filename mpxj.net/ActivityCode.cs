@@ -19,9 +19,9 @@ namespace org.mpxj
             get => JavaObject.getUniqueID();
         }
 
-        public net.sf.mpxj.ActivityCodeScope Scope
+        public ActivityCodeScope? Scope
         {
-            get => JavaObject.getScope();
+            get => JavaObject.getScope().ConvertType();
         }
 
         public java.lang.Integer ScopeProjectUniqueID

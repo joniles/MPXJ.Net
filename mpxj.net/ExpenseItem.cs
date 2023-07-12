@@ -36,10 +36,10 @@ namespace org.mpxj
             get => JavaObject.getAccountUniqueID();
         }
 
-        public net.sf.mpxj.CostAccount Account
+        public CostAccount Account
         {
-            get => JavaObject.getAccount();
-            set => JavaObject.setAccount(value);
+            get => _proxyManager.ProxyObject(JavaObject.getAccount());
+            set => JavaObject.setAccount(value.JavaObject);
         }
 
         public java.lang.Integer CategoryUniqueID
@@ -47,10 +47,10 @@ namespace org.mpxj
             get => JavaObject.getCategoryUniqueID();
         }
 
-        public net.sf.mpxj.ExpenseCategory Category
+        public ExpenseCategory Category
         {
-            get => JavaObject.getCategory();
-            set => JavaObject.setCategory(value);
+            get => _proxyManager.ProxyObject(JavaObject.getCategory());
+            set => JavaObject.setCategory(value.JavaObject);
         }
 
         public Task Task
