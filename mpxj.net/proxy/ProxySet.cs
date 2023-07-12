@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace org.mpxj.proxy
 {
     // TODO: implement incomplete methods
-	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set> where N : IJavaObjectProxy<M>
+	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set>
     {
         public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
 
@@ -12,7 +12,7 @@ namespace org.mpxj.proxy
 
         bool ISet<N>.Add(N item)
         {
-            return JavaObject.add(item.JavaObject);
+            return JavaObject.add(_toJava(item));
         }
 
         public void UnionWith(IEnumerable<N> other)
@@ -24,7 +24,7 @@ namespace org.mpxj.proxy
 
             foreach (N item in other)
             {
-                JavaObject.add(item.JavaObject);
+                JavaObject.add(_toJava(item));
             }
         }
 
@@ -53,7 +53,7 @@ namespace org.mpxj.proxy
             var otherSet = new java.util.HashSet();
             foreach(N item in other)
             {
-                otherSet.add(item.JavaObject);
+                otherSet.add(_toJava(item));
             }
 
             JavaObject.retainAll(otherSet);
@@ -161,7 +161,7 @@ namespace org.mpxj.proxy
             var otherSet = new java.util.HashSet();
             foreach (N item in other)
             {
-                otherSet.add(item.JavaObject);
+                otherSet.add(_toJava(item));
             }
 
             return JavaObject.size() == otherSet.size() && JavaObject.containsAll(otherSet);

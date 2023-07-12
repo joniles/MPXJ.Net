@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -18,9 +19,9 @@ namespace org.mpxj
             get => JavaObject.getViewName();
         }
 
-        public java.util.List UniqueIdList
+        public IList<int> UniqueIdList
         {
-            get => JavaObject.getUniqueIdList();
+            get => _proxyManager.ProxyList<java.lang.Integer, int>(v => v.intValue(), v => java.lang.Integer.valueOf(v), JavaObject.getUniqueIdList());
         }
 
         public Filter Filter

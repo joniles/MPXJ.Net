@@ -403,17 +403,17 @@ namespace org.mpxj.proxy
             return o;
         }
 
-        internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value) where N : IJavaObjectProxy<M>
+        internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value)
         {
             return ProxyObject(value, l => new ProxyList<M, N>(fromJava, toJava, l));
         }
 
-        internal ICollection<N> ProxyCollection<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection value) where N : IJavaObjectProxy<M>
+        internal ICollection<N> ProxyCollection<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection value)
         {
             return ProxyObject(value, l => new ProxyCollection<M, N>(fromJava, toJava, l));
         }
 
-        internal ISet<N> ProxySet<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set value) where N : IJavaObjectProxy<M>
+        internal ISet<N> ProxySet<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set value)
         {
             return ProxyObject(value, l => new ProxySet<M, N>(fromJava, toJava, l));
         }

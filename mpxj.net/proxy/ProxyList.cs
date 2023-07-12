@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-	public class ProxyList<M, N> : ProxyCollection<M, N>, IList<N>, IJavaObjectProxy<java.util.List> where N : IJavaObjectProxy<M>
+	public class ProxyList<M, N> : ProxyCollection<M, N>, IList<N>, IJavaObjectProxy<java.util.List>
     {
         public new java.util.List JavaObject { get => (java.util.List)base.JavaObject; }
 
@@ -21,7 +21,7 @@ namespace org.mpxj.proxy
 
         public void Insert(int index, N item)
         {
-            JavaObject.set(index, item.JavaObject);
+            JavaObject.set(index, _toJava(item));
         }
 
         public void RemoveAt(int index)
