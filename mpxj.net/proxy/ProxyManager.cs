@@ -417,5 +417,10 @@ namespace org.mpxj.proxy
         {
             return ProxyObject(value, l => new ProxySet<M, N>(fromJava, toJava, l));
         }
+
+        internal IDictionary<NK, NV> ProxyDictionary<MK, MV, NK, NV>(Func<MK, NK> keyFromJava, Func<NK, MK> keyToJava, Func<MV, NV> valueFromJava, Func<NV, MV> valueToJava, java.util.Map value)
+        {
+            return ProxyObject(value, l => new ProxyDictionary<MK, MV, NK, NV>(this, keyFromJava, keyToJava, valueFromJava, valueToJava, l));
+        }
     }
 }

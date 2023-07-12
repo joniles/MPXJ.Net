@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -597,9 +598,10 @@ namespace org.mpxj
             set => JavaObject.setCurrencyCode(value);
         }
 
-        public java.util.Map CustomProperties
+        public IDictionary<string, object> CustomProperties
         {
-            get => JavaObject.getCustomProperties();
+            // TODO: inverse of proxy to allow values to be written back
+            get => _proxyManager.ProxyDictionary<string, object, string, object>(k => k, k => k, v => _proxyManager.GenericProxyObject(v), v => v, JavaObject.getCustomProperties());
         }
 
         public string HyperlinkBase
