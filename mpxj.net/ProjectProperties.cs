@@ -57,12 +57,11 @@ namespace org.mpxj
             set => JavaObject.setSplitInProgressTasks(value);
         }
 
-        public net.sf.mpxj.DateOrder DateOrder
+        public DateOrder? DateOrder
         {
-            get => JavaObject.getDateOrder();
-            set => JavaObject.setDateOrder(value);
+            get => JavaObject.getDateOrder().ConvertType();
+            set => JavaObject.setDateOrder(value.ConvertType());
         }
-
 
         public net.sf.mpxj.ProjectTimeFormat TimeFormat
         {

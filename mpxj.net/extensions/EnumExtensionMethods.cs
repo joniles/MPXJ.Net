@@ -193,6 +193,22 @@
         {
             return value == null ? (CalendarType?)null : (CalendarType)value.ordinal();
         }
+
+        // DateOrder
+        public static net.sf.mpxj.DateOrder ConvertType(this DateOrder value)
+        {
+            return net.sf.mpxj.DateOrder.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.DateOrder ConvertType(this DateOrder? value)
+        {
+            return value == null ? null : net.sf.mpxj.DateOrder.values()[(int)value];
+        }
+
+        public static DateOrder? ConvertType(this net.sf.mpxj.DateOrder value)
+        {
+            return value == null ? (DateOrder?)null : (DateOrder)value.ordinal();
+        }
     }
 }
 
