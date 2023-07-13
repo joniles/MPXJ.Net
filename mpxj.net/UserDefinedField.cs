@@ -17,30 +17,15 @@ namespace org.mpxj
         }
 
 
-        public java.lang.Integer UniqueID
-        {
-            get => JavaObject.getUniqueID();
-        }
+        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
 
-        public bool SummaryTaskOnly
-        {
-            get => JavaObject.getSummaryTaskOnly();
-        }
+        public bool SummaryTaskOnly => JavaObject.getSummaryTaskOnly();
 
-        public FieldTypeClass FieldTypeClass
-        {
-            get => JavaObject.getFieldTypeClass().ConvertType().Value;
-        }
+        public FieldTypeClass FieldTypeClass => JavaObject.getFieldTypeClass().ConvertType().Value;
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public DataType? DataType
-        {
-            get => JavaObject.getDataType().ConvertType();
-        }
+        public DataType? DataType => JavaObject.getDataType().ConvertType();
 
         public IFieldType UnitsType
         {

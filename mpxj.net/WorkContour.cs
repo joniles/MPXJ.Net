@@ -27,30 +27,15 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value);
         }
 
-        public double[] CurveValues
-        {
-            get => JavaObject.getCurveValues();
-        }
+        public double[] CurveValues => JavaObject.getCurveValues();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-        }
+        public string Name => JavaObject.getName();
 
-        public bool IsContourManual
-        {
-            get => JavaObject.isContourManual();
-        }
+        public bool IsContourManual => JavaObject.isContourManual();
 
-        public bool IsContourFlat
-        {
-            get => JavaObject.isContourFlat();
-        }
+        public bool IsContourFlat => JavaObject.isContourFlat();
 
-        public bool IsContourDefault
-        {
-            get => JavaObject.isContourDefault();
-        }
+        public bool IsContourDefault => JavaObject.isContourDefault();
 
         public override string ToString() => JavaObject.toString();
     }
