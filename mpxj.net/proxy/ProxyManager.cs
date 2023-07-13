@@ -314,6 +314,11 @@ namespace org.mpxj.proxy
             return null;
         }
 
+        internal FontBase ProxyObject(net.sf.mpxj.mpp.FontBase value)
+        {
+            return ProxyObject(value, v => new FontBase(v));
+        }
+
         internal UserDefinedField ProxyObject(net.sf.mpxj.UserDefinedField value)
         {
             return ProxyObject(value, v => new UserDefinedField(v));
@@ -321,7 +326,7 @@ namespace org.mpxj.proxy
 
         internal FontStyle ProxyObject(net.sf.mpxj.mpp.FontStyle value)
         {
-            return ProxyObject(value, v => new FontStyle(v));
+            return ProxyObject(value, v => new FontStyle(this, v));
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)

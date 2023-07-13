@@ -4,14 +4,16 @@ namespace org.mpxj
 {
     public class FontStyle : IJavaObjectProxy<net.sf.mpxj.mpp.FontStyle>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.mpp.FontStyle JavaObject { get; }
 
-        internal FontStyle(net.sf.mpxj.mpp.FontStyle javaObject)
+        internal FontStyle(ProxyManager proxyManager, net.sf.mpxj.mpp.FontStyle javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.mpp.FontBase FontBase => JavaObject.getFontBase();
+        public FontBase FontBase => _proxyManager.ProxyObject(JavaObject.getFontBase());
 
         public bool Bold => JavaObject.getBold();
 
