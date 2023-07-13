@@ -55,10 +55,10 @@ namespace org.mpxj
             set => JavaObject.setGroupOn(value);
         }
 
-        public net.sf.mpxj.mpp.BackgroundPattern Pattern
+        public BackgroundPattern? Pattern
         {
-            get => JavaObject.getPattern();
-            set => JavaObject.setPattern(value);
+            get => JavaObject.getPattern().ConvertType();
+            set => JavaObject.setPattern(value.ConvertType());
         }
 
         public object StartAt

@@ -27,7 +27,7 @@ namespace org.mpxj
 
         public java.awt.Color BackgroundColor => JavaObject.getBackgroundColor();
 
-        public net.sf.mpxj.mpp.BackgroundPattern BackgroundPattern => JavaObject.getBackgroundPattern();
+        public BackgroundPattern? BackgroundPattern => JavaObject.getBackgroundPattern().ConvertType();
 
         public override string ToString() => JavaObject.toString();
     }

@@ -161,6 +161,22 @@
         {
             return value == null ? (DataType?)null : (DataType)value.ordinal();
         }
+
+        // BackgroundPattern
+        public static net.sf.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern value)
+        {
+            return net.sf.mpxj.mpp.BackgroundPattern.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern? value)
+        {
+            return value == null ? null : net.sf.mpxj.mpp.BackgroundPattern.values()[(int)value];
+        }
+
+        public static BackgroundPattern? ConvertType(this net.sf.mpxj.mpp.BackgroundPattern value)
+        {
+            return value == null ? (BackgroundPattern?)null : (BackgroundPattern)value.ordinal();
+        }
     }
 }
 
