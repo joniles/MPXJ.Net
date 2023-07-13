@@ -200,7 +200,7 @@ namespace org.mpxj
             set => JavaObject.setPercentWorkComplete(value);
         }
 
-        public net.sf.mpxj.Rate StandardRate => JavaObject.getStandardRate();
+        public Rate StandardRate => _proxyManager.ProxyObject(JavaObject.getStandardRate());
 
         public java.lang.Number Cost
         {
@@ -208,10 +208,7 @@ namespace org.mpxj
             set => JavaObject.setCost(value);
         }
 
-        public net.sf.mpxj.Rate OvertimeRate
-        {
-            get => JavaObject.getOvertimeRate();
-        }
+        public Rate OvertimeRate => _proxyManager.ProxyObject(JavaObject.getOvertimeRate());
 
         public java.lang.Number OvertimeCost
         {

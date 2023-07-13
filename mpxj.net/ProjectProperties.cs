@@ -33,16 +33,16 @@ namespace org.mpxj
             set => JavaObject.setDefaultWorkUnits(value.ConvertType());
         }
 
-        public net.sf.mpxj.Rate DefaultStandardRate
+        public Rate DefaultStandardRate
         {
-            get => JavaObject.getDefaultStandardRate();
-            set => JavaObject.setDefaultStandardRate(value);
+            get => _proxyManager.ProxyObject(JavaObject.getDefaultStandardRate());
+            set => JavaObject.setDefaultStandardRate(value.JavaObject);
         }
 
-        public net.sf.mpxj.Rate DefaultOvertimeRate
+        public Rate DefaultOvertimeRate
         {
-            get => JavaObject.getDefaultOvertimeRate();
-            set => JavaObject.setDefaultOvertimeRate(value);
+            get => _proxyManager.ProxyObject(JavaObject.getDefaultOvertimeRate());
+            set => JavaObject.setDefaultOvertimeRate(value.JavaObject);
         }
 
         public bool UpdatingTaskStatusUpdatesResourceStatus

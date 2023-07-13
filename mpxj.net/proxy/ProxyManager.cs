@@ -155,7 +155,7 @@ namespace org.mpxj.proxy
 
         internal CostRateTableEntry ProxyObject(net.sf.mpxj.CostRateTableEntry value)
         {
-            return ProxyObject(value, v => new CostRateTableEntry(v));
+            return ProxyObject(value, v => new CostRateTableEntry(this, v));
         }
 
         internal CostRateTable ProxyObject(net.sf.mpxj.CostRateTable value)
@@ -332,6 +332,11 @@ namespace org.mpxj.proxy
         internal CustomFieldLookupTable ProxyObject(net.sf.mpxj.CustomFieldLookupTable value)
         {
             return ProxyObject(value, v => new CustomFieldLookupTable(this, v));
+        }
+
+        internal Rate ProxyObject(net.sf.mpxj.Rate value)
+        {
+            return ProxyObject(value, v => new Rate(v));
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)

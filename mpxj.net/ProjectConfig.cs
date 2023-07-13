@@ -102,10 +102,11 @@ namespace org.mpxj
             JavaObject.updateAssignmentUniqueCounter();
         }
 
-        public net.sf.mpxj.BaselineStrategy BaselineStrategy
+        public IBaselineStrategy BaselineStrategy
         {
-            get => JavaObject.getBaselineStrategy();
-            set => JavaObject.setBaselineStrategy(value);
+            // TODO implement baseline startgey hierarchy
+            //get => JavaObject.getBaselineStrategy();
+            set => JavaObject.setBaselineStrategy(value.JavaObject);
         }
 
         public string SubprojectWorkingDirectory

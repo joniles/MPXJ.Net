@@ -158,10 +158,10 @@ namespace org.mpxj
             set => JavaObject.setRole(value.JavaObject);
         }
 
-        public net.sf.mpxj.Rate OverrideRate
+        public Rate OverrideRate
         {
-            get => JavaObject.getOverrideRate();
-            set => JavaObject.setOverrideRate(value);
+            get => _proxyManager.ProxyObject(JavaObject.getOverrideRate());
+            set => JavaObject.setOverrideRate(value.JavaObject);
         }
 
         public net.sf.mpxj.RateSource RateSource
@@ -566,7 +566,7 @@ namespace org.mpxj
             set => JavaObject.setCostAccount(value.JavaObject);
         }
 
-        public net.sf.mpxj.Rate GetEffectiveRate(java.time.LocalDateTime date) => JavaObject.getEffectiveRate(date);
+        public Rate GetEffectiveRate(java.time.LocalDateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date));
 
         public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
 
@@ -576,4 +576,3 @@ namespace org.mpxj
         public override string ToString() => JavaObject.toString();
     }
 }
-
