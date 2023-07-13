@@ -129,10 +129,10 @@ namespace org.mpxj
 
         public bool Derived => JavaObject.isDerived();
 
-        public net.sf.mpxj.CalendarType Type
+        public CalendarType? Type
         {
-            get => JavaObject.getType();
-            set => JavaObject.setType(value);
+            get => JavaObject.getType().ConvertType();
+            set => JavaObject.setType(value.ConvertType());
         }
 
         public bool Personal

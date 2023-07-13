@@ -177,6 +177,22 @@
         {
             return value == null ? (BackgroundPattern?)null : (BackgroundPattern)value.ordinal();
         }
+
+        // CalendarType
+        public static net.sf.mpxj.CalendarType ConvertType(this CalendarType value)
+        {
+            return net.sf.mpxj.CalendarType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.CalendarType ConvertType(this CalendarType? value)
+        {
+            return value == null ? null : net.sf.mpxj.CalendarType.values()[(int)value];
+        }
+
+        public static CalendarType? ConvertType(this net.sf.mpxj.CalendarType value)
+        {
+            return value == null ? (CalendarType?)null : (CalendarType)value.ordinal();
+        }
     }
 }
 
