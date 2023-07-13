@@ -470,8 +470,8 @@ namespace org.mpxj
 
         public Guid? GUID
         {
-            get => JavaObject.getGUID().ConvertType();
-            set => JavaObject.setGUID(value.ConvertType());
+            get => JavaObject.getGUID().FromJava();
+            set => JavaObject.setGUID(value.ToJava());
         }
 
         public bool ResponsePending
