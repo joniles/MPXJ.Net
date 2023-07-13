@@ -16,7 +16,7 @@ namespace org.mpxj
 
         public net.sf.mpxj.FieldType FieldType => JavaObject.getFieldType();
 
-        public net.sf.mpxj.CustomFieldLookupTable LookupTable => JavaObject.getLookupTable();
+        public CustomFieldLookupTable LookupTable => _proxyManager.ProxyObject(JavaObject.getLookupTable());
 
         public GraphicalIndicator GraphicalIndicator => _proxyManager.ProxyObject(JavaObject.getGraphicalIndicator());
 

@@ -329,6 +329,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new FontStyle(this, v));
         }
 
+        internal CustomFieldLookupTable ProxyObject(net.sf.mpxj.CustomFieldLookupTable value)
+        {
+            return ProxyObject(value, v => new CustomFieldLookupTable(this, v));
+        }
+
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));
