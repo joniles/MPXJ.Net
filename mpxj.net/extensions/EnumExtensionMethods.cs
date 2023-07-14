@@ -322,5 +322,21 @@
         {
             return value == null ? (CodePage?)null : (CodePage)value.ordinal();
         }
+
+        // CriticalActivityType
+        public static net.sf.mpxj.CriticalActivityType ConvertType(this CriticalActivityType value)
+        {
+            return net.sf.mpxj.CriticalActivityType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.CriticalActivityType ConvertType(this CriticalActivityType? value)
+        {
+            return value == null ? null : net.sf.mpxj.CriticalActivityType.values()[(int)value];
+        }
+
+        public static CriticalActivityType? ConvertType(this net.sf.mpxj.CriticalActivityType value)
+        {
+            return value == null ? (CriticalActivityType?)null : (CriticalActivityType)value.ordinal();
+        }
     }
 }

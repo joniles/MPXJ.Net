@@ -766,10 +766,10 @@ namespace org.mpxj
             set => JavaObject.setProjectID(value);
         }
 
-        public net.sf.mpxj.CriticalActivityType CriticalActivityType
+        public CriticalActivityType? CriticalActivityType
         {
-            get => JavaObject.getCriticalActivityType();
-            set => JavaObject.setCriticalActivityType(value);
+            get => JavaObject.getCriticalActivityType().ConvertType();
+            set => JavaObject.setCriticalActivityType(value.ConvertType());
         }
 
         public java.time.LocalDateTime MustFinishBy
