@@ -338,5 +338,37 @@
         {
             return value == null ? (CriticalActivityType?)null : (CriticalActivityType)value.ordinal();
         }
+
+        // RecurrenceType
+        public static net.sf.mpxj.RecurrenceType ConvertType(this RecurrenceType value)
+        {
+            return net.sf.mpxj.RecurrenceType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.RecurrenceType ConvertType(this RecurrenceType? value)
+        {
+            return value == null ? null : net.sf.mpxj.RecurrenceType.values()[(int)value];
+        }
+
+        public static RecurrenceType? ConvertType(this net.sf.mpxj.RecurrenceType value)
+        {
+            return value == null ? (RecurrenceType?)null : (RecurrenceType)value.ordinal();
+        }
+
+        // RelationType
+        public static net.sf.mpxj.RelationType ConvertType(this RelationType value)
+        {
+            return net.sf.mpxj.RelationType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.RelationType ConvertType(this RelationType? value)
+        {
+            return value == null ? null : net.sf.mpxj.RelationType.values()[(int)value];
+        }
+
+        public static RelationType? ConvertType(this net.sf.mpxj.RelationType value)
+        {
+            return value == null ? (RelationType?)null : (RelationType)value.ordinal();
+        }
     }
 }

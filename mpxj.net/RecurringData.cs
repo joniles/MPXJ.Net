@@ -34,10 +34,10 @@ namespace org.mpxj
             set => JavaObject.setOccurrences(value);
         }
 
-        public net.sf.mpxj.RecurrenceType RecurrenceType
+        public RecurrenceType? RecurrenceType
         {
-            get => JavaObject.getRecurrenceType();
-            set => JavaObject.setRecurrenceType(value);
+            get => JavaObject.getRecurrenceType().ConvertType();
+            set => JavaObject.setRecurrenceType(value.ConvertType());
         }
 
         public bool UseEndDate

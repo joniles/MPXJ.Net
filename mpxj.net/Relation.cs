@@ -13,25 +13,13 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.RelationType Type
-        {
-            get => JavaObject.getType();
-        }
+        public RelationType? Type => JavaObject.getType().ConvertType();
 
-        public net.sf.mpxj.Duration Lag
-        {
-            get => JavaObject.getLag();
-        }
+        public net.sf.mpxj.Duration Lag => JavaObject.getLag();
 
-        public Task SourceTask
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getSourceTask());
-        }
+        public Task SourceTask => _proxyManager.ProxyObject(JavaObject.getSourceTask());
 
-        public Task TargetTask
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTargetTask());
-        }
+        public Task TargetTask => _proxyManager.ProxyObject(JavaObject.getTargetTask());
 
         public java.lang.Integer UniqueID
         {
