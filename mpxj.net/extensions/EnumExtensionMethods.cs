@@ -450,5 +450,21 @@
         {
             return value == null ? (ResourceRequestType?)null : (ResourceRequestType)value.ordinal();
         }
+
+        // ConstraintType
+        public static net.sf.mpxj.ConstraintType ConvertType(this ConstraintType value)
+        {
+            return net.sf.mpxj.ConstraintType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ConstraintType ConvertType(this ConstraintType? value)
+        {
+            return value == null ? null : net.sf.mpxj.ConstraintType.values()[(int)value];
+        }
+
+        public static ConstraintType? ConvertType(this net.sf.mpxj.ConstraintType value)
+        {
+            return value == null ? (ConstraintType?)null : (ConstraintType)value.ordinal();
+        }
     }
 }

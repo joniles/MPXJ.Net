@@ -154,16 +154,16 @@ namespace org.mpxj
             set => JavaObject.setSecondaryConstraintDate(value);
         }
 
-        public net.sf.mpxj.ConstraintType ConstraintType
+        public ConstraintType? ConstraintType
         {
-            get => JavaObject.getConstraintType();
-            set => JavaObject.setConstraintType(value);
+            get => JavaObject.getConstraintType().ConvertType();
+            set => JavaObject.setConstraintType(value.ConvertType());
         }
 
-        public net.sf.mpxj.ConstraintType SecondaryConstraintType
+        public ConstraintType? SecondaryConstraintType
         {
-            get => JavaObject.getSecondaryConstraintType();
-            set => JavaObject.setSecondaryConstraintType(value);
+            get => JavaObject.getSecondaryConstraintType().ConvertType();
+            set => JavaObject.setSecondaryConstraintType(value.ConvertType());
         }
 
         public string Contact
