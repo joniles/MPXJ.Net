@@ -694,16 +694,16 @@ namespace org.mpxj
             set => JavaObject.setMpxProgramName(value);
         }
 
-        public net.sf.mpxj.FileVersion MpxFileVersion
+        public FileVersion? MpxFileVersion
         {
-            get => JavaObject.getMpxFileVersion();
-            set => JavaObject.setMpxFileVersion(value);
+            get => JavaObject.getMpxFileVersion().ConvertType();
+            set => JavaObject.setMpxFileVersion(value.ConvertType());
         }
 
-        public net.sf.mpxj.CodePage MpxCodePage
+        public CodePage? MpxCodePage
         {
-            get => JavaObject.getMpxCodePage();
-            set => JavaObject.setMpxCodePage(value);
+            get => JavaObject.getMpxCodePage().ConvertType();
+            set => JavaObject.setMpxCodePage(value.ConvertType());
         }
 
         public string ProjectFilePath

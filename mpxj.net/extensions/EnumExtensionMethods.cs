@@ -290,5 +290,37 @@
         {
             return value == null ? (TaskType?)null : (TaskType)value.ordinal();
         }
+
+        // FileVersion
+        public static net.sf.mpxj.FileVersion ConvertType(this FileVersion value)
+        {
+            return net.sf.mpxj.FileVersion.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.FileVersion ConvertType(this FileVersion? value)
+        {
+            return value == null ? null : net.sf.mpxj.FileVersion.values()[(int)value];
+        }
+
+        public static FileVersion? ConvertType(this net.sf.mpxj.FileVersion value)
+        {
+            return value == null ? (FileVersion?)null : (FileVersion)value.ordinal();
+        }
+
+        // CodePage
+        public static net.sf.mpxj.CodePage ConvertType(this CodePage value)
+        {
+            return net.sf.mpxj.CodePage.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.CodePage ConvertType(this CodePage? value)
+        {
+            return value == null ? null : net.sf.mpxj.CodePage.values()[(int)value];
+        }
+
+        public static CodePage? ConvertType(this net.sf.mpxj.CodePage value)
+        {
+            return value == null ? (CodePage?)null : (CodePage)value.ordinal();
+        }
     }
 }
