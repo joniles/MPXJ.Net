@@ -370,5 +370,21 @@
         {
             return value == null ? (RelationType?)null : (RelationType)value.ordinal();
         }
+
+        // ResourceType
+        public static net.sf.mpxj.ResourceType ConvertType(this ResourceType value)
+        {
+            return net.sf.mpxj.ResourceType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ResourceType ConvertType(this ResourceType? value)
+        {
+            return value == null ? null : net.sf.mpxj.ResourceType.values()[(int)value];
+        }
+
+        public static ResourceType? ConvertType(this net.sf.mpxj.ResourceType value)
+        {
+            return value == null ? (ResourceType?)null : (ResourceType)value.ordinal();
+        }
     }
 }

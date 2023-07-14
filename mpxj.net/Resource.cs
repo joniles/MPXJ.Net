@@ -26,10 +26,10 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public net.sf.mpxj.ResourceType Type
+        public ResourceType? Type
         {
-            get => JavaObject.getType();
-            set => JavaObject.setType(value);
+            get => JavaObject.getType().ConvertType();
+            set => JavaObject.setType(value.ConvertType());
         }
 
         public bool Null => JavaObject.getNull();
