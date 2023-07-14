@@ -164,10 +164,10 @@ namespace org.mpxj
             set => JavaObject.setOverrideRate(value.JavaObject);
         }
 
-        public net.sf.mpxj.RateSource RateSource
+        public RateSource? RateSource
         {
-            get => JavaObject.getRateSource();
-            set => JavaObject.setRateSource(value);
+            get => JavaObject.getRateSource().ConvertType();
+            set => JavaObject.setRateSource(value.ConvertType());
         }
 
         public IList<TimephasedWork> TimephasedActualWork => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualWork());

@@ -386,5 +386,53 @@
         {
             return value == null ? (ResourceType?)null : (ResourceType)value.ordinal();
         }
+
+        // WorkGroup
+        public static net.sf.mpxj.WorkGroup ConvertType(this WorkGroup value)
+        {
+            return net.sf.mpxj.WorkGroup.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.WorkGroup ConvertType(this WorkGroup? value)
+        {
+            return value == null ? null : net.sf.mpxj.WorkGroup.values()[(int)value];
+        }
+
+        public static WorkGroup? ConvertType(this net.sf.mpxj.WorkGroup value)
+        {
+            return value == null ? (WorkGroup?)null : (WorkGroup)value.ordinal();
+        }
+
+        // BookingType
+        public static net.sf.mpxj.BookingType ConvertType(this BookingType value)
+        {
+            return net.sf.mpxj.BookingType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.BookingType ConvertType(this BookingType? value)
+        {
+            return value == null ? null : net.sf.mpxj.BookingType.values()[(int)value];
+        }
+
+        public static BookingType? ConvertType(this net.sf.mpxj.BookingType value)
+        {
+            return value == null ? (BookingType?)null : (BookingType)value.ordinal();
+        }
+
+        // RateSource
+        public static net.sf.mpxj.RateSource ConvertType(this RateSource value)
+        {
+            return net.sf.mpxj.RateSource.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.RateSource ConvertType(this RateSource? value)
+        {
+            return value == null ? null : net.sf.mpxj.RateSource.values()[(int)value];
+        }
+
+        public static RateSource? ConvertType(this net.sf.mpxj.RateSource value)
+        {
+            return value == null ? (RateSource?)null : (RateSource)value.ordinal();
+        }
     }
 }

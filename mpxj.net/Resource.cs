@@ -70,10 +70,10 @@ namespace org.mpxj
             set => JavaObject.setGroup(value);
         }
 
-        public net.sf.mpxj.WorkGroup WorkGroup
+        public WorkGroup? WorkGroup
         {
-            get => JavaObject.getWorkGroup();
-            set => JavaObject.setWorkGroup(value);
+            get => JavaObject.getWorkGroup().ConvertType();
+            set => JavaObject.setWorkGroup(value.ConvertType());
         }
 
         public string EmailAddress
@@ -326,10 +326,10 @@ namespace org.mpxj
             set => JavaObject.setActualWorkProtected(value);
         }
 
-        public net.sf.mpxj.BookingType BookingType
+        public BookingType? BookingType
         {
-            get => JavaObject.getBookingType();
-            set => JavaObject.setBookingType(value);
+            get => JavaObject.getBookingType().ConvertType();
+            set => JavaObject.setBookingType(value.ConvertType());
         }
 
         public java.time.LocalDateTime CreationDate
