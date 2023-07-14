@@ -394,10 +394,10 @@ namespace org.mpxj
 
         public IList<Relation> Successors => _proxyManager.ProxyList<net.sf.mpxj.Relation, Relation>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSuccessors());
 
-        public net.sf.mpxj.Priority Priority
+        public Priority Priority
         {
-            get => JavaObject.getPriority();
-            set => JavaObject.setPriority(value);
+            get => _proxyManager.ProxyObject(JavaObject.getPriority());
+            set => JavaObject.setPriority(value.JavaObject);
         }
 
         public string Project
