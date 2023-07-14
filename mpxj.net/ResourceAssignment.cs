@@ -506,10 +506,10 @@ namespace org.mpxj
             set => JavaObject.setHyperlinkScreenTip(value);
         }
 
-        public net.sf.mpxj.ResourceRequestType ResourceRequestType
+        public ResourceRequestType? ResourceRequestType
         {
-            get => JavaObject.getResourceRequestType();
-            set => JavaObject.setResourceRequestType(value);
+            get => JavaObject.getResourceRequestType().ConvertType();
+            set => JavaObject.setResourceRequestType(value.ConvertType());
         }
 
         public java.time.LocalDateTime Stop

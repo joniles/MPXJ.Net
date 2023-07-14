@@ -434,5 +434,21 @@
         {
             return value == null ? (RateSource?)null : (RateSource)value.ordinal();
         }
+
+        // ResourceRequestType
+        public static net.sf.mpxj.ResourceRequestType ConvertType(this ResourceRequestType value)
+        {
+            return net.sf.mpxj.ResourceRequestType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ResourceRequestType ConvertType(this ResourceRequestType? value)
+        {
+            return value == null ? null : net.sf.mpxj.ResourceRequestType.values()[(int)value];
+        }
+
+        public static ResourceRequestType? ConvertType(this net.sf.mpxj.ResourceRequestType value)
+        {
+            return value == null ? (ResourceRequestType?)null : (ResourceRequestType)value.ordinal();
+        }
     }
 }
