@@ -63,10 +63,10 @@ namespace org.mpxj
             set => JavaObject.setDateOrder(value.ConvertType());
         }
 
-        public net.sf.mpxj.ProjectTimeFormat TimeFormat
+        public ProjectTimeFormat? TimeFormat
         {
-            get => JavaObject.getTimeFormat();
-            set => JavaObject.setTimeFormat(value);
+            get => JavaObject.getTimeFormat().ConvertType();
+            set => JavaObject.setTimeFormat(value.ConvertType());
         }
 
         public java.time.LocalTime DefaultStartTime
@@ -99,16 +99,16 @@ namespace org.mpxj
             set => JavaObject.setPMText(value);
         }
 
-        public net.sf.mpxj.ProjectDateFormat DateFormat
+        public ProjectDateFormat? DateFormat
         {
-            get => JavaObject.getDateFormat();
-            set => JavaObject.setDateFormat(value);
+            get => JavaObject.getDateFormat().ConvertType();
+            set => JavaObject.setDateFormat(value.ConvertType());
         }
 
-        public net.sf.mpxj.ProjectDateFormat BarTextDateFormat
+        public ProjectDateFormat? BarTextDateFormat
         {
-            get => JavaObject.getBarTextDateFormat();
-            set => JavaObject.setBarTextDateFormat(value);
+            get => JavaObject.getBarTextDateFormat().ConvertType();
+            set => JavaObject.setBarTextDateFormat(value.ConvertType());
         }
 
         public java.time.LocalTime DefaultEndTime
@@ -159,10 +159,10 @@ namespace org.mpxj
             set => JavaObject.setFinishDate(value);
         }
 
-        public net.sf.mpxj.ScheduleFrom ScheduleFrom
+        public ScheduleFrom? ScheduleFrom
         {
-            get => JavaObject.getScheduleFrom();
-            set => JavaObject.setScheduleFrom(value);
+            get => JavaObject.getScheduleFrom().ConvertType();
+            set => JavaObject.setScheduleFrom(value.ConvertType());
         }
 
         public java.time.LocalDateTime CurrentDate

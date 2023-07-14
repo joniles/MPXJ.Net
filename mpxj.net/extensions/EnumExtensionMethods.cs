@@ -209,6 +209,54 @@
         {
             return value == null ? (DateOrder?)null : (DateOrder)value.ordinal();
         }
+
+        // ProjectTimeFormat
+        public static net.sf.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat value)
+        {
+            return net.sf.mpxj.ProjectTimeFormat.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat? value)
+        {
+            return value == null ? null : net.sf.mpxj.ProjectTimeFormat.values()[(int)value];
+        }
+
+        public static ProjectTimeFormat? ConvertType(this net.sf.mpxj.ProjectTimeFormat value)
+        {
+            return value == null ? (ProjectTimeFormat?)null : (ProjectTimeFormat)value.ordinal();
+        }
+
+        // ProjectDateFormat
+        public static net.sf.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat value)
+        {
+            return net.sf.mpxj.ProjectDateFormat.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat? value)
+        {
+            return value == null ? null : net.sf.mpxj.ProjectDateFormat.values()[(int)value];
+        }
+
+        public static ProjectDateFormat? ConvertType(this net.sf.mpxj.ProjectDateFormat value)
+        {
+            return value == null ? (ProjectDateFormat?)null : (ProjectDateFormat)value.ordinal();
+        }
+
+        // ScheduleFrom
+        public static net.sf.mpxj.ScheduleFrom ConvertType(this ScheduleFrom value)
+        {
+            return net.sf.mpxj.ScheduleFrom.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ScheduleFrom ConvertType(this ScheduleFrom? value)
+        {
+            return value == null ? null : net.sf.mpxj.ScheduleFrom.values()[(int)value];
+        }
+
+        public static ScheduleFrom? ConvertType(this net.sf.mpxj.ScheduleFrom value)
+        {
+            return value == null ? (ScheduleFrom?)null : (ScheduleFrom)value.ordinal();
+        }
     }
 }
 
