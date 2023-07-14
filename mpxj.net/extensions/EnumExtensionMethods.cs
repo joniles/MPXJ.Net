@@ -466,5 +466,53 @@
         {
             return value == null ? (ConstraintType?)null : (ConstraintType)value.ordinal();
         }
+
+        // TaskMode
+        public static net.sf.mpxj.TaskMode ConvertType(this TaskMode value)
+        {
+            return net.sf.mpxj.TaskMode.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.TaskMode ConvertType(this TaskMode? value)
+        {
+            return value == null ? null : net.sf.mpxj.TaskMode.values()[(int)value];
+        }
+
+        public static TaskMode? ConvertType(this net.sf.mpxj.TaskMode value)
+        {
+            return value == null ? (TaskMode?)null : (TaskMode)value.ordinal();
+        }
+
+        // PercentCompleteType
+        public static net.sf.mpxj.PercentCompleteType ConvertType(this PercentCompleteType value)
+        {
+            return net.sf.mpxj.PercentCompleteType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.PercentCompleteType ConvertType(this PercentCompleteType? value)
+        {
+            return value == null ? null : net.sf.mpxj.PercentCompleteType.values()[(int)value];
+        }
+
+        public static PercentCompleteType? ConvertType(this net.sf.mpxj.PercentCompleteType value)
+        {
+            return value == null ? (PercentCompleteType?)null : (PercentCompleteType)value.ordinal();
+        }
+
+        // ActivityType
+        public static net.sf.mpxj.ActivityType ConvertType(this ActivityType value)
+        {
+            return net.sf.mpxj.ActivityType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ActivityType ConvertType(this ActivityType? value)
+        {
+            return value == null ? null : net.sf.mpxj.ActivityType.values()[(int)value];
+        }
+
+        public static ActivityType? ConvertType(this net.sf.mpxj.ActivityType value)
+        {
+            return value == null ? (ActivityType?)null : (ActivityType)value.ordinal();
+        }
     }
 }

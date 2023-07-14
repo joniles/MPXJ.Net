@@ -898,10 +898,10 @@ namespace org.mpxj
             set => JavaObject.setGUID(value.ToJava());
         }
 
-        public net.sf.mpxj.TaskMode TaskMode
+        public TaskMode? TaskMode
         {
-            get => JavaObject.getTaskMode();
-            set => JavaObject.setTaskMode(value);
+            get => JavaObject.getTaskMode().ConvertType();
+            set => JavaObject.setTaskMode(value.ConvertType());
         }
 
         public bool Active
@@ -1111,10 +1111,10 @@ namespace org.mpxj
             set => JavaObject.setActivityID(value);
         }
 
-        public net.sf.mpxj.PercentCompleteType PercentCompleteType
+        public PercentCompleteType? PercentCompleteType
         {
-            get => JavaObject.getPercentCompleteType();
-            set => JavaObject.setPercentCompleteType(value);
+            get => JavaObject.getPercentCompleteType().ConvertType();
+            set => JavaObject.setPercentCompleteType(value.ConvertType());
         }
 
         public ActivityStatus? ActivityStatus
@@ -1123,10 +1123,10 @@ namespace org.mpxj
             set => JavaObject.setActivityStatus(value.ConvertType());
         }
 
-        public net.sf.mpxj.ActivityType ActivityType
+        public ActivityType? ActivityType
         {
-            get => JavaObject.getActivityType();
-            set => JavaObject.setActivityType(value);
+            get => JavaObject.getActivityType().ConvertType();
+            set => JavaObject.setActivityType(value.ConvertType());
         }
 
         /* TODO MPXJ 12.0.1
