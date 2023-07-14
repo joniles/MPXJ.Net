@@ -562,10 +562,10 @@ namespace org.mpxj
             set => JavaObject.setDeadline(value);
         }
 
-        public net.sf.mpxj.TaskType Type
+        public TaskType? Type
         {
-            get => JavaObject.getType();
-            set => JavaObject.setType(value);
+            get => JavaObject.getType().ConvertType();
+            set => JavaObject.setType(value.ConvertType());
         }
 
         public bool Null

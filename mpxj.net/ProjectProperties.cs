@@ -303,10 +303,10 @@ namespace org.mpxj
             set => JavaObject.setCurrencySymbol(value);
         }
 
-        public net.sf.mpxj.CurrencySymbolPosition SymbolPosition
+        public CurrencySymbolPosition? SymbolPosition
         {
-            get => JavaObject.getSymbolPosition();
-            set => JavaObject.setSymbolPosition(value);
+            get => JavaObject.getSymbolPosition().ConvertType();
+            set => JavaObject.setSymbolPosition(value.ConvertType());
         }
 
         public java.lang.Integer CurrencyDigits
@@ -525,10 +525,10 @@ namespace org.mpxj
             set => JavaObject.setActualsInSync(value);
         }
 
-        public net.sf.mpxj.TaskType DefaultTaskType
+        public TaskType? DefaultTaskType
         {
-            get => JavaObject.getDefaultTaskType();
-            set => JavaObject.setDefaultTaskType(value);
+            get => JavaObject.getDefaultTaskType().ConvertType();
+            set => JavaObject.setDefaultTaskType(value.ConvertType());
         }
 
         public EarnedValueMethod? EarnedValueMethod

@@ -1,7 +1,7 @@
 ﻿namespace org.mpxj
 {
-	internal static class EnumExtensionMethods
-	{
+    internal static class EnumExtensionMethods
+    {
         // DayType
         public static net.sf.mpxj.DayType ConvertType(this DayType value)
         {
@@ -31,7 +31,7 @@
 
         public static TimeUnit? ConvertType(this net.sf.mpxj.TimeUnit value)
         {
-            return value == null ? (TimeUnit?) null : (TimeUnit)value.getValue();
+            return value == null ? (TimeUnit?)null : (TimeUnit)value.getValue();
         }
 
         // AccrueType
@@ -257,6 +257,38 @@
         {
             return value == null ? (ScheduleFrom?)null : (ScheduleFrom)value.ordinal();
         }
+
+
+        // CurrencySymbolPosition
+        public static net.sf.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition value)
+        {
+            return net.sf.mpxj.CurrencySymbolPosition.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition? value)
+        {
+            return value == null ? null : net.sf.mpxj.CurrencySymbolPosition.values()[(int)value];
+        }
+
+        public static CurrencySymbolPosition? ConvertType(this net.sf.mpxj.CurrencySymbolPosition value)
+        {
+            return value == null ? (CurrencySymbolPosition?)null : (CurrencySymbolPosition)value.ordinal();
+        }
+
+        // TaskType
+        public static net.sf.mpxj.TaskType ConvertType(this TaskType value)
+        {
+            return net.sf.mpxj.TaskType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.TaskType ConvertType(this TaskType? value)
+        {
+            return value == null ? null : net.sf.mpxj.TaskType.values()[(int)value];
+        }
+
+        public static TaskType? ConvertType(this net.sf.mpxj.TaskType value)
+        {
+            return value == null ? (TaskType?)null : (TaskType)value.ordinal();
+        }
     }
 }
-
