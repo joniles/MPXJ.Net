@@ -9,10 +9,10 @@ namespace org.mpxj
 
         internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 
-        public net.sf.mpxj.LocalDateRange DateRange
+        public LocalDateRange DateRange
         {
-            get => JavaObject.getDateRange();
-            set => JavaObject.setDateRange(value);
+            get => _proxyManager.ProxyObject(JavaObject.getDateRange());
+            set => JavaObject.setDateRange(value.JavaObject);
         }
 
         public IList<ProjectCalendarException> ConvertToRecurringExceptions(ProjectCalendar calendar)

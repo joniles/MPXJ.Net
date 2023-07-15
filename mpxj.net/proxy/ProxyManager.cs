@@ -349,6 +349,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Duration(this, v));
         }
 
+        internal LocalDateRange ProxyObject(net.sf.mpxj.LocalDateRange value)
+        {
+            return ProxyObject(value, v => new LocalDateRange(v));
+        }
+
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));
