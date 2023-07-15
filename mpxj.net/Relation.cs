@@ -15,7 +15,7 @@ namespace org.mpxj
 
         public RelationType? Type => JavaObject.getType().ConvertType();
 
-        public net.sf.mpxj.Duration Lag => JavaObject.getLag();
+        public Duration Lag => _proxyManager.ProxyObject(JavaObject.getLag());
 
         public Task SourceTask => _proxyManager.ProxyObject(JavaObject.getSourceTask());
 

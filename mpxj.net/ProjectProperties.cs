@@ -195,22 +195,22 @@ namespace org.mpxj
             set => JavaObject.setActualCost(value);
         }
 
-        public net.sf.mpxj.Duration Work
+        public Duration Work
         {
-            get => JavaObject.getWork();
-            set => JavaObject.setWork(value);
+            get => _proxyManager.ProxyObject(JavaObject.getWork());
+            set => JavaObject.setWork(value.JavaObject);
         }
 
-        public net.sf.mpxj.Duration BaselineWork
+        public Duration BaselineWork
         {
-            get => JavaObject.getBaselineWork();
-            set => JavaObject.setBaselineWork(value);
+            get => _proxyManager.ProxyObject(JavaObject.getBaselineWork());
+            set => JavaObject.setBaselineWork(value.JavaObject);
         }
 
-        public net.sf.mpxj.Duration ActualWork
+        public Duration ActualWork
         {
-            get => JavaObject.getActualWork();
-            set => JavaObject.setActualWork(value);
+            get => _proxyManager.ProxyObject(JavaObject.getActualWork());
+            set => JavaObject.setActualWork(value.JavaObject);
         }
 
         public java.lang.Number Work2
@@ -219,22 +219,22 @@ namespace org.mpxj
             set => JavaObject.setWork2(value);
         }
 
-        public net.sf.mpxj.Duration Duration
+        public Duration Duration
         {
-            get => JavaObject.getDuration();
-            set => JavaObject.setDuration(value);
+            get => _proxyManager.ProxyObject(JavaObject.getDuration());
+            set => JavaObject.setDuration(value.JavaObject);
         }
 
-        public net.sf.mpxj.Duration BaselineDuration
+        public Duration BaselineDuration
         {
-            get => JavaObject.getBaselineDuration();
-            set => JavaObject.setBaselineDuration(value);
+            get => _proxyManager.ProxyObject(JavaObject.getBaselineDuration());
+            set => JavaObject.setBaselineDuration(value.JavaObject);
         }
 
-        public net.sf.mpxj.Duration ActualDuration
+        public Duration ActualDuration
         {
-            get => JavaObject.getActualDuration();
-            set => JavaObject.setActualDuration(value);
+            get => _proxyManager.ProxyObject(JavaObject.getActualDuration());
+            set => JavaObject.setActualDuration(value.JavaObject);
         }
 
         public java.lang.Number PercentageComplete
@@ -267,16 +267,16 @@ namespace org.mpxj
             set => JavaObject.setActualFinish(value);
         }
 
-        public net.sf.mpxj.Duration StartVariance
+        public Duration StartVariance
         {
-            get => JavaObject.getStartVariance();
-            set => JavaObject.setStartVariance(value);
+            get => _proxyManager.ProxyObject(JavaObject.getStartVariance());
+            set => JavaObject.setStartVariance(value.JavaObject);
         }
 
-        public net.sf.mpxj.Duration FinishVariance
+        public Duration FinishVariance
         {
-            get => JavaObject.getFinishVariance();
-            set => JavaObject.setFinishVariance(value);
+            get => _proxyManager.ProxyObject(JavaObject.getFinishVariance());
+            set => JavaObject.setFinishVariance(value.JavaObject);
         }
 
         public string Subject
@@ -555,10 +555,10 @@ namespace org.mpxj
             set => JavaObject.setDefaultFixedCostAccrual(value.ConvertType());
         }
 
-        public net.sf.mpxj.Duration CriticalSlackLimit
+        public Duration CriticalSlackLimit
         {
-            get => JavaObject.getCriticalSlackLimit();
-            set => JavaObject.setCriticalSlackLimit(value);
+            get => _proxyManager.ProxyObject(JavaObject.getCriticalSlackLimit());
+            set => JavaObject.setCriticalSlackLimit(value.JavaObject);
         }
 
         public java.lang.Integer BaselineForEarnedValue

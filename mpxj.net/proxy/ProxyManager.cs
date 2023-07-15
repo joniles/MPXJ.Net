@@ -60,7 +60,7 @@ namespace org.mpxj.proxy
 
         internal RecurringTask ProxyObject(net.sf.mpxj.RecurringTask value)
         {
-            return ProxyObject(value, v => new RecurringTask(v));
+            return ProxyObject(value, v => new RecurringTask(this, v));
         }
 
         internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)

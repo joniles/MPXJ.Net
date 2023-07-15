@@ -73,13 +73,13 @@ namespace org.mpxj
 
         public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
 
-        public net.sf.mpxj.Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => JavaObject.getDuration(startDate, endDate);
+        public Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate, endDate));
 
         public java.time.LocalTime GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date);
 
         public java.time.LocalTime GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date);
 
-        public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, net.sf.mpxj.Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate, duration, returnNextWorkStart);
+        public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate, duration.JavaObject, returnNextWorkStart);
 
         public java.time.LocalDateTime GetNextWorkStart(java.time.LocalDateTime date) => JavaObject.getNextWorkStart(date);
 
@@ -115,11 +115,11 @@ namespace org.mpxj
 
         public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
 
-        public net.sf.mpxj.Duration GetWork(java.time.DayOfWeek day, TimeUnit format) => JavaObject.getWork(day, format.ConvertType());
+        public Duration GetWork(java.time.DayOfWeek day, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(day, format.ConvertType()));
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDate date, TimeUnit format) => JavaObject.getWork(date, format.ConvertType());
+        public Duration GetWork(java.time.LocalDate date, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(date, format.ConvertType()));
 
-        public net.sf.mpxj.Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format) => JavaObject.getWork(startDate, endDate, format.ConvertType());
+        public Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(startDate, endDate, format.ConvertType()));
 
         public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 
