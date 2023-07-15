@@ -9,7 +9,7 @@ namespace org.mpxj
 
         string Name { get; }
 
-        net.sf.mpxj.ViewType Type { get; }
+        ViewType Type { get; }
 
         string TableName { get; }
 

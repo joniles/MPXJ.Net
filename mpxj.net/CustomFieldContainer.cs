@@ -34,9 +34,9 @@ namespace org.mpxj
             return JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias);
         }
 
-        public IList<CustomField> GetCustomFieldsByFieldTypeClass(net.sf.mpxj.FieldTypeClass typeClass)
+        public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass)
         {
-            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass));
+            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass.ConvertType()));
         }
 
         public int Size()

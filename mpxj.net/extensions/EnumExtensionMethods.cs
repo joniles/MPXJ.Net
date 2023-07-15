@@ -514,5 +514,21 @@
         {
             return value == null ? (ActivityType?)null : (ActivityType)value.ordinal();
         }
+
+        // ViewType
+        public static net.sf.mpxj.ViewType ConvertType(this ViewType value)
+        {
+            return net.sf.mpxj.ViewType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.ViewType ConvertType(this ViewType? value)
+        {
+            return value == null ? null : net.sf.mpxj.ViewType.values()[(int)value];
+        }
+
+        public static ViewType? ConvertType(this net.sf.mpxj.ViewType value)
+        {
+            return value == null ? (ViewType?)null : (ViewType)value.ordinal();
+        }
     }
 }
