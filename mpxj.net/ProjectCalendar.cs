@@ -3,7 +3,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
+    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
     {
         public new net.sf.mpxj.ProjectCalendar JavaObject { get => (net.sf.mpxj.ProjectCalendar)base.JavaObject; }
 

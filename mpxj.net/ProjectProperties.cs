@@ -4,7 +4,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class ProjectProperties : IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
+    public class ProjectProperties : ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>, IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
     {
         internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ProjectProperties JavaObject { get; }

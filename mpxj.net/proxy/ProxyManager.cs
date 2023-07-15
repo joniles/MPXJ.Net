@@ -344,6 +344,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Priority(v));
         }
 
+        internal Duration ProxyObject(net.sf.mpxj.Duration value)
+        {
+            return ProxyObject(value, v => new Duration(this, v));
+        }
+
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));
