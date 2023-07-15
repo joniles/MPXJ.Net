@@ -10,8 +10,8 @@ namespace org.mpxj
 
         object GetCachedValue(net.sf.mpxj.FieldType field);
 
-        void AddFieldListener(net.sf.mpxj.listener.FieldListener listener);
-
-        void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener);
+        // TODO: implement if required
+        //void AddFieldListener(IFieldListener listener);
+        //void RemoveFieldListener(IFieldListener listener);
     }
 }

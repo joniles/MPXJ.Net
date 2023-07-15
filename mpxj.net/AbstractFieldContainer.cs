@@ -26,14 +26,8 @@ namespace org.mpxj
             return JavaObject.getCachedValue(field);
         }
 
-        public void AddFieldListener(net.sf.mpxj.listener.FieldListener listener)
-        {
-            JavaObject.addFieldListener(listener);
-        }
-
-        public void RemoveFieldListener(net.sf.mpxj.listener.FieldListener listener)
-        {
-            JavaObject.removeFieldListener(listener);
-        }
+        // TODO: implement if required
+        // public void AddFieldListener(IFieldListener listener)
+        // public void RemoveFieldListener(IFieldListener listener)
     }
 }

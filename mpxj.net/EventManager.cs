@@ -11,21 +11,10 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public void AddProjectListener(net.sf.mpxj.listener.ProjectListener listener)
-        {
-            JavaObject.addProjectListener(listener);
-        }
-
-        // TODO: manage list
-        //public void AddProjectListeners(java.util.List listeners)
-        //{
-        //    JavaObject.addProjectListeners(listeners);
-        //}
-
-        public void RemoveProjectListener(net.sf.mpxj.listener.ProjectListener listener)
-        {
-            JavaObject.removeProjectListener(listener);
-        }
+        // TODO: implement if required
+        //public void AddProjectListener(IProjectListener listener)
+        //public void AddProjectListeners(IList<IProjectListener> listeners)
+        //public void RemoveProjectListener(IProjectListener listener)
     }
 }
 
