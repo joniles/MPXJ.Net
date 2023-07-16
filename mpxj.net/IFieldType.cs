@@ -4,11 +4,13 @@
 	{
         FieldTypeClass FieldTypeClass { get; }
 
-        string Name { get; }
+        // Note: renamed to avoid clas with, for example, Task.Name
+        string FieldName { get; }
 
         DataType? DataType { get; }
 
-        IFieldType UnitsType { get; }
+        // TODO: do we need this outside of Java?
+        // IFieldType UnitsType { get; }
     }
 }
 

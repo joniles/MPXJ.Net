@@ -16,23 +16,15 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.UserDefinedField(id, internalName, externalName, fieldTypeClass.ConvertType(), summaryTaskOnly, dataType.ConvertType());
         }
 
-
         public java.lang.Integer UniqueID => JavaObject.getUniqueID();
 
         public bool SummaryTaskOnly => JavaObject.getSummaryTaskOnly();
 
         public FieldTypeClass FieldTypeClass => JavaObject.getFieldTypeClass().ConvertType().Value;
 
-        public string Name => JavaObject.getName();
+        public string FieldName => JavaObject.getName();
 
         public DataType? DataType => JavaObject.getDataType().ConvertType();
-
-        public IFieldType UnitsType
-        {
-            get => null;
-            // TODO correctly proxy this
-            //get => JavaObject.getUnitsType();
-        }
 
         public override string ToString() => JavaObject.toString();
     }
