@@ -532,15 +532,13 @@ namespace org.mpxj
         public bool ModifyOnIntegrate
         {
             get => JavaObject.getModifyOnIntegrate();
-            // TODO: fix in 12.0.1
-            /* set => JavaObject.setModifyOnIntegrate(value);*/
+            set => JavaObject.setModifyOnIntegrate(value);
         }
 
         public bool ExpensesOnly
         {
             get => JavaObject.getExpensesOnly();
-            // TODO: fix in 12.0.1
-            /*set => JavaObject.setExpensesOnly(value); */
+            set => JavaObject.setExpensesOnly(value);
         }
 
         public java.lang.Number PeriodDur
@@ -582,8 +580,7 @@ namespace org.mpxj
         public bool Role
         {
             get => JavaObject.getRole();
-            // TODO: fix in 12.0.1
-            /* set => JavaObject.setRole(value); */
+            set => JavaObject.setRole(value);
         }
 
         public void SetCostRateTable(int index, CostRateTable crt) => JavaObject.setCostRateTable(index, crt.JavaObject);

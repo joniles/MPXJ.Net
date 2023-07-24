@@ -3,7 +3,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    // TODO: implement the fulle Notes hierarchy
+    // TODO: implement the full Notes hierarchy
 	public class Notes : IJavaObjectProxy<net.sf.mpxj.Notes>
     {
         public net.sf.mpxj.Notes JavaObject { get; }

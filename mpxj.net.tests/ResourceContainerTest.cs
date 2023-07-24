@@ -24,8 +24,7 @@ namespace org.mpxj
 
             Assert.That(container.Count, Is.EqualTo(3));
 
-            /// TODO: MPXJ 12.0.1
-            //Assert.That(project.ChildResources.Count, Is.EqualTo(2));
+            Assert.That(project.ChildResources.Count, Is.EqualTo(2));
             Assert.That(resource1.ChildResources.Count, Is.EqualTo(0));
             Assert.That(resource2.ChildResources.Count, Is.EqualTo(1));
             Assert.That(resource3.ChildResources.Count, Is.EqualTo(0));

@@ -1021,13 +1021,12 @@ namespace org.mpxj
             set => JavaObject.setWorkersPerDay(value);
         }
 
-        /* TODO: MPXJ 12.0.1
-                public bool HammockCode
-                {
-                    get => JavaObject.getHammockCode();
-                    set => JavaObject.setHammockCode(value);
-                }
-        */
+        public bool HammockCode
+        {
+            get => JavaObject.getHammockCode();
+            set => JavaObject.setHammockCode(value);
+        }
+        
         public string Mail
         {
             get => JavaObject.getMail();
@@ -1129,13 +1128,12 @@ namespace org.mpxj
             set => JavaObject.setActivityType(value.ConvertType());
         }
 
-        /* TODO MPXJ 12.0.1
-                public bool LongestPath
-                {
-                    get => JavaObject.getLongestPath();
-                    set => JavaObject.setLongestPath(value);
-                }
-        */
+        public bool LongestPath
+        {
+            get => JavaObject.getLongestPath();
+            set => JavaObject.setLongestPath(value);
+        }
+
         public java.time.LocalDateTime ExternalEarlyStart
         {
             get => JavaObject.getExternalEarlyStart();

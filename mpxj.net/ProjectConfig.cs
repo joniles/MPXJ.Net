@@ -77,31 +77,6 @@ namespace org.mpxj
             set => JavaObject.setCompleteThroughIsNextWorkStart(value);
         }
 
-        public void UpdateUniqueCounters()
-        {
-            JavaObject.updateUniqueCounters();
-        }
-
-        public void UpdateTaskUniqueCounter()
-        {
-            JavaObject.updateTaskUniqueCounter();
-        }
-
-        public void UpdateResourceUniqueCounter()
-        {
-            JavaObject.updateResourceUniqueCounter();
-        }
-
-        public void UpdateCalendarUniqueCounter()
-        {
-            JavaObject.updateCalendarUniqueCounter();
-        }
-
-        public void UpdateAssignmentUniqueCounter()
-        {
-            JavaObject.updateAssignmentUniqueCounter();
-        }
-
         public IBaselineStrategy BaselineStrategy
         {
             // TODO implement baseline startgey hierarchy
