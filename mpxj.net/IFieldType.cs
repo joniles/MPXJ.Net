@@ -4,7 +4,7 @@
 	{
         FieldTypeClass FieldTypeClass { get; }
 
-        // Note: renamed to avoid clas with, for example, Task.Name
+        // Note: renamed to avoid clash with, for example, Task.Name
         string FieldName { get; }
 
         DataType? DataType { get; }

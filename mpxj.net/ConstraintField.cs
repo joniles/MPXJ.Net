@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -6,9 +7,9 @@ namespace org.mpxj
     {
         public net.sf.mpxj.ConstraintField JavaObject { get; }
 
-        public static readonly ConstraintField UniqueId = new ConstraintField(net.sf.mpxj.ConstraintField.UNIQUE_ID);
-        public static readonly ConstraintField Task1 = new ConstraintField(net.sf.mpxj.ConstraintField.TASK1);
-        public static readonly ConstraintField Task2 = new ConstraintField(net.sf.mpxj.ConstraintField.TASK2);
+        public static readonly ConstraintField UniqueId = CreateField(net.sf.mpxj.ConstraintField.UNIQUE_ID);
+        public static readonly ConstraintField Task1 = CreateField(net.sf.mpxj.ConstraintField.TASK1);
+        public static readonly ConstraintField Task2 = CreateField(net.sf.mpxj.ConstraintField.TASK2);
 
         internal ConstraintField(net.sf.mpxj.ConstraintField javaObject)
         {
@@ -20,6 +21,11 @@ namespace org.mpxj
         public string FieldName => JavaObject.getName();
 
         public DataType? DataType => JavaObject.getDataType().ConvertType();
+
+        private static ConstraintField CreateField(net.sf.mpxj.ConstraintField javaField)
+        {
+            return EnumExtensionMethods.RegisterFieldType(javaField, new ConstraintField(javaField));
+        }
     }
 }
 
