@@ -51,7 +51,7 @@ namespace org.mpxj
 
         public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid guid)
         {
-            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ToJava()));
+            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
         }
 
         public void RegisterValue(CustomFieldValueItem item)

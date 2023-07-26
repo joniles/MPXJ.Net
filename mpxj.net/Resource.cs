@@ -501,8 +501,8 @@ namespace org.mpxj
 
         public Guid? GUID
         {
-            get => JavaObject.getGUID().FromJava();
-            set => JavaObject.setGUID(value.ToJava());
+            get => JavaObject.getGUID().ConvertType();
+            set => JavaObject.setGUID(value.ConvertType());
         }
 
         public string Unit

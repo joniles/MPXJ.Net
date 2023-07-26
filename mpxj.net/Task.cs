@@ -30,8 +30,8 @@ namespace org.mpxj
 
         public Guid? SubprojectGUID
         {
-            get => JavaObject.getSubprojectGUID().FromJava();
-            set => JavaObject.setSubprojectGUID(value.ToJava());
+            get => JavaObject.getSubprojectGUID().ConvertType();
+            set => JavaObject.setSubprojectGUID(value.ConvertType());
         }
 
         public java.lang.Number PercentageComplete
@@ -894,8 +894,8 @@ namespace org.mpxj
 
         public Guid? GUID
         {
-            get => JavaObject.getGUID().FromJava();
-            set => JavaObject.setGUID(value.ToJava());
+            get => JavaObject.getGUID().ConvertType();
+            set => JavaObject.setGUID(value.ConvertType());
         }
 
         public TaskMode? TaskMode
