@@ -15,6 +15,11 @@ namespace org.mpxj.proxy
 
         private N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
         {
+            if (o == null)
+            {
+                return default;
+            }
+
             if (!_objectCache.ContainsKey(o))
             {
                 _objectCache[o] = proxyFunction.Invoke(o);
