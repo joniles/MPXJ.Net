@@ -10,9 +10,6 @@
         string FieldName { get; }
 
         DataType? DataType { get; }
-
-        // TODO: do we need this outside of Java?
-        // IFieldType UnitsType { get; }
     }
 }
 
