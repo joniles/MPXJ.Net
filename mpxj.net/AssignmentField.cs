@@ -2,9 +2,9 @@
 
 namespace org.mpxj
 {
-    public class AssignmentField : IFieldType, IJavaObjectProxy<net.sf.mpxj.AssignmentField>
+    public class AssignmentField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.AssignmentField JavaObject { get; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public static readonly AssignmentField Start = CreateField(net.sf.mpxj.AssignmentField.START);
         public static readonly AssignmentField Duration1Units = CreateField(net.sf.mpxj.AssignmentField.DURATION1_UNITS);

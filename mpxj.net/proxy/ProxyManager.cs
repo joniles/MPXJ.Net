@@ -215,7 +215,7 @@ namespace org.mpxj.proxy
 
         internal DataLink ProxyObject(net.sf.mpxj.DataLink value)
         {
-            return ProxyObject(value, v => new DataLink(v));
+            return ProxyObject(value, v => new DataLink(this, v));
         }
 
         internal CustomField ProxyObject(net.sf.mpxj.CustomField value)
@@ -295,7 +295,7 @@ namespace org.mpxj.proxy
 
         internal Column ProxyObject(net.sf.mpxj.Column value)
         {
-            return ProxyObject(value, v => new Column(v));
+            return ProxyObject(value, v => new Column(this, v));
         }
 
         internal TimephasedWork ProxyObject(net.sf.mpxj.TimephasedWork value)
@@ -352,6 +352,21 @@ namespace org.mpxj.proxy
         internal LocalDateRange ProxyObject(net.sf.mpxj.LocalDateRange value)
         {
             return ProxyObject(value, v => new LocalDateRange(v));
+        }
+
+        internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+
+            if (value is net.sf.mpxj.UserDefinedField udf)
+            {
+                return ProxyObject(udf, v => new UserDefinedField(v));
+            }
+
+            return EnumExtensionMethods.FieldTypeDictionary[value];
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)

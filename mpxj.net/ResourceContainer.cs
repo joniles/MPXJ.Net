@@ -17,11 +17,11 @@ namespace org.mpxj
 
         public void UpdateStructure() => JavaObject.updateStructure();
 
-        // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
+        // TODO: IFieldType implementation
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<IFieldType, IFieldType>(JavaObject.getPopulatedFields());
 
         public IList<CustomField> CustomFields => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFields());
 
-        public net.sf.mpxj.FieldType GetFieldTypeByAlias(string alias) => JavaObject.getFieldTypeByAlias(alias);
+        public IFieldType GetFieldTypeByAlias(string alias) => _proxyManager.ProxyObject(JavaObject.getFieldTypeByAlias(alias));
     }
 }

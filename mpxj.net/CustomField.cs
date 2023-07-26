@@ -14,7 +14,7 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.FieldType FieldType => JavaObject.getFieldType();
+        public IFieldType FieldType => _proxyManager.ProxyObject(JavaObject.getFieldType());
 
         public CustomFieldLookupTable LookupTable => _proxyManager.ProxyObject(JavaObject.getLookupTable());
 

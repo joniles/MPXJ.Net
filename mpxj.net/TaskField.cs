@@ -2,9 +2,9 @@
 
 namespace org.mpxj
 {
-    public class TaskField : IFieldType, IJavaObjectProxy<net.sf.mpxj.TaskField>
+    public class TaskField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.TaskField JavaObject { get; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public static readonly TaskField Start = CreateField(net.sf.mpxj.TaskField.START);
         public static readonly TaskField DurationUnits = CreateField(net.sf.mpxj.TaskField.DURATION_UNITS);

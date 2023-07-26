@@ -11,19 +11,19 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public void Set(net.sf.mpxj.FieldType field, object value)
+        public void Set(IFieldType field, object value)
         {
-            JavaObject.set(field, value);
+            JavaObject.set(field.JavaObject, value);
         }
 
-        public object Get(net.sf.mpxj.FieldType field)
+        public object Get(IFieldType field)
         {
-            return JavaObject.get(field);
+            return JavaObject.get(field.JavaObject);
         }
 
-        public object GetCachedValue(net.sf.mpxj.FieldType field)
+        public object GetCachedValue(IFieldType field)
         {
-            return JavaObject.getCachedValue(field);
+            return JavaObject.getCachedValue(field.JavaObject);
         }
 
         // TODO: implement if required

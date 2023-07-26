@@ -3,9 +3,9 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class ConstraintField : IFieldType, IJavaObjectProxy<net.sf.mpxj.ConstraintField>
+    public class ConstraintField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.ConstraintField JavaObject { get; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public static readonly ConstraintField UniqueId = CreateField(net.sf.mpxj.ConstraintField.UNIQUE_ID);
         public static readonly ConstraintField Task1 = CreateField(net.sf.mpxj.ConstraintField.TASK1);

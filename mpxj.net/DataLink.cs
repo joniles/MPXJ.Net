@@ -4,10 +4,12 @@ namespace org.mpxj
 {
     public class DataLink : IJavaObjectProxy<net.sf.mpxj.DataLink>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.DataLink JavaObject { get; }
 
-        internal DataLink(net.sf.mpxj.DataLink javaObject)
+        internal DataLink(ProxyManager proxyManager, net.sf.mpxj.DataLink javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -18,10 +20,10 @@ namespace org.mpxj
 
         public string ID => JavaObject.getID();
 
-        public net.sf.mpxj.FieldType SourceField
+        public IFieldType SourceField
         {
-            get => JavaObject.getSourceField();
-            set => JavaObject.setSourceField(value);
+            get => _proxyManager.ProxyObject(JavaObject.getSourceField());
+            set => JavaObject.setSourceField(value.JavaObject);
         }
 
         public java.lang.Integer SourceUniqueID
@@ -30,10 +32,10 @@ namespace org.mpxj
             set => JavaObject.setSourceUniqueID(value);
         }
 
-        public net.sf.mpxj.FieldType TargetField
+        public IFieldType TargetField
         {
-            get => JavaObject.getTargetField();
-            set => JavaObject.setTargetField(value);
+            get => _proxyManager.ProxyObject(JavaObject.getTargetField());
+            set => JavaObject.setTargetField(value.JavaObject);
         }
 
         public java.lang.Integer TargetUniqueID

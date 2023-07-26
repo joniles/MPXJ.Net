@@ -811,6 +811,6 @@ namespace org.mpxj
         public ProjectFile ResourcePoolObject => new ProjectFile(JavaObject.getResourcePoolObject());
 
         // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<IFieldType, IFieldType>(JavaObject.getPopulatedFields());
     }
 }

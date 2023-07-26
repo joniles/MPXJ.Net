@@ -4,10 +4,12 @@ namespace org.mpxj
 {
     public class Column : IJavaObjectProxy<net.sf.mpxj.Column>
     {
+        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Column JavaObject { get; }
 
-        internal Column(net.sf.mpxj.Column javaObject)
+        internal Column(ProxyManager proxyManager, net.sf.mpxj.Column javaObject)
         {
+            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -28,10 +30,10 @@ namespace org.mpxj
             set => JavaObject.setAlignTitle(value);
         }
 
-        public net.sf.mpxj.FieldType FieldType
+        public IFieldType FieldType
         {
-            get => JavaObject.getFieldType();
-            set => JavaObject.setFieldType(value);
+            get => _proxyManager.ProxyObject(JavaObject.getFieldType());
+            set => JavaObject.setFieldType(value.JavaObject);
         }
 
         public string Title

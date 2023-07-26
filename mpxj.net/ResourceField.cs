@@ -3,9 +3,9 @@ using sun.tools.jar.resources;
 
 namespace org.mpxj
 {
-    public class ResourceField : IFieldType, IJavaObjectProxy<net.sf.mpxj.ResourceField>
+    public class ResourceField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.ResourceField JavaObject { get; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public static readonly ResourceField Start = CreateField(net.sf.mpxj.ResourceField.START);
         public static readonly ResourceField Duration1Units = CreateField(net.sf.mpxj.ResourceField.DURATION1_UNITS);

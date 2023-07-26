@@ -31,10 +31,10 @@ namespace org.mpxj
             set => JavaObject.setCellBackgroundColor(value);
         }
 
-        public net.sf.mpxj.FieldType Field
+        public IFieldType Field
         {
-            get => JavaObject.getField();
-            set => JavaObject.setField(value);
+            get => _proxyManager.ProxyObject(JavaObject.getField());
+            set => JavaObject.setField(value.JavaObject);
         }
 
         public FontStyle Font

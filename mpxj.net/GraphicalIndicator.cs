@@ -16,10 +16,10 @@ namespace org.mpxj
 
         public int Evaluate(IFieldContainer container) => JavaObject.evaluate(container.JavaObject);
 
-        public net.sf.mpxj.FieldType FieldType
+        public IFieldType FieldType
         {
-            get => JavaObject.getFieldType();
-            set => JavaObject.setFieldType(value);
+            get => _proxyManager.ProxyObject(JavaObject.getFieldType());
+            set => JavaObject.setFieldType(value.JavaObject);
         }
 
         public bool DisplayGraphicalIndicators

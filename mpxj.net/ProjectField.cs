@@ -2,9 +2,9 @@
 
 namespace org.mpxj
 {
-    public class ProjectField : IFieldType, IJavaObjectProxy<net.sf.mpxj.ProjectField>
+    public class ProjectField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.ProjectField JavaObject { get; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public static readonly ProjectField StartDate = CreateField(net.sf.mpxj.ProjectField.START_DATE);
         public static readonly ProjectField CurrencySymbol = CreateField(net.sf.mpxj.ProjectField.CURRENCY_SYMBOL);

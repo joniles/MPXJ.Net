@@ -116,7 +116,7 @@ namespace org.mpxj
         public void ClearBaseline(int index) => JavaObject.clearBaseline(index);
 
         // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(JavaObject.getPopulatedFields());
+        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<IFieldType, IFieldType>(JavaObject.getPopulatedFields());
 
         public void ExpandSubprojects() => JavaObject.expandSubprojects();
     }

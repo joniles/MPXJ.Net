@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
     internal static class EnumExtensionMethods
     {
-        private static Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
+        internal static Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
 
         internal static T RegisterFieldType<T>(net.sf.mpxj.FieldType javaFieldType, T fieldType) where T : IFieldType
         {
@@ -539,36 +540,6 @@ namespace org.mpxj
         public static ViewType? ConvertType(this net.sf.mpxj.ViewType value)
         {
             return value == null ? (ViewType?)null : (ViewType)value.ordinal();
-        }
-
-        // ConstraintField
-        public static ConstraintField ConvertType(this net.sf.mpxj.ConstraintField value)
-        {
-            return (ConstraintField)(value == null ? null : FieldTypeDictionary[value]);
-        }
-
-        // TaskField
-        public static TaskField ConvertType(this net.sf.mpxj.TaskField value)
-        {
-            return (TaskField)(value == null ? null : FieldTypeDictionary[value]);
-        }
-
-        // ResourceField
-        public static ResourceField ConvertType(this net.sf.mpxj.ResourceField value)
-        {
-            return (ResourceField)(value == null ? null : FieldTypeDictionary[value]);
-        }
-
-        // ProjectField
-        public static ProjectField ConvertType(this net.sf.mpxj.ProjectField value)
-        {
-            return (ProjectField)(value == null ? null : FieldTypeDictionary[value]);
-        }
-
-        // AssignmentField
-        public static AssignmentField ConvertType(this net.sf.mpxj.AssignmentField value)
-        {
-            return (AssignmentField)(value == null ? null : FieldTypeDictionary[value]);
         }
     }
 }

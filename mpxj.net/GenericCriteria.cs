@@ -20,10 +20,10 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.GenericCriteria(properties.JavaObject);
         }
 
-        public net.sf.mpxj.FieldType LeftValue
+        public IFieldType LeftValue
         {
-            get => JavaObject.getLeftValue();
-            set => JavaObject.setLeftValue(value);
+            get => _proxyManager.ProxyObject(JavaObject.getLeftValue());
+            set => JavaObject.setLeftValue(value.JavaObject);
         }
 
         public TestOperator? Operator

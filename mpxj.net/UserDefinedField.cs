@@ -2,10 +2,10 @@
 
 namespace org.mpxj
 {
-    public class UserDefinedField : IFieldType, IJavaObjectProxy<net.sf.mpxj.UserDefinedField>
+    public class UserDefinedField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
-        public net.sf.mpxj.UserDefinedField JavaObject { get; }
-
+        public net.sf.mpxj.FieldType JavaObject { get; }
+       
         internal UserDefinedField(net.sf.mpxj.UserDefinedField javaObject)
         {
             JavaObject = javaObject;
@@ -16,9 +16,9 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.UserDefinedField(id, internalName, externalName, fieldTypeClass.ConvertType(), summaryTaskOnly, dataType.ConvertType());
         }
 
-        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
+        public java.lang.Integer UniqueID => ((net.sf.mpxj.UserDefinedField)JavaObject).getUniqueID();
 
-        public bool SummaryTaskOnly => JavaObject.getSummaryTaskOnly();
+        public bool SummaryTaskOnly => ((net.sf.mpxj.UserDefinedField)JavaObject).getSummaryTaskOnly();
 
         public FieldTypeClass FieldTypeClass => JavaObject.getFieldTypeClass().ConvertType().Value;
 
@@ -26,7 +26,6 @@ namespace org.mpxj
 
         public DataType? DataType => JavaObject.getDataType().ConvertType();
 
-        public override string ToString() => JavaObject.toString();
+        public override string ToString() => ((net.sf.mpxj.UserDefinedField)JavaObject).toString();
     }
 }
-

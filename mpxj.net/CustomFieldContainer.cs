@@ -14,24 +14,24 @@ namespace org.mpxj
             _proxyManager = proxyManager;
         }
 
-        public CustomField Get(net.sf.mpxj.FieldType field)
+        public CustomField Get(IFieldType field)
         {
-            return _fromJava(JavaObject.get(field));
+            return _fromJava(JavaObject.get(field.JavaObject));
         }
 
-        public CustomField GetOrCreate(net.sf.mpxj.FieldType field)
+        public CustomField GetOrCreate(IFieldType field)
         {
-            return _fromJava(JavaObject.getOrCreate(field));
+            return _fromJava(JavaObject.getOrCreate(field.JavaObject));
         }
 
-        public CustomField Add(net.sf.mpxj.FieldType field)
+        public CustomField Add(IFieldType field)
         {
-            return _fromJava(JavaObject.add(field));
+            return _fromJava(JavaObject.add(field.JavaObject));
         }
 
-        public net.sf.mpxj.FieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias)
+        public IFieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias)
         {
-            return JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias);
+            return _proxyManager.ProxyObject(JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias));
         }
 
         public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass)
