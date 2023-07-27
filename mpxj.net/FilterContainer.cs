@@ -24,6 +24,6 @@ namespace org.mpxj
 
         public Filter GetFilterByName(string name) => _proxyManager.ProxyObject(JavaObject.getFilterByName(name));
 
-        public Filter GetFilterByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getFilterByID(id));
+        public Filter GetFilterByID(int id) => _proxyManager.ProxyObject(JavaObject.getFilterByID(id.ConvertType()));
     }
 }

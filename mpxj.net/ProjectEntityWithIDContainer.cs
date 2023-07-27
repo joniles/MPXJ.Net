@@ -9,9 +9,9 @@ namespace org.mpxj
 
         public new net.sf.mpxj.ProjectEntityWithIDContainer JavaObject => (net.sf.mpxj.ProjectEntityWithIDContainer)base.JavaObject;
 
-        public N GetByID(java.lang.Integer id)
+        public N GetByID(int id)
         {
-            return _fromJava((M)JavaObject.getByID(id));
+            return _fromJava((M)JavaObject.getByID(id.ConvertType()));
         }
     }
 }

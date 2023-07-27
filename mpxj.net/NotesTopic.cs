@@ -11,18 +11,18 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public NotesTopic(java.lang.Integer uniqueID, java.lang.Integer sequenceNumber, string name, bool availableForEPS, bool availableForProject, bool availableForWBS, bool availableForActivity)
+        public NotesTopic(int uniqueID, int sequenceNumber, string name, bool availableForEPS, bool availableForProject, bool availableForWBS, bool availableForActivity)
         {
-            JavaObject = new net.sf.mpxj.NotesTopic(uniqueID, sequenceNumber, name, availableForEPS, availableForProject, availableForWBS, AvailableForActivity);
+            JavaObject = new net.sf.mpxj.NotesTopic(uniqueID.ConvertType(), sequenceNumber.ConvertType(), name, availableForEPS, availableForProject, availableForWBS, AvailableForActivity);
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
-        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
+        public int SequenceNumber => JavaObject.getSequenceNumber().ConvertType().Value;
 
         public string Name => JavaObject.getName();
 

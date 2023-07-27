@@ -14,25 +14,25 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public ActivityCodeScope? Scope => JavaObject.getScope().ConvertType();
 
-        public java.lang.Integer ScopeProjectUniqueID => JavaObject.getScopeProjectUniqueID();
+        public int? ScopeProjectUniqueID => JavaObject.getScopeProjectUniqueID().ConvertType();
 
-        public java.lang.Integer ScopeEpsUniqueID => JavaObject.getScopeEpsUniqueID();
+        public int? ScopeEpsUniqueID => JavaObject.getScopeEpsUniqueID().ConvertType();
 
-        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
+        public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
         public string Name => JavaObject.getName();
 
         public bool Secure => JavaObject.getSecure();
 
-        public java.lang.Integer MaxLength => JavaObject.getMaxLength();
+        public int? MaxLength => JavaObject.getMaxLength().ConvertType();
 
-        public ActivityCodeValue AddValue(java.lang.Integer uniqueID, java.lang.Integer sequenceNumber, string name, string description, java.awt.Color color)
+        public ActivityCodeValue AddValue(int? uniqueID, int? sequenceNumber, string name, string description, java.awt.Color color)
         {
-            return _proxyManager.ProxyObject(JavaObject.addValue(uniqueID, sequenceNumber, name, description, color));
+            return _proxyManager.ProxyObject(JavaObject.addValue(uniqueID.ConvertType(), sequenceNumber.ConvertType(), name, description, color));
         }
 
         public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());

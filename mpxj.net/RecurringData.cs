@@ -28,10 +28,10 @@ namespace org.mpxj
             set => JavaObject.setFinishDate(value);
         }
 
-        public java.lang.Integer tOccurrences
+        public int? tOccurrences
         {
-            get => JavaObject.getOccurrences();
-            set => JavaObject.setOccurrences(value);
+            get => JavaObject.getOccurrences().ConvertType();
+            set => JavaObject.setOccurrences(value.ConvertType());
         }
 
         public RecurrenceType? RecurrenceType
@@ -62,10 +62,10 @@ namespace org.mpxj
             set => JavaObject.setRelative(value);
         }
 
-        public java.lang.Integer Frequency
+        public int? Frequency
         {
-            get => JavaObject.getFrequency();
-            set => JavaObject.setFrequency(value);
+            get => JavaObject.getFrequency().ConvertType();
+            set => JavaObject.setFrequency(value.ConvertType());
         }
 
         public java.time.DayOfWeek DayOfWeek
@@ -74,16 +74,16 @@ namespace org.mpxj
             set => JavaObject.setDayOfWeek(value);
         }
 
-        public java.lang.Integer DayNumber
+        public int? DayNumber
         {
-            get => JavaObject.getDayNumber();
-            set => JavaObject.setDayNumber(value);
+            get => JavaObject.getDayNumber().ConvertType();
+            set => JavaObject.setDayNumber(value.ConvertType());
         }
 
-        public java.lang.Integer MonthNumber
+        public int? MonthNumber
         {
-            get => JavaObject.getMonthNumber();
-            set => JavaObject.setMonthNumber(value);
+            get => JavaObject.getMonthNumber().ConvertType();
+            set => JavaObject.setMonthNumber(value.ConvertType());
         }
 
         public java.time.LocalDate[] Dates => JavaObject.getDates();

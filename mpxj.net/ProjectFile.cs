@@ -53,15 +53,15 @@ namespace org.mpxj
 
         public ProjectCalendar GetCalendarByName(string calendarName) => _proxyManager.ProxyObject(JavaObject.getCalendarByName(calendarName));
 
-        public ProjectCalendar GetCalendarByUniqueID(java.lang.Integer calendarID) => _proxyManager.ProxyObject(JavaObject.getCalendarByUniqueID(calendarID));
+        public ProjectCalendar GetCalendarByUniqueID(int calendarID) => _proxyManager.ProxyObject(JavaObject.getCalendarByUniqueID(calendarID.ConvertType()));
 
-        public Task GetTaskByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getTaskByID(id));
+        public Task GetTaskByID(int id) => _proxyManager.ProxyObject(JavaObject.getTaskByID(id.ConvertType()));
 
-        public Task GetTaskByUniqueID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getTaskByUniqueID(id));
+        public Task GetTaskByUniqueID(int id) => _proxyManager.ProxyObject(JavaObject.getTaskByUniqueID(id.ConvertType()));
 
-        public Resource GetResourceByID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getResourceByID(id));
+        public Resource GetResourceByID(int id) => _proxyManager.ProxyObject(JavaObject.getResourceByID(id.ConvertType()));
 
-        public Resource GetResourceByUniqueID(java.lang.Integer id) => _proxyManager.ProxyObject(JavaObject.getResourceByUniqueID(id));
+        public Resource GetResourceByUniqueID(int id) => _proxyManager.ProxyObject(JavaObject.getResourceByUniqueID(id.ConvertType()));
 
         public void UpdateStructure() => JavaObject.updateStructure();
 

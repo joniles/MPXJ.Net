@@ -9,38 +9,38 @@ namespace org.mpxj
 
         internal ProjectCalendar(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
 
-        public java.lang.Integer MinutesPerDay => JavaObject.getMinutesPerDay();
+        public int? MinutesPerDay => JavaObject.getMinutesPerDay().ConvertType();
 
-        public java.lang.Integer MinutesPerWeek => JavaObject.getMinutesPerWeek();
+        public int? MinutesPerWeek => JavaObject.getMinutesPerWeek().ConvertType();
 
-        public java.lang.Integer MinutesPerMonth => JavaObject.getMinutesPerMonth();
+        public int? MinutesPerMonth => JavaObject.getMinutesPerMonth().ConvertType();
 
-        public java.lang.Integer MinutesPerYear => JavaObject.getMinutesPerYear();
+        public int? MinutesPerYear => JavaObject.getMinutesPerYear().ConvertType();
 
-        public java.lang.Integer DaysPerMonth => JavaObject.getDaysPerMonth();
+        public int? DaysPerMonth => JavaObject.getDaysPerMonth().ConvertType();
 
-        public java.lang.Integer CalendarMinutesPerDay
+        public int? CalendarMinutesPerDay
         {
-            get => JavaObject.getCalendarMinutesPerDay();
-            set => JavaObject.setCalendarMinutesPerDay(value);
+            get => JavaObject.getCalendarMinutesPerDay().ConvertType();
+            set => JavaObject.setCalendarMinutesPerDay(value.ConvertType());
         }
 
-        public java.lang.Integer CalendarMinutesPerWeek
+        public int? CalendarMinutesPerWeek
         {
-            get => JavaObject.getCalendarMinutesPerWeek();
-            set => JavaObject.setCalendarMinutesPerWeek(value);
+            get => JavaObject.getCalendarMinutesPerWeek().ConvertType();
+            set => JavaObject.setCalendarMinutesPerWeek(value.ConvertType());
         }
 
-        public java.lang.Integer CalendarMinutesPerMonth
+        public int? CalendarMinutesPerMonth
         {
-            get => JavaObject.getCalendarMinutesPerMonth();
-            set => JavaObject.setCalendarMinutesPerMonth(value);
+            get => JavaObject.getCalendarMinutesPerMonth().ConvertType();
+            set => JavaObject.setCalendarMinutesPerMonth(value.ConvertType());
         }
 
-        public java.lang.Integer CalendarMinutesPerYear
+        public int? CalendarMinutesPerYear
         {
-            get => JavaObject.getCalendarMinutesPerYear();
-            set => JavaObject.setCalendarMinutesPerYear(value);
+            get => JavaObject.getCalendarMinutesPerYear().ConvertType();
+            set => JavaObject.setCalendarMinutesPerYear(value.ConvertType());
         }
 
         public ProjectCalendarWeek AddWorkWeek() => _proxyManager.ProxyObject(JavaObject.addWorkWeek());
@@ -71,7 +71,7 @@ namespace org.mpxj
             set => JavaObject.setParent(value.JavaObject);
         }
 
-        public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
+        public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
         public Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate, endDate));
 
@@ -97,10 +97,10 @@ namespace org.mpxj
 
         public ProjectCalendarHours GetHours(java.time.LocalDateTime date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public IList<Task> Tasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTasks());

@@ -20,6 +20,20 @@ namespace org.mpxj
             return java.util.UUID.fromString(g.ToString());
         }
 
+        public static int? ConvertType(this java.lang.Integer value)
+        {
+            return value == null ? (int?)null : value.intValue();
+        }
+
+        public static java.lang.Integer ConvertType(this int? value)
+        {
+            return value == null ? null : java.lang.Integer.valueOf(value.Value);
+        }
+
+        public static java.lang.Integer ConvertType(this int value)
+        {
+            return java.lang.Integer.valueOf(value);
+        }
 
         public static object GenericJavaObject(this object o)
         {

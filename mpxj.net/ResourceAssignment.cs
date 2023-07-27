@@ -12,10 +12,10 @@ namespace org.mpxj
 
         public ResourceAssignmentWorkgroupFields AddWorkgroupAssignment() => _proxyManager.ProxyObject(JavaObject.addWorkgroupAssignment());
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public java.lang.Number Units
@@ -108,10 +108,10 @@ namespace org.mpxj
             set => JavaObject.setDelay(value.JavaObject);
         }
 
-        public java.lang.Integer ResourceUniqueID
+        public int? ResourceUniqueID
         {
-            get => JavaObject.getResourceUniqueID();
-            set => JavaObject.setResourceUniqueID(value);
+            get => JavaObject.getResourceUniqueID().ConvertType();
+            set => JavaObject.setResourceUniqueID(value.ConvertType());
         }
 
         public ResourceAssignmentWorkgroupFields WorkgroupAssignment => _proxyManager.ProxyObject(JavaObject.getWorkgroupAssignment());
@@ -140,16 +140,16 @@ namespace org.mpxj
             set => JavaObject.setLevelingDelay(value.JavaObject);
         }
 
-        public java.lang.Integer RateIndex
+        public int? RateIndex
         {
-            get => JavaObject.getRateIndex();
-            set => JavaObject.setRateIndex(value);
+            get => JavaObject.getRateIndex().ConvertType();
+            set => JavaObject.setRateIndex(value.ConvertType());
         }
 
-        public java.lang.Integer RoleUniqueID
+        public int? RoleUniqueID
         {
-            get => JavaObject.getRoleUniqueID();
-            set => JavaObject.setRoleUniqueID(value);
+            get => JavaObject.getRoleUniqueID().ConvertType();
+            set => JavaObject.setRoleUniqueID(value.ConvertType());
         }
 
         public Resource Role
@@ -202,10 +202,10 @@ namespace org.mpxj
             set => JavaObject.setVariableRateUnits(value.ConvertType());
         }
 
-        public java.lang.Integer TaskUniqueID
+        public int? TaskUniqueID
         {
-            get => JavaObject.getTaskUniqueID();
-            set => JavaObject.setTaskUniqueID(value);
+            get => JavaObject.getTaskUniqueID().ConvertType();
+            set => JavaObject.setTaskUniqueID(value.ConvertType());
         }
 
         public java.lang.Number BudgetCost
@@ -554,10 +554,10 @@ namespace org.mpxj
             set => JavaObject.setCalculateCostsFromUnits(value);
         }
 
-        public java.lang.Integer CostAccountUniqueID
+        public int? CostAccountUniqueID
         {
-            get => JavaObject.getCostAccountUniqueID();
-            set => JavaObject.setCostAccountUniqueID(value);
+            get => JavaObject.getCostAccountUniqueID().ConvertType();
+            set => JavaObject.setCostAccountUniqueID(value.ConvertType());
         }
 
         public CostAccount CostAccount

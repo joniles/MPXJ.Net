@@ -4,6 +4,6 @@ namespace org.mpxj
 {
 	public interface IProjectEntityWithUniqueID
 	{
-        java.lang.Integer UniqueID { get; set; }
+        int? UniqueID { get; set; }
 	}
 }

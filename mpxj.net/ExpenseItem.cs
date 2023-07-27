@@ -19,10 +19,10 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public string Name
@@ -31,7 +31,7 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public java.lang.Integer AccountUniqueID => JavaObject.getAccountUniqueID();
+        public int? AccountUniqueID => JavaObject.getAccountUniqueID().ConvertType();
 
         public CostAccount Account
         {
@@ -39,7 +39,7 @@ namespace org.mpxj
             set => JavaObject.setAccount(value.JavaObject);
         }
 
-        public java.lang.Integer CategoryUniqueID => JavaObject.getCategoryUniqueID();
+        public int? CategoryUniqueID => JavaObject.getCategoryUniqueID().ConvertType();
 
         public ExpenseCategory Category
         {

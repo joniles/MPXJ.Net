@@ -12,12 +12,12 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public CustomFieldValueItem(java.lang.Integer uniqueID)
+        public CustomFieldValueItem(int uniqueID)
         {
-            JavaObject = new net.sf.mpxj.mpp.CustomFieldValueItem(uniqueID);
+            JavaObject = new net.sf.mpxj.mpp.CustomFieldValueItem(uniqueID.ConvertType());
         }
 
-        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public object Value
         {
@@ -31,10 +31,10 @@ namespace org.mpxj
             set => JavaObject.setDescription(value);
         }
 
-        public java.lang.Integer Parent
+        public int? Parent
         {
-            get => JavaObject.getParent();
-            set => JavaObject.setParent(value);
+            get => JavaObject.getParent().ConvertType();
+            set => JavaObject.setParent(value.ConvertType());
         }
 
         public Guid? GUID

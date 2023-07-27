@@ -21,10 +21,10 @@ namespace org.mpxj
 
         public Task Task => _proxyManager.ProxyObject(JavaObject.getTask());
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public string Name
@@ -39,10 +39,10 @@ namespace org.mpxj
             set => JavaObject.setPercentComplete(value);
         }
 
-        public java.lang.Integer SequenceNumber
+        public int? SequenceNumber
         {
-            get => JavaObject.getSequenceNumber();
-            set => JavaObject.setSequenceNumber(value);
+            get => JavaObject.getSequenceNumber().ConvertType();
+            set => JavaObject.setSequenceNumber(value.ConvertType());
         }
 
         public java.lang.Double Weight

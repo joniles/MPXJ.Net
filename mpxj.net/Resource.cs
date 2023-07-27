@@ -344,10 +344,10 @@ namespace org.mpxj
             set => JavaObject.setEnterprise(value);
         }
 
-        public java.lang.Integer CalendarUniqueID
+        public int? CalendarUniqueID
         {
-            get => JavaObject.getCalendarUniqueID();
-            set => JavaObject.setCalendarUniqueID(value);
+            get => JavaObject.getCalendarUniqueID().ConvertType();
+            set => JavaObject.setCalendarUniqueID(value.ConvertType());
         }
 
         public ProjectCalendar Calendar
@@ -380,10 +380,10 @@ namespace org.mpxj
             set => JavaObject.setBaselineWork(value.JavaObject);
         }
 
-        public java.lang.Integer ID
+        public int? ID
         {
-            get => JavaObject.getID();
-            set => JavaObject.setID(value);
+            get => JavaObject.getID().ConvertType();
+            set => JavaObject.setID(value.ConvertType());
         }
 
         public bool LinkedFields
@@ -392,22 +392,22 @@ namespace org.mpxj
             set => JavaObject.setLinkedFields(value);
         }
 
-        public java.lang.Integer Objects
+        public int? Objects
         {
-            get => JavaObject.getObjects();
-            set => JavaObject.setObjects(value);
+            get => JavaObject.getObjects().ConvertType();
+            set => JavaObject.setObjects(value.ConvertType());
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
-        public java.lang.Integer ParentResourceUniqueID
+        public int? ParentResourceUniqueID
         {
-            get => JavaObject.getParentResourceUniqueID();
-            set => JavaObject.setParentResourceUniqueID(value);
+            get => JavaObject.getParentResourceUniqueID().ConvertType();
+            set => JavaObject.setParentResourceUniqueID(value.ConvertType());
         }
 
         public Resource ParentResource
@@ -454,10 +454,10 @@ namespace org.mpxj
 
         public void SetFieldByAlias(string alias, object value) => JavaObject.setFieldByAlias(alias, value.GenericJavaObject());
 
-        public java.lang.Integer SubprojectResourceUniqueID
+        public int? SubprojectResourceUniqueID
         {
-            get => JavaObject.getSubprojectResourceUniqueID();
-            set => JavaObject.setSubprojectResourceUniqueID(value);
+            get => JavaObject.getSubprojectResourceUniqueID().ConvertType();
+            set => JavaObject.setSubprojectResourceUniqueID(value.ConvertType());
         }
 
         public java.lang.Number GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index);
@@ -634,16 +634,16 @@ namespace org.mpxj
             set => JavaObject.setCalculateCostsFromUnits(value);
         }
 
-        public java.lang.Integer SequenceNumber
+        public int? SequenceNumber
         {
-            get => JavaObject.getSequenceNumber();
-            set => JavaObject.setSequenceNumber(value);
+            get => JavaObject.getSequenceNumber().ConvertType();
+            set => JavaObject.setSequenceNumber(value.ConvertType());
         }
 
-        public java.lang.Integer LocationUniqueID
+        public int? LocationUniqueID
         {
-            get => JavaObject.getLocationUniqueID();
-            set => JavaObject.setLocationUniqueID(value);
+            get => JavaObject.getLocationUniqueID().ConvertType();
+            set => JavaObject.setLocationUniqueID(value.ConvertType());
         }
 
         public Location Location

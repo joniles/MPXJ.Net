@@ -13,16 +13,16 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public CostAccount(ProjectFile file, java.lang.Integer uniqueID, string id, string name, string description, java.lang.Integer sequenceNumber)
+        public CostAccount(ProjectFile file, int uniqueID, string id, string name, string description, int sequenceNumber)
         {
             _proxyManager = file._proxyManager;
-            JavaObject = new net.sf.mpxj.CostAccount(uniqueID, id, name, description, sequenceNumber);
+            JavaObject = new net.sf.mpxj.CostAccount(uniqueID.ConvertType(), id, name, description, sequenceNumber.ConvertType());
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public string ID => JavaObject.getID();
@@ -31,9 +31,9 @@ namespace org.mpxj
 
         public string Description => JavaObject.getDescription();
 
-        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
+        public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
-        public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
+        public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
         public CostAccount Parent
         {

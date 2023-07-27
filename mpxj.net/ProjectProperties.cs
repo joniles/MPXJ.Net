@@ -135,10 +135,10 @@ namespace org.mpxj
             set => JavaObject.setManager(value);
         }
 
-        public java.lang.Integer DefaultCalendarUniqueID
+        public int? DefaultCalendarUniqueID
         {
-            get => JavaObject.getDefaultCalendarUniqueID();
-            set => JavaObject.setDefaultCalendarUniqueID(value);
+            get => JavaObject.getDefaultCalendarUniqueID().ConvertType();
+            set => JavaObject.setDefaultCalendarUniqueID(value.ConvertType());
         }
 
         public ProjectCalendar DefaultCalendar
@@ -309,10 +309,10 @@ namespace org.mpxj
             set => JavaObject.setSymbolPosition(value.ConvertType());
         }
 
-        public java.lang.Integer CurrencyDigits
+        public int? CurrencyDigits
         {
-            get => JavaObject.getCurrencyDigits();
-            set => JavaObject.setCurrencyDigits(value);
+            get => JavaObject.getCurrencyDigits().ConvertType();
+            set => JavaObject.setCurrencyDigits(value.ConvertType());
         }
 
         public char ThousandsSeparator
@@ -339,34 +339,34 @@ namespace org.mpxj
             set => JavaObject.setCategory(value);
         }
 
-        public java.lang.Integer DaysPerMonth
+        public int? DaysPerMonth
         {
-            get => JavaObject.getDaysPerMonth();
-            set => JavaObject.setDaysPerMonth(value);
+            get => JavaObject.getDaysPerMonth().ConvertType();
+            set => JavaObject.setDaysPerMonth(value.ConvertType());
         }
 
-        public java.lang.Integer MinutesPerDay
+        public int? MinutesPerDay
         {
-            get => JavaObject.getMinutesPerDay();
-            set => JavaObject.setMinutesPerDay(value);
+            get => JavaObject.getMinutesPerDay().ConvertType();
+            set => JavaObject.setMinutesPerDay(value.ConvertType());
         }
 
-        public java.lang.Integer MinutesPerWeek
+        public int? MinutesPerWeek
         {
-            get => JavaObject.getMinutesPerWeek();
-            set => JavaObject.setMinutesPerWeek(value);
+            get => JavaObject.getMinutesPerWeek().ConvertType();
+            set => JavaObject.setMinutesPerWeek(value.ConvertType());
         }
 
-        public java.lang.Integer MinutesPerMonth
+        public int? MinutesPerMonth
         {
-            get => JavaObject.getMinutesPerMonth();
-            set => JavaObject.setMinutesPerMonth(value);
+            get => JavaObject.getMinutesPerMonth().ConvertType();
+            set => JavaObject.setMinutesPerMonth(value.ConvertType());
         }
 
-        public java.lang.Integer MinutesPerYear
+        public int? MinutesPerYear
         {
-            get => JavaObject.getMinutesPerYear();
-            set => JavaObject.setMinutesPerYear(value);
+            get => JavaObject.getMinutesPerYear().ConvertType();
+            set => JavaObject.setMinutesPerYear(value.ConvertType());
         }
 
         public bool FiscalYearStart
@@ -489,10 +489,10 @@ namespace org.mpxj
             set => JavaObject.setEditableActualCosts(value);
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public Guid? GUID
@@ -501,10 +501,10 @@ namespace org.mpxj
             set => JavaObject.setGUID(value.ConvertType());
         }
 
-        public java.lang.Integer Revision
+        public int? Revision
         {
-            get => JavaObject.getRevision();
-            set => JavaObject.setRevision(value);
+            get => JavaObject.getRevision().ConvertType();
+            set => JavaObject.setRevision(value.ConvertType());
         }
 
         public bool NewTasksEffortDriven
@@ -561,16 +561,16 @@ namespace org.mpxj
             set => JavaObject.setCriticalSlackLimit(value.JavaObject);
         }
 
-        public java.lang.Integer BaselineForEarnedValue
+        public int? BaselineForEarnedValue
         {
-            get => JavaObject.getBaselineForEarnedValue();
-            set => JavaObject.setBaselineForEarnedValue(value);
+            get => JavaObject.getBaselineForEarnedValue().ConvertType();
+            set => JavaObject.setBaselineForEarnedValue(value.ConvertType());
         }
 
-        public java.lang.Integer FiscalYearStartMonth
+        public int? FiscalYearStartMonth
         {
-            get => JavaObject.getFiscalYearStartMonth();
-            set => JavaObject.setFiscalYearStartMonth(value);
+            get => JavaObject.getFiscalYearStartMonth().ConvertType();
+            set => JavaObject.setFiscalYearStartMonth(value.ConvertType());
         }
 
         public bool NewTaskStartIsProjectStart
@@ -645,10 +645,10 @@ namespace org.mpxj
             set => JavaObject.setShortApplicationName(value);
         }
 
-        public java.lang.Integer EditingTime
+        public int? EditingTime
         {
-            get => JavaObject.getEditingTime();
-            set => JavaObject.setEditingTime(value);
+            get => JavaObject.getEditingTime().ConvertType();
+            set => JavaObject.setEditingTime(value.ConvertType());
         }
 
         public string PresentationFormat
@@ -717,16 +717,16 @@ namespace org.mpxj
             set => JavaObject.setFullApplicationName(value);
         }
 
-        public java.lang.Integer ApplicationVersion
+        public int? ApplicationVersion
         {
-            get => JavaObject.getApplicationVersion();
-            set => JavaObject.setApplicationVersion(value);
+            get => JavaObject.getApplicationVersion().ConvertType();
+            set => JavaObject.setApplicationVersion(value.ConvertType());
         }
 
-        public java.lang.Integer MppFileType
+        public int? MppFileType
         {
-            get => JavaObject.getMppFileType();
-            set => JavaObject.setMppFileType(value);
+            get => JavaObject.getMppFileType().ConvertType();
+            set => JavaObject.setMppFileType(value.ConvertType());
         }
 
         public bool AutoFilter
@@ -753,10 +753,10 @@ namespace org.mpxj
             set => JavaObject.setExportFlag(value);
         }
 
-        public java.lang.Integer BaselineProjectUniqueID
+        public int? BaselineProjectUniqueID
         {
-            get => JavaObject.getBaselineProjectUniqueID();
-            set => JavaObject.setBaselineProjectUniqueID(value);
+            get => JavaObject.getBaselineProjectUniqueID().ConvertType();
+            set => JavaObject.setBaselineProjectUniqueID(value.ConvertType());
         }
 
         public string ProjectID
@@ -789,10 +789,10 @@ namespace org.mpxj
             set => JavaObject.setPlannedStart(value);
         }
 
-        public java.lang.Integer LocationUniqueID
+        public int? LocationUniqueID
         {
-            get => JavaObject.getLocationUniqueID();
-            set => JavaObject.setLocationUniqueID(value);
+            get => JavaObject.getLocationUniqueID().ConvertType();
+            set => JavaObject.setLocationUniqueID(value.ConvertType());
         }
 
         public Location Location

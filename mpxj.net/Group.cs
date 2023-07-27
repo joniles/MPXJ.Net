@@ -14,12 +14,12 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public Group(java.lang.Integer id, string name, bool showSummaryTasks)
+        public Group(int id, string name, bool showSummaryTasks)
         {
-            JavaObject = new net.sf.mpxj.Group(id, name, showSummaryTasks);
+            JavaObject = new net.sf.mpxj.Group(id.ConvertType(), name, showSummaryTasks);
         }
 
-        public java.lang.Integer ID => JavaObject.getID();
+        public int ID => JavaObject.getID().ConvertType().Value;
 
         public string Name => JavaObject.getName();
 

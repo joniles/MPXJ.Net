@@ -79,7 +79,7 @@ namespace org.mpxj
 
         public IBaselineStrategy BaselineStrategy
         {
-            // TODO implement baseline startgey hierarchy
+            // TODO implement baseline strategy hierarchy
             //get => JavaObject.getBaselineStrategy();
             set => JavaObject.setBaselineStrategy(value.JavaObject);
         }

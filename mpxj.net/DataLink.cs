@@ -26,10 +26,10 @@ namespace org.mpxj
             set => JavaObject.setSourceField(value.JavaObject);
         }
 
-        public java.lang.Integer SourceUniqueID
+        public int? SourceUniqueID
         {
-            get => JavaObject.getSourceUniqueID();
-            set => JavaObject.setSourceUniqueID(value);
+            get => JavaObject.getSourceUniqueID().ConvertType();
+            set => JavaObject.setSourceUniqueID(value.ConvertType());
         }
 
         public IFieldType TargetField
@@ -38,10 +38,10 @@ namespace org.mpxj
             set => JavaObject.setTargetField(value.JavaObject);
         }
 
-        public java.lang.Integer TargetUniqueID
+        public int? TargetUniqueID
         {
-            get => JavaObject.getTargetUniqueID();
-            set => JavaObject.setTargetUniqueID(value);
+            get => JavaObject.getTargetUniqueID().ConvertType();
+            set => JavaObject.setTargetUniqueID(value.ConvertType());
         }
 
         public override string ToString() => JavaObject.toString();

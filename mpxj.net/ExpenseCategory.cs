@@ -11,20 +11,20 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public ExpenseCategory(java.lang.Integer uniqueID, string name, java.lang.Integer sequenceNumber)
+        public ExpenseCategory(int uniqueID, string name, int sequenceNumber)
         {
-            JavaObject = new net.sf.mpxj.ExpenseCategory(uniqueID, name, sequenceNumber);
+            JavaObject = new net.sf.mpxj.ExpenseCategory(uniqueID.ConvertType(), name, sequenceNumber.ConvertType());
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public string Name => JavaObject.getName();
 
-        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
+        public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
         public override string ToString() => JavaObject.toString();
     }

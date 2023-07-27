@@ -14,10 +14,10 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.lang.Integer ID
+        public int? ID
         {
-            get => JavaObject.getID();
-            set => JavaObject.setID(value);
+            get => JavaObject.getID().ConvertType();
+            set => JavaObject.setID(value.ConvertType());
         }
 
         public string Name
@@ -50,13 +50,13 @@ namespace org.mpxj
             set => JavaObject.setIsResourceFilter(value);
         }
 
-        // TODO: handle Map
+        // TODO: handle map argument
         //bool evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);(value);
 
         public IList<GenericCriteriaPrompt> Prompts
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
-            // TODO: handle list assignment
+            // TODO: handle list argument
             //set => JavaObject.set
         }
 

@@ -4,14 +4,14 @@ namespace org.mpxj
 {
 	public interface ITimeUnitDefaultsContainer<M> : IJavaObjectProxy<M> where M : net.sf.mpxj.TimeUnitDefaultsContainer
     {
-        java.lang.Integer MinutesPerDay { get; }
+        int? MinutesPerDay { get; }
 
-        java.lang.Integer MinutesPerWeek { get; }
+        int? MinutesPerWeek { get; }
 
-        java.lang.Integer MinutesPerMonth { get; }
+        int? MinutesPerMonth { get; }
 
-        java.lang.Integer MinutesPerYear { get; }
+        int? MinutesPerYear { get; }
 
-        java.lang.Integer DaysPerMonth { get; }
+        int? DaysPerMonth { get; }
     }
 }

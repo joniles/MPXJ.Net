@@ -5,7 +5,7 @@ namespace org.mpxj
     // TODO: implement view class hierarchy
     public interface IView : IJavaObjectProxy<net.sf.mpxj.View>
     {
-        java.lang.Integer ID { get; }
+        int? ID { get; }
 
         string Name { get; }
 

@@ -16,9 +16,9 @@ namespace org.mpxj
 
         public ActivityCode Type => _proxyManager.ProxyObject(JavaObject.getType());
 
-        public java.lang.Integer UniqueID => JavaObject.getUniqueID();
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
-        public java.lang.Integer SequenceNumber => JavaObject.getSequenceNumber();
+        public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
         public string Name => JavaObject.getName();
 
@@ -32,7 +32,7 @@ namespace org.mpxj
             set => JavaObject.setParent(value.JavaObject);
         }
 
-        public java.lang.Integer ParentUniqueID => JavaObject.getParentUniqueID();
+        public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
         public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 

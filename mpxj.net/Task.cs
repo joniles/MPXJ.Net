@@ -298,10 +298,10 @@ namespace org.mpxj
             set => JavaObject.setHideBar(value);
         }
 
-        public java.lang.Integer ID
+        public int? ID
         {
-            get => JavaObject.getID();
-            set => JavaObject.setID(value);
+            get => JavaObject.getID().ConvertType();
+            set => JavaObject.setID(value.ConvertType());
         }
 
         public java.time.LocalDateTime LateFinish
@@ -372,16 +372,16 @@ namespace org.mpxj
 
         public java.lang.Number GetNumber(int index) => JavaObject.getNumber(index);
 
-        public java.lang.Integer Objects
+        public int? Objects
         {
-            get => JavaObject.getObjects();
-            set => JavaObject.setObjects(value);
+            get => JavaObject.getObjects().ConvertType();
+            set => JavaObject.setObjects(value.ConvertType());
         }
 
-        public java.lang.Integer OutlineLevel
+        public int? OutlineLevel
         {
-            get => JavaObject.getOutlineLevel();
-            set => JavaObject.setOutlineLevel(value);
+            get => JavaObject.getOutlineLevel().ConvertType();
+            set => JavaObject.setOutlineLevel(value.ConvertType());
         }
 
         public string OutlineNumber
@@ -514,10 +514,10 @@ namespace org.mpxj
             set => JavaObject.setTotalSlack(value.JavaObject);
         }
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public bool UpdateNeeded
@@ -546,7 +546,7 @@ namespace org.mpxj
 
         public Task ParentTask => _proxyManager.ProxyObject(JavaObject.getParentTask());
 
-        public java.lang.Integer ParentTaskUniqueID => JavaObject.getParentTaskUniqueID();
+        public int? ParentTaskUniqueID => JavaObject.getParentTaskUniqueID().ConvertType();
 
         public IList<Task> ChildTasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
 
@@ -592,22 +592,22 @@ namespace org.mpxj
             set => JavaObject.setOverAllocated(value);
         }
 
-        public java.lang.Integer SubprojectTaskUniqueID
+        public int? SubprojectTaskUniqueID
         {
-            get => JavaObject.getSubprojectTaskUniqueID();
-            set => JavaObject.setSubprojectTaskUniqueID(value);
+            get => JavaObject.getSubprojectTaskUniqueID().ConvertType();
+            set => JavaObject.setSubprojectTaskUniqueID(value.ConvertType());
         }
 
-        public java.lang.Integer SubprojectTaskID
+        public int? SubprojectTaskID
         {
-            get => JavaObject.getSubprojectTaskID();
-            set => JavaObject.setSubprojectTaskID(value);
+            get => JavaObject.getSubprojectTaskID().ConvertType();
+            set => JavaObject.setSubprojectTaskID(value.ConvertType());
         }
 
-        public java.lang.Integer SubprojectTasksUniqueIDOffset
+        public int? SubprojectTasksUniqueIDOffset
         {
-            get => JavaObject.getSubprojectTasksUniqueIDOffset();
-            set => JavaObject.setSubprojectTasksUniqueIDOffset(value);
+            get => JavaObject.getSubprojectTasksUniqueIDOffset().ConvertType();
+            set => JavaObject.setSubprojectTasksUniqueIDOffset(value.ConvertType());
         }
 
         public bool SubprojectReadOnly
@@ -778,10 +778,10 @@ namespace org.mpxj
             set => JavaObject.setCalendar(value.JavaObject);
         }
 
-        public java.lang.Integer CalendarUniqueID
+        public int? CalendarUniqueID
         {
-            get => JavaObject.getCalendarUniqueID();
-            set => JavaObject.setCalendarUniqueID(value);
+            get => JavaObject.getCalendarUniqueID().ConvertType();
+            set => JavaObject.setCalendarUniqueID(value.ConvertType());
         }
 
         public bool Expanded
@@ -809,7 +809,7 @@ namespace org.mpxj
         public IList<LocalDateTimeRange> Splits
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.LocalDateTimeRange, LocalDateTimeRange>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSplits());
-            // TODO: list assignment
+            // TODO: handle list argument
             //set => JavaObject.setSplits(value);
         }
 
@@ -962,7 +962,7 @@ namespace org.mpxj
         public IList<ExpenseItem> ExpenseItems
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpenseItems());
-            // TODO: list conversion - move away from list-based setters?
+            // TODO: handle list argument
             //set => JavaObject.setExpenseItems(value);
         }
 
@@ -1014,10 +1014,10 @@ namespace org.mpxj
             set => JavaObject.setResponsibilityCode(value);
         }
 
-        public java.lang.Integer WorkersPerDay
+        public int? WorkersPerDay
         {
-            get => JavaObject.getWorkersPerDay();
-            set => JavaObject.setWorkersPerDay(value);
+            get => JavaObject.getWorkersPerDay().ConvertType();
+            set => JavaObject.setWorkersPerDay(value.ConvertType());
         }
 
         public bool HammockCode
@@ -1092,10 +1092,10 @@ namespace org.mpxj
             set => JavaObject.setSuspendDate(value);
         }
 
-        public java.lang.Integer PrimaryResourceID
+        public int? PrimaryResourceID
         {
-            get => JavaObject.getPrimaryResourceID();
-            set => JavaObject.setPrimaryResourceID(value);
+            get => JavaObject.getPrimaryResourceID().ConvertType();
+            set => JavaObject.setPrimaryResourceID(value.ConvertType());
         }
 
         public string CanonicalActivityID
@@ -1145,16 +1145,16 @@ namespace org.mpxj
             set => JavaObject.setExternalLateFinish(value);
         }
 
-        public java.lang.Integer SprintID
+        public int? SprintID
         {
-            get => JavaObject.getSprintID();
-            set => JavaObject.setSprintID(value);
+            get => JavaObject.getSprintID().ConvertType();
+            set => JavaObject.setSprintID(value.ConvertType());
         }
 
-        public java.lang.Integer BoardStatusID
+        public int? BoardStatusID
         {
-            get => JavaObject.getBoardStatusID();
-            set => JavaObject.setBoardStatusID(value);
+            get => JavaObject.getBoardStatusID().ConvertType();
+            set => JavaObject.setBoardStatusID(value.ConvertType());
         }
 
         public bool ResponsePending
@@ -1213,23 +1213,23 @@ namespace org.mpxj
 
         public void SetBaselineBudgetWork(int baselineNumber, Duration value) => JavaObject.setBaselineBudgetWork(baselineNumber, value.JavaObject);
 
-        public java.lang.Integer SequenceNumber
+        public int? SequenceNumber
         {
-            get => JavaObject.getSequenceNumber();
-            set => JavaObject.setSequenceNumber(value);
+            get => JavaObject.getSequenceNumber().ConvertType();
+            set => JavaObject.setSequenceNumber(value.ConvertType());
         }
 
         public IList<Step> Steps
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.Step, Step>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSteps());
-            // TODO: list conversion - move away from list-based setters?
+            // TODO: handle list argument
             //set => JavaObject.setSteps(value);
         }
 
-        public java.lang.Integer LocationUniqueID
+        public int? LocationUniqueID
         {
-            get => JavaObject.getLocationUniqueID();
-            set => JavaObject.setLocationUniqueID(value);
+            get => JavaObject.getLocationUniqueID().ConvertType();
+            set => JavaObject.setLocationUniqueID(value.ConvertType());
         }
 
         public Location Location

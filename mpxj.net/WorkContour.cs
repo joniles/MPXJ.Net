@@ -21,10 +21,10 @@ namespace org.mpxj
         public static readonly WorkContour Turtle = new WorkContour(net.sf.mpxj.WorkContour.TURTLE);
         public static readonly WorkContour Contoured = new WorkContour(net.sf.mpxj.WorkContour.CONTOURED);
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public double[] CurveValues => JavaObject.getCurveValues();

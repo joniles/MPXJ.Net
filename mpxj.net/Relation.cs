@@ -21,10 +21,10 @@ namespace org.mpxj
 
         public Task TargetTask => _proxyManager.ProxyObject(JavaObject.getTargetTask());
 
-        public java.lang.Integer UniqueID
+        public int? UniqueID
         {
-            get => JavaObject.getUniqueID();
-            set => JavaObject.setUniqueID(value);
+            get => JavaObject.getUniqueID().ConvertType();
+            set => JavaObject.setUniqueID(value.ConvertType());
         }
 
         public override string ToString() => JavaObject.toString();
