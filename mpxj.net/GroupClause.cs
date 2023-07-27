@@ -2,7 +2,6 @@
 
 namespace org.mpxj
 {
-    // TODO: Look at recreating this class as a hierarchy to allow the differt types to be expressed correctly
     public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
     {
         internal readonly ProxyManager _proxyManager;

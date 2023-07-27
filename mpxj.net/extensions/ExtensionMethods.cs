@@ -1,4 +1,5 @@
 ﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -18,6 +19,25 @@ namespace org.mpxj
         {
             return java.util.UUID.fromString(g.ToString());
         }
+
+
+        public static object GenericJavaObject(this object o)
+        {
+            if (o == null)
+            {
+                return null;
+            }
+
+            if (o is IHasJavaObject)
+            {
+                return o.GetType().GetProperty("JavaObject").GetValue(o, null);
+            }
+
+            // TODO - all other type conversions
+
+            return null;
+        }
+
     }
 }
 

@@ -32,11 +32,9 @@ namespace org.mpxj
             set => JavaObject.setOperator(value.ConvertType());
         }
 
-        // TODO: proxy
-        public object GetValue(int index) => JavaObject.getValue(index);
+        public object GetValue(int index) => _proxyManager.GenericProxyObject(JavaObject.getValue(index));
 
-        // TODO: proxy
-        public void SetRightValue(int index, object value) => JavaObject.setRightValue(index, value);
+        public void SetRightValue(int index, object value) => JavaObject.setRightValue(index, value.GenericJavaObject());
 
         // TODO handle map
         //public bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);

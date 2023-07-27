@@ -570,8 +570,7 @@ namespace org.mpxj
 
         public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
 
-        // TODO: proxy
-        public void SetFieldByAlias(string alias, object value) => JavaObject.setFieldByAlias(alias, value);
+        public void SetFieldByAlias(string alias, object value) => JavaObject.setFieldByAlias(alias, value.GenericJavaObject());
 
         public override string ToString() => JavaObject.toString();
     }
