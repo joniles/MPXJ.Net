@@ -17,6 +17,11 @@ namespace org.mpxj
             var a = project.ActivityCodes;
             var c = project.CostAccounts;
             var e = project.ExpenseCategories;
+
+            foreach(var field in project.PopulatedFields)
+            {
+                System.Console.WriteLine(field);
+            }
             System.Console.WriteLine();
         }
     }

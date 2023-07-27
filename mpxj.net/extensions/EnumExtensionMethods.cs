@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -7,11 +6,29 @@ namespace org.mpxj
     {
         internal static Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
 
-        internal static T RegisterFieldType<T>(net.sf.mpxj.FieldType javaFieldType, T fieldType) where T : IFieldType
+        static EnumExtensionMethods()
         {
-            FieldTypeDictionary[javaFieldType] = fieldType;
-            return fieldType;
+            RegisterFieldTypes(ProjectField.Values);
+            RegisterFieldTypes(TaskField.Values);
+            RegisterFieldTypes(ResourceField.Values);
+            RegisterFieldTypes(AssignmentField.Values);
+            RegisterFieldTypes(ConstraintField.Values);
         }
+
+
+        internal static void RegisterFieldTypes<T>(IEnumerable<T> fields) where T : IFieldType
+        {
+            foreach(var field in fields)
+            {
+                FieldTypeDictionary[field.JavaObject] = field;
+            }
+        }
+
+        //internal static T RegisterFieldType<T>(net.sf.mpxj.FieldType javaFieldType, T fieldType) where T : IFieldType
+        //{
+        //    FieldTypeDictionary[javaFieldType] = fieldType;
+        //    return fieldType;
+        //}
 
         // DayType
         public static net.sf.mpxj.DayType ConvertType(this DayType value)
