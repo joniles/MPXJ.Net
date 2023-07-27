@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Drawing;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -17,7 +18,7 @@ namespace org.mpxj
 
         public bool Bold => JavaObject.getBold();
 
-        public java.awt.Color Color => JavaObject.getColor();
+        public Color? Color => JavaObject.getColor().ConvertType();
 
         public bool Italic => JavaObject.getItalic();
 
@@ -25,7 +26,7 @@ namespace org.mpxj
 
         public bool Strikethrough => JavaObject.getStrikethrough();
 
-        public java.awt.Color BackgroundColor => JavaObject.getBackgroundColor();
+        public Color? BackgroundColor => JavaObject.getBackgroundColor().ConvertType();
 
         public BackgroundPattern? BackgroundPattern => JavaObject.getBackgroundPattern().ConvertType();
 

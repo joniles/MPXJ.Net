@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -53,6 +54,21 @@ namespace org.mpxj
         public static double? ConvertType(this java.lang.Number value)
         {
             return value == null ? (double?)null : value.doubleValue();
+        }
+
+        public static Color? ConvertType(this java.awt.Color color)
+        {
+            return color == null ? (Color?)null : Color.FromArgb(color.getRGB());
+        }
+
+        public static java.awt.Color ConvertType(this Color? color)
+        {
+            return color == null ? null : new java.awt.Color(color.Value.R, color.Value.G, color.Value.B);
+        }
+
+        public static java.awt.Color ConvertType(this Color color)
+        {
+            return new java.awt.Color(color.R, color.G, color.B);
         }
 
         public static object GenericJavaObject(this object o)

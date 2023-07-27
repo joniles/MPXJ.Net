@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -24,7 +25,7 @@ namespace org.mpxj
 
         public string Description => JavaObject.getDescription();
 
-        public java.awt.Color Color => JavaObject.getColor();
+        public Color? Color => JavaObject.getColor().ConvertType();
 
         public ActivityCodeValue Parent
         {

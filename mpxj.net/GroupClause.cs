@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System.Drawing;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -24,10 +25,10 @@ namespace org.mpxj
             set => JavaObject.setAscending(value);
         }
 
-        public java.awt.Color CellBackgroundColor
+        public Color? CellBackgroundColor
         {
-            get => JavaObject.getCellBackgroundColor();
-            set => JavaObject.setCellBackgroundColor(value);
+            get => JavaObject.getCellBackgroundColor().ConvertType();
+            set => JavaObject.setCellBackgroundColor(value.ConvertType());
         }
 
         public IFieldType Field
@@ -43,7 +44,7 @@ namespace org.mpxj
         }
 
         public object GroupInterval
-        {            
+        {
             get => JavaObject.getGroupInterval();
             set => JavaObject.setGroupInterval(value);
         }
