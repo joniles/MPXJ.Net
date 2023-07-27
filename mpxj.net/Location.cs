@@ -32,9 +32,9 @@ namespace org.mpxj
 
         public string CountryCode => JavaObject.getCountryCode();
 
-        public java.lang.Double Latitude => JavaObject.getLatitude();
+        public double? Latitude => JavaObject.getLatitude().ConvertType();
 
-        public java.lang.Double Longitude => JavaObject.getLongitude();
+        public double? Longitude => JavaObject.getLongitude().ConvertType();
 
         public string Municipality => JavaObject.getMunicipality();
 

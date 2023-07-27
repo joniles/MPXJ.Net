@@ -33,10 +33,10 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public java.lang.Double PercentComplete
+        public double? PercentComplete
         {
-            get => JavaObject.getPercentComplete();
-            set => JavaObject.setPercentComplete(value);
+            get => JavaObject.getPercentComplete().ConvertType();
+            set => JavaObject.setPercentComplete(value.ConvertType());
         }
 
         public int? SequenceNumber
@@ -45,10 +45,10 @@ namespace org.mpxj
             set => JavaObject.setSequenceNumber(value.ConvertType());
         }
 
-        public java.lang.Double Weight
+        public double? Weight
         {
-            get => JavaObject.getWeight();
-            set => JavaObject.setWeight(value);
+            get => JavaObject.getWeight().ConvertType();
+            set => JavaObject.setWeight(value.ConvertType());
         }
 
         public string Description

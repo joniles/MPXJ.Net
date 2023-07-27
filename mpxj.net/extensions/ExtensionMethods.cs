@@ -35,6 +35,21 @@ namespace org.mpxj
             return java.lang.Integer.valueOf(value);
         }
 
+        public static double? ConvertType(this java.lang.Double value)
+        {
+            return value == null ? (double?)null : value.doubleValue();
+        }
+
+        public static java.lang.Double ConvertType(this double? value)
+        {
+            return value == null ? null : java.lang.Double.valueOf(value.Value);
+        }
+
+        public static java.lang.Double ConvertType(this double value)
+        {
+            return java.lang.Double.valueOf(value);
+        }
+
         public static object GenericJavaObject(this object o)
         {
             if (o == null)

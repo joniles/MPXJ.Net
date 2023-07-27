@@ -67,58 +67,58 @@ namespace org.mpxj
             set => JavaObject.setVendor(value);
         }
 
-        public java.lang.Double AtCompletionCost
+        public double? AtCompletionCost
         {
-            get => JavaObject.getAtCompletionCost();
-            set => JavaObject.setAtCompletionCost(value);
+            get => JavaObject.getAtCompletionCost().ConvertType();
+            set => JavaObject.setAtCompletionCost(value.ConvertType());
         }
 
-        public java.lang.Double AtCompletionUnits
+        public double? AtCompletionUnits
         {
-            get => JavaObject.getAtCompletionUnits();
-            set => JavaObject.setAtCompletionUnits(value);
+            get => JavaObject.getAtCompletionUnits().ConvertType();
+            set => JavaObject.setAtCompletionUnits(value.ConvertType());
         }
 
-        public java.lang.Double ActualCost
+        public double? ActualCost
         {
-            get => JavaObject.getActualCost();
-            set => JavaObject.setActualCost(value);
+            get => JavaObject.getActualCost().ConvertType();
+            set => JavaObject.setActualCost(value.ConvertType());
         }
 
-        public java.lang.Double ActualUnits
+        public double? ActualUnits
         {
-            get => JavaObject.getActualUnits();
-            set => JavaObject.setActualUnits(value);
+            get => JavaObject.getActualUnits().ConvertType();
+            set => JavaObject.setActualUnits(value.ConvertType());
         }
 
-        public java.lang.Double PricePerUnit
+        public double? PricePerUnit
         {
-            get => JavaObject.getPricePerUnit();
-            set => JavaObject.setPricePerUnit(value);
+            get => JavaObject.getPricePerUnit().ConvertType();
+            set => JavaObject.setPricePerUnit(value.ConvertType());
         }
 
-        public java.lang.Double RemainingCost
+        public double? RemainingCost
         {
-            get => JavaObject.getRemainingCost();
-            set => JavaObject.setRemainingCost(value);
+            get => JavaObject.getRemainingCost().ConvertType();
+            set => JavaObject.setRemainingCost(value.ConvertType());
         }
 
-        public java.lang.Double RemainingUnits
+        public double? RemainingUnits
         {
-            get => JavaObject.getRemainingUnits();
-            set => JavaObject.setRemainingUnits(value);
+            get => JavaObject.getRemainingUnits().ConvertType();
+            set => JavaObject.setRemainingUnits(value.ConvertType());
         }
 
-        public java.lang.Double PlannedCost
+        public double? PlannedCost
         {
-            get => JavaObject.getPlannedCost();
-            set => JavaObject.setPlannedCost(value);
+            get => JavaObject.getPlannedCost().ConvertType();
+            set => JavaObject.setPlannedCost(value.ConvertType());
         }
 
-        public java.lang.Double PlannedUnits
+        public double? PlannedUnits
         {
-            get => JavaObject.getPlannedUnits();
-            set => JavaObject.setPlannedUnits(value);
+            get => JavaObject.getPlannedUnits().ConvertType();
+            set => JavaObject.setPlannedUnits(value.ConvertType());
         }
 
         public AccrueType? AccrueType
