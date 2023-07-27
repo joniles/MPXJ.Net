@@ -597,8 +597,7 @@ namespace org.mpxj
             set => JavaObject.setCurrencyCode(value);
         }
 
-        // TODO: inverse of proxy to allow values to be written back
-        public IDictionary<string, object> CustomProperties => _proxyManager.ProxyDictionary<string, object, string, object>(k => k, k => k, v => _proxyManager.GenericProxyObject(v), v => v, JavaObject.getCustomProperties());
+        public IDictionary<string, object> CustomProperties => _proxyManager.ProxyDictionary<string, object, string, object>(k => k, k => k, v => _proxyManager.GenericProxyObject(v), v => v.GenericJavaObject(), JavaObject.getCustomProperties());
 
         public string HyperlinkBase
         {
@@ -810,7 +809,6 @@ namespace org.mpxj
 
         public ProjectFile ResourcePoolObject => new ProjectFile(JavaObject.getResourcePoolObject());
 
-        // TODO: FieldType implementation
-        //public ISet<IFieldType> PopulatedFields => ProxyManager.ProxySet<IFieldType, IFieldType>(JavaObject.getPopulatedFields());
+        public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
     }
 }
