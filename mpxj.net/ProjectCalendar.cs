@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -75,9 +76,9 @@ namespace org.mpxj
 
         public Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate, endDate));
 
-        public java.time.LocalTime GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date);
+        public TimeOnly? GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date).ConvertType();
 
-        public java.time.LocalTime GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date);
+        public TimeOnly? GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date).ConvertType();
 
         public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate, duration.JavaObject, returnNextWorkStart);
 

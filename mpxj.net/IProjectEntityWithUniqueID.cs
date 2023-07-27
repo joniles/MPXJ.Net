@@ -1,6 +1,4 @@
-﻿using java.lang;
-
-namespace org.mpxj
+﻿namespace org.mpxj
 {
 	public interface IProjectEntityWithUniqueID
 	{

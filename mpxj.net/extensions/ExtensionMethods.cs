@@ -71,6 +71,21 @@ namespace org.mpxj
             return new java.awt.Color(color.R, color.G, color.B);
         }
 
+        public static TimeOnly? ConvertType(this java.time.LocalTime value)
+        {
+            return value == null ? (TimeOnly?)null : new TimeOnly(value.getHour(), value.getMinute(), value.getSecond());
+        }
+
+        public static java.time.LocalTime ConvertType(this TimeOnly? t)
+        {
+            return t == null ? null : java.time.LocalTime.of(t.Value.Hour, t.Value.Minute, t.Value.Second);
+        }
+
+        public static java.time.LocalTime ConvertType(this TimeOnly t)
+        {
+            return t == null ? null : java.time.LocalTime.of(t.Hour, t.Minute, t.Second);
+        }
+
         public static object GenericJavaObject(this object o)
         {
             if (o == null)

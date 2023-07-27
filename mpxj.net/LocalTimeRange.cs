@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -11,14 +12,14 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public LocalTimeRange(java.time.LocalTime start, java.time.LocalTime end)
+        public LocalTimeRange(TimeOnly start, TimeOnly end)
         {
-            JavaObject = new net.sf.mpxj.LocalTimeRange(start, end);
+            JavaObject = new net.sf.mpxj.LocalTimeRange(start.ConvertType(), end.ConvertType());
         }
 
-        public java.time.LocalTime Start => JavaObject.getStart();
+        public TimeOnly? Start => JavaObject.getStart().ConvertType();
 
-        public java.time.LocalTime End => JavaObject.getEnd();
+        public TimeOnly? End => JavaObject.getEnd().ConvertType();
 
         public long DurationAsMilliseconds => JavaObject.getDurationAsMilliseconds();
 

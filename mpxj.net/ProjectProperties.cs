@@ -69,10 +69,10 @@ namespace org.mpxj
             set => JavaObject.setTimeFormat(value.ConvertType());
         }
 
-        public java.time.LocalTime DefaultStartTime
+        public TimeOnly? DefaultStartTime
         {
-            get => JavaObject.getDefaultStartTime();
-            set => JavaObject.setDefaultStartTime(value);
+            get => JavaObject.getDefaultStartTime().ConvertType();
+            set => JavaObject.setDefaultStartTime(value.ConvertType());
         }
 
         public char DateSeparator
@@ -111,10 +111,10 @@ namespace org.mpxj
             set => JavaObject.setBarTextDateFormat(value.ConvertType());
         }
 
-        public java.time.LocalTime DefaultEndTime
+        public TimeOnly? DefaultEndTime
         {
-            get => JavaObject.getDefaultEndTime();
-            set => JavaObject.setDefaultEndTime(value);
+            get => JavaObject.getDefaultEndTime().ConvertType();
+            set => JavaObject.setDefaultEndTime(value.ConvertType());
         }
 
         public string ProjectTitle
