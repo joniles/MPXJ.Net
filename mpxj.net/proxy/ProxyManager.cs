@@ -5,7 +5,7 @@ namespace org.mpxj.proxy
 {
     internal class ProxyManager
     {
-        private readonly Dictionary<object, object> _objectCache = new Dictionary<object, object>();
+        private readonly Dictionary<string, object> _objectCache = new Dictionary<string, object>();
         internal ProjectFile ProjectFile { get; }
 
         public ProxyManager(ProjectFile projectFile)
@@ -20,12 +20,13 @@ namespace org.mpxj.proxy
                 return default;
             }
 
-            if (!_objectCache.ContainsKey(o))
+            var key = o.GetType().FullName + "." + o.GetHashCode();
+            if (!_objectCache.ContainsKey(key))
             {
-                _objectCache[o] = proxyFunction.Invoke(o);
+                _objectCache[key] = proxyFunction.Invoke(o);
             }
 
-            return (N)_objectCache[o];
+            return (N)_objectCache[key];
         }
 
         internal Resource ProxyObject(net.sf.mpxj.Resource value)

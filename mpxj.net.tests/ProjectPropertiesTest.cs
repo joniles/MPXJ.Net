@@ -13,6 +13,11 @@ namespace org.mpxj
             var props = project.ProjectProperties;
             Assert.That(props, Is.Not.Null);
             Assert.That(props.AMText, Is.EqualTo("am"));
+
+            var a = project.ActivityCodes;
+            var c = project.CostAccounts;
+            var e = project.ExpenseCategories;
+            System.Console.WriteLine();
         }
     }
 }
