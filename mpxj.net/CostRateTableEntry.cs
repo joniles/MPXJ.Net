@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -13,9 +14,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.time.LocalDateTime StartDate => JavaObject.getStartDate();
+        public DateTime? StartDate => JavaObject.getStartDate().ConvertType();
 
-        public java.time.LocalDateTime EndDate => JavaObject.getEndDate();
+        public DateTime? EndDate => JavaObject.getEndDate().ConvertType();
 
         public Rate GetRate(int index) => _proxyManager.ProxyObject(JavaObject.getRate(index));
 

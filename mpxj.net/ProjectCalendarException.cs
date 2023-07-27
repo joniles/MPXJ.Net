@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -31,7 +32,7 @@ namespace org.mpxj
 
         public bool Contains(java.time.LocalDate date) => JavaObject.contains(date);
 
-        public bool Contains(java.time.LocalDateTime date) => JavaObject.contains(date);
+        public bool Contains(DateTime date) => JavaObject.contains(date);
 
         public bool Contains(ProjectCalendarException exception) => JavaObject.contains(exception.JavaObject);
 

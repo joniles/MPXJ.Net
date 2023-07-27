@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -11,9 +12,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.time.LocalDateTime Start => JavaObject.getStart();
+        public DateTime? Start => JavaObject.getStart().ConvertType();
 
-        public java.time.LocalDateTime End => JavaObject.getEnd();
+        public DateTime? End => JavaObject.getEnd().ConvertType();
     }
 }
 

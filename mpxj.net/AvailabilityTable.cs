@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -8,9 +9,9 @@ namespace org.mpxj
 
         internal AvailabilityTable(ProxyManager proxyManager, net.sf.mpxj.AvailabilityTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public Availability GetEntryByDate(java.time.LocalDateTime date)
+        public Availability GetEntryByDate(DateTime date)
         {
-            return _fromJava(JavaObject.getEntryByDate(date));
+            return _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
         }
     }
 }

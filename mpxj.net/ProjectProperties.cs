@@ -147,16 +147,16 @@ namespace org.mpxj
             set => JavaObject.setDefaultCalendar(value.JavaObject);
         }
 
-        public java.time.LocalDateTime StartDate
+        public DateTime? StartDate
         {
-            get => JavaObject.getStartDate();
-            set => JavaObject.setStartDate(value);
+            get => JavaObject.getStartDate().ConvertType();
+            set => JavaObject.setStartDate(value.ConvertType());
         }
 
-        public java.time.LocalDateTime FinishDate
+        public DateTime? FinishDate
         {
-            get => JavaObject.getFinishDate();
-            set => JavaObject.setFinishDate(value);
+            get => JavaObject.getFinishDate().ConvertType();
+            set => JavaObject.setFinishDate(value.ConvertType());
         }
 
         public ScheduleFrom? ScheduleFrom
@@ -165,10 +165,10 @@ namespace org.mpxj
             set => JavaObject.setScheduleFrom(value.ConvertType());
         }
 
-        public java.time.LocalDateTime CurrentDate
+        public DateTime? CurrentDate
         {
-            get => JavaObject.getCurrentDate();
-            set => JavaObject.setCurrentDate(value);
+            get => JavaObject.getCurrentDate().ConvertType();
+            set => JavaObject.setCurrentDate(value.ConvertType());
         }
 
         public string Comments
@@ -243,28 +243,28 @@ namespace org.mpxj
             set => JavaObject.setPercentageComplete(value.ConvertType());
         }
 
-        public java.time.LocalDateTime BaselineStart
+        public DateTime? BaselineStart
         {
-            get => JavaObject.getBaselineStart();
-            set => JavaObject.setBaselineStart(value);
+            get => JavaObject.getBaselineStart().ConvertType();
+            set => JavaObject.setBaselineStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime BaselineFinish
+        public DateTime? BaselineFinish
         {
-            get => JavaObject.getBaselineFinish();
-            set => JavaObject.setBaselineFinish(value);
+            get => JavaObject.getBaselineFinish().ConvertType();
+            set => JavaObject.setBaselineFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ActualStart
+        public DateTime? ActualStart
         {
-            get => JavaObject.getActualStart();
-            set => JavaObject.setActualStart(value);
+            get => JavaObject.getActualStart().ConvertType();
+            set => JavaObject.setActualStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ActualFinish
+        public DateTime? ActualFinish
         {
-            get => JavaObject.getActualFinish();
-            set => JavaObject.setActualFinish(value);
+            get => JavaObject.getActualFinish().ConvertType();
+            set => JavaObject.setActualFinish(value.ConvertType());
         }
 
         public Duration StartVariance
@@ -417,16 +417,16 @@ namespace org.mpxj
             set => JavaObject.setAutoAddNewResourcesAndTasks(value);
         }
 
-        public java.time.LocalDateTime LastSaved
+        public DateTime? LastSaved
         {
-            get => JavaObject.getLastSaved();
-            set => JavaObject.setLastSaved(value);
+            get => JavaObject.getLastSaved().ConvertType();
+            set => JavaObject.setLastSaved(value.ConvertType());
         }
 
-        public java.time.LocalDateTime StatusDate
+        public DateTime? StatusDate
         {
-            get => JavaObject.getStatusDate();
-            set => JavaObject.setStatusDate(value);
+            get => JavaObject.getStatusDate().ConvertType();
+            set => JavaObject.setStatusDate(value.ConvertType());
         }
 
         public bool MoveRemainingStartsBack
@@ -537,16 +537,16 @@ namespace org.mpxj
             set => JavaObject.setEarnedValueMethod(value.ConvertType());
         }
 
-        public java.time.LocalDateTime CreationDate
+        public DateTime? CreationDate
         {
-            get => JavaObject.getCreationDate();
-            set => JavaObject.setCreationDate(value);
+            get => JavaObject.getCreationDate().ConvertType();
+            set => JavaObject.setCreationDate(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ExtendedCreationDate
+        public DateTime? ExtendedCreationDate
         {
-            get => JavaObject.getExtendedCreationDate();
-            set => JavaObject.setExtendedCreationDate(value);
+            get => JavaObject.getExtendedCreationDate().ConvertType();
+            set => JavaObject.setExtendedCreationDate(value.ConvertType());
         }
 
         public AccrueType? DefaultFixedCostAccrual
@@ -611,15 +611,15 @@ namespace org.mpxj
             set => JavaObject.setShowProjectSummaryTask(value);
         }
 
-        public java.time.LocalDateTime BaselineDate
+        public DateTime? BaselineDate
         {
-            get => JavaObject.getBaselineDate();
-            set => JavaObject.setBaselineDate(value);
+            get => JavaObject.getBaselineDate().ConvertType();
+            set => JavaObject.setBaselineDate(value.ConvertType());
         }
 
-        public java.time.LocalDateTime GetBaselineDate(int baselineNumber) => JavaObject.getBaselineDate(baselineNumber);
+        public DateTime? GetBaselineDate(int baselineNumber) => JavaObject.getBaselineDate(baselineNumber).ConvertType();
 
-        public void SetBaselineDate(int baselineNumber, java.time.LocalDateTime date) => JavaObject.setBaselineDate(baselineNumber, date);
+        public void SetBaselineDate(int baselineNumber, DateTime date) => JavaObject.setBaselineDate(baselineNumber, date.ConvertType());
 
         public string Template
         {
@@ -633,10 +633,10 @@ namespace org.mpxj
             set => JavaObject.setLastAuthor(value);
         }
 
-        public java.time.LocalDateTime LastPrinted
+        public DateTime? LastPrinted
         {
-            get => JavaObject.getLastPrinted();
-            set => JavaObject.setLastPrinted(value);
+            get => JavaObject.getLastPrinted().ConvertType();
+            set => JavaObject.setLastPrinted(value.ConvertType());
         }
 
         public string ShortApplicationName
@@ -771,22 +771,22 @@ namespace org.mpxj
             set => JavaObject.setCriticalActivityType(value.ConvertType());
         }
 
-        public java.time.LocalDateTime MustFinishBy
+        public DateTime? MustFinishBy
         {
-            get => JavaObject.getMustFinishBy();
-            set => JavaObject.setMustFinishBy(value);
+            get => JavaObject.getMustFinishBy().ConvertType();
+            set => JavaObject.setMustFinishBy(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ScheduledFinish
+        public DateTime? ScheduledFinish
         {
-            get => JavaObject.getScheduledFinish();
-            set => JavaObject.setScheduledFinish(value);
+            get => JavaObject.getScheduledFinish().ConvertType();
+            set => JavaObject.setScheduledFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PlannedStart
+        public DateTime? PlannedStart
         {
-            get => JavaObject.getPlannedStart();
-            set => JavaObject.setPlannedStart(value);
+            get => JavaObject.getPlannedStart().ConvertType();
+            set => JavaObject.setPlannedStart(value.ConvertType());
         }
 
         public int? LocationUniqueID

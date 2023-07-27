@@ -65,9 +65,9 @@ namespace org.mpxj
 
         public void UpdateStructure() => JavaObject.updateStructure();
 
-        public java.time.LocalDateTime EarliestStartDate => JavaObject.getEarliestStartDate();
+        public DateTime? EarliestStartDate => JavaObject.getEarliestStartDate().ConvertType();
 
-        public java.time.LocalDateTime LatestFinishDate => JavaObject.getLatestFinishDate();
+        public DateTime? LatestFinishDate => JavaObject.getLatestFinishDate().ConvertType();
 
         public ViewContainer Views => _proxyManager.ProxyObject(JavaObject.getViews());
 

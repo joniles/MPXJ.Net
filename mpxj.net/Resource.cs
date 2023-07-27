@@ -124,21 +124,21 @@ namespace org.mpxj
             set => JavaObject.setOverAllocated(value);
         }
 
-        public java.time.LocalDateTime AvailableFrom
+        public DateTime? AvailableFrom
         {
-            get => JavaObject.getAvailableFrom();
-            set => JavaObject.setAvailableFrom(value);
+            get => JavaObject.getAvailableFrom().ConvertType();
+            set => JavaObject.setAvailableFrom(value.ConvertType());
         }
 
-        public java.time.LocalDateTime AvailableTo
+        public DateTime? AvailableTo
         {
-            get => JavaObject.getAvailableTo();
-            set => JavaObject.setAvailableTo(value);
+            get => JavaObject.getAvailableTo().ConvertType();
+            set => JavaObject.setAvailableTo(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Start => JavaObject.getStart();
+        public DateTime? Start => JavaObject.getStart().ConvertType();
 
-        public java.time.LocalDateTime Finish => JavaObject.getFinish();
+        public DateTime? Finish => JavaObject.getFinish().ConvertType();
 
         public bool CanLevel
         {
@@ -332,10 +332,10 @@ namespace org.mpxj
             set => JavaObject.setBookingType(value.ConvertType());
         }
 
-        public java.time.LocalDateTime CreationDate
+        public DateTime? CreationDate
         {
-            get => JavaObject.getCreationDate();
-            set => JavaObject.setCreationDate(value);
+            get => JavaObject.getCreationDate().ConvertType();
+            set => JavaObject.setCreationDate(value.ConvertType());
         }
 
         public bool Enterprise
@@ -416,13 +416,13 @@ namespace org.mpxj
             set => JavaObject.setParentResource(value.JavaObject);
         }
 
-        public void SetStart(int index, java.time.LocalDateTime value) => JavaObject.setStart(index, value);
+        public void SetStart(int index, DateTime value) => JavaObject.setStart(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetStart(int index) => JavaObject.getStart(index);
+        public DateTime? GetStart(int index) => JavaObject.getStart(index).ConvertType();
 
-        public void SetFinish(int index, java.time.LocalDateTime value) => JavaObject.setFinish(index, value);
+        public void SetFinish(int index, DateTime value) => JavaObject.setFinish(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetFinish(int index) => JavaObject.getFinish(index);
+        public DateTime? GetFinish(int index) => JavaObject.getFinish(index).ConvertType();
 
         public void SetNumber(int index, double? value) => JavaObject.setNumber(index, value.ConvertType());
 
@@ -432,9 +432,9 @@ namespace org.mpxj
 
         public Duration GetDuration(int index) => _proxyManager.ProxyObject(JavaObject.getDuration(index));
 
-        public void SetDate(int index, java.time.LocalDateTime value) => JavaObject.setDate(index, value);
+        public void SetDate(int index, DateTime value) => JavaObject.setDate(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetDate(int index) => JavaObject.getDate(index);
+        public DateTime? GetDate(int index) => JavaObject.getDate(index).ConvertType();
 
         public void SetCost(int index, double? value) => JavaObject.setCost(index, value.ConvertType());
 
@@ -464,9 +464,9 @@ namespace org.mpxj
 
         public void SetEnterpriseCost(int index, double? value) => JavaObject.setEnterpriseCost(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index);
+        public DateTime? GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index).ConvertType();
 
-        public void SetEnterpriseDate(int index, java.time.LocalDateTime value) => JavaObject.setEnterpriseDate(index, value);
+        public void SetEnterpriseDate(int index, DateTime value) => JavaObject.setEnterpriseDate(index, value.ConvertType());
 
         public Duration GetEnterpriseDuration(int index) => _proxyManager.ProxyObject(JavaObject.getEnterpriseDuration(index));
 

@@ -58,16 +58,16 @@ namespace org.mpxj
             set => JavaObject.setActualDuration(value.JavaObject);
         }
 
-        public java.time.LocalDateTime ActualFinish
+        public DateTime? ActualFinish
         {
-            get => JavaObject.getActualFinish();
-            set => JavaObject.setActualFinish(value);
+            get => JavaObject.getActualFinish().ConvertType();
+            set => JavaObject.setActualFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ActualStart
+        public DateTime? ActualStart
         {
-            get => JavaObject.getActualStart();
-            set => JavaObject.setActualStart(value);
+            get => JavaObject.getActualStart().ConvertType();
+            set => JavaObject.setActualStart(value.ConvertType());
         }
 
         public Duration ActualWork
@@ -94,10 +94,10 @@ namespace org.mpxj
             set => JavaObject.setBaselineDurationText(value);
         }
 
-        public java.time.LocalDateTime BaselineFinish
+        public DateTime? BaselineFinish
         {
-            get => JavaObject.getBaselineFinish();
-            set => JavaObject.setBaselineFinish(value);
+            get => JavaObject.getBaselineFinish().ConvertType();
+            set => JavaObject.setBaselineFinish(value.ConvertType());
         }
 
         public string BaselineFinishText
@@ -106,10 +106,10 @@ namespace org.mpxj
             set => JavaObject.setBaselineFinishText(value);
         }
 
-        public java.time.LocalDateTime BaselineStart
+        public DateTime? BaselineStart
         {
-            get => JavaObject.getBaselineStart();
-            set => JavaObject.setBaselineStart(value);
+            get => JavaObject.getBaselineStart().ConvertType();
+            set => JavaObject.setBaselineStart(value.ConvertType());
         }
 
         public string BaselineStartText
@@ -142,16 +142,16 @@ namespace org.mpxj
             set => JavaObject.setConfirmed(value);
         }
 
-        public java.time.LocalDateTime ConstraintDate
+        public DateTime? ConstraintDate
         {
-            get => JavaObject.getConstraintDate();
-            set => JavaObject.setConstraintDate(value);
+            get => JavaObject.getConstraintDate().ConvertType();
+            set => JavaObject.setConstraintDate(value.ConvertType());
         }
 
-        public java.time.LocalDateTime SecondaryConstraintDate
+        public DateTime? SecondaryConstraintDate
         {
-            get => JavaObject.getSecondaryConstraintDate();
-            set => JavaObject.setSecondaryConstraintDate(value);
+            get => JavaObject.getSecondaryConstraintDate().ConvertType();
+            set => JavaObject.setSecondaryConstraintDate(value.ConvertType());
         }
 
         public ConstraintType? ConstraintType
@@ -184,10 +184,10 @@ namespace org.mpxj
             set => JavaObject.setCostVariance(value.ConvertType());
         }
 
-        public java.time.LocalDateTime CreateDate
+        public DateTime? CreateDate
         {
-            get => JavaObject.getCreateDate();
-            set => JavaObject.setCreateDate(value);
+            get => JavaObject.getCreateDate().ConvertType();
+            set => JavaObject.setCreateDate(value.ConvertType());
         }
 
         public bool Critical
@@ -230,34 +230,34 @@ namespace org.mpxj
             set => JavaObject.setDurationVariance(value.JavaObject);
         }
 
-        public java.time.LocalDateTime EarlyFinish
+        public DateTime? EarlyFinish
         {
-            get => JavaObject.getEarlyFinish();
-            set => JavaObject.setEarlyFinish(value);
+            get => JavaObject.getEarlyFinish().ConvertType();
+            set => JavaObject.setEarlyFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime RemainingEarlyFinish
+        public DateTime? RemainingEarlyFinish
         {
-            get => JavaObject.getRemainingEarlyFinish();
-            set => JavaObject.setRemainingEarlyFinish(value);
+            get => JavaObject.getRemainingEarlyFinish().ConvertType();
+            set => JavaObject.setRemainingEarlyFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime EarlyStart
+        public DateTime? EarlyStart
         {
-            get => JavaObject.getEarlyStart();
-            set => JavaObject.setEarlyStart(value);
+            get => JavaObject.getEarlyStart().ConvertType();
+            set => JavaObject.setEarlyStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime RemainingEarlyStart
+        public DateTime? RemainingEarlyStart
         {
-            get => JavaObject.getRemainingEarlyStart();
-            set => JavaObject.setRemainingEarlyStart(value);
+            get => JavaObject.getRemainingEarlyStart().ConvertType();
+            set => JavaObject.setRemainingEarlyStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Finish
+        public DateTime? Finish
         {
-            get => JavaObject.getFinish();
-            set => JavaObject.setFinish(value);
+            get => JavaObject.getFinish().ConvertType();
+            set => JavaObject.setFinish(value.ConvertType());
         }
 
         public string FinishText
@@ -266,9 +266,9 @@ namespace org.mpxj
             set => JavaObject.setFinishText(value);
         }
 
-        public void SetFinish(int index, java.time.LocalDateTime value) => JavaObject.setFinish(index, value);
+        public void SetFinish(int index, DateTime value) => JavaObject.setFinish(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetFinish(int index) => JavaObject.getFinish(index);
+        public DateTime? GetFinish(int index) => JavaObject.getFinish(index).ConvertType();
 
         public Duration FinishVariance
         {
@@ -304,28 +304,28 @@ namespace org.mpxj
             set => JavaObject.setID(value.ConvertType());
         }
 
-        public java.time.LocalDateTime LateFinish
+        public DateTime? LateFinish
         {
-            get => JavaObject.getLateFinish();
-            set => JavaObject.setLateFinish(value);
+            get => JavaObject.getLateFinish().ConvertType();
+            set => JavaObject.setLateFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime RemainingLateFinish
+        public DateTime? RemainingLateFinish
         {
-            get => JavaObject.getRemainingLateFinish();
-            set => JavaObject.setRemainingLateFinish(value);
+            get => JavaObject.getRemainingLateFinish().ConvertType();
+            set => JavaObject.setRemainingLateFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime LateStart
+        public DateTime? LateStart
         {
-            get => JavaObject.getLateStart();
-            set => JavaObject.setLateStart(value);
+            get => JavaObject.getLateStart().ConvertType();
+            set => JavaObject.setLateStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime RemainingLateStart
+        public DateTime? RemainingLateStart
         {
-            get => JavaObject.getRemainingLateStart();
-            set => JavaObject.setRemainingLateStart(value);
+            get => JavaObject.getRemainingLateStart().ConvertType();
+            set => JavaObject.setRemainingLateStart(value.ConvertType());
         }
 
         public bool LinkedFields
@@ -442,10 +442,10 @@ namespace org.mpxj
             set => JavaObject.setResourceNames(value);
         }
 
-        public java.time.LocalDateTime Resume
+        public DateTime? Resume
         {
-            get => JavaObject.getResume();
-            set => JavaObject.setResume(value);
+            get => JavaObject.getResume().ConvertType();
+            set => JavaObject.setResume(value.ConvertType());
         }
 
         public bool Rollup
@@ -454,10 +454,10 @@ namespace org.mpxj
             set => JavaObject.setRollup(value);
         }
 
-        public java.time.LocalDateTime Start
+        public DateTime? Start
         {
-            get => JavaObject.getStart();
-            set => JavaObject.setStart(value);
+            get => JavaObject.getStart().ConvertType();
+            set => JavaObject.setStart(value.ConvertType());
         }
 
         public string StartText
@@ -466,9 +466,9 @@ namespace org.mpxj
             set => JavaObject.setStartText(value);
         }
 
-        public void SetStart(int index, java.time.LocalDateTime value) => JavaObject.setStart(index, value);
+        public void SetStart(int index, DateTime value) => JavaObject.setStart(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetStart(int index) => JavaObject.getStart(index);
+        public DateTime? GetStart(int index) => JavaObject.getStart(index).ConvertType();
 
         public Duration StartVariance
         {
@@ -476,10 +476,10 @@ namespace org.mpxj
             set => JavaObject.setStartVariance(value.JavaObject);
         }
 
-        public java.time.LocalDateTime Stop
+        public DateTime? Stop
         {
-            get => JavaObject.getStop();
-            set => JavaObject.setStop(value);
+            get => JavaObject.getStop().ConvertType();
+            set => JavaObject.setStop(value.ConvertType());
         }
 
         public string SubprojectFile
@@ -556,10 +556,10 @@ namespace org.mpxj
             set => JavaObject.setEstimated(value);
         }
 
-        public java.time.LocalDateTime Deadline
+        public DateTime? Deadline
         {
-            get => JavaObject.getDeadline();
-            set => JavaObject.setDeadline(value);
+            get => JavaObject.getDeadline().ConvertType();
+            set => JavaObject.setDeadline(value.ConvertType());
         }
 
         public TaskType? Type
@@ -678,9 +678,9 @@ namespace org.mpxj
             set => JavaObject.setEffortDriven(value);
         }
 
-        public java.time.LocalDateTime GetDate(int index) => JavaObject.getDate(index);
+        public DateTime? GetDate(int index) => JavaObject.getDate(index).ConvertType();
 
-        public void SetDate(int index, java.time.LocalDateTime value) => JavaObject.setDate(index, value);
+        public void SetDate(int index, DateTime value) => JavaObject.setDate(index, value.ConvertType());
 
         public double? OvertimeCost
         {
@@ -748,16 +748,16 @@ namespace org.mpxj
             set => JavaObject.setOvertimeWork(value.JavaObject);
         }
 
-        public java.time.LocalDateTime PreleveledStart
+        public DateTime? PreleveledStart
         {
-            get => JavaObject.getPreleveledStart();
-            set => JavaObject.setPreleveledStart(value);
+            get => JavaObject.getPreleveledStart().ConvertType();
+            set => JavaObject.setPreleveledStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PreleveledFinish
+        public DateTime? PreleveledFinish
         {
-            get => JavaObject.getPreleveledFinish();
-            set => JavaObject.setPreleveledFinish(value);
+            get => JavaObject.getPreleveledFinish().ConvertType();
+            set => JavaObject.setPreleveledFinish(value.ConvertType());
         }
 
         public Duration RemainingOvertimeWork
@@ -827,9 +827,9 @@ namespace org.mpxj
 
         public void SetEnterpriseCost(int index, double? value) => JavaObject.setEnterpriseCost(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index);
+        public DateTime? GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index).ConvertType();
 
-        public void SetEnterpriseDate(int index, java.time.LocalDateTime value) => JavaObject.setEnterpriseDate(index, value);
+        public void SetEnterpriseDate(int index, DateTime value) => JavaObject.setEnterpriseDate(index, value.ConvertType());
 
         public Duration GetEnterpriseDuration(int index) => _proxyManager.ProxyObject(JavaObject.getEnterpriseDuration(index));
 
@@ -851,9 +851,9 @@ namespace org.mpxj
 
         public void SetBaselineDuration(int baselineNumber, Duration value) => JavaObject.setBaselineDuration(baselineNumber, value.JavaObject);
 
-        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineFinish(baselineNumber, value);
+        public void SetBaselineFinish(int baselineNumber, DateTime value) => JavaObject.setBaselineFinish(baselineNumber, value.ConvertType());
 
-        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineStart(baselineNumber, value);
+        public void SetBaselineStart(int baselineNumber, DateTime value) => JavaObject.setBaselineStart(baselineNumber, value.ConvertType());
 
         public void SetBaselineWork(int baselineNumber, Duration value) => JavaObject.setBaselineWork(baselineNumber, value.JavaObject);
 
@@ -865,13 +865,13 @@ namespace org.mpxj
 
         public void SetBaselineDurationText(int baselineNumber, string value) => JavaObject.setBaselineDurationText(baselineNumber, value);
 
-        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber);
+        public DateTime? GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber).ConvertType();
 
         public string GetBaselineFinishText(int baselineNumber) => JavaObject.getBaselineFinishText(baselineNumber);
 
         public void SetBaselineFinishText(int baselineNumber, string value) => JavaObject.setBaselineFinishText(baselineNumber, value);
 
-        public java.time.LocalDateTime GetBaselineStart(int baselineNumber) => JavaObject.getBaselineStart(baselineNumber);
+        public DateTime? GetBaselineStart(int baselineNumber) => JavaObject.getBaselineStart(baselineNumber).ConvertType();
 
         public string GetBaselineStartText(int baselineNumber) => JavaObject.getBaselineStartText(baselineNumber);
 
@@ -879,16 +879,16 @@ namespace org.mpxj
 
         public Duration GetBaselineWork(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineWork(baselineNumber));
 
-        public java.time.LocalDateTime CompleteThrough
+        public DateTime? CompleteThrough
         {
-            get => JavaObject.getCompleteThrough();
-            set => JavaObject.setCompleteThrough(value);
+            get => JavaObject.getCompleteThrough().ConvertType();
+            set => JavaObject.setCompleteThrough(value.ConvertType());
         }
 
-        public java.time.LocalDateTime SummaryProgress
+        public DateTime? SummaryProgress
         {
-            get => JavaObject.getSummaryProgress();
-            set => JavaObject.setSummaryProgress(value);
+            get => JavaObject.getSummaryProgress().ConvertType();
+            set => JavaObject.setSummaryProgress(value.ConvertType());
         }
 
         public Guid? GUID
@@ -919,25 +919,25 @@ namespace org.mpxj
 
         public Duration GetBaselineEstimatedDuration(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineEstimatedDuration(baselineNumber));
 
-        public java.time.LocalDateTime BaselineEstimatedStart
+        public DateTime? BaselineEstimatedStart
         {
-            get => JavaObject.getBaselineEstimatedStart();
-            set => JavaObject.setBaselineEstimatedStart(value);
+            get => JavaObject.getBaselineEstimatedStart().ConvertType();
+            set => JavaObject.setBaselineEstimatedStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedStart(int baselineNumber) => JavaObject.getBaselineEstimatedStart(baselineNumber);
+        public DateTime? GetBaselineEstimatedStart(int baselineNumber) => JavaObject.getBaselineEstimatedStart(baselineNumber).ConvertType();
 
-        public void SetBaselineEstimatedStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineEstimatedStart(baselineNumber, value);
+        public void SetBaselineEstimatedStart(int baselineNumber, DateTime value) => JavaObject.setBaselineEstimatedStart(baselineNumber, value.ConvertType());
 
-        public java.time.LocalDateTime BaselineEstimatedFinish
+        public DateTime? BaselineEstimatedFinish
         {
-            get => JavaObject.getBaselineEstimatedFinish();
-            set => JavaObject.setBaselineEstimatedFinish(value);
+            get => JavaObject.getBaselineEstimatedFinish().ConvertType();
+            set => JavaObject.setBaselineEstimatedFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime GetBaselineEstimatedFinish(int baselineNumber) => JavaObject.getBaselineEstimatedFinish(baselineNumber);
+        public DateTime? GetBaselineEstimatedFinish(int baselineNumber) => JavaObject.getBaselineEstimatedFinish(baselineNumber).ConvertType();
 
-        public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineEstimatedFinish(baselineNumber, value);
+        public void SetBaselineEstimatedFinish(int baselineNumber, DateTime value) => JavaObject.setBaselineEstimatedFinish(baselineNumber, value.ConvertType());
 
         public double? BaselineFixedCost
         {
@@ -1056,16 +1056,16 @@ namespace org.mpxj
             set => JavaObject.setOverallPercentComplete(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PlannedFinish
+        public DateTime? PlannedFinish
         {
-            get => JavaObject.getPlannedFinish();
-            set => JavaObject.setPlannedFinish(value);
+            get => JavaObject.getPlannedFinish().ConvertType();
+            set => JavaObject.setPlannedFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PlannedStart
+        public DateTime? PlannedStart
         {
-            get => JavaObject.getPlannedStart();
-            set => JavaObject.setPlannedStart(value);
+            get => JavaObject.getPlannedStart().ConvertType();
+            set => JavaObject.setPlannedStart(value.ConvertType());
         }
 
         public Duration PlannedDuration
@@ -1086,10 +1086,10 @@ namespace org.mpxj
             set => JavaObject.setPlannedCost(value.ConvertType());
         }
 
-        public java.time.LocalDateTime SuspendDate
+        public DateTime? SuspendDate
         {
-            get => JavaObject.getSuspendDate();
-            set => JavaObject.setSuspendDate(value);
+            get => JavaObject.getSuspendDate().ConvertType();
+            set => JavaObject.setSuspendDate(value.ConvertType());
         }
 
         public int? PrimaryResourceID
@@ -1133,16 +1133,16 @@ namespace org.mpxj
             set => JavaObject.setLongestPath(value);
         }
 
-        public java.time.LocalDateTime ExternalEarlyStart
+        public DateTime? ExternalEarlyStart
         {
-            get => JavaObject.getExternalEarlyStart();
-            set => JavaObject.setExternalEarlyStart(value);
+            get => JavaObject.getExternalEarlyStart().ConvertType();
+            set => JavaObject.setExternalEarlyStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ExternalLateFinish
+        public DateTime? ExternalLateFinish
         {
-            get => JavaObject.getExternalLateFinish();
-            set => JavaObject.setExternalLateFinish(value);
+            get => JavaObject.getExternalLateFinish().ConvertType();
+            set => JavaObject.setExternalLateFinish(value.ConvertType());
         }
 
         public int? SprintID
@@ -1163,16 +1163,16 @@ namespace org.mpxj
             set => JavaObject.setResponsePending(value);
         }
 
-        public java.time.LocalDateTime ScheduledStart
+        public DateTime? ScheduledStart
         {
-            get => JavaObject.getScheduledStart();
-            set => JavaObject.setScheduledStart(value);
+            get => JavaObject.getScheduledStart().ConvertType();
+            set => JavaObject.setScheduledStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ScheduledFinish
+        public DateTime? ScheduledFinish
         {
-            get => JavaObject.getScheduledFinish();
-            set => JavaObject.setScheduledFinish(value);
+            get => JavaObject.getScheduledFinish().ConvertType();
+            set => JavaObject.setScheduledFinish(value.ConvertType());
         }
 
         public Duration ScheduledDuration
@@ -1244,10 +1244,10 @@ namespace org.mpxj
             set => JavaObject.setBarName(value);
         }
 
-        public java.time.LocalDateTime ExpectedFinish
+        public DateTime? ExpectedFinish
         {
-            get => JavaObject.getExpectedFinish();
-            set => JavaObject.setExpectedFinish(value);
+            get => JavaObject.getExpectedFinish().ConvertType();
+            set => JavaObject.setExpectedFinish(value.ConvertType());
         }
 
         public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());

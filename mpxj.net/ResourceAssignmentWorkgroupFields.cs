@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -29,16 +30,16 @@ namespace org.mpxj
             set => JavaObject.setResponsePending(value);
         }
 
-        public java.time.LocalDateTime UpdateStart
+        public DateTime? UpdateStart
         {
-            get => JavaObject.getUpdateStart();
-            set => JavaObject.setUpdateStart(value);
+            get => JavaObject.getUpdateStart().ConvertType();
+            set => JavaObject.setUpdateStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime UpdateFinish
+        public DateTime? UpdateFinish
         {
-            get => JavaObject.getUpdateFinish();
-            set => JavaObject.setUpdateFinish(value);
+            get => JavaObject.getUpdateFinish().ConvertType();
+            set => JavaObject.setUpdateFinish(value.ConvertType());
         }
 
         public string ScheduleID

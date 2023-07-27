@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -8,14 +9,14 @@ namespace org.mpxj
 
         internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public CostRateTableEntry GetEntryByDate(java.time.LocalDateTime date)
+        public CostRateTableEntry GetEntryByDate(DateTime date)
         {
-            return _fromJava(JavaObject.getEntryByDate(date));
+            return _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
         }
 
-        public int GetIndexByDate(java.time.LocalDateTime date)
+        public int GetIndexByDate(DateTime date)
         {
-            return JavaObject.getIndexByDate(date);
+            return JavaObject.getIndexByDate(date.ConvertType());
         }
 
         public bool TableIsPopulated => JavaObject.tableIsPopulated();

@@ -30,28 +30,28 @@ namespace org.mpxj
             set => JavaObject.setWork(value.JavaObject);
         }
 
-        public java.time.LocalDateTime BaselineStart
+        public DateTime? BaselineStart
         {
-            get => JavaObject.getBaselineStart();
-            set => JavaObject.setBaselineStart(value);
+            get => JavaObject.getBaselineStart().ConvertType();
+            set => JavaObject.setBaselineStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ActualStart
+        public DateTime? ActualStart
         {
-            get => JavaObject.getActualStart();
-            set => JavaObject.setActualStart(value);
+            get => JavaObject.getActualStart().ConvertType();
+            set => JavaObject.setActualStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime BaselineFinish
+        public DateTime? BaselineFinish
         {
-            get => JavaObject.getBaselineFinish();
-            set => JavaObject.setBaselineFinish(value);
+            get => JavaObject.getBaselineFinish().ConvertType();
+            set => JavaObject.setBaselineFinish(value.ConvertType());
         }
 
-        public java.time.LocalDateTime ActualFinish
+        public DateTime? ActualFinish
         {
-            get => JavaObject.getActualFinish();
-            set => JavaObject.setActualFinish(value);
+            get => JavaObject.getActualFinish().ConvertType();
+            set => JavaObject.setActualFinish(value.ConvertType());
         }
 
         public Duration BaselineWork
@@ -90,16 +90,16 @@ namespace org.mpxj
             set => JavaObject.setActualCost(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Start
+        public DateTime? Start
         {
-            get => JavaObject.getStart();
-            set => JavaObject.setStart(value);
+            get => JavaObject.getStart().ConvertType();
+            set => JavaObject.setStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Finish
+        public DateTime? Finish
         {
-            get => JavaObject.getFinish();
-            set => JavaObject.setFinish(value);
+            get => JavaObject.getFinish().ConvertType();
+            set => JavaObject.setFinish(value.ConvertType());
         }
 
         public Duration Delay
@@ -240,13 +240,13 @@ namespace org.mpxj
 
         public double? GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber).ConvertType();
 
-        public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineStart(baselineNumber, value);
+        public void SetBaselineStart(int baselineNumber, DateTime value) => JavaObject.setBaselineStart(baselineNumber, value.ConvertType());
 
-        public java.time.LocalDateTime GetBaselineStart(int baselineNumber) => JavaObject.getBaselineStart(baselineNumber);
+        public DateTime? GetBaselineStart(int baselineNumber) => JavaObject.getBaselineStart(baselineNumber).ConvertType();
 
-        public void SetBaselineFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineFinish(baselineNumber, value);
+        public void SetBaselineFinish(int baselineNumber, DateTime value) => JavaObject.setBaselineFinish(baselineNumber, value.ConvertType());
 
-        public java.time.LocalDateTime GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber);
+        public DateTime? GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber).ConvertType();
 
         public void SetBaselineBudgetCost(int baselineNumber, double? value) => JavaObject.setBaselineBudgetCost(baselineNumber, value.ConvertType());
 
@@ -260,17 +260,17 @@ namespace org.mpxj
 
         public string GetText(int index) => JavaObject.getText(index);
 
-        public void SetStart(int index, java.time.LocalDateTime value) => JavaObject.setStart(index, value);
+        public void SetStart(int index, DateTime value) => JavaObject.setStart(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetStart(int index) => JavaObject.getStart(index);
+        public DateTime? GetStart(int index) => JavaObject.getStart(index).ConvertType();
 
-        public void SetFinish(int index, java.time.LocalDateTime value) => JavaObject.setFinish(index, value);
+        public void SetFinish(int index, DateTime value) => JavaObject.setFinish(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetFinish(int index) => JavaObject.getFinish(index);
+        public DateTime? GetFinish(int index) => JavaObject.getFinish(index).ConvertType();
 
-        public void SetDate(int index, java.time.LocalDateTime value) => JavaObject.setDate(index, value);
+        public void SetDate(int index, DateTime value) => JavaObject.setDate(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetDate(int index) => JavaObject.getDate(index);
+        public DateTime? GetDate(int index) => JavaObject.getDate(index).ConvertType();
 
         public void SetNumber(int index, double? value) => JavaObject.setNumber(index, value.ConvertType());
 
@@ -292,9 +292,9 @@ namespace org.mpxj
 
         public double? GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index).ConvertType();
 
-        public void SetEnterpriseDate(int index, java.time.LocalDateTime value) => JavaObject.setEnterpriseDate(index, value);
+        public void SetEnterpriseDate(int index, DateTime value) => JavaObject.setEnterpriseDate(index, value.ConvertType());
 
-        public java.time.LocalDateTime GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index);
+        public DateTime? GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index).ConvertType();
 
         public void SetEnterpriseDuration(int index, Duration value) => JavaObject.setEnterpriseDuration(index, value.JavaObject);
 
@@ -462,10 +462,10 @@ namespace org.mpxj
             set => JavaObject.setFinishVariance(value.JavaObject);
         }
 
-        public java.time.LocalDateTime CreateDate
+        public DateTime? CreateDate
         {
-            get => JavaObject.getCreateDate();
-            set => JavaObject.setCreateDate(value);
+            get => JavaObject.getCreateDate().ConvertType();
+            set => JavaObject.setCreateDate(value.ConvertType());
         }
 
         public Guid? GUID
@@ -512,16 +512,16 @@ namespace org.mpxj
             set => JavaObject.setResourceRequestType(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Stop
+        public DateTime? Stop
         {
-            get => JavaObject.getStop();
-            set => JavaObject.setStop(value);
+            get => JavaObject.getStop().ConvertType();
+            set => JavaObject.setStop(value.ConvertType());
         }
 
-        public java.time.LocalDateTime Resume
+        public DateTime? Resume
         {
-            get => JavaObject.getResume();
-            set => JavaObject.setResume(value);
+            get => JavaObject.getResume().ConvertType();
+            set => JavaObject.setResume(value.ConvertType());
         }
 
         public Duration PlannedWork
@@ -536,16 +536,16 @@ namespace org.mpxj
             set => JavaObject.setPlannedCost(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PlannedStart
+        public DateTime? PlannedStart
         {
-            get => JavaObject.getPlannedStart();
-            set => JavaObject.setPlannedStart(value);
+            get => JavaObject.getPlannedStart().ConvertType();
+            set => JavaObject.setPlannedStart(value.ConvertType());
         }
 
-        public java.time.LocalDateTime PlannedFinish
+        public DateTime? PlannedFinish
         {
-            get => JavaObject.getPlannedFinish();
-            set => JavaObject.setPlannedFinish(value);
+            get => JavaObject.getPlannedFinish().ConvertType();
+            set => JavaObject.setPlannedFinish(value.ConvertType());
         }
 
         public bool CalculateCostsFromUnits
@@ -566,7 +566,7 @@ namespace org.mpxj
             set => JavaObject.setCostAccount(value.JavaObject);
         }
 
-        public Rate GetEffectiveRate(java.time.LocalDateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date));
+        public Rate GetEffectiveRate(DateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date.ConvertType()));
 
         public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
 

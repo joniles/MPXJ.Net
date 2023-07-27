@@ -74,17 +74,17 @@ namespace org.mpxj
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
-        public Duration GetDuration(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate, endDate));
+        public Duration GetDuration(DateTime startDate, DateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate.ConvertType(), endDate.ConvertType()));
 
         public TimeOnly? GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date).ConvertType();
 
         public TimeOnly? GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date).ConvertType();
 
-        public java.time.LocalDateTime GetDate(java.time.LocalDateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate, duration.JavaObject, returnNextWorkStart);
+        public DateTime? GetDate(DateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate.ConvertType(), duration.JavaObject, returnNextWorkStart).ConvertType();
 
-        public java.time.LocalDateTime GetNextWorkStart(java.time.LocalDateTime date) => JavaObject.getNextWorkStart(date);
+        public DateTime? GetNextWorkStart(DateTime date) => JavaObject.getNextWorkStart(date.ConvertType()).ConvertType();
 
-        public java.time.LocalDateTime GetPreviousWorkFinish(java.time.LocalDateTime date) => JavaObject.getPreviousWorkFinish(date);
+        public DateTime? GetPreviousWorkFinish(DateTime date) => JavaObject.getPreviousWorkFinish(date.ConvertType()).ConvertType();
 
         public DayType? GetDayType(java.time.DayOfWeek day) => JavaObject.getDayType(day).ConvertType();
 
@@ -96,7 +96,7 @@ namespace org.mpxj
 
         public ProjectCalendarHours GetHours(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
 
-        public ProjectCalendarHours GetHours(java.time.LocalDateTime date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
+        public ProjectCalendarHours GetHours(DateTime date) => _proxyManager.ProxyObject(JavaObject.getHours(date.ConvertType()));
 
         public int? UniqueID
         {
@@ -120,7 +120,7 @@ namespace org.mpxj
 
         public Duration GetWork(java.time.LocalDate date, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(date, format.ConvertType()));
 
-        public Duration GetWork(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(startDate, endDate, format.ConvertType()));
+        public Duration GetWork(DateTime startDate, DateTime endDate, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(startDate.ConvertType(), endDate.ConvertType(), format.ConvertType()));
 
         public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 

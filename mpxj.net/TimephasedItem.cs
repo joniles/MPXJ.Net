@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -11,10 +12,10 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public java.time.LocalDateTime Start
+        public DateTime? Start
         {
-            get => JavaObject.getStart();
-            set => JavaObject.setStart(value);
+            get => JavaObject.getStart().ConvertType();
+            set => JavaObject.setStart(value.ConvertType());
         }
 
         public M AmountPerDay
@@ -35,10 +36,10 @@ namespace org.mpxj
             set => JavaObject.setTotalAmount(value);
         }
 
-        public java.time.LocalDateTime Finish
+        public DateTime? Finish
         {
-            get => JavaObject.getFinish();
-            set => JavaObject.setFinish(value);
+            get => JavaObject.getFinish().ConvertType();
+            set => JavaObject.setFinish(value.ConvertType());
         }
 
         public override string ToString() => JavaObject.toString();

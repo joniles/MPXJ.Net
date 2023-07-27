@@ -86,6 +86,21 @@ namespace org.mpxj
             return t == null ? null : java.time.LocalTime.of(t.Hour, t.Minute, t.Second);
         }
 
+        public static DateTime? ConvertType(this java.time.LocalDateTime value)
+        {
+            return value == null ? (DateTime?)null : new DateTime(value.getYear(), value.getMonthValue(), value.getDayOfMonth(), value.getHour(), value.getMinute(), value.getSecond());
+        }
+
+        public static java.time.LocalDateTime ConvertType(this DateTime value)
+        {
+            return java.time.LocalDateTime.of(value.Year, value.Month, value.Day, value.Hour, value.Minute, value.Second);
+        }
+
+        public static java.time.LocalDateTime ConvertType(this DateTime? value)
+        {
+            return value == null ? null : java.time.LocalDateTime.of(value.Value.Year, value.Value.Month, value.Value.Day, value.Value.Hour, value.Value.Minute, value.Value.Second);
+        }
+
         public static object GenericJavaObject(this object o)
         {
             if (o == null)
