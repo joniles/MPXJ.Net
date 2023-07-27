@@ -7,7 +7,8 @@ namespace org.mpxj
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        public static List<TaskField> Values { get; } = new List<TaskField>();
+        internal static List<TaskField> InternalValues { get; } = new List<TaskField>();
+        public static IReadOnlyList<TaskField> Values => InternalValues.AsReadOnly();
 
         public static readonly TaskField Start = new TaskField(net.sf.mpxj.TaskField.START);
         public static readonly TaskField DurationUnits = new TaskField(net.sf.mpxj.TaskField.DURATION_UNITS);
@@ -989,7 +990,7 @@ namespace org.mpxj
         internal TaskField(net.sf.mpxj.TaskField javaObject)
         {
             JavaObject = javaObject;
-            Values.Add(this);
+            InternalValues.Add(this);
         }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;

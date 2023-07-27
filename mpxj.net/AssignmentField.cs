@@ -7,7 +7,8 @@ namespace org.mpxj
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        public static List<AssignmentField> Values { get; } = new List<AssignmentField>();
+        internal static List<AssignmentField> InternalValues { get; } = new List<AssignmentField>();
+        public static IReadOnlyList<AssignmentField> Values => InternalValues.AsReadOnly();
 
         public static readonly AssignmentField Start = new AssignmentField(net.sf.mpxj.AssignmentField.START);
         public static readonly AssignmentField Duration1Units = new AssignmentField(net.sf.mpxj.AssignmentField.DURATION1_UNITS);
@@ -512,7 +513,7 @@ namespace org.mpxj
         internal AssignmentField(net.sf.mpxj.AssignmentField javaObject)
         {
             JavaObject = javaObject;
-            Values.Add(this);
+            InternalValues.Add(this);
         }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;

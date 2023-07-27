@@ -7,7 +7,8 @@ namespace org.mpxj
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        public static List<ConstraintField> Values { get; } = new List<ConstraintField>();
+        internal static List<ConstraintField> InternalValues { get; } = new List<ConstraintField>();
+        public static IReadOnlyList<ConstraintField> Values => InternalValues.AsReadOnly();
 
         public static readonly ConstraintField UniqueId = new ConstraintField(net.sf.mpxj.ConstraintField.UNIQUE_ID);
         public static readonly ConstraintField Task1 = new ConstraintField(net.sf.mpxj.ConstraintField.TASK1);
@@ -16,7 +17,7 @@ namespace org.mpxj
         internal ConstraintField(net.sf.mpxj.ConstraintField javaObject)
         {
             JavaObject = javaObject;
-            Values.Add(this);
+            InternalValues.Add(this);
         }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;

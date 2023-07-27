@@ -7,7 +7,8 @@ namespace org.mpxj
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        public static List<ProjectField> Values { get; } = new List<ProjectField>();
+        internal static List<ProjectField> InternalValues { get; } = new List<ProjectField>();
+        public static IReadOnlyList<ProjectField> Values => InternalValues.AsReadOnly();
 
         public static readonly ProjectField StartDate = new ProjectField(net.sf.mpxj.ProjectField.START_DATE);
         public static readonly ProjectField CurrencySymbol = new ProjectField(net.sf.mpxj.ProjectField.CURRENCY_SYMBOL);
@@ -153,7 +154,7 @@ namespace org.mpxj
         internal ProjectField(net.sf.mpxj.ProjectField javaObject)
         {
             JavaObject = javaObject;
-            Values.Add(this);
+            InternalValues.Add(this);
         }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;

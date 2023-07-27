@@ -8,7 +8,8 @@ namespace org.mpxj
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        public static List<ResourceField> Values { get; } = new List<ResourceField>();
+        internal static List<ResourceField> InternalValues { get; } = new List<ResourceField>();
+        public static IReadOnlyList<ResourceField> Values => InternalValues.AsReadOnly();
 
         public static readonly ResourceField Start = new ResourceField(net.sf.mpxj.ResourceField.START);
         public static readonly ResourceField Duration1Units = new ResourceField(net.sf.mpxj.ResourceField.DURATION1_UNITS);
@@ -567,7 +568,7 @@ namespace org.mpxj
         internal ResourceField(net.sf.mpxj.ResourceField javaObject)
         {
             JavaObject = javaObject;
-            Values.Add(this);
+            InternalValues.Add(this);
         }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;
