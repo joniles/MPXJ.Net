@@ -23,7 +23,7 @@ namespace org.mpxj
 
         public mpxj.Rate OvertimeRate => _proxyManager.ProxyObject(JavaObject.getOvertimeRate());
 
-        public java.lang.Number CostPerUse => JavaObject.getCostPerUse();
+        public double? CostPerUse => JavaObject.getCostPerUse().ConvertType();
     }
 }
 

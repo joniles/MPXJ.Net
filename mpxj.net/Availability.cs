@@ -15,7 +15,7 @@ namespace org.mpxj
 
         public LocalDateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
 
-        public java.lang.Number Units => JavaObject.getUnits();
+        public double? Units => JavaObject.getUnits().ConvertType();
     }
 }
 

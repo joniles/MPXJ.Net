@@ -177,22 +177,22 @@ namespace org.mpxj
             set => JavaObject.setComments(value);
         }
 
-        public java.lang.Number Cost
+        public double? Cost
         {
-            get => JavaObject.getCost();
-            set => JavaObject.setCost(value);
+            get => JavaObject.getCost().ConvertType();
+            set => JavaObject.setCost(value.ConvertType());
         }
 
-        public java.lang.Number BaselineCost
+        public double? BaselineCost
         {
-            get => JavaObject.getBaselineCost();
-            set => JavaObject.setBaselineCost(value);
+            get => JavaObject.getBaselineCost().ConvertType();
+            set => JavaObject.setBaselineCost(value.ConvertType());
         }
 
-        public java.lang.Number ActualCost
+        public double? ActualCost
         {
-            get => JavaObject.getActualCost();
-            set => JavaObject.setActualCost(value);
+            get => JavaObject.getActualCost().ConvertType();
+            set => JavaObject.setActualCost(value.ConvertType());
         }
 
         public Duration Work
@@ -213,10 +213,10 @@ namespace org.mpxj
             set => JavaObject.setActualWork(value.JavaObject);
         }
 
-        public java.lang.Number Work2
+        public double? Work2
         {
-            get => JavaObject.getWork2();
-            set => JavaObject.setWork2(value);
+            get => JavaObject.getWork2().ConvertType();
+            set => JavaObject.setWork2(value.ConvertType());
         }
 
         public Duration Duration
@@ -237,10 +237,10 @@ namespace org.mpxj
             set => JavaObject.setActualDuration(value.JavaObject);
         }
 
-        public java.lang.Number PercentageComplete
+        public double? PercentageComplete
         {
-            get => JavaObject.getPercentageComplete();
-            set => JavaObject.setPercentageComplete(value);
+            get => JavaObject.getPercentageComplete().ConvertType();
+            set => JavaObject.setPercentageComplete(value.ConvertType());
         }
 
         public java.time.LocalDateTime BaselineStart

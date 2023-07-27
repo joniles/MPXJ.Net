@@ -34,22 +34,22 @@ namespace org.mpxj
             set => JavaObject.setSubprojectGUID(value.ConvertType());
         }
 
-        public java.lang.Number PercentageComplete
+        public double? PercentageComplete
         {
-            get => JavaObject.getPercentageComplete();
-            set => JavaObject.setPercentageComplete(value);
+            get => JavaObject.getPercentageComplete().ConvertType();
+            set => JavaObject.setPercentageComplete(value.ConvertType());
         }
 
-        public java.lang.Number PercentageWorkComplete
+        public double? PercentageWorkComplete
         {
-            get => JavaObject.getPercentageWorkComplete();
-            set => JavaObject.setPercentageWorkComplete(value);
+            get => JavaObject.getPercentageWorkComplete().ConvertType();
+            set => JavaObject.setPercentageWorkComplete(value.ConvertType());
         }
 
-        public java.lang.Number ActualCost
+        public double? ActualCost
         {
-            get => JavaObject.getActualCost();
-            set => JavaObject.setActualCost(value);
+            get => JavaObject.getActualCost().ConvertType();
+            set => JavaObject.setActualCost(value.ConvertType());
         }
 
         public Duration ActualDuration
@@ -76,10 +76,10 @@ namespace org.mpxj
             set => JavaObject.setActualWork(value.JavaObject);
         }
 
-        public java.lang.Number BaselineCost
+        public double? BaselineCost
         {
-            get => JavaObject.getBaselineCost();
-            set => JavaObject.setBaselineCost(value);
+            get => JavaObject.getBaselineCost().ConvertType();
+            set => JavaObject.setBaselineCost(value.ConvertType());
         }
 
         public Duration BaselineDuration
@@ -124,16 +124,16 @@ namespace org.mpxj
             set => JavaObject.setBaselineWork(value.JavaObject);
         }
 
-        public java.lang.Number BCWP
+        public double? BCWP
         {
-            get => JavaObject.getBCWP();
-            set => JavaObject.setBCWP(value);
+            get => JavaObject.getBCWP().ConvertType();
+            set => JavaObject.setBCWP(value.ConvertType());
         }
 
-        public java.lang.Number BCWS
+        public double? BCWS
         {
-            get => JavaObject.getBCWS();
-            set => JavaObject.setBCWS(value);
+            get => JavaObject.getBCWS().ConvertType();
+            set => JavaObject.setBCWS(value.ConvertType());
         }
 
         public bool Confirmed
@@ -172,16 +172,16 @@ namespace org.mpxj
             set => JavaObject.setContact(value);
         }
 
-        public java.lang.Number Cost
+        public double? Cost
         {
-            get => JavaObject.getCost();
-            set => JavaObject.setCost(value);
+            get => JavaObject.getCost().ConvertType();
+            set => JavaObject.setCost(value.ConvertType());
         }
 
-        public java.lang.Number CostVariance
+        public double? CostVariance
         {
-            get => JavaObject.getCostVariance();
-            set => JavaObject.setCostVariance(value);
+            get => JavaObject.getCostVariance().ConvertType();
+            set => JavaObject.setCostVariance(value.ConvertType());
         }
 
         public java.time.LocalDateTime CreateDate
@@ -196,10 +196,10 @@ namespace org.mpxj
             set => JavaObject.setCritical(value);
         }
 
-        public java.lang.Number CV
+        public double? CV
         {
-            get => JavaObject.getCV();
-            set => JavaObject.setCV(value);
+            get => JavaObject.getCV().ConvertType();
+            set => JavaObject.setCV(value.ConvertType());
         }
 
         public Duration LevelingDelay
@@ -276,10 +276,10 @@ namespace org.mpxj
             set => JavaObject.setFinishVariance(value.JavaObject);
         }
 
-        public java.lang.Number FixedCost
+        public double? FixedCost
         {
-            get => JavaObject.getFixedCost();
-            set => JavaObject.setFixedCost(value);
+            get => JavaObject.getFixedCost().ConvertType();
+            set => JavaObject.setFixedCost(value.ConvertType());
         }
 
         public void SetFlag(int index, bool value) => JavaObject.setFlag(index, value);
@@ -368,9 +368,9 @@ namespace org.mpxj
 
         public void RemoveChildTask(Task child) => JavaObject.removeChildTask(child.JavaObject);
 
-        public void SetNumber(int index, java.lang.Number value) => JavaObject.setNumber(index, value);
+        public void SetNumber(int index, double? value) => JavaObject.setNumber(index, value.ConvertType());
 
-        public java.lang.Number GetNumber(int index) => JavaObject.getNumber(index);
+        public double? GetNumber(int index) => JavaObject.getNumber(index).ConvertType();
 
         public int? Objects
         {
@@ -406,10 +406,10 @@ namespace org.mpxj
             set => JavaObject.setProject(value);
         }
 
-        public java.lang.Number RemainingCost
+        public double? RemainingCost
         {
-            get => JavaObject.getRemainingCost();
-            set => JavaObject.setRemainingCost(value);
+            get => JavaObject.getRemainingCost().ConvertType();
+            set => JavaObject.setRemainingCost(value.ConvertType());
         }
 
         public Duration RemainingDuration
@@ -494,10 +494,10 @@ namespace org.mpxj
             set => JavaObject.setSummary(value);
         }
 
-        public java.lang.Number SV
+        public double? SV
         {
-            get => JavaObject.getSV();
-            set => JavaObject.setSV(value);
+            get => JavaObject.getSV().ConvertType();
+            set => JavaObject.setSV(value.ConvertType());
         }
 
         public void SetText(int index, string value) => JavaObject.setText(index, value);
@@ -624,10 +624,10 @@ namespace org.mpxj
 
         public bool ExternalProject => JavaObject.getExternalProject();
 
-        public java.lang.Number ACWP
+        public double? ACWP
         {
-            get => JavaObject.getACWP();
-            set => JavaObject.setACWP(value);
+            get => JavaObject.getACWP().ConvertType();
+            set => JavaObject.setACWP(value.ConvertType());
         }
 
         public TimeUnit? LevelingDelayFormat
@@ -642,10 +642,10 @@ namespace org.mpxj
             set => JavaObject.setIgnoreResourceCalendar(value);
         }
 
-        public java.lang.Number PhysicalPercentComplete
+        public double? PhysicalPercentComplete
         {
-            get => JavaObject.getPhysicalPercentComplete();
-            set => JavaObject.setPhysicalPercentComplete(value);
+            get => JavaObject.getPhysicalPercentComplete().ConvertType();
+            set => JavaObject.setPhysicalPercentComplete(value.ConvertType());
         }
 
         public EarnedValueMethod? EarnedValueMethod
@@ -682,16 +682,16 @@ namespace org.mpxj
 
         public void SetDate(int index, java.time.LocalDateTime value) => JavaObject.setDate(index, value);
 
-        public java.lang.Number OvertimeCost
+        public double? OvertimeCost
         {
-            get => JavaObject.getOvertimeCost();
-            set => JavaObject.setOvertimeCost(value);
+            get => JavaObject.getOvertimeCost().ConvertType();
+            set => JavaObject.setOvertimeCost(value.ConvertType());
         }
 
-        public java.lang.Number ActualOvertimeCost
+        public double? ActualOvertimeCost
         {
-            get => JavaObject.getActualOvertimeCost();
-            set => JavaObject.setActualOvertimeCost(value);
+            get => JavaObject.getActualOvertimeCost().ConvertType();
+            set => JavaObject.setActualOvertimeCost(value.ConvertType());
         }
 
         public Duration ActualOvertimeWork
@@ -766,10 +766,10 @@ namespace org.mpxj
             set => JavaObject.setRemainingOvertimeWork(value.JavaObject);
         }
 
-        public java.lang.Number RemainingOvertimeCost
+        public double? RemainingOvertimeCost
         {
-            get => JavaObject.getRemainingOvertimeCost();
-            set => JavaObject.setRemainingOvertimeCost(value);
+            get => JavaObject.getRemainingOvertimeCost().ConvertType();
+            set => JavaObject.setRemainingOvertimeCost(value.ConvertType());
         }
 
         public ProjectCalendar Calendar
@@ -823,9 +823,9 @@ namespace org.mpxj
             set => JavaObject.setSubprojectObject(value.JavaObject);
         }
 
-        public java.lang.Number GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index);
+        public double? GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index).ConvertType();
 
-        public void SetEnterpriseCost(int index, java.lang.Number value) => JavaObject.setEnterpriseCost(index, value);
+        public void SetEnterpriseCost(int index, double? value) => JavaObject.setEnterpriseCost(index, value.ConvertType());
 
         public java.time.LocalDateTime GetEnterpriseDate(int index) => JavaObject.getEnterpriseDate(index);
 
@@ -839,15 +839,15 @@ namespace org.mpxj
 
         public void SetEnterpriseFlag(int index, bool value) => JavaObject.setEnterpriseFlag(index, value);
 
-        public java.lang.Number GetEnterpriseNumber(int index) => JavaObject.getEnterpriseNumber(index);
+        public double? GetEnterpriseNumber(int index) => JavaObject.getEnterpriseNumber(index).ConvertType();
 
-        public void SetEnterpriseNumber(int index, java.lang.Number value) => JavaObject.setEnterpriseNumber(index, value);
+        public void SetEnterpriseNumber(int index, double? value) => JavaObject.setEnterpriseNumber(index, value.ConvertType());
 
         public string GetEnterpriseText(int index) => JavaObject.getEnterpriseText(index);
 
         public void SetEnterpriseText(int index, string value) => JavaObject.setEnterpriseText(index, value);
 
-        public void SetBaselineCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineCost(baselineNumber, value);
+        public void SetBaselineCost(int baselineNumber, double? value) => JavaObject.setBaselineCost(baselineNumber, value.ConvertType());
 
         public void SetBaselineDuration(int baselineNumber, Duration value) => JavaObject.setBaselineDuration(baselineNumber, value.JavaObject);
 
@@ -857,7 +857,7 @@ namespace org.mpxj
 
         public void SetBaselineWork(int baselineNumber, Duration value) => JavaObject.setBaselineWork(baselineNumber, value.JavaObject);
 
-        public java.lang.Number GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber);
+        public double? GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber).ConvertType();
 
         public Duration GetBaselineDuration(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineDuration(baselineNumber));
 
@@ -939,15 +939,15 @@ namespace org.mpxj
 
         public void SetBaselineEstimatedFinish(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineEstimatedFinish(baselineNumber, value);
 
-        public java.lang.Number BaselineFixedCost
+        public double? BaselineFixedCost
         {
-            get => JavaObject.getBaselineFixedCost();
-            set => JavaObject.setBaselineFixedCost(value);
+            get => JavaObject.getBaselineFixedCost().ConvertType();
+            set => JavaObject.setBaselineFixedCost(value.ConvertType());
         }
 
-        public void SetBaselineFixedCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineFixedCost(baselineNumber, value);
+        public void SetBaselineFixedCost(int baselineNumber, double? value) => JavaObject.setBaselineFixedCost(baselineNumber, value.ConvertType());
 
-        public java.lang.Number GetBaselineFixedCost(int baselineNumber) => JavaObject.getBaselineFixedCost(baselineNumber);
+        public double? GetBaselineFixedCost(int baselineNumber) => JavaObject.getBaselineFixedCost(baselineNumber).ConvertType();
 
         public AccrueType? BaselineFixedCostAccrual
         {
@@ -966,10 +966,10 @@ namespace org.mpxj
             //set => JavaObject.setExpenseItems(value);
         }
 
-        public java.lang.Number StoredMaterial
+        public double? StoredMaterial
         {
-            get => JavaObject.getStoredMaterial();
-            set => JavaObject.setStoredMaterial(value);
+            get => JavaObject.getStoredMaterial().ConvertType();
+            set => JavaObject.setStoredMaterial(value.ConvertType());
         }
 
         public string FeatureOfWork
@@ -1050,10 +1050,10 @@ namespace org.mpxj
             set => JavaObject.setDepartment(value);
         }
 
-        public java.lang.Number OverallPercentComplete
+        public double? OverallPercentComplete
         {
-            get => JavaObject.getOverallPercentComplete();
-            set => JavaObject.setOverallPercentComplete(value);
+            get => JavaObject.getOverallPercentComplete().ConvertType();
+            set => JavaObject.setOverallPercentComplete(value.ConvertType());
         }
 
         public java.time.LocalDateTime PlannedFinish
@@ -1080,10 +1080,10 @@ namespace org.mpxj
             set => JavaObject.setPlannedWork(value.JavaObject);
         }
 
-        public java.lang.Number PlannedCost
+        public double? PlannedCost
         {
-            get => JavaObject.getPlannedCost();
-            set => JavaObject.setPlannedCost(value);
+            get => JavaObject.getPlannedCost().ConvertType();
+            set => JavaObject.setPlannedCost(value.ConvertType());
         }
 
         public java.time.LocalDateTime SuspendDate
@@ -1181,10 +1181,10 @@ namespace org.mpxj
             set => JavaObject.setScheduledDuration(value.JavaObject);
         }
 
-        public java.lang.Number BudgetCost
+        public double? BudgetCost
         {
-            get => JavaObject.getBudgetCost();
-            set => JavaObject.setBudgetCost(value);
+            get => JavaObject.getBudgetCost().ConvertType();
+            set => JavaObject.setBudgetCost(value.ConvertType());
         }
 
         public Duration BudgetWork
@@ -1193,10 +1193,10 @@ namespace org.mpxj
             set => JavaObject.setBudgetWork(value.JavaObject);
         }
 
-        public java.lang.Number BaselineBudgetCost
+        public double? BaselineBudgetCost
         {
-            get => JavaObject.getBaselineBudgetCost();
-            set => JavaObject.setBaselineBudgetCost(value);
+            get => JavaObject.getBaselineBudgetCost().ConvertType();
+            set => JavaObject.setBaselineBudgetCost(value.ConvertType());
         }
 
         public Duration BaselineBudgetWork
@@ -1205,9 +1205,9 @@ namespace org.mpxj
             set => JavaObject.setBaselineBudgetWork(value.JavaObject);
         }
 
-        public java.lang.Number GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber);
+        public double? GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber).ConvertType();
 
-        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineBudgetCost(baselineNumber, value);
+        public void SetBaselineBudgetCost(int baselineNumber, double? value) => JavaObject.setBaselineBudgetCost(baselineNumber, value.ConvertType());
 
         public Duration GetBaselineBudgetWork(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineBudgetWork(baselineNumber));
 

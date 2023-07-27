@@ -18,10 +18,10 @@ namespace org.mpxj
             set => JavaObject.setUniqueID(value.ConvertType());
         }
 
-        public java.lang.Number Units
+        public double? Units
         {
-            get => JavaObject.getUnits();
-            set => JavaObject.setUnits(value);
+            get => JavaObject.getUnits().ConvertType();
+            set => JavaObject.setUnits(value.ConvertType());
         }
 
         public Duration Work
@@ -72,22 +72,22 @@ namespace org.mpxj
             set => JavaObject.setOvertimeWork(value.JavaObject);
         }
 
-        public java.lang.Number Cost
+        public double? Cost
         {
-            get => JavaObject.getCost();
-            set => JavaObject.setCost(value);
+            get => JavaObject.getCost().ConvertType();
+            set => JavaObject.setCost(value.ConvertType());
         }
 
-        public java.lang.Number BaselineCost
+        public double? BaselineCost
         {
-            get => JavaObject.getBaselineCost();
-            set => JavaObject.setBaselineCost(value);
+            get => JavaObject.getBaselineCost().ConvertType();
+            set => JavaObject.setBaselineCost(value.ConvertType());
         }
 
-        public java.lang.Number ActualCost
+        public double? ActualCost
         {
-            get => JavaObject.getActualCost();
-            set => JavaObject.setActualCost(value);
+            get => JavaObject.getActualCost().ConvertType();
+            set => JavaObject.setActualCost(value.ConvertType());
         }
 
         public java.time.LocalDateTime Start
@@ -208,10 +208,10 @@ namespace org.mpxj
             set => JavaObject.setTaskUniqueID(value.ConvertType());
         }
 
-        public java.lang.Number BudgetCost
+        public double? BudgetCost
         {
-            get => JavaObject.getBudgetCost();
-            set => JavaObject.setBudgetCost(value);
+            get => JavaObject.getBudgetCost().ConvertType();
+            set => JavaObject.setBudgetCost(value.ConvertType());
         }
 
         public Duration BudgetWork
@@ -220,10 +220,10 @@ namespace org.mpxj
             set => JavaObject.setBudgetWork(value.JavaObject);
         }
 
-        public java.lang.Number BaselineBudgetCost
+        public double? BaselineBudgetCost
         {
-            get => JavaObject.getBaselineBudgetCost();
-            set => JavaObject.setBaselineBudgetCost(value);
+            get => JavaObject.getBaselineBudgetCost().ConvertType();
+            set => JavaObject.setBaselineBudgetCost(value.ConvertType());
         }
 
         public Duration BaselineBudgetWork
@@ -232,13 +232,13 @@ namespace org.mpxj
             set => JavaObject.setBaselineBudgetWork(value.JavaObject);
         }
 
-        public void SetBaselineCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineCost(baselineNumber, value);
+        public void SetBaselineCost(int baselineNumber, double? value) => JavaObject.setBaselineCost(baselineNumber, value.ConvertType());
 
         public void SetBaselineWork(int baselineNumber, Duration value) => JavaObject.setBaselineWork(baselineNumber, value.JavaObject);
 
         public Duration GetBaselineWork(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineWork(baselineNumber));
 
-        public java.lang.Number GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber);
+        public double? GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber).ConvertType();
 
         public void SetBaselineStart(int baselineNumber, java.time.LocalDateTime value) => JavaObject.setBaselineStart(baselineNumber, value);
 
@@ -248,13 +248,13 @@ namespace org.mpxj
 
         public java.time.LocalDateTime GetBaselineFinish(int baselineNumber) => JavaObject.getBaselineFinish(baselineNumber);
 
-        public void SetBaselineBudgetCost(int baselineNumber, java.lang.Number value) => JavaObject.setBaselineBudgetCost(baselineNumber, value);
+        public void SetBaselineBudgetCost(int baselineNumber, double? value) => JavaObject.setBaselineBudgetCost(baselineNumber, value.ConvertType());
 
         public void SetBaselineBudgetWork(int baselineNumber, Duration value) => JavaObject.setBaselineBudgetWork(baselineNumber, value.JavaObject);
 
         public Duration GetBaselineBudgetWork(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineBudgetWork(baselineNumber));
 
-        public java.lang.Number GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber);
+        public double? GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber).ConvertType();
 
         public void SetText(int index, string value) => JavaObject.setText(index, value);
 
@@ -272,25 +272,25 @@ namespace org.mpxj
 
         public java.time.LocalDateTime GetDate(int index) => JavaObject.getDate(index);
 
-        public void SetNumber(int index, java.lang.Number value) => JavaObject.setNumber(index, value);
+        public void SetNumber(int index, double? value) => JavaObject.setNumber(index, value.ConvertType());
 
-        public java.lang.Number GetNumber(int index) => JavaObject.getNumber(index);
+        public double? GetNumber(int index) => JavaObject.getNumber(index).ConvertType();
 
         public void SetDuration(int index, Duration value) => JavaObject.setDuration(index, value.JavaObject);
 
         public Duration GetDuration(int index) => _proxyManager.ProxyObject(JavaObject.getDuration(index));
 
-        public void SetCost(int index, java.lang.Number value) => JavaObject.setCost(index, value);
+        public void SetCost(int index, double? value) => JavaObject.setCost(index, value.ConvertType());
 
-        public java.lang.Number GetCost(int index) => JavaObject.getCost(index);
+        public double? GetCost(int index) => JavaObject.getCost(index).ConvertType();
 
         public void SetFlag(int index, bool value) => JavaObject.setFlag(index, value);
 
         public bool GetFlag(int index) => JavaObject.getFlag(index);
 
-        public void SetEnterpriseCost(int index, java.lang.Number value) => JavaObject.setEnterpriseCost(index, value);
+        public void SetEnterpriseCost(int index, double? value) => JavaObject.setEnterpriseCost(index, value.ConvertType());
 
-        public java.lang.Number GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index);
+        public double? GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index).ConvertType();
 
         public void SetEnterpriseDate(int index, java.time.LocalDateTime value) => JavaObject.setEnterpriseDate(index, value);
 
@@ -304,9 +304,9 @@ namespace org.mpxj
 
         public bool GetEnterpriseFlag(int index) => JavaObject.getEnterpriseFlag(index);
 
-        public void SetEnterpriseNumber(int index, java.lang.Number value) => JavaObject.setEnterpriseNumber(index, value);
+        public void SetEnterpriseNumber(int index, double? value) => JavaObject.setEnterpriseNumber(index, value.ConvertType());
 
-        public java.lang.Number GetEnterpriseNumber(int index) => JavaObject.getEnterpriseNumber(index);
+        public double? GetEnterpriseNumber(int index) => JavaObject.getEnterpriseNumber(index).ConvertType();
 
         public void SetEnterpriseText(int index, string value) => JavaObject.setEnterpriseText(index, value);
 
@@ -330,70 +330,70 @@ namespace org.mpxj
             set => JavaObject.setRemainingOvertimeWork(value.JavaObject);
         }
 
-        public java.lang.Number OvertimeCost
+        public double? OvertimeCost
         {
-            get => JavaObject.getOvertimeCost();
-            set => JavaObject.setOvertimeCost(value);
+            get => JavaObject.getOvertimeCost().ConvertType();
+            set => JavaObject.setOvertimeCost(value.ConvertType());
         }
 
-        public java.lang.Number RemainingCost
+        public double? RemainingCost
         {
-            get => JavaObject.getRemainingCost();
-            set => JavaObject.setRemainingCost(value);
+            get => JavaObject.getRemainingCost().ConvertType();
+            set => JavaObject.setRemainingCost(value.ConvertType());
         }
 
-        public java.lang.Number ActualOvertimeCost
+        public double? ActualOvertimeCost
         {
-            get => JavaObject.getActualOvertimeCost();
-            set => JavaObject.setActualOvertimeCost(value);
+            get => JavaObject.getActualOvertimeCost().ConvertType();
+            set => JavaObject.setActualOvertimeCost(value.ConvertType());
         }
 
-        public java.lang.Number RemainingOvertimeCost
+        public double? RemainingOvertimeCost
         {
-            get => JavaObject.getRemainingOvertimeCost();
-            set => JavaObject.setRemainingOvertimeCost(value);
+            get => JavaObject.getRemainingOvertimeCost().ConvertType();
+            set => JavaObject.setRemainingOvertimeCost(value.ConvertType());
         }
 
-        public java.lang.Number BCWP
+        public double? BCWP
         {
-            get => JavaObject.getBCWP();
-            set => JavaObject.setBCWP(value);
+            get => JavaObject.getBCWP().ConvertType();
+            set => JavaObject.setBCWP(value.ConvertType());
         }
 
-        public java.lang.Number BCWS
+        public double? BCWS
         {
-            get => JavaObject.getBCWS();
-            set => JavaObject.setBCWS(value);
+            get => JavaObject.getBCWS().ConvertType();
+            set => JavaObject.setBCWS(value.ConvertType());
         }
 
-        public java.lang.Number ACWP
+        public double? ACWP
         {
-            get => JavaObject.getACWP();
-            set => JavaObject.setACWP(value);
+            get => JavaObject.getACWP().ConvertType();
+            set => JavaObject.setACWP(value.ConvertType());
         }
 
-        public java.lang.Number SV
+        public double? SV
         {
-            get => JavaObject.getSV();
-            set => JavaObject.setSV(value);
+            get => JavaObject.getSV().ConvertType();
+            set => JavaObject.setSV(value.ConvertType());
         }
 
-        public java.lang.Number CV
+        public double? CV
         {
-            get => JavaObject.getCV();
-            set => JavaObject.setCV(value);
+            get => JavaObject.getCV().ConvertType();
+            set => JavaObject.setCV(value.ConvertType());
         }
 
-        public java.lang.Number CostVariance
+        public double? CostVariance
         {
-            get => JavaObject.getCostVariance();
-            set => JavaObject.setCostVariance(value);
+            get => JavaObject.getCostVariance().ConvertType();
+            set => JavaObject.setCostVariance(value.ConvertType());
         }
 
-        public java.lang.Number PercentageWorkComplete
+        public double? PercentageWorkComplete
         {
-            get => JavaObject.getPercentageWorkComplete();
-            set => JavaObject.setPercentageWorkComplete(value);
+            get => JavaObject.getPercentageWorkComplete().ConvertType();
+            set => JavaObject.setPercentageWorkComplete(value.ConvertType());
         }
 
         public string Notes
@@ -486,10 +486,10 @@ namespace org.mpxj
             set => JavaObject.setTeamStatusPending(value);
         }
 
-        public java.lang.Number VAC
+        public double? VAC
         {
-            get => JavaObject.getVAC();
-            set => JavaObject.setVAC(value);
+            get => JavaObject.getVAC().ConvertType();
+            set => JavaObject.setVAC(value.ConvertType());
         }
 
         public int CostRateTableIndex
@@ -530,10 +530,10 @@ namespace org.mpxj
             set => JavaObject.setPlannedWork(value.JavaObject);
         }
 
-        public java.lang.Number PlannedCost
+        public double? PlannedCost
         {
-            get => JavaObject.getPlannedCost();
-            set => JavaObject.setPlannedCost(value);
+            get => JavaObject.getPlannedCost().ConvertType();
+            set => JavaObject.setPlannedCost(value.ConvertType());
         }
 
         public java.time.LocalDateTime PlannedStart

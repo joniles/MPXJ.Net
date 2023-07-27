@@ -50,6 +50,11 @@ namespace org.mpxj
             return java.lang.Double.valueOf(value);
         }
 
+        public static double? ConvertType(this java.lang.Number value)
+        {
+            return value == null ? (double?)null : value.doubleValue();
+        }
+
         public static object GenericJavaObject(this object o)
         {
             if (o == null)
