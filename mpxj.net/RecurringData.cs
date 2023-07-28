@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -52,9 +53,9 @@ namespace org.mpxj
             set => JavaObject.setWorkingDaysOnly(value);
         }
 
-        public bool GetWeeklyDay(java.time.DayOfWeek day) => JavaObject.getWeeklyDay(day);
+        public bool GetWeeklyDay(DayOfWeek day) => JavaObject.getWeeklyDay(day.ConvertType());
 
-        public void SetWeeklyDay(java.time.DayOfWeek day, bool value) => JavaObject.setWeeklyDay(day, value);
+        public void SetWeeklyDay(DayOfWeek day, bool value) => JavaObject.setWeeklyDay(day.ConvertType(), value);
 
         public bool Relative
         {
@@ -68,10 +69,10 @@ namespace org.mpxj
             set => JavaObject.setFrequency(value.ConvertType());
         }
 
-        public java.time.DayOfWeek DayOfWeek
+        public DayOfWeek? DayOfWeek
         {
-            get => JavaObject.getDayOfWeek();
-            set => JavaObject.setDayOfWeek(value);
+            get => JavaObject.getDayOfWeek().ConvertType();
+            set => JavaObject.setDayOfWeek(value.ConvertType());
         }
 
         public int? DayNumber

@@ -86,13 +86,13 @@ namespace org.mpxj
 
         public DateTime? GetPreviousWorkFinish(DateTime date) => JavaObject.getPreviousWorkFinish(date.ConvertType()).ConvertType();
 
-        public DayType? GetDayType(java.time.DayOfWeek day) => JavaObject.getDayType(day).ConvertType();
+        public DayType? GetDayType(DayOfWeek day) => JavaObject.getDayType(day.ConvertType()).ConvertType();
 
-        public bool IsWorkingDay(java.time.DayOfWeek day) => JavaObject.isWorkingDay(day);
+        public bool IsWorkingDay(DayOfWeek day) => JavaObject.isWorkingDay(day.ConvertType());
 
         public bool IsWorkingDate(java.time.LocalDate date) => JavaObject.isWorkingDate(date);
 
-        public ProjectCalendarHours GetHours(java.time.DayOfWeek day) => _proxyManager.ProxyObject(JavaObject.getHours(day));
+        public ProjectCalendarHours GetHours(DayOfWeek day) => _proxyManager.ProxyObject(JavaObject.getHours(day.ConvertType()));
 
         public ProjectCalendarHours GetHours(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
 
@@ -116,7 +116,7 @@ namespace org.mpxj
 
         public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
 
-        public Duration GetWork(java.time.DayOfWeek day, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(day, format.ConvertType()));
+        public Duration GetWork(DayOfWeek day, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(day.ConvertType(), format.ConvertType()));
 
         public Duration GetWork(java.time.LocalDate date, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(date, format.ConvertType()));
 

@@ -585,10 +585,10 @@ namespace org.mpxj
             set => JavaObject.setNewTasksAreManual(value);
         }
 
-        public java.time.DayOfWeek WeekStartDay
+        public DayOfWeek? WeekStartDay
         {
-            get => JavaObject.getWeekStartDay();
-            set => JavaObject.setWeekStartDay(value);
+            get => JavaObject.getWeekStartDay().ConvertType();
+            set => JavaObject.setWeekStartDay(value.ConvertType());
         }
 
         public string CurrencyCode

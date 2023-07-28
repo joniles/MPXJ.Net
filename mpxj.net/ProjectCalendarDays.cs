@@ -1,4 +1,5 @@
-﻿using org.mpxj.proxy;
+﻿using System;
+using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -23,9 +24,9 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public ProjectCalendarHours GetCalendarHours(java.time.DayOfWeek day)
+        public ProjectCalendarHours GetCalendarHours(DayOfWeek day)
         {
-            return _proxyManager.ProxyObject(JavaObject.getCalendarHours(day));
+            return _proxyManager.ProxyObject(JavaObject.getCalendarHours(day.ConvertType()));
         }
 
         public void AddDefaultCalendarHours()
@@ -38,34 +39,34 @@ namespace org.mpxj
             JavaObject.addDefaultCalendarDays();
         }
 
-        public void AddDefaultCalendarHours(java.time.DayOfWeek day)
+        public void AddDefaultCalendarHours(DayOfWeek day)
         {
-            JavaObject.addDefaultCalendarHours(day);
+            JavaObject.addDefaultCalendarHours(day.ConvertType());
         }
 
-        public ProjectCalendarHours AddCalendarHours(java.time.DayOfWeek day)
+        public ProjectCalendarHours AddCalendarHours(DayOfWeek day)
         {
-            return _proxyManager.ProxyObject(JavaObject.addCalendarHours(day));
+            return _proxyManager.ProxyObject(JavaObject.addCalendarHours(day.ConvertType()));
         }
 
-        public void RemoveCalendarHours(java.time.DayOfWeek day)
+        public void RemoveCalendarHours(DayOfWeek day)
         {
-            JavaObject.removeCalendarHours(day);
+            JavaObject.removeCalendarHours(day.ConvertType());
         }
 
-        public DayType? GetCalendarDayType(java.time.DayOfWeek day)
+        public DayType? GetCalendarDayType(DayOfWeek day)
         {
-            return JavaObject.getCalendarDayType(day).ConvertType();
+            return JavaObject.getCalendarDayType(day.ConvertType()).ConvertType();
         }
 
-        public void SetWorkingDay(java.time.DayOfWeek day, bool working)
+        public void SetWorkingDay(DayOfWeek day, bool working)
         {
-            JavaObject.setWorkingDay(day, working);
+            JavaObject.setWorkingDay(day.ConvertType(), working);
         }
 
-        public void SetCalendarDayType(java.time.DayOfWeek day, DayType type)
+        public void SetCalendarDayType(DayOfWeek day, DayType type)
         {
-            JavaObject.setCalendarDayType(day, type.ConvertType());
+            JavaObject.setCalendarDayType(day.ConvertType(), type.ConvertType());
         }
     }
 }

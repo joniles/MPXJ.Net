@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using org.mpxj.proxy;
 
@@ -6,6 +7,28 @@ namespace org.mpxj
 {
     internal static class ExtensionMethods
 	{
+        private static readonly Dictionary<java.time.DayOfWeek, DayOfWeek> FromJavaDayOfWeek = new Dictionary<java.time.DayOfWeek, DayOfWeek>
+        {
+            { java.time.DayOfWeek.MONDAY, DayOfWeek.Monday },
+            { java.time.DayOfWeek.TUESDAY, DayOfWeek.Tuesday },
+            { java.time.DayOfWeek.WEDNESDAY, DayOfWeek.Wednesday },
+            { java.time.DayOfWeek.THURSDAY, DayOfWeek.Thursday },
+            { java.time.DayOfWeek.FRIDAY, DayOfWeek.Friday },
+            { java.time.DayOfWeek.SATURDAY, DayOfWeek.Saturday },
+            { java.time.DayOfWeek.SUNDAY, DayOfWeek.Sunday },
+        };
+
+        private static readonly Dictionary<DayOfWeek, java.time.DayOfWeek> ToJavaDayOfWeek = new Dictionary<DayOfWeek, java.time.DayOfWeek>
+        {
+            { DayOfWeek.Monday, java.time.DayOfWeek.MONDAY },
+            { DayOfWeek.Tuesday, java.time.DayOfWeek.TUESDAY },
+            { DayOfWeek.Wednesday, java.time.DayOfWeek.WEDNESDAY },
+            { DayOfWeek.Thursday, java.time.DayOfWeek.THURSDAY },
+            { DayOfWeek.Friday, java.time.DayOfWeek.FRIDAY },
+            { DayOfWeek.Saturday, java.time.DayOfWeek.SATURDAY },
+            { DayOfWeek.Sunday, java.time.DayOfWeek.SUNDAY },
+        };
+
         public static Guid? ConvertType(this java.util.UUID value)
         {
             return value == null ? (Guid?)null : new Guid(value.toString());
@@ -99,6 +122,21 @@ namespace org.mpxj
         public static java.time.LocalDateTime ConvertType(this DateTime? value)
         {
             return value == null ? null : java.time.LocalDateTime.of(value.Value.Year, value.Value.Month, value.Value.Day, value.Value.Hour, value.Value.Minute, value.Value.Second);
+        }
+
+        public static DayOfWeek? ConvertType(this java.time.DayOfWeek value)
+        {
+            return value == null ? (DayOfWeek?)null : FromJavaDayOfWeek[value];
+        }
+
+        public static java.time.DayOfWeek ConvertType(this DayOfWeek value)
+        {
+            return ToJavaDayOfWeek[value];
+        }
+
+        public static java.time.DayOfWeek ConvertType(this DayOfWeek? value)
+        {
+            return value == null ? null : ToJavaDayOfWeek[value.Value];
         }
 
         public static object GenericJavaObject(this object o)
