@@ -11,12 +11,13 @@ namespace org.mpxj.proxy
 
         public N this[int index]
         {
-            get => (N)JavaObject.get(index);
-            set => JavaObject.set(index, value);
+            get => _fromJava((M)JavaObject.get(index));
+            set => JavaObject.set(index, _toJava(value));
         }
+
         public int IndexOf(N item)
         {
-            return JavaObject.indexOf(item);
+            return JavaObject.indexOf(_toJava(item));
         }
 
         public void Insert(int index, N item)

@@ -22,6 +22,9 @@ namespace org.mpxj
             {
                 System.Console.WriteLine(field);
             }
+
+            var t = project.Tasks[0];
+            var ac = t.ActivityCodes;
             System.Console.WriteLine();
         }
     }
