@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -17,16 +18,16 @@ namespace org.mpxj
             JavaObject = new net.sf.mpxj.RecurringData();
         }
 
-        public java.time.LocalDate StartDate
+        public DateOnly? StartDate
         {
-            get => JavaObject.getStartDate();
-            set => JavaObject.setStartDate(value);
+            get => JavaObject.getStartDate().ConvertType();
+            set => JavaObject.setStartDate(value.ConvertType());
         }
 
-        public java.time.LocalDate FinishDate
+        public DateOnly? FinishDate
         {
-            get => JavaObject.getFinishDate();
-            set => JavaObject.setFinishDate(value);
+            get => JavaObject.getFinishDate().ConvertType();
+            set => JavaObject.setFinishDate(value.ConvertType());
         }
 
         public int? tOccurrences
@@ -87,15 +88,26 @@ namespace org.mpxj
             set => JavaObject.setMonthNumber(value.ConvertType());
         }
 
-        public java.time.LocalDate[] Dates => JavaObject.getDates();
-
+        public DateOnly[] Dates
+        {
+            get
+            {
+                var result = new List<DateOnly>();
+                foreach(var date in JavaObject.getDates())
+                {
+                    result.Add(date.ConvertType().Value);
+                }
+                return result.ToArray();
+            }
+        }
+            
         public bool Valid => JavaObject.isValid();
 
-        public java.time.LocalDate CalculatedFirstDate => JavaObject.getCalculatedFirstDate();
+        public DateOnly? CalculatedFirstDate => JavaObject.getCalculatedFirstDate().ConvertType();
 
-        public java.time.LocalDate CalculatedLastDate => JavaObject.getCalculatedLastDate();
+        public DateOnly? CalculatedLastDate => JavaObject.getCalculatedLastDate().ConvertType();
 
-        public void SetYearlyAbsoluteFromDate(java.time.LocalDate date) => JavaObject.setYearlyAbsoluteFromDate(date);
+        public void SetYearlyAbsoluteFromDate(DateOnly date) => JavaObject.setYearlyAbsoluteFromDate(date.ConvertType());
 
         public override string ToString() => JavaObject.toString();
     }

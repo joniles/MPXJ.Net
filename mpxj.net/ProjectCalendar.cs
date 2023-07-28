@@ -52,9 +52,9 @@ namespace org.mpxj
 
         public IList<ProjectCalendarWeek> WorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkWeeks());
 
-        public ProjectCalendarException AddCalendarException(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.addCalendarException(date));
+        public ProjectCalendarException AddCalendarException(DateOnly date) => _proxyManager.ProxyObject(JavaObject.addCalendarException(date.ConvertType()));
 
-        public ProjectCalendarException AddCalendarException(java.time.LocalDate fromDate, java.time.LocalDate toDate) => _proxyManager.ProxyObject(JavaObject.addCalendarException(fromDate, toDate));
+        public ProjectCalendarException AddCalendarException(DateOnly fromDate, DateOnly toDate) => _proxyManager.ProxyObject(JavaObject.addCalendarException(fromDate.ConvertType(), toDate.ConvertType()));
 
         public ProjectCalendarException AddCalendarException(RecurringData recurringData) => _proxyManager.ProxyObject(JavaObject.addCalendarException(recurringData.JavaObject));
 
@@ -76,9 +76,9 @@ namespace org.mpxj
 
         public Duration GetDuration(DateTime startDate, DateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate.ConvertType(), endDate.ConvertType()));
 
-        public TimeOnly? GetStartTime(java.time.LocalDate date) => JavaObject.getStartTime(date).ConvertType();
+        public TimeOnly? GetStartTime(DateOnly date) => JavaObject.getStartTime(date.ConvertType()).ConvertType();
 
-        public TimeOnly? GetFinishTime(java.time.LocalDate date) => JavaObject.getFinishTime(date).ConvertType();
+        public TimeOnly? GetFinishTime(DateOnly date) => JavaObject.getFinishTime(date.ConvertType()).ConvertType();
 
         public DateTime? GetDate(DateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate.ConvertType(), duration.JavaObject, returnNextWorkStart).ConvertType();
 
@@ -90,11 +90,11 @@ namespace org.mpxj
 
         public bool IsWorkingDay(DayOfWeek day) => JavaObject.isWorkingDay(day.ConvertType());
 
-        public bool IsWorkingDate(java.time.LocalDate date) => JavaObject.isWorkingDate(date);
+        public bool IsWorkingDate(DateOnly date) => JavaObject.isWorkingDate(date.ConvertType());
 
         public ProjectCalendarHours GetHours(DayOfWeek day) => _proxyManager.ProxyObject(JavaObject.getHours(day.ConvertType()));
 
-        public ProjectCalendarHours GetHours(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getHours(date));
+        public ProjectCalendarHours GetHours(DateOnly date) => _proxyManager.ProxyObject(JavaObject.getHours(date.ConvertType()));
 
         public ProjectCalendarHours GetHours(DateTime date) => _proxyManager.ProxyObject(JavaObject.getHours(date.ConvertType()));
 
@@ -112,13 +112,13 @@ namespace org.mpxj
 
         public void Remove() => JavaObject.remove();
 
-        public ProjectCalendarException GetException(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getException(date));
+        public ProjectCalendarException GetException(DateOnly date) => _proxyManager.ProxyObject(JavaObject.getException(date.ConvertType()));
 
-        public ProjectCalendarWeek GetWorkWeek(java.time.LocalDate date) => _proxyManager.ProxyObject(JavaObject.getWorkWeek(date));
+        public ProjectCalendarWeek GetWorkWeek(DateOnly date) => _proxyManager.ProxyObject(JavaObject.getWorkWeek(date.ConvertType()));
 
         public Duration GetWork(DayOfWeek day, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(day.ConvertType(), format.ConvertType()));
 
-        public Duration GetWork(java.time.LocalDate date, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(date, format.ConvertType()));
+        public Duration GetWork(DateOnly date, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(date.ConvertType(), format.ConvertType()));
 
         public Duration GetWork(DateTime startDate, DateTime endDate, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(startDate.ConvertType(), endDate.ConvertType(), format.ConvertType()));
 

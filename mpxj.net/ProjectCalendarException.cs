@@ -20,9 +20,9 @@ namespace org.mpxj
             set => JavaObject.setName(value);
         }
 
-        public java.time.LocalDate FromDate => JavaObject.getFromDate();
+        public DateOnly? FromDate => JavaObject.getFromDate().ConvertType();
 
-        public java.time.LocalDate ToDate => JavaObject.getToDate();
+        public DateOnly? ToDate => JavaObject.getToDate().ConvertType();
 
         public RecurringData Recurring => _proxyManager.ProxyObject(JavaObject.getRecurring());
 
@@ -30,7 +30,7 @@ namespace org.mpxj
 
         public IList<ProjectCalendarException> ExpandedExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedExceptions());
 
-        public bool Contains(java.time.LocalDate date) => JavaObject.contains(date);
+        public bool Contains(DateOnly date) => JavaObject.contains(date);
 
         public bool Contains(DateTime date) => JavaObject.contains(date);
 

@@ -139,6 +139,21 @@ namespace org.mpxj
             return value == null ? null : ToJavaDayOfWeek[value.Value];
         }
 
+        public static DateOnly? ConvertType(this java.time.LocalDate value)
+        {
+            return value == null ? (DateOnly?)null : new DateOnly(value.getYear(), value.getMonthValue(), value.getDayOfMonth());
+        }
+
+        public static java.time.LocalDate ConvertType(this DateOnly? t)
+        {
+            return t == null ? null : java.time.LocalDate.of(t.Value.Year, t.Value.Month, t.Value.Day);
+        }
+
+        public static java.time.LocalDate ConvertType(this DateOnly t)
+        {
+            return t == null ? null : java.time.LocalDate.of(t.Year, t.Month, t.Day);
+        }
+
         public static object GenericJavaObject(this object o)
         {
             if (o == null)
