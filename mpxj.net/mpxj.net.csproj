@@ -11,10 +11,12 @@
   <ItemGroup>
     <None Remove="proxy\" />
     <None Remove="extensions\" />
+    <None Remove="reader\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="proxy\" />
     <Folder Include="extensions\" />
+    <Folder Include="reader\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Portable.System.DateTimeOnly" Version="7.0.1" />
