@@ -420,8 +420,15 @@ namespace org.mpxj.proxy
                 return null;
             }
 
-            switch (o.GetType().AssemblyQualifiedName)
+            var key = o.GetType().FullName;
+            switch (key)
             {
+                case "net.sf.mpxj.Duration":
+                    return ProxyObject((net.sf.mpxj.Duration)o);
+
+                case "net.sf.mpxj.Rate":
+                    return ProxyObject((net.sf.mpxj.Rate)o);
+
                 case "net.sf.mpxj.Resource":
                     return ProxyObject((net.sf.mpxj.Resource)o);
 
@@ -445,6 +452,73 @@ namespace org.mpxj.proxy
 
                 case "net.sf.mpxj.ProjectCalendarHours":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
+
+                case "java.lang.Boolean":
+                    return ((java.lang.Boolean)o).booleanValue();
+
+                case "java.lang.Character":
+                    return ((java.lang.Character)o).charValue();
+
+                case "java.lang.Double":
+                    return ((java.lang.Double)o).doubleValue();
+
+                case "java.lang.Integer":
+                    return ((java.lang.Integer)o).ConvertType();
+
+                case "java.time.DayOfWeek":
+                    return ((java.time.DayOfWeek)o).ConvertType();
+
+                case "java.time.LocalDateTime":
+                    return ((java.time.LocalDateTime)o).ConvertType();
+
+                case "java.time.LocalDate":
+                    return ((java.time.LocalDate)o).ConvertType();
+
+                case "java.time.LocalTime":
+                    return ((java.time.LocalTime)o).ConvertType();
+
+                case "java.util.UUID":
+                    return ((java.util.UUID)o).ConvertType();
+
+                // MPXJ Enums
+                case "net.sf.mpxj.AccrueType":
+                    return ((net.sf.mpxj.AccrueType)o).ConvertType();
+
+                case "net.sf.mpxj.CodePage":
+                    return ((net.sf.mpxj.CodePage)o).ConvertType();
+
+                case "net.sf.mpxj.CriticalActivityType":
+                    return ((net.sf.mpxj.CriticalActivityType)o).ConvertType();
+
+                case "net.sf.mpxj.CurrencySymbolPosition":
+                    return ((net.sf.mpxj.CurrencySymbolPosition)o).ConvertType();
+
+                case "net.sf.mpxj.DateOrder":
+                    return ((net.sf.mpxj.DateOrder)o).ConvertType();
+
+                case "net.sf.mpxj.FileVersion":
+                    return ((net.sf.mpxj.FileVersion)o).ConvertType();
+
+                case "net.sf.mpxj.EarnedValueMethod":
+                    return ((net.sf.mpxj.EarnedValueMethod)o).ConvertType();
+
+                case "net.sf.mpxj.TimeUnit":
+                    return ((net.sf.mpxj.TimeUnit)o).ConvertType();
+
+                case "net.sf.mpxj.ProjectDateFormat":
+                    return ((net.sf.mpxj.ProjectDateFormat)o).ConvertType();
+
+                case "net.sf.mpxj.ProjectTimeFormat":
+                    return ((net.sf.mpxj.ProjectTimeFormat)o).ConvertType();
+
+                case "net.sf.mpxj.ScheduleFrom":
+                    return ((net.sf.mpxj.ScheduleFrom)o).ConvertType();
+
+                case "net.sf.mpxj.TaskType":
+                    return ((net.sf.mpxj.TaskType)o).ConvertType();
+
+                case "System.String":
+                    return o;
             }
 
             throw new NotSupportedException();
