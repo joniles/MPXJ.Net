@@ -25,6 +25,10 @@ namespace org.mpxj
 
             var t = project.Tasks[0];
             var ac = t.ActivityCodes;
+
+
+            var expenseItems = t.ExpenseItems;
+            
             System.Console.WriteLine();
         }
     }

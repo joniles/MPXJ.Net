@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace org.mpxj.proxy
 {
     internal class ProxyManager
     {
+        private readonly ObjectIDGenerator _idGenerator = new ObjectIDGenerator();
         private readonly Dictionary<string, object> _objectCache = new Dictionary<string, object>();
         internal ProjectFile ProjectFile { get; }
 
@@ -20,7 +22,8 @@ namespace org.mpxj.proxy
                 return default;
             }
 
-            var key = o.GetType().FullName + "." + o.GetHashCode();
+            bool firstTime;
+            var key = o.GetType().FullName + "." + _idGenerator.GetId(o, out firstTime);
             if (!_objectCache.ContainsKey(key))
             {
                 _objectCache[key] = proxyFunction.Invoke(o);
@@ -417,7 +420,6 @@ namespace org.mpxj.proxy
                 return null;
             }
 
-            // TODO: complete this switch statement
             switch (o.GetType().AssemblyQualifiedName)
             {
                 case "net.sf.mpxj.Resource":
@@ -443,10 +445,9 @@ namespace org.mpxj.proxy
 
                 case "net.sf.mpxj.ProjectCalendarHours":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
-
             }
 
-            return o;
+            throw new NotSupportedException();
         }
 
         internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value)

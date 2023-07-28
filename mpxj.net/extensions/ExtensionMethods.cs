@@ -166,11 +166,8 @@ namespace org.mpxj
                 return o.GetType().GetProperty("JavaObject").GetValue(o, null);
             }
 
-            // TODO - all other type conversions
-
-            return null;
+            throw new NotSupportedException();
         }
-
     }
 }
 
