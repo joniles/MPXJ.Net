@@ -484,6 +484,9 @@ namespace org.mpxj.proxy
                 case "net.sf.mpxj.AccrueType":
                     return ((net.sf.mpxj.AccrueType)o).ConvertType();
 
+                case "net.sf.mpxj.BookingType":
+                    return ((net.sf.mpxj.BookingType)o).ConvertType();
+
                 case "net.sf.mpxj.CodePage":
                     return ((net.sf.mpxj.CodePage)o).ConvertType();
 
@@ -516,6 +519,9 @@ namespace org.mpxj.proxy
 
                 case "net.sf.mpxj.TaskType":
                     return ((net.sf.mpxj.TaskType)o).ConvertType();
+
+                case "net.sf.mpxj.ResourceType":
+                    return ((net.sf.mpxj.ResourceType)o).ConvertType();
 
                 case "System.String":
                     return o;
