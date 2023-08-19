@@ -453,6 +453,9 @@ namespace org.mpxj.proxy
                 case "net.sf.mpxj.ProjectCalendarHours":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
 
+                case "net.sf.mpxj.RtfNotes":
+                    return ProxyObject((net.sf.mpxj.RtfNotes)o);
+
                 case "java.lang.Boolean":
                     return ((java.lang.Boolean)o).booleanValue();
 

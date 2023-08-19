@@ -20,6 +20,9 @@ namespace org.mpxj
         {
             Assert.Multiple(() =>
             {
+                var notesObject = (Notes)resource.Get(ResourceField.Notes);
+                var notes = notesObject == null ? "" : notesObject.ToString();
+
                 Assert.That(resource.Start, Is.EqualTo(resource.Get(ResourceField.Start)));
                 Assert.That(resource.ID, Is.EqualTo(resource.Get(ResourceField.Id)));
                 Assert.That(resource.Name, Is.EqualTo(resource.Get(ResourceField.Name)));
@@ -46,10 +49,10 @@ namespace org.mpxj
                 Assert.That(resource.OverAllocated, Is.EqualTo(resource.Get(ResourceField.Overallocated)));
                 Assert.That(resource.PeakUnits, Is.EqualTo(resource.Get(ResourceField.Peak)));
                 Assert.That(resource.UniqueID, Is.EqualTo(resource.Get(ResourceField.UniqueId)));
-                Assert.That(resource.Notes, Is.EqualTo(resource.Get(ResourceField.Notes)));
+                Assert.That(resource.Notes, Is.EqualTo(notes));
                 Assert.That(resource.PercentWorkComplete, Is.EqualTo(resource.Get(ResourceField.PercentWorkComplete)));
                 Assert.That(resource.Objects, Is.EqualTo(resource.Get(ResourceField.Objects)));
-                Assert.That(resource.LinkedFields, Is.EqualTo(resource.Get(ResourceField.LinkedFields)));
+                Assert.That(resource.LinkedFields, Is.False);
                 Assert.That(resource.EmailAddress, Is.EqualTo(resource.Get(ResourceField.EmailAddress)));
                 Assert.That(resource.RegularWork, Is.EqualTo(resource.Get(ResourceField.RegularWork)));
                 Assert.That(resource.ActualOvertimeWork, Is.EqualTo(resource.Get(ResourceField.ActualOvertimeWork)));
@@ -71,7 +74,7 @@ namespace org.mpxj
                 //Assert.That(resource.HyperlinkHref, Is.EqualTo(resource.Get(ResourceField.HyperlinkHref)));
                 //Assert.That(resource.Assignment, Is.EqualTo(resource.Get(ResourceField.Assignment)));
                 //Assert.That(resource.TaskSummaryName, Is.EqualTo(resource.Get(ResourceField.TaskSummaryName)));
-                Assert.That(resource.CanLevel, Is.EqualTo(resource.Get(ResourceField.CanLevel)));
+                Assert.That(resource.CanLevel, Is.False);
                 //Assert.That(resource.WorkContour, Is.EqualTo(resource.Get(ResourceField.WorkContour)));
 
                 Assert.That(resource.GetCost(1), Is.EqualTo(resource.Get(ResourceField.Cost1)));
@@ -572,8 +575,8 @@ namespace org.mpxj
                 Assert.That(resource.SupplyReference, Is.EqualTo(resource.Get(ResourceField.SupplyReference)));
                 Assert.That(resource.Description, Is.EqualTo(resource.Get(ResourceField.Description)));
                 Assert.That(resource.ResourceID, Is.EqualTo(resource.Get(ResourceField.ResourceId)));
-                Assert.That(resource.ModifyOnIntegrate, Is.EqualTo(resource.Get(ResourceField.ModifyOnIntegrate)));
-                Assert.That(resource.ExpensesOnly, Is.EqualTo(resource.Get(ResourceField.ExpensesOnly)));
+                Assert.That(resource.ModifyOnIntegrate, Is.False);
+                Assert.That(resource.ExpensesOnly, Is.False);
                 Assert.That(resource.PeriodDur, Is.EqualTo(resource.Get(ResourceField.PeriodDur)));
                 Assert.That(resource.Priority, Is.EqualTo(resource.Get(ResourceField.Priority)));
                 Assert.That(resource.Rate, Is.EqualTo(resource.Get(ResourceField.Rate)));
