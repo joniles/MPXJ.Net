@@ -4,16 +4,11 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class ProjectProperties : ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>, IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
+    public class ProjectProperties : AbstractFieldContainer, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>, IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
     {
-        internal readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ProjectProperties JavaObject { get; }
+        public new net.sf.mpxj.ProjectProperties JavaObject => (net.sf.mpxj.ProjectProperties)base.JavaObject;
 
-        internal ProjectProperties(ProxyManager proxyManager, net.sf.mpxj.ProjectProperties javaObject)
-        {
-            _proxyManager = proxyManager;
-            JavaObject = javaObject;
-        }
+        internal ProjectProperties(ProxyManager proxyManager, net.sf.mpxj.ProjectProperties javaObject) : base(proxyManager, javaObject) { }
 
         public TimeUnit? DefaultDurationUnits
         {
