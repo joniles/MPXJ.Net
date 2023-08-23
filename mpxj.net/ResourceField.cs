@@ -201,7 +201,7 @@ namespace org.mpxj
         public static readonly ResourceField Confirmed = new ResourceField(net.sf.mpxj.ResourceField.CONFIRMED);
         public static readonly ResourceField LevelingDelay = new ResourceField(net.sf.mpxj.ResourceField.LEVELING_DELAY);
         public static readonly ResourceField ResponsePending = new ResourceField(net.sf.mpxj.ResourceField.RESPONSE_PENDING);
-        public static readonly ResourceField TeamstatusPending = new ResourceField(net.sf.mpxj.ResourceField.TEAMSTATUS_PENDING);
+        public static readonly ResourceField TeamStatusPending = new ResourceField(net.sf.mpxj.ResourceField.TEAM_STATUS_PENDING);
         public static readonly ResourceField Cv = new ResourceField(net.sf.mpxj.ResourceField.CV);
         public static readonly ResourceField UpdateNeeded = new ResourceField(net.sf.mpxj.ResourceField.UPDATE_NEEDED);
         public static readonly ResourceField CostRateTable = new ResourceField(net.sf.mpxj.ResourceField.COST_RATE_TABLE);
