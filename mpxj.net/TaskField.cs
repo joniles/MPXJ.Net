@@ -490,7 +490,7 @@ namespace org.mpxj
         public static readonly TaskField EnterpriseText40 = new TaskField(net.sf.mpxj.TaskField.ENTERPRISE_TEXT40);
         public static readonly TaskField CompleteThrough = new TaskField(net.sf.mpxj.TaskField.COMPLETE_THROUGH);
         public static readonly TaskField SummaryProgress = new TaskField(net.sf.mpxj.TaskField.SUMMARY_PROGRESS);
-        public static readonly TaskField Guid = new TaskField(net.sf.mpxj.TaskField.GUID);
+        public static readonly TaskField GUID = new TaskField(net.sf.mpxj.TaskField.GUID);
         public static readonly TaskField Active = new TaskField(net.sf.mpxj.TaskField.ACTIVE);
         public static readonly TaskField TaskMode = new TaskField(net.sf.mpxj.TaskField.TASK_MODE);
         public static readonly TaskField AssignmentOwner = new TaskField(net.sf.mpxj.TaskField.ASSIGNMENT_OWNER);

@@ -224,6 +224,10 @@ namespace org.mpxj
 
         public Duration GetDuration(int index) => _proxyManager.ProxyObject(JavaObject.getDuration(index));
 
+        public void SetCost(int index, double? value) => JavaObject.setCost(index, value.ConvertType());
+
+        public double? GetCost(int index) => JavaObject.getCost(index).ConvertType();
+
         public Duration DurationVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getDurationVariance());
