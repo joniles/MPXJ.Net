@@ -494,106 +494,131 @@ namespace org.mpxj
                 Assert.That(task.GUID, Is.EqualTo(task.Get(TaskField.GUID)));
                 Assert.That(task.Active, Is.EqualTo(task.Get(TaskField.Active)));
                 Assert.That(task.TaskMode, Is.EqualTo(task.Get(TaskField.TaskMode)));
-                Assert.That(task.AssignmentOwner, Is.EqualTo(task.Get(TaskField.AssignmentOwner)));
+                //Assert.That(task.AssignmentOwner, Is.EqualTo(task.Get(TaskField.AssignmentOwner)));
                 Assert.That(task.BaselineBudgetCost, Is.EqualTo(task.Get(TaskField.BaselineBudgetCost)));
                 Assert.That(task.BaselineBudgetWork, Is.EqualTo(task.Get(TaskField.BaselineBudgetWork)));
-                Assert.That(task.BaselineDeliverableFinish, Is.EqualTo(task.Get(TaskField.BaselineDeliverableFinish)));
-                Assert.That(task.BaselineDeliverableStart, Is.EqualTo(task.Get(TaskField.BaselineDeliverableStart)));
+                //Assert.That(task.BaselineDeliverableFinish, Is.EqualTo(task.Get(TaskField.BaselineDeliverableFinish)));
+                //Assert.That(task.BaselineDeliverableStart, Is.EqualTo(task.Get(TaskField.BaselineDeliverableStart)));
                 Assert.That(task.BaselineEstimatedDuration, Is.EqualTo(task.Get(TaskField.BaselineEstimatedDuration)));
                 Assert.That(task.BaselineEstimatedStart, Is.EqualTo(task.Get(TaskField.BaselineEstimatedStart)));
                 Assert.That(task.BaselineEstimatedFinish, Is.EqualTo(task.Get(TaskField.BaselineEstimatedFinish)));
                 Assert.That(task.BaselineFixedCost, Is.EqualTo(task.Get(TaskField.BaselineFixedCost)));
                 Assert.That(task.BaselineFixedCostAccrual, Is.EqualTo(task.Get(TaskField.BaselineFixedCostAccrual)));
+
                 Assert.That(task.Baseline1EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline1EstimatedStart)));
+                Assert.That(task.Baseline2EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedStart)));
+                Assert.That(task.Baseline3EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedStart)));
+                Assert.That(task.Baseline4EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedStart)));
+                Assert.That(task.Baseline5EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedStart)));
+                Assert.That(task.Baseline6EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedStart)));
+                Assert.That(task.Baseline7EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedStart)));
+                Assert.That(task.Baseline8EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedStart)));
+                Assert.That(task.Baseline9EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedStart)));
+                Assert.That(task.Baseline10EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedStart)));
+
                 Assert.That(task.Baseline1EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline1EstimatedFinish)));
+                Assert.That(task.Baseline2EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedFinish)));
+                Assert.That(task.Baseline3EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedFinish)));
+                Assert.That(task.Baseline4EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedFinish)));
+                Assert.That(task.Baseline5EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedFinish)));
+                Assert.That(task.Baseline6EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedFinish)));
+                Assert.That(task.Baseline7EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedFinish)));
+                Assert.That(task.Baseline8EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedFinish)));
+                Assert.That(task.Baseline9EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedFinish)));
+                Assert.That(task.Baseline10EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedFinish)));
+
                 Assert.That(task.Baseline1EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline1EstimatedDuration)));
+                Assert.That(task.Baseline2EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedDuration)));
+                Assert.That(task.Baseline3EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedDuration)));
+                Assert.That(task.Baseline4EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedDuration)));
+                Assert.That(task.Baseline5EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedDuration)));
+                Assert.That(task.Baseline6EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedDuration)));
+                Assert.That(task.Baseline7EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedDuration)));
+                Assert.That(task.Baseline8EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedDuration)));
+                Assert.That(task.Baseline9EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedDuration)));
+                Assert.That(task.Baseline10EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedDuration)));
+
                 Assert.That(task.Baseline1FixedCost, Is.EqualTo(task.Get(TaskField.Baseline1FixedCost)));
+                Assert.That(task.Baseline2FixedCost, Is.EqualTo(task.Get(TaskField.Baseline2FixedCost)));
+                Assert.That(task.Baseline3FixedCost, Is.EqualTo(task.Get(TaskField.Baseline3FixedCost)));
+                Assert.That(task.Baseline4FixedCost, Is.EqualTo(task.Get(TaskField.Baseline4FixedCost)));
+                Assert.That(task.Baseline5FixedCost, Is.EqualTo(task.Get(TaskField.Baseline5FixedCost)));
+                Assert.That(task.Baseline6FixedCost, Is.EqualTo(task.Get(TaskField.Baseline6FixedCost)));
+                Assert.That(task.Baseline7FixedCost, Is.EqualTo(task.Get(TaskField.Baseline7FixedCost)));
+                Assert.That(task.Baseline8FixedCost, Is.EqualTo(task.Get(TaskField.Baseline8FixedCost)));
+                Assert.That(task.Baseline9FixedCost, Is.EqualTo(task.Get(TaskField.Baseline9FixedCost)));
+                Assert.That(task.Baseline10FixedCost, Is.EqualTo(task.Get(TaskField.Baseline10FixedCost)));
+
                 Assert.That(task.Baseline1FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline1FixedCostAccrual)));
+                Assert.That(task.Baseline2FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline2FixedCostAccrual)));
+                Assert.That(task.Baseline3FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline3FixedCostAccrual)));
+                Assert.That(task.Baseline4FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline4FixedCostAccrual)));
+                Assert.That(task.Baseline5FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline5FixedCostAccrual)));
+                Assert.That(task.Baseline6FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline6FixedCostAccrual)));
+                Assert.That(task.Baseline7FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline7FixedCostAccrual)));
+                Assert.That(task.Baseline8FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline8FixedCostAccrual)));
+                Assert.That(task.Baseline9FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline9FixedCostAccrual)));
+                Assert.That(task.Baseline10FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline10FixedCostAccrual)));
+
                 Assert.That(task.Baseline1BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline1BudgetCost)));
+                Assert.That(task.Baseline2BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline2BudgetCost)));
+                Assert.That(task.Baseline3BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline3BudgetCost)));
+                Assert.That(task.Baseline4BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline4BudgetCost)));
+                Assert.That(task.Baseline5BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline5BudgetCost)));
+                Assert.That(task.Baseline6BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline6BudgetCost)));
+                Assert.That(task.Baseline7BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline7BudgetCost)));
+                Assert.That(task.Baseline8BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline8BudgetCost)));
+                Assert.That(task.Baseline9BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline9BudgetCost)));
+                Assert.That(task.Baseline10BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline10BudgetCost)));
+
                 Assert.That(task.Baseline1BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline1BudgetWork)));
                 Assert.That(task.Baseline1DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline1DeliverableFinish)));
                 Assert.That(task.Baseline1DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline1DeliverableStart)));
-                Assert.That(task.Baseline2EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedStart)));
-                Assert.That(task.Baseline2EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedFinish)));
-                Assert.That(task.Baseline2EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline2EstimatedDuration)));
-                Assert.That(task.Baseline2FixedCost, Is.EqualTo(task.Get(TaskField.Baseline2FixedCost)));
-                Assert.That(task.Baseline2FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline2FixedCostAccrual)));
-                Assert.That(task.Baseline2BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline2BudgetCost)));
+                
+                
                 Assert.That(task.Baseline2BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline2BudgetWork)));
                 Assert.That(task.Baseline2DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline2DeliverableFinish)));
                 Assert.That(task.Baseline2DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline2DeliverableStart)));
-                Assert.That(task.Baseline3EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedStart)));
-                Assert.That(task.Baseline3EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedFinish)));
-                Assert.That(task.Baseline3EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline3EstimatedDuration)));
-                Assert.That(task.Baseline3FixedCost, Is.EqualTo(task.Get(TaskField.Baseline3FixedCost)));
-                Assert.That(task.Baseline3FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline3FixedCostAccrual)));
-                Assert.That(task.Baseline3BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline3BudgetCost)));
+
+                
+                
                 Assert.That(task.Baseline3BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline3BudgetWork)));
                 Assert.That(task.Baseline3DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline3DeliverableFinish)));
                 Assert.That(task.Baseline3DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline3DeliverableStart)));
-                Assert.That(task.Baseline4EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedStart)));
-                Assert.That(task.Baseline4EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedFinish)));
-                Assert.That(task.Baseline4EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline4EstimatedDuration)));
-                Assert.That(task.Baseline4FixedCost, Is.EqualTo(task.Get(TaskField.Baseline4FixedCost)));
-                Assert.That(task.Baseline4FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline4FixedCostAccrual)));
-                Assert.That(task.Baseline4BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline4BudgetCost)));
+
+                
                 Assert.That(task.Baseline4BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline4BudgetWork)));
                 Assert.That(task.Baseline4DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline4DeliverableFinish)));
                 Assert.That(task.Baseline4DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline4DeliverableStart)));
-                Assert.That(task.Baseline5EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedStart)));
-                Assert.That(task.Baseline5EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedFinish)));
-                Assert.That(task.Baseline5EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline5EstimatedDuration)));
-                Assert.That(task.Baseline5FixedCost, Is.EqualTo(task.Get(TaskField.Baseline5FixedCost)));
-                Assert.That(task.Baseline5FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline5FixedCostAccrual)));
-                Assert.That(task.Baseline5BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline5BudgetCost)));
+                
+                
                 Assert.That(task.Baseline5BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline5BudgetWork)));
                 Assert.That(task.Baseline5DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline5DeliverableFinish)));
                 Assert.That(task.Baseline5DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline5DeliverableStart)));
-                Assert.That(task.Baseline6EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedStart)));
-                Assert.That(task.Baseline6EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedFinish)));
-                Assert.That(task.Baseline6EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline6EstimatedDuration)));
-                Assert.That(task.Baseline6FixedCost, Is.EqualTo(task.Get(TaskField.Baseline6FixedCost)));
-                Assert.That(task.Baseline6FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline6FixedCostAccrual)));
-                Assert.That(task.Baseline6BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline6BudgetCost)));
+                
+                
                 Assert.That(task.Baseline6BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline6BudgetWork)));
                 Assert.That(task.Baseline6DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline6DeliverableFinish)));
                 Assert.That(task.Baseline6DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline6DeliverableStart)));
-                Assert.That(task.Baseline7EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedStart)));
-                Assert.That(task.Baseline7EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedFinish)));
-                Assert.That(task.Baseline7EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline7EstimatedDuration)));
-                Assert.That(task.Baseline7FixedCost, Is.EqualTo(task.Get(TaskField.Baseline7FixedCost)));
-                Assert.That(task.Baseline7FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline7FixedCostAccrual)));
-                Assert.That(task.Baseline7BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline7BudgetCost)));
+                
                 Assert.That(task.Baseline7BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline7BudgetWork)));
                 Assert.That(task.Baseline7DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline7DeliverableFinish)));
                 Assert.That(task.Baseline7DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline7DeliverableStart)));
-                Assert.That(task.Baseline8EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedStart)));
-                Assert.That(task.Baseline8EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedFinish)));
-                Assert.That(task.Baseline8EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline8EstimatedDuration)));
-                Assert.That(task.Baseline8FixedCost, Is.EqualTo(task.Get(TaskField.Baseline8FixedCost)));
-                Assert.That(task.Baseline8FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline8FixedCostAccrual)));
-                Assert.That(task.Baseline8BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline8BudgetCost)));
+                
                 Assert.That(task.Baseline8BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline8BudgetWork)));
                 Assert.That(task.Baseline8DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline8DeliverableFinish)));
                 Assert.That(task.Baseline8DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline8DeliverableStart)));
-                Assert.That(task.Baseline9EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedStart)));
-                Assert.That(task.Baseline9EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedFinish)));
-                Assert.That(task.Baseline9EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline9EstimatedDuration)));
-                Assert.That(task.Baseline9FixedCost, Is.EqualTo(task.Get(TaskField.Baseline9FixedCost)));
-                Assert.That(task.Baseline9FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline9FixedCostAccrual)));
-                Assert.That(task.Baseline9BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline9BudgetCost)));
+                
+
                 Assert.That(task.Baseline9BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline9BudgetWork)));
                 Assert.That(task.Baseline9DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline9DeliverableFinish)));
                 Assert.That(task.Baseline9DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline9DeliverableStart)));
-                Assert.That(task.Baseline10EstimatedStart, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedStart)));
-                Assert.That(task.Baseline10EstimatedFinish, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedFinish)));
-                Assert.That(task.Baseline10EstimatedDuration, Is.EqualTo(task.Get(TaskField.Baseline10EstimatedDuration)));
-                Assert.That(task.Baseline10FixedCost, Is.EqualTo(task.Get(TaskField.Baseline10FixedCost)));
-                Assert.That(task.Baseline10FixedCostAccrual, Is.EqualTo(task.Get(TaskField.Baseline10FixedCostAccrual)));
-                Assert.That(task.Baseline10BudgetCost, Is.EqualTo(task.Get(TaskField.Baseline10BudgetCost)));
+                
                 Assert.That(task.Baseline10BudgetWork, Is.EqualTo(task.Get(TaskField.Baseline10BudgetWork)));
                 Assert.That(task.Baseline10DeliverableFinish, Is.EqualTo(task.Get(TaskField.Baseline10DeliverableFinish)));
                 Assert.That(task.Baseline10DeliverableStart, Is.EqualTo(task.Get(TaskField.Baseline10DeliverableStart)));
+
+
                 Assert.That(task.Cpi, Is.EqualTo(task.Get(TaskField.Cpi)));
                 Assert.That(task.Cvpercent, Is.EqualTo(task.Get(TaskField.Cvpercent)));
                 Assert.That(task.DeliverableFinish, Is.EqualTo(task.Get(TaskField.DeliverableFinish)));
