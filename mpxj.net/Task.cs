@@ -220,9 +220,19 @@ namespace org.mpxj
             set => JavaObject.setDurationText(value);
         }
 
+        public Duration ManualDuration
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getManualDuration());
+            set => JavaObject.setManualDuration(value.JavaObject);
+        }
+
         public void SetDuration(int index, Duration value) => JavaObject.setDuration(index, value.JavaObject);
 
         public Duration GetDuration(int index) => _proxyManager.ProxyObject(JavaObject.getDuration(index));
+
+        public void SetCost(int index, double? value) => JavaObject.setCost(index, value.ConvertType());
+
+        public double? GetCost(int index) => JavaObject.getCost(index).ConvertType();
 
         public Duration DurationVariance
         {

@@ -36,11 +36,11 @@ namespace org.mpxj
         public static readonly TaskField FixedCost = new TaskField(net.sf.mpxj.TaskField.FIXED_COST);
         public static readonly TaskField CostVariance = new TaskField(net.sf.mpxj.TaskField.COST_VARIANCE);
         public static readonly TaskField RemainingCost = new TaskField(net.sf.mpxj.TaskField.REMAINING_COST);
-        public static readonly TaskField Bcwp = new TaskField(net.sf.mpxj.TaskField.BCWP);
-        public static readonly TaskField Bcws = new TaskField(net.sf.mpxj.TaskField.BCWS);
-        public static readonly TaskField Sv = new TaskField(net.sf.mpxj.TaskField.SV);
+        public static readonly TaskField BCWP = new TaskField(net.sf.mpxj.TaskField.BCWP);
+        public static readonly TaskField BCWS = new TaskField(net.sf.mpxj.TaskField.BCWS);
+        public static readonly TaskField SV = new TaskField(net.sf.mpxj.TaskField.SV);
         public static readonly TaskField Name = new TaskField(net.sf.mpxj.TaskField.NAME);
-        public static readonly TaskField Wbs = new TaskField(net.sf.mpxj.TaskField.WBS);
+        public static readonly TaskField WBS = new TaskField(net.sf.mpxj.TaskField.WBS);
         public static readonly TaskField ConstraintType = new TaskField(net.sf.mpxj.TaskField.CONSTRAINT_TYPE);
         public static readonly TaskField ConstraintDate = new TaskField(net.sf.mpxj.TaskField.CONSTRAINT_DATE);
         public static readonly TaskField SecondaryConstraintType = new TaskField(net.sf.mpxj.TaskField.SECONDARY_CONSTRAINT_TYPE);
@@ -109,10 +109,10 @@ namespace org.mpxj
         public static readonly TaskField Flag9 = new TaskField(net.sf.mpxj.TaskField.FLAG9);
         public static readonly TaskField Flag10 = new TaskField(net.sf.mpxj.TaskField.FLAG10);
         public static readonly TaskField Rollup = new TaskField(net.sf.mpxj.TaskField.ROLLUP);
-        public static readonly TaskField Cv = new TaskField(net.sf.mpxj.TaskField.CV);
+        public static readonly TaskField CV = new TaskField(net.sf.mpxj.TaskField.CV);
         public static readonly TaskField Project = new TaskField(net.sf.mpxj.TaskField.PROJECT);
         public static readonly TaskField OutlineLevel = new TaskField(net.sf.mpxj.TaskField.OUTLINE_LEVEL);
-        public static readonly TaskField UniqueId = new TaskField(net.sf.mpxj.TaskField.UNIQUE_ID);
+        public static readonly TaskField UniqueID = new TaskField(net.sf.mpxj.TaskField.UNIQUE_ID);
         public static readonly TaskField Number1 = new TaskField(net.sf.mpxj.TaskField.NUMBER1);
         public static readonly TaskField Number2 = new TaskField(net.sf.mpxj.TaskField.NUMBER2);
         public static readonly TaskField Number3 = new TaskField(net.sf.mpxj.TaskField.NUMBER3);
@@ -139,7 +139,7 @@ namespace org.mpxj
         public static readonly TaskField UpdateNeeded = new TaskField(net.sf.mpxj.TaskField.UPDATE_NEEDED);
         public static readonly TaskField Contact = new TaskField(net.sf.mpxj.TaskField.CONTACT);
         public static readonly TaskField ResourceGroup = new TaskField(net.sf.mpxj.TaskField.RESOURCE_GROUP);
-        public static readonly TaskField Acwp = new TaskField(net.sf.mpxj.TaskField.ACWP);
+        public static readonly TaskField ACWP = new TaskField(net.sf.mpxj.TaskField.ACWP);
         public static readonly TaskField Type = new TaskField(net.sf.mpxj.TaskField.TYPE);
         public static readonly TaskField Recurring = new TaskField(net.sf.mpxj.TaskField.RECURRING);
         public static readonly TaskField EffortDriven = new TaskField(net.sf.mpxj.TaskField.EFFORT_DRIVEN);
@@ -490,7 +490,7 @@ namespace org.mpxj
         public static readonly TaskField EnterpriseText40 = new TaskField(net.sf.mpxj.TaskField.ENTERPRISE_TEXT40);
         public static readonly TaskField CompleteThrough = new TaskField(net.sf.mpxj.TaskField.COMPLETE_THROUGH);
         public static readonly TaskField SummaryProgress = new TaskField(net.sf.mpxj.TaskField.SUMMARY_PROGRESS);
-        public static readonly TaskField Guid = new TaskField(net.sf.mpxj.TaskField.GUID);
+        public static readonly TaskField GUID = new TaskField(net.sf.mpxj.TaskField.GUID);
         public static readonly TaskField Active = new TaskField(net.sf.mpxj.TaskField.ACTIVE);
         public static readonly TaskField TaskMode = new TaskField(net.sf.mpxj.TaskField.TASK_MODE);
         public static readonly TaskField AssignmentOwner = new TaskField(net.sf.mpxj.TaskField.ASSIGNMENT_OWNER);
