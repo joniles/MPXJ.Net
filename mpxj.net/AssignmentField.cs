@@ -79,10 +79,10 @@ namespace org.mpxj
         public static readonly AssignmentField RemainingCost = new AssignmentField(net.sf.mpxj.AssignmentField.REMAINING_COST);
         public static readonly AssignmentField ActualOvertimeCost = new AssignmentField(net.sf.mpxj.AssignmentField.ACTUAL_OVERTIME_COST);
         public static readonly AssignmentField RemainingOvertimeCost = new AssignmentField(net.sf.mpxj.AssignmentField.REMAINING_OVERTIME_COST);
-        public static readonly AssignmentField Bcws = new AssignmentField(net.sf.mpxj.AssignmentField.BCWS);
-        public static readonly AssignmentField Bcwp = new AssignmentField(net.sf.mpxj.AssignmentField.BCWP);
-        public static readonly AssignmentField Acwp = new AssignmentField(net.sf.mpxj.AssignmentField.ACWP);
-        public static readonly AssignmentField Sv = new AssignmentField(net.sf.mpxj.AssignmentField.SV);
+        public static readonly AssignmentField BCWS = new AssignmentField(net.sf.mpxj.AssignmentField.BCWS);
+        public static readonly AssignmentField BCWP = new AssignmentField(net.sf.mpxj.AssignmentField.BCWP);
+        public static readonly AssignmentField ACWP = new AssignmentField(net.sf.mpxj.AssignmentField.ACWP);
+        public static readonly AssignmentField SV = new AssignmentField(net.sf.mpxj.AssignmentField.SV);
         public static readonly AssignmentField CostVariance = new AssignmentField(net.sf.mpxj.AssignmentField.COST_VARIANCE);
         public static readonly AssignmentField PercentWorkComplete = new AssignmentField(net.sf.mpxj.AssignmentField.PERCENT_WORK_COMPLETE);
         public static readonly AssignmentField Project = new AssignmentField(net.sf.mpxj.AssignmentField.PROJECT);
