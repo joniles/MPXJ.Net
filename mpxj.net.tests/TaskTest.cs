@@ -16,6 +16,45 @@ namespace org.mpxj
             }
         }
 
+        [Test]
+        public void GetCachedValueTest()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
+            Assert.That(project, Is.Not.Null);
+            var task = project.GetTaskByID(1);
+            Assert.Multiple(() =>
+            {
+                Assert.That(task.Name, Is.EqualTo("Summary Task 1"));
+                Assert.That(task.GetCachedValue(TaskField.Name), Is.EqualTo("Summary Task 1"));
+            });
+        }
+
+        [Test]
+        public void SetTest()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
+            Assert.That(project, Is.Not.Null);
+
+            var task = project.GetTaskByID(1);
+            Assert.That(task.Name, Is.EqualTo("Summary Task 1"));
+            task.Name = "New Name 1";
+            Assert.That(task.Name, Is.EqualTo("New Name 1"));
+            task.Set(TaskField.Name, "New Name 2");
+            Assert.That(task.Name, Is.EqualTo("New Name 2"));
+
+            Assert.That(task.Active, Is.True);
+            task.Set(TaskField.Active, false);
+            Assert.That(task.Active, Is.False);
+
+            Assert.That(task.BoardStatusID, Is.Null);
+            task.Set(TaskField.BoardStatusId, 1);
+            Assert.That(task.BoardStatusID, Is.EqualTo(1));
+
+            Assert.That(task.Cost, Is.EqualTo(1074.0));
+            task.Set(TaskField.Cost, 1084.25);
+            Assert.That(task.Cost, Is.EqualTo(1084.25));
+        }
+
         private void TestTask(Task task)
         {
             Assert.Multiple(() =>

@@ -166,6 +166,31 @@ namespace org.mpxj
                 return o.GetType().GetProperty("JavaObject").GetValue(o, null);
             }
 
+            if (o is string)
+            {
+                return o;
+            }
+
+            if (o is bool)
+            {
+                return java.lang.Boolean.valueOf((bool)o);
+            }
+
+            if (o is int)
+            {
+                return java.lang.Integer.valueOf((int)o);
+            }
+
+            if (o is long)
+            {
+                return java.lang.Long.valueOf((long)o);
+            }
+
+            if (o is double)
+            {
+                return java.lang.Double.valueOf((double)o);
+            }
+
             throw new NotSupportedException();
         }
     }
