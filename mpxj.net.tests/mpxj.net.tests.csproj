@@ -14,6 +14,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="altcover" Version="8.6.68" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mpxj.net\mpxj.net.csproj" />
