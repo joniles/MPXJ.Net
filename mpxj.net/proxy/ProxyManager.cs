@@ -459,6 +459,9 @@ namespace org.mpxj.proxy
                 case "net.sf.mpxj.Priority":
                     return ProxyObject((net.sf.mpxj.Priority)o);
 
+                case "net.sf.mpxj.WorkContour":
+                    return ProxyObject((net.sf.mpxj.WorkContour)o);
+
                 case "java.lang.Boolean":
                     return ((java.lang.Boolean)o).booleanValue();
 
@@ -534,6 +537,12 @@ namespace org.mpxj.proxy
 
                 case "net.sf.mpxj.TaskMode":
                     return ((net.sf.mpxj.TaskMode)o).ConvertType();
+
+                case "net.sf.mpxj.ResourceRequestType":
+                    return ((net.sf.mpxj.ResourceRequestType)o).ConvertType();
+
+                case "net.sf.mpxj.RateSource":
+                    return ((net.sf.mpxj.RateSource)o).ConvertType();
 
                 case "System.String":
                     return o;

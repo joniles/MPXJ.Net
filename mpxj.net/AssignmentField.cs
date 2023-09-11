@@ -79,10 +79,10 @@ namespace org.mpxj
         public static readonly AssignmentField RemainingCost = new AssignmentField(net.sf.mpxj.AssignmentField.REMAINING_COST);
         public static readonly AssignmentField ActualOvertimeCost = new AssignmentField(net.sf.mpxj.AssignmentField.ACTUAL_OVERTIME_COST);
         public static readonly AssignmentField RemainingOvertimeCost = new AssignmentField(net.sf.mpxj.AssignmentField.REMAINING_OVERTIME_COST);
-        public static readonly AssignmentField Bcws = new AssignmentField(net.sf.mpxj.AssignmentField.BCWS);
-        public static readonly AssignmentField Bcwp = new AssignmentField(net.sf.mpxj.AssignmentField.BCWP);
-        public static readonly AssignmentField Acwp = new AssignmentField(net.sf.mpxj.AssignmentField.ACWP);
-        public static readonly AssignmentField Sv = new AssignmentField(net.sf.mpxj.AssignmentField.SV);
+        public static readonly AssignmentField BCWS = new AssignmentField(net.sf.mpxj.AssignmentField.BCWS);
+        public static readonly AssignmentField BCWP = new AssignmentField(net.sf.mpxj.AssignmentField.BCWP);
+        public static readonly AssignmentField ACWP = new AssignmentField(net.sf.mpxj.AssignmentField.ACWP);
+        public static readonly AssignmentField SV = new AssignmentField(net.sf.mpxj.AssignmentField.SV);
         public static readonly AssignmentField CostVariance = new AssignmentField(net.sf.mpxj.AssignmentField.COST_VARIANCE);
         public static readonly AssignmentField PercentWorkComplete = new AssignmentField(net.sf.mpxj.AssignmentField.PERCENT_WORK_COMPLETE);
         public static readonly AssignmentField Project = new AssignmentField(net.sf.mpxj.AssignmentField.PROJECT);
@@ -220,11 +220,11 @@ namespace org.mpxj
         public static readonly AssignmentField Text29 = new AssignmentField(net.sf.mpxj.AssignmentField.TEXT29);
         public static readonly AssignmentField Text30 = new AssignmentField(net.sf.mpxj.AssignmentField.TEXT30);
         public static readonly AssignmentField Index = new AssignmentField(net.sf.mpxj.AssignmentField.INDEX);
-        public static readonly AssignmentField Cv = new AssignmentField(net.sf.mpxj.AssignmentField.CV);
+        public static readonly AssignmentField CV = new AssignmentField(net.sf.mpxj.AssignmentField.CV);
         public static readonly AssignmentField WorkVariance = new AssignmentField(net.sf.mpxj.AssignmentField.WORK_VARIANCE);
         public static readonly AssignmentField StartVariance = new AssignmentField(net.sf.mpxj.AssignmentField.START_VARIANCE);
         public static readonly AssignmentField FinishVariance = new AssignmentField(net.sf.mpxj.AssignmentField.FINISH_VARIANCE);
-        public static readonly AssignmentField Vac = new AssignmentField(net.sf.mpxj.AssignmentField.VAC);
+        public static readonly AssignmentField VAC = new AssignmentField(net.sf.mpxj.AssignmentField.VAC);
         public static readonly AssignmentField FixedMaterialAssignment = new AssignmentField(net.sf.mpxj.AssignmentField.FIXED_MATERIAL_ASSIGNMENT);
         public static readonly AssignmentField ResourceType = new AssignmentField(net.sf.mpxj.AssignmentField.RESOURCE_TYPE);
         public static readonly AssignmentField HyperlinkScreenTip = new AssignmentField(net.sf.mpxj.AssignmentField.HYPERLINK_SCREEN_TIP);
@@ -465,7 +465,7 @@ namespace org.mpxj
         public static readonly AssignmentField ActualWorkProtected = new AssignmentField(net.sf.mpxj.AssignmentField.ACTUAL_WORK_PROTECTED);
         public static readonly AssignmentField ActualOvertimeWorkProtected = new AssignmentField(net.sf.mpxj.AssignmentField.ACTUAL_OVERTIME_WORK_PROTECTED);
         public static readonly AssignmentField Created = new AssignmentField(net.sf.mpxj.AssignmentField.CREATED);
-        public static readonly AssignmentField Guid = new AssignmentField(net.sf.mpxj.AssignmentField.GUID);
+        public static readonly AssignmentField GUID = new AssignmentField(net.sf.mpxj.AssignmentField.GUID);
         public static readonly AssignmentField AssignmentTaskGuid = new AssignmentField(net.sf.mpxj.AssignmentField.ASSIGNMENT_TASK_GUID);
         public static readonly AssignmentField AssignmentResourceGuid = new AssignmentField(net.sf.mpxj.AssignmentField.ASSIGNMENT_RESOURCE_GUID);
         public static readonly AssignmentField Summary = new AssignmentField(net.sf.mpxj.AssignmentField.SUMMARY);
