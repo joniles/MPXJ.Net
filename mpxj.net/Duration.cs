@@ -17,13 +17,13 @@ namespace org.mpxj
 
         public TimeUnit? Units => JavaObject.getUnits().ConvertType();
 
-        public Duration ConvertUnits(TimeUnit type, ITimeUnitDefaultsContainer<net.sf.mpxj.TimeUnitDefaultsContainer> defaults) => _proxyManager.ProxyObject(JavaObject.convertUnits(type.ConvertType(), defaults.JavaObject));
+        public Duration ConvertUnits<T>(TimeUnit type, ITimeUnitDefaultsContainer<T> defaults) where T : net.sf.mpxj.TimeUnitDefaultsContainer => _proxyManager.ProxyObject(JavaObject.convertUnits(type.ConvertType(), defaults.JavaObject));
 
         public bool DurationComponentEquals(Duration rhs) => JavaObject.durationComponentEquals(rhs.JavaObject);
 
         public override string ToString() => JavaObject.toString();
 
-        public static Duration ConvertUnits(ProjectFile project, double duration, TimeUnit fromUnits, TimeUnit toUnits, ITimeUnitDefaultsContainer<net.sf.mpxj.TimeUnitDefaultsContainer> defaults)
+        public static Duration ConvertUnits<T>(ProjectFile project, double duration, TimeUnit fromUnits, TimeUnit toUnits, ITimeUnitDefaultsContainer<T> defaults) where T : net.sf.mpxj.TimeUnitDefaultsContainer
         {
             return project._proxyManager.ProxyObject(net.sf.mpxj.Duration.convertUnits(duration, fromUnits.ConvertType(), toUnits.ConvertType(), defaults.JavaObject));
         }
@@ -48,7 +48,7 @@ namespace org.mpxj
             return net.sf.mpxj.Duration.durationValueEquals(lhs, rhs);
         }
 
-        public static Duration Add(Duration a, Duration b, ITimeUnitDefaultsContainer<net.sf.mpxj.TimeUnitDefaultsContainer> defaults)
+        public static Duration Add<T>(Duration a, Duration b, ITimeUnitDefaultsContainer<T> defaults) where T : net.sf.mpxj.TimeUnitDefaultsContainer
         {
             return a._proxyManager.ProxyObject(net.sf.mpxj.Duration.add(a.JavaObject, b.JavaObject, defaults.JavaObject));
         }

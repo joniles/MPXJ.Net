@@ -22,8 +22,39 @@ namespace org.mpxj
             var testDuration = Duration.GetInstance(project, 18.0, TimeUnit.Days);
             Assert.That(duration.DurationComponentEquals(testDuration), Is.True);
 
-            // TODO: need to revisit the interface usage
-            //var convertedDuration = testDuration.ConvertUnits(TimeUnit.Hours, project.ProjectProperties);
+            var convertedDuration = testDuration.ConvertUnits(TimeUnit.Hours, project.ProjectProperties);
+            Assert.That(convertedDuration.DurationValue, Is.EqualTo(144));
+            Assert.That(convertedDuration.Units, Is.EqualTo(TimeUnit.Hours));
+            Assert.That(convertedDuration.ToString(), Is.EqualTo("144.0h"));
+
+            var convertedDuration2 = Duration.ConvertUnits(project, 18.0, TimeUnit.Days, TimeUnit.Hours, project.ProjectProperties);
+            Assert.That(convertedDuration2.DurationValue, Is.EqualTo(144));
+            Assert.That(convertedDuration2.Units, Is.EqualTo(TimeUnit.Hours));
+            Assert.That(convertedDuration2.ToString(), Is.EqualTo("144.0h"));
+
+            var convertedDuration3 = Duration.ConvertUnits(project, 18.0, TimeUnit.Days, TimeUnit.Hours, 480.0, 2400.0, 20.0);
+            Assert.That(convertedDuration3.DurationValue, Is.EqualTo(144));
+            Assert.That(convertedDuration3.Units, Is.EqualTo(TimeUnit.Hours));
+            Assert.That(convertedDuration3.ToString(), Is.EqualTo("144.0h"));
+
+            var instance1 = Duration.GetInstance(project, 18, TimeUnit.Days);
+            Assert.That(instance1.DurationValue, Is.EqualTo(18));
+            Assert.That(instance1.Units, Is.EqualTo(TimeUnit.Days));
+            Assert.That(instance1.ToString(), Is.EqualTo("18.0d"));
+
+            var instance2 = Duration.GetInstance(project, 18.0, TimeUnit.Days);
+            Assert.That(instance2.DurationValue, Is.EqualTo(18));
+            Assert.That(instance2.Units, Is.EqualTo(TimeUnit.Days));
+            Assert.That(instance2.ToString(), Is.EqualTo("18.0d"));
+
+            Assert.That(Duration.DurationValueEquals(1.0, 1.0), Is.True);
+
+            var add1 = Duration.GetInstance(project, 2.5, TimeUnit.Days);
+            var add2 = Duration.GetInstance(project, 3.5, TimeUnit.Days);
+            var addedDuration = Duration.Add(add1, add2, project.ProjectProperties);
+            Assert.That(addedDuration.DurationValue, Is.EqualTo(6));
+            Assert.That(addedDuration.Units, Is.EqualTo(TimeUnit.Days));
+            Assert.That(addedDuration.ToString(), Is.EqualTo("6.0d"));
         }
     }
 }
