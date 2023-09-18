@@ -17,7 +17,7 @@ namespace org.mpxj
 
         public TimeUnit? Units => JavaObject.getUnits().ConvertType();
 
-        public Duration ConvertUnits(TimeUnit type, net.sf.mpxj.TimeUnitDefaultsContainer defaults) => _proxyManager.ProxyObject(JavaObject.convertUnits(type.ConvertType(), defaults));
+        public Duration ConvertUnits(TimeUnit type, ITimeUnitDefaultsContainer<net.sf.mpxj.TimeUnitDefaultsContainer> defaults) => _proxyManager.ProxyObject(JavaObject.convertUnits(type.ConvertType(), defaults.JavaObject));
 
         public bool DurationComponentEquals(Duration rhs) => JavaObject.durationComponentEquals(rhs.JavaObject);
 

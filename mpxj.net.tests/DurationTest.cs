@@ -21,6 +21,9 @@ namespace org.mpxj
 
             var testDuration = Duration.GetInstance(project, 18.0, TimeUnit.Days);
             Assert.That(duration.DurationComponentEquals(testDuration), Is.True);
+
+            // TODO: need to revisit the interface usage
+            //var convertedDuration = testDuration.ConvertUnits(TimeUnit.Hours, project.ProjectProperties);
         }
     }
 }
