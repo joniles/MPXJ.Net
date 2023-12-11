@@ -19,6 +19,6 @@
     <Folder Include="reader\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Portable.System.DateTimeOnly" Version="7.0.1" />
+    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
   </ItemGroup>
 </Project>
