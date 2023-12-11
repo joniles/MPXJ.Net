@@ -2,16 +2,11 @@
 
 namespace org.mpxj
 {
+    // TODO: implement builder
     public class ExpenseItem : IJavaObjectProxy<net.sf.mpxj.ExpenseItem>
     {
         internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ExpenseItem JavaObject { get; }
-
-        public ExpenseItem(Task task)
-        {
-            _proxyManager = task._proxyManager;
-            JavaObject = new net.sf.mpxj.ExpenseItem(task.JavaObject);
-        }
 
         internal ExpenseItem(ProxyManager proxyManager, net.sf.mpxj.ExpenseItem javaObject)
         {
@@ -19,125 +14,49 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int? UniqueID
-        {
-            get => JavaObject.getUniqueID().ConvertType();
-            set => JavaObject.setUniqueID(value.ConvertType());
-        }
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-            set => JavaObject.setName(value);
-        }
+        public string Name => JavaObject.getName();
 
         public int? AccountUniqueID => JavaObject.getAccountUniqueID().ConvertType();
 
-        public CostAccount Account
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getAccount());
-            set => JavaObject.setAccount(value.JavaObject);
-        }
+        public CostAccount Account => _proxyManager.ProxyObject(JavaObject.getAccount());
 
         public int? CategoryUniqueID => JavaObject.getCategoryUniqueID().ConvertType();
 
-        public ExpenseCategory Category
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getCategory());
-            set => JavaObject.setCategory(value.JavaObject);
-        }
+        public ExpenseCategory Category => _proxyManager.ProxyObject(JavaObject.getCategory());
 
         public Task Task => _proxyManager.ProxyObject(JavaObject.getTask());
 
-        public string Description
-        {
-            get => JavaObject.getDescription();
-            set => JavaObject.setDescription(value);
-        }
+        public string Description => JavaObject.getDescription();
 
-        public string DocumentNumber
-        {
-            get => JavaObject.getDocumentNumber();
-            set => JavaObject.setDocumentNumber(value);
-        }
+        public string DocumentNumber => JavaObject.getDocumentNumber();
 
-        public string Vendor
-        {
-            get => JavaObject.getVendor();
-            set => JavaObject.setVendor(value);
-        }
+        public string Vendor => JavaObject.getVendor();
 
-        public double? AtCompletionCost
-        {
-            get => JavaObject.getAtCompletionCost().ConvertType();
-            set => JavaObject.setAtCompletionCost(value.ConvertType());
-        }
+        public double? AtCompletionCost => JavaObject.getAtCompletionCost().ConvertType();
 
-        public double? AtCompletionUnits
-        {
-            get => JavaObject.getAtCompletionUnits().ConvertType();
-            set => JavaObject.setAtCompletionUnits(value.ConvertType());
-        }
+        public double? AtCompletionUnits => JavaObject.getAtCompletionUnits().ConvertType();
 
-        public double? ActualCost
-        {
-            get => JavaObject.getActualCost().ConvertType();
-            set => JavaObject.setActualCost(value.ConvertType());
-        }
+        public double? ActualCost => JavaObject.getActualCost().ConvertType();
 
-        public double? ActualUnits
-        {
-            get => JavaObject.getActualUnits().ConvertType();
-            set => JavaObject.setActualUnits(value.ConvertType());
-        }
+        public double? ActualUnits => JavaObject.getActualUnits().ConvertType();
 
-        public double? PricePerUnit
-        {
-            get => JavaObject.getPricePerUnit().ConvertType();
-            set => JavaObject.setPricePerUnit(value.ConvertType());
-        }
+        public double? PricePerUnit => JavaObject.getPricePerUnit().ConvertType();
 
-        public double? RemainingCost
-        {
-            get => JavaObject.getRemainingCost().ConvertType();
-            set => JavaObject.setRemainingCost(value.ConvertType());
-        }
+        public double? RemainingCost => JavaObject.getRemainingCost().ConvertType();
 
-        public double? RemainingUnits
-        {
-            get => JavaObject.getRemainingUnits().ConvertType();
-            set => JavaObject.setRemainingUnits(value.ConvertType());
-        }
+        public double? RemainingUnits => JavaObject.getRemainingUnits().ConvertType();
 
-        public double? PlannedCost
-        {
-            get => JavaObject.getPlannedCost().ConvertType();
-            set => JavaObject.setPlannedCost(value.ConvertType());
-        }
+        public double? PlannedCost => JavaObject.getPlannedCost().ConvertType();
 
-        public double? PlannedUnits
-        {
-            get => JavaObject.getPlannedUnits().ConvertType();
-            set => JavaObject.setPlannedUnits(value.ConvertType());
-        }
+        public double? PlannedUnits => JavaObject.getPlannedUnits().ConvertType();
 
-        public AccrueType? AccrueType
-        {
-            get => JavaObject.getAccrueType().ConvertType();
-            set => JavaObject.setAccrueType(value.ConvertType());
-        }
+        public AccrueType? AccrueType => JavaObject.getAccrueType().ConvertType();
 
-        public bool AutoComputeActuals
-        {
-            get => JavaObject.getAutoComputeActuals();
-            set => JavaObject.setAutoComputeActuals(value);
-        }
+        public bool AutoComputeActuals => JavaObject.getAutoComputeActuals();
 
-        public string UnitOfMeasure
-        {
-            get => JavaObject.getUnitOfMeasure();
-            set => JavaObject.setUnitOfMeasure(value);
-        }
+        public string UnitOfMeasure => JavaObject.getUnitOfMeasure();
 
         public override string ToString() => JavaObject.toString();
     }

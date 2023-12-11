@@ -2,6 +2,7 @@
 
 namespace org.mpxj
 {
+    // TODO: implement builder
     public class NotesTopic : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.NotesTopic>
     {
         public net.sf.mpxj.NotesTopic JavaObject { get; }
@@ -9,11 +10,6 @@ namespace org.mpxj
         internal NotesTopic(net.sf.mpxj.NotesTopic javaObject)
         {
             JavaObject = javaObject;
-        }
-
-        public NotesTopic(int uniqueID, int sequenceNumber, string name, bool availableForEPS, bool availableForProject, bool availableForWBS, bool availableForActivity)
-        {
-            JavaObject = new net.sf.mpxj.NotesTopic(uniqueID.ConvertType(), sequenceNumber.ConvertType(), name, availableForEPS, availableForProject, availableForWBS, AvailableForActivity);
         }
 
         public int? UniqueID

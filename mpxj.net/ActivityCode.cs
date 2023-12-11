@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 using org.mpxj.proxy;
 
 namespace org.mpxj
@@ -30,11 +29,6 @@ namespace org.mpxj
         public bool Secure => JavaObject.getSecure();
 
         public int? MaxLength => JavaObject.getMaxLength().ConvertType();
-
-        public ActivityCodeValue AddValue(int? uniqueID, int? sequenceNumber, string name, string description, Color color)
-        {
-            return _proxyManager.ProxyObject(JavaObject.addValue(uniqueID.ConvertType(), sequenceNumber.ConvertType(), name, description, color.ConvertType()));
-        }
 
         public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 

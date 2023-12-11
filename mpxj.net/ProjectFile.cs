@@ -23,8 +23,6 @@ namespace org.mpxj
 
         public void RemoveTask(Task task) => JavaObject.removeTask(task.JavaObject);
 
-        public void ValidateUniqueIDsForMicrosoftProject() => JavaObject.validateUniqueIDsForMicrosoftProject();
-
         public IList<Task> ChildTasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
 
         public IList<Resource> ChildResources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
@@ -117,6 +115,6 @@ namespace org.mpxj
 
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
 
-        public void ExpandSubprojects() => JavaObject.expandSubprojects();
+        public void ExpandSubprojects(bool replaceExternalTasks) => JavaObject.expandSubprojects(replaceExternalTasks);
     }
 }

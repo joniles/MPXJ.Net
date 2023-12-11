@@ -4,6 +4,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
+    // TODO: implement builder
     public class ActivityCodeValue : IJavaObjectProxy<net.sf.mpxj.ActivityCodeValue>
     {
         internal readonly ProxyManager _proxyManager;
@@ -27,11 +28,7 @@ namespace org.mpxj
 
         public Color? Color => JavaObject.getColor().ConvertType();
 
-        public ActivityCodeValue Parent
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getParent());
-            set => JavaObject.setParent(value.JavaObject);
-        }
+        public ActivityCodeValue Parent => _proxyManager.ProxyObject(JavaObject.getParent());
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="net.sf.mpxj" Version="12.1.0" />
+    <PackageReference Include="net.sf.mpxj" Version="12.4.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="proxy\" />

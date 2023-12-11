@@ -52,11 +52,7 @@ namespace org.mpxj
             set => JavaObject.setNtAccount(value);
         }
 
-        public string MaterialLabel
-        {
-            get => JavaObject.getMaterialLabel();
-            set => JavaObject.setMaterialLabel(value);
-        }
+        public string MaterialLabel => JavaObject.getMaterialLabel();
 
         public string Code
         {
@@ -106,11 +102,7 @@ namespace org.mpxj
             set => JavaObject.setHyperlinkScreenTip(value);
         }
 
-        public double? MaxUnits
-        {
-            get => JavaObject.getMaxUnits().ConvertType();
-            set => JavaObject.setMaxUnits(value.ConvertType());
-        }
+        public double? MaxUnits => JavaObject.getMaxUnits().ConvertType();
 
         public double? PeakUnits
         {
@@ -124,17 +116,9 @@ namespace org.mpxj
             set => JavaObject.setOverAllocated(value);
         }
 
-        public DateTime? AvailableFrom
-        {
-            get => JavaObject.getAvailableFrom().ConvertType();
-            set => JavaObject.setAvailableFrom(value.ConvertType());
-        }
+        public DateTime? AvailableFrom => JavaObject.getAvailableFrom().ConvertType();
 
-        public DateTime? AvailableTo
-        {
-            get => JavaObject.getAvailableTo().ConvertType();
-            set => JavaObject.setAvailableTo(value.ConvertType());
-        }
+        public DateTime? AvailableTo => JavaObject.getAvailableTo().ConvertType();
 
         public DateTime? Start => JavaObject.getStart().ConvertType();
 

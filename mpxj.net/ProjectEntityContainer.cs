@@ -13,12 +13,5 @@ namespace org.mpxj
         {
             return _fromJava((M)JavaObject.getByUniqueID(id.ConvertType()));    
         }
-
-        public int? NextUniqueID => JavaObject.getNextUniqueID().ConvertType();
-
-        public void UpdateUniqueIdCounter()
-        {
-            JavaObject.updateUniqueIdCounter();
-        }
     }
 }

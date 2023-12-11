@@ -2,6 +2,7 @@
 
 namespace org.mpxj
 {
+    // TODO: implement builder
     public class ExpenseCategory : IJavaObjectProxy<net.sf.mpxj.ExpenseCategory>
     {
         public net.sf.mpxj.ExpenseCategory JavaObject { get; }
@@ -9,11 +10,6 @@ namespace org.mpxj
         internal ExpenseCategory(net.sf.mpxj.ExpenseCategory javaObject)
         {
             JavaObject = javaObject;
-        }
-
-        public ExpenseCategory(int uniqueID, string name, int sequenceNumber)
-        {
-            JavaObject = new net.sf.mpxj.ExpenseCategory(uniqueID.ConvertType(), name, sequenceNumber.ConvertType());
         }
 
         public int? UniqueID
