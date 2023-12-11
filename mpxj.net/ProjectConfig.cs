@@ -77,16 +77,18 @@ namespace org.mpxj
             set => JavaObject.setCompleteThroughIsNextWorkStart(value);
         }
 
+        // TODO implement baseline strategy hierarchy
+        /*
         public IBaselineStrategy BaselineStrategy
-        {
-            // TODO implement baseline strategy hierarchy
-            //get => JavaObject.getBaselineStrategy();
+        {            
+            get => JavaObject.getBaselineStrategy();
             set => JavaObject.setBaselineStrategy(value.JavaObject);
         }
+        */
 
         public string SubprojectWorkingDirectory
         {
-            get => JavaObject.getSubprojectWorkingDirectory()?.getCanonicalPath();
+            get => JavaObject.getSubprojectWorkingDirectory()?.getPath();
             set => JavaObject.setSubprojectWorkingDirectory(value == null ? null : new java.io.File(value));
         }
     }

@@ -6,6 +6,7 @@ namespace org.mpxj
     {
         public net.sf.mpxj.WorkContour JavaObject { get; }
 
+        // TODO: support work contour creation
         internal WorkContour(net.sf.mpxj.WorkContour javaObject)
         {
             JavaObject = javaObject;
@@ -24,7 +25,7 @@ namespace org.mpxj
         public int? UniqueID
         {
             get => JavaObject.getUniqueID().ConvertType();
-            set => JavaObject.setUniqueID(value.ConvertType());
+            set => throw new System.NotImplementedException();
         }
 
         public double[] CurveValues => JavaObject.getCurveValues();
