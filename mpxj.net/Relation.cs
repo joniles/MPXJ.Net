@@ -21,11 +21,7 @@ namespace org.mpxj
 
         public Task TargetTask => _proxyManager.ProxyObject(JavaObject.getTargetTask());
 
-        public int? UniqueID
-        {
-            get => JavaObject.getUniqueID().ConvertType();
-            set => JavaObject.setUniqueID(value.ConvertType());
-        }
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public override string ToString() => JavaObject.toString();
     }

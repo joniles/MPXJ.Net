@@ -194,7 +194,7 @@ namespace org.mpxj
 
         public IList<TimephasedCost> GetTimephasedBaselineCost(int index) => _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineCost(index));
 
-        public ProjectCalendar Calendar => _proxyManager.ProxyObject(JavaObject.getCalendar());
+        public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
 
         public TimeUnit? VariableRateUnits
         {

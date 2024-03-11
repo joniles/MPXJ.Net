@@ -80,7 +80,7 @@ namespace org.mpxj
 
         public TimeOnly? GetFinishTime(DateOnly date) => JavaObject.getFinishTime(date.ConvertType()).ConvertType();
 
-        public DateTime? GetDate(DateTime startDate, Duration duration, bool returnNextWorkStart) => JavaObject.getDate(startDate.ConvertType(), duration.JavaObject, returnNextWorkStart).ConvertType();
+        public DateTime? GetDate(DateTime startDate, Duration duration) => JavaObject.getDate(startDate.ConvertType(), duration.JavaObject).ConvertType();
 
         public DateTime? GetNextWorkStart(DateTime date) => JavaObject.getNextWorkStart(date.ConvertType()).ConvertType();
 

@@ -26,8 +26,6 @@ namespace org.mpxj
 
         public IList<ResourceAssignment> ResourceAssignments => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceAssignments());
 
-        public Relation AddPredecessor(Task targetTask, RelationType type, Duration lag) => _proxyManager.ProxyObject(JavaObject.addPredecessor(targetTask.JavaObject, type.ConvertType(), lag.JavaObject));
-
         public Guid? SubprojectGUID
         {
             get => JavaObject.getSubprojectGUID().ConvertType();
