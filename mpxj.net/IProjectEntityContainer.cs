@@ -2,6 +2,6 @@
 {
 	public interface IProjectEntityContainer<N>
 	{
-        N GetByUniqueID(int id);
+        N GetByUniqueID(int? id);
     }
 }

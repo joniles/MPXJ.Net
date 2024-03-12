@@ -8,7 +8,7 @@ namespace org.mpxj
         [Test]
         public void Test1()
         {
-            var project = new UniversalProjectReader().Read("/Users/joniles/Downloads/EC00515.xer");
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
             Assert.That(project, Is.Not.Null);
             var config = project.ProjectConfig;
             Assert.That(config, Is.Not.Null);

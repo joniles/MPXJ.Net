@@ -9,7 +9,7 @@ namespace org.mpxj
 
         internal ProjectEntityContainer(Func<M, N> fromJava, Func<N, M> toJava, net.sf.mpxj.ProjectEntityContainer javaObject) : base(fromJava, toJava, javaObject) { }
 
-        public N GetByUniqueID(int id)
+        public N GetByUniqueID(int? id)
         {
             return _fromJava((M)JavaObject.getByUniqueID(id.ConvertType()));    
         }
