@@ -9,9 +9,6 @@ namespace org.mpxj
 
         internal AvailabilityTable(ProxyManager proxyManager, net.sf.mpxj.AvailabilityTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public Availability GetEntryByDate(DateTime date)
-        {
-            return _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
-        }
+        public Availability GetEntryByDate(DateTime date) => _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
     }
 }

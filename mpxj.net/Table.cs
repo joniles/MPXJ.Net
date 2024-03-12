@@ -14,29 +14,14 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int ID
-        {
-            get => JavaObject.getID();
-            set => JavaObject.setID(value);
-        }
+        public int ID => JavaObject.getID();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-            set => JavaObject.setName(value);
-        }
+        public string Name => JavaObject.getName();
 
-        public bool ResourceFlag
-        {
-            get => JavaObject.getResourceFlag();
-            set => JavaObject.setResourceFlag(value);
-        }
-
-        public void AddColumn(Column column) => JavaObject.addColumn(column.JavaObject);
+        public bool ResourceFlag => JavaObject.getResourceFlag();
 
         public IList<Column> Columns => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
 
         public override string ToString() => JavaObject.toString();
     }
 }
-

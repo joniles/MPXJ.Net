@@ -13,40 +13,15 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public Column(ProjectFile project)
-        {
-            JavaObject = new net.sf.mpxj.Column(project.JavaObject);
-        }
+        public int AlignData => JavaObject.getAlignData();
 
-        public int AlignData
-        {
-            get => JavaObject.getAlignData();
-            set => JavaObject.setAlignData(value);
-        }
+        public int AlignTitle => JavaObject.getAlignTitle();
 
-        public int AlignTitle
-        {
-            get => JavaObject.getAlignTitle();
-            set => JavaObject.setAlignTitle(value);
-        }
+        public IFieldType FieldType => _proxyManager.ProxyObject(JavaObject.getFieldType());
 
-        public IFieldType FieldType
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getFieldType());
-            set => JavaObject.setFieldType(value.JavaObject);
-        }
+        public string Title => JavaObject.getTitle();
 
-        public string Title
-        {
-            get => JavaObject.getTitle();
-            set => JavaObject.setTitle(value);
-        }
-
-        public int Width
-        {
-            get => JavaObject.getWidth();
-            set => JavaObject.setWidth(value);
-        }
+        public int Width => JavaObject.getWidth();
 
         public override string ToString() => JavaObject.toString();
     }

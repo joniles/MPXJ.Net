@@ -22,7 +22,37 @@
     <ProjectReference Include="..\mpxj.net\mpxj.net.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestData\activity-codes.xer">
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\*.*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
