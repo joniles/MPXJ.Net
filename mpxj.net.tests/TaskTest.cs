@@ -21,7 +21,15 @@ namespace org.mpxj
         {
             var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
             Assert.That(project, Is.Not.Null);
+
             var task = project.GetTaskByID(1);
+            Assert.Multiple(() =>
+            {
+                Assert.That(task.Name, Is.EqualTo("Summary Task 1"));
+                Assert.That(task.GetCachedValue(TaskField.Name), Is.EqualTo("Summary Task 1"));
+            });
+
+            task = project.Tasks.GetByID(1);
             Assert.Multiple(() =>
             {
                 Assert.That(task.Name, Is.EqualTo("Summary Task 1"));

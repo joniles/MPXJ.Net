@@ -4,7 +4,6 @@ namespace org.mpxj
 {
 	public class AssignmentFieldTest
 	{
-
         [Test]
         public void TestPropertiesAndMethods()
         {

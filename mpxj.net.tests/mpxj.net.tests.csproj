@@ -22,7 +22,7 @@
     <ProjectReference Include="..\mpxj.net\mpxj.net.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestData\*.*">
+    <Content Include="TestData\activity-codes.xer">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
