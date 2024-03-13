@@ -1,23 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>net462;netcoreapp3.1</TargetFrameworks>
     <RootNamespace>org.mpxj</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="net.sf.mpxj" Version="12.8.0" />
+    <PackageReference Include="net.sf.mpxj" Version="12.8.1" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="proxy\" />
-    <None Remove="extensions\" />
-    <None Remove="reader\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="proxy\" />
-    <Folder Include="extensions\" />
-    <Folder Include="reader\" />
-  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
   </ItemGroup>
