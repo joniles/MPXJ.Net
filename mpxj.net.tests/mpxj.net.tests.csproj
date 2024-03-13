@@ -50,6 +50,16 @@
     <Content Remove="TestData\activity-codes.xer" />
     <Content Remove="TestData\activity-codes.xer" />
     <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
+    <Content Remove="TestData\activity-codes.xer" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestData\*.*">

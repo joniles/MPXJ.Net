@@ -157,7 +157,7 @@ namespace org.mpxj
             InternalValues.Add(this);
         }
 
-        public FieldTypeClass FieldTypeClass => FieldTypeClass.Constraint;
+        public FieldTypeClass FieldTypeClass => FieldTypeClass.Project;
 
         public string FieldName => JavaObject.getName();
 
