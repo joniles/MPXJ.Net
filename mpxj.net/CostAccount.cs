@@ -14,11 +14,7 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int? UniqueID
-        {
-            get => JavaObject.getUniqueID().ConvertType();
-            set => JavaObject.setUniqueID(value.ConvertType());
-        }
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public string ID => JavaObject.getID();
 
@@ -30,11 +26,7 @@ namespace org.mpxj
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
-        public CostAccount Parent
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getParent());
-            set => JavaObject.setParent(value.JavaObject);
-        }
+        public CostAccount Parent => _proxyManager.ProxyObject(JavaObject.getParent());
 
         public override string ToString() => JavaObject.toString();
     }

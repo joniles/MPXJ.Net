@@ -8,10 +8,10 @@ namespace org.mpxj
         [Test]
         public void MethodTest()
         {
-            var project = new UniversalProjectReader().Read("TestData/activity-codes.xer");
+            var project = new UniversalProjectReader().Read("TestData/Sample1.xer");
             Assert.That(project, Is.Not.Null);
 
-            Assert.That(project.ActivityCodes, Has.Count.EqualTo(2));
+            Assert.That(project.ActivityCodes, Has.Count.EqualTo(3));
             Assert.That(project.ActivityCodes.JavaObject, Is.Not.Null);
 
             var code = project.ActivityCodes[0];
@@ -24,8 +24,8 @@ namespace org.mpxj
             Assert.That(code.Secure, Is.False);
             Assert.That(code.SequenceNumber, Is.EqualTo(0));
 
-            Assert.That(code.ChildValues, Has.Count.EqualTo(1));
-            Assert.That(code.Values, Has.Count.EqualTo(1));
+            Assert.That(code.ChildValues, Has.Count.EqualTo(2));
+            Assert.That(code.Values, Has.Count.EqualTo(2));
 
             var value = code.Values[0];
             Assert.That(value.Type, Is.EqualTo(code));

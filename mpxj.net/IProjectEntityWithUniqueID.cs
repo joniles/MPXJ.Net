@@ -2,6 +2,6 @@
 {
 	public interface IProjectEntityWithUniqueID
 	{
-        int? UniqueID { get; set; }
+        int? UniqueID { get; }
 	}
 }

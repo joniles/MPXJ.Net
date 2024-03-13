@@ -1,4 +1,9 @@
-ERMHDR	20.12	2024-03-12	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+ERMHDR	20.12	2024-03-13	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+%T	COSTTYPE
+%F	cost_type_id	seq_num	cost_type
+%R	10	10001	Facilities
+%R	11	10000	Administration
+%R	26	10000	Consulting
 %T	CURRTYPE
 %F	curr_id	decimal_digit_cnt	curr_symbol	decimal_symbol	digit_group_symbol	pos_curr_fmt_type	neg_curr_fmt_type	curr_type	curr_short_name	group_digit_cnt	base_exch_rate
 %R	1	2	$	.	,	#1.1	(#1.1)	US Dollar	USD	3	1
@@ -24,6 +29,11 @@ ERMHDR	20.12	2024-03-12	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %T	OBS
 %F	obs_id	parent_obs_id	guid	seq_num	obs_name	obs_descr
 %R	565			0	Enterprise	<HTML><BODY></BODY></HT
+%T	ACCOUNT
+%F	acct_id	parent_acct_id	acct_seq_num	acct_name	acct_short_name	acct_descr
+%R	743		0	Cost Account 1	A1	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Desc 1</BODY></HTML>
+%R	744		100	Cost Account 2	A2	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Desc 2</BODY></HTML>
+%R	745	744	0	Cost Account 3	A3	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Desc 3</BODY></HTML>
 %T	PROJECT
 %F	proj_id	fy_start_month_num	rsrc_self_add_flag	allow_complete_flag	rsrc_multi_assign_flag	checkout_flag	project_flag	step_complete_flag	cost_qty_recalc_flag	batch_sum_flag	name_sep_char	def_complete_pct_type	proj_short_name	acct_id	orig_proj_id	source_proj_id	base_type_id	clndr_id	sum_base_proj_id	task_code_base	task_code_step	priority_num	wbs_max_sum_level	strgy_priority_num	last_checksum	critical_drtn_hr_cnt	def_cost_per_qty	last_recalc_date	plan_start_date	plan_end_date	scd_end_date	add_date	last_tasksum_date	fcst_start_date	def_duration_type	task_code_prefix	guid	def_qty_type	add_by_name	web_local_root_path	proj_url	def_rate_type	add_act_remain_flag	act_this_per_link_flag	def_task_type	act_pct_link_flag	critical_path_type	task_code_prefix_flag	def_rollup_dates_flag	use_project_baseline_flag	rem_target_link_flag	reset_planned_flag	allow_neg_act_flag	sum_assign_level	last_fin_dates_id	fintmpl_id	last_baseline_update_date	cr_external_key	apply_actuals_date	location_id	loaded_scope_level	export_flag	new_fin_dates_id	baselines_to_export	baseline_names_to_export	next_data_date	close_period_flag	sum_refresh_date	trsrcsum_loaded	sumtask_loaded
 %R	368	1	Y	Y	Y	N	Y	N	N	Y	.	CP_Drtn	NEWPROJ					597		1000	10	10	2	500		0	0.0000	2024-03-12 00:00	2024-03-12 00:00			2024-03-12 00:00			DT_FixedDUR2	A	5sYsOmcnvkaYLH+bZYeEyg	QT_Hour	ADMIN			COST_PER_QTY	N	Y	TT_Task	Y	CT_TotFloat	Y	Y	Y	Y	N	N	SL_Taskrsrc		1					7	Y								
@@ -37,15 +47,33 @@ ERMHDR	20.12	2024-03-12	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %F	actv_code_type_id	actv_short_len	seq_num	actv_code_type	proj_id	wbs_id	actv_code_type_scope
 %R	205	7	0	Activity Code 1			AS_Global
 %R	206	7	100	Activity Code 2			AS_Global
+%R	207	7	200	Activity Code 3			AS_Global
 %T	TASK
 %F	task_id	proj_id	wbs_id	clndr_id	phys_complete_pct	rev_fdbk_flag	est_wt	lock_plan_flag	auto_compute_act_flag	complete_pct_type	task_type	duration_type	status_code	task_code	task_name	rsrc_id	total_float_hr_cnt	free_float_hr_cnt	remain_drtn_hr_cnt	act_work_qty	remain_work_qty	target_work_qty	target_drtn_hr_cnt	target_equip_qty	act_equip_qty	remain_equip_qty	cstr_date	act_start_date	act_end_date	late_start_date	late_end_date	expect_end_date	early_start_date	early_end_date	restart_date	reend_date	target_start_date	target_end_date	rem_late_start_date	rem_late_end_date	cstr_type	priority_type	suspend_date	resume_date	float_path	float_path_order	guid	tmpl_guid	cstr_date2	cstr_type2	driving_path_flag	act_this_per_work_qty	act_this_per_equip_qty	external_early_start_date	external_late_end_date	create_date	update_date	create_user	update_user	location_id
-%R	35845	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1000	New Activity				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					3FMVQcbRLUKDWQxBbw3fKg				N	0	0			2024-03-12 17:10	2024-03-12 17:10	NotPrmUser	NotPrmUser	
+%R	35845	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1000	Activity 1				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					3FMVQcbRLUKDWQxBbw3fKg				N	0	0			2024-03-12 17:10	2024-03-12 17:10	NotPrmUser	NotPrmUser	
+%R	35846	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1010	Activity 2				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					JShNUEH+BEuBaByJszJNjg				N	0	0			2024-03-13 10:10	2024-03-13 10:10	NotPrmUser	NotPrmUser	
+%R	35847	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1020	Activity 3				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					iMWuCn3HUUyaEuO3UgoKDw				N	0	0			2024-03-13 10:10	2024-03-13 10:10	NotPrmUser	NotPrmUser	
 %T	ACTVCODE
 %F	actv_code_id	parent_actv_code_id	actv_code_type_id	actv_code_name	short_name	seq_num	color	total_assignments
-%R	3174		205	Value AAA	AAA	0	0000FF	2
-%R	3176		206	Value CCC	CCC	0	0000FF	2
+%R	3174		205	Value AAA	AAA	0	0000FF	1
+%R	3175		205	Value BBB	BBB	100	0000FF	2
+%R	3176		206	Value CCC	CCC	0	0000FF	1
+%R	3177		206	Value DDD	DDD	100	0000FF	2
+%R	3178		207	111 Value	111	0	0000FF	2
+%R	3179	3178	207	222 Value	222	0	0000FF	2
+%R	3180	3178	207	333 Value	333	100	0000FF	2
+%T	PROJCOST
+%F	cost_item_id	acct_id	pobs_id	cost_type_id	proj_id	task_id	cost_name	po_number	vendor_name	act_cost	cost_per_qty	remain_cost	target_cost	cost_load_type	auto_compute_act_flag	target_qty	qty_name	cost_descr	contract_manager_import
+%R	753	743		11	368	35846	Item 1		Vendor 1	2.0000	1.0000	3.0000	1.0000	CL_Uniform	N	1			
+%R	754	744		26	368	35846	Item 2		Vendor 2	5.0000	4.0000	6.0000	4.0000	CL_Uniform	N	1			
+%R	755	745		10	368	35846	Item 3		Vendor 3	8.0000	7.0000	9.0000	7.0000	CL_Uniform	N	1			
 %T	TASKACTV
 %F	task_id	actv_code_type_id	actv_code_id	proj_id
 %R	35845	205	3174	368
 %R	35845	206	3176	368
+%R	35845	207	3178	368
+%R	35846	205	3175	368
+%R	35846	206	3177	368
+%R	35846	207	3179	368
+%R	35847	207	3180	368
 %E
