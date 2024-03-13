@@ -16,17 +16,9 @@ namespace org.mpxj
 
         public int Evaluate(IFieldContainer container) => JavaObject.evaluate(container.JavaObject);
 
-        public IFieldType FieldType
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getFieldType());
-            set => JavaObject.setFieldType(value.JavaObject);
-        }
+        public IFieldType FieldType => _proxyManager.ProxyObject(JavaObject.getFieldType());
 
-        public bool DisplayGraphicalIndicators
-        {
-            get => JavaObject.getDisplayGraphicalIndicators();
-            set => JavaObject.setDisplayGraphicalIndicators(value);
-        }
+        public bool DisplayGraphicalIndicators => JavaObject.getDisplayGraphicalIndicators();
 
         public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
 
@@ -34,29 +26,11 @@ namespace org.mpxj
 
         public IList<GraphicalIndicatorCriteria> SummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
 
-        public bool ProjectSummaryInheritsFromSummaryRows
-        {
-            get => JavaObject.getProjectSummaryInheritsFromSummaryRows();
-            set => JavaObject.setProjectSummaryInheritsFromSummaryRows(value);
-        }
+        public bool ProjectSummaryInheritsFromSummaryRows => JavaObject.getProjectSummaryInheritsFromSummaryRows();
 
-        public bool SummaryRowsInheritFromNonSummaryRows
-        {
-            get => JavaObject.getSummaryRowsInheritFromNonSummaryRows();
-            set => JavaObject.setSummaryRowsInheritFromNonSummaryRows(value);
-        }
+        public bool SummaryRowsInheritFromNonSummaryRows => JavaObject.getSummaryRowsInheritFromNonSummaryRows();
 
-        public bool ShowDataValuesInToolTips
-        {
-            get => JavaObject.getShowDataValuesInToolTips();
-            set => JavaObject.setShowDataValuesInToolTips(value);
-        }
-
-        public void AddNonSummaryRowCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addNonSummaryRowCriteria(criteria.JavaObject);
-
-        public void AddSummaryRowCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addSummaryRowCriteria(criteria.JavaObject);
-
-        public void AddProjectSummaryCriteria(GraphicalIndicatorCriteria criteria) => JavaObject.addProjectSummaryCriteria(criteria.JavaObject);
+        public bool ShowDataValuesInToolTips => JavaObject.getShowDataValuesInToolTips();
 
         public override string ToString() => JavaObject.toString();
     }

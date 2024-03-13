@@ -14,54 +14,24 @@ namespace org.mpxj
             _proxyManager = proxyManager;
         }
 
-        public CustomField Get(IFieldType field)
-        {
-            return _fromJava(JavaObject.get(field.JavaObject));
-        }
+        public CustomField Get(IFieldType field) => _fromJava(JavaObject.get(field.JavaObject));
 
-        public CustomField GetOrCreate(IFieldType field)
-        {
-            return _fromJava(JavaObject.getOrCreate(field.JavaObject));
-        }
+        public CustomField GetOrCreate(IFieldType field) => _fromJava(JavaObject.getOrCreate(field.JavaObject));
 
-        public CustomField Add(IFieldType field)
-        {
-            return _fromJava(JavaObject.add(field.JavaObject));
-        }
+        public CustomField Add(IFieldType field) => _fromJava(JavaObject.add(field.JavaObject));
 
-        public IFieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias));
-        }
+        public IFieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias) => _proxyManager.ProxyObject(JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias));
 
-        public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass)
-        {
-            return _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass.ConvertType()));
-        }
+        public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass) => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass.ConvertType()));
 
-        public int Size()
-        {
-            return JavaObject.size();
-        }
+        public int Size => JavaObject.size();
 
-        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int uniqueID)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID));
-        }
+        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int uniqueID) => _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID));
 
-        public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid guid)
-        {
-            return _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
-        }
+        public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid guid) => _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
 
-        public void RegisterValue(CustomFieldValueItem item)
-        {
-            JavaObject.registerValue(item.JavaObject);
-        }
+        public void RegisterValue(CustomFieldValueItem item) => JavaObject.registerValue(item.JavaObject);
 
-        public void DeregisterValue(CustomFieldValueItem item)
-        {
-            JavaObject.deregisterValue(item.JavaObject);
-        }
+        public void DeregisterValue(CustomFieldValueItem item) => JavaObject.deregisterValue(item.JavaObject);
     }
 }
