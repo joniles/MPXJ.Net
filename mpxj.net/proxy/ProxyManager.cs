@@ -13,6 +13,19 @@ namespace org.mpxj.proxy
         public ProxyManager(ProjectFile projectFile)
         {
             ProjectFile = projectFile;
+
+            //
+            // Prepopulate the cache with constants
+            //
+            _objectCache[GetKey(WorkContour.Flat.JavaObject)] = WorkContour.Flat;
+            _objectCache[GetKey(WorkContour.BackLoaded.JavaObject)] = WorkContour.BackLoaded;
+            _objectCache[GetKey(WorkContour.FrontLoaded.JavaObject)] = WorkContour.FrontLoaded;
+            _objectCache[GetKey(WorkContour.DoublePeak.JavaObject)] = WorkContour.DoublePeak;
+            _objectCache[GetKey(WorkContour.EarlyPeak.JavaObject)] = WorkContour.EarlyPeak;
+            _objectCache[GetKey(WorkContour.LatePeak.JavaObject)] = WorkContour.LatePeak;
+            _objectCache[GetKey(WorkContour.Bell.JavaObject)] = WorkContour.Bell;
+            _objectCache[GetKey(WorkContour.Turtle.JavaObject)] = WorkContour.Turtle;
+            _objectCache[GetKey(WorkContour.Contoured.JavaObject)] = WorkContour.Contoured;
         }
 
         private N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
@@ -22,8 +35,7 @@ namespace org.mpxj.proxy
                 return default;
             }
 
-            bool firstTime;
-            var key = o.GetType().FullName + "." + _idGenerator.GetId(o, out firstTime);
+            var key = GetKey(o);
             if (!_objectCache.ContainsKey(key))
             {
                 _objectCache[key] = proxyFunction.Invoke(o);
@@ -31,6 +43,8 @@ namespace org.mpxj.proxy
 
             return (N)_objectCache[key];
         }
+
+        private string GetKey(object o) => o.GetType().FullName + "." + _idGenerator.GetId(o, out _);
 
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
         {

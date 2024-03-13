@@ -14,7 +14,7 @@ namespace org.mpxj
             Assert.That(file.WorkContours, Has.Count.EqualTo(1));
 
             var contour = file.WorkContours.GetByUniqueID(WorkContour.Flat.UniqueID);
-            Assert.That(contour.Name, Is.EqualTo("FLAT"));
+            Assert.That(contour, Is.EqualTo(WorkContour.Flat));
 
             Assert.That(file.WorkContours.JavaObject, Is.Not.Null);
         }
