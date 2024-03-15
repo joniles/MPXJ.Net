@@ -26,12 +26,8 @@ namespace org.mpxj
 
         public int Size => JavaObject.size();
 
-        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int uniqueID) => _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID));
+        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int? uniqueID) => uniqueID == null ? null : _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID.Value));
 
-        public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid guid) => _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
-
-        public void RegisterValue(CustomFieldValueItem item) => JavaObject.registerValue(item.JavaObject);
-
-        public void DeregisterValue(CustomFieldValueItem item) => JavaObject.deregisterValue(item.JavaObject);
+        public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid? guid) => guid == null ? null : _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
     }
 }

@@ -81,6 +81,24 @@ namespace org.mpxj
             Assert.That(item.Type, Is.EqualTo(CustomFieldValueDataType.Text));
             Assert.That(item.UniqueID, Is.EqualTo(1));
             Assert.That(item.Value, Is.EqualTo("Value 1"));
+
+            // TODO: update these two tests after 12.8.2
+            var lookupItem = project.CustomFields.GetCustomFieldValueItemByUniqueID(item.UniqueID);
+            Assert.That(lookupItem, Is.Not.Null);
+
+            lookupItem = project.CustomFields.GetCustomFieldValueItemByGuid(item.GUID);
+            Assert.That(lookupItem, Is.Not.Null);
+
+            var newItem = new CustomFieldValueItem(123)
+            {
+                Value = "Value",
+                Description = "Description",
+                // TODO: this will change post 12.8.2
+                Parent = 456,
+                GUID = Guid.NewGuid(),
+                Type = CustomFieldValueDataType.Text,
+                Collapsed = false
+            };
         }
     }
 }

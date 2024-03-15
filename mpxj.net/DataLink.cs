@@ -13,36 +13,15 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public DataLink(string id)
-        {
-            JavaObject = new net.sf.mpxj.DataLink(id);
-        }
-
         public string ID => JavaObject.getID();
 
-        public IFieldType SourceField
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getSourceField());
-            set => JavaObject.setSourceField(value.JavaObject);
-        }
+        public IFieldType SourceField => _proxyManager.ProxyObject(JavaObject.getSourceField());
 
-        public int? SourceUniqueID
-        {
-            get => JavaObject.getSourceUniqueID().ConvertType();
-            set => JavaObject.setSourceUniqueID(value.ConvertType());
-        }
+        public int? SourceUniqueID => JavaObject.getSourceUniqueID().ConvertType();
 
-        public IFieldType TargetField
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getTargetField());
-            set => JavaObject.setTargetField(value.JavaObject);
-        }
+        public IFieldType TargetField => _proxyManager.ProxyObject(JavaObject.getTargetField());
 
-        public int? TargetUniqueID
-        {
-            get => JavaObject.getTargetUniqueID().ConvertType();
-            set => JavaObject.setTargetUniqueID(value.ConvertType());
-        }
+        public int? TargetUniqueID => JavaObject.getTargetUniqueID().ConvertType();
 
         public override string ToString() => JavaObject.toString();
     }

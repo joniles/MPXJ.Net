@@ -20,7 +20,7 @@ namespace org.mpxj
             Assert.That(table.ResourceFlag, Is.False);
             Assert.That(table.ToString(), Contains.Substring("[TABLE id=1 name=Entry"));
 
-            Assert.That(table.Columns, Has.Count.EqualTo(11));
+            Assert.That(table.Columns, Has.Count.EqualTo(14));
 
             var column = table.Columns[0];
             Assert.That(column.AlignData, Is.EqualTo(2));
