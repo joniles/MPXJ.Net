@@ -1,4 +1,4 @@
-ERMHDR	20.12	2024-03-13	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+ERMHDR	20.12	2024-03-18	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
 %T	COSTTYPE
 %F	cost_type_id	seq_num	cost_type
 %R	10	10001	Facilities
@@ -50,23 +50,23 @@ ERMHDR	20.12	2024-03-13	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %R	207	7	200	Activity Code 3			AS_Global
 %T	TASK
 %F	task_id	proj_id	wbs_id	clndr_id	phys_complete_pct	rev_fdbk_flag	est_wt	lock_plan_flag	auto_compute_act_flag	complete_pct_type	task_type	duration_type	status_code	task_code	task_name	rsrc_id	total_float_hr_cnt	free_float_hr_cnt	remain_drtn_hr_cnt	act_work_qty	remain_work_qty	target_work_qty	target_drtn_hr_cnt	target_equip_qty	act_equip_qty	remain_equip_qty	cstr_date	act_start_date	act_end_date	late_start_date	late_end_date	expect_end_date	early_start_date	early_end_date	restart_date	reend_date	target_start_date	target_end_date	rem_late_start_date	rem_late_end_date	cstr_type	priority_type	suspend_date	resume_date	float_path	float_path_order	guid	tmpl_guid	cstr_date2	cstr_type2	driving_path_flag	act_this_per_work_qty	act_this_per_equip_qty	external_early_start_date	external_late_end_date	create_date	update_date	create_user	update_user	location_id
-%R	35845	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1000	Activity 1				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					3FMVQcbRLUKDWQxBbw3fKg				N	0	0			2024-03-12 17:10	2024-03-12 17:10	NotPrmUser	NotPrmUser	
+%R	35845	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1000	Activity 1				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					3FMVQcbRLUKDWQxBbw3fKg				N	0	0			2024-03-12 17:10	2024-03-13 10:10	NotPrmUser	NotPrmUser	
 %R	35846	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1010	Activity 2				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					JShNUEH+BEuBaByJszJNjg				N	0	0			2024-03-13 10:10	2024-03-13 10:10	NotPrmUser	NotPrmUser	
 %R	35847	368	3680	597	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1020	Activity 3				40	0	0	0	40	0	0	0									2024-03-12 00:00	2024-03-18 17:00	2024-03-12 00:00	2024-03-18 17:00				PT_Normal					iMWuCn3HUUyaEuO3UgoKDw				N	0	0			2024-03-13 10:10	2024-03-13 10:10	NotPrmUser	NotPrmUser	
 %T	ACTVCODE
 %F	actv_code_id	parent_actv_code_id	actv_code_type_id	actv_code_name	short_name	seq_num	color	total_assignments
 %R	3174		205	Value AAA	AAA	0	0000FF	1
-%R	3175		205	Value BBB	BBB	100	0000FF	2
+%R	3175		205	Value BBB	BBB	100	0000FF	1
 %R	3176		206	Value CCC	CCC	0	0000FF	1
-%R	3177		206	Value DDD	DDD	100	0000FF	2
-%R	3178		207	111 Value	111	0	0000FF	2
-%R	3179	3178	207	222 Value	222	0	0000FF	2
-%R	3180	3178	207	333 Value	333	100	0000FF	2
+%R	3177		206	Value DDD	DDD	100	0000FF	1
+%R	3178		207	111 Value	111	0	0000FF	1
+%R	3179	3178	207	222 Value	222	0	0000FF	1
+%R	3180	3178	207	333 Value	333	100	0000FF	1
 %T	PROJCOST
 %F	cost_item_id	acct_id	pobs_id	cost_type_id	proj_id	task_id	cost_name	po_number	vendor_name	act_cost	cost_per_qty	remain_cost	target_cost	cost_load_type	auto_compute_act_flag	target_qty	qty_name	cost_descr	contract_manager_import
-%R	753	743		11	368	35846	Item 1		Vendor 1	2.0000	1.0000	3.0000	1.0000	CL_Uniform	N	1			
-%R	754	744		26	368	35846	Item 2		Vendor 2	5.0000	4.0000	6.0000	4.0000	CL_Uniform	N	1			
-%R	755	745		10	368	35846	Item 3		Vendor 3	8.0000	7.0000	9.0000	7.0000	CL_Uniform	N	1			
+%R	753	743		11	368	35846	Item 1	123	Vendor 1	2.0000	1.0000	3.0000	1.0000	CL_Uniform	N	1	m		
+%R	754	744		26	368	35846	Item 2	456	Vendor 2	5.0000	4.0000	6.0000	4.0000	CL_Uniform	N	1	m		
+%R	755	745		10	368	35846	Item 3	789	Vendor 3	8.0000	7.0000	9.0000	7.0000	CL_Uniform	N	1	m		
 %T	TASKACTV
 %F	task_id	actv_code_type_id	actv_code_id	proj_id
 %R	35845	205	3174	368

@@ -14,51 +14,22 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int? ID
-        {
-            get => JavaObject.getID().ConvertType();
-            set => JavaObject.setID(value.ConvertType());
-        }
+        public int? ID => JavaObject.getID().ConvertType();
 
-        public string Name
-        {
-            get => JavaObject.getName();
-            set => JavaObject.setName(value);
-        }
+        public string Name => JavaObject.getName();
 
-        public bool ShowRelatedSummaryRows
-        {
-            get => JavaObject.getShowRelatedSummaryRows();
-            set => JavaObject.setShowRelatedSummaryRows(value);
-        }
+        public bool ShowRelatedSummaryRows => JavaObject.getShowRelatedSummaryRows();
 
-        public GenericCriteria Criteria
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getCriteria());
-            set => JavaObject.setCriteria(value.JavaObject);
-        }
+        public GenericCriteria Criteria => _proxyManager.ProxyObject(JavaObject.getCriteria());
 
-        public bool IsTaskFilter
-        {
-            get => JavaObject.isTaskFilter();
-            set => JavaObject.setIsTaskFilter(value);
-        }
+        public bool IsTaskFilter => JavaObject.isTaskFilter();
 
-        public bool IsResourceFilter
-        {
-            get => JavaObject.isResourceFilter();
-            set => JavaObject.setIsResourceFilter(value);
-        }
+        public bool IsResourceFilter => JavaObject.isResourceFilter();
 
         // TODO: handle map argument
-        //bool evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);(value);
+        //bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);(value);
 
-        public IList<GenericCriteriaPrompt> Prompts
-        {
-            get => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
-            // TODO: handle list argument
-            //set => JavaObject.set
-        }
+        public IList<GenericCriteriaPrompt> Prompts => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
 
         public override string ToString() => JavaObject.toString();
     }
