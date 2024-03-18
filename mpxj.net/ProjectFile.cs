@@ -116,5 +116,7 @@ namespace org.mpxj
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
 
         public void ExpandSubprojects(bool replaceExternalTasks) => JavaObject.expandSubprojects(replaceExternalTasks);
+
+        public RelationContainer Relations => _proxyManager.ProxyObject(JavaObject.getRelations());
     }
 }

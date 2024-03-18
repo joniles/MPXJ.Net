@@ -101,6 +101,11 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new TaskContainer(this, v));
         }
 
+        internal RelationContainer ProxyObject(net.sf.mpxj.RelationContainer value)
+        {
+            return ProxyObject(value, v => new RelationContainer(this, v));
+        }
+
         internal ResourceAssignmentContainer ProxyObject(net.sf.mpxj.ResourceAssignmentContainer value)
         {
             return ProxyObject(value, v => new ResourceAssignmentContainer(this, v));
