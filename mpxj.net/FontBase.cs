@@ -11,11 +11,6 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public FontBase(int index, string name, int size)
-        {
-            JavaObject = new net.sf.mpxj.mpp.FontBase(index.ConvertType(), name, size);
-        }
-
         public string Name => JavaObject.getName();
 
         public int Size => JavaObject.getSize();

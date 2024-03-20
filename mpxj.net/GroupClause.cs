@@ -14,58 +14,21 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public GroupClause()
-        {
-            JavaObject = new net.sf.mpxj.GroupClause();
-        }
+        public bool Ascending => JavaObject.getAscending();
 
-        public bool Ascending
-        {
-            get => JavaObject.getAscending();
-            set => JavaObject.setAscending(value);
-        }
+        public Color? CellBackgroundColor => JavaObject.getCellBackgroundColor().ConvertType();
 
-        public Color? CellBackgroundColor
-        {
-            get => JavaObject.getCellBackgroundColor().ConvertType();
-            set => JavaObject.setCellBackgroundColor(value.ConvertType());
-        }
+        public IFieldType Field => _proxyManager.ProxyObject(JavaObject.getField());
 
-        public IFieldType Field
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getField());
-            set => JavaObject.setField(value.JavaObject);
-        }
+        public FontStyle Font => _proxyManager.ProxyObject(JavaObject.getFont());
 
-        public FontStyle Font
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getFont());
-            set => JavaObject.setFont(value.JavaObject);
-        }
+        public object GroupInterval => _proxyManager.GenericProxyObject(JavaObject.getGroupInterval());
 
-        public object GroupInterval
-        {
-            get => JavaObject.getGroupInterval();
-            set => JavaObject.setGroupInterval(value);
-        }
+        public int GroupOn => JavaObject.getGroupOn();
 
-        public int GroupOn
-        {
-            get => JavaObject.getGroupOn();
-            set => JavaObject.setGroupOn(value);
-        }
+        public BackgroundPattern? Pattern => JavaObject.getPattern().ConvertType();
 
-        public BackgroundPattern? Pattern
-        {
-            get => JavaObject.getPattern().ConvertType();
-            set => JavaObject.setPattern(value.ConvertType());
-        }
-
-        public object StartAt
-        {
-            get => JavaObject.getStartAt();
-            set => JavaObject.setStartAt(value);
-        }
+        public object StartAt => _proxyManager.GenericProxyObject(JavaObject.getStartAt());
 
         public override string ToString() => JavaObject.toString();
     }

@@ -8,9 +8,6 @@ namespace org.mpxj
 
         internal GroupContainer(ProxyManager proxyManager, net.sf.mpxj.GroupContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public Group GetByName(string name)
-        {
-            return _fromJava(JavaObject.getByName(name));
-        }
+        public Group GetByName(string name) => _fromJava(JavaObject.getByName(name));
     }
 }
