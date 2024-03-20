@@ -1,5 +1,4 @@
-﻿using net.sf.mpxj;
-using org.mpxj.proxy;
+﻿using org.mpxj.proxy;
 
 namespace org.mpxj
 {
@@ -9,18 +8,9 @@ namespace org.mpxj
 
         internal GraphicalIndicatorCriteria(ProxyManager proxyManager, net.sf.mpxj.GenericCriteria javaObject) : base(proxyManager, javaObject) { }
 
-        public GraphicalIndicatorCriteria(ProjectProperties properties) : base(properties) { }
+        public int Indicator => JavaObject.getIndicator();
 
-        public int Indicator
-        {
-            get => JavaObject.getIndicator();
-            set => JavaObject.setIndicator(value);
-        }
-
-        public int Evaluate(FieldContainer container)
-        {
-            return JavaObject.getIndicator();
-        }
+        public int Evaluate(IFieldContainer container) => JavaObject.evaluate(container.JavaObject);
 
         public override string ToString() => JavaObject.toString();
     }

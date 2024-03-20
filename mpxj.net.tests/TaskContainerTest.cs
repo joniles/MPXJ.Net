@@ -29,6 +29,9 @@ namespace org.mpxj
             Assert.That(task1.ChildTasks.Count, Is.EqualTo(0));
             Assert.That(task2.ChildTasks.Count, Is.EqualTo(1));
             Assert.That(task3.ChildTasks.Count, Is.EqualTo(0));
+
+            Assert.That(container.PopulatedFields, Has.Count.EqualTo(7));
+            Assert.That(container.PopulatedFields.Contains(TaskField.Name), Is.True);
         }
     }
 }

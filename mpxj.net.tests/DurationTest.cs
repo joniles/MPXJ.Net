@@ -18,6 +18,7 @@ namespace org.mpxj
             Assert.That(duration.DurationValue, Is.EqualTo(18));
             Assert.That(duration.Units, Is.EqualTo(TimeUnit.Days));
             Assert.That(duration.ToString(), Is.EqualTo("18.0d"));
+            Assert.That(duration.GetHashCode, Is.EqualTo(20));
 
             var testDuration = Duration.GetInstance(project, 18.0, TimeUnit.Days);
             Assert.That(duration.DurationComponentEquals(testDuration), Is.True);
@@ -47,6 +48,10 @@ namespace org.mpxj
             Assert.That(instance2.Units, Is.EqualTo(TimeUnit.Days));
             Assert.That(instance2.ToString(), Is.EqualTo("18.0d"));
 
+            Assert.That(instance1, Is.EqualTo(instance2));
+            Assert.That(instance1 == instance2, Is.True);
+            Assert.That(instance1 != instance2, Is.False);
+
             Assert.That(Duration.DurationValueEquals(1.0, 1.0), Is.True);
 
             var add1 = Duration.GetInstance(project, 2.5, TimeUnit.Days);
@@ -55,6 +60,7 @@ namespace org.mpxj
             Assert.That(addedDuration.DurationValue, Is.EqualTo(6));
             Assert.That(addedDuration.Units, Is.EqualTo(TimeUnit.Days));
             Assert.That(addedDuration.ToString(), Is.EqualTo("6.0d"));
+
         }
     }
 }

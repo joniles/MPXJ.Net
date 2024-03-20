@@ -14,6 +14,8 @@ namespace org.mpxj
             {
                 TestTask(task);
             }
+
+            Assert.That(project.Tasks[0].Parent, Is.EqualTo(project));
         }
 
         [Test]

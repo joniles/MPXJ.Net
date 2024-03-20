@@ -11,20 +11,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public GenericCriteriaPrompt(DataType type, string prompt)
-        {
-            JavaObject = new net.sf.mpxj.GenericCriteriaPrompt(type.ConvertType(), prompt);
-        }
+        public DataType? Type => JavaObject.getType().ConvertType();
 
-        public DataType? Type
-        {
-            get => JavaObject.getType().ConvertType();
-        }
-
-        public string Prompt
-        {
-            get => JavaObject.getPrompt();
-        }
+        public string Prompt => JavaObject.getPrompt();
 
         public override string ToString() => JavaObject.toString();
     }

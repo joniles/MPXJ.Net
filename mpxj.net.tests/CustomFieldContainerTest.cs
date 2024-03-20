@@ -46,7 +46,7 @@ namespace org.mpxj
             Assert.That(addedField.FieldType, Is.EqualTo(TaskField.Text3));
             addedField.Alias = "New Alias";
             addedField.UniqueID = 123;
-             
+
             var addedTable = addedField.LookupTable;
             table.AllLevelsRequired = false;
             table.Enterprise = false;

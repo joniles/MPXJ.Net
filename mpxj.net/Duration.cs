@@ -52,5 +52,15 @@ namespace org.mpxj
         {
             return a._proxyManager.ProxyObject(net.sf.mpxj.Duration.add(a.JavaObject, b.JavaObject, defaults.JavaObject));
         }
+
+        public override bool Equals(object obj) => this.Equals(obj as Duration);
+
+        public bool Equals(Duration d) => JavaObject.Equals(d.JavaObject);
+
+        public override int GetHashCode() => JavaObject.hashCode();
+
+        public static bool operator ==(Duration lhs, Duration rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+
+        public static bool operator !=(Duration lhs, Duration rhs) => !(lhs == rhs);
     }
 }

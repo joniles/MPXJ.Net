@@ -14,34 +14,16 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public GenericCriteria(ProjectProperties properties)
-        {
-            _proxyManager = properties._proxyManager;
-            JavaObject = new net.sf.mpxj.GenericCriteria(properties.JavaObject);
-        }
+        public IFieldType LeftValue => _proxyManager.ProxyObject(JavaObject.getLeftValue());
 
-        public IFieldType LeftValue
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getLeftValue());
-            set => JavaObject.setLeftValue(value.JavaObject);
-        }
-
-        public TestOperator? Operator
-        {
-            get => JavaObject.getOperator().ConvertType();
-            set => JavaObject.setOperator(value.ConvertType());
-        }
+        public TestOperator? Operator => JavaObject.getOperator().ConvertType();
 
         public object GetValue(int index) => _proxyManager.GenericProxyObject(JavaObject.getValue(index));
-
-        public void SetRightValue(int index, object value) => JavaObject.setRightValue(index, value.GenericJavaObject());
 
         // TODO handle map
         //public bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);
 
         public IList<GenericCriteria> CriteriaList => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCriteriaList());
-
-        public void AddCriteria(GenericCriteria criteria) => JavaObject.addCriteria(criteria.JavaObject);
 
         public override string ToString() => JavaObject.toString();
     }

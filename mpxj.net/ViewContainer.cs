@@ -12,10 +12,6 @@ namespace org.mpxj
             _proxyManager = proxyManager;
         }
 
-        public ViewState ViewState
-        {
-            get => _proxyManager.ProxyObject(JavaObject.getViewState());
-            set => JavaObject.setViewState(value.JavaObject);
-        }
+        public ViewState ViewState => _proxyManager.ProxyObject(JavaObject.getViewState());
     }
 }

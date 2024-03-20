@@ -11,20 +11,11 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public void Set(IFieldType field, object value)
-        {
-            JavaObject.set(field.JavaObject, value.GenericJavaObject());
-        }
+        public void Set(IFieldType field, object value) => JavaObject.set(field.JavaObject, value.GenericJavaObject());
 
-        public object Get(IFieldType field)
-        {
-            return _proxyManager.GenericProxyObject(JavaObject.get(field.JavaObject));
-        }
+        public object Get(IFieldType field) => _proxyManager.GenericProxyObject(JavaObject.get(field.JavaObject));
 
-        public object GetCachedValue(IFieldType field)
-        {
-            return _proxyManager.GenericProxyObject(JavaObject.getCachedValue(field.JavaObject));
-        }
+        public object GetCachedValue(IFieldType field) => _proxyManager.GenericProxyObject(JavaObject.getCachedValue(field.JavaObject));
 
         // TODO: implement if required
         // public void AddFieldListener(IFieldListener listener)

@@ -8,30 +8,15 @@ namespace org.mpxj
 
         internal ProjectCalendarContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
 
-        public ProjectCalendar Add()
-        {
-            return _fromJava(JavaObject.add());
-        }
+        public ProjectCalendar Add() => _fromJava(JavaObject.add());
 
-        public ProjectCalendar AddDefaultBaseCalendar()
-        {
-            return _fromJava(JavaObject.addDefaultBaseCalendar());
-        }
+        public ProjectCalendar AddDefaultBaseCalendar() => _fromJava(JavaObject.addDefaultBaseCalendar());
 
-        public ProjectCalendar AddDefaultDerivedCalendar()
-        {
-            return _fromJava(JavaObject.addDefaultDerivedCalendar());
-        }
+        public ProjectCalendar AddDefaultDerivedCalendar() => _fromJava(JavaObject.addDefaultDerivedCalendar());
 
-        public ProjectCalendar FindOrCreateDefaultCalendar()
-        {
-            return _fromJava(JavaObject.findOrCreateDefaultCalendar());
-        }
+        public ProjectCalendar FindOrCreateDefaultCalendar() => _fromJava(JavaObject.findOrCreateDefaultCalendar());
 
-        public ProjectCalendar GetByName(string calendarName)
-        {
-            return _fromJava(JavaObject.getByName(calendarName));
-        }
+        public ProjectCalendar GetByName(string calendarName) => _fromJava(JavaObject.getByName(calendarName));
     }
 }
 
