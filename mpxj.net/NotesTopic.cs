@@ -12,11 +12,7 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public int? UniqueID
-        {
-            get => JavaObject.getUniqueID().ConvertType();
-            set => JavaObject.setUniqueID(value.ConvertType());
-        }
+        public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public int SequenceNumber => JavaObject.getSequenceNumber().ConvertType().Value;
 

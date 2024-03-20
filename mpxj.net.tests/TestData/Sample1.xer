@@ -1,4 +1,4 @@
-ERMHDR	20.12	2024-03-18	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+ERMHDR	20.12	2024-03-20	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
 %T	COSTTYPE
 %F	cost_type_id	seq_num	cost_type
 %R	10	10001	Facilities
@@ -26,6 +26,10 @@ ERMHDR	20.12	2024-03-18	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %T	FINTMPL
 %F	fintmpl_id	fintmpl_name	default_flag
 %R	1	Calendar	Y
+%T	MEMOTYPE
+%F	memo_type_id	seq_num	eps_flag	proj_flag	wbs_flag	task_flag	memo_type
+%R	30	10	Y	Y	Y	Y	Anticipated Problems
+%R	31	11	Y	Y	Y	Y	Core Requirements
 %T	OBS
 %F	obs_id	parent_obs_id	guid	seq_num	obs_name	obs_descr
 %R	565			0	Enterprise	<HTML><BODY></BODY></HT
@@ -67,6 +71,10 @@ ERMHDR	20.12	2024-03-18	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %R	753	743		11	368	35846	Item 1	123	Vendor 1	2.0000	1.0000	3.0000	1.0000	CL_Uniform	N	1	m		
 %R	754	744		26	368	35846	Item 2	456	Vendor 2	5.0000	4.0000	6.0000	4.0000	CL_Uniform	N	1	m		
 %R	755	745		10	368	35846	Item 3	789	Vendor 3	8.0000	7.0000	9.0000	7.0000	CL_Uniform	N	1	m		
+%T	TASKMEMO
+%F	memo_id	task_id	memo_type_id	proj_id	task_memo
+%R	9550	35845	30	368	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Notes 1</BODY></HTML>
+%R	9551	35845	31	368	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Notes 2</BODY></HTML>
 %T	TASKACTV
 %F	task_id	actv_code_type_id	actv_code_id	proj_id
 %R	35845	205	3174	368
