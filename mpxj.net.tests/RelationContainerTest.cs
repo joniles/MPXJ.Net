@@ -12,6 +12,7 @@ namespace org.mpxj
             Assert.That(project, Is.Not.Null);
 
             Assert.That(project.Relations, Has.Count.EqualTo(6));
+            Assert.That(project.Relations.JavaObject, Is.Not.Null);
 
             var relation = project.Relations[0];
             Assert.Multiple(() =>
@@ -21,6 +22,7 @@ namespace org.mpxj
                 Assert.That(relation.Type, Is.EqualTo(RelationType.FinishStart));
                 Assert.That(relation.Lag, Is.EqualTo(Duration.GetInstance(project, 1, TimeUnit.Days)));
                 Assert.That(relation.UniqueID, Is.EqualTo(1));
+                Assert.That(relation.ToString(), Contains.Substring("[Relation "));
             });
         }
     }
