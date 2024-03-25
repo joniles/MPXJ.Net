@@ -1,4 +1,4 @@
-ERMHDR	20.12	2024-03-20	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+ERMHDR	20.12	2024-03-24	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
 %T	COSTTYPE
 %F	cost_type_id	seq_num	cost_type
 %R	10	10001	Facilities
@@ -75,6 +75,10 @@ ERMHDR	20.12	2024-03-20	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %F	memo_id	task_id	memo_type_id	proj_id	task_memo
 %R	9550	35845	30	368	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Notes 1</BODY></HTML>
 %R	9551	35845	31	368	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Notes 2</BODY></HTML>
+%T	TASKPROC
+%F	proc_id	task_id	proj_id	seq_num	proc_name	complete_flag	proc_wt	complete_pct	proc_descr
+%R	5743	35845	368	0	Step 1	Y	1	100	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Step 1 notes</BODY></HTML>
+%R	5744	35845	368	100	Step 2	N	1	0	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Step 2 Notes</BODY></HTML>
 %T	TASKACTV
 %F	task_id	actv_code_type_id	actv_code_id	proj_id
 %R	35845	205	3174	368
