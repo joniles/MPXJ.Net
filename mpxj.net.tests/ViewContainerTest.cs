@@ -18,7 +18,7 @@ namespace org.mpxj
             Assert.Multiple(() =>
             {
                 Assert.That(state.ViewName, Is.EqualTo("Gantt Chart"));
-                Assert.That(state.UniqueIdList, Has.Count.EqualTo(10));
+                Assert.That(state.UniqueIdList, Has.Count.EqualTo(12));
                 Assert.That(state.Filter.Name, Is.EqualTo("All Tasks"));
             });
         }

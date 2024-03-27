@@ -13,7 +13,7 @@ namespace org.mpxj
 
             Assert.That(project.Groups, Has.Count.EqualTo(3));
 
-            var group = project.Groups[2];
+            var group = project.Groups[0];
             Assert.Multiple(() =>
             {
                 Assert.That(group.ID, Is.EqualTo(19));

@@ -14,7 +14,7 @@ namespace org.mpxj
 
             var container = project.ResourceAssignments;
             Assert.That(container.JavaObject, Is.Not.Null);
-            Assert.That(container.PopulatedFields, Has.Count.EqualTo(18));
+            Assert.That(container.PopulatedFields, Has.Count.EqualTo(22));
             Assert.That(container.PopulatedFields.Contains(AssignmentField.UniqueId), Is.True);
         }
     }

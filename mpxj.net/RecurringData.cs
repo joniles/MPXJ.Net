@@ -30,7 +30,7 @@ namespace org.mpxj
             set => JavaObject.setFinishDate(value.ConvertType());
         }
 
-        public int? tOccurrences
+        public int? Occurrences
         {
             get => JavaObject.getOccurrences().ConvertType();
             set => JavaObject.setOccurrences(value.ConvertType());
