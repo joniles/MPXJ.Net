@@ -24,6 +24,15 @@ namespace org.mpxj
         public long DurationAsMilliseconds => JavaObject.getDurationAsMilliseconds();
 
         public override string ToString() => JavaObject.toString();
+
+        public override bool Equals(object obj) => this.Equals(obj as LocalTimeRange);
+
+        public bool Equals(LocalTimeRange d) => JavaObject.Equals(d.JavaObject);
+
+        public override int GetHashCode() => JavaObject.hashCode();
+
+        public static bool operator ==(LocalTimeRange lhs, LocalTimeRange rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+
+        public static bool operator !=(LocalTimeRange lhs, LocalTimeRange rhs) => !(lhs == rhs);
     }
 }
-
