@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
+[assembly: InternalsVisibleTo("mpxj.net.tests")]
+
 namespace org.mpxj.proxy
-{
+{    
     internal class ProxyManager
     {
         private readonly ObjectIDGenerator _idGenerator = new ObjectIDGenerator();

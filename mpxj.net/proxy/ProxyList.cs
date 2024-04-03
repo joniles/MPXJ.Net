@@ -22,7 +22,7 @@ namespace org.mpxj.proxy
 
         public void Insert(int index, N item)
         {
-            JavaObject.set(index, _toJava(item));
+            JavaObject.add(index, _toJava(item));
         }
 
         public void RemoveAt(int index)
