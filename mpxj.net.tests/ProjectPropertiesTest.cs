@@ -1,9 +1,12 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 using org.mpxj.reader;
 namespace org.mpxj
 {
     public class ProjectPropertiesTest
-	{
+    {
         [Test]
         public void PropertyGetTest()
         {
@@ -165,6 +168,84 @@ namespace org.mpxj
                 Assert.That(props.LocationUniqueID, Is.EqualTo(props.Get(ProjectField.LocationUniqueId)));
                 Assert.That(props.ResourcePoolFile, Is.EqualTo(props.Get(ProjectField.ResourcePoolFile)));
             });
+        }
+
+        [Test]
+        public void CustomPropertiesTest()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
+            Assert.That(project, Is.Not.Null);
+
+            var custom = project.ProjectProperties.CustomProperties;
+            Assert.Multiple(() =>
+            {
+                Assert.That(custom.IsReadOnly, Is.False);
+                Assert.That(custom.Count, Is.EqualTo(7));
+                Assert.That(custom.Keys, Has.Count.EqualTo(7));
+                Assert.That(custom.Values, Has.Count.EqualTo(7));
+
+                Assert.That(custom["% Complete"], Is.EqualTo("0%"));
+                Assert.That(custom["% Work Complete"], Is.EqualTo("0%"));
+                Assert.That(custom["Cost"], Is.EqualTo("£2,446.00"));
+                Assert.That(custom["Scheduled Duration"], Is.EqualTo("18d"));
+                Assert.That(custom["Scheduled Finish"], Is.EqualTo(new DateTime(2023, 8, 22, 17, 0, 0)));
+                Assert.That(custom["Scheduled Start"], Is.EqualTo(new DateTime(2023, 7, 28, 8, 0, 0)));
+                Assert.That(custom["Work"], Is.EqualTo("192h"));
+
+                Assert.That(custom.ContainsKey("Work"), Is.True);
+                Assert.That(custom.Contains(new KeyValuePair<string, object>("Work", "192h")), Is.True);
+                Assert.That(custom.Contains(new KeyValuePair<string, object>("XWork", "192h")), Is.False);
+
+                Assert.That(custom.ContainsKey("TestKey"), Is.False);
+                custom["TestKey"] = "TestValue";
+                Assert.That(custom.ContainsKey("TestKey"), Is.True);
+
+                object value;
+                Assert.That(custom.TryGetValue("XTestKey", out value), Is.False);
+                Assert.That(custom.TryGetValue("TestKey", out value), Is.True);
+                Assert.That(value, Is.EqualTo("TestValue"));
+
+                Assert.That(custom.Remove("TestKey"), Is.True);
+                Assert.That(custom.Count, Is.EqualTo(7));
+                Assert.That(custom.Remove("TestKey"), Is.False);
+
+                custom.Add("TestKey", "TestValue");
+                Assert.That(custom, Has.Count.EqualTo(8));
+
+                var pair = new KeyValuePair<String, object>("TestKey", "TestValue");
+                Assert.That(custom.Remove(pair), Is.True);
+                Assert.That(custom, Has.Count.EqualTo(7));
+                Assert.That(custom.Remove(pair), Is.False);
+
+                custom.Add(pair);
+                Assert.That(custom, Has.Count.EqualTo(8));
+
+                var array = new KeyValuePair<string, object>[8];
+                custom.CopyTo(array, 0);
+            });
+
+
+            var enumerator = custom.GetEnumerator();
+            Assert.That(enumerator.MoveNext(), Is.True);
+            Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+
+            enumerator.Reset();
+            Assert.That(enumerator.MoveNext(), Is.True);
+            Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+
+            var OldEnumerator = (custom as IEnumerable).GetEnumerator();
+            Assert.That(OldEnumerator.MoveNext(), Is.True);
+            Assert.That(OldEnumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+
+            foreach(var pair in custom)
+            {
+                Assert.That(pair.ToString(), Is.Not.Null);
+            }
+
+
+            custom.Clear();
+            Assert.That(custom, Is.Empty);
+
         }
     }
 }
