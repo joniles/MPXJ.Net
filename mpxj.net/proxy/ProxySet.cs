@@ -3,169 +3,47 @@ using System.Collections.Generic;
 
 namespace org.mpxj.proxy
 {
-    // TODO: implement incomplete methods
 	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set>
     {
         public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
 
         internal ProxySet(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set javaObject) : base(fromJava, toJava, javaObject) { }
 
-        bool ISet<N>.Add(N item)
-        {
-            return JavaObject.add(_toJava(item));
-        }
+        private delegate void UpdateSet(ISet<N> set);
 
-        public void UnionWith(IEnumerable<N> other)
+        // TODO: replace methods using this with native implementations?
+        private void Apply(UpdateSet update)
         {
-            if (other == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            foreach (N item in other)
+            var set = new HashSet<N>(this);
+            update(set);
+            JavaObject.clear();
+            foreach (N item in set)
             {
                 JavaObject.add(_toJava(item));
             }
         }
 
-        public void IntersectWith(IEnumerable<N> other)
-        {
-            if (other == null)
-            {
-                throw new ArgumentNullException();
-            }
+        bool ISet<N>.Add(N item) => JavaObject.add(_toJava(item));
 
-            if (Count == 0 || other == this)
-            {
-                return;
-            }
+        public void UnionWith(IEnumerable<N> other) => Apply((set) => set.UnionWith(other));
 
-            ICollection<N> collection = other as ICollection<N>;
-            if (collection != null)
-            {
-                if (collection.Count == 0)
-                {
-                    Clear();
-                    return;
-                }
-            }
+        public void IntersectWith(IEnumerable<N> other) => Apply((set) => set.IntersectWith(other));
 
-            var otherSet = new java.util.HashSet();
-            foreach(N item in other)
-            {
-                otherSet.add(_toJava(item));
-            }
+        public void ExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
 
-            JavaObject.retainAll(otherSet);
-        }
+        public void SymmetricExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
 
-        public void ExceptWith(IEnumerable<N> other)
-        {
-            if (other == null)
-            {
-                throw new ArgumentNullException();
-            }
+        public bool IsSubsetOf(IEnumerable<N> other) => new HashSet<N>(this).IsSubsetOf(other);
 
-            if (Count == 0)
-            {
-                return;
-            }
+        public bool IsSupersetOf(IEnumerable<N> other) => new HashSet<N>(this).IsSupersetOf(other);
 
-            if (other == this)
-            {
-                Clear();
-                return;
-            }
+        public bool IsProperSupersetOf(IEnumerable<N> other) => new HashSet<N>(this).IsProperSupersetOf(other);
 
-            foreach (N item in other)
-            {
-                Remove(item);
-            }
-        }
+        public bool IsProperSubsetOf(IEnumerable<N> other) => new HashSet<N>(this).IsProperSubsetOf(other);
 
-        public void SymmetricExceptWith(IEnumerable<N> other)
-        {
-            throw new System.NotImplementedException();
-        }
+        public bool Overlaps(IEnumerable<N> other) => new HashSet<N>(this).Overlaps(other);
 
-        public bool IsSubsetOf(IEnumerable<N> other)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool IsSupersetOf(IEnumerable<N> other)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool IsProperSupersetOf(IEnumerable<N> other)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool IsProperSubsetOf(IEnumerable<N> other)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool Overlaps(IEnumerable<N> other)
-        {
-            if (other == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (Count == 0)
-            {
-                return false;
-            }
-
-            if (other == this)
-            {
-                return true;
-            }
-
-            foreach (N item in other)
-            {
-                if (Contains(item))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        public bool SetEquals(IEnumerable<N> other)
-        {
-            if (other == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (other == this)
-            {
-                return true;
-
-            }
-
-            if (Count == 0)
-            {
-                ICollection<N> collection = other as ICollection<N>;
-                if (collection != null && collection.Count > 0)
-                {
-                    return false;
-                }
-            }
-
-            var otherSet = new java.util.HashSet();
-            foreach (N item in other)
-            {
-                otherSet.add(_toJava(item));
-            }
-
-            return JavaObject.size() == otherSet.size() && JavaObject.containsAll(otherSet);
-        }
+        public bool SetEquals(IEnumerable<N> other) => new HashSet<N>(this).SetEquals(other);
     }
 }
 

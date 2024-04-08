@@ -16,10 +16,7 @@ namespace org.mpxj.proxy
 
             public N Current => _current;
 
-            object IEnumerator.Current
-            {
-                get => _current;
-            }
+            object IEnumerator.Current => _current;
 
             internal Enumerator(ProxyEnumerable<M, N> list)
             {
