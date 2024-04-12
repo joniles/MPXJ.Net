@@ -74,8 +74,6 @@ namespace org.mpxj
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();
 
-        public Duration GetDuration(DateTime startDate, DateTime endDate) => _proxyManager.ProxyObject(JavaObject.getDuration(startDate.ConvertType(), endDate.ConvertType()));
-
         public TimeOnly? GetStartTime(DateOnly date) => JavaObject.getStartTime(date.ConvertType()).ConvertType();
 
         public TimeOnly? GetFinishTime(DateOnly date) => JavaObject.getFinishTime(date.ConvertType()).ConvertType();

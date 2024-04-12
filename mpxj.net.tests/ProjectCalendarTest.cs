@@ -39,7 +39,7 @@ namespace org.mpxj
                 Assert.That(calendar.Tasks, Has.Count.EqualTo(0));
                 Assert.That(calendar.ResourceCount, Is.EqualTo(0));
                 Assert.That(calendar.Resources, Has.Count.EqualTo(0));
-                
+
             });
 
             var week = calendar.WorkWeeks[0];
@@ -82,6 +82,49 @@ namespace org.mpxj
             Assert.That(resourceCalendar.ParentUniqueID, Is.EqualTo(1));
             Assert.That(resourceCalendar.Parent, Is.EqualTo(calendar));
         }
+
+        [Test]
+        public void AddCalendarTests()
+        {
+            var project = new ProjectFile();
+            var calendar = project.AddDefaultBaseCalendar();
+
+            calendar.CalendarMinutesPerDay = 480;
+            Assert.That(calendar.CalendarMinutesPerDay, Is.EqualTo(480));
+
+            calendar.CalendarMinutesPerWeek = 2400;
+            Assert.That(calendar.CalendarMinutesPerWeek, Is.EqualTo(2400));
+
+            calendar.CalendarMinutesPerMonth = 9600;
+            Assert.That(calendar.CalendarMinutesPerMonth, Is.EqualTo(9600));
+
+            calendar.CalendarMinutesPerYear = 115200;
+            Assert.That(calendar.CalendarMinutesPerYear, Is.EqualTo(115200));
+
+            var week1 = calendar.AddWorkWeek();
+            var week2 = calendar.AddWorkWeek();
+            Assert.That(calendar.WorkWeeks, Has.Count.EqualTo(2));
+
+            calendar.RemoveWorkWeek(week1);
+            Assert.That(calendar.WorkWeeks, Has.Count.EqualTo(1));
+
+            calendar.ClearWorkWeeks();
+            Assert.That(calendar.WorkWeeks, Is.Empty);
+
+            calendar.Type = CalendarType.Project;
+            Assert.That(calendar.Type, Is.EqualTo(CalendarType.Project));
+
+            calendar.Personal = true;
+            Assert.That(calendar.Personal, Is.True);
+
+            calendar.UniqueID = 999;
+            Assert.That(calendar.UniqueID, Is.EqualTo(999));
+
+            var derived = project.AddDefaultDerivedCalendar();
+            derived.Parent = calendar;
+
+            Assert.That(derived.Parent, Is.EqualTo(calendar));
+            Assert.That(derived.ParentUniqueID, Is.EqualTo(999));
+        }
     }
 }
-
