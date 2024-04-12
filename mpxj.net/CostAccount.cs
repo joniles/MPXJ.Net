@@ -20,7 +20,7 @@ namespace org.mpxj
 
         public string Name => JavaObject.getName();
 
-        public string Description => JavaObject.getDescription();
+        public string Notes => JavaObject.getNotes();
 
         public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 

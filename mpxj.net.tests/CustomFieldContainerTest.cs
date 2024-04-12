@@ -61,7 +61,7 @@ namespace org.mpxj
 
             var indicator = field.GraphicalIndicator;
             Assert.That(indicator.DisplayGraphicalIndicators, Is.False);
-            Assert.That(indicator.FieldType, Is.Null);
+            Assert.That(indicator.FieldType, Is.EqualTo(TaskField.Text2));
             Assert.That(indicator.NonSummaryRowCriteria, Is.Empty);
             Assert.That(indicator.ProjectSummaryCriteria, Is.Empty);
             Assert.That(indicator.ProjectSummaryInheritsFromSummaryRows, Is.False);
@@ -76,7 +76,7 @@ namespace org.mpxj
             Assert.That(item.Collapsed, Is.False);
             Assert.That(item.Description, Is.Null);
             Assert.That(item.GUID, Is.EqualTo(new Guid("{87b89f99-396b-4c6f-bfc4-65b391762a4c}")));
-            Assert.That(item.Parent, Is.EqualTo(0));
+            Assert.That(item.ParentUniqueID, Is.EqualTo(0));
             Assert.That(item.ToString(), Contains.Substring("[CustomFieldValueItem"));
             Assert.That(item.Type, Is.EqualTo(CustomFieldValueDataType.Text));
             Assert.That(item.UniqueID, Is.EqualTo(1));
@@ -93,8 +93,7 @@ namespace org.mpxj
             {
                 Value = "Value",
                 Description = "Description",
-                // TODO: this will change post 12.8.2
-                Parent = 456,
+                ParentUniqueID = 456,
                 GUID = Guid.NewGuid(),
                 Type = CustomFieldValueDataType.Text,
                 Collapsed = false

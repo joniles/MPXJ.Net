@@ -15,7 +15,7 @@ namespace org.mpxj
             Assert.That(project.CostAccounts.JavaObject, Is.Not.Null);
 
             var account = project.CostAccounts[0];
-            Assert.That(account.Description, Contains.Substring("Desc 1"));
+            Assert.That(account.Notes, Contains.Substring("Desc 1"));
             Assert.That(account.ID, Is.EqualTo("A1"));
             Assert.That(account.Name, Is.EqualTo("Cost Account 1"));
             Assert.That(account.Parent, Is.Null);

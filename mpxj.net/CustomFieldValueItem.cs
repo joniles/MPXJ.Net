@@ -31,10 +31,10 @@ namespace org.mpxj
             set => JavaObject.setDescription(value);
         }
 
-        public int? Parent
+        public int? ParentUniqueID
         {
-            get => JavaObject.getParent().ConvertType();
-            set => JavaObject.setParent(value.ConvertType());
+            get => JavaObject.getParentUniqueID().ConvertType();
+            set => JavaObject.setParentUniqueID(value.ConvertType());
         }
 
         public Guid? GUID
