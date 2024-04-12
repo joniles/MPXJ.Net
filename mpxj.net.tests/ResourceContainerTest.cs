@@ -14,7 +14,7 @@ namespace org.mpxj
             var resource1 = project.AddResource();
             resource1.Name = "Resource 1";
 
-            var resource2 = project.AddResource();
+            var resource2 = container.Add();
             resource2.Name = "Resource 2";
 
             Assert.That(container.Count, Is.EqualTo(2));
@@ -28,6 +28,9 @@ namespace org.mpxj
             Assert.That(resource1.ChildResources.Count, Is.EqualTo(0));
             Assert.That(resource2.ChildResources.Count, Is.EqualTo(1));
             Assert.That(resource3.ChildResources.Count, Is.EqualTo(0));
+
+            Assert.That(container.PopulatedFields, Has.Count.EqualTo(4));
+            Assert.That(container.PopulatedFields.Contains(ResourceField.Name), Is.True);
         }
     }
 }

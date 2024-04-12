@@ -15,7 +15,7 @@ namespace org.mpxj
             var task1 = project.AddTask();
             task1.Name = "Task 1";
 
-            var task2 = project.AddTask();
+            var task2 = container.Add();
             task2.Name = "Task 2";
 
             Assert.That(container.Count, Is.EqualTo(2));

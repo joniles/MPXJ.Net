@@ -4,7 +4,7 @@ using org.mpxj.proxy;
 
 namespace org.mpxj
 {
-    public class ProxyListText
+    public class ProxyListTest
     {
         [Test]
         public void MethodsTest()

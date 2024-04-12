@@ -31,7 +31,7 @@ namespace org.mpxj.proxy
 
         public void ExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
 
-        public void SymmetricExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
+        public void SymmetricExceptWith(IEnumerable<N> other) => Apply((set) => set.SymmetricExceptWith(other));
 
         public bool IsSubsetOf(IEnumerable<N> other) => new HashSet<N>(this).IsSubsetOf(other);
 
