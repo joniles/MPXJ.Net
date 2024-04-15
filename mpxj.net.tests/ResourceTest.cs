@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using org.mpxj.reader;
 
 namespace org.mpxj
@@ -589,6 +590,103 @@ namespace org.mpxj
                 Assert.That(resource.LocationUniqueID, Is.EqualTo(resource.Get(ResourceField.LocationUniqueId)));
                 Assert.That(resource.Finish, Is.EqualTo(resource.Get(ResourceField.Finish)));
             });
+        }
+
+        [Test]
+        public void SetterTests()
+        {
+            var project = new ProjectFile();
+            var resource = project.AddResource();
+
+            resource.AccrueAt = AccrueType.Prorated;
+            resource.BookingType = BookingType.Committed;
+
+            resource.Active = true;
+            resource.Budget = true;
+            resource.CalculateCostsFromUnits = true;
+            resource.CanLevel = true;
+            resource.Enterprise = true;
+            resource.ExpensesOnly = true;
+            resource.Generic = true;
+            resource.LinkedFields = true;
+            resource.ModifyOnIntegrate = true;
+            resource.OverAllocated = true;
+            resource.Role = true;
+
+            resource.CreationDate = DateTime.Now;
+
+            resource.ActualCost = 1.0;
+            resource.ActualOvertimeCost = 1.0;
+            resource.ACWP = 1.0;
+            resource.BaselineBudgetCost = 1.0;
+            resource.BaselineCost = 1.0;
+            resource.BCWP = 1.0;
+            resource.BCWS = 1.0;
+            resource.BudgetCost = 1.0;
+            resource.Cost = 1.0;
+            resource.CostVariance = 1.0;
+            resource.CV = 1.0;
+            resource.OvertimeCost = 1.0;
+            resource.PeakUnits = 1.0;
+            resource.PercentWorkComplete = 1.0;
+            resource.PerDay = 1.0;
+            resource.PeriodDur = 1.0;
+            resource.Pool = 1.0;
+            resource.Priority = 1.0;
+            resource.Rate = 1.0;
+            resource.RemainingCost = 1.0;
+            resource.RemainingOvertimeCost = 1.0;
+            resource.SV = 1.0;
+
+            resource.ActualOvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.ActualOvertimeWorkProtected = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.ActualWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.ActualWorkProtected = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.BaselineBudgetWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.BaselineWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.BudgetWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.OvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.RegularWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.RemainingOvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.RemainingWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.Work = Duration.GetInstance(1.0, TimeUnit.Days);
+            resource.WorkVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+
+            resource.GUID = Guid.NewGuid();
+
+            resource.CalendarUniqueID = 1;
+            resource.ID = 1;
+            resource.LocationUniqueID = 1;
+            resource.Objects = 1;
+            resource.ParentResourceUniqueID = 1;
+            resource.SequenceNumber = 1;
+            resource.SubprojectResourceUniqueID = 1;
+            resource.UniqueID = 1;
+
+            resource.Type = ResourceType.Work;
+
+            resource.ActiveDirectoryGUID = "bar";
+            resource.BaseCalendar = "bar";
+            resource.Code = "bar";
+            resource.CostCenter = "bar";
+            resource.Description = "bar";
+            resource.EmailAddress = "bar";
+            resource.Group = "bar";
+            resource.Hyperlink = "bar";
+            resource.HyperlinkAddress = "bar";
+            resource.HyperlinkScreenTip = "bar";
+            resource.HyperlinkSubAddress = "bar";
+            resource.Initials = "bar";
+            resource.Name = "bar";
+            resource.Notes = "bar";
+            resource.NtAccount = "bar";
+            resource.Phone = "bar";
+            resource.Phonetics = "bar";
+            resource.ResourceID = "bar";
+            resource.SupplyReference = "bar";
+            resource.Unit = "bar";
+
+            resource.WorkGroup = WorkGroup.Default;
         }
     }
 }

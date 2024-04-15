@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using org.mpxj.reader;
+
 namespace org.mpxj
 {
     public class ProjectPropertiesTest
@@ -237,7 +238,7 @@ namespace org.mpxj
             Assert.That(OldEnumerator.MoveNext(), Is.True);
             Assert.That(OldEnumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
 
-            foreach(var pair in custom)
+            foreach (var pair in custom)
             {
                 Assert.That(pair.ToString(), Is.Not.Null);
             }
@@ -245,7 +246,165 @@ namespace org.mpxj
 
             custom.Clear();
             Assert.That(custom, Is.Empty);
+        }
 
+        [Test]
+        public void SetterTests()
+        {
+            var project = new ProjectFile();
+            var props = project.ProjectProperties;
+
+            props.DefaultFixedCostAccrual = AccrueType.Prorated;
+
+            props.ActualsInSync = true;
+            props.AdminProject = true;
+            props.AutoAddNewResourcesAndTasks = true;
+            props.AutoFilter = true;
+            props.Autolink = true;
+            props.DefaultDurationIsFixed = true;
+            props.EditableActualCosts = true;
+            props.ExportFlag = true;
+            props.FiscalYearStart = true;
+            props.HonorConstraints = true;
+            props.InsertedProjectsLikeSummary = true;
+            props.MicrosoftProjectServerURL = true;
+            props.MoveCompletedEndsBack = true;
+            props.MoveCompletedEndsForward = true;
+            props.MoveRemainingStartsBack = true;
+            props.MoveRemainingStartsForward = true;
+            props.MultipleCriticalPaths = true;
+            props.NewTasksAreManual = true;
+            props.NewTasksEffortDriven = true;
+            props.NewTasksEstimated = true;
+            props.NewTaskStartIsProjectStart = true;
+            props.ProjectExternallyEdited = true;
+            props.RemoveFileProperties = true;
+            props.ShowProjectSummaryTask = true;
+            props.SplitInProgressTasks = true;
+            props.SpreadActualCost = true;
+            props.SpreadPercentComplete = true;
+            props.UpdatingTaskStatusUpdatesResourceStatus = true;
+
+            props.DateSeparator = 'x';
+            props.DecimalSeparator = 'x';
+            props.MpxDelimiter = 'x';
+            props.ThousandsSeparator = 'x';
+            props.TimeSeparator = 'x';
+
+            props.MpxCodePage = CodePage.ANSI;
+
+            props.CriticalActivityType = CriticalActivityType.TotalFloat;
+
+            props.SymbolPosition = CurrencySymbolPosition.Before;
+
+            props.DateOrder = DateOrder.DMY;
+
+            props.ActualFinish = DateTime.Now;
+            props.ActualStart = DateTime.Now;
+            props.BaselineDate = DateTime.Now;
+            props.BaselineFinish = DateTime.Now;
+            props.BaselineStart = DateTime.Now;
+            props.CreationDate = DateTime.Now;
+            props.CurrentDate = DateTime.Now;
+            props.ExtendedCreationDate = DateTime.Now;
+            props.FinishDate = DateTime.Now;
+            props.LastPrinted = DateTime.Now;
+            props.LastSaved = DateTime.Now;
+            props.MustFinishBy = DateTime.Now;
+            props.PlannedStart = DateTime.Now;
+            props.ScheduledFinish = DateTime.Now;
+            props.StartDate = DateTime.Now;
+            props.StatusDate = DateTime.Now;
+
+            props.WeekStartDay = DayOfWeek.Monday;
+
+            props.ActualCost = 1.0;
+            props.BaselineCost = 1.0;
+            props.Cost = 1.0;
+            props.PercentageComplete = 1.0;
+            props.Work2 = 1.0;
+
+            props.ActualDuration = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.ActualWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.BaselineDuration = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.BaselineWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.CriticalSlackLimit = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.Duration = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.FinishVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.StartVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+            props.Work = Duration.GetInstance(1.0, TimeUnit.Days);
+
+            props.DefaultTaskEarnedValueMethod = EarnedValueMethod.PercentComplete;
+            props.EarnedValueMethod = EarnedValueMethod.PercentComplete;
+
+            props.MpxFileVersion = FileVersion.Version4;
+
+            props.GUID = Guid.NewGuid();
+
+            props.ApplicationVersion = 1;
+            props.BaselineForEarnedValue = 1;
+            props.BaselineProjectUniqueID = 1;
+            props.CurrencyDigits = 1;
+            props.DaysPerMonth = 1;
+            props.DefaultCalendarUniqueID = 1;
+            props.EditingTime = 1;
+            props.FiscalYearStartMonth = 1;
+            props.LocationUniqueID = 1;
+            props.MinutesPerDay = 1;
+            props.MinutesPerMonth = 1;
+            props.MinutesPerWeek = 1;
+            props.MinutesPerYear = 1;
+            props.MppFileType = 1;
+            props.Revision = 1;
+            props.UniqueID = 1;
+
+            props.BarTextDateFormat = ProjectDateFormat.DD_MM_YY;
+            props.DateFormat = ProjectDateFormat.DD_MM_YY;
+
+            props.TimeFormat = ProjectTimeFormat.TwentyFourHour;
+
+            props.DefaultOvertimeRate = new Rate(1, TimeUnit.Hours);
+            props.DefaultStandardRate = new Rate(1, TimeUnit.Hours);
+
+            props.ScheduleFrom = ScheduleFrom.Start;
+
+            props.AMText = "baz";
+            props.Author = "baz";
+            props.Category = "baz";
+            props.Comments = "baz";
+            props.Company = "baz";
+            props.ContentStatus = "baz";
+            props.ContentType = "baz";
+            props.CurrencyCode = "baz";
+            props.CurrencySymbol = "baz";
+            props.DocumentVersion = "baz";
+            props.FileApplication = "baz";
+            props.FileType = "baz";
+            props.FullApplicationName = "baz";
+            props.HyperlinkBase = "baz";
+            props.Keywords = "baz";
+            props.Language = "baz";
+            props.LastAuthor = "baz";
+            props.Manager = "baz";
+            props.MpxProgramName = "baz";
+            props.Name = "baz";
+            props.PMText = "baz";
+            props.PresentationFormat = "baz";
+            props.ProjectFilePath = "baz";
+            props.ProjectID = "baz";
+            props.ProjectTitle = "baz";
+            props.ResourcePoolFile = "baz";
+            props.ShortApplicationName = "baz";
+            props.Subject = "baz";
+            props.Template = "baz";
+
+            props.DefaultTaskType = TaskType.FixedWork;
+
+            props.DefaultEndTime = new TimeOnly(17, 0);
+            props.DefaultStartTime = new TimeOnly(8, 0);
+
+            props.DefaultDurationUnits = TimeUnit.Hours;
+            props.DefaultWorkUnits = TimeUnit.Hours;
         }
     }
 }
