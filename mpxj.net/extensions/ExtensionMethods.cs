@@ -106,7 +106,7 @@ namespace org.mpxj
 
         public static java.time.LocalTime ConvertType(this TimeOnly t)
         {
-            return t == null ? null : java.time.LocalTime.of(t.Hour, t.Minute, t.Second);
+            return java.time.LocalTime.of(t.Hour, t.Minute, t.Second);
         }
 
         public static DateTime? ConvertType(this java.time.LocalDateTime value)
@@ -151,7 +151,7 @@ namespace org.mpxj
 
         public static java.time.LocalDate ConvertType(this DateOnly t)
         {
-            return t == null ? null : java.time.LocalDate.of(t.Year, t.Month, t.Day);
+            return java.time.LocalDate.of(t.Year, t.Month, t.Day);
         }
 
         public static object GenericJavaObject(this object o)
