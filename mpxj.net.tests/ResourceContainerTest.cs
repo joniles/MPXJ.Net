@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using org.mpxj.reader;
 
 namespace org.mpxj
 {
@@ -31,6 +32,16 @@ namespace org.mpxj
 
             Assert.That(container.PopulatedFields, Has.Count.EqualTo(4));
             Assert.That(container.PopulatedFields.Contains(ResourceField.Name), Is.True);
+        }
+
+        [Test]
+        public void CustomFieldTests()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
+            Assert.That(project, Is.Not.Null);
+
+            var container = project.Resources;
+            Assert.That(container.GetFieldTypeByAlias("CustomText1"), Is.EqualTo(ResourceField.Text1));
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿
 using NUnit.Framework;
+using org.mpxj.reader;
 
 namespace org.mpxj
 {
-	public class TaskContainerTest
-	{
+    public class TaskContainerTest
+    {
         [Test]
-        public void TestResourceContainer()
+        public void MethodsTest()
         {
             var project = new ProjectFile();
             var container = project.Tasks;
@@ -32,6 +33,16 @@ namespace org.mpxj
 
             Assert.That(container.PopulatedFields, Has.Count.EqualTo(7));
             Assert.That(container.PopulatedFields.Contains(TaskField.Name), Is.True);
+        }
+
+        [Test]
+        public void CustomFieldTests()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
+            Assert.That(project, Is.Not.Null);
+
+            var container = project.Tasks;
+            Assert.That(container.GetFieldTypeByAlias("CustomFieldText1"), Is.EqualTo(TaskField.Text1));
         }
     }
 }
