@@ -125,6 +125,17 @@ namespace org.mpxj
 
             Assert.That(derived.Parent, Is.EqualTo(calendar));
             Assert.That(derived.ParentUniqueID, Is.EqualTo(999));
+
+            var exceptionDate = new DateOnly(2024, 4, 15);
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 8, TimeUnit.Hours)));
+            calendar.AddCalendarException(exceptionDate);
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
+
+            var exceptionStartDate = new DateTime(2024, 4, 16, 8, 0, 0);
+            var exceptionEndDate = new DateTime(2024, 4, 17, 17, 0, 0);
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 16, TimeUnit.Hours)));
+            calendar.AddCalendarException(DateOnly.FromDateTime(exceptionStartDate), DateOnly.FromDateTime(exceptionEndDate));
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
         }
     }
 }
