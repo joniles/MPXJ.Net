@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using org.mpxj.reader;
 
 namespace org.mpxj
@@ -553,6 +554,97 @@ namespace org.mpxj
                 Assert.That(assignment.CostAccountUniqueID, Is.EqualTo(assignment.Get(AssignmentField.CostAccountUniqueId)));
                 Assert.That(assignment.Finish, Is.EqualTo(assignment.Get(AssignmentField.Finish)));
             });
+        }
+
+        [Test]
+        public void SetterTests()
+        {
+            var project = new ProjectFile();
+            var task = project.AddTask();
+            var resource = project.AddResource();
+            var assignment = task.AddResourceAssignment(resource);
+
+            assignment.CalculateCostsFromUnits = true;
+            assignment.Confirmed = true;
+            assignment.LinkedFields = true;
+            assignment.ResponsePending = true;
+            assignment.TeamStatusPending = true;
+            assignment.UpdateNeeded = true;
+
+            assignment.ActualFinish = DateTime.Now;
+            assignment.ActualStart = DateTime.Now;
+            assignment.BaselineFinish = DateTime.Now;
+            assignment.BaselineStart = DateTime.Now;
+            assignment.CreateDate = DateTime.Now;
+            assignment.Finish = DateTime.Now;
+            assignment.PlannedFinish = DateTime.Now;
+            assignment.PlannedStart = DateTime.Now;
+            assignment.Resume = DateTime.Now;
+            assignment.Start = DateTime.Now;
+            assignment.Stop = DateTime.Now;
+
+            assignment.ActualCost = 1.0;
+            assignment.ActualOvertimeCost = 1.0;
+            assignment.ACWP = 1.0;
+            assignment.BaselineBudgetCost = 1.0;
+            assignment.BaselineCost = 1.0;
+            assignment.BCWP = 1.0;
+            assignment.BCWS = 1.0;
+            assignment.BudgetCost = 1.0;
+            assignment.Cost = 1.0;
+            assignment.CostVariance = 1.0;
+            assignment.CV = 1.0;
+            assignment.OvertimeCost = 1.0;
+            assignment.PercentageWorkComplete = 1.0;
+            assignment.PlannedCost = 1.0;
+            assignment.RemainingCost = 1.0;
+            assignment.RemainingOvertimeCost = 1.0;
+            assignment.SV = 1.0;
+            assignment.Units = 1.0;
+            assignment.VAC = 1.0;
+
+            assignment.ActualOvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.ActualWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.BaselineBudgetWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.BaselineWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.BudgetWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.Delay = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.FinishVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.LevelingDelay = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.OvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.PlannedWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.RegularWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.RemainingOvertimeWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.RemainingWork = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.StartVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.Work = Duration.GetInstance(1.0, TimeUnit.Days);
+            assignment.WorkVariance = Duration.GetInstance(1.0, TimeUnit.Days);
+
+            assignment.GUID = Guid.NewGuid();
+
+            assignment.CostRateTableIndex = 1;
+            assignment.CostAccountUniqueID = 1;
+            assignment.RateIndex = 1;
+            assignment.ResourceUniqueID = 1;
+            assignment.RoleUniqueID = 1;
+            assignment.TaskUniqueID = 1;
+            assignment.UniqueID = 1;
+
+            assignment.OverrideRate = new Rate(1, TimeUnit.Hours);
+
+            assignment.RateSource = RateSource.Resource;
+
+            assignment.ResourceRequestType = ResourceRequestType.None;
+
+            assignment.Hyperlink = "foo";
+            assignment.HyperlinkAddress = "foo";
+            assignment.HyperlinkScreenTip = "foo";
+            assignment.HyperlinkSubAddress = "foo";
+            assignment.Notes = "foo";
+
+            assignment.VariableRateUnits = TimeUnit.Hours;
+
+            assignment.WorkContour = WorkContour.Flat;
         }
     }
 }
