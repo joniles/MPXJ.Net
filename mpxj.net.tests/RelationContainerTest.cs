@@ -24,6 +24,15 @@ namespace org.mpxj
                 Assert.That(relation.UniqueID, Is.EqualTo(1));
                 Assert.That(relation.ToString(), Contains.Substring("[Relation "));
             });
+
+            var task1 = project.Tasks.GetByUniqueID(4);
+            var task2 = project.Tasks.GetByUniqueID(3);
+
+            Assert.That(task1.Predecessors, Has.Count.EqualTo(1));
+            Assert.That(task1.IsPredecessor(task2));
+            
+            Assert.That(task2.Successors, Has.Count.EqualTo(1));
+            Assert.That(task2.IsSuccessor(task1));
         }
     }
 }
