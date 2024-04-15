@@ -1,4 +1,4 @@
-ERMHDR	20.12	2024-03-24	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
+ERMHDR	20.12	2024-04-15	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	USD
 %T	COSTTYPE
 %F	cost_type_id	seq_num	cost_type
 %R	10	10001	Facilities
@@ -33,6 +33,10 @@ ERMHDR	20.12	2024-03-24	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %T	OBS
 %F	obs_id	parent_obs_id	guid	seq_num	obs_name	obs_descr
 %R	565			0	Enterprise	<HTML><BODY></BODY></HT
+%T	UDFTYPE
+%F	udf_type_id	table_name	udf_type_name	udf_type_label	logical_data_type	super_flag	indicator_expression	summary_indicator_expression
+%R	128	TASK	user_field_128	UDF 1	FT_TEXT	N		
+%R	129	TASK	user_field_129	UDF 2	FT_INT	N		
 %T	ACCOUNT
 %F	acct_id	parent_acct_id	acct_seq_num	acct_name	acct_short_name	acct_descr
 %R	743		0	Cost Account 1	A1	<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.20139""></HEAD><BODY>Desc 1</BODY></HTML>
@@ -88,4 +92,8 @@ ERMHDR	20.12	2024-03-24	Project	ADMIN	jon	dbxDatabaseNoName	Project Management	U
 %R	35846	206	3177	368
 %R	35846	207	3179	368
 %R	35847	207	3180	368
+%T	UDFVALUE
+%F	udf_type_id	fk_id	proj_id	udf_date	udf_number	udf_text	udf_code_id
+%R	128	35845	368			Text Value	
+%R	129	35845	368		1		
 %E
