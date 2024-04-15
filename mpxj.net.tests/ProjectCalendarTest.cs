@@ -128,14 +128,51 @@ namespace org.mpxj
 
             var exceptionDate = new DateOnly(2024, 4, 15);
             Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 8, TimeUnit.Hours)));
-            calendar.AddCalendarException(exceptionDate);
+            var exception = calendar.AddCalendarException(exceptionDate);
             Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
+            calendar.RemoveCalendarException(exception);
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 8, TimeUnit.Hours)));
 
             var exceptionStartDate = new DateTime(2024, 4, 16, 8, 0, 0);
             var exceptionEndDate = new DateTime(2024, 4, 17, 17, 0, 0);
             Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 16, TimeUnit.Hours)));
             calendar.AddCalendarException(DateOnly.FromDateTime(exceptionStartDate), DateOnly.FromDateTime(exceptionEndDate));
             Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
+
+            calendar.ClearCalendarExceptions();
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 16, TimeUnit.Hours)));
+
+            var recurring = new RecurringData
+            {
+                StartDate = new DateOnly(2024, 4, 22),
+                FinishDate = new DateOnly(2024, 5, 6),
+                Frequency = 1,
+                RecurrenceType = RecurrenceType.Weekly,
+                Occurrences = 3
+            };
+
+            exception = calendar.AddCalendarException(recurring);
+            Assert.That(exception.Recurring, Is.Not.Null);
+
+
+            calendar.ClearCalendarExceptions();
+            Assert.That(calendar.GetStartTime(new DateOnly(2024, 4, 15)), Is.EqualTo(new TimeOnly(8, 0)));
+            Assert.That(calendar.GetFinishTime(new DateOnly(2024, 4, 15)), Is.EqualTo(new TimeOnly(17, 0)));
+            Assert.That(calendar.GetDate(new DateTime(2024, 4, 15, 8, 0, 0), Duration.GetInstance(project, 12, TimeUnit.Hours)), Is.EqualTo(new DateTime(2024, 4, 16, 12, 0, 0)));
+            Assert.That(calendar.GetNextWorkStart(new DateTime(2024, 4, 15, 17, 0, 0)), Is.EqualTo(new DateTime(2024, 4, 16, 8, 0, 0)));
+            Assert.That(calendar.GetPreviousWorkFinish(new DateTime(2024, 4, 16, 8, 0, 0)), Is.EqualTo(new DateTime(2024, 4, 15, 17, 0, 0)));
+            Assert.That(calendar.GetDayType(DayOfWeek.Monday), Is.EqualTo(DayType.Working));
+            Assert.That(calendar.IsWorkingDay(DayOfWeek.Monday), Is.True);
+            Assert.That(calendar.IsWorkingDate(new DateOnly(2024, 4, 15)), Is.True);
+
+            var hours = calendar.GetHours(DayOfWeek.Monday);
+            Assert.That(hours, Has.Count.EqualTo(2));
+
+            hours = calendar.GetHours(new DateOnly(2024, 4, 15));
+            Assert.That(hours, Has.Count.EqualTo(2));
+
+            hours = calendar.GetHours(new DateTime(2024, 4, 15, 8, 0, 0));
+            Assert.That(hours, Has.Count.EqualTo(2));
         }
     }
 }
