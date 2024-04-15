@@ -367,7 +367,7 @@ namespace org.mpxj.proxy
 
         internal Duration ProxyObject(net.sf.mpxj.Duration value)
         {
-            return ProxyObject(value, v => new Duration(this, v));
+            return ProxyObject(value, v => new Duration(v));
         }
 
         internal LocalDateRange ProxyObject(net.sf.mpxj.LocalDateRange value)

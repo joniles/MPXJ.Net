@@ -127,20 +127,20 @@ namespace org.mpxj
             Assert.That(derived.ParentUniqueID, Is.EqualTo(999));
 
             var exceptionDate = new DateOnly(2024, 4, 15);
-            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 8, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
             var exception = calendar.AddCalendarException(exceptionDate);
-            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(0, TimeUnit.Hours)));
             calendar.RemoveCalendarException(exception);
-            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 8, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
 
             var exceptionStartDate = new DateTime(2024, 4, 16, 8, 0, 0);
             var exceptionEndDate = new DateTime(2024, 4, 17, 17, 0, 0);
-            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 16, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(16, TimeUnit.Hours)));
             calendar.AddCalendarException(DateOnly.FromDateTime(exceptionStartDate), DateOnly.FromDateTime(exceptionEndDate));
-            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 0, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(0, TimeUnit.Hours)));
 
             calendar.ClearCalendarExceptions();
-            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(project, 16, TimeUnit.Hours)));
+            Assert.That(calendar.GetWork(exceptionStartDate, exceptionEndDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(16, TimeUnit.Hours)));
 
             var recurring = new RecurringData
             {
@@ -158,7 +158,7 @@ namespace org.mpxj
             calendar.ClearCalendarExceptions();
             Assert.That(calendar.GetStartTime(new DateOnly(2024, 4, 15)), Is.EqualTo(new TimeOnly(8, 0)));
             Assert.That(calendar.GetFinishTime(new DateOnly(2024, 4, 15)), Is.EqualTo(new TimeOnly(17, 0)));
-            Assert.That(calendar.GetDate(new DateTime(2024, 4, 15, 8, 0, 0), Duration.GetInstance(project, 12, TimeUnit.Hours)), Is.EqualTo(new DateTime(2024, 4, 16, 12, 0, 0)));
+            Assert.That(calendar.GetDate(new DateTime(2024, 4, 15, 8, 0, 0), Duration.GetInstance(12, TimeUnit.Hours)), Is.EqualTo(new DateTime(2024, 4, 16, 12, 0, 0)));
             Assert.That(calendar.GetNextWorkStart(new DateTime(2024, 4, 15, 17, 0, 0)), Is.EqualTo(new DateTime(2024, 4, 16, 8, 0, 0)));
             Assert.That(calendar.GetPreviousWorkFinish(new DateTime(2024, 4, 16, 8, 0, 0)), Is.EqualTo(new DateTime(2024, 4, 15, 17, 0, 0)));
             Assert.That(calendar.GetDayType(DayOfWeek.Monday), Is.EqualTo(DayType.Working));

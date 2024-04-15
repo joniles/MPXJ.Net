@@ -18,7 +18,7 @@ namespace org.mpxj
             var recurring = task.RecurringTask;
             Assert.Multiple(() =>
             {
-                Assert.That(recurring.Duration, Is.EqualTo(Duration.GetInstance(project, 2, TimeUnit.Days)));
+                Assert.That(recurring.Duration, Is.EqualTo(Duration.GetInstance(2, TimeUnit.Days)));
                 Assert.That(recurring.CalculatedFirstDate, Is.EqualTo(new DateOnly(2023, 7, 31)));
                 Assert.That(recurring.CalculatedLastDate, Is.EqualTo(new DateOnly(2023, 8, 7)));
                 Assert.That(recurring.Dates, Has.Length.EqualTo(2));
