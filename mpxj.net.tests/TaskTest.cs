@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using org.mpxj.reader;
 
 namespace org.mpxj
@@ -1051,5 +1052,199 @@ namespace org.mpxj
                 Assert.That(task.ExpectedFinish, Is.EqualTo(task.Get(TaskField.ExpectedFinish)));
             });
         }
+
+        [Test]
+        public void SetterTests()
+        {
+            var project = new ProjectFile();
+            var task = project.AddTask();
+
+            task.FixedCostAccrual = AccrueType.Prorated;
+            task.ActivityStatus = ActivityStatus.NotStarted;
+            task.ActivityType = ActivityType.ResourceDependent;
+            task.BaselineFixedCostAccrual = AccrueType.Prorated;
+
+            task.Active = true;
+            task.Confirmed = true;
+            task.Critical = true;
+            task.EffortDriven = true;
+            task.Estimated = true;
+            task.Expanded = true;
+            task.ExternalTask = true;
+            task.HammockCode = true;
+            task.HideBar = true;
+            task.IgnoreResourceCalendar = true;
+            task.LevelAssignments = true;
+            task.LevelingCanSplit = true;
+            task.LinkedFields = true;
+            task.LongestPath = true;
+            task.Marked = true;
+            task.Milestone = true;
+            task.Null = true;
+            task.OverAllocated = true;
+            task.Recurring = true;
+            task.ResponsePending = true;
+            task.ResumeValid = true;
+            task.Rollup = true;
+            task.SubprojectReadOnly = true;
+            task.Summary = true;
+            task.UpdateNeeded = true;
+
+            task.ConstraintType = ConstraintType.AsSoonAsPossible;
+            task.SecondaryConstraintType = ConstraintType.AsSoonAsPossible;
+
+            task.ActualFinish = DateTime.Now;
+            task.ActualStart = DateTime.Now;
+            task.BaselineEstimatedFinish = DateTime.Now;
+            task.BaselineEstimatedStart = DateTime.Now;
+            task.BaselineFinish = DateTime.Now;
+            task.BaselineStart = DateTime.Now;
+            task.CompleteThrough = DateTime.Now;
+            task.ConstraintDate = DateTime.Now;
+            task.CreateDate = DateTime.Now;
+            task.Deadline = DateTime.Now;
+            task.EarlyFinish = DateTime.Now;
+            task.EarlyStart = DateTime.Now;
+            task.ExpectedFinish = DateTime.Now;
+            task.ExternalEarlyStart = DateTime.Now;
+            task.ExternalLateFinish = DateTime.Now;
+            task.Finish = DateTime.Now;
+            task.LateFinish = DateTime.Now;
+            task.LateStart = DateTime.Now;
+            task.PlannedFinish = DateTime.Now;
+            task.PlannedStart = DateTime.Now;
+            task.PreleveledFinish = DateTime.Now;
+            task.PreleveledStart = DateTime.Now;
+            task.RemainingEarlyFinish = DateTime.Now;
+            task.RemainingEarlyStart = DateTime.Now;
+            task.RemainingLateFinish = DateTime.Now;
+            task.RemainingLateStart = DateTime.Now;
+            task.Resume = DateTime.Now;
+            task.ScheduledFinish = DateTime.Now;
+            task.ScheduledStart = DateTime.Now;
+            task.SecondaryConstraintDate = DateTime.Now;
+            task.Start = DateTime.Now;
+            task.Stop = DateTime.Now;
+            task.SummaryProgress = DateTime.Now;
+            task.SuspendDate = DateTime.Now;
+
+            task.ActualCost = 1.0;
+            task.ActualOvertimeCost = 1.0;
+            task.ACWP = 1.0;
+            task.BaselineBudgetCost = 1.0;
+            task.BaselineCost = 1.0;
+            task.BaselineFixedCost = 1.0;
+            task.BCWP = 1.0;
+            task.BCWS = 1.0;
+            task.BudgetCost = 1.0;
+            task.Cost = 1.0;
+            task.CostVariance = 1.0;
+            task.CV = 1.0;
+            task.FixedCost = 1.0;
+            task.OverallPercentComplete = 1.0;
+            task.OvertimeCost = 1.0;
+            task.PercentageComplete = 1.0;
+            task.PercentageWorkComplete = 1.0;
+            task.PhysicalPercentComplete = 1.0;
+            task.PlannedCost = 1.0;
+            task.RemainingCost = 1.0;
+            task.RemainingOvertimeCost = 1.0;
+            task.StoredMaterial = 1.0;
+            task.SV = 1.0;
+
+            task.ActualDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.ActualOvertimeWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.ActualOvertimeWorkProtected = Duration.GetInstance(1, TimeUnit.Days);
+            task.ActualWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.ActualWorkProtected = Duration.GetInstance(1, TimeUnit.Days);
+            task.BaselineBudgetWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.BaselineDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.BaselineEstimatedDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.BaselineWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.BudgetWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.Duration = Duration.GetInstance(1, TimeUnit.Days);
+            task.DurationVariance = Duration.GetInstance(1, TimeUnit.Days);
+            task.FinishSlack = Duration.GetInstance(1, TimeUnit.Days);
+            task.FinishVariance = Duration.GetInstance(1, TimeUnit.Days);
+            task.FreeSlack = Duration.GetInstance(1, TimeUnit.Days);
+            task.LevelingDelay = Duration.GetInstance(1, TimeUnit.Days);
+            task.ManualDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.OvertimeWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.PlannedDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.PlannedWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.RegularWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.RemainingDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.RemainingOvertimeWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.RemainingWork = Duration.GetInstance(1, TimeUnit.Days);
+            task.ScheduledDuration = Duration.GetInstance(1, TimeUnit.Days);
+            task.StartSlack = Duration.GetInstance(1, TimeUnit.Days);
+            task.StartVariance = Duration.GetInstance(1, TimeUnit.Days);
+            task.TotalSlack = Duration.GetInstance(1, TimeUnit.Days);
+            task.Work = Duration.GetInstance(1, TimeUnit.Days);
+            task.WorkVariance = Duration.GetInstance(1, TimeUnit.Days);
+
+            task.EarnedValueMethod = EarnedValueMethod.PercentComplete;
+
+            task.GUID = Guid.NewGuid();
+            task.SubprojectGUID = Guid.NewGuid();
+
+            task.BoardStatusID = 1;
+            task.CalendarUniqueID = 1;
+            task.ID = 1;
+            task.LocationUniqueID = 1;
+            task.Objects = 1;
+            task.OutlineLevel = 1;
+            task.PrimaryResourceID = 1;
+            task.SequenceNumber = 1;
+            task.SprintID = 1;
+            task.SubprojectTaskID = 1;
+            task.SubprojectTasksUniqueIDOffset = 1;
+            task.SubprojectTaskUniqueID = 1;
+            task.UniqueID = 1;
+            task.WorkersPerDay = 1;
+
+            task.PercentCompleteType = PercentCompleteType.Duration;
+
+            task.Priority = Priority.GetInstance(Priority.Medium);
+
+            task.ActivityID = "foo";
+            task.BarName = "foo";
+            task.BaselineDurationText = "foo";
+            task.BaselineFinishText = "foo";
+            task.BaselineStartText = "foo";
+            task.BidItem = "foo";
+            task.CategoryOfWork = "foo";
+            task.Contact = "foo";
+            task.Department = "foo";
+            task.DurationText = "foo";
+            task.FeatureOfWork = "foo";
+            task.FinishText = "foo";
+            task.Hyperlink = "foo";
+            task.HyperlinkAddress = "foo";
+            task.HyperlinkScreenTip = "foo";
+            task.HyperlinkSubAddress = "foo";
+            task.Mail = "foo";
+            task.Manager = "foo";
+            task.ModOrClaimNumber = "foo";
+            task.Name = "foo";
+            task.Notes = "foo";
+            task.OutlineNumber = "foo";
+            task.PhaseOfWork = "foo";
+            task.Project = "foo";
+            task.ResourceGroup = "foo";
+            task.ResourceInitials = "foo";
+            task.ResourceNames = "foo";
+            task.ResponsibilityCode = "foo";
+            task.Section = "foo";
+            task.StartText = "foo";
+            task.SubprojectFile = "foo";
+            task.WBS = "foo";
+            task.WorkAreaCode = "foo";
+
+            task.TaskMode = TaskMode.AutoScheduled;
+            task.Type = TaskType.FixedWork;
+            task.LevelingDelayFormat = TimeUnit.Days;
+        }
     }
 }
+

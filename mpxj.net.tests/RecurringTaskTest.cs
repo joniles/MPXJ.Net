@@ -37,6 +37,9 @@ namespace org.mpxj
                 Assert.That(recurring.WorkingDaysOnly, Is.False);
                 Assert.That(recurring.Occurrences, Is.EqualTo(2));
             });
+
+            recurring.Duration = Duration.GetInstance(3, TimeUnit.Days);
+            Assert.That(recurring.Duration, Is.EqualTo(Duration.GetInstance(3, TimeUnit.Days)));
         }
     }
 }

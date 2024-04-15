@@ -105,6 +105,23 @@ namespace org.mpxj
             var week2 = calendar.AddWorkWeek();
             Assert.That(calendar.WorkWeeks, Has.Count.EqualTo(2));
 
+            week1.Name = "Week 1";
+            Assert.That(week1.Name, Is.EqualTo("Week 1"));
+
+            week1.AddDefaultCalendarDays();
+            Assert.That(week1.GetCalendarDayType(DayOfWeek.Monday), Is.EqualTo(DayType.Working));
+
+            week1.AddDefaultCalendarHours(DayOfWeek.Monday);
+            Assert.That(week1.GetCalendarHours(DayOfWeek.Monday), Has.Count.EqualTo(2));
+
+            week1.RemoveCalendarHours(DayOfWeek.Monday);
+            Assert.That(week1.GetCalendarHours(DayOfWeek.Tuesday), Is.Null);
+
+            week1.AddDefaultCalendarHours();
+            Assert.That(week1.GetCalendarHours(DayOfWeek.Tuesday), Has.Count.EqualTo(2));
+
+            Assert.That(week1.ToString(), Contains.Substring("[ProjectCalendarWeek"));
+
             calendar.RemoveWorkWeek(week1);
             Assert.That(calendar.WorkWeeks, Has.Count.EqualTo(1));
 
