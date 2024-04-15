@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using net.sf.mpxj.MpxjUtilities;
 using org.mpxj.proxy;
 
 namespace org.mpxj.reader
@@ -15,11 +14,11 @@ namespace org.mpxj.reader
 
         public ProjectFile Read(string name) => Read(JavaObject.read(name));
 
-        public ProjectFile Read(Stream stream) => Read(JavaObject.read(new DotNetInputStream(stream)));
+        public ProjectFile Read(Stream stream) => Read(JavaObject.read(new ProxyInputStream(stream)));
 
         public List<ProjectFile> ReadAll(string name) => ReadAll(JavaObject.readAll(name));
 
-        public List<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(new DotNetInputStream(stream)));
+        public List<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(new ProxyInputStream(stream)));
 
         private ProjectFile Read(net.sf.mpxj.ProjectFile file)
         {
@@ -29,9 +28,9 @@ namespace org.mpxj.reader
         private List<ProjectFile> ReadAll(java.util.List projects)
         {
             var list = new List<ProjectFile>();
-            foreach (var file in projects.ToIEnumerable<net.sf.mpxj.ProjectFile>())
+            foreach (var file in projects.toArray())
             {
-                list.Add(new ProjectFile(file));
+                list.Add(new ProjectFile((net.sf.mpxj.ProjectFile)file));
             }
             return list;
         }
