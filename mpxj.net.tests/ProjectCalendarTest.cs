@@ -130,6 +130,7 @@ namespace org.mpxj
             Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
             var exception = calendar.AddCalendarException(exceptionDate);
             Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(0, TimeUnit.Hours)));
+            Assert.That(calendar.GetException(exceptionDate), Is.EqualTo(exception));
             calendar.RemoveCalendarException(exception);
             Assert.That(calendar.GetWork(exceptionDate, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
 
@@ -173,6 +174,13 @@ namespace org.mpxj
 
             hours = calendar.GetHours(new DateTime(2024, 4, 15, 8, 0, 0));
             Assert.That(hours, Has.Count.EqualTo(2));
+
+            var week = calendar.AddWorkWeek();
+            week.DateRange = new LocalDateRange(new DateOnly(2024, 4, 22), new DateOnly(2024, 4, 26));
+            Assert.That(calendar.GetWorkWeek(new DateOnly(2024, 4, 22)), Is.EqualTo(week));
+            Assert.That(calendar.GetWork(DayOfWeek.Monday, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
+
+            calendar.Remove();
         }
     }
 }
