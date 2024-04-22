@@ -5,7 +5,7 @@
     <PackageId>MPXJ.Net</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MPXJ.Net</Title>
-    <Version>12.9.2-alpha.1</Version>
+    <Version>12.9.2-alpha.2</Version>
     <Authors>Jon Iles</Authors>
     <Company />
     <RepositoryUrl>https://github.com/joniles/MPXJ.Net</RepositoryUrl>
@@ -20,6 +20,10 @@ The Java version of MPXJ is dynamically retrieved  and translated into a .Net as
 
   <ItemGroup>
     <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IKVM" Version="8.8.0" />
   </ItemGroup>
 
   <ItemGroup>
