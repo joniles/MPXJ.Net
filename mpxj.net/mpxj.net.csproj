@@ -5,13 +5,17 @@
     <PackageId>MPXJ.Net</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MPXJ.Net</Title>
-    <Version>12.9.2</Version>
+    <Version>12.9.2-alpha.1</Version>
     <Authors>Jon Iles</Authors>
     <Company />
     <RepositoryUrl>https://github.com/joniles/mpxj.net</RepositoryUrl>
     <Product>MPXJ.Net</Product>
     <PackageProjectUrl>https://www.mpxj.org/</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Jon Iles</Copyright>
+    <Description>This package delivers the modern .Net version of MPXJ.
+
+The Java version of MPXJ is dynamically retrieved  and translated into a .Net assembly using ikvm-maven transparently as part of your project's build. The assembly included in this package wraps this translated version of MPXJ and exposes a pure .Net interface to MPXJ's functionality, with standard .Net types, properties and naming conventions.</Description>
   </PropertyGroup>
 
   <ItemGroup>
