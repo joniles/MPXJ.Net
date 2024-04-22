@@ -1,7 +1,17 @@
 # MPXJ.Net
 
 
-# Tests
+## Deploy
+
+```
+dotnet clean MPXJ.Net.sln
+dotnet build --configuration Release MPXJ.Net.sln
+dotnet nuget push MPXJ.Net\bin\Release\MPXJ.Net.12.9.2-alpha.1.nupkg --api-key $env:NUGETTEST_API_KEY --source https://apiint.nugettest.org/v3/index.json
+```
+
+
+
+## Tests
 
 .Net Framework Coverage:
 
