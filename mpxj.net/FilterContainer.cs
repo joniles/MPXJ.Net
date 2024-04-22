@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class FilterContainer : IJavaObjectProxy<net.sf.mpxj.FilterContainer>
     {

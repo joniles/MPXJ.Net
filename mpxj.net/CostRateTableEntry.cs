@@ -1,7 +1,7 @@
 ﻿using System;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class CostRateTableEntry : IJavaObjectProxy<net.sf.mpxj.CostRateTableEntry>
     {
@@ -22,7 +22,7 @@ namespace org.mpxj
 
         public Rate StandardRate => _proxyManager.ProxyObject(JavaObject.getStandardRate());
 
-        public mpxj.Rate OvertimeRate => _proxyManager.ProxyObject(JavaObject.getOvertimeRate());
+        public Rate OvertimeRate => _proxyManager.ProxyObject(JavaObject.getOvertimeRate());
 
         public double? CostPerUse => JavaObject.getCostPerUse().ConvertType();
     }

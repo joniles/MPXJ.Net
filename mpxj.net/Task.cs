@@ -1,8 +1,8 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 using System;
 using System.Collections.Generic;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class Task : AbstractFieldContainer, IProjectEntityWithID, IChildTaskContainer, IJavaObjectProxy<net.sf.mpxj.Task>
     {

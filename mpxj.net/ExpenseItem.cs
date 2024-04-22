@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     // TODO: implement builder
     public class ExpenseItem : IJavaObjectProxy<net.sf.mpxj.ExpenseItem>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
     public class ProxyCollection<M, N> : ProxyEnumerable<M, N>, ICollection<N>, IJavaObjectProxy<java.util.Collection>
     {

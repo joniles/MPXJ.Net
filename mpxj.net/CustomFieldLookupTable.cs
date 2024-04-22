@@ -1,7 +1,7 @@
 ﻿using System;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class CustomFieldLookupTable : ProxyList<net.sf.mpxj.mpp.CustomFieldValueItem, CustomFieldValueItem>
     {

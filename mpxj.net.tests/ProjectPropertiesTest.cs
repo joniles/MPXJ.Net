@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using org.mpxj.reader;
+using MPXJ.Net.Reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectPropertiesTest
     {

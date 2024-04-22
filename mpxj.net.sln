@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mpxj.net", "mpxj.net\mpxj.net.csproj", "{5BEAE73E-00FB-4A3B-9497-4FC85B07E5E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPXJ.Net", "MPXJ.Net\MPXJ.Net.csproj", "{5BEAE73E-00FB-4A3B-9497-4FC85B07E5E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mpxj.net.tests", "mpxj.net.tests\mpxj.net.tests.csproj", "{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPXJ.Net.Tests", "MPXJ.Net.Tests\MPXJ.Net.Tests.csproj", "{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

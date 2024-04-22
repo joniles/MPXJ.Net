@@ -1,4 +1,4 @@
-﻿namespace org.mpxj
+﻿namespace MPXJ.Net
 {
 	public enum TestOperator
 	{

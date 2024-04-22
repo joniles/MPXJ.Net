@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
-[assembly: InternalsVisibleTo("mpxj.net.tests")]
+[assembly: InternalsVisibleTo("MPXJ.Net.Tests")]
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {    
     internal class ProxyManager
     {

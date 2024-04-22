@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class NotesTopicContainer : ProjectEntityContainer<net.sf.mpxj.NotesTopic, NotesTopic>
     {

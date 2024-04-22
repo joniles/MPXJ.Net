@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
     public class ProxyInputStream : java.io.InputStream
     {

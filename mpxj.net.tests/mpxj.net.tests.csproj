@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
-    <RootNamespace>org.mpxj</RootNamespace>
+    <RootNamespace>MPXJ.Net</RootNamespace>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\mpxj.net\mpxj.net.csproj" />
+    <ProjectReference Include="..\MPXJ.Net\MPXJ.Net.csproj" />
   </ItemGroup>
 
   <ItemGroup>

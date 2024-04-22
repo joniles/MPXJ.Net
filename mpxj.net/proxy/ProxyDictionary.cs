@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
     public class ProxyDictionary<MK, MV, NK, NV> : IDictionary<NK, NV>, IJavaObjectProxy<java.util.Map>
     {

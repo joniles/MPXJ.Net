@@ -1,8 +1,8 @@
-﻿using org.mpxj.reader;
+﻿using MPXJ.Net.Reader;
 using NUnit.Framework;
 using System.IO;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class UniversalProjectReaderTests
     {

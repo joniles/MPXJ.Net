@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
-    <RootNamespace>org.mpxj</RootNamespace>
+    <RootNamespace>MPXJ.Net</RootNamespace>
     <PackageId>MPXJ.Net</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MPXJ.Net</Title>
     <Version>12.9.2-alpha.1</Version>
     <Authors>Jon Iles</Authors>
     <Company />
-    <RepositoryUrl>https://github.com/joniles/mpxj.net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/joniles/MPXJ.Net</RepositoryUrl>
     <Product>MPXJ.Net</Product>
     <PackageProjectUrl>https://www.mpxj.org/</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>

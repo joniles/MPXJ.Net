@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
     {

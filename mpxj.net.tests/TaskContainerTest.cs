@@ -1,8 +1,8 @@
 ﻿
 using NUnit.Framework;
-using org.mpxj.reader;
+using MPXJ.Net.Reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class TaskContainerTest
     {

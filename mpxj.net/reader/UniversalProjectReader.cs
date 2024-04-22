@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj.reader
+namespace MPXJ.Net.Reader
 {
     // TODO: implement more rader classes as required
     public class UniversalProjectReader : IJavaObjectProxy<net.sf.mpxj.reader.UniversalProjectReader>
