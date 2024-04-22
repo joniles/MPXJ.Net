@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="net.sf.mpxj" Version="12.9.0" />
+    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
+    <PackageReference Include="IKVM.Maven.Sdk" Version="1.6.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="12.9.2"/>
   </ItemGroup>
 </Project>
