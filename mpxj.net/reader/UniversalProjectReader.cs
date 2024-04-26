@@ -4,13 +4,10 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net.Reader
 {
-    // TODO: implement more rader classes as required
+    // TODO: implement more reader classes as required
     public class UniversalProjectReader : IJavaObjectProxy<net.sf.mpxj.reader.UniversalProjectReader>
     {
         public net.sf.mpxj.reader.UniversalProjectReader JavaObject { get; }  = new net.sf.mpxj.reader.UniversalProjectReader();
-
-        // TODO: handle Properties argument
-        // public ProjectReader setProperties(Properties props);
 
         public ProjectFile Read(string name) => Read(JavaObject.read(name));
 

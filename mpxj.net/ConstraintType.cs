@@ -7,7 +7,7 @@
         MustStartOn,
         MustFinishOn,
         StartNoEarlierThan,
-        FtartNoLaterThan,
+        StartNoLaterThan,
         FinishNoEarlierThan,
         FinishNoLaterThan,
         StartOn,
