@@ -9,6 +9,8 @@ namespace MPXJ.Net.Proxy
 
         internal ProxyList(Func<M, N> fromJava, Func<N, M> toJava, java.util.List javaObject) : base(fromJava, toJava, javaObject) { }
 
+        internal ProxyList(Func<M, N> fromJava, Func<N, M> toJava, M[] javaObject) : base(fromJava, toJava, java.util.Arrays.asList(javaObject)) { }
+
         public N this[int index]
         {
             get => _fromJava((M)JavaObject.get(index));

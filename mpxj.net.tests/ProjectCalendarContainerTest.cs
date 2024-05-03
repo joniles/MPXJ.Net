@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using MPXJ.Net.Reader;
 
 namespace MPXJ.Net
 {

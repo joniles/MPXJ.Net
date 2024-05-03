@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using MPXJ.Net.Proxy;
-using sun.tools.jar.resources;
 
 namespace MPXJ.Net
 {

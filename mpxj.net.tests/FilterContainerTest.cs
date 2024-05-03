@@ -1,9 +1,8 @@
 ﻿using NUnit.Framework;
-using MPXJ.Net.Reader;
 
 namespace MPXJ.Net
 {
-	public class FilterContainerTest
+    public class FilterContainerTest
 	{
         [Test]
         public void MethodTest()

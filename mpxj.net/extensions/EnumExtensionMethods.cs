@@ -24,12 +24,6 @@ namespace MPXJ.Net
             }
         }
 
-        //internal static T RegisterFieldType<T>(net.sf.mpxj.FieldType javaFieldType, T fieldType) where T : IFieldType
-        //{
-        //    FieldTypeDictionary[javaFieldType] = fieldType;
-        //    return fieldType;
-        //}
-
         // DayType
         public static net.sf.mpxj.DayType ConvertType(this DayType value)
         {

@@ -1,9 +1,8 @@
 ﻿using NUnit.Framework;
-using MPXJ.Net.Reader;
 
 namespace MPXJ.Net
 {
-	public class NotesTopicContainer
+    public class NotesTopicContainer
 	{
         [Test]
         public void MethodTest()

@@ -2,12 +2,12 @@
 using System.IO;
 using MPXJ.Net.Proxy;
 
-namespace MPXJ.Net.Reader
+namespace MPXJ.Net
 {
     // TODO: implement more reader classes as required
     public class UniversalProjectReader : IJavaObjectProxy<net.sf.mpxj.reader.UniversalProjectReader>
     {
-        public net.sf.mpxj.reader.UniversalProjectReader JavaObject { get; }  = new net.sf.mpxj.reader.UniversalProjectReader();
+        public net.sf.mpxj.reader.UniversalProjectReader JavaObject { get; } = new net.sf.mpxj.reader.UniversalProjectReader();
 
         public ProjectFile Read(string name) => Read(JavaObject.read(name));
 

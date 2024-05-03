@@ -1,10 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
-using MPXJ.Net.Reader;
 
 namespace MPXJ.Net
 {
-	public class AvailabilityTest
+    public class AvailabilityTest
 	{
         [Test]
         public void GeneralTests()
