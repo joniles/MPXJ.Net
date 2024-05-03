@@ -552,5 +552,21 @@ namespace MPXJ.Net
         {
             return value == null ? (ViewType?)null : (ViewType)value.ordinal();
         }
+
+        // SaveVersion
+        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion value)
+        {
+            return net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion? value)
+        {
+            return value == null ? null : net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+        }
+
+        public static SaveVersion? ConvertType(this net.sf.mpxj.mspdi.SaveVersion value)
+        {
+            return value == null ? (SaveVersion?)null : (SaveVersion)value.ordinal();
+        }
     }
 }
