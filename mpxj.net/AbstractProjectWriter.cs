@@ -3,9 +3,9 @@ using System.IO;
 
 namespace MPXJ.Net
 {
-    public class AbstractProjectWriter : IProjectWriter<net.sf.mpxj.writer.AbstractProjectWriter>
+    public class AbstractProjectWriter : IProjectWriter
     {
-        public net.sf.mpxj.writer.AbstractProjectWriter JavaObject { get; set; }
+        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; set; }
 
         public AbstractProjectWriter(net.sf.mpxj.writer.AbstractProjectWriter writer)
         {

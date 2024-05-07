@@ -14,6 +14,67 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
+
+        public class Builder
+        {
+            public Builder(ProjectFile file)
+            {
+                _proxyManager = file._proxyManager;
+                JavaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
+            }
+
+            private readonly ProxyManager _proxyManager;
+            private net.sf.mpxj.ActivityCode.Builder JavaObject { get; set; }
+            public int? UniqueID
+            {
+                set => JavaObject.uniqueID(value.ConvertType());
+            }
+
+            public Builder Scope(ActivityCodeScope value)
+            {
+                JavaObject.scope(value.ConvertType());
+                return this;
+            }
+
+            public Builder ScopeEpsUniqueID(int? value)
+            {
+                JavaObject.scopeEpsUniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder ScopeProjectUniqueID(int? value)
+            {
+                JavaObject.scopeProjectUniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder SequenceNumber(int? value)
+            {
+                JavaObject.sequenceNumber(value.ConvertType());
+                return this;
+            }
+
+            public Builder Name(string value)
+            {
+                JavaObject.name(value);
+                return this;
+            }
+
+            public Builder Secure(bool value)
+            {
+                JavaObject.secure(value);
+                return this;
+            }
+
+            public Builder MaxLength(int? value)
+            {
+                JavaObject.maxLength(value.ConvertType());
+                return this;
+            }
+
+            public ActivityCode Build() => _proxyManager.ProxyObject(JavaObject.build());
+        }
+
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public ActivityCodeScope? Scope => JavaObject.getScope().ConvertType();

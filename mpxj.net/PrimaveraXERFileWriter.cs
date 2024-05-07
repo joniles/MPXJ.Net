@@ -18,7 +18,7 @@ namespace MPXJ.Net
         {
             // TODO add to MPXJ
             //get => Encoding.GetEncoding(JavaObject.getCharset().name());
-            set => java.nio.charset.Charset.forName(value.EncodingName);
+            set => JavaObject.setCharset(java.nio.charset.Charset.forName(value.EncodingName));
         }
     }
 }
