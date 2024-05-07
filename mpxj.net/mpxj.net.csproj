@@ -40,4 +40,8 @@ The Java version of MPXJ is dynamically retrieved  and translated into a .Net as
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+  </PropertyGroup>
 </Project>
