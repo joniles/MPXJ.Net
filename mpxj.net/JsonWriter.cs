@@ -6,6 +6,8 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.json.JsonWriter JavaObject => (net.sf.mpxj.json.JsonWriter)base.JavaObject;
 
+        public JsonWriter() : base(new net.sf.mpxj.json.JsonWriter()) { }
+
         public Encoding Encoding
         {
             get => Encoding.GetEncoding(JavaObject.getEncoding().name());

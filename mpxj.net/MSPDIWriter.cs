@@ -2,8 +2,10 @@
 {
     public class MSPDIWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.mspdi.MSPDIWriter JavaObject => (net.sf.mpxj.mspdi.MSPDIWriter)base.JavaObject;  
-        
+        public new net.sf.mpxj.mspdi.MSPDIWriter JavaObject => (net.sf.mpxj.mspdi.MSPDIWriter)base.JavaObject;
+
+        public MSPDIWriter() : base(new net.sf.mpxj.mspdi.MSPDIWriter()) { }
+
         public bool MicrosoftProjectCompatibleOutput
         {
             get => JavaObject.getMicrosoftProjectCompatibleOutput();

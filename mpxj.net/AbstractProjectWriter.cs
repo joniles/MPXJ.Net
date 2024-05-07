@@ -5,7 +5,12 @@ namespace MPXJ.Net
 {
     public class AbstractProjectWriter : IProjectWriter<net.sf.mpxj.writer.AbstractProjectWriter>
     {
-        public net.sf.mpxj.writer.AbstractProjectWriter JavaObject { get; }
+        public net.sf.mpxj.writer.AbstractProjectWriter JavaObject { get; set; }
+
+        public AbstractProjectWriter(net.sf.mpxj.writer.AbstractProjectWriter writer)
+        {
+            JavaObject = writer;
+        }
 
         public void Write(ProjectFile projectFile, string fileName) => JavaObject.write(projectFile.JavaObject, fileName);
 
