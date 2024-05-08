@@ -81,12 +81,11 @@ namespace MPXJ.Net
             Assert.That(item.UniqueID, Is.EqualTo(1));
             Assert.That(item.Value, Is.EqualTo("Value 1"));
 
-            // TODO: update these two tests after 12.8.2
             var lookupItem = project.CustomFields.GetCustomFieldValueItemByUniqueID(item.UniqueID);
-            Assert.That(lookupItem, Is.Not.Null);
+            Assert.That(lookupItem, Is.EqualTo(item));
 
             lookupItem = project.CustomFields.GetCustomFieldValueItemByGuid(item.GUID);
-            Assert.That(lookupItem, Is.Not.Null);
+            Assert.That(lookupItem, Is.EqualTo(item));
 
             var newItem = new CustomFieldValueItem(123)
             {
