@@ -118,5 +118,7 @@ namespace MPXJ.Net
         public void ExpandSubprojects(bool replaceExternalTasks) => JavaObject.expandSubprojects(replaceExternalTasks);
 
         public RelationContainer Relations => _proxyManager.ProxyObject(JavaObject.getRelations());
+
+        public UnitOfMeasureContainer UnitsOfMeasure => _proxyManager.ProxyObject(JavaObject.getUnitsOfMeasure());
     }
 }

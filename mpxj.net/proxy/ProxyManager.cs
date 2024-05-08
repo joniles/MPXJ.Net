@@ -49,6 +49,11 @@ namespace MPXJ.Net.Proxy
 
         private string GetKey(object o) => o.GetType().FullName + "." + _idGenerator.GetId(o, out _);
 
+        internal UnitOfMeasure ProxyObject(net.sf.mpxj.UnitOfMeasure value)
+        {
+            return ProxyObject(value, v => new UnitOfMeasure(this, v));
+        }
+
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
         {
             return ProxyObject(value, v => new Resource(this, v));
@@ -433,6 +438,11 @@ namespace MPXJ.Net.Proxy
         internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)
         {
             return ProxyObject(value, v => new LocationContainer(this, v));
+        }
+
+        internal UnitOfMeasureContainer ProxyObject(net.sf.mpxj.UnitOfMeasureContainer value)
+        {
+            return ProxyObject(value, v => new UnitOfMeasureContainer(this, v));
         }
 
         internal object GenericProxyObject(object o)

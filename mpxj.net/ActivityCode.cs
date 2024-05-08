@@ -14,67 +14,6 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
-
-        public class Builder
-        {
-            public Builder(ProjectFile file)
-            {
-                _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
-            }
-
-            private readonly ProxyManager _proxyManager;
-            private net.sf.mpxj.ActivityCode.Builder JavaObject { get; set; }
-            public int? UniqueID
-            {
-                set => JavaObject.uniqueID(value.ConvertType());
-            }
-
-            public Builder Scope(ActivityCodeScope value)
-            {
-                JavaObject.scope(value.ConvertType());
-                return this;
-            }
-
-            public Builder ScopeEpsUniqueID(int? value)
-            {
-                JavaObject.scopeEpsUniqueID(value.ConvertType());
-                return this;
-            }
-
-            public Builder ScopeProjectUniqueID(int? value)
-            {
-                JavaObject.scopeProjectUniqueID(value.ConvertType());
-                return this;
-            }
-
-            public Builder SequenceNumber(int? value)
-            {
-                JavaObject.sequenceNumber(value.ConvertType());
-                return this;
-            }
-
-            public Builder Name(string value)
-            {
-                JavaObject.name(value);
-                return this;
-            }
-
-            public Builder Secure(bool value)
-            {
-                JavaObject.secure(value);
-                return this;
-            }
-
-            public Builder MaxLength(int? value)
-            {
-                JavaObject.maxLength(value.ConvertType());
-                return this;
-            }
-
-            public ActivityCode Build() => _proxyManager.ProxyObject(JavaObject.build());
-        }
-
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public ActivityCodeScope? Scope => JavaObject.getScope().ConvertType();
@@ -94,6 +33,68 @@ namespace MPXJ.Net
         public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 
         public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+
+        public class Builder
+        {
+            private readonly ProxyManager _proxyManager;
+            private readonly net.sf.mpxj.ActivityCode.Builder _javaObject;
+
+            public Builder(ProjectFile file)
+            {
+                _proxyManager = file._proxyManager;
+                _javaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
+            }
+
+            public Builder UniqueID(int? value)
+            {
+                _javaObject.uniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder Scope(ActivityCodeScope value)
+            {
+                _javaObject.scope(value.ConvertType());
+                return this;
+            }
+
+            public Builder ScopeEpsUniqueID(int? value)
+            {
+                _javaObject.scopeEpsUniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder ScopeProjectUniqueID(int? value)
+            {
+                _javaObject.scopeProjectUniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder SequenceNumber(int? value)
+            {
+                _javaObject.sequenceNumber(value.ConvertType());
+                return this;
+            }
+
+            public Builder Name(string value)
+            {
+                _javaObject.name(value);
+                return this;
+            }
+
+            public Builder Secure(bool value)
+            {
+                _javaObject.secure(value);
+                return this;
+            }
+
+            public Builder MaxLength(int? value)
+            {
+                _javaObject.maxLength(value.ConvertType());
+                return this;
+            }
+
+            public ActivityCode Build() => _proxyManager.ProxyObject(_javaObject.build());
+        }
     }
 }
 

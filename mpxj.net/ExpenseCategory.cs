@@ -1,8 +1,8 @@
-﻿using MPXJ.Net.Proxy;
+﻿using java.lang;
+using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    // TODO: implement builder
     public class ExpenseCategory : IJavaObjectProxy<net.sf.mpxj.ExpenseCategory>
     {
         public net.sf.mpxj.ExpenseCategory JavaObject { get; }
@@ -19,6 +19,37 @@ namespace MPXJ.Net
         public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
         public override string ToString() => JavaObject.toString();
+
+        public class Builder
+        {
+            private readonly ProxyManager _proxyManager;
+            private readonly net.sf.mpxj.ExpenseCategory.Builder _javaObject;
+
+            public Builder(ProjectFile file)
+            {
+                _proxyManager = file._proxyManager;
+                _javaObject = new net.sf.mpxj.ExpenseCategory.Builder(file.JavaObject);
+            }
+
+            public Builder UniqueID(int? value)
+            {
+                _javaObject.uniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder Name(string value)
+            {
+                _javaObject.name(value);
+                return this;
+            }
+
+            public Builder SequenceNumber(int? value)
+            {
+                _javaObject.sequenceNumber(value.ConvertType());
+                return this;
+            }
+
+            public ExpenseCategory Build() => _proxyManager.ProxyObject(_javaObject.build());
+        }
     }
 }
-

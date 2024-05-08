@@ -24,6 +24,56 @@ namespace MPXJ.Net
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
         public override string ToString() => JavaObject.toString();
+
+        public class Builder
+        {
+            private readonly ProxyManager _proxyManager;
+            private readonly net.sf.mpxj.Relation.Builder _javaObject;
+
+            public Builder(ProjectFile file)
+            {
+                _proxyManager = file._proxyManager;
+                _javaObject = new net.sf.mpxj.Relation.Builder();
+            }
+
+            public Builder UniqueID(int? value)
+            {
+                _javaObject.uniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder SourceTask(Task value)
+            {
+                _javaObject.sourceTask(value.JavaObject);
+                return this;
+            }
+
+            public Builder TargetTask(Task value)
+            {
+                _javaObject.targetTask(value.JavaObject);
+                return this;
+            }
+
+            public Builder Type(RelationType value)
+            {
+                _javaObject.type(value.ConvertType());
+                return this;
+            }
+
+            public Builder Lag(Duration value)
+            {
+                _javaObject.lag(value.JavaObject);
+                return this;
+            }
+
+            public Builder Notes(string value)
+            {
+                _javaObject.notes(value);
+                return this;
+            }
+
+            public Relation Build() => _proxyManager.ProxyObject(_javaObject.build());
+        }
     }
 }
 
