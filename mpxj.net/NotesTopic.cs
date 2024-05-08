@@ -25,60 +25,60 @@ namespace MPXJ.Net
 
         public bool AvailableForActivity => JavaObject.getAvailableForActivity();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.NotesTopic.Builder>
         {
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.NotesTopic.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.NotesTopic.Builder(file.JavaObject);
             }
 
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.NotesTopic.Builder _javaObject;
+            public net.sf.mpxj.NotesTopic.Builder JavaObject { get; set; }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder SequenceNumber(int? value)
             {
-                _javaObject.sequenceNumber(value.ConvertType());
+                JavaObject.sequenceNumber(value.ConvertType());
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder AvailableForEPS(bool value)
             {
-                _javaObject.availableForEPS(value);
+                JavaObject.availableForEPS(value);
                 return this;
             }
 
             public Builder AvailableForProject(bool value)
             {
-                _javaObject.availableForProject(value);
+                JavaObject.availableForProject(value);
                 return this;
             }
 
             public Builder AvailableForWBS(bool value)
             {
-                _javaObject.availableForWBS(value);
+                JavaObject.availableForWBS(value);
                 return this;
             }
 
             public Builder AvailableForActivity(bool value)
             {
-                _javaObject.availableForActivity(value);
+                JavaObject.availableForActivity(value);
                 return this;
             }
 
-            public NotesTopic Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public NotesTopic Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

@@ -35,60 +35,60 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.ActivityCodeValue.Builder _javaObject;
+            public net.sf.mpxj.ActivityCodeValue.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.ActivityCodeValue.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.ActivityCodeValue.Builder(file.JavaObject);
             }
 
             public Builder Type(ActivityCode value)
             {
-                _javaObject.type(value.JavaObject);
+                JavaObject.type(value.JavaObject);
                 return this;
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder SequenceNumber(int? value)
             {
-                _javaObject.sequenceNumber(value.ConvertType());
+                JavaObject.sequenceNumber(value.ConvertType());
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder Description(string value)
             {
-                _javaObject.description(value);
+                JavaObject.description(value);
                 return this;
             }
 
             public Builder Color(Color value)
             {
-                _javaObject.color(value.ConvertType());
+                JavaObject.color(value.ConvertType());
                 return this;
             }
 
             public Builder Parent(ActivityCodeValue value)
             {
-                _javaObject.parent(value.JavaObject);
+                JavaObject.parent(value.JavaObject);
                 return this;
             }
 
-            public ActivityCodeValue Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public ActivityCodeValue Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

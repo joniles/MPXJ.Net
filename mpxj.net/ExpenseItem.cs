@@ -59,132 +59,132 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.ExpenseItem.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.ExpenseItem.Builder _javaObject;
+            public net.sf.mpxj.ExpenseItem.Builder JavaObject { get; set; }
 
             public Builder(Task task)
             {
                 _proxyManager = task._proxyManager;
-                _javaObject = new net.sf.mpxj.ExpenseItem.Builder(task.JavaObject);
+                JavaObject = new net.sf.mpxj.ExpenseItem.Builder(task.JavaObject);
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder Account(CostAccount value)
             {
-                _javaObject.account(value.JavaObject);
+                JavaObject.account(value.JavaObject);
                 return this;
             }
 
             public Builder Category(ExpenseCategory value)
             {
-                _javaObject.category(value.JavaObject);
+                JavaObject.category(value.JavaObject);
                 return this;
             }
 
             public Builder Description(string value)
             {
-                _javaObject.description(value);
+                JavaObject.description(value);
                 return this;
             }
 
             public Builder DocumentNumber(string value)
             {
-                _javaObject.documentNumber(value);
+                JavaObject.documentNumber(value);
                 return this;
             }
 
             public Builder Vendor(string value)
             {
-                _javaObject.vendor(value);
+                JavaObject.vendor(value);
                 return this;
             }
 
             public Builder AtCompletionCost(double? value)
             {
-                _javaObject.atCompletionCost(value.ConvertType());
+                JavaObject.atCompletionCost(value.ConvertType());
                 return this;
             }
 
             public Builder AtCompletionUnits(double? value)
             {
-                _javaObject.atCompletionUnits(value.ConvertType());
+                JavaObject.atCompletionUnits(value.ConvertType());
                 return this;
             }
 
             public Builder ActualCost(double? value)
             {
-                _javaObject.actualCost(value.ConvertType());
+                JavaObject.actualCost(value.ConvertType());
                 return this;
             }
 
             public Builder ActualUnits(double? value)
             {
-                _javaObject.actualUnits(value.ConvertType());
+                JavaObject.actualUnits(value.ConvertType());
                 return this;
             }
 
             public Builder PricePerUnit(double? value)
             {
-                _javaObject.pricePerUnit(value.ConvertType());
+                JavaObject.pricePerUnit(value.ConvertType());
                 return this;
             }
 
             public Builder RemainingCost(double? value)
             {
-                _javaObject.remainingCost(value.ConvertType());
+                JavaObject.remainingCost(value.ConvertType());
                 return this;
             }
 
             public Builder RemainingUnits(double? value)
             {
-                _javaObject.remainingUnits(value.ConvertType());
+                JavaObject.remainingUnits(value.ConvertType());
                 return this;
             }
 
             public Builder PlannedCost(double? value)
             {
-                _javaObject.plannedCost(value.ConvertType());
+                JavaObject.plannedCost(value.ConvertType());
                 return this;
             }
 
             public Builder PlannedUnits(double? value)
             {
-                _javaObject.plannedUnits(value.ConvertType());
+                JavaObject.plannedUnits(value.ConvertType());
                 return this;
             }
 
             public Builder AccrueType(AccrueType value)
             {
-                _javaObject.accrueType(value.ConvertType());
+                JavaObject.accrueType(value.ConvertType());
                 return this;
             }
 
             public Builder AutoComputeActuals(bool value)
             {
-                _javaObject.autoComputeActuals(value);
+                JavaObject.autoComputeActuals(value);
                 return this;
             }
 
             public Builder UnitOfMeasure(string value)
             {
-                _javaObject.unitOfMeasure(value);
+                JavaObject.unitOfMeasure(value);
                 return this;
             }
 
-            public ExpenseItem Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public ExpenseItem Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

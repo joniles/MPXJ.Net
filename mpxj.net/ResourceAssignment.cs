@@ -123,7 +123,7 @@ namespace MPXJ.Net
         public WorkContour WorkContour
         {
             get => _proxyManager.ProxyObject(JavaObject.getWorkContour());
-            set => JavaObject.setWorkContour(value.JavaObject);
+            set => JavaObject.setWorkContour(_proxyManager.UnProxyObject(value));
         }
 
         public void Remove() => JavaObject.remove();

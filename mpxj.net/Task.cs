@@ -10,6 +10,8 @@ namespace MPXJ.Net
 
         internal Task(ProxyManager proxyManager, net.sf.mpxj.Task javaObject) : base(proxyManager, javaObject) { }
 
+        public Relation AddPredecessor(Relation.Builder builder) => _proxyManager.ProxyObject(JavaObject.addPredecessor(builder.JavaObject));
+
         public RecurringTask AddRecurringTask() => _proxyManager.ProxyObject(JavaObject.addRecurringTask());
 
         public RecurringTask RecurringTask => _proxyManager.ProxyObject(JavaObject.getRecurringTask());

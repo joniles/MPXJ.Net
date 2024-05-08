@@ -21,36 +21,36 @@ namespace MPXJ.Net
 
         public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.UnitOfMeasure.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.UnitOfMeasure.Builder _javaObject;
+            public net.sf.mpxj.UnitOfMeasure.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.UnitOfMeasure.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.UnitOfMeasure.Builder(file.JavaObject);
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder Abbreviation(string value)
             {
-                _javaObject.abbreviation(value);
+                JavaObject.abbreviation(value);
                 return this;
             }
 
             public Builder SequenceNumber(int? value)
             {
-                _javaObject.sequenceNumber(value.ConvertType());
+                JavaObject.sequenceNumber(value.ConvertType());
                 return this;
             }
 
-            public UnitOfMeasure Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public UnitOfMeasure Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

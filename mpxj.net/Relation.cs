@@ -25,54 +25,54 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.Relation.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.Relation.Builder _javaObject;
+            public net.sf.mpxj.Relation.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.Relation.Builder();
+                JavaObject = new net.sf.mpxj.Relation.Builder();
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder SourceTask(Task value)
             {
-                _javaObject.sourceTask(value.JavaObject);
+                JavaObject.sourceTask(value.JavaObject);
                 return this;
             }
 
             public Builder TargetTask(Task value)
             {
-                _javaObject.targetTask(value.JavaObject);
+                JavaObject.targetTask(value.JavaObject);
                 return this;
             }
 
             public Builder Type(RelationType value)
             {
-                _javaObject.type(value.ConvertType());
+                JavaObject.type(value.ConvertType());
                 return this;
             }
 
             public Builder Lag(Duration value)
             {
-                _javaObject.lag(value.JavaObject);
+                JavaObject.lag(value.JavaObject);
                 return this;
             }
 
             public Builder Notes(string value)
             {
-                _javaObject.notes(value);
+                JavaObject.notes(value);
                 return this;
             }
 
-            public Relation Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public Relation Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

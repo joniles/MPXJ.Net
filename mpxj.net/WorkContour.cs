@@ -6,10 +6,14 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.WorkContour JavaObject { get; }
 
-        // TODO: support work contour creation
         internal WorkContour(net.sf.mpxj.WorkContour javaObject)
         {
             JavaObject = javaObject;
+        }
+
+        public WorkContour(int? uniqueID, string name, bool isDefault, double[] curveValues)
+        {
+            JavaObject = new net.sf.mpxj.WorkContour(uniqueID.ConvertType(), name, isDefault, curveValues);
         }
 
         public static readonly WorkContour Flat = new WorkContour(net.sf.mpxj.WorkContour.FLAT);

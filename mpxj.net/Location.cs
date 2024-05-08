@@ -41,102 +41,102 @@ namespace MPXJ.Net
 
         public string StateCode => JavaObject.getStateCode();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.Location.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.Location.Builder _javaObject;
+            public net.sf.mpxj.Location.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.Location.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.Location.Builder(file.JavaObject);
             }
 
             public Builder AddressLine1(string value)
             {
-                _javaObject.addressLine1(value);
+                JavaObject.addressLine1(value);
                 return this;
             }
 
             public Builder AddressLine2(string value)
             {
-                _javaObject.addressLine2(value);
+                JavaObject.addressLine2(value);
                 return this;
             }
 
             public Builder AddressLine3(string value)
             {
-                _javaObject.addressLine3(value);
+                JavaObject.addressLine3(value);
                 return this;
             }
 
             public Builder City(string value)
             {
-                _javaObject.city(value);
+                JavaObject.city(value);
                 return this;
             }
 
             public Builder Country(string value)
             {
-                _javaObject.country(value);
+                JavaObject.country(value);
                 return this;
             }
 
             public Builder CountryCode(string value)
             {
-                _javaObject.countryCode(value);
+                JavaObject.countryCode(value);
                 return this;
             }
 
             public Builder Latitude(double? value)
             {
-                _javaObject.latitude(value.ConvertType());
+                JavaObject.latitude(value.ConvertType());
                 return this;
             }
 
             public Builder Longitude(double? value)
             {
-                _javaObject.longitude(value.ConvertType());
+                JavaObject.longitude(value.ConvertType());
                 return this;
             }
 
             public Builder Municipality(string value)
             {
-                _javaObject.municipality(value);
+                JavaObject.municipality(value);
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder PostalCode(string value)
             {
-                _javaObject.postalCode(value);
+                JavaObject.postalCode(value);
                 return this;
             }
 
             public Builder State(string value)
             {
-                _javaObject.state(value);
+                JavaObject.state(value);
                 return this;
             }
 
             public Builder StateCode(string value)
             {
-                _javaObject.stateCode(value);
+                JavaObject.stateCode(value);
                 return this;
             }
 
-            public Location Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public Location Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

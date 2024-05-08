@@ -34,66 +34,66 @@ namespace MPXJ.Net
 
         public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.ActivityCode.Builder _javaObject;
+            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder Scope(ActivityCodeScope value)
             {
-                _javaObject.scope(value.ConvertType());
+                JavaObject.scope(value.ConvertType());
                 return this;
             }
 
             public Builder ScopeEpsUniqueID(int? value)
             {
-                _javaObject.scopeEpsUniqueID(value.ConvertType());
+                JavaObject.scopeEpsUniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder ScopeProjectUniqueID(int? value)
             {
-                _javaObject.scopeProjectUniqueID(value.ConvertType());
+                JavaObject.scopeProjectUniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder SequenceNumber(int? value)
             {
-                _javaObject.sequenceNumber(value.ConvertType());
+                JavaObject.sequenceNumber(value.ConvertType());
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder Secure(bool value)
             {
-                _javaObject.secure(value);
+                JavaObject.secure(value);
                 return this;
             }
 
             public Builder MaxLength(int? value)
             {
-                _javaObject.maxLength(value.ConvertType());
+                JavaObject.maxLength(value.ConvertType());
                 return this;
             }
 
-            public ActivityCode Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public ActivityCode Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }

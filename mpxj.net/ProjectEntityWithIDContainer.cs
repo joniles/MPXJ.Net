@@ -13,6 +13,8 @@ namespace MPXJ.Net
         {
             return _fromJava((M)JavaObject.getByID(id.ConvertType()));
         }
+
+        public void RenumberIDs() => JavaObject.renumberIDs();
     }
 }
 

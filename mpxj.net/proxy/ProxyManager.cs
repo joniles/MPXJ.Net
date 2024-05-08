@@ -31,6 +31,31 @@ namespace MPXJ.Net.Proxy
             _objectCache[GetKey(WorkContour.Contoured.JavaObject)] = WorkContour.Contoured;
         }
 
+        /// <summary>
+        /// Handles the case where a .Net object is created outside of
+        /// the proxy manager. Calling this method ensures that the 
+        /// mapping is included in the proxy manager, and so avoids creating
+        /// duplicate .Net objects with later use.
+        /// </summary>
+        /// <typeparam name="M">MPXJ java type</typeparam>
+        /// <param name="o">.Net object</param>
+        /// <returns>Java object</returns>
+        internal M UnProxyObject<M>(IJavaObjectProxy<M> o)
+        {
+            if (o == null)
+            {
+                return default;
+            }
+
+            var key = GetKey(o.JavaObject);
+            if (!_objectCache.ContainsKey(key))
+            {
+                _objectCache[key] = o;
+            }
+
+            return o.JavaObject;
+        }
+
         private N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
         {
             if (o == null)

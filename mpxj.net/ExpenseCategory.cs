@@ -20,36 +20,36 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.ExpenseCategory.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            private readonly net.sf.mpxj.ExpenseCategory.Builder _javaObject;
+            public net.sf.mpxj.ExpenseCategory.Builder JavaObject { get; set; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                _javaObject = new net.sf.mpxj.ExpenseCategory.Builder(file.JavaObject);
+                JavaObject = new net.sf.mpxj.ExpenseCategory.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)
             {
-                _javaObject.uniqueID(value.ConvertType());
+                JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
 
             public Builder Name(string value)
             {
-                _javaObject.name(value);
+                JavaObject.name(value);
                 return this;
             }
 
             public Builder SequenceNumber(int? value)
             {
-                _javaObject.sequenceNumber(value.ConvertType());
+                JavaObject.sequenceNumber(value.ConvertType());
                 return this;
             }
 
-            public ExpenseCategory Build() => _proxyManager.ProxyObject(_javaObject.build());
+            public ExpenseCategory Build() => _proxyManager.ProxyObject(JavaObject.build());
         }
     }
 }
