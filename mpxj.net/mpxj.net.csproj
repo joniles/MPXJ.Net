@@ -5,7 +5,7 @@
     <PackageId>MPXJ.Net</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MPXJ.Net</Title>
-    <Version>12.9.3-alpha.3</Version>
+    <Version>12.9.3-alpha.4</Version>
     <Authors>Jon Iles</Authors>
     <Company />
     <RepositoryUrl>https://github.com/joniles/MPXJ.Net</RepositoryUrl>
