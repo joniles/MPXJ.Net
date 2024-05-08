@@ -13,7 +13,7 @@ namespace MPXJ.Net.Proxy
 
         internal ProxyCollection(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection javaObject) : base(fromJava, toJava, javaObject) { }
 
-        public void Add(N item)
+        public virtual void Add(N item)
         {
             JavaObject.add(_toJava(item));
         }

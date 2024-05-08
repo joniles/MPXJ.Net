@@ -67,10 +67,7 @@ namespace MPXJ.Net
         public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
 
         // TODO: temp until after 12.9.3
-        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks()
-        {
-            return _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, net.sf.mpxj.common.ProjectCalendarHelper.getExpandedExceptionsWithWorkWeeks(JavaObject));
-        }
+        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, net.sf.mpxj.common.ProjectCalendarHelper.getExpandedExceptionsWithWorkWeeks(JavaObject));        
 
         public ProjectCalendar Parent
         {

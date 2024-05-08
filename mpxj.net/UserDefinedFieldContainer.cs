@@ -13,6 +13,12 @@ namespace MPXJ.Net
             _proxyManager = proxyManager;
         }
 
+        public override void Add(UserDefinedField item)
+        {
+            base.Add(item);
+            _proxyManager.UnProxyObject(item);
+        }
+
         public ICollection<UserDefinedField> TaskFields => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(_proxyManager.ProxyObject, value => (net.sf.mpxj.UserDefinedField)value.JavaObject, JavaObject.getTaskFields());
 
         public ICollection<UserDefinedField> ResourceFields => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(_proxyManager.ProxyObject, value => (net.sf.mpxj.UserDefinedField)value.JavaObject, JavaObject.getResourceFields());
