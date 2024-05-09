@@ -194,14 +194,14 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new Location(this, v));
         }
 
-        internal LocalTimeRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
+        internal TimeOnlyRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
         {
-            return ProxyObject(value, v => new LocalTimeRange(v));
+            return ProxyObject(value, v => new TimeOnlyRange(v));
         }
 
-        internal LocalDateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
+        internal DateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
         {
-            return ProxyObject(value, v => new LocalDateTimeRange(v));
+            return ProxyObject(value, v => new DateTimeRange(v));
         }
 
         internal CostRateTableEntry ProxyObject(net.sf.mpxj.CostRateTableEntry value)
@@ -400,9 +400,9 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new Duration(v));
         }
 
-        internal LocalDateRange ProxyObject(net.sf.mpxj.LocalDateRange value)
+        internal DateOnlyRange ProxyObject(net.sf.mpxj.LocalDateRange value)
         {
-            return ProxyObject(value, v => new LocalDateRange(v));
+            return ProxyObject(value, v => new DateOnlyRange(v));
         }
 
         internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)

@@ -3,11 +3,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class LocalDateTimeRange : IJavaObjectProxy<net.sf.mpxj.LocalDateTimeRange>
+    public class DateTimeRange : IJavaObjectProxy<net.sf.mpxj.LocalDateTimeRange>
     {
         public net.sf.mpxj.LocalDateTimeRange JavaObject { get; }
 
-        internal LocalDateTimeRange(net.sf.mpxj.LocalDateTimeRange javaObject)
+        internal DateTimeRange(net.sf.mpxj.LocalDateTimeRange javaObject)
         {
             JavaObject = javaObject;
         }

@@ -54,7 +54,7 @@ namespace MPXJ.Net
 
         public override bool Equals(object obj) => this.Equals(obj as Duration);
 
-        public bool Equals(Duration d) => JavaObject.Equals(d.JavaObject);
+        public bool Equals(Duration d) => d != null && JavaObject.Equals(d.JavaObject);
 
         public override int GetHashCode() => JavaObject.hashCode();
 

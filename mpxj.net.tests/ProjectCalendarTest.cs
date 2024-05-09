@@ -45,9 +45,9 @@ namespace MPXJ.Net
             Assert.Multiple(() =>
             {
                 Assert.That(week.Name, Is.EqualTo("Test Week"));
-                Assert.That(week.DateRange, Is.EqualTo(new LocalDateRange(new DateOnly(2025, 1, 13), new DateOnly(2025, 1, 17))));
-                Assert.That(week.DefaultWorkingMorning, Is.EqualTo(new LocalTimeRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
-                Assert.That(week.DefaultWorkingAfternoon, Is.EqualTo(new LocalTimeRange(new TimeOnly(13, 0), new TimeOnly(17, 0))));
+                Assert.That(week.DateRange, Is.EqualTo(new DateOnlyRange(new DateOnly(2025, 1, 13), new DateOnly(2025, 1, 17))));
+                Assert.That(week.DefaultWorkingMorning, Is.EqualTo(new TimeOnlyRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
+                Assert.That(week.DefaultWorkingAfternoon, Is.EqualTo(new TimeOnlyRange(new TimeOnly(13, 0), new TimeOnly(17, 0))));
             });
 
             var exception = calendar.CalendarExceptions[0];
@@ -66,7 +66,7 @@ namespace MPXJ.Net
             {
                 Assert.That(exception.Name, Is.EqualTo("Working Exception"));
                 Assert.That(exception, Has.Count.EqualTo(1));
-                Assert.That(exception[0], Is.EqualTo(new LocalTimeRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
+                Assert.That(exception[0], Is.EqualTo(new TimeOnlyRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
             });
 
             var recurring = calendar.CalendarExceptions[2].Recurring;
@@ -192,7 +192,7 @@ namespace MPXJ.Net
             Assert.That(hours, Has.Count.EqualTo(2));
 
             var week = calendar.AddWorkWeek();
-            week.DateRange = new LocalDateRange(new DateOnly(2024, 4, 22), new DateOnly(2024, 4, 26));
+            week.DateRange = new DateOnlyRange(new DateOnly(2024, 4, 22), new DateOnly(2024, 4, 26));
             Assert.That(calendar.GetWorkWeek(new DateOnly(2024, 4, 22)), Is.EqualTo(week));
             Assert.That(calendar.GetWork(DayOfWeek.Monday, TimeUnit.Hours), Is.EqualTo(Duration.GetInstance(8, TimeUnit.Hours)));
 

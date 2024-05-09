@@ -3,16 +3,16 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class LocalTimeRange : IJavaObjectProxy<net.sf.mpxj.LocalTimeRange>
+    public class TimeOnlyRange : IJavaObjectProxy<net.sf.mpxj.LocalTimeRange>
     {
         public net.sf.mpxj.LocalTimeRange JavaObject { get; }
 
-        internal LocalTimeRange(net.sf.mpxj.LocalTimeRange javaObject)
+        internal TimeOnlyRange(net.sf.mpxj.LocalTimeRange javaObject)
         {
             JavaObject = javaObject;
         }
 
-        public LocalTimeRange(TimeOnly start, TimeOnly end)
+        public TimeOnlyRange(TimeOnly start, TimeOnly end)
         {
             JavaObject = new net.sf.mpxj.LocalTimeRange(start.ConvertType(), end.ConvertType());
         }
@@ -25,14 +25,14 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public override bool Equals(object obj) => this.Equals(obj as LocalTimeRange);
+        public override bool Equals(object obj) => this.Equals(obj as TimeOnlyRange);
 
-        public bool Equals(LocalTimeRange d) => JavaObject.Equals(d.JavaObject);
+        public bool Equals(TimeOnlyRange d) => d != null && JavaObject.Equals(d.JavaObject);
 
         public override int GetHashCode() => JavaObject.hashCode();
 
-        public static bool operator ==(LocalTimeRange lhs, LocalTimeRange rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+        public static bool operator ==(TimeOnlyRange lhs, TimeOnlyRange rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
 
-        public static bool operator !=(LocalTimeRange lhs, LocalTimeRange rhs) => !(lhs == rhs);
+        public static bool operator !=(TimeOnlyRange lhs, TimeOnlyRange rhs) => !(lhs == rhs);
     }
 }

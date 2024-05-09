@@ -13,7 +13,7 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
-        public LocalDateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
+        public DateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
 
         public double? Units => JavaObject.getUnits().ConvertType();
     }

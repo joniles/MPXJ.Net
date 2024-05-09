@@ -8,7 +8,7 @@ namespace MPXJ.Net
 
         internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 
-        public LocalDateRange DateRange
+        public DateOnlyRange DateRange
         {
             get => _proxyManager.ProxyObject(JavaObject.getDateRange());
             set => JavaObject.setDateRange(value.JavaObject);

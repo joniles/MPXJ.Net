@@ -14,9 +14,9 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
-        public readonly LocalTimeRange DefaultWorkingMorning = new LocalTimeRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
+        public readonly TimeOnlyRange DefaultWorkingMorning = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
 
-        public readonly LocalTimeRange DefaultWorkingAfternoon = new LocalTimeRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
+        public readonly TimeOnlyRange DefaultWorkingAfternoon = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
 
         public string Name
         {
