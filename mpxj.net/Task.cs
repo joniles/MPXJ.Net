@@ -18,7 +18,7 @@ namespace MPXJ.Net
 
         public IList<ActivityCodeValue> ActivityCodes => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getActivityCodes());
 
-        public void AddActivityCode(ActivityCodeValue value) => JavaObject.addActivityCode(value.JavaObject);
+        public void AddActivityCode(ActivityCodeValue value) => JavaObject.addActivityCode(value?.JavaObject);
 
         public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
 
@@ -55,7 +55,7 @@ namespace MPXJ.Net
         public Duration ActualDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualDuration());
-            set => JavaObject.setActualDuration(value.JavaObject);
+            set => JavaObject.setActualDuration(value?.JavaObject);
         }
 
         public DateTime? ActualFinish
@@ -73,7 +73,7 @@ namespace MPXJ.Net
         public Duration ActualWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualWork());
-            set => JavaObject.setActualWork(value.JavaObject);
+            set => JavaObject.setActualWork(value?.JavaObject);
         }
 
         public double? BaselineCost
@@ -85,7 +85,7 @@ namespace MPXJ.Net
         public Duration BaselineDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getBaselineDuration());
-            set => JavaObject.setBaselineDuration(value.JavaObject);
+            set => JavaObject.setBaselineDuration(value?.JavaObject);
         }
 
         public string BaselineDurationText
@@ -120,8 +120,8 @@ namespace MPXJ.Net
 
         public Duration BaselineWork
         {
-            get => _proxyManager.ProxyObject(JavaObject.getBaselineWork());
-            set => JavaObject.setBaselineWork(value.JavaObject);
+            get => _proxyManager.ProxyObject(JavaObject?.getBaselineWork());
+            set => JavaObject.setBaselineWork(value?.JavaObject);
         }
 
         public double? BCWP
@@ -204,14 +204,14 @@ namespace MPXJ.Net
 
         public Duration LevelingDelay
         {
-            get => _proxyManager.ProxyObject(JavaObject.getLevelingDelay());
-            set => JavaObject.setLevelingDelay(value.JavaObject);
+            get => _proxyManager.ProxyObject(JavaObject?.getLevelingDelay());
+            set => JavaObject.setLevelingDelay(value?.JavaObject);
         }
 
         public Duration Duration
         {
             get => _proxyManager.ProxyObject(JavaObject.getDuration());
-            set => JavaObject.setDuration(value.JavaObject);
+            set => JavaObject.setDuration(value?.JavaObject);
         }
 
         public string DurationText
@@ -223,10 +223,10 @@ namespace MPXJ.Net
         public Duration ManualDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getManualDuration());
-            set => JavaObject.setManualDuration(value.JavaObject);
+            set => JavaObject.setManualDuration(value?.JavaObject);
         }
 
-        public void SetDuration(int index, Duration value) => JavaObject.setDuration(index, value.JavaObject);
+        public void SetDuration(int index, Duration value) => JavaObject.setDuration(index, value?.JavaObject);
 
         public Duration GetDuration(int index) => _proxyManager.ProxyObject(JavaObject.getDuration(index));
 
@@ -237,7 +237,7 @@ namespace MPXJ.Net
         public Duration DurationVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getDurationVariance());
-            set => JavaObject.setDurationVariance(value.JavaObject);
+            set => JavaObject.setDurationVariance(value?.JavaObject);
         }
 
         public DateTime? EarlyFinish
@@ -283,7 +283,7 @@ namespace MPXJ.Net
         public Duration FinishVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getFinishVariance());
-            set => JavaObject.setFinishVariance(value.JavaObject);
+            set => JavaObject.setFinishVariance(value?.JavaObject);
         }
 
         public double? FixedCost
@@ -299,7 +299,7 @@ namespace MPXJ.Net
         public Duration FreeSlack
         {
             get => _proxyManager.ProxyObject(JavaObject.getFreeSlack());
-            set => JavaObject.setFreeSlack(value.JavaObject);
+            set => JavaObject.setFreeSlack(value?.JavaObject);
         }
 
         public bool HideBar
@@ -371,7 +371,7 @@ namespace MPXJ.Net
         public Notes NotesObject
         {
             get => _proxyManager.ProxyObject(JavaObject.getNotesObject());
-            set => JavaObject.setNotesObject(value.JavaObject);
+            set => JavaObject.setNotesObject(value?.JavaObject);
         }
 
         public Task AddTask() => _proxyManager.ProxyObject(JavaObject.addTask());
@@ -407,7 +407,7 @@ namespace MPXJ.Net
         public Priority Priority
         {
             get => _proxyManager.ProxyObject(JavaObject.getPriority());
-            set => JavaObject.setPriority(value.JavaObject);
+            set => JavaObject.setPriority(value?.JavaObject);
         }
 
         public string Project
@@ -425,13 +425,13 @@ namespace MPXJ.Net
         public Duration RemainingDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getRemainingDuration());
-            set => JavaObject.setRemainingDuration(value.JavaObject);
+            set => JavaObject.setRemainingDuration(value?.JavaObject);
         }
 
         public Duration RemainingWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRemainingWork());
-            set => JavaObject.setRemainingWork(value.JavaObject);
+            set => JavaObject.setRemainingWork(value?.JavaObject);
         }
 
         public string ResourceGroup
@@ -483,7 +483,7 @@ namespace MPXJ.Net
         public Duration StartVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getStartVariance());
-            set => JavaObject.setStartVariance(value.JavaObject);
+            set => JavaObject.setStartVariance(value?.JavaObject);
         }
 
         public DateTime? Stop
@@ -521,7 +521,7 @@ namespace MPXJ.Net
         public Duration TotalSlack
         {
             get => _proxyManager.ProxyObject(JavaObject.getTotalSlack());
-            set => JavaObject.setTotalSlack(value.JavaObject);
+            set => JavaObject.setTotalSlack(value?.JavaObject);
         }
 
         public int? UniqueID
@@ -545,13 +545,13 @@ namespace MPXJ.Net
         public Duration Work
         {
             get => _proxyManager.ProxyObject(JavaObject.getWork());
-            set => JavaObject.setWork(value.JavaObject);
+            set => JavaObject.setWork(value?.JavaObject);
         }
 
         public Duration WorkVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getWorkVariance());
-            set => JavaObject.setWorkVariance(value.JavaObject);
+            set => JavaObject.setWorkVariance(value?.JavaObject);
         }
 
         public Task ParentTask => _proxyManager.ProxyObject(JavaObject.getParentTask());
@@ -667,19 +667,19 @@ namespace MPXJ.Net
         public Duration ActualWorkProtected
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualWorkProtected());
-            set => JavaObject.setActualWorkProtected(value.JavaObject);
+            set => JavaObject.setActualWorkProtected(value?.JavaObject);
         }
 
         public Duration ActualOvertimeWorkProtected
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualOvertimeWorkProtected());
-            set => JavaObject.setActualOvertimeWorkProtected(value.JavaObject);
+            set => JavaObject.setActualOvertimeWorkProtected(value?.JavaObject);
         }
 
         public Duration RegularWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRegularWork());
-            set => JavaObject.setRegularWork(value.JavaObject);
+            set => JavaObject.setRegularWork(value?.JavaObject);
         }
 
         public bool EffortDriven
@@ -707,7 +707,7 @@ namespace MPXJ.Net
         public Duration ActualOvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualOvertimeWork());
-            set => JavaObject.setActualOvertimeWork(value.JavaObject);
+            set => JavaObject.setActualOvertimeWork(value?.JavaObject);
         }
 
         public AccrueType? FixedCostAccrual
@@ -755,7 +755,7 @@ namespace MPXJ.Net
         public Duration OvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getOvertimeWork());
-            set => JavaObject.setOvertimeWork(value.JavaObject);
+            set => JavaObject.setOvertimeWork(value?.JavaObject);
         }
 
         public DateTime? PreleveledStart
@@ -773,7 +773,7 @@ namespace MPXJ.Net
         public Duration RemainingOvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRemainingOvertimeWork());
-            set => JavaObject.setRemainingOvertimeWork(value.JavaObject);
+            set => JavaObject.setRemainingOvertimeWork(value?.JavaObject);
         }
 
         public double? RemainingOvertimeCost
@@ -785,7 +785,7 @@ namespace MPXJ.Net
         public ProjectCalendar Calendar
         {
             get => _proxyManager.ProxyObject(JavaObject.getCalendar());
-            set => JavaObject.setCalendar(value.JavaObject);
+            set => JavaObject.setCalendar(value?.JavaObject);
         }
 
         public int? CalendarUniqueID
@@ -803,13 +803,13 @@ namespace MPXJ.Net
         public Duration StartSlack
         {
             get => _proxyManager.ProxyObject(JavaObject.getStartSlack());
-            set => JavaObject.setStartSlack(value.JavaObject);
+            set => JavaObject.setStartSlack(value?.JavaObject);
         }
 
         public Duration FinishSlack
         {
             get => _proxyManager.ProxyObject(JavaObject.getFinishSlack());
-            set => JavaObject.setFinishSlack(value.JavaObject);
+            set => JavaObject.setFinishSlack(value?.JavaObject);
         }
 
         public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
@@ -830,7 +830,7 @@ namespace MPXJ.Net
         public ProjectFile SubprojectObject
         {
             get => _proxyManager.ProxyObject(JavaObject.getSubprojectObject());
-            set => JavaObject.setSubprojectObject(value.JavaObject);
+            set => JavaObject.setSubprojectObject(value?.JavaObject);
         }
 
         public double? GetEnterpriseCost(int index) => JavaObject.getEnterpriseCost(index).ConvertType();
@@ -843,7 +843,7 @@ namespace MPXJ.Net
 
         public Duration GetEnterpriseDuration(int index) => _proxyManager.ProxyObject(JavaObject.getEnterpriseDuration(index));
 
-        public void SetEnterpriseDuration(int index, Duration value) => JavaObject.setEnterpriseDuration(index, value.JavaObject);
+        public void SetEnterpriseDuration(int index, Duration value) => JavaObject.setEnterpriseDuration(index, value?.JavaObject);
 
         public bool GetEnterpriseFlag(int index) => JavaObject.getEnterpriseFlag(index);
 
@@ -859,13 +859,13 @@ namespace MPXJ.Net
 
         public void SetBaselineCost(int baselineNumber, double? value) => JavaObject.setBaselineCost(baselineNumber, value.ConvertType());
 
-        public void SetBaselineDuration(int baselineNumber, Duration value) => JavaObject.setBaselineDuration(baselineNumber, value.JavaObject);
+        public void SetBaselineDuration(int baselineNumber, Duration value) => JavaObject.setBaselineDuration(baselineNumber, value?.JavaObject);
 
         public void SetBaselineFinish(int baselineNumber, DateTime value) => JavaObject.setBaselineFinish(baselineNumber, value.ConvertType());
 
         public void SetBaselineStart(int baselineNumber, DateTime value) => JavaObject.setBaselineStart(baselineNumber, value.ConvertType());
 
-        public void SetBaselineWork(int baselineNumber, Duration value) => JavaObject.setBaselineWork(baselineNumber, value.JavaObject);
+        public void SetBaselineWork(int baselineNumber, Duration value) => JavaObject.setBaselineWork(baselineNumber, value?.JavaObject);
 
         public double? GetBaselineCost(int baselineNumber) => JavaObject.getBaselineCost(baselineNumber).ConvertType();
 
@@ -922,10 +922,10 @@ namespace MPXJ.Net
         public Duration BaselineEstimatedDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getBaselineEstimatedDuration());
-            set => JavaObject.setBaselineEstimatedDuration(value.JavaObject);
+            set => JavaObject.setBaselineEstimatedDuration(value?.JavaObject);
         }
 
-        public void SetBaselineEstimatedDuration(int baselineNumber, Duration value) => JavaObject.setBaselineEstimatedDuration(baselineNumber, value.JavaObject);
+        public void SetBaselineEstimatedDuration(int baselineNumber, Duration value) => JavaObject.setBaselineEstimatedDuration(baselineNumber, value?.JavaObject);
 
         public Duration GetBaselineEstimatedDuration(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineEstimatedDuration(baselineNumber));
 
@@ -1081,13 +1081,13 @@ namespace MPXJ.Net
         public Duration PlannedDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getPlannedDuration());
-            set => JavaObject.setPlannedDuration(value.JavaObject);
+            set => JavaObject.setPlannedDuration(value?.JavaObject);
         }
 
         public Duration PlannedWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getPlannedWork());
-            set => JavaObject.setPlannedWork(value.JavaObject);
+            set => JavaObject.setPlannedWork(value?.JavaObject);
         }
 
         public double? PlannedCost
@@ -1188,7 +1188,7 @@ namespace MPXJ.Net
         public Duration ScheduledDuration
         {
             get => _proxyManager.ProxyObject(JavaObject.getScheduledDuration());
-            set => JavaObject.setScheduledDuration(value.JavaObject);
+            set => JavaObject.setScheduledDuration(value?.JavaObject);
         }
 
         public double? BudgetCost
@@ -1200,7 +1200,7 @@ namespace MPXJ.Net
         public Duration BudgetWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getBudgetWork());
-            set => JavaObject.setBudgetWork(value.JavaObject);
+            set => JavaObject.setBudgetWork(value?.JavaObject);
         }
 
         public double? BaselineBudgetCost
@@ -1212,7 +1212,7 @@ namespace MPXJ.Net
         public Duration BaselineBudgetWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getBaselineBudgetWork());
-            set => JavaObject.setBaselineBudgetWork(value.JavaObject);
+            set => JavaObject.setBaselineBudgetWork(value?.JavaObject);
         }
 
         public double? GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber).ConvertType();
@@ -1221,7 +1221,7 @@ namespace MPXJ.Net
 
         public Duration GetBaselineBudgetWork(int baselineNumber) => _proxyManager.ProxyObject(JavaObject.getBaselineBudgetWork(baselineNumber));
 
-        public void SetBaselineBudgetWork(int baselineNumber, Duration value) => JavaObject.setBaselineBudgetWork(baselineNumber, value.JavaObject);
+        public void SetBaselineBudgetWork(int baselineNumber, Duration value) => JavaObject.setBaselineBudgetWork(baselineNumber, value?.JavaObject);
 
         public int? SequenceNumber
         {
@@ -1245,7 +1245,7 @@ namespace MPXJ.Net
         public Location Location
         {
             get => _proxyManager.ProxyObject(JavaObject.getLocation());
-            set => JavaObject.setLocation(value.JavaObject);
+            set => JavaObject.setLocation(value?.JavaObject);
         }
 
         public string BarName

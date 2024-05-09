@@ -15,7 +15,7 @@ namespace MPXJ.Net
         public Duration Duration
         {
             get => _proxyManager.ProxyObject(JavaObject.getDuration());
-            set => JavaObject.setDuration(value.JavaObject);
+            set => JavaObject.setDuration(value?.JavaObject);
         }
     }
 }

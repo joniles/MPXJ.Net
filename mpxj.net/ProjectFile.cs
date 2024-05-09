@@ -98,7 +98,7 @@ namespace MPXJ.Net
         public ProjectCalendar DefaultCalendar
         {
             get => _proxyManager.ProxyObject(JavaObject.getDefaultCalendar());
-            set => JavaObject.setDefaultCalendar(value.JavaObject);
+            set => JavaObject.setDefaultCalendar(value?.JavaObject);
         }
 
         public ProjectCalendar BaselineCalendar => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());

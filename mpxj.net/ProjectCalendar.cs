@@ -72,7 +72,7 @@ namespace MPXJ.Net
         public ProjectCalendar Parent
         {
             get => _proxyManager.ProxyObject(JavaObject.getParent());
-            set => JavaObject.setParent(value.JavaObject);
+            set => JavaObject.setParent(value?.JavaObject);
         }
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();

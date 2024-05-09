@@ -48,7 +48,7 @@ namespace MPXJ.Net
 
             public Builder Type(ActivityCode value)
             {
-                JavaObject.type(value.JavaObject);
+                JavaObject.type(value?.JavaObject);
                 return this;
             }
 
@@ -84,7 +84,7 @@ namespace MPXJ.Net
 
             public Builder Parent(ActivityCodeValue value)
             {
-                JavaObject.parent(value.JavaObject);
+                JavaObject.parent(value?.JavaObject);
                 return this;
             }
 

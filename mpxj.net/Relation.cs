@@ -44,13 +44,13 @@ namespace MPXJ.Net
 
             public Builder SourceTask(Task value)
             {
-                JavaObject.sourceTask(value.JavaObject);
+                JavaObject.sourceTask(value?.JavaObject);
                 return this;
             }
 
             public Builder TargetTask(Task value)
             {
-                JavaObject.targetTask(value.JavaObject);
+                JavaObject.targetTask(value?.JavaObject);
                 return this;
             }
 
@@ -62,7 +62,7 @@ namespace MPXJ.Net
 
             public Builder Lag(Duration value)
             {
-                JavaObject.lag(value.JavaObject);
+                JavaObject.lag(value?.JavaObject);
                 return this;
             }
 

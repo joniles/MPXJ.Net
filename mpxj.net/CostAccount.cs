@@ -60,7 +60,7 @@ namespace MPXJ.Net
 
             public Builder Notes(Notes value)
             {
-                JavaObject.notes(value.JavaObject);
+                JavaObject.notes(value?.JavaObject);
                 return this;
             }
 
@@ -72,7 +72,7 @@ namespace MPXJ.Net
 
             public Builder Parent(CostAccount value)
             {
-                JavaObject.parent(value.JavaObject);
+                JavaObject.parent(value?.JavaObject);
                 return this;
             }
 

@@ -67,7 +67,7 @@ namespace MPXJ.Net
 
             public Builder Description(Notes value)
             {
-                JavaObject.description(value.JavaObject);
+                JavaObject.description(value?.JavaObject);
                 return this;
             }
 

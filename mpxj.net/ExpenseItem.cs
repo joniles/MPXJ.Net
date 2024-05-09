@@ -84,13 +84,13 @@ namespace MPXJ.Net
 
             public Builder Account(CostAccount value)
             {
-                JavaObject.account(value.JavaObject);
+                JavaObject.account(value?.JavaObject);
                 return this;
             }
 
             public Builder Category(ExpenseCategory value)
             {
-                JavaObject.category(value.JavaObject);
+                JavaObject.category(value?.JavaObject);
                 return this;
             }
 

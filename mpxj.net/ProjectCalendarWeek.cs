@@ -11,7 +11,7 @@ namespace MPXJ.Net
         public DateOnlyRange DateRange
         {
             get => _proxyManager.ProxyObject(JavaObject.getDateRange());
-            set => JavaObject.setDateRange(value.JavaObject);
+            set => JavaObject.setDateRange(value?.JavaObject);
         }
 
         public override string ToString() => JavaObject.toString();

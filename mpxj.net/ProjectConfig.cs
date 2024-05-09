@@ -82,7 +82,7 @@ namespace MPXJ.Net
         public IBaselineStrategy BaselineStrategy
         {            
             get => JavaObject.getBaselineStrategy();
-            set => JavaObject.setBaselineStrategy(value.JavaObject);
+            set => JavaObject.setBaselineStrategy(value?.JavaObject);
         }
         */
 
