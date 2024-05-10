@@ -20,7 +20,7 @@ namespace MPXJ.Net
 
         public void AddActivityCode(ActivityCodeValue value) => JavaObject.addActivityCode(value?.JavaObject);
 
-        public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource.JavaObject));
+        public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource?.JavaObject));
 
         public void AddResourceAssignment(ResourceAssignment assignment) => JavaObject.addResourceAssignment(assignment.JavaObject);
 
