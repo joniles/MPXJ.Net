@@ -6,7 +6,7 @@
 ```
 dotnet clean MPXJ.Net.sln
 dotnet build --configuration Release MPXJ.Net.sln
-dotnet nuget push MPXJ.Net\bin\Release\MPXJ.Net.12.9.3-alpha.7.nupkg --api-key $env:NUGETTEST_API_KEY --source https://apiint.nugettest.org/v3/index.json
+dotnet nuget push MPXJ.Net\bin\Release\MPXJ.Net.12.9.3-alpha.8.nupkg --api-key $env:NUGETTEST_API_KEY --source https://apiint.nugettest.org/v3/index.json
 ```
 
 
