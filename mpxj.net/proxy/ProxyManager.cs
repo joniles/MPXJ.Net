@@ -417,6 +417,11 @@ namespace MPXJ.Net.Proxy
                 return ProxyObject(udf, v => new UserDefinedField(v));
             }
 
+            if (value.getFieldTypeClass() == net.sf.mpxj.FieldTypeClass.UNKNOWN)
+            {
+                return ProxyObject(value, v => new UnknownFieldType(v));
+            }
+
             return EnumExtensionMethods.FieldTypeDictionary[value];
         }
 
