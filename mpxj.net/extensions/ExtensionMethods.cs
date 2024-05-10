@@ -190,7 +190,12 @@ namespace MPXJ.Net
             {
                 return java.lang.Double.valueOf(doubleValue);
             }
-
+            
+            if (o is decimal decimalValue)
+            {
+                return java.lang.Double.valueOf((double)decimalValue);
+            }
+            
             if (o is DateTime dateTimeValue)
             {
                 return dateTimeValue.ConvertType();

@@ -63,6 +63,9 @@ namespace MPXJ.Net
             Assert.That(task.Cost, Is.EqualTo(1074.0));
             task.Set(TaskField.Cost, 1084.25);
             Assert.That(task.Cost, Is.EqualTo(1084.25));
+
+            task.Set(TaskField.Cost, (decimal)1094.25);
+            Assert.That(task.Cost, Is.EqualTo(1094.25));
         }
 
         private void TestTask(Task task)
