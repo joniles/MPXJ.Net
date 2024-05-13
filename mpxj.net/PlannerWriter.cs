@@ -1,4 +1,6 @@
-﻿namespace MPXJ.Net
+﻿using System.Text;
+
+namespace MPXJ.Net
 {
     public class PlannerWriter : AbstractProjectWriter
     {
@@ -6,10 +8,10 @@
 
         public PlannerWriter() : base(new net.sf.mpxj.planner.PlannerWriter()) { }
 
-        public string Encoding
+        public Encoding Encoding
         {
-            get => JavaObject.getEncoding();
-            set => JavaObject.setEncoding(value);
+            get => Encoding.GetEncoding(JavaObject.getCharset().name());
+            set => JavaObject.setCharset(java.nio.charset.Charset.forName(value.EncodingName));
         }
     }
 }

@@ -10,8 +10,8 @@ namespace MPXJ.Net
 
         public Encoding Encoding
         {
-            get => Encoding.GetEncoding(JavaObject.getEncoding().name());
-            set => java.nio.charset.Charset.forName(value.EncodingName);
+            get => Encoding.GetEncoding(JavaObject.getCharset().name());
+            set => JavaObject.setCharset(java.nio.charset.Charset.forName(value.EncodingName));
         }
 
         public bool IncludeLayoutData
