@@ -111,7 +111,7 @@ namespace Samples
             assignment1.RemainingWork = Duration.GetInstance(40, TimeUnit.Hours);
             assignment2.RemainingWork = Duration.GetInstance(80, TimeUnit.Hours);
             assignment1.Start = DateTime.Parse("2003-01-01 08:00");
-            assignment2.Start =DateTime.Parse("2003-11-01 08:00");
+            assignment2.Start = DateTime.Parse("2003-01-11 08:00");
 
             // Write a 100% complete task
             var task5 = file.AddTask();
