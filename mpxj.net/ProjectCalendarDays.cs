@@ -3,7 +3,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
+    public abstract class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
     {
         internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ProjectCalendarDays JavaObject { get; }

@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-	public class ProjectEntity
+	public abstract class ProjectEntity
 	{
 		internal readonly ProxyManager _proxyManager;
 

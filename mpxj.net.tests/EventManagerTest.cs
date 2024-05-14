@@ -8,8 +8,8 @@ namespace MPXJ.Net
         public void MethodTest()
         {
             var project = new ProjectFile();
-            Assert.That(project.EventManager, Is.Not.Null);
-            Assert.That(project.EventManager.JavaObject, Is.Not.Null);
+            Assert.That(project.Calendars, Is.Not.Null);
+            Assert.That(project.Calendars.JavaObject, Is.Not.Null);
         }
     }
 }

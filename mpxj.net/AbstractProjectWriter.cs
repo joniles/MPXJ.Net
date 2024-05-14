@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MPXJ.Net
 {
-    public class AbstractProjectWriter : IProjectWriter
+    public abstract class AbstractProjectWriter : IProjectWriter
     {
         public net.sf.mpxj.writer.ProjectWriter JavaObject { get; set; }
 

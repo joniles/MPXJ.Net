@@ -334,11 +334,6 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new FilterContainer(this, v));
         }
 
-        internal EventManager ProxyObject(net.sf.mpxj.EventManager value)
-        {
-            return ProxyObject(value, v => new EventManager(v));
-        }
-
         internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
         {
             return ProxyObject(value, v => new GroupContainer(this, v));

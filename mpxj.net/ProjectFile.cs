@@ -75,8 +75,6 @@ namespace MPXJ.Net
 
         public GroupContainer Groups => _proxyManager.ProxyObject(JavaObject.getGroups());
 
-        public EventManager EventManager => _proxyManager.ProxyObject(JavaObject.getEventManager());
-
         public CustomFieldContainer CustomFields => _proxyManager.ProxyObject(JavaObject.getCustomFields());
 
         public ActivityCodeContainer ActivityCodes => _proxyManager.ProxyObject(JavaObject.getActivityCodes());
