@@ -4,7 +4,7 @@ namespace MPXJ.Net.Proxy
 {
     internal class ProxyOutputStream : java.io.OutputStream
     {
-        private Stream stream;
+        private readonly Stream stream;
 
         public ProxyOutputStream(Stream stream)
         {

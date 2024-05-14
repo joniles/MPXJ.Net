@@ -568,5 +568,21 @@ namespace MPXJ.Net
         {
             return value == null ? (SaveVersion?)null : (SaveVersion)value.ordinal();
         }
+
+        // FileFormat
+        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat value)
+        {
+            return net.sf.mpxj.writer.FileFormat.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat? value)
+        {
+            return value == null ? null : net.sf.mpxj.writer.FileFormat.values()[(int)value];
+        }
+
+        public static FileFormat? ConvertType(this net.sf.mpxj.writer.FileFormat value)
+        {
+            return value == null ? (FileFormat?)null : (FileFormat)value.ordinal();
+        }
     }
 }
