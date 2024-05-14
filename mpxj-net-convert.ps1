@@ -1,4 +1,4 @@
-$project_dir = "C:\Nexus\Application"
+$project_dir = "\path\to\your\source\dir"
 $files = Get-ChildItem -name $project_dir -Filter "*.cs" -Recurse
 
 
