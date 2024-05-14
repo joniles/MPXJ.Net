@@ -23,10 +23,6 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="IKVM" Version="8.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="IKVM.Maven.Sdk" Version="1.6.9" />
   </ItemGroup>
 
