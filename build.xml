@@ -3,7 +3,7 @@
 <project name="MPXJ.Net" default="archive" basedir=".">
 	<property environment="env"/>
 	<property name="mpxj.version" value="12.10.0" />
-	<property name="mpxj.net.version" value="${mpxj.version}-beta.2" />
+	<property name="mpxj.net.version" value="${mpxj.version}-beta.3" />
 
 	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
 		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
@@ -35,13 +35,19 @@
 		</exec>
 	</target>
 
+	<target name="nuget-deploy" depends="build" description="Deploy to NuGet">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line="nuget push MPXJ.Net\bin\Release\MPXJ.Net.${mpxj.net.version}.nupkg --api-key ${env.NUGET_API_KEY} --source https://www.nuget.org/api/v2/package" />
+		</exec>
+	</target>
+
 	<target name="github-deploy" depends="build" description="Deploy to GitHub">
 		<exec executable="gh" failonerror="true">
 			<arg line='release create -t "Version ${mpxj.net.version}" v${mpxj.net.version}'/>
 		</exec>
 	</target>
 
-	<target name="deploy" depends="nuget-test-deploy,github-deploy"/>
+	<target name="deploy" depends="nuget-deploy,github-deploy"/>
 
 	<target name="coverage">
 		<exec executable="dotnet" dir="${basedir}" failonerror="true">
