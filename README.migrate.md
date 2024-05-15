@@ -49,13 +49,13 @@ to this is that various identifiers will have changed, which means you'll need
 to adjust your code accordingly.
 
 To assist with this [a Powershell script](mpxj-net-convert.ps1) has been
-provided which undertakes a find-and-replace on your code to deal with the
-most common cases I came across when attempting this exercise myself. This
-won't covert everything(happy to add more cases to the script if you add any
-useful ones when working on your own code), and you will probably need to
-make more manual changes to get everything compiling.
+provided which undertakes a find-and-replace approach on your code to deal
+with the most common cases I came across when attempting this exercise
+myself. This won't cover everything (happy to add more cases to the script if
+you add any useful ones when working on your own code), and you will probably
+need to make more manual changes to get everything compiling.
 
-> Please ensure you back up your code before running the script!
+> IMPORTANT! Please ensure you back up your code before running the script!
 
 ## Migrating from net.sf.mpxj-for-vb
 
