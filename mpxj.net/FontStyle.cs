@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class FontStyle : IJavaObjectProxy<net.sf.mpxj.mpp.FontStyle>
     {

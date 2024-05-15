@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectCalendarWeek : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarWeek>
     {
@@ -9,10 +8,10 @@ namespace org.mpxj
 
         internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 
-        public LocalDateRange DateRange
+        public DateOnlyRange DateRange
         {
             get => _proxyManager.ProxyObject(JavaObject.getDateRange());
-            set => JavaObject.setDateRange(value.JavaObject);
+            set => JavaObject.setDateRange(value?.JavaObject);
         }
 
         public override string ToString() => JavaObject.toString();

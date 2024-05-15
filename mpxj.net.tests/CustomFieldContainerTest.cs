@@ -1,8 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using org.mpxj.reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class CustomFieldContainerTest
     {
@@ -35,7 +34,7 @@ namespace org.mpxj
             Assert.That(table.OnlyTableValuesAllowed, Is.True);
             Assert.That(table.ResourceSubstitutionEnabled, Is.False);
             Assert.That(table.ShowIndent, Is.True);
-            Assert.That(table.ToString, Is.EqualTo("org.mpxj.CustomFieldLookupTable"));
+            Assert.That(table.ToString, Is.EqualTo("MPXJ.Net.CustomFieldLookupTable"));
 
             Assert.That(project.CustomFields.Size, Is.EqualTo(4));
 
@@ -82,12 +81,11 @@ namespace org.mpxj
             Assert.That(item.UniqueID, Is.EqualTo(1));
             Assert.That(item.Value, Is.EqualTo("Value 1"));
 
-            // TODO: update these two tests after 12.8.2
             var lookupItem = project.CustomFields.GetCustomFieldValueItemByUniqueID(item.UniqueID);
-            Assert.That(lookupItem, Is.Not.Null);
+            Assert.That(lookupItem, Is.EqualTo(item));
 
             lookupItem = project.CustomFields.GetCustomFieldValueItemByGuid(item.GUID);
-            Assert.That(lookupItem, Is.Not.Null);
+            Assert.That(lookupItem, Is.EqualTo(item));
 
             var newItem = new CustomFieldValueItem(123)
             {

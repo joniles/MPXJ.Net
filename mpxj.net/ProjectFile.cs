@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectFile : IChildTaskContainer, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.ProjectFile>
     {
@@ -75,8 +75,6 @@ namespace org.mpxj
 
         public GroupContainer Groups => _proxyManager.ProxyObject(JavaObject.getGroups());
 
-        public EventManager EventManager => _proxyManager.ProxyObject(JavaObject.getEventManager());
-
         public CustomFieldContainer CustomFields => _proxyManager.ProxyObject(JavaObject.getCustomFields());
 
         public ActivityCodeContainer ActivityCodes => _proxyManager.ProxyObject(JavaObject.getActivityCodes());
@@ -98,7 +96,7 @@ namespace org.mpxj
         public ProjectCalendar DefaultCalendar
         {
             get => _proxyManager.ProxyObject(JavaObject.getDefaultCalendar());
-            set => JavaObject.setDefaultCalendar(value.JavaObject);
+            set => JavaObject.setDefaultCalendar(value?.JavaObject);
         }
 
         public ProjectCalendar BaselineCalendar => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());
@@ -118,5 +116,7 @@ namespace org.mpxj
         public void ExpandSubprojects(bool replaceExternalTasks) => JavaObject.expandSubprojects(replaceExternalTasks);
 
         public RelationContainer Relations => _proxyManager.ProxyObject(JavaObject.getRelations());
+
+        public UnitOfMeasureContainer UnitsOfMeasure => _proxyManager.ProxyObject(JavaObject.getUnitsOfMeasure());
     }
 }

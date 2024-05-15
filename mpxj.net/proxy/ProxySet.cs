@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
 	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set>
     {

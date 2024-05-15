@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class GroupContainer : ProxyList<net.sf.mpxj.Group, Group>
     {

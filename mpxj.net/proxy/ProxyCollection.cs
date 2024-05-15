@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
     public class ProxyCollection<M, N> : ProxyEnumerable<M, N>, ICollection<N>, IJavaObjectProxy<java.util.Collection>
     {
@@ -13,7 +13,7 @@ namespace org.mpxj.proxy
 
         internal ProxyCollection(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection javaObject) : base(fromJava, toJava, javaObject) { }
 
-        public void Add(N item)
+        public virtual void Add(N item)
         {
             JavaObject.add(_toJava(item));
         }

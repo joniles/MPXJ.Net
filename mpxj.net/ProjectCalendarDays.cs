@@ -1,9 +1,9 @@
 ﻿using System;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
-    public class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
+    public abstract class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
     {
         internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ProjectCalendarDays JavaObject { get; }
@@ -14,9 +14,9 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public readonly LocalTimeRange DefaultWorkingMorning = new LocalTimeRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
+        public readonly TimeOnlyRange DefaultWorkingMorning = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
 
-        public readonly LocalTimeRange DefaultWorkingAfternoon = new LocalTimeRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
+        public readonly TimeOnlyRange DefaultWorkingAfternoon = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
 
         public string Name
         {

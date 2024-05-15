@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class CustomFieldContainer : ProxyEnumerable<net.sf.mpxj.CustomField, CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
     {

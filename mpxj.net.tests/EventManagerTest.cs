@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class EventManagerTest
     {
@@ -8,8 +8,8 @@ namespace org.mpxj
         public void MethodTest()
         {
             var project = new ProjectFile();
-            Assert.That(project.EventManager, Is.Not.Null);
-            Assert.That(project.EventManager.JavaObject, Is.Not.Null);
+            Assert.That(project.Calendars, Is.Not.Null);
+            Assert.That(project.Calendars.JavaObject, Is.Not.Null);
         }
     }
 }

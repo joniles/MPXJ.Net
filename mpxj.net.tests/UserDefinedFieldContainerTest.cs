@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
-using org.mpxj.reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class UserDefinedFieldContainerTest
     {

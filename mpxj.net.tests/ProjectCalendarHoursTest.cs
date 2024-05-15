@@ -2,7 +2,7 @@
 using System;
 using NUnit.Framework;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectCalendarHoursTest
     {
@@ -17,7 +17,7 @@ namespace org.mpxj
             var range = hours[1];
             Assert.That(hours.IndexOf(range), Is.EqualTo(1));
 
-            range = new LocalTimeRange(new TimeOnly(17, 0), new TimeOnly(20, 0));
+            range = new TimeOnlyRange(new TimeOnly(17, 0), new TimeOnly(20, 0));
             hours[1] = range;
             Assert.That(hours.IndexOf(range), Is.EqualTo(1));
         }

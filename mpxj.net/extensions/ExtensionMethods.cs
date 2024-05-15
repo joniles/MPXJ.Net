@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     internal static class ExtensionMethods
 	{
@@ -171,27 +171,47 @@ namespace org.mpxj
                 return o;
             }
 
-            if (o is bool)
+            if (o is bool boolValue)
             {
-                return java.lang.Boolean.valueOf((bool)o);
+                return java.lang.Boolean.valueOf(boolValue);
             }
 
-            if (o is int)
+            if (o is int intValue)
             {
-                return java.lang.Integer.valueOf((int)o);
+                return java.lang.Integer.valueOf(intValue);
             }
 
-            if (o is long)
+            if (o is long longValue)
             {
-                return java.lang.Long.valueOf((long)o);
+                return java.lang.Long.valueOf(longValue);
             }
 
-            if (o is double)
+            if (o is double doubleValue)
             {
-                return java.lang.Double.valueOf((double)o);
+                return java.lang.Double.valueOf(doubleValue);
+            }
+            
+            if (o is decimal decimalValue)
+            {
+                return java.lang.Double.valueOf((double)decimalValue);
+            }
+            
+            if (o is DateTime dateTimeValue)
+            {
+                return dateTimeValue.ConvertType();
             }
 
-            throw new NotSupportedException();
+            if (o is DateOnly dateOnlyValue)
+            {
+                return dateOnlyValue.ConvertType();
+            }
+
+            if (o is TimeOnly timeOnlyValue)
+            {
+                return timeOnlyValue.ConvertType();
+            }
+
+            throw new NotSupportedException($"Conversion not defined for {o.GetType()}");
         }
     }
 }

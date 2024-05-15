@@ -1,7 +1,7 @@
 ﻿
 using NUnit.Framework;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
 	public class ProjectFieldTest
 	{

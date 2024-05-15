@@ -1,4 +1,4 @@
-﻿namespace org.mpxj.proxy
+﻿namespace MPXJ.Net.Proxy
 {
 	public interface IJavaObjectProxy<M> : IHasJavaObject
 	{

@@ -1,14 +1,48 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net462;net8.0</TargetFrameworks>
-    <RootNamespace>org.mpxj</RootNamespace>
-  </PropertyGroup>
+    <TargetFrameworks>net472;net6.0</TargetFrameworks>
+    <RootNamespace>MPXJ.Net</RootNamespace>
+    <PackageId>MPXJ.Net</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>MPXJ.Net</Title>
+    <Version>12.10.0-beta.2</Version>
+    <Authors>Jon Iles</Authors>
+    <Company />
+    <RepositoryUrl>https://github.com/joniles/MPXJ.Net</RepositoryUrl>
+    <Product>MPXJ.Net</Product>
+    <PackageProjectUrl>https://www.mpxj.org/</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Jon Iles</Copyright>
+    <Description>This package contains the modern .Net version of MPXJ.
 
-  <ItemGroup>
-    <PackageReference Include="net.sf.mpxj" Version="12.9.0" />
-  </ItemGroup>
+The Java version of MPXJ is dynamically retrieved and translated into a .Net assembly using ikvm-maven transparently as part of your project's build. The assembly included in this package wraps this translated version of MPXJ and exposes a pure C# interface to MPXJ's functionality, with standard C# types, properties and naming conventions.</Description>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IKVM.Maven.Sdk" Version="1.6.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="12.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
 </Project>

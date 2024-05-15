@@ -1,6 +1,7 @@
-﻿using org.mpxj.proxy;
+﻿using java.lang;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class UserDefinedField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {
@@ -9,6 +10,11 @@ namespace org.mpxj
         internal UserDefinedField(net.sf.mpxj.UserDefinedField javaObject)
         {
             JavaObject = javaObject;
+        }
+
+        public UserDefinedField(int? id, string internalName, string externalName, FieldTypeClass fieldTypeClass, bool summaryTaskOnly, DataType dataType)
+        {
+            JavaObject = new net.sf.mpxj.UserDefinedField(id.ConvertType(), internalName, externalName, fieldTypeClass.ConvertType(), summaryTaskOnly, dataType.ConvertType());
         }
 
         public int? UniqueID => ((net.sf.mpxj.UserDefinedField)JavaObject).getUniqueID().ConvertType();

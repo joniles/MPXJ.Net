@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using org.mpxj.proxy;
-using sun.tools.jar.resources;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ResourceField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
     {

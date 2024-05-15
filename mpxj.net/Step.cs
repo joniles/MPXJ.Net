@@ -1,8 +1,7 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
-    // TODO: implement builder
     public class Step : IJavaObjectProxy<net.sf.mpxj.Step>
     {
         internal readonly ProxyManager _proxyManager;
@@ -24,6 +23,55 @@ namespace org.mpxj
         public string Description => JavaObject.getDescription();
         public Notes DescriptionObject => _proxyManager.ProxyObject(JavaObject.getDescriptionObject());
         public bool Complete => JavaObject.getComplete();
+
+        public class Builder : IJavaObjectProxy<net.sf.mpxj.Step.Builder>
+        {
+            private readonly ProxyManager _proxyManager;
+            public net.sf.mpxj.Step.Builder JavaObject { get; set; }
+
+            public Builder(Task task)
+            {
+                _proxyManager = task._proxyManager;
+                JavaObject = new net.sf.mpxj.Step.Builder(task.JavaObject);
+            }
+
+            public Builder UniqueID(int? value)
+            {
+                JavaObject.uniqueID(value.ConvertType());
+                return this;
+            }
+
+            public Builder Name(string value)
+            {
+                JavaObject.name(value);
+                return this;
+            }
+
+            public Builder PercentComplete(double? value)
+            {
+                JavaObject.percentComplete(value.ConvertType());
+                return this;
+            }
+
+            public Builder SequenceNumber(int? value)
+            {
+                JavaObject.sequenceNumber(value.ConvertType());
+                return this;
+            }
+
+            public Builder Weight(double? value)
+            {
+                JavaObject.weight(value.ConvertType());
+                return this;
+            }
+
+            public Builder Description(Notes value)
+            {
+                JavaObject.description(value?.JavaObject);
+                return this;
+            }
+
+            public Step Build() => _proxyManager.ProxyObject(JavaObject.build());
+        }
     }
 }
-

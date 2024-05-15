@@ -1,6 +1,7 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
+using System;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
 	public class Availability: IJavaObjectProxy<net.sf.mpxj.Availability>
     {
@@ -13,7 +14,12 @@ namespace org.mpxj
             JavaObject = javaObject;
         }
 
-        public LocalDateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
+        public Availability(DateTime? start, DateTime? end, double? units)
+        {
+            JavaObject = new net.sf.mpxj.Availability(start.ConvertType(), end.ConvertType(), units.ConvertType());
+        }
+
+        public DateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());
 
         public double? Units => JavaObject.getUnits().ConvertType();
     }

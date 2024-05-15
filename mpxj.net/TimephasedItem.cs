@@ -1,7 +1,7 @@
 ﻿using System;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class TimephasedItem<M> : IJavaObjectProxy<net.sf.mpxj.TimephasedItem>
     {

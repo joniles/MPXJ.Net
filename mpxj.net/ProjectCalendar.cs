@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
     {
@@ -66,10 +66,12 @@ namespace org.mpxj
 
         public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
 
+        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptionsWithWorkWeeks());        
+
         public ProjectCalendar Parent
         {
             get => _proxyManager.ProxyObject(JavaObject.getParent());
-            set => JavaObject.setParent(value.JavaObject);
+            set => JavaObject.setParent(value?.JavaObject);
         }
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();

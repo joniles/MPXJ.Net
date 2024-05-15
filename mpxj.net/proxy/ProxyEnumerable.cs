@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {
 	public class ProxyEnumerable<M, N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
     {

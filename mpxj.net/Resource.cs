@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class Resource : AbstractFieldContainer, IProjectEntityWithID, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.Resource>
     {
@@ -139,43 +139,43 @@ namespace org.mpxj
         public Duration Work
         {
             get => _proxyManager.ProxyObject(JavaObject.getWork());
-            set => JavaObject.setWork(value.JavaObject);
+            set => JavaObject.setWork(value?.JavaObject);
         }
 
         public Duration RegularWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRegularWork());
-            set => JavaObject.setRegularWork(value.JavaObject);
+            set => JavaObject.setRegularWork(value?.JavaObject);
         }
 
         public Duration ActualWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualWork());
-            set => JavaObject.setActualWork(value.JavaObject);
+            set => JavaObject.setActualWork(value?.JavaObject);
         }
 
         public Duration OvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getOvertimeWork());
-            set => JavaObject.setOvertimeWork(value.JavaObject);
+            set => JavaObject.setOvertimeWork(value?.JavaObject);
         }
 
         public Duration RemainingWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRemainingWork());
-            set => JavaObject.setRemainingWork(value.JavaObject);
+            set => JavaObject.setRemainingWork(value?.JavaObject);
         }
 
         public Duration ActualOvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualOvertimeWork());
-            set => JavaObject.setActualOvertimeWork(value.JavaObject);
+            set => JavaObject.setActualOvertimeWork(value?.JavaObject);
         }
 
         public Duration RemainingOvertimeWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getRemainingOvertimeWork());
-            set => JavaObject.setRemainingOvertimeWork(value.JavaObject);
+            set => JavaObject.setRemainingOvertimeWork(value?.JavaObject);
         }
 
         public double? PercentWorkComplete
@@ -229,7 +229,7 @@ namespace org.mpxj
         public Duration WorkVariance
         {
             get => _proxyManager.ProxyObject(JavaObject.getWorkVariance());
-            set => JavaObject.setWorkVariance(value.JavaObject);
+            set => JavaObject.setWorkVariance(value?.JavaObject);
         }
 
         public double? CostVariance
@@ -265,7 +265,7 @@ namespace org.mpxj
         public Notes NotesObject
         {
             get => _proxyManager.ProxyObject(JavaObject.getNotesObject());
-            set => JavaObject.setNotesObject(value.JavaObject);
+            set => JavaObject.setNotesObject(value?.JavaObject);
         }
 
         public double? BCWS
@@ -301,13 +301,13 @@ namespace org.mpxj
         public Duration ActualOvertimeWorkProtected
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualOvertimeWorkProtected());
-            set => JavaObject.setActualOvertimeWorkProtected(value.JavaObject);
+            set => JavaObject.setActualOvertimeWorkProtected(value?.JavaObject);
         }
 
         public Duration ActualWorkProtected
         {
             get => _proxyManager.ProxyObject(JavaObject.getActualWorkProtected());
-            set => JavaObject.setActualWorkProtected(value.JavaObject);
+            set => JavaObject.setActualWorkProtected(value?.JavaObject);
         }
 
         public BookingType? BookingType
@@ -337,7 +337,7 @@ namespace org.mpxj
         public ProjectCalendar Calendar
         {
             get => _proxyManager.ProxyObject(JavaObject.getCalendar());
-            set => JavaObject.setCalendar(value.JavaObject);
+            set => JavaObject.setCalendar(value?.JavaObject);
         }
 
         public ProjectCalendar AddCalendar() => _proxyManager.ProxyObject(JavaObject.addCalendar());
@@ -361,7 +361,7 @@ namespace org.mpxj
         public Duration BaselineWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getBaselineWork());
-            set => JavaObject.setBaselineWork(value.JavaObject);
+            set => JavaObject.setBaselineWork(value?.JavaObject);
         }
 
         public int? ID
@@ -397,7 +397,7 @@ namespace org.mpxj
         public Resource ParentResource
         {
             get => _proxyManager.ProxyObject(JavaObject.getParentResource());
-            set => JavaObject.setParentResource(value.JavaObject);
+            set => JavaObject.setParentResource(value?.JavaObject);
         }
 
         public void SetStart(int index, DateTime value) => JavaObject.setStart(index, value.ConvertType());
@@ -583,7 +583,7 @@ namespace org.mpxj
         public Duration BudgetWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getBudgetWork());
-            set => JavaObject.setBudgetWork(value.JavaObject);
+            set => JavaObject.setBudgetWork(value?.JavaObject);
         }
 
         public double? BaselineBudgetCost
@@ -595,7 +595,7 @@ namespace org.mpxj
         public Duration BaselineBudgetWork
         {
             get => _proxyManager.ProxyObject(JavaObject.getBaselineBudgetWork());
-            set => JavaObject.setBaselineBudgetWork(value.JavaObject);
+            set => JavaObject.setBaselineBudgetWork(value?.JavaObject);
         }
 
         public double? GetBaselineBudgetCost(int baselineNumber) => JavaObject.getBaselineBudgetCost(baselineNumber).ConvertType();
@@ -633,7 +633,7 @@ namespace org.mpxj
         public Location Location
         {
             get => _proxyManager.ProxyObject(JavaObject.getLocation());
-            set => JavaObject.setLocation(value.JavaObject);
+            set => JavaObject.setLocation(value?.JavaObject);
         }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
-[assembly: InternalsVisibleTo("mpxj.net.tests")]
+[assembly: InternalsVisibleTo("MPXJ.Net.Tests")]
 
-namespace org.mpxj.proxy
+namespace MPXJ.Net.Proxy
 {    
     internal class ProxyManager
     {
@@ -31,6 +31,31 @@ namespace org.mpxj.proxy
             _objectCache[GetKey(WorkContour.Contoured.JavaObject)] = WorkContour.Contoured;
         }
 
+        /// <summary>
+        /// Handles the case where a .Net object is created outside of
+        /// the proxy manager. Calling this method ensures that the 
+        /// mapping is included in the proxy manager, and so avoids creating
+        /// duplicate .Net objects with later use.
+        /// </summary>
+        /// <typeparam name="M">MPXJ java type</typeparam>
+        /// <param name="o">.Net object</param>
+        /// <returns>Java object</returns>
+        internal M UnProxyObject<M>(IJavaObjectProxy<M> o)
+        {
+            if (o == null)
+            {
+                return default;
+            }
+
+            var key = GetKey(o.JavaObject);
+            if (!_objectCache.ContainsKey(key))
+            {
+                _objectCache[key] = o;
+            }
+
+            return o.JavaObject;
+        }
+
         private N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
         {
             if (o == null)
@@ -48,6 +73,11 @@ namespace org.mpxj.proxy
         }
 
         private string GetKey(object o) => o.GetType().FullName + "." + _idGenerator.GetId(o, out _);
+
+        internal UnitOfMeasure ProxyObject(net.sf.mpxj.UnitOfMeasure value)
+        {
+            return ProxyObject(value, v => new UnitOfMeasure(this, v));
+        }
 
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
         {
@@ -164,14 +194,14 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Location(this, v));
         }
 
-        internal LocalTimeRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
+        internal TimeOnlyRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
         {
-            return ProxyObject(value, v => new LocalTimeRange(v));
+            return ProxyObject(value, v => new TimeOnlyRange(v));
         }
 
-        internal LocalDateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
+        internal DateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
         {
-            return ProxyObject(value, v => new LocalDateTimeRange(v));
+            return ProxyObject(value, v => new DateTimeRange(v));
         }
 
         internal CostRateTableEntry ProxyObject(net.sf.mpxj.CostRateTableEntry value)
@@ -304,11 +334,6 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new FilterContainer(this, v));
         }
 
-        internal EventManager ProxyObject(net.sf.mpxj.EventManager value)
-        {
-            return ProxyObject(value, v => new EventManager(v));
-        }
-
         internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
         {
             return ProxyObject(value, v => new GroupContainer(this, v));
@@ -370,9 +395,9 @@ namespace org.mpxj.proxy
             return ProxyObject(value, v => new Duration(v));
         }
 
-        internal LocalDateRange ProxyObject(net.sf.mpxj.LocalDateRange value)
+        internal DateOnlyRange ProxyObject(net.sf.mpxj.LocalDateRange value)
         {
-            return ProxyObject(value, v => new LocalDateRange(v));
+            return ProxyObject(value, v => new DateOnlyRange(v));
         }
 
         internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)
@@ -385,6 +410,11 @@ namespace org.mpxj.proxy
             if (value is net.sf.mpxj.UserDefinedField udf)
             {
                 return ProxyObject(udf, v => new UserDefinedField(v));
+            }
+
+            if (value.getFieldTypeClass() == net.sf.mpxj.FieldTypeClass.UNKNOWN)
+            {
+                return ProxyObject(value, v => new UnknownFieldType(v));
             }
 
             return EnumExtensionMethods.FieldTypeDictionary[value];
@@ -433,6 +463,11 @@ namespace org.mpxj.proxy
         internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)
         {
             return ProxyObject(value, v => new LocationContainer(this, v));
+        }
+
+        internal UnitOfMeasureContainer ProxyObject(net.sf.mpxj.UnitOfMeasureContainer value)
+        {
+            return ProxyObject(value, v => new UnitOfMeasureContainer(this, v));
         }
 
         internal object GenericProxyObject(object o)

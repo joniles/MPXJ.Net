@@ -1,10 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
-using org.mpxj.reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
-	public class CostRateTableTest
+    public class CostRateTableTest
 	{
         [Test]
         public void GeneralTests()

@@ -1,9 +1,8 @@
 ﻿using NUnit.Framework;
-using org.mpxj.reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
-	public class LocationContainerTest
+    public class LocationContainerTest
 	{
         [Test]
         public void MethodTest()

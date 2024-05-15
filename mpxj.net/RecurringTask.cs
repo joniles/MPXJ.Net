@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
 	public class RecurringTask : RecurringData, IJavaObjectProxy<net.sf.mpxj.RecurringTask>
 	{
@@ -15,7 +15,7 @@ namespace org.mpxj
         public Duration Duration
         {
             get => _proxyManager.ProxyObject(JavaObject.getDuration());
-            set => JavaObject.setDuration(value.JavaObject);
+            set => JavaObject.setDuration(value?.JavaObject);
         }
     }
 }

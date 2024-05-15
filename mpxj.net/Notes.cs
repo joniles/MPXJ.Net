@@ -1,7 +1,7 @@
 ﻿
-using org.mpxj.proxy;
+using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     // TODO: implement the full Notes hierarchy
 	public class Notes : IJavaObjectProxy<net.sf.mpxj.Notes>

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     internal static class EnumExtensionMethods
     {
@@ -23,12 +23,6 @@ namespace org.mpxj
                 FieldTypeDictionary[field.JavaObject] = field;
             }
         }
-
-        //internal static T RegisterFieldType<T>(net.sf.mpxj.FieldType javaFieldType, T fieldType) where T : IFieldType
-        //{
-        //    FieldTypeDictionary[javaFieldType] = fieldType;
-        //    return fieldType;
-        //}
 
         // DayType
         public static net.sf.mpxj.DayType ConvertType(this DayType value)
@@ -557,6 +551,38 @@ namespace org.mpxj
         public static ViewType? ConvertType(this net.sf.mpxj.ViewType value)
         {
             return value == null ? (ViewType?)null : (ViewType)value.ordinal();
+        }
+
+        // SaveVersion
+        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion value)
+        {
+            return net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion? value)
+        {
+            return value == null ? null : net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+        }
+
+        public static SaveVersion? ConvertType(this net.sf.mpxj.mspdi.SaveVersion value)
+        {
+            return value == null ? (SaveVersion?)null : (SaveVersion)value.ordinal();
+        }
+
+        // FileFormat
+        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat value)
+        {
+            return net.sf.mpxj.writer.FileFormat.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat? value)
+        {
+            return value == null ? null : net.sf.mpxj.writer.FileFormat.values()[(int)value];
+        }
+
+        public static FileFormat? ConvertType(this net.sf.mpxj.writer.FileFormat value)
+        {
+            return value == null ? (FileFormat?)null : (FileFormat)value.ordinal();
         }
     }
 }

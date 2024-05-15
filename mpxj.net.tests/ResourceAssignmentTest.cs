@@ -1,8 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using org.mpxj.reader;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ResourceAssignmentTest
     {
@@ -645,6 +644,14 @@ namespace org.mpxj
             assignment.VariableRateUnits = TimeUnit.Hours;
 
             assignment.WorkContour = WorkContour.Flat;
+            Assert.That(assignment.WorkContour, Is.EqualTo(WorkContour.Flat));
+
+            // Test UnProxyObject
+            var contour = new WorkContour(1, "test", false, new double[] { 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 });
+            assignment.WorkContour = contour;
+            Assert.That(assignment.WorkContour, Is.EqualTo(contour));
+            assignment.WorkContour = contour;
+            Assert.That(assignment.WorkContour, Is.EqualTo(contour));
         }
     }
 }

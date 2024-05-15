@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mpxj.net", "mpxj.net\mpxj.net.csproj", "{5BEAE73E-00FB-4A3B-9497-4FC85B07E5E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MPXJ.Net", "MPXJ.Net\MPXJ.Net.csproj", "{5BEAE73E-00FB-4A3B-9497-4FC85B07E5E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mpxj.net.tests", "mpxj.net.tests\mpxj.net.tests.csproj", "{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MPXJ.Net.Tests", "MPXJ.Net.Tests\MPXJ.Net.Tests.csproj", "{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPXJ.Net.Samples", "MPXJ.Net.Samples\MPXJ.Net.Samples.csproj", "{2EFC2E40-151E-4C7D-82CE-BC8DDFE0601C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E5E239-5A12-4CB3-AAF8-A5CE2766400B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFC2E40-151E-4C7D-82CE-BC8DDFE0601C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFC2E40-151E-4C7D-82CE-BC8DDFE0601C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFC2E40-151E-4C7D-82CE-BC8DDFE0601C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFC2E40-151E-4C7D-82CE-BC8DDFE0601C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,12 +38,11 @@ Global
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
-		$0.TextStylePolicy = $2
+		$0.TextStylePolicy = $4
 		$2.inheritsSet = null
 		$2.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $3
 		$3.scope = text/x-csharp
-		$0.TextStylePolicy = $4
 		$4.FileWidth = 80
 		$4.TabsToSpaces = True
 		$4.scope = text/plain

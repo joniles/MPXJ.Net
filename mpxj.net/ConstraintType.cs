@@ -1,4 +1,4 @@
-﻿namespace org.mpxj
+﻿namespace MPXJ.Net
 {
 	public enum ConstraintType
 	{
@@ -7,7 +7,7 @@
         MustStartOn,
         MustFinishOn,
         StartNoEarlierThan,
-        FtartNoLaterThan,
+        StartNoLaterThan,
         FinishNoEarlierThan,
         FinishNoLaterThan,
         StartOn,

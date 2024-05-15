@@ -1,8 +1,8 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
-	public class ProjectEntity
+	public abstract class ProjectEntity
 	{
 		internal readonly ProxyManager _proxyManager;
 

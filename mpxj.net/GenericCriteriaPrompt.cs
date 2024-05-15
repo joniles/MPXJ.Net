@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class GenericCriteriaPrompt : IJavaObjectProxy<net.sf.mpxj.GenericCriteriaPrompt>
     {

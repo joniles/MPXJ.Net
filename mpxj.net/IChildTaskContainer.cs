@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
 	public interface IChildTaskContainer
 	{

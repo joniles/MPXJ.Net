@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class TimephasedCost : TimephasedItem<java.lang.Number>, IJavaObjectProxy<net.sf.mpxj.TimephasedCost>
     {

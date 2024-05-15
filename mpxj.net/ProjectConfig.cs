@@ -1,6 +1,6 @@
-﻿using org.mpxj.proxy;
+﻿using MPXJ.Net.Proxy;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class ProjectConfig : IJavaObjectProxy<net.sf.mpxj.ProjectConfig>
     {
@@ -82,7 +82,7 @@ namespace org.mpxj
         public IBaselineStrategy BaselineStrategy
         {            
             get => JavaObject.getBaselineStrategy();
-            set => JavaObject.setBaselineStrategy(value.JavaObject);
+            set => JavaObject.setBaselineStrategy(value?.JavaObject);
         }
         */
 

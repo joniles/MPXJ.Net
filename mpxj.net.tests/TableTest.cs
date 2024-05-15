@@ -1,8 +1,6 @@
-﻿using System;
-using NUnit.Framework;
-using org.mpxj.reader;
+﻿using NUnit.Framework;
 
-namespace org.mpxj
+namespace MPXJ.Net
 {
     public class TableTest
     {
