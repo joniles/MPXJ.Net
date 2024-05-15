@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<project name="MPXJ.Net" default="archive" basedir=".">
+	<property environment="env"/>
+	<property name="current.version" value="12.10.0-beta.2" />
+
+	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
+		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
+		               match="&lt;Version&gt;.+&lt;/Version&gt;"
+		               replace="&lt;Version&gt;${current.version}&lt;/Version&gt;"
+		               byline="true"/>
+	</target>
+
+	<target name="clean">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line="clean MPXJ.Net.sln" />
+		</exec>
+	</target>
+
+	<target name="build" depends="clean, update-version-numbers">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line="build --configuration Release MPXJ.Net.sln" />
+		</exec>
+	</target>
+
+	<target name="nuget-test-deploy" depends="build" description="Deploy to NuGet test environment">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line="nuget push MPXJ.Net\bin\Release\MPXJ.Net.${current.version}.nupkg --api-key ${env.NUGETTEST_API_KEY} --source https://apiint.nugettest.org/v3/index.json" />
+		</exec>
+	</target>
+
+	<target name="github-deploy" depends="build" description="Deploy to GitHub">
+		<exec executable="gh" failonerror="true">
+			<arg line='release create -t "Version ${current.version}" v${current.version}'/>
+		</exec>
+	</target>
+
+	<target name="deploy" depends="nuget-test-deploy,github-deploy"/>
+
+	<target name="coverage">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line='test /p:AltCover=true /p:AltCoverAssemblyExcludeFilter="MPXJ.Net.Tests|AltCover.Monitor|NUnit3.TestAdapter|Microsoft|testhost" -f net6.0'/>
+		</exec>
+		<exec executable="reportgenerator" dir="${basedir}" failonerror="true">
+			<arg line='-reports:MPXJ.Net.Tests/coverage.net6.0.xml -targetdir:coverage'/>
+		</exec>
+	</target>
+</project>
