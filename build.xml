@@ -2,13 +2,19 @@
 
 <project name="MPXJ.Net" default="archive" basedir=".">
 	<property environment="env"/>
-	<property name="current.version" value="12.10.0-beta.2" />
+	<property name="mpxj.version" value="12.10.0" />
+	<property name="mpxj.net.version" value="${mpxj.version}-beta.2" />
 
 	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
 		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
 		               match="&lt;Version&gt;.+&lt;/Version&gt;"
-		               replace="&lt;Version&gt;${current.version}&lt;/Version&gt;"
+		               replace="&lt;Version&gt;${mpxj.net.version}&lt;/Version&gt;"
 		               byline="true"/>
+
+		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
+		       match='Include="net.sf.mpxj:mpxj" Version=".+"'
+		       replace='Include="net.sf.mpxj:mpxj" Version="${mpxj.version}"'
+		       byline="true"/>
 	</target>
 
 	<target name="clean">
@@ -25,13 +31,13 @@
 
 	<target name="nuget-test-deploy" depends="build" description="Deploy to NuGet test environment">
 		<exec executable="dotnet" dir="${basedir}" failonerror="true">
-			<arg line="nuget push MPXJ.Net\bin\Release\MPXJ.Net.${current.version}.nupkg --api-key ${env.NUGETTEST_API_KEY} --source https://apiint.nugettest.org/v3/index.json" />
+			<arg line="nuget push MPXJ.Net\bin\Release\MPXJ.Net.${mpxj.net.version}.nupkg --api-key ${env.NUGETTEST_API_KEY} --source https://apiint.nugettest.org/v3/index.json" />
 		</exec>
 	</target>
 
 	<target name="github-deploy" depends="build" description="Deploy to GitHub">
 		<exec executable="gh" failonerror="true">
-			<arg line='release create -t "Version ${current.version}" v${current.version}'/>
+			<arg line='release create -t "Version ${mpxj.net.version}" v${mpxj.net.version}'/>
 		</exec>
 	</target>
 
