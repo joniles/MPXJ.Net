@@ -22,7 +22,7 @@ for which you kind find details in the
 documentation on the [MPXJ website](https://www.mpxj.org/).
 The main differences between the original Java API and the API exposed by this
 assembly are that getter and setter methods have been replace by properties,
-all classes you need to work with are in the `MPXJ.Net ` namespace, rather
+all classes you need to work with are in the `MPXJ.Net` namespace, rather
 than being spread across a number of Java packages, and finally properties
 and method names follow C# naming conventions rather than Java naming
 conventions.
