@@ -8,5 +8,11 @@
         }
 
         public new net.sf.mpxj.sage.SageReader JavaObject => (net.sf.mpxj.sage.SageReader)base.JavaObject;
+
+        public bool IgnoreErrors
+        {
+            get => JavaObject.getIgnoreErrors();
+            set => JavaObject.setIgnoreErrors(value);
+        }
     }
 }
