@@ -11,8 +11,8 @@ namespace MPXJ.Net
 
         public CultureInfo Culture
         {
-            get => CultureInfo.GetCultureInfoByIetfLanguageTag(JavaObject.getLocale().toLanguageTag());
-            set => java.util.Locale.forLanguageTag(value.IetfLanguageTag);
+            get => JavaObject.getLocale().ConvertType();
+            set => value.ConvertType();
         }
 
         public bool UseCultureDefaults

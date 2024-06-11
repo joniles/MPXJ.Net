@@ -1,6 +1,5 @@
 # TODO
 
-* Test CultureInfo/Locale conversion and MPXReader.SupportedLocales
 * Implement the `Notes` class hierarchy
 * Implement `ProjectReaderProxy` class and associated methods from `UniversalProjectReader`.
 * Implement `BaselineStratgey` class hierarchy.

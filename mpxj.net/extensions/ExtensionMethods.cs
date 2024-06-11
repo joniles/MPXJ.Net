@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using MPXJ.Net.Proxy;
 
@@ -163,6 +164,16 @@ namespace MPXJ.Net
         public static java.nio.charset.Charset ConvertType(this Encoding encoding)
         {
             return java.nio.charset.Charset.forName(encoding.WebName);
+        }
+
+        public static CultureInfo ConvertType(this java.util.Locale value)
+        {
+            return CultureInfo.GetCultureInfoByIetfLanguageTag(value.toLanguageTag());
+        }
+
+        public static java.util.Locale ConvertType(this CultureInfo value)
+        {
+            return java.util.Locale.forLanguageTag(value.IetfLanguageTag);
         }
 
         public static object GenericJavaObject(this object o)
