@@ -27,7 +27,7 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
   </ItemGroup>
 
   <ItemGroup>
-    <MavenReference Include="net.sf.mpxj:mpxj" Version="12.10.0" />
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="12.10.2" />
   </ItemGroup>
 
   <ItemGroup>
