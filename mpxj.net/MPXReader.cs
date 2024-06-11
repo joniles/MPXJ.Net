@@ -20,13 +20,13 @@ namespace MPXJ.Net
 
         public CultureInfo Culture
         {
-            get => CultureInfo.GetCultureInfoByIetfLanguageTag(JavaObject.getLocale().toLanguageTag());
-            set => java.util.Locale.forLanguageTag(value.IetfLanguageTag);
+            get => JavaObject.getLocale().ConvertType();
+            set => value.ConvertType();
         }
 
         public static CultureInfo[] SupportedCultures
         {
-            get => net.sf.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => CultureInfo.GetCultureInfoByIetfLanguageTag(l.toLanguageTag())).ToArray();
+            get => net.sf.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => l.ConvertType()).ToArray();
         }
     }
 }
