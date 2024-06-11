@@ -10,8 +10,8 @@ namespace MPXJ.Net
 
         public Encoding Charset
         {
-            get => Encoding.GetEncoding(JavaObject.getCharset().name());
-            set => java.nio.charset.Charset.forName(value.EncodingName);
+            get => JavaObject.getCharset().ConvertType();
+            set => JavaObject.setCharset(value.ConvertType());
         }
     }
 }

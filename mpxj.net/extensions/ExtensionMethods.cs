@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -152,6 +153,16 @@ namespace MPXJ.Net
         public static java.time.LocalDate ConvertType(this DateOnly t)
         {
             return java.time.LocalDate.of(t.Year, t.Month, t.Day);
+        }
+
+        public static Encoding ConvertType(this java.nio.charset.Charset charset)
+        {
+            return Encoding.GetEncoding(charset.name());
+        }
+
+        public static java.nio.charset.Charset ConvertType(this Encoding encoding)
+        {
+            return java.nio.charset.Charset.forName(encoding.WebName);
         }
 
         public static object GenericJavaObject(this object o)
