@@ -241,6 +241,11 @@ namespace MPXJ.Net.Proxy
                 return ProxyObject(p);
             }
 
+            if (value is net.sf.mpxj.StructuredNotes s)
+            {
+                return ProxyObject(s);
+            }
+
             return ProxyObject(value, v => new Notes(v));
         }
 
@@ -256,7 +261,12 @@ namespace MPXJ.Net.Proxy
 
         internal ParentNotes ProxyObject(net.sf.mpxj.ParentNotes value)
         {
-            return ProxyObject(value, v => new ParentNotes(v));
+            return ProxyObject(value, v => new ParentNotes(this, v));
+        }
+
+        internal StructuredNotes ProxyObject(net.sf.mpxj.StructuredNotes value)
+        {
+            return ProxyObject(value, v => new StructuredNotes(this, v));
         }
 
         internal ResourceAssignmentWorkgroupFields ProxyObject(net.sf.mpxj.ResourceAssignmentWorkgroupFields value)
@@ -548,6 +558,9 @@ namespace MPXJ.Net.Proxy
 
                 case "net.sf.mpxj.ParentNotes":
                     return ProxyObject((net.sf.mpxj.ParentNotes)o);
+
+                case "net.sf.mpxj.StructuredNotes":
+                    return ProxyObject((net.sf.mpxj.StructuredNotes)o);
 
                 case "net.sf.mpxj.Priority":
                     return ProxyObject((net.sf.mpxj.Priority)o);

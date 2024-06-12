@@ -9,9 +9,15 @@ namespace MPXJ.Net
 
         public new net.sf.mpxj.ParentNotes JavaObject => (net.sf.mpxj.ParentNotes)base.JavaObject;
 
-        internal ParentNotes(net.sf.mpxj.ParentNotes value) : base(value) { }
+        internal ParentNotes(ProxyManager proxyManager, net.sf.mpxj.ParentNotes value) : base(value)
+        { 
+            _proxyManager = proxyManager;
+        }
 
-        public ParentNotes(IList<Notes> childNotes) : base(new net.sf.mpxj.ParentNotes(childNotes.ConvertType())) { }
+        public ParentNotes(ProjectFile file, IList<Notes> childNotes) : base(new net.sf.mpxj.ParentNotes(childNotes.ConvertType())) 
+        {
+            _proxyManager = file._proxyManager;
+        }
 
         public IList<Notes> ChildNotes => _proxyManager.ProxyList<net.sf.mpxj.Notes, Notes>(m => _proxyManager.ProxyObject(m), n => null, JavaObject.getChildNotes());
     }

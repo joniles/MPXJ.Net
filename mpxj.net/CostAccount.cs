@@ -21,6 +21,8 @@ namespace MPXJ.Net
 
         public string Notes => JavaObject.getNotes();
 
+        public Notes NotesObject => _proxyManager.ProxyObject(JavaObject.getNotesObject());
+
         public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
         public int? ParentUniqueID => JavaObject.getParentUniqueID().ConvertType();

@@ -8,7 +8,7 @@ namespace MPXJ.Net
 
         internal RtfNotes(net.sf.mpxj.RtfNotes value) : base(value) { }
 
-        public RtfNotes(string html) : base(new net.sf.mpxj.RtfNotes(html)) { }
+        public RtfNotes(string rtf) : base(new net.sf.mpxj.RtfNotes(rtf)) { }
 
         public string Rtf => JavaObject.getRtf();
     }
