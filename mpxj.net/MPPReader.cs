@@ -2,6 +2,8 @@
 {
     public class MPPReader : AbstractProjectReader
     {
+        internal MPPReader(net.sf.mpxj.mpp.MPPReader reader) : base(reader) { }
+
         public MPPReader() : base(new net.sf.mpxj.mpp.MPPReader()) { }
 
         public new net.sf.mpxj.mpp.MPPReader JavaObject => (net.sf.mpxj.mpp.MPPReader)base.JavaObject;

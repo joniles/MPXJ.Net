@@ -7,6 +7,8 @@ namespace MPXJ.Net
 {
     internal class PrimaveraXERFileReader : AbstractProjectReader
     {
+        internal PrimaveraXERFileReader(net.sf.mpxj.primavera.PrimaveraXERFileReader reader) : base(reader) { }
+
         public PrimaveraXERFileReader() : base(new net.sf.mpxj.primavera.PrimaveraXERFileReader()) { }
 
         public new net.sf.mpxj.primavera.PrimaveraXERFileReader JavaObject => (net.sf.mpxj.primavera.PrimaveraXERFileReader)base.JavaObject;

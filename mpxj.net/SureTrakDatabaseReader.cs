@@ -5,6 +5,8 @@ namespace MPXJ.Net
 {
     public class SureTrakDatabaseReader : AbstractProjectReader
     {
+        internal SureTrakDatabaseReader(net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader reader) : base(reader) { }
+
         public SureTrakDatabaseReader() : base(new net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader()) { }
 
         public new net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader JavaObject => (net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader)base.JavaObject;

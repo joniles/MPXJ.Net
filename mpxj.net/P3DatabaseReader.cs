@@ -5,6 +5,8 @@ namespace MPXJ.Net
 {
     public class P3DatabaseReader : AbstractProjectReader
     {
+        internal P3DatabaseReader(net.sf.mpxj.primavera.p3.P3DatabaseReader reader) : base(reader) { }
+
         public P3DatabaseReader() : base(new net.sf.mpxj.primavera.p3.P3DatabaseReader()) { }
 
         public new net.sf.mpxj.primavera.p3.P3DatabaseReader JavaObject => (net.sf.mpxj.primavera.p3.P3DatabaseReader)base.JavaObject;

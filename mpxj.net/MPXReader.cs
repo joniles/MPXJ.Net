@@ -5,6 +5,8 @@ namespace MPXJ.Net
 {
     public class MPXReader : AbstractProjectReader
     {
+        internal MPXReader(net.sf.mpxj.mpx.MPXReader reader) : base(reader) { }
+
         public MPXReader() : base(new net.sf.mpxj.mpx.MPXReader()) { }
 
         public new net.sf.mpxj.mpx.MPXReader JavaObject => (net.sf.mpxj.mpx.MPXReader)base.JavaObject;

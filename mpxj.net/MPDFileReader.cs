@@ -5,6 +5,8 @@ namespace MPXJ.Net
 {
     public class MPDFileReader : AbstractProjectReader
     {
+        internal MPDFileReader(net.sf.mpxj.mpd.MPDFileReader reader) : base(reader) { }
+
         public MPDFileReader() : base(new net.sf.mpxj.mpd.MPDFileReader()) { }
 
         public new net.sf.mpxj.mpd.MPDFileReader JavaObject => (net.sf.mpxj.mpd.MPDFileReader)base.JavaObject;
