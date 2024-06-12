@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using MPXJ.Net.Proxy;
 
@@ -174,6 +175,16 @@ namespace MPXJ.Net
         public static java.util.Locale ConvertType(this CultureInfo value)
         {
             return java.util.Locale.forLanguageTag(value.IetfLanguageTag);
+        }
+
+        public static java.util.List ConvertType<N>(this IList<N> list) where N : IHasJavaObject
+        {
+            if (list is IJavaObjectProxy<java.util.List> proxy)
+            {
+                return proxy.JavaObject;
+            }
+
+            return java.util.Arrays.asList(list.Select(n => n.GenericJavaObject()).ToArray());
         }
 
         public static object GenericJavaObject(this object o)

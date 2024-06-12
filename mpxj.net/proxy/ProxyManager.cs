@@ -226,7 +226,47 @@ namespace MPXJ.Net.Proxy
 
         internal Notes ProxyObject(net.sf.mpxj.Notes value)
         {
+            if (value is net.sf.mpxj.HtmlNotes h)
+            {
+                return ProxyObject(h);
+            }
+
+            if (value is net.sf.mpxj.RtfNotes r)
+            {
+                return ProxyObject(r);
+            }
+
+            if (value is net.sf.mpxj.ParentNotes p)
+            {
+                return ProxyObject(p);
+            }
+
+            if (value is net.sf.mpxj.StructuredNotes s)
+            {
+                return ProxyObject(s);
+            }
+
             return ProxyObject(value, v => new Notes(v));
+        }
+
+        internal HtmlNotes ProxyObject(net.sf.mpxj.HtmlNotes value)
+        {
+            return ProxyObject(value, v => new HtmlNotes(v));
+        }
+
+        internal RtfNotes ProxyObject(net.sf.mpxj.RtfNotes value)
+        {
+            return ProxyObject(value, v => new RtfNotes(v));
+        }
+
+        internal ParentNotes ProxyObject(net.sf.mpxj.ParentNotes value)
+        {
+            return ProxyObject(value, v => new ParentNotes(this, v));
+        }
+
+        internal StructuredNotes ProxyObject(net.sf.mpxj.StructuredNotes value)
+        {
+            return ProxyObject(value, v => new StructuredNotes(this, v));
         }
 
         internal ResourceAssignmentWorkgroupFields ProxyObject(net.sf.mpxj.ResourceAssignmentWorkgroupFields value)
@@ -510,8 +550,20 @@ namespace MPXJ.Net.Proxy
                 case "net.sf.mpxj.ProjectCalendarHours":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
 
+                case "net.sf.mpxj.Notes":
+                    return ProxyObject((net.sf.mpxj.Notes)o);
+
+                case "net.sf.mpxj.HtmlNotes":
+                    return ProxyObject((net.sf.mpxj.HtmlNotes)o);
+
                 case "net.sf.mpxj.RtfNotes":
                     return ProxyObject((net.sf.mpxj.RtfNotes)o);
+
+                case "net.sf.mpxj.ParentNotes":
+                    return ProxyObject((net.sf.mpxj.ParentNotes)o);
+
+                case "net.sf.mpxj.StructuredNotes":
+                    return ProxyObject((net.sf.mpxj.StructuredNotes)o);
 
                 case "net.sf.mpxj.Priority":
                     return ProxyObject((net.sf.mpxj.Priority)o);
