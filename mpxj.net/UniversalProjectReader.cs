@@ -44,10 +44,7 @@ namespace MPXJ.Net
             }
         }
 
-        public UniversalProjectReader()
-        {
-            base.JavaObject = new net.sf.mpxj.reader.UniversalProjectReader();
-        }
+        public UniversalProjectReader() : base(new net.sf.mpxj.reader.UniversalProjectReader()) { }
 
         public new net.sf.mpxj.reader.UniversalProjectReader JavaObject => (net.sf.mpxj.reader.UniversalProjectReader)base.JavaObject;
 
