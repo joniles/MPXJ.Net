@@ -3,7 +3,6 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    // TODO: implement the full Notes hierarchy
 	public class Notes : IJavaObjectProxy<net.sf.mpxj.Notes>
     {
         public net.sf.mpxj.Notes JavaObject { get; }
