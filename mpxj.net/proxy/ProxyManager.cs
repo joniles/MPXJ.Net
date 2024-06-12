@@ -550,6 +550,9 @@ namespace MPXJ.Net.Proxy
                 case "net.sf.mpxj.ProjectCalendarHours":
                     return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
 
+                case "net.sf.mpxj.Notes":
+                    return ProxyObject((net.sf.mpxj.Notes)o);
+
                 case "net.sf.mpxj.HtmlNotes":
                     return ProxyObject((net.sf.mpxj.HtmlNotes)o);
 
