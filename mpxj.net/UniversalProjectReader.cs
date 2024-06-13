@@ -7,7 +7,7 @@ using System.Linq;
 namespace MPXJ.Net
 {
     public class UniversalProjectReader : AbstractProjectReader
-    {
+    {        
         public interface IProjectReaderProxy : IDisposable
         {
             IProjectReader ProjectReader { get; }
@@ -19,6 +19,8 @@ namespace MPXJ.Net
 
         private class ProjectReaderProxy : IProjectReaderProxy, IJavaObjectProxy<net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy>
         {
+            private readonly ReaderProxyManager _proxyManager = new ReaderProxyManager();
+
             public net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy JavaObject { get; }
 
             internal ProjectReaderProxy(net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy javaObject)
@@ -26,7 +28,7 @@ namespace MPXJ.Net
                 JavaObject = javaObject;
             }
 
-            IProjectReader IProjectReaderProxy.ProjectReader => throw new NotImplementedException();
+            IProjectReader IProjectReaderProxy.ProjectReader => (IProjectReader)_proxyManager.GenericProxyObject(JavaObject.getProjectReader());
 
             void IDisposable.Dispose()
             {

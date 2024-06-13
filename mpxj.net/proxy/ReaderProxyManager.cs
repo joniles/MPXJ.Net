@@ -1,4 +1,6 @@
-﻿namespace MPXJ.Net.Proxy
+﻿using System;
+
+namespace MPXJ.Net.Proxy
 {
     internal class ReaderProxyManager : AbstractProxyManager
     {
@@ -128,6 +130,96 @@
         internal TurboProjectReader ProxyObject(net.sf.mpxj.turboproject.TurboProjectReader value)
         {
             return ProxyObject(value, v => new TurboProjectReader(v));
+        }
+
+        internal object GenericProxyObject(object o)
+        {
+            if (o == null)
+            {
+                return null;
+            }
+
+            var key = o.GetType().FullName;
+            switch (key)
+            {
+                case "net.sf.mpxj.asta.AstaFileReader":
+                    return ProxyObject((net.sf.mpxj.asta.AstaFileReader)o);
+
+                case "net.sf.mpxj.conceptdraw.ConceptDrawProjectReader":
+                    return ProxyObject((net.sf.mpxj.conceptdraw.ConceptDrawProjectReader)o);
+
+                case "net.sf.mpxj.ganttdesigner.GanttDesignerReader":
+                    return ProxyObject((net.sf.mpxj.ganttdesigner.GanttDesignerReader)o);
+
+                case "net.sf.mpxj.ganttproject.GanttProjectReader":
+                    return ProxyObject((net.sf.mpxj.ganttproject.GanttProjectReader)o);
+
+                case "net.sf.mpxj.merlin.MerlinReader":
+                    return ProxyObject((net.sf.mpxj.merlin.MerlinReader)o);
+
+                case "net.sf.mpxj.mpd.MPDFileReader":
+                    return ProxyObject((net.sf.mpxj.mpd.MPDFileReader)o);
+
+                case "net.sf.mpxj.mpp.MPPReader":
+                    return ProxyObject((net.sf.mpxj.mpp.MPPReader)o);
+
+                case "net.sf.mpxj.mpx.MPXReader":
+                    return ProxyObject((net.sf.mpxj.mpx.MPXReader)o);
+
+                case "net.sf.mpxj.mspdi.MSPDIReader":
+                    return ProxyObject((net.sf.mpxj.mspdi.MSPDIReader)o);
+
+                case "net.sf.mpxj.openplan.OpenPlanReader":
+                    return ProxyObject((net.sf.mpxj.openplan.OpenPlanReader)o);
+
+                case "net.sf.mpxj.primavera.p3.P3DatabaseReader":
+                    return ProxyObject((net.sf.mpxj.primavera.p3.P3DatabaseReader)o);
+
+                case "net.sf.mpxj.primavera.p3.P3PRXFileReader":
+                    return ProxyObject((net.sf.mpxj.primavera.p3.P3PRXFileReader)o);
+
+                case "net.sf.mpxj.phoenix.PhoenixReader":
+                    return ProxyObject((net.sf.mpxj.phoenix.PhoenixReader)o);
+
+                case "net.sf.mpxj.planner.PlannerReader":
+                    return ProxyObject((net.sf.mpxj.planner.PlannerReader)o);
+
+                case "net.sf.mpxj.primavera.PrimaveraDatabaseFileReader":
+                    return ProxyObject((net.sf.mpxj.primavera.PrimaveraDatabaseFileReader)o);
+
+                case "net.sf.mpxj.primavera.PrimaveraPMFileReader":
+                    return ProxyObject((net.sf.mpxj.primavera.PrimaveraPMFileReader)o);
+
+                case "net.sf.mpxj.primavera.PrimaveraXERFileReader":
+                    return ProxyObject((net.sf.mpxj.primavera.PrimaveraXERFileReader)o);
+
+                case "net.sf.mpxj.projectcommander.ProjectCommanderReader":
+                    return ProxyObject((net.sf.mpxj.projectcommander.ProjectCommanderReader)o);
+
+                case "net.sf.mpxj.projectlibre.ProjectLibreReader":
+                    return ProxyObject((net.sf.mpxj.projectlibre.ProjectLibreReader)o);
+
+                case "net.sf.mpxj.sage.SageReader":
+                    return ProxyObject((net.sf.mpxj.sage.SageReader)o);
+
+                case "net.sf.mpxj.sdef.SDEFReader":
+                    return ProxyObject((net.sf.mpxj.sdef.SDEFReader)o);
+
+                case "net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader":
+                    return ProxyObject((net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader)o);
+
+                case "net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader":
+                    return ProxyObject((net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader)o);
+
+                case "net.sf.mpxj.synchro.SynchroReader":
+                    return ProxyObject((net.sf.mpxj.synchro.SynchroReader)o);
+
+                case "net.sf.mpxj.turboproject.TurboProjectReader":
+                    return ProxyObject((net.sf.mpxj.turboproject.TurboProjectReader)o);
+
+            }
+
+            throw new NotSupportedException();
         }
     }
 }
