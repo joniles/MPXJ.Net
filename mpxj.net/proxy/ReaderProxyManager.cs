@@ -13,10 +13,12 @@ namespace MPXJ.Net.Proxy
         {
             return ProxyObject(value, v => new ConceptDrawProjectReader(v));
         }
+
         internal FastTrackReader ProxyObject(net.sf.mpxj.fasttrack.FastTrackReader value)
         {
             return ProxyObject(value, v => new FastTrackReader(v));
         }
+
         internal GanttDesignerReader ProxyObject(net.sf.mpxj.ganttdesigner.GanttDesignerReader value)
         {
             return ProxyObject(value, v => new GanttDesignerReader(v));
