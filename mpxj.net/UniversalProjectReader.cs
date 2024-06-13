@@ -7,7 +7,7 @@ using System.Linq;
 namespace MPXJ.Net
 {
     public class UniversalProjectReader : AbstractProjectReader
-    {        
+    {
         public interface IProjectReaderProxy : IDisposable
         {
             IProjectReader ProjectReader { get; }
