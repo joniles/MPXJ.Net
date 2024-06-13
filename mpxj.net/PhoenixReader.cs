@@ -2,10 +2,9 @@
 {
     public class PhoenixReader : AbstractProjectReader
     {
-        public PhoenixReader()
-        {
-            base.JavaObject = new net.sf.mpxj.phoenix.PhoenixReader();
-        }
+        internal PhoenixReader(net.sf.mpxj.phoenix.PhoenixReader reader) : base(reader) { }
+
+        public PhoenixReader() : base(new net.sf.mpxj.phoenix.PhoenixReader()) { }
 
         public new net.sf.mpxj.phoenix.PhoenixReader JavaObject => (net.sf.mpxj.phoenix.PhoenixReader)base.JavaObject;
 

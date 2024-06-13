@@ -2,10 +2,9 @@
 {
     internal class ProjectCommanderReader : AbstractProjectReader
     {
-        public ProjectCommanderReader()
-        {
-            base.JavaObject = new net.sf.mpxj.projectcommander.ProjectCommanderReader();
-        }
+        internal ProjectCommanderReader(net.sf.mpxj.projectcommander.ProjectCommanderReader reader) : base(reader) { }
+
+        public ProjectCommanderReader() : base(new net.sf.mpxj.projectcommander.ProjectCommanderReader()) { }
 
         public new net.sf.mpxj.projectcommander.ProjectCommanderReader JavaObject => (net.sf.mpxj.projectcommander.ProjectCommanderReader)base.JavaObject;
     }

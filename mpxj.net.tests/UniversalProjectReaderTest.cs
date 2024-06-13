@@ -6,7 +6,7 @@ namespace MPXJ.Net
     public class UniversalProjectReaderTests
     {
         [Test]
-        public void Test1()
+        public void ReadMethodTests()
         {
             var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
             Assert.That(project, Is.Not.Null);
@@ -27,6 +27,40 @@ namespace MPXJ.Net
             {
                 projects = new UniversalProjectReader().ReadAll(stream2);
                 Assert.That(projects, Has.Count.EqualTo(1));
+            }
+        }
+
+        [Test]
+        public void ProjectReaderProxyTests()
+        {
+            var reader = new UniversalProjectReader();
+
+            using (var proxy = reader.GetProjectReaderProxy("TestData/Sample1.mpp"))
+            {
+                Assert.That(proxy.ProjectReader, Is.TypeOf(typeof(MPPReader)));
+                var project = proxy.Read();
+                Assert.That(project, Is.Not.Null);
+            }
+
+            using (var proxy = reader.GetProjectReaderProxy("TestData/Sample1.mpp"))
+            {
+                Assert.That(proxy.ProjectReader, Is.TypeOf(typeof(MPPReader)));
+                var projectList = proxy.ReadAll();
+                Assert.That(projectList, Has.Count.EqualTo(1));
+            }
+
+            using (var proxy = reader.GetProjectReaderProxy("TestData/Sample1.xer"))
+            {
+                Assert.That(proxy.ProjectReader, Is.TypeOf(typeof(PrimaveraXERFileReader)));
+                var project = proxy.Read();
+                Assert.That(project, Is.Not.Null);
+            }
+
+            using (var proxy = reader.GetProjectReaderProxy("TestData/Sample1.xer"))
+            {
+                Assert.That(proxy.ProjectReader, Is.TypeOf(typeof(PrimaveraXERFileReader)));
+                var projectList = proxy.ReadAll();
+                Assert.That(projectList, Has.Count.EqualTo(1));
             }
         }
     }

@@ -6,7 +6,12 @@ namespace MPXJ.Net
 {
     public abstract class AbstractProjectReader : IProjectReader
     {
-        public net.sf.mpxj.reader.AbstractProjectReader JavaObject { get; set; }
+        public net.sf.mpxj.reader.AbstractProjectReader JavaObject { get; }
+
+        public AbstractProjectReader(net.sf.mpxj.reader.AbstractProjectReader javaObject)
+        {
+            JavaObject = javaObject;
+        }
 
         public ProjectFile Read(string name) => Read(JavaObject.read(name));
 
