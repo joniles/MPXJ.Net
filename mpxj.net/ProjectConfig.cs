@@ -77,14 +77,12 @@ namespace MPXJ.Net
             set => JavaObject.setCompleteThroughIsNextWorkStart(value);
         }
 
-        // TODO implement baseline strategy hierarchy
-        /*
         public IBaselineStrategy BaselineStrategy
-        {            
-            get => JavaObject.getBaselineStrategy();
-            set => JavaObject.setBaselineStrategy(value?.JavaObject);
+        {
+            // TODO: implement proxy?
+            //get => JavaObject.getBaselineStrategy();
+            set => JavaObject.setBaselineStrategy(value.JavaObject);
         }
-        */
 
         public string SubprojectWorkingDirectory
         {
