@@ -2,8 +2,8 @@
 
 <project name="MPXJ.Net" default="archive" basedir=".">
 	<property environment="env"/>
-	<property name="mpxj.version" value="12.10.2" />
-	<property name="mpxj.net.version" value="${mpxj.version}-beta.1" />
+	<property name="mpxj.version" value="13.0.0" />
+	<property name="mpxj.net.version" value="${mpxj.version}" />
 
 	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
 		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
@@ -26,6 +26,12 @@
 	<target name="build" depends="clean, update-version-numbers">
 		<exec executable="dotnet" dir="${basedir}" failonerror="true">
 			<arg line="build --configuration Release MPXJ.Net.sln" />
+		</exec>
+	</target>
+
+	<target name="test" depends="build">
+		<exec executable="dotnet" dir="${basedir}" failonerror="true">
+			<arg line="test --configuration Release MPXJ.Net.sln" />
 		</exec>
 	</target>
 

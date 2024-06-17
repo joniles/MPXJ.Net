@@ -22,7 +22,7 @@ namespace MPXJ.Net
     
         public int? TopicID => JavaObject.getTopicID().ConvertType();
 
-        public NotesTopic NotesTopic => _proxyManager.ProxyObject(JavaObject.getTopicName());
+        public NotesTopic NotesTopic => _proxyManager.ProxyObject(JavaObject.getNotesTopic());
 
         public Notes Notes => _proxyManager.ProxyObject(JavaObject.getNotes());
     }
