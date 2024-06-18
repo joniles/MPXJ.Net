@@ -1,5 +1,4 @@
-﻿using java.lang;
-using MPXJ.Net.Proxy;
+﻿using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
@@ -24,6 +23,8 @@ namespace MPXJ.Net
         public FieldTypeClass FieldTypeClass => JavaObject.getFieldTypeClass().ConvertType().Value;
 
         public string FieldName => JavaObject.getName();
+
+        public string ObjectName => JavaObject.name();
 
         public DataType? DataType => JavaObject.getDataType().ConvertType();
 

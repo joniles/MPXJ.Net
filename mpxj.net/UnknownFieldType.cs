@@ -13,6 +13,8 @@
 
         public string FieldName => JavaObject.getName();
 
+        public string ObjectName => JavaObject.name();
+
         public DataType? DataType => JavaObject.getDataType().ConvertType();
 
         public override string ToString() => JavaObject.ToString();

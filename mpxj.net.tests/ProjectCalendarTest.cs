@@ -46,8 +46,8 @@ namespace MPXJ.Net
             {
                 Assert.That(week.Name, Is.EqualTo("Test Week"));
                 Assert.That(week.DateRange, Is.EqualTo(new DateOnlyRange(new DateOnly(2025, 1, 13), new DateOnly(2025, 1, 17))));
-                Assert.That(week.DefaultWorkingMorning, Is.EqualTo(new TimeOnlyRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
-                Assert.That(week.DefaultWorkingAfternoon, Is.EqualTo(new TimeOnlyRange(new TimeOnly(13, 0), new TimeOnly(17, 0))));
+                Assert.That(ProjectCalendarDays.DefaultWorkingMorning, Is.EqualTo(new TimeOnlyRange(new TimeOnly(8, 0), new TimeOnly(12, 0))));
+                Assert.That(ProjectCalendarDays.DefaultWorkingAfternoon, Is.EqualTo(new TimeOnlyRange(new TimeOnly(13, 0), new TimeOnly(17, 0))));
             });
 
             var exception = calendar.CalendarExceptions[0];
