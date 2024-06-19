@@ -21,12 +21,12 @@ namespace MPXJ.Net
 
         public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(new ProxyInputStream(stream)));
 
-        private ProjectFile Read(net.sf.mpxj.ProjectFile file)
+        protected ProjectFile Read(net.sf.mpxj.ProjectFile file)
         {
             return file == null ? null : new ProjectFile(file);
         }
 
-        private IList<ProjectFile> ReadAll(java.util.List projects)
+        protected IList<ProjectFile> ReadAll(java.util.List projects)
         {
             var list = new List<ProjectFile>();
             foreach (var file in projects.toArray())
