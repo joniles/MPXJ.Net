@@ -20,7 +20,7 @@ Remove the original MPXJ dependency from your project, and add the following:
 </ItemGroup>
 
 <ItemGroup>
-    <MavenReference Include="net.sf.mpxj:mpxj" Version="12.10.20/>
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="13.0.0/>
 </ItemGroup>
 ```
 
@@ -42,7 +42,7 @@ this everywhere in the code, and in many cases your code would be working
 with the original Java types and data structures.
 
 MPXJ.Net provides a complete C# wrapper around the translated MPXJ library -
-no more Java type and data structures, all naming is consistent and so on. To
+no more Java types and data structures, all naming is consistent and so on. To
 switch to MPXJ.Net, simply remove the reference to `net.sf.mpxj-for-csharp`
 in your project and replace it with a reference to `MPXJ.Net`. The drawback
 to this is that various identifiers will have changed, which means you'll need

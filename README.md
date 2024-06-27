@@ -5,7 +5,7 @@ file formats and databases to be read and written. This NuGet package uses
 [IKVM](https://github.com/ikvm-revived/ikvm) to translate the Java library
 into a .Net assembly and provides a C# wrapper around this translated
 assembly. This means that your interactions with MPXJ will use C# data types
-and data structures working with objects with expose properties using
+and data structures working with objects which expose properties using
 typical C# naming conventions.  You do not need to work with Java data
 types, data structures and so on.
 
@@ -17,7 +17,7 @@ types, data structures and so on.
 > after the first build as the results of the translation are cached.
 
 The API exposed by MPXJ.Net follows very closely the original Java API,
-for which you kind find details in the
+for which you will find details in the
 [Javadocs](http://www.mpxj.org/apidocs/index.html), and more general
 documentation on the [MPXJ website](https://www.mpxj.org/).
 The main differences between the original Java API and the API exposed by this
