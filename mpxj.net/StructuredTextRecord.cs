@@ -16,6 +16,7 @@ namespace MPXJ.Net
         {
             JavaObject = new net.sf.mpxj.primavera.StructuredTextRecord();
         }
+
         public StructuredTextRecord(Dictionary<string, string> attributes, List<StructuredTextRecord> children)
         {
             JavaObject = new net.sf.mpxj.primavera.StructuredTextRecord(attributes.ConvertType(), children.ConvertType());
