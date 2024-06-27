@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using MPXJ.Net.Proxy;
-using static net.sf.mpxj.conceptdraw.schema.Document;
 
 namespace MPXJ.Net
 {
