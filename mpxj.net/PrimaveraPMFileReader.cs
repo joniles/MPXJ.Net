@@ -27,7 +27,7 @@ namespace MPXJ.Net
 
         public Dictionary<int, string> ListProjects(Stream stream)
         {
-            var projects = JavaObject.listProjects(new ProxyInputStream(stream));
+            var projects = JavaObject.listProjects(stream.ConvertType());
             var result = new Dictionary<int, string>();
             foreach (var e in new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, projects.entrySet()))
             {

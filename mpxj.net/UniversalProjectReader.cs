@@ -57,7 +57,7 @@ namespace MPXJ.Net
 
         public IProjectReaderProxy GetProjectReaderProxy(Stream stream)
         {
-            return new ProjectReaderProxy(JavaObject.getProjectReaderProxy(new ProxyInputStream(stream)));
+            return new ProjectReaderProxy(JavaObject.getProjectReaderProxy(stream.ConvertType()));
         }
     }
 }
