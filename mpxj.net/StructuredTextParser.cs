@@ -8,6 +8,11 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.primavera.StructuredTextParser JavaObject { get; }
 
+        public StructuredTextParser()
+        {
+            JavaObject = new net.sf.mpxj.primavera.StructuredTextParser();
+        }
+
         public bool RaiseExceptionOnParseError
         {
             set => JavaObject.setRaiseExceptionOnParseError(value);
