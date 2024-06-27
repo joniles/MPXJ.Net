@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using MPXJ.Net.Proxy;
+using static net.sf.mpxj.conceptdraw.schema.Document;
 
 namespace MPXJ.Net
 {
@@ -177,6 +179,11 @@ namespace MPXJ.Net
             return java.util.Locale.forLanguageTag(value.IetfLanguageTag);
         }
 
+        public static java.io.InputStream ConvertType(this Stream stream)
+        {
+            return new ProxyInputStream(stream);
+        }
+
         public static java.util.List ConvertType<N>(this IList<N> list) where N : IHasJavaObject
         {
             if (list is IJavaObjectProxy<java.util.List> proxy)
@@ -185,6 +192,21 @@ namespace MPXJ.Net
             }
 
             return java.util.Arrays.asList(list.Select(n => n.GenericJavaObject()).ToArray());
+        }
+
+        public static java.util.Map ConvertType<K, V>(this IDictionary<K, V> dictionary)
+        {
+            if (dictionary is IJavaObjectProxy<java.util.Map> proxy)
+            {
+                return proxy.JavaObject;
+            }
+
+            var map = new java.util.HashMap();
+            foreach (var entry in dictionary)
+            {
+                map.put(entry.Key.GenericJavaObject(), entry.Value.GenericJavaObject());
+            }
+            return map;
         }
 
         public static object GenericJavaObject(this object o)

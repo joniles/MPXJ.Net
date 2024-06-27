@@ -15,11 +15,11 @@ namespace MPXJ.Net
 
         public ProjectFile Read(string name) => Read(JavaObject.read(name));
 
-        public ProjectFile Read(Stream stream) => Read(JavaObject.read(new ProxyInputStream(stream)));
+        public ProjectFile Read(Stream stream) => Read(JavaObject.read(stream.ConvertType()));
 
         public IList<ProjectFile> ReadAll(string name) => ReadAll(JavaObject.readAll(name));
 
-        public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(new ProxyInputStream(stream)));
+        public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(stream.ConvertType()));
 
         protected ProjectFile Read(net.sf.mpxj.ProjectFile file)
         {
