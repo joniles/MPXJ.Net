@@ -8,7 +8,7 @@ namespace MPXJ.Net
 
         public SDEFWriter() : base(new net.sf.mpxj.sdef.SDEFWriter()) { }
 
-        public Encoding Charset
+        public Encoding Encoding
         {
             get => JavaObject.getCharset().ConvertType();
             set => JavaObject.setCharset(value.ConvertType());
