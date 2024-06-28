@@ -1,6 +1,6 @@
 ﻿namespace MPXJ.Net
 {
-    internal class ProjectCommanderReader : AbstractProjectReader
+    public class ProjectCommanderReader : AbstractProjectReader
     {
         internal ProjectCommanderReader(net.sf.mpxj.projectcommander.ProjectCommanderReader reader) : base(reader) { }
 

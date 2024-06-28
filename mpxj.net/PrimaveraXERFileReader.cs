@@ -5,7 +5,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    internal class PrimaveraXERFileReader : AbstractProjectReader
+    public class PrimaveraXERFileReader : AbstractProjectReader
     {
         internal PrimaveraXERFileReader(net.sf.mpxj.primavera.PrimaveraXERFileReader reader) : base(reader) { }
 
