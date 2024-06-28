@@ -20,7 +20,7 @@ namespace MPXJ.Net
 
         public object GetValue(int index) => _proxyManager.GenericProxyObject(JavaObject.getValue(index));
 
-        // TODO handle map
+        // TODO handle map argument
         //public bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);
 
         public IList<GenericCriteria> CriteriaList => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteria, GenericCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCriteriaList());

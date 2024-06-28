@@ -28,8 +28,7 @@
 
         public bool RespectPasswordProtection
         {
-            // TODO: 12.10.3 or later
-            //get => JavaObject.getREspectPasswordProtection();
+            get => JavaObject.getRespectPasswordProtection();
             set => JavaObject.setRespectPasswordProtection(value);
         }
 

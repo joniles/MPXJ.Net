@@ -819,8 +819,7 @@ namespace MPXJ.Net
         public IList<DateTimeRange> Splits
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.LocalDateTimeRange, DateTimeRange>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSplits());
-            // TODO: handle list argument
-            //set => JavaObject.setSplits(value);
+            set => JavaObject.setSplits(value.ConvertType());
         }
 
         public void Remove() => JavaObject.remove();
@@ -972,8 +971,7 @@ namespace MPXJ.Net
         public IList<ExpenseItem> ExpenseItems
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.ExpenseItem, ExpenseItem>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpenseItems());
-            // TODO: handle list argument
-            //set => JavaObject.setExpenseItems(value);
+            set => JavaObject.setExpenseItems(value.ConvertType());
         }
 
         public double? StoredMaterial
@@ -1232,8 +1230,7 @@ namespace MPXJ.Net
         public IList<Step> Steps
         {
             get => _proxyManager.ProxyList<net.sf.mpxj.Step, Step>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSteps());
-            // TODO: handle list argument
-            //set => JavaObject.setSteps(value);
+            set => JavaObject.setSteps(value.ConvertType());
         }
 
         public int? LocationUniqueID

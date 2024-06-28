@@ -12,6 +12,11 @@ namespace MPXJ.Net
 
         public new net.sf.mpxj.primavera.PrimaveraPMFileReader JavaObject => (net.sf.mpxj.primavera.PrimaveraPMFileReader)base.JavaObject;
 
+        public int ProjectID
+        {
+            set => JavaObject.setProjectID(value);
+        }
+
         public IBaselineStrategy BaselineStrategy
         {      
             // TODO: implement proxy?
