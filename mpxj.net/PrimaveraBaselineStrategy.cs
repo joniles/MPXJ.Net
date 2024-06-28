@@ -2,11 +2,16 @@
 {
     public class PrimaveraBaselineStrategy : IBaselineStrategy
     {
-        public static readonly PrimaveraBaselineStrategy Instance = new PrimaveraBaselineStrategy();
+        internal PrimaveraBaselineStrategy(net.sf.mpxj.primavera.PrimaveraBaselineStrategy javaObject) 
+        {
+            JavaObject = javaObject;
+        }
 
-        private PrimaveraBaselineStrategy() { }
+        public static readonly PrimaveraBaselineStrategy PlannedAttributes = new PrimaveraBaselineStrategy(net.sf.mpxj.primavera.PrimaveraBaselineStrategy.PLANNED_ATTRIBUTES);
 
-        public net.sf.mpxj.BaselineStrategy JavaObject => net.sf.mpxj.primavera.PrimaveraBaselineStrategy.INSTANCE;
+        public static readonly PrimaveraBaselineStrategy CurrentAttributes = new PrimaveraBaselineStrategy(net.sf.mpxj.primavera.PrimaveraBaselineStrategy.CURRENT_ATTRIBUTES);
+
+        public net.sf.mpxj.BaselineStrategy JavaObject { get; }
 
         public void ClearBaseline(ProjectFile project, int index)
         {
