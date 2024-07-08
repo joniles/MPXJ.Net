@@ -2,7 +2,7 @@
 
 <project name="MPXJ.Net" default="archive" basedir=".">
 	<property environment="env"/>
-	<property name="mpxj.version" value="13.0.1" />
+	<property name="mpxj.version" value="13.0.2" />
 	<property name="mpxj.net.version" value="${mpxj.version}" />
 
 	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
