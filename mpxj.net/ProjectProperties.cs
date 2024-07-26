@@ -802,6 +802,24 @@ namespace MPXJ.Net
             set => JavaObject.setResourcePoolFile(value);
         }
 
+        public string ProjectWebsiteUrl
+        {
+            get => JavaObject.getProjectWebsiteUrl();
+            set => JavaObject.setProjectWebsiteUrl(value);
+        }
+
+        public string Notes
+        {
+            get => JavaObject.getNotes();
+            set => JavaObject.setNotes(value);
+        }
+
+        public Notes NotesObject
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getNotesObject());
+            set => JavaObject.setNotesObject(value?.JavaObject);
+        }
+
         public ProjectFile ResourcePoolObject => new ProjectFile(JavaObject.getResourcePoolObject());
 
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());

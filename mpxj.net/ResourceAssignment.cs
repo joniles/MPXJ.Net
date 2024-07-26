@@ -23,6 +23,11 @@ namespace MPXJ.Net
             get => JavaObject.getUnits().ConvertType();
             set => JavaObject.setUnits(value.ConvertType());
         }
+        public double? RemainingUnits
+        {
+            get => JavaObject.getRemainingUnits().ConvertType();
+            set => JavaObject.setRemainingUnits(value.ConvertType());
+        }
 
         public Duration Work
         {
@@ -169,6 +174,8 @@ namespace MPXJ.Net
             get => JavaObject.getRateSource().ConvertType();
             set => JavaObject.setRateSource(value.ConvertType());
         }
+
+        public IList<TimephasedWork> TimephasedPlannedWork => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork());
 
         public IList<TimephasedWork> TimephasedActualWork => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualWork());
 
