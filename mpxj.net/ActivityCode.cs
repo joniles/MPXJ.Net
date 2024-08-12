@@ -34,6 +34,8 @@ namespace MPXJ.Net
 
         public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
+        public void AddValue(ActivityCodeValue value) => JavaObject.addValue(value.JavaObject);
+
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
