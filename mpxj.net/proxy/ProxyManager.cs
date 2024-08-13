@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("MPXJ.Net.Tests")]
+[assembly: InternalsVisibleTo("MPXJ.Net.Tests, PublicKey=002400000480000094000000060200000024000052534131000400000100010085e039e9e6124613f05ac0f4441c7fa992e7761f2fca914329b462477327ab414b0bc15f320cac66b634607d2656b90c05ecbabb110a4af8b5ea9421e2b674d4b74d859cdd360448dc5723d12f63cf551fdeef87a5882d24fb9254577052c99ed1739380436e982df82cd7ee6ebb82588f578a5c27f40472017ffab697749ecc")]
 
 namespace MPXJ.Net.Proxy
 {    

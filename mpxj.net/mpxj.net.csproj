@@ -35,11 +35,13 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <PropertyGroup>
     <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\mpxj.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 </Project>

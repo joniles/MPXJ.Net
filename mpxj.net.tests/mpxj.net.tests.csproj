@@ -1,9 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
     <RootNamespace>MPXJ.Net</RootNamespace>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\mpxj.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
