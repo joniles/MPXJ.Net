@@ -42,6 +42,6 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
     <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\Java\MPXJ.Net\mpxj.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\mpxj.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 </Project>

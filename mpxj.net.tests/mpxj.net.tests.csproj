@@ -5,7 +5,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\Java\MPXJ.Net\mpxj.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\mpxj.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
