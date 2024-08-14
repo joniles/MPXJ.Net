@@ -3,7 +3,7 @@
 <project name="MPXJ.Net" default="archive" basedir=".">
 	<property environment="env"/>
 	<property name="mpxj.version" value="13.2.1" />
-	<property name="mpxj.net.version" value="${mpxj.version}" />
+	<property name="mpxj.net.version" value="13.2.2" />
 
 	<target name="update-version-numbers" description="Ensure that version numbers in the code are up-to-date">
 		<replaceregexp file="${basedir}/MPXJ.Net/MPXJ.Net.csproj"
@@ -21,6 +21,13 @@
 		<exec executable="dotnet" dir="${basedir}" failonerror="true">
 			<arg line="clean MPXJ.Net.sln" />
 		</exec>
+
+		<delete includeemptydirs="true">
+			<fileset dir="${basedir}" defaultexcludes="false">
+				<include name="**/bin/**" />
+				<include name="**/obj/**" />
+			</fileset>
+		</delete>
 	</target>
 
 	<target name="build" depends="clean, update-version-numbers">
