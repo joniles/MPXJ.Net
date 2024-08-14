@@ -7,5 +7,7 @@ namespace MPXJ.Net
         public new net.sf.mpxj.TimephasedWork JavaObject => (net.sf.mpxj.TimephasedWork)base.JavaObject;
 
         internal TimephasedWork(net.sf.mpxj.TimephasedWork javaObject) : base(javaObject) { }
-	}
+
+        public TimephasedWork() : base(new net.sf.mpxj.TimephasedWork()) { }
+    }
 }

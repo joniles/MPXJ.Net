@@ -7,5 +7,7 @@ namespace MPXJ.Net
         public new net.sf.mpxj.TimephasedCost JavaObject => (net.sf.mpxj.TimephasedCost)base.JavaObject;
 
         internal TimephasedCost(net.sf.mpxj.TimephasedCost javaObject) : base(javaObject) { }
+
+        public TimephasedCost() : base(new net.sf.mpxj.TimephasedCost()) { }
     }
 }
