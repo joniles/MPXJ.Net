@@ -111,7 +111,7 @@ namespace MPXJ.Net.Proxy
 
         internal ProjectFile ProxyObject(net.sf.mpxj.ProjectFile value)
         {
-            return ProxyObject(value, v => new ProjectFile(v));
+            return ProxyObject(value, v => new ProjectFile(this, v));
         }
 
         internal ResourceAssignment ProxyObject(net.sf.mpxj.ResourceAssignment value)

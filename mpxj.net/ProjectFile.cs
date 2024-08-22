@@ -11,10 +11,12 @@ namespace MPXJ.Net
 
         public ProjectFile() : this(new net.sf.mpxj.ProjectFile()) { }
 
-        internal ProjectFile(net.sf.mpxj.ProjectFile file)
+        internal ProjectFile(net.sf.mpxj.ProjectFile file) : this(new ProxyManager(), file) { }
+
+        internal ProjectFile(ProxyManager proxyManager, net.sf.mpxj.ProjectFile file)
         {
-            JavaObject = file;
-            _proxyManager = new ProxyManager();
+            _proxyManager = proxyManager;
+            JavaObject = file;            
             _proxyManager.PopulateCache(file, this);
         }
 

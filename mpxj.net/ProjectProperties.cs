@@ -820,7 +820,7 @@ namespace MPXJ.Net
             set => JavaObject.setNotesObject(value?.JavaObject);
         }
 
-        public ProjectFile ResourcePoolObject => new ProjectFile(JavaObject.getResourcePoolObject());
+        public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());
 
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
     }
