@@ -8,24 +8,25 @@ namespace MPXJ.Net.Proxy
 {    
     internal class ProxyManager : AbstractProxyManager
     {
-        internal ProjectFile ProjectFile { get; }
-
-        public ProxyManager(ProjectFile projectFile)
+        public ProxyManager()
         {
-            ProjectFile = projectFile;
-
             //
             // Prepopulate the cache with constants
             //
-            _objectCache[GetKey(WorkContour.Flat.JavaObject)] = WorkContour.Flat;
-            _objectCache[GetKey(WorkContour.BackLoaded.JavaObject)] = WorkContour.BackLoaded;
-            _objectCache[GetKey(WorkContour.FrontLoaded.JavaObject)] = WorkContour.FrontLoaded;
-            _objectCache[GetKey(WorkContour.DoublePeak.JavaObject)] = WorkContour.DoublePeak;
-            _objectCache[GetKey(WorkContour.EarlyPeak.JavaObject)] = WorkContour.EarlyPeak;
-            _objectCache[GetKey(WorkContour.LatePeak.JavaObject)] = WorkContour.LatePeak;
-            _objectCache[GetKey(WorkContour.Bell.JavaObject)] = WorkContour.Bell;
-            _objectCache[GetKey(WorkContour.Turtle.JavaObject)] = WorkContour.Turtle;
-            _objectCache[GetKey(WorkContour.Contoured.JavaObject)] = WorkContour.Contoured;
+            PopulateCache(WorkContour.Flat.JavaObject, WorkContour.Flat);
+            PopulateCache(WorkContour.BackLoaded.JavaObject, WorkContour.BackLoaded);
+            PopulateCache(WorkContour.FrontLoaded.JavaObject, WorkContour.FrontLoaded);
+            PopulateCache(WorkContour.DoublePeak.JavaObject, WorkContour.DoublePeak);
+            PopulateCache(WorkContour.EarlyPeak.JavaObject, WorkContour.EarlyPeak);
+            PopulateCache(WorkContour.LatePeak.JavaObject, WorkContour.LatePeak);
+            PopulateCache(WorkContour.Bell.JavaObject, WorkContour.Bell);
+            PopulateCache(WorkContour.Turtle.JavaObject, WorkContour.Turtle);
+            PopulateCache(WorkContour.Contoured.JavaObject, WorkContour.Contoured);
+        }
+
+        internal void PopulateCache(java.lang.Object javaObject, object netObject)
+        {
+            _objectCache[GetKey(javaObject)] = netObject;
         }
 
         internal UnitOfMeasure ProxyObject(net.sf.mpxj.UnitOfMeasure value)

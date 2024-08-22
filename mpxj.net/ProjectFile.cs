@@ -13,8 +13,9 @@ namespace MPXJ.Net
 
         internal ProjectFile(net.sf.mpxj.ProjectFile file)
         {
-            _proxyManager = new ProxyManager(this);
             JavaObject = file;
+            _proxyManager = new ProxyManager();
+            _proxyManager.PopulateCache(file, this);
         }
 
         public ProjectConfig ProjectConfig => _proxyManager.ProxyObject(JavaObject.getProjectConfig());

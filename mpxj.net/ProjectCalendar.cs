@@ -126,7 +126,7 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public ProjectFile ParentFile => _proxyManager.ProjectFile;
+        public ProjectFile ParentFile => _proxyManager.ProxyObject(JavaObject.getParentFile());
 
         public bool Derived => JavaObject.isDerived();
 
