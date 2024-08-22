@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-    public class ActivityCodeContainer : ProxyList<net.sf.mpxj.ActivityCode, ActivityCode>
+    public class ActivityCodeContainer : ProjectEntityContainer<net.sf.mpxj.ActivityCode, ActivityCode>
     {
         public new net.sf.mpxj.ActivityCodeContainer JavaObject => (net.sf.mpxj.ActivityCodeContainer)base.JavaObject;
 

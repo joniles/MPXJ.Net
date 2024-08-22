@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using java.lang;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ActivityCode : IJavaObjectProxy<net.sf.mpxj.ActivityCode>
+    public class ActivityCode : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
     {
         internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ActivityCode JavaObject { get; }
@@ -35,6 +36,8 @@ namespace MPXJ.Net
         public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public void AddValue(ActivityCodeValue value) => JavaObject.addValue(value.JavaObject);
+
+        public ActivityCodeValue GetValueByUniqueID(int? id) => _proxyManager.ProxyObject(JavaObject.getValueByUniqueID(id.ConvertType()));
 
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
         {

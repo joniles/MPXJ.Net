@@ -26,5 +26,7 @@ namespace MPXJ.Net
         public ICollection<UserDefinedField> AssignmentFields => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(_proxyManager.ProxyObject, value => (net.sf.mpxj.UserDefinedField)value.JavaObject, JavaObject.getAssignmentFields());
 
         public ICollection<UserDefinedField> ProjectFields => _proxyManager.ProxyCollection<net.sf.mpxj.UserDefinedField, UserDefinedField>(_proxyManager.ProxyObject, value => (net.sf.mpxj.UserDefinedField)value.JavaObject, JavaObject.getProjectFields());
+
+        public UserDefinedField GetByUniqueID(int? id) => _proxyManager.ProxyObject(JavaObject.getByUniqueID(id.ConvertType()));
     }
 }
