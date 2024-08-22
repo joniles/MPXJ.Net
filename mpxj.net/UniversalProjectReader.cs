@@ -42,7 +42,9 @@ namespace MPXJ.Net
 
             IList<ProjectFile> IProjectReaderProxy.ReadAll()
             {
-                return JavaObject.readAll().toArray().Select(p => new ProjectFile((net.sf.mpxj.ProjectFile)p)).ToList();
+                // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
+                var proxyManager = new ProxyManager();
+                return JavaObject.readAll().toArray().Select(p => new ProjectFile(proxyManager, (net.sf.mpxj.ProjectFile)p)).ToList();
             }
         }
 
