@@ -121,5 +121,9 @@ namespace MPXJ.Net
         public RelationContainer Relations => _proxyManager.ProxyObject(JavaObject.getRelations());
 
         public UnitOfMeasureContainer UnitsOfMeasure => _proxyManager.ProxyObject(JavaObject.getUnitsOfMeasure());
+
+        public ShiftContainer Shifts => _proxyManager.ProxyObject(JavaObject.getShifts());
+
+        public ShiftPeriodContainer ShiftPeriods => _proxyManager.ProxyObject(JavaObject.getShiftPeriods());
     }
 }

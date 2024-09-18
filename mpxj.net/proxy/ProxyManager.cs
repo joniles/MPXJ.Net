@@ -395,6 +395,26 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new DateOnlyRange(v));
         }
 
+        internal Shift ProxyObject(net.sf.mpxj.Shift value)
+        {
+            return ProxyObject(value, v => new Shift(this, v));
+        }
+
+        internal ShiftPeriod ProxyObject(net.sf.mpxj.ShiftPeriod value)
+        {
+            return ProxyObject(value, v => new ShiftPeriod(this, v));
+        }
+
+        internal ShiftContainer ProxyObject(net.sf.mpxj.ShiftContainer value)
+        {
+            return ProxyObject(value, v => new ShiftContainer(this, v));
+        }
+
+        internal ShiftPeriodContainer ProxyObject(net.sf.mpxj.ShiftPeriodContainer value)
+        {
+            return ProxyObject(value, v => new ShiftPeriodContainer(this, v));
+        }
+
         internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)
         {
             if (value == null)
