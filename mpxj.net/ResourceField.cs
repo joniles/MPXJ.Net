@@ -562,6 +562,9 @@ namespace MPXJ.Net
         public static readonly ResourceField CalculateCostsFromUnits = new ResourceField(net.sf.mpxj.ResourceField.CALCULATE_COSTS_FROM_UNITS);
         public static readonly ResourceField SequenceNumber = new ResourceField(net.sf.mpxj.ResourceField.SEQUENCE_NUMBER);
         public static readonly ResourceField LocationUniqueId = new ResourceField(net.sf.mpxj.ResourceField.LOCATION_UNIQUE_ID);
+        public static readonly ResourceField UnitOfMeasureUniqueId = new ResourceField(net.sf.mpxj.ResourceField.UNIT_OF_MEASURE_UNIQUE_ID);
+        public static readonly ResourceField DefaultUnits = new ResourceField(net.sf.mpxj.ResourceField.DEFAULT_UNITS);
+        public static readonly ResourceField ShiftUniqueId = new ResourceField(net.sf.mpxj.ResourceField.SHIFT_UNIQUE_ID);
         public static readonly ResourceField Finish = new ResourceField(net.sf.mpxj.ResourceField.FINISH);
 
         internal ResourceField(net.sf.mpxj.ResourceField javaObject)

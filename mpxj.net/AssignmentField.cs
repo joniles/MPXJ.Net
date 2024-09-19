@@ -508,6 +508,15 @@ namespace MPXJ.Net
         public static readonly AssignmentField RateSource = new AssignmentField(net.sf.mpxj.AssignmentField.RATE_SOURCE);
         public static readonly AssignmentField CalculateCostsFromUnits = new AssignmentField(net.sf.mpxj.AssignmentField.CALCULATE_COSTS_FROM_UNITS);
         public static readonly AssignmentField CostAccountUniqueId = new AssignmentField(net.sf.mpxj.AssignmentField.COST_ACCOUNT_UNIQUE_ID);
+
+        /*
+           REMAINING_EARLY_START(DataType.DATE),
+   REMAINING_EARLY_FINISH(DataType.DATE),
+   REMAINING_LATE_START(DataType.DATE),
+   REMAINING_LATE_FINISH(DataType.DATE),
+   REMAINING_ASSIGNMENT_UNITS(DataType.UNITS),
+        */
+   
         public static readonly AssignmentField Finish = new AssignmentField(net.sf.mpxj.AssignmentField.FINISH);
 
         internal AssignmentField(net.sf.mpxj.AssignmentField javaObject)
