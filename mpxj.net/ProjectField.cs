@@ -153,11 +153,11 @@ namespace MPXJ.Net
         public static readonly ProjectField TotalSlackCalculationType = new ProjectField(net.sf.mpxj.ProjectField.TOTAL_SLACK_CALCULATION_TYPE);
         public static readonly ProjectField RelationshipLagCalendar = new ProjectField(net.sf.mpxj.ProjectField.RELATIONSHIP_LAG_CALENDAR);
         public static readonly ProjectField WbsCodeSeparator = new ProjectField(net.sf.mpxj.ProjectField.WBS_CODE_SEPARATOR);
-        public static readonly ProjectField ConsideAssignmnetsInOtherProjects = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS);
-        public static readonly ProjectField ConsideAssignmnetsInOtherProjectsWithPriorityEqualHigherThan = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS_WITH_PRIORITY_EQUAL_HIGHER_THAN);
+        public static readonly ProjectField ConsiderAssignmentsInOtherProjects = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS);
+        public static readonly ProjectField ConsiderAssignmentsInOtherProjectsWithPriorityEqualHigherThan = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS_WITH_PRIORITY_EQUAL_HIGHER_THAN);
         public static readonly ProjectField PreserveScheduledEarlyAndLateDates = new ProjectField(net.sf.mpxj.ProjectField.PRESERVE_SCHEDULED_EARLY_AND_LATE_DATES);
         public static readonly ProjectField LevelAllResources = new ProjectField(net.sf.mpxj.ProjectField.LEVEL_ALL_RESOURCES);
-        public static readonly ProjectField LevelAllResourcesOnlyWithinActivityTotalFloat = new ProjectField(net.sf.mpxj.ProjectField.LEVEL_RESOURCES_ONLY_WITHIN_ACTIVITY_TOTAL_FLOAT);
+        public static readonly ProjectField LevelResourcesOnlyWithinActivityTotalFloat = new ProjectField(net.sf.mpxj.ProjectField.LEVEL_RESOURCES_ONLY_WITHIN_ACTIVITY_TOTAL_FLOAT);
         public static readonly ProjectField PreserveMinimumFloatWhenLeveling = new ProjectField(net.sf.mpxj.ProjectField.PRESERVE_MINIMUM_FLOAT_WHEN_LEVELING);
         public static readonly ProjectField MaxPercentToOverallocateResources = new ProjectField(net.sf.mpxj.ProjectField.MAX_PERCENT_TO_OVERALLOCATE_RESOURCES);
         public static readonly ProjectField LevelingPriorities = new ProjectField(net.sf.mpxj.ProjectField.LEVELING_PRIORITIES);
@@ -169,7 +169,7 @@ namespace MPXJ.Net
         public static readonly ProjectField CalculateFloatBasedOnFinishDateOfEachProject = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_FLOAT_BASED_ON_FINISH_DATE_OF_EACH_PROJECT);
         public static readonly ProjectField CalculateMultipleFloatPaths = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_MULTIPLE_FLOAT_PATHS);
         public static readonly ProjectField CalculateMultipleFloatPathsUsingTotalFloat = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_MULTIPLE_FLOAT_PATHS_USING_TOTAL_FLOAT);
-        public static readonly ProjectField DisplayFloatPathsEndingWithActivityUniqueId = new ProjectField(net.sf.mpxj.ProjectField.DISPLAY_MULTIPLE_FLOAT_PATHS_ENDING_WITH_ACTIVITY_UNIQUE_ID);
+        public static readonly ProjectField DisplayMultipleFloatPathsEndingWithActivityUniqueId = new ProjectField(net.sf.mpxj.ProjectField.DISPLAY_MULTIPLE_FLOAT_PATHS_ENDING_WITH_ACTIVITY_UNIQUE_ID);
         public static readonly ProjectField LimitNumberOfFloatPathsToCalculate = new ProjectField(net.sf.mpxj.ProjectField.LIMIT_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE);
         public static readonly ProjectField MaximumNumberOfFloatPathsToCalculate = new ProjectField(net.sf.mpxj.ProjectField.MAXIMUM_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE);
         public static readonly ProjectField SchedulingProgressedActivities = new ProjectField(net.sf.mpxj.ProjectField.SCHEDULING_PROGRESSED_ACTIVITIES);
