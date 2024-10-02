@@ -150,43 +150,42 @@ namespace MPXJ.Net
         public static readonly ProjectField FinishDate = new ProjectField(net.sf.mpxj.ProjectField.FINISH_DATE);
         public static readonly ProjectField LocationUniqueId = new ProjectField(net.sf.mpxj.ProjectField.LOCATION_UNIQUE_ID);
         public static readonly ProjectField ResourcePoolFile = new ProjectField(net.sf.mpxj.ProjectField.RESOURCE_POOL_FILE);
+        public static readonly ProjectField TotalSlackCalculationType = new ProjectField(net.sf.mpxj.ProjectField.TOTAL_SLACK_CALCULATION_TYPE);
+        public static readonly ProjectField RelationshipLagCalendar = new ProjectField(net.sf.mpxj.ProjectField.RELATIONSHIP_LAG_CALENDAR);
+        public static readonly ProjectField WbsCodeSeparator = new ProjectField(net.sf.mpxj.ProjectField.WBS_CODE_SEPARATOR);
+        public static readonly ProjectField ConsideAssignmnetsInOtherProjects = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS);
+        public static readonly ProjectField ConsideAssignmnetsInOtherProjectsWithPriorityEqualHigherThan = new ProjectField(net.sf.mpxj.ProjectField.CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS_WITH_PRIORITY_EQUAL_HIGHER_THAN);
+        public static readonly ProjectField PreserveScheduledEarlyAndLateDates = new ProjectField(net.sf.mpxj.ProjectField.PRESERVE_SCHEDULED_EARLY_AND_LATE_DATES);
+        public static readonly ProjectField LevelAllResources = new ProjectField(net.sf.mpxj.ProjectField.LEVEL_ALL_RESOURCES);
+        public static readonly ProjectField LevelAllResourcesOnlyWithinActivityTotalFloat = new ProjectField(net.sf.mpxj.ProjectField.LEVEL_RESOURCES_ONLY_WITHIN_ACTIVITY_TOTAL_FLOAT);
+        public static readonly ProjectField PreserveMinimumFloatWhenLeveling = new ProjectField(net.sf.mpxj.ProjectField.PRESERVE_MINIMUM_FLOAT_WHEN_LEVELING);
+        public static readonly ProjectField MaxPercentToOverallocateResources = new ProjectField(net.sf.mpxj.ProjectField.MAX_PERCENT_TO_OVERALLOCATE_RESOURCES);
+        public static readonly ProjectField LevelingPriorities = new ProjectField(net.sf.mpxj.ProjectField.LEVELING_PRIORITIES);
+        public static readonly ProjectField DataDateAndPlannedStartSetToProjectForecastStart = new ProjectField(net.sf.mpxj.ProjectField.DATA_DATE_AND_PLANNED_START_SET_TO_PROJECT_FORECAST_START);
+        public static readonly ProjectField IgnoreRelationshipsToAndFromOtherProjects = new ProjectField(net.sf.mpxj.ProjectField.IGNORE_RELATIONSHIPS_TO_AND_FROM_OTHER_PROJECTS);
+        public static readonly ProjectField MakeOpenEndedActivitiesCritical = new ProjectField(net.sf.mpxj.ProjectField.MAKE_OPEN_ENDED_ACTIVITIES_CRITICAL);
+        public static readonly ProjectField UseExpectedFinishDates = new ProjectField(net.sf.mpxj.ProjectField.USE_EXPECTED_FINISH_DATES);
+        public static readonly ProjectField ComputeStartToStartLagFromEarlyStart = new ProjectField(net.sf.mpxj.ProjectField.COMPUTE_START_TO_START_LAG_FROM_EARLY_START);
+        public static readonly ProjectField CalculateFloatBasedOnFinishDateOfEachProject = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_FLOAT_BASED_ON_FINISH_DATE_OF_EACH_PROJECT);
+        public static readonly ProjectField CalculateMultipleFloatPaths = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_MULTIPLE_FLOAT_PATHS);
+        public static readonly ProjectField CalculateMultipleFloatPathsUsingTotalFloat = new ProjectField(net.sf.mpxj.ProjectField.CALCULATE_MULTIPLE_FLOAT_PATHS_USING_TOTAL_FLOAT);
+        public static readonly ProjectField DisplayFloatPathsEndingWithActivityUniqueId = new ProjectField(net.sf.mpxj.ProjectField.DISPLAY_MULTIPLE_FLOAT_PATHS_ENDING_WITH_ACTIVITY_UNIQUE_ID);
+        public static readonly ProjectField LimitNumberOfFloatPathsToCalculate = new ProjectField(net.sf.mpxj.ProjectField.LIMIT_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE);
+        public static readonly ProjectField MaximumNumberOfFloatPathsToCalculate = new ProjectField(net.sf.mpxj.ProjectField.MAXIMUM_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE);
+        public static readonly ProjectField SchedulingProgressedActivities = new ProjectField(net.sf.mpxj.ProjectField.SCHEDULING_PROGRESSED_ACTIVITIES);
+        public static readonly ProjectField BaselineTypeName = new ProjectField(net.sf.mpxj.ProjectField.BASELINE_TYPE_NAME);
+        public static readonly ProjectField BaselineTypeUniqueId = new ProjectField(net.sf.mpxj.ProjectField.BASELINE_TYPE_UNIQUE_ID);
+        public static readonly ProjectField LastBaselineUpdateDate = new ProjectField(net.sf.mpxj.ProjectField.LAST_BASELINE_UPDATE_DATE);
+        public static readonly ProjectField ActivityIdPrefix = new ProjectField(net.sf.mpxj.ProjectField.ACTIVITY_ID_PREFIX);
+        public static readonly ProjectField ActivityIdSuffix = new ProjectField(net.sf.mpxj.ProjectField.ACTIVITY_ID_SUFFIX);
+        public static readonly ProjectField ActivityIdIncrement = new ProjectField(net.sf.mpxj.ProjectField.ACTIVITY_ID_INCREMENT);
+        public static readonly ProjectField ActivityIdIncrementBasedOnSelectedActivity = new ProjectField(net.sf.mpxj.ProjectField.ACTIVITY_ID_INCREMENT_BASED_ON_SELECTED_ACTIVITY);
+        public static readonly ProjectField BaselineCalendarName = new ProjectField(net.sf.mpxj.ProjectField.BASELINE_CALENDAR_NAME);
+        public static readonly ProjectField ProjectIsBaseline = new ProjectField(net.sf.mpxj.ProjectField.PROJECT_IS_BASELINE);
+        public static readonly ProjectField ProjectWebsiteUrl = new ProjectField(net.sf.mpxj.ProjectField.PROJECT_WEBSITE_URL);
+        public static readonly ProjectField Notes = new ProjectField(net.sf.mpxj.ProjectField.NOTES);
 
-/*
-   TOTAL_SLACK_CALCULATION_TYPE(DataType.TOTAL_SLACK_TYPE),
-   RELATIONSHIP_LAG_CALENDAR(DataType.RELATIONSHIP_LAG_CALENDAR),
-   WBS_CODE_SEPARATOR(DataType.STRING),
-   CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS(DataType.BOOLEAN),
-   CONSIDER_ASSIGNMENTS_IN_OTHER_PROJECTS_WITH_PRIORITY_EQUAL_HIGHER_THAN(DataType.INTEGER),
-   PRESERVE_SCHEDULED_EARLY_AND_LATE_DATES(DataType.BOOLEAN),
-   LEVEL_ALL_RESOURCES(DataType.BOOLEAN),
-   LEVEL_RESOURCES_ONLY_WITHIN_ACTIVITY_TOTAL_FLOAT(DataType.BOOLEAN),
-   PRESERVE_MINIMUM_FLOAT_WHEN_LEVELING(DataType.DURATION),
-   MAX_PERCENT_TO_OVERALLOCATE_RESOURCES(DataType.NUMERIC),
-   LEVELING_PRIORITIES(DataType.STRING),
-   DATA_DATE_AND_PLANNED_START_SET_TO_PROJECT_FORECAST_START(DataType.BOOLEAN),
-   IGNORE_RELATIONSHIPS_TO_AND_FROM_OTHER_PROJECTS(DataType.BOOLEAN),
-   MAKE_OPEN_ENDED_ACTIVITIES_CRITICAL(DataType.BOOLEAN),
-   USE_EXPECTED_FINISH_DATES(DataType.BOOLEAN),
-   COMPUTE_START_TO_START_LAG_FROM_EARLY_START(DataType.BOOLEAN),
-   CALCULATE_FLOAT_BASED_ON_FINISH_DATE_OF_EACH_PROJECT(DataType.BOOLEAN),
-   CALCULATE_MULTIPLE_FLOAT_PATHS(DataType.BOOLEAN),
-   CALCULATE_MULTIPLE_FLOAT_PATHS_USING_TOTAL_FLOAT(DataType.BOOLEAN),
-   DISPLAY_MULTIPLE_FLOAT_PATHS_ENDING_WITH_ACTIVITY_UNIQUE_ID(DataType.INTEGER),
-   LIMIT_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE(DataType.BOOLEAN),
-   MAXIMUM_NUMBER_OF_FLOAT_PATHS_TO_CALCULATE(DataType.INTEGER),
-   SCHEDULING_PROGRESSED_ACTIVITIES(DataType.SCHEDULING_PROGRESSED_ACTIVITIES),
-   BASELINE_TYPE_NAME(DataType.STRING),
-   BASELINE_TYPE_UNIQUE_ID(DataType.INTEGER),
-   LAST_BASELINE_UPDATE_DATE(DataType.DATE),
-   ACTIVITY_ID_PREFIX(DataType.STRING),
-   ACTIVITY_ID_SUFFIX(DataType.INTEGER),
-   ACTIVITY_ID_INCREMENT(DataType.INTEGER),
-   ACTIVITY_ID_INCREMENT_BASED_ON_SELECTED_ACTIVITY(DataType.BOOLEAN),
-   BASELINE_CALENDAR_NAME(DataType.STRING),
-   PROJECT_IS_BASELINE(DataType.BOOLEAN),
-   PROJECT_WEBSITE_URL(DataType.STRING),
-   NOTES(DataType.NOTES);
-*/
+
         internal ProjectField(net.sf.mpxj.ProjectField javaObject)
         {
             JavaObject = javaObject;
