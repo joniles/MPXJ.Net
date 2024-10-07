@@ -584,5 +584,54 @@ namespace MPXJ.Net
         {
             return value == null ? (FileFormat?)null : (FileFormat)value.ordinal();
         }
+
+        // TotalSlackCalculationType
+        public static net.sf.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType value)
+        {
+            return net.sf.mpxj.TotalSlackCalculationType.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType? value)
+        {
+            return value == null ? null : net.sf.mpxj.TotalSlackCalculationType.values()[(int)value];
+        }
+
+        public static TotalSlackCalculationType? ConvertType(this net.sf.mpxj.TotalSlackCalculationType value)
+        {
+            return value == null ? (TotalSlackCalculationType?)null : (TotalSlackCalculationType)value.ordinal();
+        }
+
+        // RelationshipLagCalendar
+        public static net.sf.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar value)
+        {
+            return net.sf.mpxj.RelationshipLagCalendar.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar? value)
+        {
+            return value == null ? null : net.sf.mpxj.RelationshipLagCalendar.values()[(int)value];
+        }
+
+        public static RelationshipLagCalendar? ConvertType(this net.sf.mpxj.RelationshipLagCalendar value)
+        {
+            return value == null ? (RelationshipLagCalendar?)null : (RelationshipLagCalendar)value.ordinal();
+        }
+
+        // SchedulingProgressedActivities
+        public static net.sf.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities value)
+        {
+            return net.sf.mpxj.SchedulingProgressedActivities.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities? value)
+        {
+            return value == null ? null : net.sf.mpxj.SchedulingProgressedActivities.values()[(int)value];
+        }
+
+        public static SchedulingProgressedActivities? ConvertType(this net.sf.mpxj.SchedulingProgressedActivities value)
+        {
+            return value == null ? (SchedulingProgressedActivities?)null : (SchedulingProgressedActivities)value.ordinal();
+        }
+
     }
 }

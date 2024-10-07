@@ -1257,6 +1257,42 @@ namespace MPXJ.Net
             set => JavaObject.setExpectedFinish(value.ConvertType());
         }
 
+        public Duration ActualWorkLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getActualWorkLabor());
+            set => JavaObject.setActualWorkLabor(value?.JavaObject);
+        }
+
+        public Duration ActualWorkNonlabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getActualWorkNonlabor());
+            set => JavaObject.setActualWorkNonlabor(value?.JavaObject);
+        }
+
+        public Duration PlannedWorkLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPlannedWorkLabor());
+            set => JavaObject.setPlannedWorkLabor(value?.JavaObject);
+        }
+
+        public Duration PlannedWorkNonlabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPlannedWorkNonlabor());
+            set => JavaObject.setPlannedWorkNonlabor(value?.JavaObject);
+        }
+
+        public Duration RemainingWorkLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getRemainingWorkLabor());
+            set => JavaObject.setRemainingWorkLabor(value?.JavaObject);
+        }
+
+        public Duration RemainingWorkNonLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getRemainingWorkNonlabor());
+            set => JavaObject.setRemainingWorkNonlabor(value?.JavaObject);
+        }
+
         public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
 
         public override string ToString() => JavaObject.toString();

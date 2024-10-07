@@ -820,6 +820,199 @@ namespace MPXJ.Net
             set => JavaObject.setNotesObject(value?.JavaObject);
         }
 
+        public TotalSlackCalculationType? TotalSlackCalculationType
+        {
+            get => JavaObject.getTotalSlackCalculationType().ConvertType();
+            set => JavaObject.setTotalSlackCalculationType(value.ConvertType());
+        }
+
+        public RelationshipLagCalendar? RelationshipLagCalendar
+        {
+            get => JavaObject.getRelationshipLagCalendar().ConvertType();
+            set => JavaObject.setRelationshipLagCalendar(value.ConvertType());
+        }
+
+        public string WbsCodeSeparator
+        {
+            get => JavaObject.getWbsCodeSeparator();
+            set => JavaObject.setWbsCodeSeparator(value);
+        }
+
+        public bool ConsiderAssignmentsInOtherProjects
+        {
+            get => JavaObject.getConsiderAssignmentsInOtherProjects();
+            set => JavaObject.setConsiderAssignmentsInOtherProjects(value);
+        }
+
+        public int? ConsiderAssignmentsInOtherProjectsWithPriorityEqualHigherThan
+        {
+            get => JavaObject.getConsiderAssignmentsInOtherProjectsWithPriorityEqualHigherThan().ConvertType();
+            set => JavaObject.setConsiderAssignmentsInOtherProjectsWithPriorityEqualHigherThan(value.ConvertType());
+        }
+
+        public bool PreserveScheduledEarlyAndLateDates
+        {
+            get => JavaObject.getPreserveScheduledEarlyAndLateDates();
+            set => JavaObject.setPreserveScheduledEarlyAndLateDates(value);
+        }
+
+        public bool LevelAllResources
+        {
+            get => JavaObject.getLevelAllResources();
+            set => JavaObject.setLevelAllResources(value);
+        }
+
+        public bool LevelResourcesOnlyWithinActivityTotalFloat
+        {
+            get => JavaObject.getLevelResourcesOnlyWithinActivityTotalFloat();
+            set => JavaObject.setLevelResourcesOnlyWithinActivityTotalFloat(value);
+        }
+
+        public Duration PreserveMinimumFloatWhenLeveling
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPreserveMinimumFloatWhenLeveling());
+            set => JavaObject.setPreserveMinimumFloatWhenLeveling(value?.JavaObject);
+        }
+
+        public double? MaxPercentToOverallocateResources
+        {
+            get => JavaObject.getMaxPercentToOverallocateResources().ConvertType();
+            set => JavaObject.setMaxPercentToOverallocateResources(value.ConvertType());
+        }
+
+        public string LevelingPriorities
+        {
+            get => JavaObject.getLevelingPriorities();
+            set => JavaObject.setLevelingPriorities(value);
+        }
+
+        public bool DataDateAndPlannedStartSetToProjectForecastStart
+        {
+            get => JavaObject.getDataDateAndPlannedStartSetToProjectForecastStart();
+            set => JavaObject.setDataDateAndPlannedStartSetToProjectForecastStart(value);
+        }
+
+        public bool IgnoreRelationshipsToAndFromOtherProjects
+        {
+            get => JavaObject.getIgnoreRelationshipsToAndFromOtherProjects();
+            set => JavaObject.setIgnoreRelationshipsToAndFromOtherProjects(value);
+        }
+
+        public bool MakeOpenEndedActivitiesCritical
+        {
+            get => JavaObject.getMakeOpenEndedActivitiesCritical();
+            set => JavaObject.setMakeOpenEndedActivitiesCritical(value);
+        }
+
+        public bool UseExpectedFinishDates
+        {
+            get => JavaObject.getUseExpectedFinishDates();
+            set => JavaObject.setUseExpectedFinishDates(value);
+        }
+
+        public bool ComputeStartToStartLagFromEarlyStart
+        {
+            get => JavaObject.getComputeStartToStartLagFromEarlyStart();
+            set => JavaObject.setComputeStartToStartLagFromEarlyStart(value);
+        }
+
+        public bool CalculateFloatBasedOnFinishDateOfEachProject
+        {
+            get => JavaObject.getCalculateFloatBasedOnFinishDateOfEachProject();
+            set => JavaObject.setCalculateFloatBasedOnFinishDateOfEachProject(value);
+        }
+
+        public bool CalculateMultipleFloatPaths
+        {
+            get => JavaObject.getCalculateMultipleFloatPaths();
+            set => JavaObject.setCalculateMultipleFloatPaths(value);
+        }
+
+        public bool CalculateMultipleFloatPathsUsingTotalFloat
+        {
+            get => JavaObject.getCalculateMultipleFloatPathsUsingTotalFloat();
+            set => JavaObject.setCalculateMultipleFloatPathsUsingTotalFloat(value);
+        }
+
+        public int? DisplayFloatPathsEndingWithActivityUniqueId
+        {
+            get => JavaObject.getDisplayMultipleFloatPathsEndingWithActivityUniqueID().ConvertType();
+            set => JavaObject.setDisplayMultipleFloatPathsEndingWithActivityUniqueID(value.ConvertType());
+        }
+
+        public bool LimitNumberOfFloatPathsToCalculate
+        {
+            get => JavaObject.getLimitNumberOfFloatPathsToCalculate();
+            set => JavaObject.setLimitNumberOfFloatPathsToCalculate(value);
+        }
+
+        public int? MaximumNumberOfFloatPathsToCalculate
+        {
+            get => JavaObject.getMaximumNumberOfFloatPathsToCalculate().ConvertType();
+            set => JavaObject.setMaximumNumberOfFloatPathsToCalculate(value.ConvertType());
+        }
+
+        public SchedulingProgressedActivities? SchedulingProgressedActivities
+        {
+            get => JavaObject.getSchedulingProgressedActivities().ConvertType();
+            set => JavaObject.setSchedulingProgressedActivities(value.ConvertType());
+        }
+
+        public string BaselineTypeName
+        {
+            get => JavaObject.getBaselineTypeName();
+            set => JavaObject.setBaselineTypeName(value);
+        }
+
+        public int? BaselineTypeUniqueId
+        {
+            get => JavaObject.getBaselineTypeUniqueID().ConvertType();
+            set => JavaObject.setBaselineTypeUniqueID(value.ConvertType());
+        }
+
+        public DateTime? LastBaselineUpdateDate
+        {
+            get => JavaObject.getLastBaselineUpdateDate().ConvertType();
+            set => JavaObject.setLastBaselineUpdateDate(value.ConvertType());
+        }
+
+        public string ActivityIdPrefix
+        {
+            get => JavaObject.getActivityIdPrefix();
+            set => JavaObject.setActivityIdPrefix(value);
+        }
+
+        public int? ActivityIdSuffix
+        {
+            get => JavaObject.getActivityIdSuffix().ConvertType();
+            set => JavaObject.setActivityIdSuffix(value.ConvertType());
+        }
+
+        public int? ActivityIdIncrement
+        {
+            get => JavaObject.getActivityIdIncrement().ConvertType();
+            set => JavaObject.setActivityIdIncrement(value.ConvertType());
+        }
+
+        public bool ActivityIdIncrementBasedOnSelectedActivity
+        {
+            get => JavaObject.getActivityIdIncrementBasedOnSelectedActivity();
+            set => JavaObject.setActivityIdIncrementBasedOnSelectedActivity(value);
+        }
+
+        public string BaselineCalendarName
+        {
+            get => JavaObject.getBaselineCalendarName();
+            set => JavaObject.setBaselineCalendarName(value);
+        }
+
+        public bool ProjectIsBaseline
+        {
+            get => JavaObject.getProjectIsBaseline();
+            set => JavaObject.setProjectIsBaseline(value);
+        }
+
+
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());
 
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());

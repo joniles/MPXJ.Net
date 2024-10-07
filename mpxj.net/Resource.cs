@@ -635,5 +635,36 @@ namespace MPXJ.Net
             get => _proxyManager.ProxyObject(JavaObject.getLocation());
             set => JavaObject.setLocation(value?.JavaObject);
         }
+
+        public int? UnitOfMeasureUniqueId
+        {
+            get => JavaObject.getUnitOfMeasureUniqueID().ConvertType();
+            set => JavaObject.setUnitOfMeasureUniqueID(value.ConvertType());
+        }
+
+        public UnitOfMeasure UnitOfMeasure
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getUnitOfMeasure());
+            set => JavaObject.setUnitOfMeasure(value.JavaObject);
+        }
+
+        public double? DefaultUnits
+        {
+            get => JavaObject.getDefaultUnits().ConvertType();
+            set => JavaObject.setDefaultUnits(value.ConvertType());
+        }
+
+        public int? ShiftUniqueId
+        {
+            get => JavaObject.getShiftUniqueID().ConvertType();
+            set => JavaObject.setShiftUniqueID(value.ConvertType());
+        }
+
+        public Shift Shift
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getShift());
+            set => JavaObject.setShift(value.JavaObject);
+        }
+
     }
 }

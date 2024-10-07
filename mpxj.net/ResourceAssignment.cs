@@ -23,6 +23,7 @@ namespace MPXJ.Net
             get => JavaObject.getUnits().ConvertType();
             set => JavaObject.setUnits(value.ConvertType());
         }
+
         public double? RemainingUnits
         {
             get => JavaObject.getRemainingUnits().ConvertType();
@@ -571,6 +572,30 @@ namespace MPXJ.Net
         {
             get => _proxyManager.ProxyObject(JavaObject.getCostAccount());
             set => JavaObject.setCostAccount(value?.JavaObject);
+        }
+
+        public DateTime? RemainingEarlyStart
+        {
+            get => JavaObject.getRemainingEarlyStart().ConvertType();
+            set => JavaObject.setRemainingEarlyStart(value.ConvertType());
+        }
+
+        public DateTime? RemainingEarlyFinish
+        {
+            get => JavaObject.getRemainingEarlyFinish().ConvertType();
+            set => JavaObject.setRemainingEarlyFinish(value.ConvertType());
+        }
+
+        public DateTime? RemainingLateStart
+        {
+            get => JavaObject.getRemainingLateStart().ConvertType();
+            set => JavaObject.setRemainingLateStart(value.ConvertType());
+        }
+
+        public DateTime? RemainingLateFinish
+        {
+            get => JavaObject.getRemainingLateFinish().ConvertType();
+            set => JavaObject.setRemainingLateFinish(value.ConvertType());
         }
 
         public Rate GetEffectiveRate(DateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date.ConvertType()));

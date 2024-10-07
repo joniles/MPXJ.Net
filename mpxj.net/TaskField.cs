@@ -986,6 +986,12 @@ namespace MPXJ.Net
         public static readonly TaskField Finish = new TaskField(net.sf.mpxj.TaskField.FINISH);
         public static readonly TaskField BarName = new TaskField(net.sf.mpxj.TaskField.BAR_NAME);
         public static readonly TaskField ExpectedFinish = new TaskField(net.sf.mpxj.TaskField.EXPECTED_FINISH);
+        public static readonly TaskField ActualWorkLabor = new TaskField(net.sf.mpxj.TaskField.ACTUAL_WORK_LABOR);
+        public static readonly TaskField ActualWorkNonlabor = new TaskField(net.sf.mpxj.TaskField.ACTUAL_WORK_NONLABOR);
+        public static readonly TaskField PlannedWorkLabor = new TaskField(net.sf.mpxj.TaskField.PLANNED_WORK_LABOR);
+        public static readonly TaskField PlannedWorkNonlabor = new TaskField(net.sf.mpxj.TaskField.PLANNED_WORK_NONLABOR);
+        public static readonly TaskField RemainingWorkLabor = new TaskField(net.sf.mpxj.TaskField.REMAINING_WORK_LABOR);
+        public static readonly TaskField RemainingWorkNonLabor = new TaskField(net.sf.mpxj.TaskField.REMAINING_WORK_NONLABOR);
 
         internal TaskField(net.sf.mpxj.TaskField javaObject)
         {
