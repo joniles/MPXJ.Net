@@ -574,7 +574,6 @@ namespace MPXJ.Net
             set => JavaObject.setCostAccount(value?.JavaObject);
         }
 
-
         public DateTime? RemainingEarlyStart
         {
             get => JavaObject.getRemainingEarlyStart().ConvertType();
