@@ -636,7 +636,7 @@ namespace MPXJ.Net
             set => JavaObject.setLocation(value?.JavaObject);
         }
 
-        public int? UnitOfMeasureUniqueID
+        public int? UnitOfMeasureUniqueId
         {
             get => JavaObject.getUnitOfMeasureUniqueID().ConvertType();
             set => JavaObject.setUnitOfMeasureUniqueID(value.ConvertType());
@@ -654,7 +654,7 @@ namespace MPXJ.Net
             set => JavaObject.setDefaultUnits(value.ConvertType());
         }
 
-        public int? ShiftUniqueID
+        public int? ShiftUniqueId
         {
             get => JavaObject.getShiftUniqueID().ConvertType();
             set => JavaObject.setShiftUniqueID(value.ConvertType());
