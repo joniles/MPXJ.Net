@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -22,6 +23,11 @@ namespace MPXJ.Net
         {
             get => JavaObject.getName();
             set => JavaObject.setName(value);
+        }
+
+        public ProjectCalendarHours[] CalendarHours
+        {
+            get => JavaObject.getCalendarHours().ToList().Select(l => _proxyManager.ProxyObject(l)).ToArray();
         }
 
         public ProjectCalendarHours GetCalendarHours(DayOfWeek day)
@@ -52,6 +58,11 @@ namespace MPXJ.Net
         public void RemoveCalendarHours(DayOfWeek day)
         {
             JavaObject.removeCalendarHours(day.ConvertType());
+        }
+
+        public DayType?[] CalendarDayTypes
+        {
+            get => JavaObject.getCalendarDayTypes().ToList().Select(l => l.ConvertType()).ToArray();
         }
 
         public DayType? GetCalendarDayType(DayOfWeek day)
