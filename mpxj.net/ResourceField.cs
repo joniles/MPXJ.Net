@@ -565,6 +565,7 @@ namespace MPXJ.Net
         public static readonly ResourceField UnitOfMeasureUniqueId = new ResourceField(net.sf.mpxj.ResourceField.UNIT_OF_MEASURE_UNIQUE_ID);
         public static readonly ResourceField DefaultUnits = new ResourceField(net.sf.mpxj.ResourceField.DEFAULT_UNITS);
         public static readonly ResourceField ShiftUniqueId = new ResourceField(net.sf.mpxj.ResourceField.SHIFT_UNIQUE_ID);
+        public static readonly ResourceField PrimaryRoleUniqueId = new ResourceField(net.sf.mpxj.ResourceField.PRIMARY_ROLE_UNIQUE_ID);
         public static readonly ResourceField Finish = new ResourceField(net.sf.mpxj.ResourceField.FINISH);
 
         internal ResourceField(net.sf.mpxj.ResourceField javaObject)

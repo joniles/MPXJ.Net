@@ -666,5 +666,40 @@ namespace MPXJ.Net
             set => JavaObject.setShift(value.JavaObject);
         }
 
+        public int? PrimaryRoleUniqueId
+        {
+            get => JavaObject.getPrimaryRoleUniqueID().ConvertType();
+            set => JavaObject.setPrimaryRoleUniqueID(value.ConvertType());
+        }
+
+        public Resource PrimaryRole
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPrimaryRole());
+            set => JavaObject.setPrimaryRole(value.JavaObject);
+        }
+
+        public void AddRoleAssignment(Resource role, SkillLevel skillLevel)
+        {
+            JavaObject.addRoleAssignment(role.JavaObject, skillLevel.ConvertType());
+        }
+
+        public void RemoveRoleAssignment(Resource role)
+        {
+            JavaObject.removeRoleAssignment(role.JavaObject);
+        }
+
+        public Dictionary<Resource, SkillLevel> RoleAssignments
+        {
+            get
+            {
+                var assignments = JavaObject.getRoleAssignments();
+                var result = new Dictionary<Resource, SkillLevel>();
+                foreach (var e in new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, assignments.entrySet()))
+                {
+                    result.Add(_proxyManager.ProxyObject((net.sf.mpxj.Resource)e.getKey()), (SkillLevel)((net.sf.mpxj.SkillLevel)e.getValue()).ConvertType());
+                }
+                return result;
+            }
+        }
     }
 }

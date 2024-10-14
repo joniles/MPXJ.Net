@@ -633,5 +633,20 @@ namespace MPXJ.Net
             return value == null ? (SchedulingProgressedActivities?)null : (SchedulingProgressedActivities)value.ordinal();
         }
 
+        // SkillLevel
+        public static net.sf.mpxj.SkillLevel ConvertType(this SkillLevel value)
+        {
+            return net.sf.mpxj.SkillLevel.values()[(int)value];
+        }
+
+        public static net.sf.mpxj.SkillLevel ConvertType(this SkillLevel? value)
+        {
+            return value == null ? null : net.sf.mpxj.SkillLevel.values()[(int)value];
+        }
+
+        public static SkillLevel? ConvertType(this net.sf.mpxj.SkillLevel value)
+        {
+            return value == null ? (SkillLevel?)null : (SkillLevel)value.ordinal();
+        }
     }
 }
