@@ -1293,6 +1293,12 @@ namespace MPXJ.Net
             set => JavaObject.setRemainingWorkNonlabor(value?.JavaObject);
         }
 
+        public bool ShowStartText => JavaObject.getShowStartText();
+
+        public bool ShowFinishText => JavaObject.getShowFinishText();
+
+        public bool ShowDurationText => JavaObject.getShowDurationText();
+
         public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
 
         public override string ToString() => JavaObject.toString();

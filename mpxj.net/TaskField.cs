@@ -992,6 +992,9 @@ namespace MPXJ.Net
         public static readonly TaskField PlannedWorkNonlabor = new TaskField(net.sf.mpxj.TaskField.PLANNED_WORK_NONLABOR);
         public static readonly TaskField RemainingWorkLabor = new TaskField(net.sf.mpxj.TaskField.REMAINING_WORK_LABOR);
         public static readonly TaskField RemainingWorkNonLabor = new TaskField(net.sf.mpxj.TaskField.REMAINING_WORK_NONLABOR);
+        public static readonly TaskField ShowStartText = new TaskField(net.sf.mpxj.TaskField.SHOW_START_TEXT);
+        public static readonly TaskField ShowFinishText = new TaskField(net.sf.mpxj.TaskField.SHOW_FINISH_TEXT);
+        public static readonly TaskField ShowDurationText = new TaskField(net.sf.mpxj.TaskField.SHOW_DURATION_TEXT);
 
         internal TaskField(net.sf.mpxj.TaskField javaObject)
         {
