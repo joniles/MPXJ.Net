@@ -1299,6 +1299,12 @@ namespace MPXJ.Net
 
         public bool ShowDurationText => JavaObject.getShowDurationText();
 
+        public double? ActivityPercentComplete => JavaObject.getActivityPercentComplete().ConvertType();
+        
+        public Task BaselineTask => _proxyManager.ProxyObject(JavaObject.getBaselineTask());
+
+        public Task GetBaselineTask(int index) => _proxyManager.ProxyObject(JavaObject.getBaselineTask(index));
+
         public ProjectCalendar EffectiveCalendar => _proxyManager.ProxyObject(JavaObject.getEffectiveCalendar());
 
         public override string ToString() => JavaObject.toString();

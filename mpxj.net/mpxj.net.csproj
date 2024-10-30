@@ -5,7 +5,7 @@
     <PackageId>MPXJ.Net</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MPXJ.Net</Title>
-    <Version>13.5.0</Version>
+    <Version>13.5.1</Version>
     <Authors>Jon Iles</Authors>
     <Company />
     <RepositoryUrl>https://github.com/joniles/MPXJ.Net</RepositoryUrl>
@@ -24,7 +24,7 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
 
   <ItemGroup>
     <PackageReference Include="IKVM.Maven.Sdk" Version="1.8.2" />
-    <MavenReference Include="net.sf.mpxj:mpxj" Version="13.5.0" />
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="13.5.1" />
   </ItemGroup>
 
   <ItemGroup>
