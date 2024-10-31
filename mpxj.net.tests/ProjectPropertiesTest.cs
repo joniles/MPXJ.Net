@@ -188,8 +188,8 @@ namespace MPXJ.Net
                 Assert.That(custom["% Work Complete"], Is.EqualTo("0%"));
                 Assert.That(custom["Cost"], Is.EqualTo("£2,446.00"));
                 Assert.That(custom["Scheduled Duration"], Is.EqualTo("18d"));
-                Assert.That(custom["Scheduled Finish"], Is.EqualTo(new DateTime(2023, 8, 22, 17, 0, 0)));
-                Assert.That(custom["Scheduled Start"], Is.EqualTo(new DateTime(2023, 7, 28, 8, 0, 0)));
+                Assert.That(custom["Scheduled Finish"], Is.EqualTo(new DateTime(2023, 8, 22, 16, 0, 0, DateTimeKind.Utc).ToLocalTime()));
+                Assert.That(custom["Scheduled Start"], Is.EqualTo(new DateTime(2023, 7, 28, 7, 0, 0, DateTimeKind.Utc).ToLocalTime()));
                 Assert.That(custom["Work"], Is.EqualTo("192h"));
 
                 Assert.That(custom.ContainsKey("Work"), Is.True);
