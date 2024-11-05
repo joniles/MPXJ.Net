@@ -16,8 +16,8 @@ namespace MPXJ.Net
             var relation = project.Relations[0];
             Assert.Multiple(() =>
             {
-                Assert.That(relation.SourceTask.UniqueID, Is.EqualTo(4));
-                Assert.That(relation.TargetTask.UniqueID, Is.EqualTo(3));
+                Assert.That(relation.PredecessorTask.UniqueID, Is.EqualTo(4));
+                Assert.That(relation.SuccessorTask.UniqueID, Is.EqualTo(3));
                 Assert.That(relation.Type, Is.EqualTo(RelationType.FinishStart));
                 Assert.That(relation.Lag, Is.EqualTo(Duration.GetInstance(1, TimeUnit.Days)));
                 Assert.That(relation.UniqueID, Is.EqualTo(1));
