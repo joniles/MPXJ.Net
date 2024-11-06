@@ -1311,7 +1311,7 @@ namespace MPXJ.Net
 
         public bool IsPredecessor(Task task) => JavaObject.isPredecessor(task.JavaObject);
 
-        public bool IsSuccessor(Task task) => JavaObject.isSucessor(task.JavaObject);
+        public bool IsSuccessor(Task task) => JavaObject.isSuccessor(task.JavaObject);
 
         public bool HasChildTasks => JavaObject.hasChildTasks();
     }
