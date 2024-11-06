@@ -11,7 +11,7 @@ namespace MPXJ.Net.Proxy
         protected readonly Dictionary<string, object> _objectCache = new Dictionary<string, object>();
 
         /// <summary>
-        /// Handles the case where a .Net object is created outside of
+        /// Handles the case where a .Net object is created outside
         /// the proxy manager. Calling this method ensures that the 
         /// mapping is included in the proxy manager, and so avoids creating
         /// duplicate .Net objects with later use.
@@ -27,10 +27,7 @@ namespace MPXJ.Net.Proxy
             }
 
             var key = GetKey(o.JavaObject);
-            if (!_objectCache.ContainsKey(key))
-            {
-                _objectCache[key] = o;
-            }
+            _objectCache.TryAdd(key, o);
 
             return o.JavaObject;
         }

@@ -50,7 +50,7 @@ namespace MPXJ.Net
 
         public static int? ConvertType(this java.lang.Integer value)
         {
-            return value == null ? (int?)null : value.intValue();
+            return value?.intValue();
         }
 
         public static java.lang.Integer ConvertType(this int? value)
@@ -65,7 +65,7 @@ namespace MPXJ.Net
 
         public static double? ConvertType(this java.lang.Double value)
         {
-            return value == null ? (double?)null : value.doubleValue();
+            return value?.doubleValue();
         }
 
         public static java.lang.Double ConvertType(this double? value)
@@ -80,7 +80,7 @@ namespace MPXJ.Net
 
         public static double? ConvertType(this java.lang.Number value)
         {
-            return value == null ? (double?)null : value.doubleValue();
+            return value?.doubleValue();
         }
 
         public static Color? ConvertType(this java.awt.Color color)
@@ -217,7 +217,7 @@ namespace MPXJ.Net
 
             if (o is IHasJavaObject)
             {
-                return o.GetType().GetProperty("JavaObject").GetValue(o, null);
+                return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
             }
 
             if (o is string)
