@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using MPXJ.Net.Proxy;
+// ReSharper disable RedundantCast
 
 namespace MPXJ.Net
 {

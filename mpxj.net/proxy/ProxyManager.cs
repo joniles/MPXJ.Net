@@ -146,7 +146,7 @@ namespace MPXJ.Net.Proxy
 
         internal Location ProxyObject(net.sf.mpxj.Location value)
         {
-            return ProxyObject(value, v => new Location(this, v));
+            return ProxyObject(value, v => new Location(v));
         }
 
         internal TimeOnlyRange ProxyObject(net.sf.mpxj.LocalTimeRange value)

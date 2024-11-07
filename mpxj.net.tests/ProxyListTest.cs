@@ -52,7 +52,7 @@ namespace MPXJ.Net
             }
 
             var oldEnumerator = (list as IEnumerable).GetEnumerator();
-            using (var oldEnumeratorDisposal = oldEnumerator as IDisposable)
+            using (oldEnumerator as IDisposable)
             {
                 Assert.That(oldEnumerator.MoveNext(), Is.True);
                 Assert.That(oldEnumerator.Current, Is.EqualTo(1.0));

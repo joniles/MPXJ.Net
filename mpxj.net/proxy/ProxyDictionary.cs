@@ -95,12 +95,9 @@ namespace MPXJ.Net.Proxy
         public bool Contains(KeyValuePair<NK, NV> item)
         {
             var javaKey = _keyToJava(item.Key);
-            if (JavaObject.containsKey(javaKey))
-            {
-                var value = _valueFromJava((MV)JavaObject.get(javaKey));
-                return item.Value.Equals(value);
-            }
-            return false;
+            if (!JavaObject.containsKey(javaKey)) return false;
+            var value = _valueFromJava((MV)JavaObject.get(javaKey));
+            return item.Value.Equals(value);
         }
 
         public bool ContainsKey(NK key)
@@ -119,22 +116,16 @@ namespace MPXJ.Net.Proxy
         public bool Remove(NK key)
         {
             var javaKey = _keyToJava(key);
-            if (JavaObject.containsKey(javaKey))
-            {
-                JavaObject.remove(javaKey);
-                return true;
-            }
-            return false;
+            if (!JavaObject.containsKey(javaKey)) return false;
+            JavaObject.remove(javaKey);
+            return true;
         }
 
         public bool Remove(KeyValuePair<NK, NV> item)
         {
-            if (Contains(item))
-            {
-                JavaObject.remove(_keyToJava(item.Key));
-                return true;
-            }
-            return false;
+            if (!Contains(item)) return false;
+            JavaObject.remove(_keyToJava(item.Key));
+            return true;
         }
 
         public bool TryGetValue(NK key, out NV value)

@@ -223,18 +223,22 @@ namespace MPXJ.Net
                 custom.CopyTo(array, 0);
             });
 
+            using (var enumerator = custom.GetEnumerator())
+            {
+                Assert.That(enumerator.MoveNext(), Is.True);
+                Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
 
-            var enumerator = custom.GetEnumerator();
-            Assert.That(enumerator.MoveNext(), Is.True);
-            Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+                enumerator.Reset();
+                Assert.That(enumerator.MoveNext(), Is.True);
+                Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+            }
 
-            enumerator.Reset();
-            Assert.That(enumerator.MoveNext(), Is.True);
-            Assert.That(enumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
-
-            var OldEnumerator = (custom as IEnumerable).GetEnumerator();
-            Assert.That(OldEnumerator.MoveNext(), Is.True);
-            Assert.That(OldEnumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+            var oldEnumerator = (custom as IEnumerable).GetEnumerator();
+            using (oldEnumerator as IDisposable)
+            {
+                Assert.That(oldEnumerator.MoveNext(), Is.True);
+                Assert.That(oldEnumerator.Current, Is.EqualTo(new KeyValuePair<string, object>("% Complete", "0%")));
+            }
 
             foreach (var pair in custom)
             {
