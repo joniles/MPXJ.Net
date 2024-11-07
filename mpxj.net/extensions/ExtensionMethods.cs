@@ -210,12 +210,15 @@ namespace MPXJ.Net
 
         public static object GenericJavaObject(this object o)
         {
+            if (o is IHasJavaObject)
+            {
+                return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
+            }
+            
             switch (o)
             {
                 case null:
                     return null;
-                case IHasJavaObject:
-                    return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
                 case string:
                     return o;
                 case bool boolValue:
