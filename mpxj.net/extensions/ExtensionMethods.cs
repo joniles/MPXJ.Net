@@ -35,7 +35,7 @@ namespace MPXJ.Net
 
         public static Guid? ConvertType(this java.util.UUID value)
         {
-            return value == null ? (Guid?)null : new Guid(value.toString());
+            return value == null ? null : new Guid(value.toString());
         }
 
         public static java.util.UUID ConvertType(this Guid? g)
@@ -85,7 +85,7 @@ namespace MPXJ.Net
 
         public static Color? ConvertType(this java.awt.Color color)
         {
-            return color == null ? (Color?)null : Color.FromArgb(color.getRGB());
+            return color == null ? null : Color.FromArgb(color.getRGB());
         }
 
         public static java.awt.Color ConvertType(this Color? color)
@@ -100,7 +100,7 @@ namespace MPXJ.Net
 
         public static TimeOnly? ConvertType(this java.time.LocalTime value)
         {
-            return value == null ? (TimeOnly?)null : new TimeOnly(value.getHour(), value.getMinute(), value.getSecond());
+            return value == null ? null : new TimeOnly(value.getHour(), value.getMinute(), value.getSecond());
         }
 
         public static java.time.LocalTime ConvertType(this TimeOnly? t)
@@ -115,7 +115,7 @@ namespace MPXJ.Net
 
         public static DateTime? ConvertType(this java.time.LocalDateTime value)
         {
-            return value == null ? (DateTime?)null : new DateTime(value.getYear(), value.getMonthValue(), value.getDayOfMonth(), value.getHour(), value.getMinute(), value.getSecond());
+            return value == null ? null : new DateTime(value.getYear(), value.getMonthValue(), value.getDayOfMonth(), value.getHour(), value.getMinute(), value.getSecond());
         }
 
         public static java.time.LocalDateTime ConvertType(this DateTime value)
@@ -130,7 +130,7 @@ namespace MPXJ.Net
 
         public static DayOfWeek? ConvertType(this java.time.DayOfWeek value)
         {
-            return value == null ? (DayOfWeek?)null : FromJavaDayOfWeek[value];
+            return value == null ? null : FromJavaDayOfWeek[value];
         }
 
         public static java.time.DayOfWeek ConvertType(this DayOfWeek value)
@@ -145,7 +145,7 @@ namespace MPXJ.Net
 
         public static DateOnly? ConvertType(this java.time.LocalDate value)
         {
-            return value == null ? (DateOnly?)null : new DateOnly(value.getYear(), value.getMonthValue(), value.getDayOfMonth());
+            return value == null ? null : new DateOnly(value.getYear(), value.getMonthValue(), value.getDayOfMonth());
         }
 
         public static java.time.LocalDate ConvertType(this DateOnly? t)

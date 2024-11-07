@@ -36,7 +36,7 @@ namespace MPXJ.Net.Proxy
                     return false;
                 }
 
-                _current = (N)_list._fromJava((M)_iter.next());
+                _current = _list._fromJava((M)_iter.next());
                 return true;
             }
 
