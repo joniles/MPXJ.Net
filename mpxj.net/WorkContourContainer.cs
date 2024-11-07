@@ -6,6 +6,6 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.WorkContourContainer JavaObject => (net.sf.mpxj.WorkContourContainer)base.JavaObject;
 
-        internal WorkContourContainer(ProxyManager proxyManager, net.sf.mpxj.WorkContourContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal WorkContourContainer(ProxyManager proxyManager, net.sf.mpxj.WorkContourContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

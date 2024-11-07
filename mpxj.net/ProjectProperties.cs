@@ -4,7 +4,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectProperties : AbstractFieldContainer, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>, IJavaObjectProxy<net.sf.mpxj.ProjectProperties>
+    public class ProjectProperties : AbstractFieldContainer, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>
     {
         public new net.sf.mpxj.ProjectProperties JavaObject => (net.sf.mpxj.ProjectProperties)base.JavaObject;
 

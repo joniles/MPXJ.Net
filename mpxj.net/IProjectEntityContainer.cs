@@ -1,6 +1,6 @@
 ﻿namespace MPXJ.Net
 {
-	public interface IProjectEntityContainer<N>
+	public interface IProjectEntityContainer<out N>
 	{
         N GetByUniqueID(int? id);
     }

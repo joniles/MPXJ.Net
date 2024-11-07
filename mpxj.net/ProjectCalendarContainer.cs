@@ -6,7 +6,7 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.ProjectCalendarContainer JavaObject => (net.sf.mpxj.ProjectCalendarContainer)base.JavaObject;
 
-        internal ProjectCalendarContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal ProjectCalendarContainer(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public ProjectCalendar Add() => _fromJava(JavaObject.add());
 

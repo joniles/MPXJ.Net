@@ -7,7 +7,7 @@
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.FieldType JavaObject { get; set; }
+        public net.sf.mpxj.FieldType JavaObject { get; }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Unknown;
 

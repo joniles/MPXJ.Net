@@ -4,12 +4,10 @@ namespace MPXJ.Net
 {
     public class Location : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.Location>
     {
-        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Location JavaObject { get; }
 
-        internal Location(ProxyManager proxyManager, net.sf.mpxj.Location javaObject)
+        internal Location(net.sf.mpxj.Location javaObject)
         {
-            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -44,7 +42,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.Location.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Location.Builder JavaObject { get; set; }
+            public net.sf.mpxj.Location.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {

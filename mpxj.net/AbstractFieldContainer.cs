@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-    public abstract class AbstractFieldContainer : ProjectEntity, IFieldContainer, IJavaObjectProxy<net.sf.mpxj.FieldContainer>
+    public abstract class AbstractFieldContainer : ProjectEntity, IFieldContainer
     {
         internal AbstractFieldContainer(ProxyManager proxyManager, net.sf.mpxj.AbstractFieldContainer javaObject) : base(proxyManager, javaObject) { }
 

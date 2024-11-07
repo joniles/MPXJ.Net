@@ -5,7 +5,7 @@ namespace MPXJ.Net.Proxy
 {
 	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set>
     {
-        public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
+        public new java.util.Set JavaObject => (java.util.Set)base.JavaObject;
 
         internal ProxySet(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set javaObject) : base(fromJava, toJava, javaObject) { }
 
@@ -17,7 +17,7 @@ namespace MPXJ.Net.Proxy
             var set = new HashSet<N>(this);
             update(set);
             JavaObject.clear();
-            foreach (N item in set)
+            foreach (var item in set)
             {
                 JavaObject.add(_toJava(item));
             }
@@ -25,13 +25,13 @@ namespace MPXJ.Net.Proxy
 
         bool ISet<N>.Add(N item) => JavaObject.add(_toJava(item));
 
-        public void UnionWith(IEnumerable<N> other) => Apply((set) => set.UnionWith(other));
+        public void UnionWith(IEnumerable<N> other) => Apply(set => set.UnionWith(other));
 
-        public void IntersectWith(IEnumerable<N> other) => Apply((set) => set.IntersectWith(other));
+        public void IntersectWith(IEnumerable<N> other) => Apply(set => set.IntersectWith(other));
 
-        public void ExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
+        public void ExceptWith(IEnumerable<N> other) => Apply(set => set.ExceptWith(other));
 
-        public void SymmetricExceptWith(IEnumerable<N> other) => Apply((set) => set.SymmetricExceptWith(other));
+        public void SymmetricExceptWith(IEnumerable<N> other) => Apply(set => set.SymmetricExceptWith(other));
 
         public bool IsSubsetOf(IEnumerable<N> other) => new HashSet<N>(this).IsSubsetOf(other);
 

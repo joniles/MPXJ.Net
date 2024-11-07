@@ -23,7 +23,7 @@ namespace MPXJ.Net
 		public void WriteToFileTest()
 		{
 			var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
-			var filePath = Path + "Sample1-written.xml";
+			const string filePath = Path + "Sample1-written.xml";
 			new UniversalProjectWriter(FileFormat.MSPDI).Write(project, filePath);
 			Assert.That(File.Exists(filePath), Is.True);
 		}
@@ -34,7 +34,7 @@ namespace MPXJ.Net
 			using (var ms = new MemoryStream())
 			{
 				var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
-				var filePath = Path + "Sample1-written-from-stream.xml";
+				const string filePath = Path + "Sample1-written-from-stream.xml";
 				new UniversalProjectWriter(FileFormat.MSPDI).Write(project, ms);
 				File.WriteAllBytes(filePath, ms.ToArray());
 				Assert.That(File.Exists(filePath), Is.True);

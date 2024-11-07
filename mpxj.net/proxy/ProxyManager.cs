@@ -31,7 +31,7 @@ namespace MPXJ.Net.Proxy
 
         internal UnitOfMeasure ProxyObject(net.sf.mpxj.UnitOfMeasure value)
         {
-            return ProxyObject(value, v => new UnitOfMeasure(this, v));
+            return ProxyObject(value, v => new UnitOfMeasure(v));
         }
 
         internal Resource ProxyObject(net.sf.mpxj.Resource value)
@@ -146,7 +146,7 @@ namespace MPXJ.Net.Proxy
 
         internal Location ProxyObject(net.sf.mpxj.Location value)
         {
-            return ProxyObject(value, v => new Location(this, v));
+            return ProxyObject(value, v => new Location(v));
         }
 
         internal TimeOnlyRange ProxyObject(net.sf.mpxj.LocalTimeRange value)

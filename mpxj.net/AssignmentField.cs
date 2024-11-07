@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        internal static List<AssignmentField> InternalValues { get; } = new List<AssignmentField>();
+        private static List<AssignmentField> InternalValues { get; } = new List<AssignmentField>();
         public static IReadOnlyList<AssignmentField> Values => InternalValues.AsReadOnly();
 
         public static readonly AssignmentField Start = new AssignmentField(net.sf.mpxj.AssignmentField.START);
@@ -515,7 +515,7 @@ namespace MPXJ.Net
         public static readonly AssignmentField RemainingAssignmentUnits = new AssignmentField(net.sf.mpxj.AssignmentField.REMAINING_ASSIGNMENT_UNITS);
         public static readonly AssignmentField Finish = new AssignmentField(net.sf.mpxj.AssignmentField.FINISH);
 
-        internal AssignmentField(net.sf.mpxj.AssignmentField javaObject)
+        private AssignmentField(net.sf.mpxj.AssignmentField javaObject)
         {
             JavaObject = javaObject;
             InternalValues.Add(this);

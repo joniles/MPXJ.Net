@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using java.lang;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
     public class ActivityCode : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ActivityCode JavaObject { get; }
 
         internal ActivityCode(ProxyManager proxyManager, net.sf.mpxj.ActivityCode javaObject)
@@ -42,7 +41,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; set; }
+            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {

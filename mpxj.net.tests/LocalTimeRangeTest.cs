@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace MPXJ.Net
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Assertion", "NUnit2010:Use EqualConstraint for better assertion messages in case of failure")]
     public class LocalTimeRangeTest
     {
         [Test]

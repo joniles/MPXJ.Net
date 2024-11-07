@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class FontStyle : IJavaObjectProxy<net.sf.mpxj.mpp.FontStyle>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.mpp.FontStyle JavaObject { get; }
 
         internal FontStyle(ProxyManager proxyManager, net.sf.mpxj.mpp.FontStyle javaObject)

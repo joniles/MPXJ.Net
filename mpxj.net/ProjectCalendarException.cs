@@ -6,8 +6,8 @@ namespace MPXJ.Net
 {
     public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
     {
-        internal readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.ProjectCalendarException JavaObject { get => (net.sf.mpxj.ProjectCalendarException)base.JavaObject; }
+        private readonly ProxyManager _proxyManager;
+        public new net.sf.mpxj.ProjectCalendarException JavaObject => (net.sf.mpxj.ProjectCalendarException)base.JavaObject;
 
         internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject)
         {

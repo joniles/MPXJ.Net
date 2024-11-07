@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+// ReSharper disable RedundantCast
 
 namespace MPXJ.Net
 {
     internal static class EnumExtensionMethods
     {
-        internal static Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
+        internal static readonly Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
 
         static EnumExtensionMethods()
         {
@@ -16,7 +17,7 @@ namespace MPXJ.Net
         }
 
 
-        internal static void RegisterFieldTypes<T>(IEnumerable<T> fields) where T : IFieldType
+        private static void RegisterFieldTypes<T>(IEnumerable<T> fields) where T : IFieldType
         {
             foreach(var field in fields)
             {

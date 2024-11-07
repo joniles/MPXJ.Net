@@ -52,29 +52,27 @@ namespace MPXJ.Net
             return GetProxyManager(defaults).ProxyObject(net.sf.mpxj.Duration.add(a.JavaObject, b.JavaObject, defaults.JavaObject));
         }
 
-        public override bool Equals(object obj) => this.Equals(obj as Duration);
+        public override bool Equals(object obj) => Equals(obj as Duration);
 
         public bool Equals(Duration d) => d != null && JavaObject.Equals(d.JavaObject);
 
         public override int GetHashCode() => JavaObject.hashCode();
 
-        public static bool operator ==(Duration lhs, Duration rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+        public static bool operator ==(Duration lhs, Duration rhs) => lhs?.Equals(rhs) ?? rhs is null;
 
         public static bool operator !=(Duration lhs, Duration rhs) => !(lhs == rhs);
 
         private static ProxyManager GetProxyManager<T>(ITimeUnitDefaultsContainer<T> defaults) where T : net.sf.mpxj.TimeUnitDefaultsContainer
         {
-            if (defaults is ProjectProperties props)
+            switch (defaults)
             {
-                return props._proxyManager;
+                case ProjectProperties props:
+                    return props._proxyManager;
+                case ProjectCalendar cal:
+                    return cal._proxyManager;
+                default:
+                    throw new NotSupportedException();
             }
-
-            if (defaults is ProjectCalendar cal)
-            {
-                return cal._proxyManager;
-            }
-
-            throw new NotSupportedException();
         }
     }
 }

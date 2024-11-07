@@ -16,7 +16,7 @@ namespace MPXJ.Net
             var link = project.DataLinks[1];
             Assert.Multiple(() =>
             {
-                Assert.That(link.ID, Is.EqualTo("C:\\Users\\Jon\\Desktop\\Sample1.mpp!LINK_2"));
+                Assert.That(link.ID, Is.EqualTo(@"C:\Users\Jon\Desktop\Sample1.mpp!LINK_2"));
                 Assert.That(link.SourceField, Is.EqualTo(TaskField.Text3));
                 Assert.That(link.TargetField, Is.EqualTo(TaskField.Text4));
                 Assert.That(link.SourceUniqueID, Is.EqualTo(3));

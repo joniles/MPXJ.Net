@@ -10,16 +10,16 @@ namespace MPXJ.Net.Proxy
         {
             private readonly ProxyDictionary<MK, MV, NK, NV> _dictionary;
             private java.util.Iterator _iterator;
-            private KeyValuePair<NK, NV> _current;
 
-            public KeyValuePair<NK, NV> Current => _current;
-            object IEnumerator.Current => _current;
+            public KeyValuePair<NK, NV> Current { get; private set; }
+
+            object IEnumerator.Current => Current;
 
             internal Enumerator(ProxyDictionary<MK, MV, NK, NV> dictionary)
             {
                 _dictionary = dictionary;
                 _iterator = _dictionary.JavaObject.entrySet().iterator();
-                _current = default;
+                Current = default;
             }
 
             public void Dispose()
@@ -35,7 +35,7 @@ namespace MPXJ.Net.Proxy
                 }
 
                 var entry = (java.util.Map.Entry)_iterator.next();
-                _current = new KeyValuePair<NK, NV>(_dictionary._keyFromJava((MK)entry.getKey()), _dictionary._valueFromJava((MV)entry.getValue()));
+                Current = new KeyValuePair<NK, NV>(_dictionary._keyFromJava((MK)entry.getKey()), _dictionary._valueFromJava((MV)entry.getValue()));
                 return true;
             }
 
@@ -45,11 +45,11 @@ namespace MPXJ.Net.Proxy
             }
         }
 
-        internal readonly ProxyManager _proxyManager;
-        internal readonly Func<MK, NK> _keyFromJava;
-        internal readonly Func<NK, MK> _keyToJava;
-        internal readonly Func<MV, NV> _valueFromJava;
-        internal readonly Func<NV, MV> _valueToJava;
+        private readonly ProxyManager _proxyManager;
+        private readonly Func<MK, NK> _keyFromJava;
+        private readonly Func<NK, MK> _keyToJava;
+        private readonly Func<MV, NV> _valueFromJava;
+        private readonly Func<NV, MV> _valueToJava;
 
         public java.util.Map JavaObject { get; }
 
@@ -95,12 +95,9 @@ namespace MPXJ.Net.Proxy
         public bool Contains(KeyValuePair<NK, NV> item)
         {
             var javaKey = _keyToJava(item.Key);
-            if (JavaObject.containsKey(javaKey))
-            {
-                var value = _valueFromJava((MV)JavaObject.get(javaKey));
-                return item.Value.Equals(value);
-            }
-            return false;
+            if (!JavaObject.containsKey(javaKey)) return false;
+            var value = _valueFromJava((MV)JavaObject.get(javaKey));
+            return item.Value.Equals(value);
         }
 
         public bool ContainsKey(NK key)
@@ -110,7 +107,7 @@ namespace MPXJ.Net.Proxy
 
         public void CopyTo(KeyValuePair<NK, NV>[] array, int arrayIndex)
         {
-            foreach (KeyValuePair<NK, NV> item in _proxyManager.ProxyCollection<java.util.Map.Entry, KeyValuePair<NK, NV>>(v => new KeyValuePair<NK, NV>(_keyFromJava((MK)v.getKey()), _valueFromJava((MV)v.getValue())), v => null, JavaObject.entrySet()))
+            foreach (var item in _proxyManager.ProxyCollection<java.util.Map.Entry, KeyValuePair<NK, NV>>(v => new KeyValuePair<NK, NV>(_keyFromJava((MK)v.getKey()), _valueFromJava((MV)v.getValue())), _ => null, JavaObject.entrySet()))
             {
                 array.SetValue(item, arrayIndex++);
             }
@@ -119,22 +116,16 @@ namespace MPXJ.Net.Proxy
         public bool Remove(NK key)
         {
             var javaKey = _keyToJava(key);
-            if (JavaObject.containsKey(javaKey))
-            {
-                JavaObject.remove(javaKey);
-                return true;
-            }
-            return false;
+            if (!JavaObject.containsKey(javaKey)) return false;
+            JavaObject.remove(javaKey);
+            return true;
         }
 
         public bool Remove(KeyValuePair<NK, NV> item)
         {
-            if (Contains(item))
-            {
-                JavaObject.remove(_keyToJava(item.Key));
-                return true;
-            }
-            return false;
+            if (!Contains(item)) return false;
+            JavaObject.remove(_keyToJava(item.Key));
+            return true;
         }
 
         public bool TryGetValue(NK key, out NV value)

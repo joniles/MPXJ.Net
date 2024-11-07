@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class CustomField : IJavaObjectProxy<net.sf.mpxj.CustomField>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.CustomField JavaObject { get; }
 
         internal CustomField(ProxyManager proxyManager, net.sf.mpxj.CustomField javaObject)

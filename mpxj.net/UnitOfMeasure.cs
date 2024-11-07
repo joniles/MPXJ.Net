@@ -4,12 +4,10 @@ namespace MPXJ.Net
 {
     public class UnitOfMeasure : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.UnitOfMeasure>
     {
-        internal readonly ProxyManager _proxyManager;
         public net.sf.mpxj.UnitOfMeasure JavaObject { get; }
 
-        internal UnitOfMeasure(ProxyManager proxyManager, net.sf.mpxj.UnitOfMeasure javaObject)
+        internal UnitOfMeasure(net.sf.mpxj.UnitOfMeasure javaObject)
         {
-            _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
@@ -24,7 +22,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.UnitOfMeasure.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.UnitOfMeasure.Builder JavaObject { get; set; }
+            public net.sf.mpxj.UnitOfMeasure.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {

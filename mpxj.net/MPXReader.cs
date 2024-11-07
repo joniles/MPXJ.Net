@@ -23,9 +23,6 @@ namespace MPXJ.Net
             set => value.ConvertType();
         }
 
-        public static CultureInfo[] SupportedCultures
-        {
-            get => net.sf.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => l.ConvertType()).ToArray();
-        }
+        public static CultureInfo[] SupportedCultures => net.sf.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => l.ConvertType()).ToArray();
     }
 }

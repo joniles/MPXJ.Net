@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using MPXJ.Net.Proxy;
+// ReSharper disable RedundantCast
 
 namespace MPXJ.Net
 {
@@ -19,7 +20,7 @@ namespace MPXJ.Net
             { java.time.DayOfWeek.THURSDAY, DayOfWeek.Thursday },
             { java.time.DayOfWeek.FRIDAY, DayOfWeek.Friday },
             { java.time.DayOfWeek.SATURDAY, DayOfWeek.Saturday },
-            { java.time.DayOfWeek.SUNDAY, DayOfWeek.Sunday },
+            { java.time.DayOfWeek.SUNDAY, DayOfWeek.Sunday }
         };
 
         private static readonly Dictionary<DayOfWeek, java.time.DayOfWeek> ToJavaDayOfWeek = new Dictionary<DayOfWeek, java.time.DayOfWeek>
@@ -30,7 +31,7 @@ namespace MPXJ.Net
             { DayOfWeek.Thursday, java.time.DayOfWeek.THURSDAY },
             { DayOfWeek.Friday, java.time.DayOfWeek.FRIDAY },
             { DayOfWeek.Saturday, java.time.DayOfWeek.SATURDAY },
-            { DayOfWeek.Sunday, java.time.DayOfWeek.SUNDAY },
+            { DayOfWeek.Sunday, java.time.DayOfWeek.SUNDAY }
         };
 
         public static Guid? ConvertType(this java.util.UUID value)
@@ -50,7 +51,7 @@ namespace MPXJ.Net
 
         public static int? ConvertType(this java.lang.Integer value)
         {
-            return value == null ? (int?)null : value.intValue();
+            return value?.intValue();
         }
 
         public static java.lang.Integer ConvertType(this int? value)
@@ -65,7 +66,7 @@ namespace MPXJ.Net
 
         public static double? ConvertType(this java.lang.Double value)
         {
-            return value == null ? (double?)null : value.doubleValue();
+            return value?.doubleValue();
         }
 
         public static java.lang.Double ConvertType(this double? value)
@@ -80,7 +81,7 @@ namespace MPXJ.Net
 
         public static double? ConvertType(this java.lang.Number value)
         {
-            return value == null ? (double?)null : value.doubleValue();
+            return value?.doubleValue();
         }
 
         public static Color? ConvertType(this java.awt.Color color)
@@ -217,7 +218,7 @@ namespace MPXJ.Net
 
             if (o is IHasJavaObject)
             {
-                return o.GetType().GetProperty("JavaObject").GetValue(o, null);
+                return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
             }
 
             if (o is string)

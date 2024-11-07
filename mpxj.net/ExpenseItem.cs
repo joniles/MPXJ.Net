@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class ExpenseItem : IJavaObjectProxy<net.sf.mpxj.ExpenseItem>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ExpenseItem JavaObject { get; }
 
         internal ExpenseItem(ProxyManager proxyManager, net.sf.mpxj.ExpenseItem javaObject)
@@ -62,7 +62,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ExpenseItem.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ExpenseItem.Builder JavaObject { get; set; }
+            public net.sf.mpxj.ExpenseItem.Builder JavaObject { get; }
 
             public Builder(Task task)
             {

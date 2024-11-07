@@ -23,13 +23,13 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public override bool Equals(object obj) => this.Equals(obj as DateOnlyRange);
+        public override bool Equals(object obj) => Equals(obj as DateOnlyRange);
 
         public bool Equals(DateOnlyRange d) => d != null && JavaObject.Equals(d.JavaObject);
 
         public override int GetHashCode() => JavaObject.hashCode();
 
-        public static bool operator ==(DateOnlyRange lhs, DateOnlyRange rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+        public static bool operator ==(DateOnlyRange lhs, DateOnlyRange rhs) => lhs?.Equals(rhs) ?? rhs is null;
 
         public static bool operator !=(DateOnlyRange lhs, DateOnlyRange rhs) => !(lhs == rhs);
     }

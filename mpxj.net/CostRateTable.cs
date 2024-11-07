@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.CostRateTable JavaObject => (net.sf.mpxj.CostRateTable)base.JavaObject;
 
-        internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public CostRateTableEntry GetEntryByDate(DateTime date) => _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
 

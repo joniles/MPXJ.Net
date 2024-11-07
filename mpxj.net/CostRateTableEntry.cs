@@ -6,7 +6,7 @@ namespace MPXJ.Net
 {
     public class CostRateTableEntry : IJavaObjectProxy<net.sf.mpxj.CostRateTableEntry>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.CostRateTableEntry JavaObject { get; }
 
         internal CostRateTableEntry(ProxyManager proxyManager, net.sf.mpxj.CostRateTableEntry javaObject)

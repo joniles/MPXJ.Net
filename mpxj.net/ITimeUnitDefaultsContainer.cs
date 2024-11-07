@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-	public interface ITimeUnitDefaultsContainer<M> : IJavaObjectProxy<M> where M : net.sf.mpxj.TimeUnitDefaultsContainer
+	public interface ITimeUnitDefaultsContainer<out M> : IJavaObjectProxy<M> where M : net.sf.mpxj.TimeUnitDefaultsContainer
     {
         int? MinutesPerDay { get; }
 

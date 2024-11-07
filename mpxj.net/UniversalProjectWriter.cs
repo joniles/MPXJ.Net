@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class UniversalProjectWriter : IProjectWriter
     {
-        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; set; }
+        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; }
 
         public UniversalProjectWriter(FileFormat format)
         {

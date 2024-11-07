@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.GroupClause JavaObject { get; }
 
         internal GroupClause(ProxyManager proxyManager, net.sf.mpxj.GroupClause javaObject)

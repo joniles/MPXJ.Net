@@ -17,11 +17,11 @@ namespace MPXJ.Net
 
             Assert.That(shift.UniqueID, Is.EqualTo(1));
             Assert.That(shift.Name, Is.EqualTo("First Shift"));
-            Assert.That(shift.Periods.Count, Is.EqualTo(0));
+            Assert.That(shift.Periods, Has.Count.EqualTo(0));
 
-            Assert.That(project.Shifts.Count, Is.EqualTo(0));
+            Assert.That(project.Shifts, Has.Count.EqualTo(0));
             project.Shifts.Add(shift);
-            Assert.That(project.Shifts.Count, Is.EqualTo(1));
+            Assert.That(project.Shifts, Has.Count.EqualTo(1));
 
             var period1 = new ShiftPeriod.Builder(project, shift)
                 .UniqueID(1)
@@ -44,8 +44,8 @@ namespace MPXJ.Net
 
             Assert.That(period1.Duration.DurationValue, Is.EqualTo(12));
 
-            Assert.That(shift.Periods.Count, Is.EqualTo(2));
-            Assert.That(project.ShiftPeriods.Count, Is.EqualTo(2));
+            Assert.That(shift.Periods, Has.Count.EqualTo(2));
+            Assert.That(project.ShiftPeriods, Has.Count.EqualTo(2));
         }
     }
 }

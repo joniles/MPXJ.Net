@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class DataLink : IJavaObjectProxy<net.sf.mpxj.DataLink>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.DataLink JavaObject { get; }
 
         internal DataLink(ProxyManager proxyManager, net.sf.mpxj.DataLink javaObject)

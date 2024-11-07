@@ -47,13 +47,13 @@ namespace MPXJ.Net
             addedField.UniqueID = 123;
 
             var addedTable = addedField.LookupTable;
-            table.AllLevelsRequired = false;
-            table.Enterprise = false;
-            table.GUID = Guid.NewGuid();
-            table.LeafOnly = false;
-            table.OnlyTableValuesAllowed = true;
-            table.ResourceSubstitutionEnabled = false;
-            table.ShowIndent = true;
+            addedTable.AllLevelsRequired = false;
+            addedTable.Enterprise = false;
+            addedTable.GUID = Guid.NewGuid();
+            addedTable.LeafOnly = false;
+            addedTable.OnlyTableValuesAllowed = true;
+            addedTable.ResourceSubstitutionEnabled = false;
+            addedTable.ShowIndent = true;
 
             var typeByAlias = project.CustomFields.GetFieldTypeByAlias(FieldTypeClass.Task, "CustomFieldText2");
             Assert.That(typeByAlias, Is.EqualTo(TaskField.Text2));
@@ -96,6 +96,14 @@ namespace MPXJ.Net
                 Type = CustomFieldValueDataType.Text,
                 Collapsed = false
             };
+            
+            Assert.That(newItem.Collapsed, Is.False);
+            Assert.That(newItem.Description, Is.EqualTo("Description"));
+            Assert.That(newItem.GUID, Is.Not.Null);
+            Assert.That(newItem.ParentUniqueID, Is.EqualTo(456));
+            Assert.That(newItem.ToString(), Contains.Substring("[CustomFieldValueItem"));
+            Assert.That(newItem.Type, Is.EqualTo(CustomFieldValueDataType.Text));
+            Assert.That(newItem.Value, Is.EqualTo("Value"));
         }
     }
 }

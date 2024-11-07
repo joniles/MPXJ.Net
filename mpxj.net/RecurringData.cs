@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -92,12 +92,7 @@ namespace MPXJ.Net
         {
             get
             {
-                var result = new List<DateOnly>();
-                foreach(var date in JavaObject.getDates())
-                {
-                    result.Add(date.ConvertType().Value);
-                }
-                return result.ToArray();
+                return JavaObject.getDates().Select(date => date.ConvertType().Value).ToArray();
             }
         }
             

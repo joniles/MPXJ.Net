@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class GraphicalIndicatorCriteria : GenericCriteria, IJavaObjectProxy<net.sf.mpxj.GraphicalIndicatorCriteria>
     {
-        public new net.sf.mpxj.GraphicalIndicatorCriteria JavaObject { get => (net.sf.mpxj.GraphicalIndicatorCriteria)base.JavaObject; }
+        public new net.sf.mpxj.GraphicalIndicatorCriteria JavaObject => (net.sf.mpxj.GraphicalIndicatorCriteria)base.JavaObject;
 
         internal GraphicalIndicatorCriteria(ProxyManager proxyManager, net.sf.mpxj.GenericCriteria javaObject) : base(proxyManager, javaObject) { }
 

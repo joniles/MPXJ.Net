@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -53,12 +54,7 @@ namespace MPXJ.Net
         public Dictionary<int, string> ListProjects()
         {
             var projects = JavaObject.listProjects();
-            var result = new Dictionary<int, string>();
-            foreach (var e in new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, projects.entrySet()))
-            {
-                result.Add(((java.lang.Integer)e.getKey()).intValue(), (string)e.getValue());
-            }
-            return result;
+            return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, projects.entrySet()).ToDictionary(e => ((java.lang.Integer)e.getKey()).intValue(), e => (string)e.getValue());
         }
 
         public ProjectFile Read() => Read(JavaObject.read());

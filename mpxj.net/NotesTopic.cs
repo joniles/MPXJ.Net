@@ -34,7 +34,7 @@ namespace MPXJ.Net
             }
 
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.NotesTopic.Builder JavaObject { get; set; }
+            public net.sf.mpxj.NotesTopic.Builder JavaObject { get; }
 
             public Builder UniqueID(int? value)
             {

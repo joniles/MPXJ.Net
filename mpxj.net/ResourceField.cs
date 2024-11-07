@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        internal static List<ResourceField> InternalValues { get; } = new List<ResourceField>();
+        private static List<ResourceField> InternalValues { get; } = new List<ResourceField>();
         public static IReadOnlyList<ResourceField> Values => InternalValues.AsReadOnly();
 
         public static readonly ResourceField Start = new ResourceField(net.sf.mpxj.ResourceField.START);
@@ -568,7 +568,7 @@ namespace MPXJ.Net
         public static readonly ResourceField PrimaryRoleUniqueId = new ResourceField(net.sf.mpxj.ResourceField.PRIMARY_ROLE_UNIQUE_ID);
         public static readonly ResourceField Finish = new ResourceField(net.sf.mpxj.ResourceField.FINISH);
 
-        internal ResourceField(net.sf.mpxj.ResourceField javaObject)
+        private ResourceField(net.sf.mpxj.ResourceField javaObject)
         {
             JavaObject = javaObject;
             InternalValues.Add(this);

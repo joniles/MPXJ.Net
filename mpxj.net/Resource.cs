@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -693,12 +694,7 @@ namespace MPXJ.Net
             get
             {
                 var assignments = JavaObject.getRoleAssignments();
-                var result = new Dictionary<Resource, SkillLevel>();
-                foreach (var e in new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, assignments.entrySet()))
-                {
-                    result.Add(_proxyManager.ProxyObject((net.sf.mpxj.Resource)e.getKey()), (SkillLevel)((net.sf.mpxj.SkillLevel)e.getValue()).ConvertType());
-                }
-                return result;
+                return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, assignments.entrySet()).ToDictionary(e => _proxyManager.ProxyObject((net.sf.mpxj.Resource)e.getKey()), e => (SkillLevel)((net.sf.mpxj.SkillLevel)e.getValue()).ConvertType());
             }
         }
     }

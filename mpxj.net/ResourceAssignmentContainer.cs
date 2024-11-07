@@ -5,10 +5,10 @@ namespace MPXJ.Net
 {
     public class ResourceAssignmentContainer : ProjectEntityContainer<net.sf.mpxj.ResourceAssignment, ResourceAssignment>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ResourceAssignmentContainer JavaObject => (net.sf.mpxj.ResourceAssignmentContainer)base.JavaObject;
 
-        internal ResourceAssignmentContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
+        internal ResourceAssignmentContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
         {
             _proxyManager = proxyManager;
         }
