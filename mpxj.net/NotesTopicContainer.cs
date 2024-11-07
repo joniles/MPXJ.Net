@@ -6,7 +6,7 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.NotesTopicContainer JavaObject { get => (net.sf.mpxj.NotesTopicContainer)base.JavaObject; }
 
-        internal NotesTopicContainer(ProxyManager proxyManager, net.sf.mpxj.NotesTopicContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal NotesTopicContainer(ProxyManager proxyManager, net.sf.mpxj.NotesTopicContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public NotesTopic DefaultTopic => _fromJava(JavaObject.getDefaultTopic());
     }

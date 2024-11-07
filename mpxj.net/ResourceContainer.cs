@@ -8,7 +8,7 @@ namespace MPXJ.Net
         internal readonly ProxyManager _proxyManager;
         public new net.sf.mpxj.ResourceContainer JavaObject => (net.sf.mpxj.ResourceContainer)base.JavaObject;
 
-        internal ResourceContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject)
+        internal ResourceContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
         {
             _proxyManager = proxyManager;
         }

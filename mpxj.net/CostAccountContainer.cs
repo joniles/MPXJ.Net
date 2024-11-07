@@ -6,6 +6,6 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.CostAccountContainer JavaObject => (net.sf.mpxj.CostAccountContainer)base.JavaObject;
 
-        internal CostAccountContainer(ProxyManager proxyManager, net.sf.mpxj.CostAccountContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal CostAccountContainer(ProxyManager proxyManager, net.sf.mpxj.CostAccountContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

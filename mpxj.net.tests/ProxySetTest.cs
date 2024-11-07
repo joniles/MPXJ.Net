@@ -9,7 +9,7 @@ namespace MPXJ.Net
         [Test]
         public void MethodsTest()
         {
-            var set = new ProxySet<java.lang.Integer, int>((m) => m.intValue(), (n) => java.lang.Integer.valueOf(n), new java.util.HashSet());
+            var set = new ProxySet<java.lang.Integer, int>(m => m.intValue(), n => java.lang.Integer.valueOf(n), new java.util.HashSet());
             Assert.That(set.IsReadOnly, Is.False);
 
             set.Add(1);

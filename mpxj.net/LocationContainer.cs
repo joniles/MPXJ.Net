@@ -6,6 +6,6 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.LocationContainer JavaObject { get => (net.sf.mpxj.LocationContainer)base.JavaObject; }
 
-        internal LocationContainer(ProxyManager proxyManager, net.sf.mpxj.LocationContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal LocationContainer(ProxyManager proxyManager, net.sf.mpxj.LocationContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

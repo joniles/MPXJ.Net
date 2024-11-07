@@ -25,13 +25,13 @@ namespace MPXJ.Net.Proxy
 
         bool ISet<N>.Add(N item) => JavaObject.add(_toJava(item));
 
-        public void UnionWith(IEnumerable<N> other) => Apply((set) => set.UnionWith(other));
+        public void UnionWith(IEnumerable<N> other) => Apply(set => set.UnionWith(other));
 
-        public void IntersectWith(IEnumerable<N> other) => Apply((set) => set.IntersectWith(other));
+        public void IntersectWith(IEnumerable<N> other) => Apply(set => set.IntersectWith(other));
 
-        public void ExceptWith(IEnumerable<N> other) => Apply((set) => set.ExceptWith(other));
+        public void ExceptWith(IEnumerable<N> other) => Apply(set => set.ExceptWith(other));
 
-        public void SymmetricExceptWith(IEnumerable<N> other) => Apply((set) => set.SymmetricExceptWith(other));
+        public void SymmetricExceptWith(IEnumerable<N> other) => Apply(set => set.SymmetricExceptWith(other));
 
         public bool IsSubsetOf(IEnumerable<N> other) => new HashSet<N>(this).IsSubsetOf(other);
 

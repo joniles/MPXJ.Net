@@ -6,6 +6,6 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.ShiftPeriodContainer JavaObject { get => (net.sf.mpxj.ShiftPeriodContainer)base.JavaObject; }
 
-        internal ShiftPeriodContainer(ProxyManager proxyManager, net.sf.mpxj.ShiftPeriodContainer javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal ShiftPeriodContainer(ProxyManager proxyManager, net.sf.mpxj.ShiftPeriodContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

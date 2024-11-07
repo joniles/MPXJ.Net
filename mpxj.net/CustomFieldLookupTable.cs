@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public new net.sf.mpxj.CustomFieldLookupTable JavaObject => (net.sf.mpxj.CustomFieldLookupTable)base.JavaObject;
 
-        internal CustomFieldLookupTable(ProxyManager proxyManager, net.sf.mpxj.CustomFieldLookupTable javaObject) : base(proxyManager.ProxyObject, (value) => value.JavaObject, javaObject) { }
+        internal CustomFieldLookupTable(ProxyManager proxyManager, net.sf.mpxj.CustomFieldLookupTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public Guid? GUID
         {

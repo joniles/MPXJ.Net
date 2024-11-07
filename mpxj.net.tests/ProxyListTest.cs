@@ -9,7 +9,7 @@ namespace MPXJ.Net
         [Test]
         public void MethodsTest()
         {
-            var list = new ProxyList<java.lang.Double, double>((m) => m.doubleValue(), (n) => java.lang.Double.valueOf(n), new java.util.ArrayList());
+            var list = new ProxyList<java.lang.Double, double>(m => m.doubleValue(), n => java.lang.Double.valueOf(n), new java.util.ArrayList());
             Assert.That(list.IsReadOnly, Is.False);
 
             list.Add(1.0);
