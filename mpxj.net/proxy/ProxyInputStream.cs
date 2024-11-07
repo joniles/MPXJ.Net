@@ -15,7 +15,7 @@ namespace MPXJ.Net.Proxy
 
         public override int read()
         {
-            int i = _stream.ReadByte();
+            var i = _stream.ReadByte();
             if (i != -1)
             {
                 currentOffset++;
@@ -26,7 +26,7 @@ namespace MPXJ.Net.Proxy
 
         public override int read(byte[] b, int off, int len)
         {
-            int i = _stream.Read(b, off, len);
+            var i = _stream.Read(b, off, len);
             if (i > 0)
             {
                 currentOffset += i;

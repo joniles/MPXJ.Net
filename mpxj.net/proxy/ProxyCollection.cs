@@ -30,7 +30,7 @@ namespace MPXJ.Net.Proxy
 
         public void CopyTo(N[] array, int arrayIndex)
         {
-            foreach (N item in this)
+            foreach (var item in this)
             {
                 array[arrayIndex++] = item;
             }

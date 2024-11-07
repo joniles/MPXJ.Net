@@ -110,7 +110,7 @@ namespace MPXJ.Net.Proxy
 
         public void CopyTo(KeyValuePair<NK, NV>[] array, int arrayIndex)
         {
-            foreach (KeyValuePair<NK, NV> item in _proxyManager.ProxyCollection<java.util.Map.Entry, KeyValuePair<NK, NV>>(v => new KeyValuePair<NK, NV>(_keyFromJava((MK)v.getKey()), _valueFromJava((MV)v.getValue())), v => null, JavaObject.entrySet()))
+            foreach (var item in _proxyManager.ProxyCollection<java.util.Map.Entry, KeyValuePair<NK, NV>>(v => new KeyValuePair<NK, NV>(_keyFromJava((MK)v.getKey()), _valueFromJava((MV)v.getValue())), v => null, JavaObject.entrySet()))
             {
                 array.SetValue(item, arrayIndex++);
             }

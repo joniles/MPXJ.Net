@@ -5,7 +5,7 @@ namespace MPXJ.Net
 	public abstract class ProjectEntity
 	{
 		internal readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.AbstractFieldContainer JavaObject { get; }
+		protected net.sf.mpxj.AbstractFieldContainer JavaObject { get; }
 
 		public ProjectFile Parent => _proxyManager.ProxyObject(JavaObject.getParentFile());
 

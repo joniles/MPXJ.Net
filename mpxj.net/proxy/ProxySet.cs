@@ -17,7 +17,7 @@ namespace MPXJ.Net.Proxy
             var set = new HashSet<N>(this);
             update(set);
             JavaObject.clear();
-            foreach (N item in set)
+            foreach (var item in set)
             {
                 JavaObject.add(_toJava(item));
             }

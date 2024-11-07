@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     internal static class EnumExtensionMethods
     {
-        internal static Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
+        internal static readonly Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
 
         static EnumExtensionMethods()
         {
