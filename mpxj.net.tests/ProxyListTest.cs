@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using NUnit.Framework;
 using MPXJ.Net.Proxy;
 
@@ -42,7 +41,7 @@ namespace MPXJ.Net
             Assert.That(array[1], Is.EqualTo(2.0));
 
 
-            using var enumerator = list.GetEnumerator();
+            var enumerator = list.GetEnumerator();
             Assert.That(enumerator.MoveNext(), Is.True);
             Assert.That(enumerator.Current, Is.EqualTo(1.0));
 
@@ -51,7 +50,6 @@ namespace MPXJ.Net
             Assert.That(enumerator.Current, Is.EqualTo(1.0));
 
             var oldEnumerator = (list as IEnumerable).GetEnumerator();
-            using var oldEnumeratorDisposal = oldEnumerator as IDisposable;
             Assert.That(oldEnumerator.MoveNext(), Is.True);
             Assert.That(oldEnumerator.Current, Is.EqualTo(1.0));
 

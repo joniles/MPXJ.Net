@@ -210,33 +210,62 @@ namespace MPXJ.Net
 
         public static object GenericJavaObject(this object o)
         {
-            switch (o)
+            if (o == null)
             {
-                case null:
-                    return null;
-                case IHasJavaObject:
-                    return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
-                case string:
-                    return o;
-                case bool boolValue:
-                    return java.lang.Boolean.valueOf(boolValue);
-                case int intValue:
-                    return java.lang.Integer.valueOf(intValue);
-                case long longValue:
-                    return java.lang.Long.valueOf(longValue);
-                case double doubleValue:
-                    return java.lang.Double.valueOf(doubleValue);
-                case decimal decimalValue:
-                    return java.lang.Double.valueOf((double)decimalValue);
-                case DateTime dateTimeValue:
-                    return dateTimeValue.ConvertType();
-                case DateOnly dateOnlyValue:
-                    return dateOnlyValue.ConvertType();
-                case TimeOnly timeOnlyValue:
-                    return timeOnlyValue.ConvertType();
-                default:
-                    throw new NotSupportedException($"Conversion not defined for {o.GetType()}");
+                return null;
             }
+
+            if (o is IHasJavaObject)
+            {
+                return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
+            }
+
+            if (o is string)
+            {
+                return o;
+            }
+
+            if (o is bool boolValue)
+            {
+                return java.lang.Boolean.valueOf(boolValue);
+            }
+
+            if (o is int intValue)
+            {
+                return java.lang.Integer.valueOf(intValue);
+            }
+
+            if (o is long longValue)
+            {
+                return java.lang.Long.valueOf(longValue);
+            }
+
+            if (o is double doubleValue)
+            {
+                return java.lang.Double.valueOf(doubleValue);
+            }
+            
+            if (o is decimal decimalValue)
+            {
+                return java.lang.Double.valueOf((double)decimalValue);
+            }
+            
+            if (o is DateTime dateTimeValue)
+            {
+                return dateTimeValue.ConvertType();
+            }
+
+            if (o is DateOnly dateOnlyValue)
+            {
+                return dateOnlyValue.ConvertType();
+            }
+
+            if (o is TimeOnly timeOnlyValue)
+            {
+                return timeOnlyValue.ConvertType();
+            }
+
+            throw new NotSupportedException($"Conversion not defined for {o.GetType()}");
         }
     }
 }

@@ -181,19 +181,27 @@ namespace MPXJ.Net.Proxy
 
         internal Notes ProxyObject(net.sf.mpxj.Notes value)
         {
-            switch (value)
+            if (value is net.sf.mpxj.HtmlNotes h)
             {
-                case net.sf.mpxj.HtmlNotes h:
-                    return ProxyObject(h);
-                case net.sf.mpxj.RtfNotes r:
-                    return ProxyObject(r);
-                case net.sf.mpxj.ParentNotes p:
-                    return ProxyObject(p);
-                case net.sf.mpxj.StructuredNotes s:
-                    return ProxyObject(s);
-                default:
-                    return ProxyObject(value, v => new Notes(v));
+                return ProxyObject(h);
             }
+
+            if (value is net.sf.mpxj.RtfNotes r)
+            {
+                return ProxyObject(r);
+            }
+
+            if (value is net.sf.mpxj.ParentNotes p)
+            {
+                return ProxyObject(p);
+            }
+
+            if (value is net.sf.mpxj.StructuredNotes s)
+            {
+                return ProxyObject(s);
+            }
+
+            return ProxyObject(value, v => new Notes(v));
         }
 
         internal HtmlNotes ProxyObject(net.sf.mpxj.HtmlNotes value)
@@ -409,15 +417,22 @@ namespace MPXJ.Net.Proxy
 
         internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)
         {
-            switch (value)
+            if (value == null)
             {
-                case null:
-                    return null;
-                case net.sf.mpxj.UserDefinedField udf:
-                    return ProxyObject(udf, v => new UserDefinedField(v));
+                return null;
             }
 
-            return value.getFieldTypeClass() == net.sf.mpxj.FieldTypeClass.UNKNOWN ? ProxyObject(value, v => new UnknownFieldType(v)) : EnumExtensionMethods.FieldTypeDictionary[value];
+            if (value is net.sf.mpxj.UserDefinedField udf)
+            {
+                return ProxyObject(udf, v => new UserDefinedField(v));
+            }
+
+            if (value.getFieldTypeClass() == net.sf.mpxj.FieldTypeClass.UNKNOWN)
+            {
+                return ProxyObject(value, v => new UnknownFieldType(v));
+            }
+
+            return EnumExtensionMethods.FieldTypeDictionary[value];
         }
 
         internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
