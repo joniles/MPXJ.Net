@@ -16,7 +16,7 @@ namespace MPXJ.Net
                 Assert.That(WorkContour.Turtle.IsContourDefault, Is.True);
                 Assert.That(WorkContour.Turtle.IsContourFlat, Is.False);
                 Assert.That(WorkContour.Turtle.IsContourManual, Is.False);
-                Assert.That(WorkContour.Turtle.CurveValues, Is.EqualTo(new double[] { 0.0, 1.0, 1.0, 3.5, 3.5, 5.5, 5.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 5.5, 5.5, 3.5, 3.5, 1.0, 1.0 }));
+                Assert.That(WorkContour.Turtle.CurveValues, Is.EqualTo(new[] { 0.0, 1.0, 1.0, 3.5, 3.5, 5.5, 5.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 5.5, 5.5, 3.5, 3.5, 1.0, 1.0 }));
             });
         }
     }

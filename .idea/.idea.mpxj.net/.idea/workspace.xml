@@ -8,9 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mpxj.net/extensions/EnumExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/extensions/EnumExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/extensions/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/extensions/ExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxyEnumerable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxyEnumerable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/WorkContourTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/WorkContourTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <workItem from="1730365597748" duration="1041000" />
       <workItem from="1730369743162" duration="324000" />
       <workItem from="1730927467476" duration="248000" />
-      <workItem from="1730927746280" duration="2379000" />
+      <workItem from="1730927746280" duration="2862000" />
     </task>
     <servers />
   </component>
