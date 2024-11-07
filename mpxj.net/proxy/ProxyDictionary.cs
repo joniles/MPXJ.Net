@@ -45,11 +45,11 @@ namespace MPXJ.Net.Proxy
             }
         }
 
-        internal readonly ProxyManager _proxyManager;
-        internal readonly Func<MK, NK> _keyFromJava;
-        internal readonly Func<NK, MK> _keyToJava;
-        internal readonly Func<MV, NV> _valueFromJava;
-        internal readonly Func<NV, MV> _valueToJava;
+        private readonly ProxyManager _proxyManager;
+        private readonly Func<MK, NK> _keyFromJava;
+        private readonly Func<NK, MK> _keyToJava;
+        private readonly Func<MV, NV> _valueFromJava;
+        private readonly Func<NV, MV> _valueToJava;
 
         public java.util.Map JavaObject { get; }
 

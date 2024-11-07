@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class Relation : IJavaObjectProxy<net.sf.mpxj.Relation>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Relation JavaObject { get; }
 
         internal Relation(ProxyManager proxyManager, net.sf.mpxj.Relation javaObject)

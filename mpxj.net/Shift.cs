@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class Shift : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.Shift>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
 
         public net.sf.mpxj.Shift JavaObject { get; }
 

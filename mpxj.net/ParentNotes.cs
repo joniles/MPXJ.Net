@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class ParentNotes : Notes, IJavaObjectProxy<net.sf.mpxj.ParentNotes>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
 
         public new net.sf.mpxj.ParentNotes JavaObject => (net.sf.mpxj.ParentNotes)base.JavaObject;
 

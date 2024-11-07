@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class ShiftPeriod : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ShiftPeriod>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
 
         public net.sf.mpxj.ShiftPeriod JavaObject { get; }
 

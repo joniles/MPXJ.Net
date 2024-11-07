@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class Step : IJavaObjectProxy<net.sf.mpxj.Step>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Step JavaObject { get; }
 
         internal Step(ProxyManager proxyManager, net.sf.mpxj.Step javaObject)

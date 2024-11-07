@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        internal static List<ProjectField> InternalValues { get; } = new List<ProjectField>();
+        private static List<ProjectField> InternalValues { get; } = new List<ProjectField>();
         public static IReadOnlyList<ProjectField> Values => InternalValues.AsReadOnly();
 
         public static readonly ProjectField StartDate = new ProjectField(net.sf.mpxj.ProjectField.START_DATE);
@@ -186,7 +186,7 @@ namespace MPXJ.Net
         public static readonly ProjectField Notes = new ProjectField(net.sf.mpxj.ProjectField.NOTES);
 
 
-        internal ProjectField(net.sf.mpxj.ProjectField javaObject)
+        private ProjectField(net.sf.mpxj.ProjectField javaObject)
         {
             JavaObject = javaObject;
             InternalValues.Add(this);

@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class ActivityCode : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ActivityCode JavaObject { get; }
 
         internal ActivityCode(ProxyManager proxyManager, net.sf.mpxj.ActivityCode javaObject)

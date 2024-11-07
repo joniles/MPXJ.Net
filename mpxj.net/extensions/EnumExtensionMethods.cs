@@ -16,7 +16,7 @@ namespace MPXJ.Net
         }
 
 
-        internal static void RegisterFieldTypes<T>(IEnumerable<T> fields) where T : IFieldType
+        private static void RegisterFieldTypes<T>(IEnumerable<T> fields) where T : IFieldType
         {
             foreach(var field in fields)
             {

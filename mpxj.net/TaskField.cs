@@ -7,7 +7,7 @@ namespace MPXJ.Net
     {
         public net.sf.mpxj.FieldType JavaObject { get; }
 
-        internal static List<TaskField> InternalValues { get; } = new List<TaskField>();
+        private static List<TaskField> InternalValues { get; } = new List<TaskField>();
         public static IReadOnlyList<TaskField> Values => InternalValues.AsReadOnly();
 
         public static readonly TaskField Start = new TaskField(net.sf.mpxj.TaskField.START);
@@ -996,7 +996,8 @@ namespace MPXJ.Net
         public static readonly TaskField ShowFinishText = new TaskField(net.sf.mpxj.TaskField.SHOW_FINISH_TEXT);
         public static readonly TaskField ShowDurationText = new TaskField(net.sf.mpxj.TaskField.SHOW_DURATION_TEXT);
         public static readonly TaskField ActivityPercentComplete = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_PERCENT_COMPLETE);
-        internal TaskField(net.sf.mpxj.TaskField javaObject)
+        
+        private TaskField(net.sf.mpxj.TaskField javaObject)
         {
             JavaObject = javaObject;
             InternalValues.Add(this);

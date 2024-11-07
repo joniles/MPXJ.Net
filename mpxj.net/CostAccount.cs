@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class CostAccount : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.CostAccount>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.CostAccount JavaObject { get; }
 
         internal CostAccount(ProxyManager proxyManager, net.sf.mpxj.CostAccount javaObject)

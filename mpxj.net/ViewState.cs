@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public class ViewState : IJavaObjectProxy<net.sf.mpxj.ViewState>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ViewState JavaObject { get; }
 
         internal ViewState(ProxyManager proxyManager, net.sf.mpxj.ViewState javaObject)

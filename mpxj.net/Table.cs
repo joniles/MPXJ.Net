@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
 	public class Table : IJavaObjectProxy<net.sf.mpxj.Table>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Table JavaObject { get; }
 
         internal Table(ProxyManager proxyManager, net.sf.mpxj.Table javaObject)

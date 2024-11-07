@@ -4,7 +4,7 @@ namespace MPXJ.Net
 {
     public class Column : IJavaObjectProxy<net.sf.mpxj.Column>
     {
-        internal readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.Column JavaObject { get; }
 
         internal Column(ProxyManager proxyManager, net.sf.mpxj.Column javaObject)

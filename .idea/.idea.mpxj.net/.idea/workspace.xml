@@ -7,7 +7,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="" />
+    <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/AssignmentField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/AssignmentField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Availability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Availability.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Column.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ConstraintField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ConstraintField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/CostRateTableEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostRateTableEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/CustomField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CustomField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/CustomFieldContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CustomFieldContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/DataLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/DataLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/FontStyle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/FontStyle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/GroupClause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/GroupClause.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ITimeUnitDefaultsContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ITimeUnitDefaultsContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ParentNotes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ParentNotes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendarException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendarException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/RecurringTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/RecurringTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Relation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Relation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ResourceAssignmentContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ResourceAssignmentContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ResourceContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ResourceContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ResourceField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ResourceField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Shift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Shift.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Step.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Step.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/TaskContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/TaskContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/TaskField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/TaskField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UserDefinedFieldContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UserDefinedFieldContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ViewContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ViewContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/extensions/EnumExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/extensions/EnumExtensionMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxyDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxyDictionary.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
