@@ -10,30 +10,7 @@
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxyListTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxyListTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCodeContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCodeContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/AvailabilityTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/AvailabilityTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/CostAccountContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostAccountContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/CostRateTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostRateTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/CustomFieldContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CustomFieldContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/CustomFieldLookupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CustomFieldLookupTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/DataLinkContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/DataLinkContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseCategoryContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseCategoryContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/GroupContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/GroupContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/LocationContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/LocationContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/NotesTopicContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/NotesTopicContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendarContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendarContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendarHours.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendarHours.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/RelationContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/RelationContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ResourceAssignmentContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ResourceAssignmentContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ResourceContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ResourceContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftPeriodContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftPeriodContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/TaskContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/TaskContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UnitOfMeasureContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnitOfMeasureContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UserDefinedFieldContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UserDefinedFieldContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ViewContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ViewContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/WorkContourContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/WorkContourContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxySet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxySet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ViewState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +76,7 @@
       <workItem from="1730365597748" duration="1041000" />
       <workItem from="1730369743162" duration="324000" />
       <workItem from="1730927467476" duration="248000" />
-      <workItem from="1730927746280" duration="4715000" />
+      <workItem from="1730927746280" duration="5143000" />
     </task>
     <servers />
   </component>

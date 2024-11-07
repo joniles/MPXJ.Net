@@ -16,7 +16,7 @@ namespace MPXJ.Net
 
         public string ViewName => JavaObject.getViewName();
 
-        public IList<int> UniqueIdList => _proxyManager.ProxyList<java.lang.Integer, int>(v => v.intValue(), v => java.lang.Integer.valueOf(v), JavaObject.getUniqueIdList());
+        public IList<int> UniqueIdList => _proxyManager.ProxyList<java.lang.Integer, int>(v => v.intValue(), java.lang.Integer.valueOf, JavaObject.getUniqueIdList());
 
         public Filter Filter => _proxyManager.ProxyObject(JavaObject.getFilter());
     }
