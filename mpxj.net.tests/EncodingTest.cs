@@ -9,7 +9,7 @@ namespace MPXJ.Net
         public void ExtensionTest()
         {
 #if NETCOREAPP
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 #endif
             // Required to initialize the IKVM'd Java classes correctly
             // before accessing Charset. Be nice if this wasn't required...
