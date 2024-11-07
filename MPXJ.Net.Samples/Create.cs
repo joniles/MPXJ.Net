@@ -8,8 +8,8 @@ namespace Samples
         {
             // In the example below we'll be generating an MSPDI
             // file which we can import into Microsoft Project.
-            var filename = "example.xml";
-            var fileformat = FileFormat.MSPDI;
+            const string filename = "example.xml";
+            const FileFormat fileformat = FileFormat.MSPDI;
 
             // Create a ProjectFile instance
             var file = new ProjectFile();

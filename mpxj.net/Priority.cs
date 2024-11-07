@@ -17,15 +17,15 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public static readonly int Lowest = net.sf.mpxj.Priority.LOWEST;
-        public static readonly int VeryLow = net.sf.mpxj.Priority.VERY_LOW;
-        public static readonly int Lower = net.sf.mpxj.Priority.LOWER;
-        public static readonly int Low = net.sf.mpxj.Priority.LOW;
-        public static readonly int Medium = net.sf.mpxj.Priority.MEDIUM;
-        public static readonly int High = net.sf.mpxj.Priority.HIGH;
-        public static readonly int Higher = net.sf.mpxj.Priority.HIGHER;
-        public static readonly int VeryHigh = net.sf.mpxj.Priority.VERY_HIGH;
-        public static readonly int Highest = net.sf.mpxj.Priority.HIGHEST;
-        public static readonly int DoNotLevel = net.sf.mpxj.Priority.DO_NOT_LEVEL;
+        public const int Lowest = net.sf.mpxj.Priority.LOWEST;
+        public const int VeryLow = net.sf.mpxj.Priority.VERY_LOW;
+        public const int Lower = net.sf.mpxj.Priority.LOWER;
+        public const int Low = net.sf.mpxj.Priority.LOW;
+        public const int Medium = net.sf.mpxj.Priority.MEDIUM;
+        public const int High = net.sf.mpxj.Priority.HIGH;
+        public const int Higher = net.sf.mpxj.Priority.HIGHER;
+        public const int VeryHigh = net.sf.mpxj.Priority.VERY_HIGH;
+        public const int Highest = net.sf.mpxj.Priority.HIGHEST;
+        public const int DoNotLevel = net.sf.mpxj.Priority.DO_NOT_LEVEL;
     }
 }

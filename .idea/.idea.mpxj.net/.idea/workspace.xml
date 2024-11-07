@@ -8,12 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/mpxj.net.tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/mpxj.net.tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/AbstractFieldContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/AbstractFieldContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/extensions/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/extensions/ExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/mpxj.net.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/mpxj.net.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/AbstractProxyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/AbstractProxyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/IJavaObjectProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/IJavaObjectProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MPXJ.Net.Samples/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MPXJ.Net.Samples/Create.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/StructuredTextRecordTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/StructuredTextRecordTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/UniversalProjectWriterTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/UniversalProjectWriterTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Priority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Priority.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +37,13 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "inspection__changes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "RoslynSettingsId",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,7 +78,7 @@
       <workItem from="1730365597748" duration="1041000" />
       <workItem from="1730369743162" duration="324000" />
       <workItem from="1730927467476" duration="248000" />
-      <workItem from="1730927746280" duration="426000" />
+      <workItem from="1730927746280" duration="1242000" />
     </task>
     <servers />
   </component>
