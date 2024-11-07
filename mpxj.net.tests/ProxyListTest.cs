@@ -41,19 +41,22 @@ namespace MPXJ.Net
             Assert.That(array[0], Is.EqualTo(1.0));
             Assert.That(array[1], Is.EqualTo(2.0));
 
+            using (var enumerator = list.GetEnumerator())
+            {
+                Assert.That(enumerator.MoveNext(), Is.True);
+                Assert.That(enumerator.Current, Is.EqualTo(1.0));
 
-            using var enumerator = list.GetEnumerator();
-            Assert.That(enumerator.MoveNext(), Is.True);
-            Assert.That(enumerator.Current, Is.EqualTo(1.0));
-
-            enumerator.Reset();
-            Assert.That(enumerator.MoveNext(), Is.True);
-            Assert.That(enumerator.Current, Is.EqualTo(1.0));
+                enumerator.Reset();
+                Assert.That(enumerator.MoveNext(), Is.True);
+                Assert.That(enumerator.Current, Is.EqualTo(1.0));
+            }
 
             var oldEnumerator = (list as IEnumerable).GetEnumerator();
-            using var oldEnumeratorDisposal = oldEnumerator as IDisposable;
-            Assert.That(oldEnumerator.MoveNext(), Is.True);
-            Assert.That(oldEnumerator.Current, Is.EqualTo(1.0));
+            using (var oldEnumeratorDisposal = oldEnumerator as IDisposable)
+            {
+                Assert.That(oldEnumerator.MoveNext(), Is.True);
+                Assert.That(oldEnumerator.Current, Is.EqualTo(1.0));
+            }
 
             list.Clear();
             Assert.That(list, Is.Empty);
