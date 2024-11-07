@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
@@ -32,12 +33,7 @@ namespace MPXJ.Net
         {
             get
             {
-                var result = new Dictionary<string, string>();
-                foreach (var e in new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, JavaObject.getAttributes().entrySet()))
-                {
-                    result.Add((string)e.getKey(), (string)e.getValue());
-                }
-                return result;
+                return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, JavaObject.getAttributes().entrySet()).ToDictionary(e => (string)e.getKey(), e => (string)e.getValue());
             }
         }
 

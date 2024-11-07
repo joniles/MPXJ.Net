@@ -1,6 +1,7 @@
 ﻿using MPXJ.Net.Proxy;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace MPXJ.Net
 {
@@ -30,12 +31,7 @@ namespace MPXJ.Net
         {
             // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
             var proxyManager = new ProxyManager();
-            var list = new List<ProjectFile>();            
-            foreach (var file in projects.toArray())
-            {
-                list.Add(new ProjectFile(proxyManager, (net.sf.mpxj.ProjectFile)file));
-            }
-            return list;
+            return projects.toArray().Select(file => new ProjectFile(proxyManager, (net.sf.mpxj.ProjectFile)file)).ToList();
         }
 
     }
