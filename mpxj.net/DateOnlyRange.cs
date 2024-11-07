@@ -29,7 +29,7 @@ namespace MPXJ.Net
 
         public override int GetHashCode() => JavaObject.hashCode();
 
-        public static bool operator ==(DateOnlyRange lhs, DateOnlyRange rhs) => lhs is null ? rhs is null : lhs.Equals(rhs);
+        public static bool operator ==(DateOnlyRange lhs, DateOnlyRange rhs) => lhs?.Equals(rhs) ?? rhs is null;
 
         public static bool operator !=(DateOnlyRange lhs, DateOnlyRange rhs) => !(lhs == rhs);
     }
