@@ -37,7 +37,7 @@ namespace MPXJ.Net
 
         public static DayType? ConvertType(this net.sf.mpxj.DayType value)
         {
-            return value == null ? null : (DayType)value.getValue();
+            return value == null ? (DayType?)null : (DayType)value.getValue();
         }
 
         // TimeUnit
@@ -53,7 +53,7 @@ namespace MPXJ.Net
 
         public static TimeUnit? ConvertType(this net.sf.mpxj.TimeUnit value)
         {
-            return value == null ? null : (TimeUnit)value.getValue();
+            return value == null ? (TimeUnit?)null : (TimeUnit)value.getValue();
         }
 
         // AccrueType
@@ -69,7 +69,7 @@ namespace MPXJ.Net
 
         public static AccrueType? ConvertType(this net.sf.mpxj.AccrueType value)
         {
-            return value == null ? null : (AccrueType)value.getValue();
+            return value == null ? (AccrueType?)null : (AccrueType)value.getValue();
         }
 
         // EarnedValueMethod
@@ -85,7 +85,7 @@ namespace MPXJ.Net
 
         public static EarnedValueMethod? ConvertType(this net.sf.mpxj.EarnedValueMethod value)
         {
-            return value == null ? null : (EarnedValueMethod)value.getValue();
+            return value == null ? (EarnedValueMethod?)null : (EarnedValueMethod)value.getValue();
         }
 
         // ActivityStatus
@@ -101,7 +101,7 @@ namespace MPXJ.Net
 
         public static ActivityStatus? ConvertType(this net.sf.mpxj.ActivityStatus value)
         {
-            return value == null ? null : (ActivityStatus)value.ordinal();
+            return value == null ? (ActivityStatus?)null : (ActivityStatus)value.ordinal();
         }
 
         // FieldTypeClass
@@ -117,7 +117,7 @@ namespace MPXJ.Net
 
         public static FieldTypeClass? ConvertType(this net.sf.mpxj.FieldTypeClass value)
         {
-            return value == null ? null : (FieldTypeClass)value.ordinal();
+            return value == null ? (FieldTypeClass?)null : (FieldTypeClass)value.ordinal();
         }
 
         // CustomFieldValueDataType
@@ -133,7 +133,7 @@ namespace MPXJ.Net
 
         public static CustomFieldValueDataType? ConvertType(this net.sf.mpxj.CustomFieldValueDataType value)
         {
-            return value == null ? null : (CustomFieldValueDataType)value.ordinal();
+            return value == null ? (CustomFieldValueDataType?)null : (CustomFieldValueDataType)value.ordinal();
         }
 
         // TestOperator
@@ -149,7 +149,7 @@ namespace MPXJ.Net
 
         public static TestOperator? ConvertType(this net.sf.mpxj.TestOperator value)
         {
-            return value == null ? null : (TestOperator)value.ordinal();
+            return value == null ? (TestOperator?)null : (TestOperator)value.ordinal();
         }
 
         // ActivityCodeScope
@@ -165,7 +165,7 @@ namespace MPXJ.Net
 
         public static ActivityCodeScope? ConvertType(this net.sf.mpxj.ActivityCodeScope value)
         {
-            return value == null ? null : (ActivityCodeScope)value.ordinal();
+            return value == null ? (ActivityCodeScope?)null : (ActivityCodeScope)value.ordinal();
         }
 
         // DataType
@@ -181,7 +181,7 @@ namespace MPXJ.Net
 
         public static DataType? ConvertType(this net.sf.mpxj.DataType value)
         {
-            return value == null ? null : (DataType)value.ordinal();
+            return value == null ? (DataType?)null : (DataType)value.ordinal();
         }
 
         // BackgroundPattern
@@ -197,7 +197,7 @@ namespace MPXJ.Net
 
         public static BackgroundPattern? ConvertType(this net.sf.mpxj.mpp.BackgroundPattern value)
         {
-            return value == null ? null : (BackgroundPattern)value.ordinal();
+            return value == null ? (BackgroundPattern?)null : (BackgroundPattern)value.ordinal();
         }
 
         // CalendarType
@@ -213,7 +213,7 @@ namespace MPXJ.Net
 
         public static CalendarType? ConvertType(this net.sf.mpxj.CalendarType value)
         {
-            return value == null ? null : (CalendarType)value.ordinal();
+            return value == null ? (CalendarType?)null : (CalendarType)value.ordinal();
         }
 
         // DateOrder
@@ -229,7 +229,7 @@ namespace MPXJ.Net
 
         public static DateOrder? ConvertType(this net.sf.mpxj.DateOrder value)
         {
-            return value == null ? null : (DateOrder)value.ordinal();
+            return value == null ? (DateOrder?)null : (DateOrder)value.ordinal();
         }
 
         // ProjectTimeFormat
@@ -245,7 +245,7 @@ namespace MPXJ.Net
 
         public static ProjectTimeFormat? ConvertType(this net.sf.mpxj.ProjectTimeFormat value)
         {
-            return value == null ? null : (ProjectTimeFormat)value.ordinal();
+            return value == null ? (ProjectTimeFormat?)null : (ProjectTimeFormat)value.ordinal();
         }
 
         // ProjectDateFormat
@@ -261,7 +261,7 @@ namespace MPXJ.Net
 
         public static ProjectDateFormat? ConvertType(this net.sf.mpxj.ProjectDateFormat value)
         {
-            return value == null ? null : (ProjectDateFormat)value.ordinal();
+            return value == null ? (ProjectDateFormat?)null : (ProjectDateFormat)value.ordinal();
         }
 
         // ScheduleFrom
@@ -277,7 +277,7 @@ namespace MPXJ.Net
 
         public static ScheduleFrom? ConvertType(this net.sf.mpxj.ScheduleFrom value)
         {
-            return value == null ? null : (ScheduleFrom)value.ordinal();
+            return value == null ? (ScheduleFrom?)null : (ScheduleFrom)value.ordinal();
         }
 
 
@@ -294,7 +294,7 @@ namespace MPXJ.Net
 
         public static CurrencySymbolPosition? ConvertType(this net.sf.mpxj.CurrencySymbolPosition value)
         {
-            return value == null ? null : (CurrencySymbolPosition)value.ordinal();
+            return value == null ? (CurrencySymbolPosition?)null : (CurrencySymbolPosition)value.ordinal();
         }
 
         // TaskType
@@ -310,7 +310,7 @@ namespace MPXJ.Net
 
         public static TaskType? ConvertType(this net.sf.mpxj.TaskType value)
         {
-            return value == null ? null : (TaskType)value.ordinal();
+            return value == null ? (TaskType?)null : (TaskType)value.ordinal();
         }
 
         // FileVersion
@@ -326,7 +326,7 @@ namespace MPXJ.Net
 
         public static FileVersion? ConvertType(this net.sf.mpxj.FileVersion value)
         {
-            return value == null ? null : (FileVersion)value.ordinal();
+            return value == null ? (FileVersion?)null : (FileVersion)value.ordinal();
         }
 
         // CodePage
@@ -342,7 +342,7 @@ namespace MPXJ.Net
 
         public static CodePage? ConvertType(this net.sf.mpxj.CodePage value)
         {
-            return value == null ? null : (CodePage)value.ordinal();
+            return value == null ? (CodePage?)null : (CodePage)value.ordinal();
         }
 
         // CriticalActivityType
@@ -358,7 +358,7 @@ namespace MPXJ.Net
 
         public static CriticalActivityType? ConvertType(this net.sf.mpxj.CriticalActivityType value)
         {
-            return value == null ? null : (CriticalActivityType)value.ordinal();
+            return value == null ? (CriticalActivityType?)null : (CriticalActivityType)value.ordinal();
         }
 
         // RecurrenceType
@@ -374,7 +374,7 @@ namespace MPXJ.Net
 
         public static RecurrenceType? ConvertType(this net.sf.mpxj.RecurrenceType value)
         {
-            return value == null ? null : (RecurrenceType)value.ordinal();
+            return value == null ? (RecurrenceType?)null : (RecurrenceType)value.ordinal();
         }
 
         // RelationType
@@ -390,7 +390,7 @@ namespace MPXJ.Net
 
         public static RelationType? ConvertType(this net.sf.mpxj.RelationType value)
         {
-            return value == null ? null : (RelationType)value.ordinal();
+            return value == null ? (RelationType?)null : (RelationType)value.ordinal();
         }
 
         // ResourceType
@@ -406,7 +406,7 @@ namespace MPXJ.Net
 
         public static ResourceType? ConvertType(this net.sf.mpxj.ResourceType value)
         {
-            return value == null ? null : (ResourceType)value.ordinal();
+            return value == null ? (ResourceType?)null : (ResourceType)value.ordinal();
         }
 
         // WorkGroup
@@ -422,7 +422,7 @@ namespace MPXJ.Net
 
         public static WorkGroup? ConvertType(this net.sf.mpxj.WorkGroup value)
         {
-            return value == null ? null : (WorkGroup)value.ordinal();
+            return value == null ? (WorkGroup?)null : (WorkGroup)value.ordinal();
         }
 
         // BookingType
@@ -438,7 +438,7 @@ namespace MPXJ.Net
 
         public static BookingType? ConvertType(this net.sf.mpxj.BookingType value)
         {
-            return value == null ? null : (BookingType)value.ordinal();
+            return value == null ? (BookingType?)null : (BookingType)value.ordinal();
         }
 
         // RateSource
@@ -454,7 +454,7 @@ namespace MPXJ.Net
 
         public static RateSource? ConvertType(this net.sf.mpxj.RateSource value)
         {
-            return value == null ? null : (RateSource)value.ordinal();
+            return value == null ? (RateSource?)null : (RateSource)value.ordinal();
         }
 
         // ResourceRequestType
@@ -470,7 +470,7 @@ namespace MPXJ.Net
 
         public static ResourceRequestType? ConvertType(this net.sf.mpxj.ResourceRequestType value)
         {
-            return value == null ? null : (ResourceRequestType)value.ordinal();
+            return value == null ? (ResourceRequestType?)null : (ResourceRequestType)value.ordinal();
         }
 
         // ConstraintType
@@ -486,7 +486,7 @@ namespace MPXJ.Net
 
         public static ConstraintType? ConvertType(this net.sf.mpxj.ConstraintType value)
         {
-            return value == null ? null : (ConstraintType)value.ordinal();
+            return value == null ? (ConstraintType?)null : (ConstraintType)value.ordinal();
         }
 
         // TaskMode
@@ -502,7 +502,7 @@ namespace MPXJ.Net
 
         public static TaskMode? ConvertType(this net.sf.mpxj.TaskMode value)
         {
-            return value == null ? null : (TaskMode)value.ordinal();
+            return value == null ? (TaskMode?)null : (TaskMode)value.ordinal();
         }
 
         // PercentCompleteType
@@ -518,7 +518,7 @@ namespace MPXJ.Net
 
         public static PercentCompleteType? ConvertType(this net.sf.mpxj.PercentCompleteType value)
         {
-            return value == null ? null : (PercentCompleteType)value.ordinal();
+            return value == null ? (PercentCompleteType?)null : (PercentCompleteType)value.ordinal();
         }
 
         // ActivityType
@@ -534,7 +534,7 @@ namespace MPXJ.Net
 
         public static ActivityType? ConvertType(this net.sf.mpxj.ActivityType value)
         {
-            return value == null ? null : (ActivityType)value.ordinal();
+            return value == null ? (ActivityType?)null : (ActivityType)value.ordinal();
         }
 
         // ViewType
@@ -550,7 +550,7 @@ namespace MPXJ.Net
 
         public static ViewType? ConvertType(this net.sf.mpxj.ViewType value)
         {
-            return value == null ? null : (ViewType)value.ordinal();
+            return value == null ? (ViewType?)null : (ViewType)value.ordinal();
         }
 
         // SaveVersion
@@ -566,7 +566,7 @@ namespace MPXJ.Net
 
         public static SaveVersion? ConvertType(this net.sf.mpxj.mspdi.SaveVersion value)
         {
-            return value == null ? null : (SaveVersion)value.ordinal();
+            return value == null ? (SaveVersion?)null : (SaveVersion)value.ordinal();
         }
 
         // FileFormat
@@ -582,7 +582,7 @@ namespace MPXJ.Net
 
         public static FileFormat? ConvertType(this net.sf.mpxj.writer.FileFormat value)
         {
-            return value == null ? null : (FileFormat)value.ordinal();
+            return value == null ? (FileFormat?)null : (FileFormat)value.ordinal();
         }
 
         // TotalSlackCalculationType
@@ -598,7 +598,7 @@ namespace MPXJ.Net
 
         public static TotalSlackCalculationType? ConvertType(this net.sf.mpxj.TotalSlackCalculationType value)
         {
-            return value == null ? null : (TotalSlackCalculationType)value.ordinal();
+            return value == null ? (TotalSlackCalculationType?)null : (TotalSlackCalculationType)value.ordinal();
         }
 
         // RelationshipLagCalendar
@@ -614,7 +614,7 @@ namespace MPXJ.Net
 
         public static RelationshipLagCalendar? ConvertType(this net.sf.mpxj.RelationshipLagCalendar value)
         {
-            return value == null ? null : (RelationshipLagCalendar)value.ordinal();
+            return value == null ? (RelationshipLagCalendar?)null : (RelationshipLagCalendar)value.ordinal();
         }
 
         // SchedulingProgressedActivities
@@ -630,7 +630,7 @@ namespace MPXJ.Net
 
         public static SchedulingProgressedActivities? ConvertType(this net.sf.mpxj.SchedulingProgressedActivities value)
         {
-            return value == null ? null : (SchedulingProgressedActivities)value.ordinal();
+            return value == null ? (SchedulingProgressedActivities?)null : (SchedulingProgressedActivities)value.ordinal();
         }
 
         // SkillLevel
@@ -646,7 +646,7 @@ namespace MPXJ.Net
 
         public static SkillLevel? ConvertType(this net.sf.mpxj.SkillLevel value)
         {
-            return value == null ? null : (SkillLevel)value.ordinal();
+            return value == null ? (SkillLevel?)null : (SkillLevel)value.ordinal();
         }
     }
 }
