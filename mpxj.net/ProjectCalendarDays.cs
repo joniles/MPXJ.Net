@@ -25,10 +25,7 @@ namespace MPXJ.Net
             set => JavaObject.setName(value);
         }
 
-        public ProjectCalendarHours[] CalendarHours
-        {
-            get => JavaObject.getCalendarHours().ToList().Select(l => _proxyManager.ProxyObject(l)).ToArray();
-        }
+        public ProjectCalendarHours[] CalendarHours => JavaObject.getCalendarHours().ToList().Select(l => _proxyManager.ProxyObject(l)).ToArray();
 
         public ProjectCalendarHours GetCalendarHours(DayOfWeek day)
         {
@@ -60,10 +57,7 @@ namespace MPXJ.Net
             JavaObject.removeCalendarHours(day.ConvertType());
         }
 
-        public DayType?[] CalendarDayTypes
-        {
-            get => JavaObject.getCalendarDayTypes().ToList().Select(l => l.ConvertType()).ToArray();
-        }
+        public DayType?[] CalendarDayTypes => JavaObject.getCalendarDayTypes().ToList().Select(l => l.ConvertType()).ToArray();
 
         public DayType? GetCalendarDayType(DayOfWeek day)
         {

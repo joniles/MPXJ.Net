@@ -52,7 +52,7 @@ namespace MPXJ.Net
             return GetProxyManager(defaults).ProxyObject(net.sf.mpxj.Duration.add(a.JavaObject, b.JavaObject, defaults.JavaObject));
         }
 
-        public override bool Equals(object obj) => this.Equals(obj as Duration);
+        public override bool Equals(object obj) => Equals(obj as Duration);
 
         public bool Equals(Duration d) => d != null && JavaObject.Equals(d.JavaObject);
 

@@ -6,7 +6,7 @@ namespace MPXJ.Net
 {
     public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
     {
-        public new net.sf.mpxj.ProjectCalendar JavaObject { get => (net.sf.mpxj.ProjectCalendar)base.JavaObject; }
+        public new net.sf.mpxj.ProjectCalendar JavaObject => (net.sf.mpxj.ProjectCalendar)base.JavaObject;
 
         internal ProjectCalendar(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
 

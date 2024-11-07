@@ -1106,10 +1106,7 @@ namespace MPXJ.Net
             set => JavaObject.setPrimaryResourceID(value.ConvertType());
         }
 
-        public string CanonicalActivityID
-        {
-            get => JavaObject.getCanonicalActivityID();
-        }
+        public string CanonicalActivityID => JavaObject.getCanonicalActivityID();
 
         public string ActivityID
         {

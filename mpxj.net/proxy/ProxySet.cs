@@ -5,7 +5,7 @@ namespace MPXJ.Net.Proxy
 {
 	public class ProxySet<M, N> : ProxyCollection<M, N>, ISet<N>, IJavaObjectProxy<java.util.Set>
     {
-        public new java.util.Set JavaObject { get => (java.util.Set)base.JavaObject; }
+        public new java.util.Set JavaObject => (java.util.Set)base.JavaObject;
 
         internal ProxySet(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set javaObject) : base(fromJava, toJava, javaObject) { }
 

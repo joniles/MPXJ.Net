@@ -25,7 +25,7 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public override bool Equals(object obj) => this.Equals(obj as TimeOnlyRange);
+        public override bool Equals(object obj) => Equals(obj as TimeOnlyRange);
 
         public bool Equals(TimeOnlyRange d) => d != null && JavaObject.Equals(d.JavaObject);
 

@@ -22,7 +22,7 @@ namespace MPXJ.Net.Proxy
             {
                 _list = list;
                 _iter = list.JavaObject.iterator();
-                _current = default(N);
+                _current = default;
             }
 
             public void Dispose()
@@ -43,7 +43,7 @@ namespace MPXJ.Net.Proxy
             public void Reset()
             {
                 _iter = _list.JavaObject.iterator();
-                _current = default(N);
+                _current = default;
             }
         }
 

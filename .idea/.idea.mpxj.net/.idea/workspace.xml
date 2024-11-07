@@ -9,23 +9,25 @@
   <component name="ChangeListManager">
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/AbstractProjectWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/AbstractProjectWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/IProjectEntityContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/IProjectEntityContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Location.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/NotesTopic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/NotesTopic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/Relation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Relation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/Shift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Shift.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/Step.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Step.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UnitOfMeasure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnitOfMeasure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UniversalProjectWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UniversalProjectWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UnknownFieldType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnknownFieldType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/UserDefinedField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UserDefinedField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/DateOnlyRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/DateOnlyRange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Duration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Duration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/GraphicalIndicatorCriteria.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/GraphicalIndicatorCriteria.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/LocationContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/LocationContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/MPXReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/MPXReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/MPXWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/MPXWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/NotesTopicContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/NotesTopicContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendarDays.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendarDays.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ProjectCalendarException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ProjectCalendarException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftPeriodContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftPeriodContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/TimeOnlyRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/TimeOnlyRange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UnitOfMeasureContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnitOfMeasureContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxyCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxyCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxyEnumerable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxyEnumerable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxyList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxyList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/proxy/ProxySet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/proxy/ProxySet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

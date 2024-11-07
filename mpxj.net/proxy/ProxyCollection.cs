@@ -5,7 +5,7 @@ namespace MPXJ.Net.Proxy
 {
     public class ProxyCollection<M, N> : ProxyEnumerable<M, N>, ICollection<N>, IJavaObjectProxy<java.util.Collection>
     {
-        public new java.util.Collection JavaObject { get => (java.util.Collection)base.JavaObject; }
+        public new java.util.Collection JavaObject => (java.util.Collection)base.JavaObject;
 
         public int Count => JavaObject.size();
 
