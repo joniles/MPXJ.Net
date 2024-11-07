@@ -64,17 +64,12 @@ namespace MPXJ.Net
 
         private static ProxyManager GetProxyManager<T>(ITimeUnitDefaultsContainer<T> defaults) where T : net.sf.mpxj.TimeUnitDefaultsContainer
         {
-            if (defaults is ProjectProperties props)
+            return defaults switch
             {
-                return props._proxyManager;
-            }
-
-            if (defaults is ProjectCalendar cal)
-            {
-                return cal._proxyManager;
-            }
-
-            throw new NotSupportedException();
+                ProjectProperties props => props._proxyManager,
+                ProjectCalendar cal => cal._proxyManager,
+                _ => throw new NotSupportedException()
+            };
         }
     }
 }

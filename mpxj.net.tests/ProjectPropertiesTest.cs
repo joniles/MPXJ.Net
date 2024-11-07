@@ -200,8 +200,7 @@ namespace MPXJ.Net
                 custom["TestKey"] = "TestValue";
                 Assert.That(custom.ContainsKey("TestKey"), Is.True);
 
-                object value;
-                Assert.That(custom.TryGetValue("XTestKey", out value), Is.False);
+                Assert.That(custom.TryGetValue("XTestKey", out var value), Is.False);
                 Assert.That(custom.TryGetValue("TestKey", out value), Is.True);
                 Assert.That(value, Is.EqualTo("TestValue"));
 

@@ -6,7 +6,7 @@ namespace MPXJ.Net.Proxy
 {
 	public class ProxyEnumerable<M, N> : IEnumerable<N>, IJavaObjectProxy<java.lang.Iterable>
     {
-        public struct Enumerator : IEnumerator<N>, IDisposable, IEnumerator
+        public struct Enumerator : IEnumerator<N>
         {
             private readonly ProxyEnumerable<M,N> _list;
 

@@ -4,7 +4,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>, IJavaObjectProxy<net.sf.mpxj.ProjectCalendar>
+    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>
     {
         public new net.sf.mpxj.ProjectCalendar JavaObject => (net.sf.mpxj.ProjectCalendar)base.JavaObject;
 
