@@ -21,10 +21,7 @@ namespace MPXJ.Net.Proxy
                 currentOffset++;
                 return i;
             }
-            else
-            {
-                return -1;
-            }
+            return -1;
         }
 
         public override int read(byte[] b, int off, int len)
@@ -35,10 +32,7 @@ namespace MPXJ.Net.Proxy
                 currentOffset += i;
                 return i;
             }
-            else
-            {
-                return -1;
-            }
+            return -1;
         }
 
         public override bool markSupported()
