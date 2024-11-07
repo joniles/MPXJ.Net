@@ -26,7 +26,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ShiftPeriod.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ShiftPeriod.Builder JavaObject { get; set; }
+            public net.sf.mpxj.ShiftPeriod.Builder JavaObject { get; }
 
             public Builder(ProjectFile file, Shift shift)
             {

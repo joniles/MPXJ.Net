@@ -27,7 +27,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.Step.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Step.Builder JavaObject { get; set; }
+            public net.sf.mpxj.Step.Builder JavaObject { get; }
 
             public Builder(Task task)
             {

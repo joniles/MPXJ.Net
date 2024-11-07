@@ -41,7 +41,7 @@ namespace MPXJ.Net
         public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; set; }
+            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {

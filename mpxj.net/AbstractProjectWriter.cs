@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     public abstract class AbstractProjectWriter : IProjectWriter
     {
-        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; set; }
+        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; }
 
         protected AbstractProjectWriter(net.sf.mpxj.writer.AbstractProjectWriter writer)
         {

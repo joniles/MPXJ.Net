@@ -8,9 +8,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxyListTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxyListTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net/ViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/AbstractProjectWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/AbstractProjectWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ActivityCodeValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/CostAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ExpenseItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/IProjectEntityContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/IProjectEntityContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Location.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/NotesTopic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/NotesTopic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Relation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Relation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Shift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Shift.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/ShiftPeriod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/Step.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/Step.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UnitOfMeasure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnitOfMeasure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UniversalProjectWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UniversalProjectWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UnknownFieldType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UnknownFieldType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net/UserDefinedField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net/UserDefinedField.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "inspection__changes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Inspections-C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;inspection__changes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Inspections-C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.MPXJ.Net.Samples">
+}</component>
+  <component name="RunManager">
     <configuration name="MPXJ.Net.Samples" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
