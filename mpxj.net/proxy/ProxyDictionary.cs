@@ -10,16 +10,16 @@ namespace MPXJ.Net.Proxy
         {
             private readonly ProxyDictionary<MK, MV, NK, NV> _dictionary;
             private java.util.Iterator _iterator;
-            private KeyValuePair<NK, NV> _current;
 
-            public KeyValuePair<NK, NV> Current => _current;
-            object IEnumerator.Current => _current;
+            public KeyValuePair<NK, NV> Current { get; private set; }
+
+            object IEnumerator.Current => Current;
 
             internal Enumerator(ProxyDictionary<MK, MV, NK, NV> dictionary)
             {
                 _dictionary = dictionary;
                 _iterator = _dictionary.JavaObject.entrySet().iterator();
-                _current = default;
+                Current = default;
             }
 
             public void Dispose()
@@ -35,7 +35,7 @@ namespace MPXJ.Net.Proxy
                 }
 
                 var entry = (java.util.Map.Entry)_iterator.next();
-                _current = new KeyValuePair<NK, NV>(_dictionary._keyFromJava((MK)entry.getKey()), _dictionary._valueFromJava((MV)entry.getValue()));
+                Current = new KeyValuePair<NK, NV>(_dictionary._keyFromJava((MK)entry.getKey()), _dictionary._valueFromJava((MV)entry.getValue()));
                 return true;
             }
 

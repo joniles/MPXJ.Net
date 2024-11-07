@@ -12,17 +12,15 @@ namespace MPXJ.Net.Proxy
 
             private java.util.Iterator _iter;
 
-            private N _current;
+            public N Current { get; private set; }
 
-            public N Current => _current;
-
-            object IEnumerator.Current => _current;
+            object IEnumerator.Current => Current;
 
             internal Enumerator(ProxyEnumerable<M, N> list)
             {
                 _list = list;
                 _iter = list.JavaObject.iterator();
-                _current = default;
+                Current = default;
             }
 
             public void Dispose()
@@ -36,14 +34,14 @@ namespace MPXJ.Net.Proxy
                     return false;
                 }
 
-                _current = _list._fromJava((M)_iter.next());
+                Current = _list._fromJava((M)_iter.next());
                 return true;
             }
 
             public void Reset()
             {
                 _iter = _list.JavaObject.iterator();
-                _current = default;
+                Current = default;
             }
         }
 
