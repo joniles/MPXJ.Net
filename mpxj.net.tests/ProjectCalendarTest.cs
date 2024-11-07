@@ -101,7 +101,7 @@ namespace MPXJ.Net
             Assert.That(calendar.CalendarMinutesPerYear, Is.EqualTo(115200));
 
             var week1 = calendar.AddWorkWeek();
-            var week2 = calendar.AddWorkWeek();
+            calendar.AddWorkWeek();
             Assert.That(calendar.WorkWeeks, Has.Count.EqualTo(2));
 
             week1.Name = "Week 1";

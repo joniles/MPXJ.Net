@@ -22,6 +22,10 @@ namespace MPXJ.Net
             Assert.That(mask.ToString(), Contains.Substring("[CustomFieldValueMask"));
 
             var newMask = new CustomFieldValueMask(1, 1, ".", CustomFieldValueDataType.Text);
+            Assert.That(newMask.Length, Is.EqualTo(1));
+            Assert.That(newMask.Level, Is.EqualTo(1));
+            Assert.That(newMask.Separator, Is.EqualTo("."));
+            Assert.That(newMask.Type, Is.EqualTo(CustomFieldValueDataType.Text));
         }
     }
 }

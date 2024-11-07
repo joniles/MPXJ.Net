@@ -10,6 +10,7 @@ namespace MPXJ.Net
         {
             // Required to initialize the IKVM'd Java classes correctly
             // before accessing Charset. Be nice if this wasn't required...
+            // ReSharper disable once UnusedVariable
             var project = new ProjectFile();
 
             Assert.That(java.util.Locale.ENGLISH.ConvertType(), Is.EqualTo(CultureInfo.GetCultureInfo("en")));

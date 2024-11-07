@@ -6,7 +6,7 @@ namespace MPXJ.Net.Proxy
     {
         private readonly Stream _stream;
         private long currentOffset;
-        private long markedOffset = 0;
+        private long markedOffset;
 
         public ProxyInputStream(Stream stream)
         {

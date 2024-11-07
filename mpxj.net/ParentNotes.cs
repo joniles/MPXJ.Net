@@ -19,6 +19,6 @@ namespace MPXJ.Net
             _proxyManager = file._proxyManager;
         }
 
-        public IList<Notes> ChildNotes => _proxyManager.ProxyList<net.sf.mpxj.Notes, Notes>(m => _proxyManager.ProxyObject(m), n => null, JavaObject.getChildNotes());
+        public IList<Notes> ChildNotes => _proxyManager.ProxyList<net.sf.mpxj.Notes, Notes>(m => _proxyManager.ProxyObject(m), _ => null, JavaObject.getChildNotes());
     }
 }
