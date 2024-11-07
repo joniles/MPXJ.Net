@@ -18,17 +18,17 @@ namespace MPXJ.Net
             var task2 = container.Add();
             task2.Name = "Task 2";
 
-            Assert.That(container.Count, Is.EqualTo(2));
+            Assert.That(container, Has.Count.EqualTo(2));
 
             var task3 = task2.AddTask();
             task3.Name = "Resource 3";
 
-            Assert.That(container.Count, Is.EqualTo(3));
+            Assert.That(container, Has.Count.EqualTo(3));
 
-            Assert.That(project.ChildTasks.Count, Is.EqualTo(2));
-            Assert.That(task1.ChildTasks.Count, Is.EqualTo(0));
-            Assert.That(task2.ChildTasks.Count, Is.EqualTo(1));
-            Assert.That(task3.ChildTasks.Count, Is.EqualTo(0));
+            Assert.That(project.ChildTasks, Has.Count.EqualTo(2));
+            Assert.That(task1.ChildTasks,  Has.Count.EqualTo(0));
+            Assert.That(task2.ChildTasks, Has.Count.EqualTo(1));
+            Assert.That(task3.ChildTasks, Has.Count.EqualTo(0));
 
             Assert.That(container.PopulatedFields, Has.Count.EqualTo(7));
             Assert.That(container.PopulatedFields.Contains(TaskField.Name), Is.True);

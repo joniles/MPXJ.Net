@@ -180,7 +180,7 @@ namespace MPXJ.Net
             Assert.Multiple(() =>
             {
                 Assert.That(custom.IsReadOnly, Is.False);
-                Assert.That(custom.Count, Is.EqualTo(7));
+                Assert.That(custom, Has.Count.EqualTo(7));
                 Assert.That(custom.Keys, Has.Count.EqualTo(7));
                 Assert.That(custom.Values, Has.Count.EqualTo(7));
 
@@ -206,13 +206,13 @@ namespace MPXJ.Net
                 Assert.That(value, Is.EqualTo("TestValue"));
 
                 Assert.That(custom.Remove("TestKey"), Is.True);
-                Assert.That(custom.Count, Is.EqualTo(7));
+                Assert.That(custom, Has.Count.EqualTo(7));
                 Assert.That(custom.Remove("TestKey"), Is.False);
 
                 custom.Add("TestKey", "TestValue");
                 Assert.That(custom, Has.Count.EqualTo(8));
 
-                var pair = new KeyValuePair<String, object>("TestKey", "TestValue");
+                var pair = new KeyValuePair<string, object>("TestKey", "TestValue");
                 Assert.That(custom.Remove(pair), Is.True);
                 Assert.That(custom, Has.Count.EqualTo(7));
                 Assert.That(custom.Remove(pair), Is.False);

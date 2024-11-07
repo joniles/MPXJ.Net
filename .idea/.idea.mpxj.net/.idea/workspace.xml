@@ -9,8 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a7180720-34f1-46cb-8d97-0718c9468db1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mpxj.net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProxySetTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/WorkContourTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/WorkContourTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/DurationTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/DurationTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/LocalDateRangeTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/LocalDateRangeTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/LocalTimeRangeTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/LocalTimeRangeTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ProjectPropertiesTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ProjectPropertiesTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ResourceContainerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ResourceContainerTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/ShiftTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/ShiftTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpxj.net.tests/TaskContainerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mpxj.net.tests/TaskContainerTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.MPXJ.Net.Samples">
     <configuration name="MPXJ.Net.Samples" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -76,7 +81,7 @@
       <workItem from="1730365597748" duration="1041000" />
       <workItem from="1730369743162" duration="324000" />
       <workItem from="1730927467476" duration="248000" />
-      <workItem from="1730927746280" duration="2862000" />
+      <workItem from="1730927746280" duration="3659000" />
     </task>
     <servers />
   </component>
