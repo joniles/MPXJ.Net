@@ -27,6 +27,13 @@ than being spread across a number of Java packages, and finally properties
 and method names follow C# naming conventions rather than Java naming
 conventions.
 
+> When using Docker to host an application built with MPXJ.Net, you may find
+> that the application crashes with a segmentation fault when invoking MPXJ.Net
+> code. The issue is likely to be a library missing from the Docker image.
+> Adding the following line to your `Dockerfile` will ensure that the 
+> missing library is added:
+> `RUN apt-get update && apt-get install -y libfontconfig`
+
 After installing this package you can perform simple tasks like converting a
 file from one format to another:
 
