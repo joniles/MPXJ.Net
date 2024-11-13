@@ -15,7 +15,10 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
+        [System.Obsolete("Use ActivityCode")]
         public ActivityCode Type => _proxyManager.ProxyObject(JavaObject.getType());
+
+        public ActivityCode ActivityCode => _proxyManager.ProxyObject(JavaObject.getActivityCode());
 
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
@@ -46,9 +49,16 @@ namespace MPXJ.Net
                 JavaObject = new net.sf.mpxj.ActivityCodeValue.Builder(file.JavaObject);
             }
 
+            [System.Obsolete("Use ActivityCode")]
             public Builder Type(ActivityCode value)
             {
                 JavaObject.type(value?.JavaObject);
+                return this;
+            }
+
+            public Builder ActivityCode(ActivityCode value)
+            {
+                JavaObject.activityCode(value?.JavaObject);
                 return this;
             }
 

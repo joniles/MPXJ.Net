@@ -27,7 +27,7 @@ namespace MPXJ.Net
             Assert.That(code.Values, Has.Count.EqualTo(2));
 
             var value = code.Values[0];
-            Assert.That(value.Type, Is.EqualTo(code));
+            Assert.That(value.ActivityCode, Is.EqualTo(code));
             Assert.That(value.UniqueID, Is.EqualTo(3174));
             Assert.That(value.SequenceNumber, Is.EqualTo(0));
             Assert.That(value.Name, Is.EqualTo("AAA"));
