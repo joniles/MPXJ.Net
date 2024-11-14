@@ -1247,6 +1247,27 @@ namespace MPXJ.Net
             task.Type = TaskType.FixedWork;
             task.LevelingDelayFormat = TimeUnit.Days;
         }
+
+        [Test]
+        public void ActivityCodeValuesTest()
+        {
+            var project = new UniversalProjectReader().Read("TestData/Sample1.xer");
+            Assert.That(project, Is.Not.Null);
+
+            var activityCode1 = project.ActivityCodes.GetByUniqueID(205);
+            Assert.That(activityCode1.Name, Is.EqualTo("Activity Code 1"));
+
+            var activityCode2 = project.ActivityCodes.GetByUniqueID(206);
+            Assert.That(activityCode2.Name, Is.EqualTo("Activity Code 2"));
+
+            var activityCode3 = project.ActivityCodes.GetByUniqueID(207);
+            Assert.That(activityCode3.Name, Is.EqualTo("Activity Code 3"));
+
+            var task = project.GetTaskByID(2);
+            Assert.That(task.ActivityCodeValues[activityCode1].UniqueID, Is.EqualTo(3174));
+            Assert.That(task.ActivityCodeValues[activityCode2].UniqueID, Is.EqualTo(3176));
+            Assert.That(task.ActivityCodeValues[activityCode3].UniqueID, Is.EqualTo(3178));
+        }
     }
 }
 
