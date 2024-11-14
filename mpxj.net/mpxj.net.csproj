@@ -20,7 +20,7 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.0" />
+    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
