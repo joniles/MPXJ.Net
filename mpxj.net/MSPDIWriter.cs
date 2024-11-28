@@ -24,6 +24,12 @@
             set => JavaObject.setWriteTimephasedData(value);
         }
 
+        public bool GenerateMissingTimephasedData
+        {
+            get => JavaObject.getGenerateMissingTimephasedData();
+            set => JavaObject.setGenerateMissingTimephasedData(value);
+        }
+
         public SaveVersion? SaveVersion
         {
             get => JavaObject.getSaveVersion().ConvertType();
