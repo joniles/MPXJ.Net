@@ -1106,10 +1106,23 @@ namespace MPXJ.Net
             set => JavaObject.setSuspendDate(value.ConvertType());
         }
 
+        [System.Obsolete("Use PrimaryResourceUniqueID")]
         public int? PrimaryResourceID
         {
             get => JavaObject.getPrimaryResourceID().ConvertType();
             set => JavaObject.setPrimaryResourceID(value.ConvertType());
+        }
+
+        public int? PrimaryResourceUniqueID
+        {
+            get => JavaObject.getPrimaryResourceUniqueID().ConvertType();
+            set => JavaObject.setPrimaryResourceUniqueID(value.ConvertType());
+        }
+
+        public Resource PrimaryResource
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPrimaryResource());
+            set => JavaObject.setPrimaryResource(value.JavaObject);
         }
 
         public string CanonicalActivityID => JavaObject.getCanonicalActivityID();
