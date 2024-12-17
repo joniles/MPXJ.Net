@@ -1,18 +1,17 @@
-using System.Collections.Generic;
-
-namespace MPXJ.Net;
-
-public interface ICodeValue  
+namespace MPXJ.Net
 {
-    int? UniqueID { get; }
-    
-    int? ParentCodeUniqueId { get; }
+    public interface ICodeValue
+    {
+        int? UniqueID { get; }
 
-    int? SequenceNumber { get; }
+        int? ParentCodeUniqueId { get; }
 
-    string Name { get; }
+        int? SequenceNumber { get; }
 
-    string Description { get; }
+        string Name { get; }
 
-    int? ParentValueUniqueId { get; }
+        string Description { get; }
+
+        int? ParentValueUniqueId { get; }
+    }
 }
