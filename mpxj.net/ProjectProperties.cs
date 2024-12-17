@@ -1012,7 +1012,8 @@ namespace MPXJ.Net
             set => JavaObject.setProjectIsBaseline(value);
         }
 
-
+        public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ProjectCode, net.sf.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
+        
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());
 
         public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());

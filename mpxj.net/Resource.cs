@@ -689,6 +689,10 @@ namespace MPXJ.Net
             JavaObject.removeRoleAssignment(role.JavaObject);
         }
 
+        public IDictionary<ResourceCode, ResourceCodeValue> ResourceCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ResourceCode, net.sf.mpxj.ResourceCodeValue, ResourceCode, ResourceCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceCodeValues());
+        
+        public IDictionary<RoleCode, RoleCodeValue> RoleCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.RoleCode, net.sf.mpxj.RoleCodeValue, RoleCode, RoleCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getRoleCodeValues());
+        
         public Dictionary<Resource, SkillLevel> RoleAssignments
         {
             get

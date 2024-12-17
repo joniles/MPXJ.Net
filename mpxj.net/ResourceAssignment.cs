@@ -598,6 +598,8 @@ namespace MPXJ.Net
             set => JavaObject.setRemainingLateFinish(value.ConvertType());
         }
 
+        public IDictionary<ResourceAssignmentCode, ResourceAssignmentCodeValue> ResourceAssignmentCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ResourceAssignmentCode, net.sf.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCode, ResourceAssignmentCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceAssignmentCodeValues());
+        
         public Rate GetEffectiveRate(DateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date.ConvertType()));
 
         public object GetFieldByAlias(string alias) => _proxyManager.GenericProxyObject(JavaObject.getFieldByAlias(alias));
