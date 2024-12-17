@@ -81,7 +81,15 @@ namespace MPXJ.Net
         public CustomFieldContainer CustomFields => _proxyManager.ProxyObject(JavaObject.getCustomFields());
 
         public ActivityCodeContainer ActivityCodes => _proxyManager.ProxyObject(JavaObject.getActivityCodes());
+        
+        public ProjectCodeContainer ProjectCodes => _proxyManager.ProxyObject(JavaObject.getProjectCodes());
+        
+        public ResourceCodeContainer ResourceCodes => _proxyManager.ProxyObject(JavaObject.getResourceCodes());
 
+        public RoleCodeContainer RoleCodes => _proxyManager.ProxyObject(JavaObject.getRoleCodes());
+        
+        public ResourceAssignmentCodeContainer ResourceAssignmentCodes => _proxyManager.ProxyObject(JavaObject.getResourceAssignmentCodes());
+        
         public DataLinkContainer DataLinks => _proxyManager.ProxyObject(JavaObject.getDataLinks());
 
         public ExpenseCategoryContainer ExpenseCategories => _proxyManager.ProxyObject(JavaObject.getExpenseCategories());

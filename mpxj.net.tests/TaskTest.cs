@@ -1033,7 +1033,7 @@ namespace MPXJ.Net
                 Assert.That(task.PlannedDuration, Is.EqualTo(task.Get(TaskField.PlannedDuration)));
                 Assert.That(task.PlannedWork, Is.EqualTo(task.Get(TaskField.PlannedWork)));
                 Assert.That(task.SuspendDate, Is.EqualTo(task.Get(TaskField.SuspendDate)));
-                Assert.That(task.PrimaryResourceID, Is.EqualTo(task.Get(TaskField.PrimaryResourceId)));
+                Assert.That(task.PrimaryResourceUniqueID, Is.EqualTo(task.Get(TaskField.PrimaryResourceId)));
                 Assert.That(task.ActivityID, Is.EqualTo(task.Get(TaskField.ActivityId)));
                 Assert.That(task.PercentCompleteType, Is.EqualTo(task.Get(TaskField.PercentCompleteType)));
                 Assert.That(task.ActivityStatus, Is.EqualTo(task.Get(TaskField.ActivityStatus)));
@@ -1196,7 +1196,7 @@ namespace MPXJ.Net
             task.LocationUniqueID = 1;
             task.Objects = 1;
             task.OutlineLevel = 1;
-            task.PrimaryResourceID = 1;
+            task.PrimaryResourceUniqueID = 1;
             task.SequenceNumber = 1;
             task.SprintID = 1;
             task.SubprojectTaskID = 1;

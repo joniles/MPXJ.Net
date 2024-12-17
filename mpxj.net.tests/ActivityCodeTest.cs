@@ -27,14 +27,14 @@ namespace MPXJ.Net
             Assert.That(code.Values, Has.Count.EqualTo(2));
 
             var value = code.Values[0];
-            Assert.That(value.ActivityCode, Is.EqualTo(code));
+            Assert.That(value.ParentCode, Is.EqualTo(code));
             Assert.That(value.UniqueID, Is.EqualTo(3174));
             Assert.That(value.SequenceNumber, Is.EqualTo(0));
             Assert.That(value.Name, Is.EqualTo("AAA"));
             Assert.That(value.Description, Is.EqualTo("Value AAA"));
             Assert.That(value.Color.ToString(), Is.EqualTo("Color [A=255, R=0, G=0, B=255]"));
-            Assert.That(value.Parent, Is.Null);
-            Assert.That(value.ParentUniqueID, Is.Null);
+            Assert.That(value.ParentValue, Is.Null);
+            Assert.That(value.ParentValueUniqueId, Is.Null);
             Assert.That(value.ChildValues, Is.Empty);
             Assert.That(value.ToString(), Is.EqualTo("Activity Code 1: AAA"));
         }

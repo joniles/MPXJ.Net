@@ -3,7 +3,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ActivityCode : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
+    public class ActivityCode : ICode, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
     {
         private readonly ProxyManager _proxyManager;
         public net.sf.mpxj.ActivityCode JavaObject { get; }

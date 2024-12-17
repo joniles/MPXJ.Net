@@ -129,6 +129,46 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new ActivityCodeValue(this, v));
         }
 
+        internal ProjectCode ProxyObject(net.sf.mpxj.ProjectCode value)
+        {
+            return ProxyObject(value, v => new ProjectCode(this, v));
+        }
+
+        internal ProjectCodeValue ProxyObject(net.sf.mpxj.ProjectCodeValue value)
+        {
+            return ProxyObject(value, v => new ProjectCodeValue(this, v));
+        }
+
+        internal ResourceCode ProxyObject(net.sf.mpxj.ResourceCode value)
+        {
+            return ProxyObject(value, v => new ResourceCode(this, v));
+        }
+
+        internal ResourceCodeValue ProxyObject(net.sf.mpxj.ResourceCodeValue value)
+        {
+            return ProxyObject(value, v => new ResourceCodeValue(this, v));
+        }
+
+        internal RoleCode ProxyObject(net.sf.mpxj.RoleCode value)
+        {
+            return ProxyObject(value, v => new RoleCode(this, v));
+        }
+
+        internal RoleCodeValue ProxyObject(net.sf.mpxj.RoleCodeValue value)
+        {
+            return ProxyObject(value, v => new RoleCodeValue(this, v));
+        }
+
+        internal ResourceAssignmentCode ProxyObject(net.sf.mpxj.ResourceAssignmentCode value)
+        {
+            return ProxyObject(value, v => new ResourceAssignmentCode(this, v));
+        }
+
+        internal ResourceAssignmentCodeValue ProxyObject(net.sf.mpxj.ResourceAssignmentCodeValue value)
+        {
+            return ProxyObject(value, v => new ResourceAssignmentCodeValue(this, v));
+        }
+
         internal Relation ProxyObject(net.sf.mpxj.Relation value)
         {
             return ProxyObject(value, v => new Relation(this, v));
@@ -443,6 +483,26 @@ namespace MPXJ.Net.Proxy
         internal ActivityCodeContainer ProxyObject(net.sf.mpxj.ActivityCodeContainer value)
         {
             return ProxyObject(value, v => new ActivityCodeContainer(this, v));
+        }
+
+        internal ProjectCodeContainer ProxyObject(net.sf.mpxj.ProjectCodeContainer value)
+        {
+            return ProxyObject(value, v => new ProjectCodeContainer(this, v));
+        }
+
+        internal ResourceCodeContainer ProxyObject(net.sf.mpxj.ResourceCodeContainer value)
+        {
+            return ProxyObject(value, v => new ResourceCodeContainer(this, v));
+        }
+
+        internal RoleCodeContainer ProxyObject(net.sf.mpxj.RoleCodeContainer value)
+        {
+            return ProxyObject(value, v => new RoleCodeContainer(this, v));
+        }
+
+        internal ResourceAssignmentCodeContainer ProxyObject(net.sf.mpxj.ResourceAssignmentCodeContainer value)
+        {
+            return ProxyObject(value, v => new ResourceAssignmentCodeContainer(this, v));
         }
 
         internal DataLinkContainer ProxyObject(net.sf.mpxj.DataLinkContainer value)
