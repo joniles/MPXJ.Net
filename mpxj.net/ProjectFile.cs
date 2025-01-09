@@ -133,5 +133,7 @@ namespace MPXJ.Net
         public ShiftContainer Shifts => _proxyManager.ProxyObject(JavaObject.getShifts());
 
         public ShiftPeriodContainer ShiftPeriods => _proxyManager.ProxyObject(JavaObject.getShiftPeriods());
+        
+        public CurrencyContainer Currencies => _proxyManager.ProxyObject(JavaObject.getCurrencies());
     }
 }
