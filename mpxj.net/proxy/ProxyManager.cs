@@ -445,6 +445,11 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new ShiftPeriod(this, v));
         }
 
+        internal Currency ProxyObject(net.sf.mpxj.Currency value)
+        {
+            return ProxyObject(value, v => new Currency(v));
+        }
+
         internal ShiftContainer ProxyObject(net.sf.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));
@@ -543,6 +548,11 @@ namespace MPXJ.Net.Proxy
         internal UnitOfMeasureContainer ProxyObject(net.sf.mpxj.UnitOfMeasureContainer value)
         {
             return ProxyObject(value, v => new UnitOfMeasureContainer(this, v));
+        }
+
+        internal CurrencyContainer ProxyObject(net.sf.mpxj.CurrencyContainer value)
+        {
+            return ProxyObject(value, v => new CurrencyContainer(this, v));
         }
 
         internal object GenericProxyObject(object o)
