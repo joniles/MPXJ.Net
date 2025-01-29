@@ -3,7 +3,7 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class TimephasedItem<M> : IJavaObjectProxy<net.sf.mpxj.TimephasedItem>
+    public abstract class TimephasedItem<M> : IJavaObjectProxy<net.sf.mpxj.TimephasedItem>
     {
         public net.sf.mpxj.TimephasedItem JavaObject { get; }
 
@@ -17,29 +17,29 @@ namespace MPXJ.Net
             get => JavaObject.getStart().ConvertType();
             set => JavaObject.setStart(value.ConvertType());
         }
-
-        public M AmountPerDay
-        {
-            get => (M)JavaObject.getAmountPerDay();
-            set => JavaObject.setAmountPerDay(value);
-        }
-
+        
         public bool Modified
         {
             get => JavaObject.getModified();
             set => JavaObject.setModified(value);
         }
-
-        public M TotalAmount
-        {
-            get => (M)JavaObject.getTotalAmount();
-            set => JavaObject.setTotalAmount(value);
-        }
-
+        
         public DateTime? Finish
         {
             get => JavaObject.getFinish().ConvertType();
             set => JavaObject.setFinish(value.ConvertType());
+        }
+
+        public abstract M AmountPerDay
+        {
+            get;
+            set;
+        }
+
+        public abstract M TotalAmount
+        {
+            get;
+            set;
         }
 
         public override string ToString() => JavaObject.toString();
