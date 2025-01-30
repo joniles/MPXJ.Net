@@ -643,6 +643,12 @@ namespace MPXJ.Net.Proxy
                 case "java.util.UUID":
                     return ((java.util.UUID)o).ConvertType();
 
+                case "java.util.Map":
+                case "java.util.HashMap":
+                case "java.util.TreeMap":
+                    // Best effort conversion leaving original Java types
+                    return ProxyDictionary<object, object, object, object>(k => k, k => k, v => v, v => v, (java.util.Map)o);
+                
                 // MPXJ Enums
                 case "net.sf.mpxj.AccrueType":
                     return ((net.sf.mpxj.AccrueType)o).ConvertType();
@@ -697,12 +703,21 @@ namespace MPXJ.Net.Proxy
 
                 case "net.sf.mpxj.RateSource":
                     return ((net.sf.mpxj.RateSource)o).ConvertType();
+                
+                case "net.sf.mpxj.TotalSlackCalculationType":
+                    return ((net.sf.mpxj.TotalSlackCalculationType)o).ConvertType();
+
+                case "net.sf.mpxj.RelationshipLagCalendar":
+                    return ((net.sf.mpxj.RelationshipLagCalendar)o).ConvertType();
 
                 case "System.String":
                     return o;
+                
+                case "System.Byte[]":
+                    return o;
             }
 
-            throw new NotSupportedException();
+            throw new NotSupportedException($"No conversion available for {key}");
         }
 
         internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value)
