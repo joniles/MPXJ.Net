@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using MPXJ.Net.Proxy;
 // ReSharper disable RedundantCast
@@ -190,8 +191,8 @@ namespace MPXJ.Net
             {
                 return proxy.JavaObject;
             }
-
-            return java.util.Arrays.asList(list.Select(n => n.GenericJavaObject()).ToArray());
+            
+            return java.util.Arrays.asList( list.Select(n => n.GenericJavaObject()).ToArray());
         }
 
         public static java.util.Map ConvertType<K, V>(this IDictionary<K, V> dictionary)
@@ -218,7 +219,7 @@ namespace MPXJ.Net
 
             if (o is IHasJavaObject)
             {
-                return o.GetType().GetProperty("JavaObject")?.GetValue(o, null);
+                return GetJavaObjectPropertyValue(o);
             }
 
             if (o is string)
@@ -267,6 +268,23 @@ namespace MPXJ.Net
             }
 
             throw new NotSupportedException($"Conversion not defined for {o.GetType()}");
+        }
+
+        // https://stackoverflow.com/questions/994698/ambiguousmatchexception-type-getproperty-c-sharp-reflection/994717#994717
+        private static object GetJavaObjectPropertyValue(object o)
+        {
+            var type = o.GetType();
+            while (type != null)
+            {
+                var property = type.GetProperty("JavaObject", BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
+                if (property != null)
+                {
+                    return property.GetValue(o, null);
+                }
+                type = type.BaseType;
+            }
+
+            return null;
         }
     }
 }
