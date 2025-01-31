@@ -709,7 +709,10 @@ namespace MPXJ.Net.Proxy
 
                 case "net.sf.mpxj.RelationshipLagCalendar":
                     return ((net.sf.mpxj.RelationshipLagCalendar)o).ConvertType();
-
+                
+                case "net.sf.mpxj.WorkGroup":
+                    return ((net.sf.mpxj.WorkGroup)o).ConvertType();
+                
                 case "System.String":
                     return o;
                 
