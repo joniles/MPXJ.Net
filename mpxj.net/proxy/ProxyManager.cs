@@ -714,8 +714,6 @@ namespace MPXJ.Net.Proxy
                     return ((net.sf.mpxj.WorkGroup)o).ConvertType();
                 
                 case "System.String":
-                    return o;
-                
                 case "System.Byte[]":
                     return o;
             }
