@@ -450,6 +450,16 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new Currency(v));
         }
 
+        internal EpsNode ProxyObject(net.sf.mpxj.EpsNode value)
+        {
+            return ProxyObject(value, v => new EpsNode(this, v));
+        }
+
+        internal EpsProjectNode ProxyObject(net.sf.mpxj.EpsProjectNode value)
+        {
+            return ProxyObject(value, v => new EpsProjectNode(this,v));
+        }
+
         internal ShiftContainer ProxyObject(net.sf.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));
