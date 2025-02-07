@@ -57,7 +57,7 @@ namespace MPXJ.Net
             return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, projects.entrySet()).ToDictionary(e => ((java.lang.Integer)e.getKey()).intValue(), e => (string)e.getValue());
         }
 
-        public EPS ListEPS(string name) => new EPS(JavaObject.listEps());
+        public EPS ListEPS() => new EPS(JavaObject.listEps());
         
         public ProjectFile Read() => Read(JavaObject.read());
 

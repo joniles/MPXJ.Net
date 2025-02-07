@@ -26,7 +26,7 @@ namespace MPXJ.Net
 
         public int Size => JavaObject.size();
 
-        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int? uniqueID) => uniqueID == null ? null : _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueID.Value));
+        public CustomFieldValueItem GetCustomFieldValueItemByUniqueID(int? uniqueId) => uniqueId == null ? null : _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByUniqueID(uniqueId.Value));
 
         public CustomFieldValueItem GetCustomFieldValueItemByGuid(Guid? guid) => guid == null ? null : _proxyManager.ProxyObject(JavaObject.getCustomFieldValueItemByGuid(guid.ConvertType()));
     }

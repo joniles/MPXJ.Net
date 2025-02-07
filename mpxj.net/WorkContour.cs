@@ -11,9 +11,9 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
-        public WorkContour(int? uniqueID, string name, bool isDefault, double[] curveValues)
+        public WorkContour(int? uniqueId, string name, bool isDefault, double[] curveValues)
         {
-            JavaObject = new net.sf.mpxj.WorkContour(uniqueID.ConvertType(), name, isDefault, curveValues);
+            JavaObject = new net.sf.mpxj.WorkContour(uniqueId.ConvertType(), name, isDefault, curveValues);
         }
 
         public static readonly WorkContour Flat = new WorkContour(net.sf.mpxj.WorkContour.FLAT);

@@ -13,7 +13,7 @@ namespace MPXJ.Net
             _proxyManager = proxyManager;
         }
 
-        public StructuredNotes(ProjectFile file, int uniqueID, NotesTopic topic, Notes notes) : base(new net.sf.mpxj.StructuredNotes(file.JavaObject, uniqueID.ConvertType(), topic.JavaObject, notes.JavaObject))
+        public StructuredNotes(ProjectFile file, int uniqueId, NotesTopic topic, Notes notes) : base(new net.sf.mpxj.StructuredNotes(file.JavaObject, uniqueId.ConvertType(), topic.JavaObject, notes.JavaObject))
         {
             _proxyManager = file._proxyManager;
         }
