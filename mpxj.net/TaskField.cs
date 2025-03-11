@@ -996,6 +996,9 @@ namespace MPXJ.Net
         public static readonly TaskField ShowFinishText = new TaskField(net.sf.mpxj.TaskField.SHOW_FINISH_TEXT);
         public static readonly TaskField ShowDurationText = new TaskField(net.sf.mpxj.TaskField.SHOW_DURATION_TEXT);
         public static readonly TaskField ActivityPercentComplete = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_PERCENT_COMPLETE);
+        public static readonly TaskField MethodologyGuid = new TaskField(net.sf.mpxj.TaskField.METHODOLOGY_GUID);
+        public static readonly TaskField FloatPath = new TaskField(net.sf.mpxj.TaskField.FLOAT_PATH);
+        public static readonly TaskField FloatPathOrder = new TaskField(net.sf.mpxj.TaskField.FLOAT_PATH_ORDER);
         
         private TaskField(net.sf.mpxj.TaskField javaObject)
         {

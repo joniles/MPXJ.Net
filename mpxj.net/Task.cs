@@ -1309,6 +1309,18 @@ namespace MPXJ.Net
             set => JavaObject.setRemainingWorkNonlabor(value?.JavaObject);
         }
 
+        public int? FloatPath
+        {
+            get => JavaObject.getFloatPath().ConvertType();
+            set => JavaObject.setFloatPath(value.ConvertType());
+        }
+
+        public int? FloatPathOrder
+        {
+            get => JavaObject.getFloatPathOrder().ConvertType();
+            set => JavaObject.setFloatPathOrder(value.ConvertType());
+        }
+
         public bool ShowStartText => JavaObject.getShowStartText();
 
         public bool ShowFinishText => JavaObject.getShowFinishText();
