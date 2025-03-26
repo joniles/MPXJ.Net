@@ -7,9 +7,9 @@ on which Nuget package you used.
 > IMPORTANT: you will need to ensure that your `csproj` file is an SDK-style
 > project. [This](https://github.com/joniles/mpxj-dotnet-samples/blob/main/MpxjConvert/MpxjConvert.csproj)
 > is an example SDK-style project. Note the first line 
-> `<Project Sdk="Microsoft.NET.Sdk">`. The start of the older msbuild-based
-> project will look something like this:
-> `<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">`
+> `<Project Sdk="Microsoft.NET.Sdk">`. The start of older msbuild-based
+> projects will look something like this:
+> `<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">`.
 > MPXJ.Net will not work with this older project type.
 
 ## Migrating from net.sf.mpxj
