@@ -16,13 +16,7 @@ namespace MPXJ.Net
         public RelationType? Type => JavaObject.getType().ConvertType();
 
         public Duration Lag => _proxyManager.ProxyObject(JavaObject.getLag());
-
-        [System.Obsolete("Use PredecessorTask or SuccessorTask")]
-        public Task SourceTask => _proxyManager.ProxyObject(JavaObject.getSourceTask());
-
-        [System.Obsolete("Use PredecessorTask or SuccessorTask")]
-        public Task TargetTask => _proxyManager.ProxyObject(JavaObject.getTargetTask());
-
+        
         public Task PredecessorTask => _proxyManager.ProxyObject(JavaObject.getPredecessorTask());
 
         public Task SuccessorTask => _proxyManager.ProxyObject(JavaObject.getSuccessorTask());
@@ -47,21 +41,7 @@ namespace MPXJ.Net
                 JavaObject.uniqueID(value.ConvertType());
                 return this;
             }
-
-            [System.Obsolete("Use PredecessorTask or SuccessorTask")]
-            public Builder SourceTask(Task value)
-            {
-                JavaObject.sourceTask(value?.JavaObject);
-                return this;
-            }
-
-            [System.Obsolete("Use PredecessorTask or SuccessorTask")]
-            public Builder TargetTask(Task value)
-            {
-                JavaObject.targetTask(value?.JavaObject);
-                return this;
-            }
-
+            
             public Builder PredecessorTask(Task value)
             {
                 JavaObject.predecessorTask(value?.JavaObject);

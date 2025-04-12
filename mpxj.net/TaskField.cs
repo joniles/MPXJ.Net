@@ -967,7 +967,7 @@ namespace MPXJ.Net
         public static readonly TaskField PlannedDuration = new TaskField(net.sf.mpxj.TaskField.PLANNED_DURATION);
         public static readonly TaskField PlannedWork = new TaskField(net.sf.mpxj.TaskField.PLANNED_WORK);
         public static readonly TaskField SuspendDate = new TaskField(net.sf.mpxj.TaskField.SUSPEND_DATE);
-        public static readonly TaskField PrimaryResourceId = new TaskField(net.sf.mpxj.TaskField.PRIMARY_RESOURCE_ID);
+        public static readonly TaskField PrimaryResourceUniqueId = new TaskField(net.sf.mpxj.TaskField.PRIMARY_RESOURCE_UNIQUE_ID);
         public static readonly TaskField ActivityId = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_ID);
         public static readonly TaskField PercentCompleteType = new TaskField(net.sf.mpxj.TaskField.PERCENT_COMPLETE_TYPE);
         public static readonly TaskField ActivityStatus = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_STATUS);
@@ -976,7 +976,7 @@ namespace MPXJ.Net
         public static readonly TaskField ExternalEarlyStart = new TaskField(net.sf.mpxj.TaskField.EXTERNAL_EARLY_START);
         public static readonly TaskField ExternalLateFinish = new TaskField(net.sf.mpxj.TaskField.EXTERNAL_LATE_FINISH);
         public static readonly TaskField LongestPath = new TaskField(net.sf.mpxj.TaskField.LONGEST_PATH);
-        public static readonly TaskField ActivityCodes = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_CODES);
+        public static readonly TaskField ActivityCodeValues = new TaskField(net.sf.mpxj.TaskField.ACTIVITY_CODE_VALUES);
         public static readonly TaskField SequenceNumber = new TaskField(net.sf.mpxj.TaskField.SEQUENCE_NUMBER);
         public static readonly TaskField Steps = new TaskField(net.sf.mpxj.TaskField.STEPS);
         public static readonly TaskField LocationUniqueId = new TaskField(net.sf.mpxj.TaskField.LOCATION_UNIQUE_ID);

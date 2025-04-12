@@ -11,13 +11,7 @@ namespace MPXJ.Net
         {
             JavaObject = javaObject;
         }
-
-        [Obsolete("Please use UserDefinedField.Builder")]
-        public UserDefinedField(ProjectFile file, int? id, string internalName, string externalName, FieldTypeClass fieldTypeClass, bool summaryTaskOnly, DataType dataType)
-        {
-            JavaObject = new net.sf.mpxj.UserDefinedField(file.JavaObject, id.ConvertType(), internalName, externalName, fieldTypeClass.ConvertType(), summaryTaskOnly, dataType.ConvertType());
-        }
-
+        
         public int? UniqueID => ((net.sf.mpxj.UserDefinedField)JavaObject).getUniqueID().ConvertType();
 
         public bool SummaryTaskOnly => ((net.sf.mpxj.UserDefinedField)JavaObject).getSummaryTaskOnly();

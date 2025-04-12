@@ -15,15 +15,9 @@ namespace MPXJ.Net
         public RecurringTask AddRecurringTask() => _proxyManager.ProxyObject(JavaObject.addRecurringTask());
 
         public RecurringTask RecurringTask => _proxyManager.ProxyObject(JavaObject.getRecurringTask());
-
-        [System.Obsolete("Use ActivityCodeValues")]
-        public IList<ActivityCodeValue> ActivityCodes => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getActivityCodes());
-
+        
         public IDictionary<ActivityCode, ActivityCodeValue> ActivityCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ActivityCode, net.sf.mpxj.ActivityCodeValue, ActivityCode, ActivityCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getActivityCodeValues());
-
-        [System.Obsolete("Use AddActivityCodeValue")]
-        public void AddActivityCode(ActivityCodeValue value) => JavaObject.addActivityCode(value?.JavaObject);
-
+        
         public void AddActivityCodeValue(ActivityCodeValue value) => JavaObject.addActivityCodeValue(value?.JavaObject);
 
         public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource?.JavaObject));
@@ -1105,14 +1099,7 @@ namespace MPXJ.Net
             get => JavaObject.getSuspendDate().ConvertType();
             set => JavaObject.setSuspendDate(value.ConvertType());
         }
-
-        [System.Obsolete("Use PrimaryResourceUniqueID")]
-        public int? PrimaryResourceID
-        {
-            get => JavaObject.getPrimaryResourceID().ConvertType();
-            set => JavaObject.setPrimaryResourceID(value.ConvertType());
-        }
-
+        
         public int? PrimaryResourceUniqueID
         {
             get => JavaObject.getPrimaryResourceUniqueID().ConvertType();
