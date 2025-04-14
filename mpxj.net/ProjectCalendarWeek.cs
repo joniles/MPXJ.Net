@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class ProjectCalendarWeek : ProjectCalendarDays, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarWeek>
+    public class ProjectCalendarWeek : ProjectCalendarDays, IJavaObjectProxy<org.mpxj.ProjectCalendarWeek>
     {
-        public new net.sf.mpxj.ProjectCalendarWeek JavaObject => (net.sf.mpxj.ProjectCalendarWeek)base.JavaObject;
+        public new org.mpxj.ProjectCalendarWeek JavaObject => (org.mpxj.ProjectCalendarWeek)base.JavaObject;
 
-        internal ProjectCalendarWeek(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
+        internal ProjectCalendarWeek(ProxyManager proxyManager, org.mpxj.ProjectCalendarWeek javaObject) : base(proxyManager, javaObject) { }
 
         public DateOnlyRange DateRange
         {

@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class GraphicalIndicator : IJavaObjectProxy<net.sf.mpxj.GraphicalIndicator>
+    public class GraphicalIndicator : IJavaObjectProxy<org.mpxj.GraphicalIndicator>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.GraphicalIndicator JavaObject { get; }
+        public org.mpxj.GraphicalIndicator JavaObject { get; }
 
-        internal GraphicalIndicator(ProxyManager proxyManager, net.sf.mpxj.GraphicalIndicator javaObject)
+        internal GraphicalIndicator(ProxyManager proxyManager, org.mpxj.GraphicalIndicator javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -20,11 +20,11 @@ namespace MPXJ.Net
 
         public bool DisplayGraphicalIndicators => JavaObject.getDisplayGraphicalIndicators();
 
-        public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
+        public IList<GraphicalIndicatorCriteria> NonSummaryRowCriteria => _proxyManager.ProxyList<org.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getNonSummaryRowCriteria());
 
-        public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjectSummaryCriteria());
+        public IList<GraphicalIndicatorCriteria> ProjectSummaryCriteria => _proxyManager.ProxyList<org.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjectSummaryCriteria());
 
-        public IList<GraphicalIndicatorCriteria> SummaryRowCriteria => _proxyManager.ProxyList<net.sf.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
+        public IList<GraphicalIndicatorCriteria> SummaryRowCriteria => _proxyManager.ProxyList<org.mpxj.GraphicalIndicatorCriteria, GraphicalIndicatorCriteria>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSummaryRowCriteria());
 
         public bool ProjectSummaryInheritsFromSummaryRows => JavaObject.getProjectSummaryInheritsFromSummaryRows();
 

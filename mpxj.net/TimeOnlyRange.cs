@@ -3,18 +3,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class TimeOnlyRange : IJavaObjectProxy<net.sf.mpxj.LocalTimeRange>
+    public class TimeOnlyRange : IJavaObjectProxy<org.mpxj.LocalTimeRange>
     {
-        public net.sf.mpxj.LocalTimeRange JavaObject { get; }
+        public org.mpxj.LocalTimeRange JavaObject { get; }
 
-        internal TimeOnlyRange(net.sf.mpxj.LocalTimeRange javaObject)
+        internal TimeOnlyRange(org.mpxj.LocalTimeRange javaObject)
         {
             JavaObject = javaObject;
         }
 
         public TimeOnlyRange(TimeOnly start, TimeOnly end)
         {
-            JavaObject = new net.sf.mpxj.LocalTimeRange(start.ConvertType(), end.ConvertType());
+            JavaObject = new org.mpxj.LocalTimeRange(start.ConvertType(), end.ConvertType());
         }
 
         public TimeOnly? Start => JavaObject.getStart().ConvertType();

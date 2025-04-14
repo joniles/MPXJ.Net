@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class WorkContourContainer : ProjectEntityContainer<net.sf.mpxj.WorkContour, WorkContour>
+    public class WorkContourContainer : ProjectEntityContainer<org.mpxj.WorkContour, WorkContour>
     {
-        public new net.sf.mpxj.WorkContourContainer JavaObject => (net.sf.mpxj.WorkContourContainer)base.JavaObject;
+        public new org.mpxj.WorkContourContainer JavaObject => (org.mpxj.WorkContourContainer)base.JavaObject;
 
-        internal WorkContourContainer(ProxyManager proxyManager, net.sf.mpxj.WorkContourContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal WorkContourContainer(ProxyManager proxyManager, org.mpxj.WorkContourContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

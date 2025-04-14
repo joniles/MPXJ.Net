@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class ExpenseItem : IJavaObjectProxy<net.sf.mpxj.ExpenseItem>
+    public class ExpenseItem : IJavaObjectProxy<org.mpxj.ExpenseItem>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ExpenseItem JavaObject { get; }
+        public org.mpxj.ExpenseItem JavaObject { get; }
 
-        internal ExpenseItem(ProxyManager proxyManager, net.sf.mpxj.ExpenseItem javaObject)
+        internal ExpenseItem(ProxyManager proxyManager, org.mpxj.ExpenseItem javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -59,15 +59,15 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ExpenseItem.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ExpenseItem.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ExpenseItem.Builder JavaObject { get; }
+            public org.mpxj.ExpenseItem.Builder JavaObject { get; }
 
             public Builder(Task task)
             {
                 _proxyManager = task._proxyManager;
-                JavaObject = new net.sf.mpxj.ExpenseItem.Builder(task.JavaObject);
+                JavaObject = new org.mpxj.ExpenseItem.Builder(task.JavaObject);
             }
 
             public Builder UniqueID(int? value)

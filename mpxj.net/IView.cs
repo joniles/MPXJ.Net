@@ -3,7 +3,7 @@
 namespace MPXJ.Net
 {
     // TODO: implement view class hierarchy
-    public interface IView : IJavaObjectProxy<net.sf.mpxj.View>
+    public interface IView : IJavaObjectProxy<org.mpxj.View>
     {
         int? ID { get; }
 

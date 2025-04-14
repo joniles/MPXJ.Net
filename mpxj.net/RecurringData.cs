@@ -4,18 +4,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class RecurringData : IJavaObjectProxy<net.sf.mpxj.RecurringData>
+    public class RecurringData : IJavaObjectProxy<org.mpxj.RecurringData>
     {
-        public net.sf.mpxj.RecurringData JavaObject { get; }
+        public org.mpxj.RecurringData JavaObject { get; }
 
-        internal RecurringData(net.sf.mpxj.RecurringData javaObject)
+        internal RecurringData(org.mpxj.RecurringData javaObject)
         {
             JavaObject = javaObject;
         }
 
         public RecurringData()
         {
-            JavaObject = new net.sf.mpxj.RecurringData();
+            JavaObject = new org.mpxj.RecurringData();
         }
 
         public DateOnly? StartDate

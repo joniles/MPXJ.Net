@@ -5,11 +5,11 @@ namespace MPXJ.Net
 {
     public class SureTrakDatabaseReader : AbstractProjectReader
     {
-        internal SureTrakDatabaseReader(net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader reader) : base(reader) { }
+        internal SureTrakDatabaseReader(org.mpxj.primavera.suretrak.SureTrakDatabaseReader reader) : base(reader) { }
 
-        public SureTrakDatabaseReader() : base(new net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader()) { }
+        public SureTrakDatabaseReader() : base(new org.mpxj.primavera.suretrak.SureTrakDatabaseReader()) { }
 
-        public new net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader JavaObject => (net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader)base.JavaObject;
+        public new org.mpxj.primavera.suretrak.SureTrakDatabaseReader JavaObject => (org.mpxj.primavera.suretrak.SureTrakDatabaseReader)base.JavaObject;
 
         public string ProjectName
         {
@@ -18,12 +18,12 @@ namespace MPXJ.Net
 
         public static ProjectFile SetProjectNameAndRead(string directory)
         {
-            return new ProjectFile(net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader.setProjectNameAndRead(new java.io.File(directory)));
+            return new ProjectFile(org.mpxj.primavera.suretrak.SureTrakDatabaseReader.setProjectNameAndRead(new java.io.File(directory)));
         }
 
         public static IList<string> ListProjectNames(string directory)
         {
-            return new ProxyList<string, string>(n => n, n => n, net.sf.mpxj.primavera.suretrak.SureTrakDatabaseReader.listProjectNames(directory));
+            return new ProxyList<string, string>(n => n, n => n, org.mpxj.primavera.suretrak.SureTrakDatabaseReader.listProjectNames(directory));
         }
     }
 }

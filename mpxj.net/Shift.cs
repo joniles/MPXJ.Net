@@ -3,13 +3,13 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class Shift : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.Shift>
+    public class Shift : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.Shift>
     {
         private readonly ProxyManager _proxyManager;
 
-        public net.sf.mpxj.Shift JavaObject { get; }
+        public org.mpxj.Shift JavaObject { get; }
 
-        internal Shift(ProxyManager proxyManager, net.sf.mpxj.Shift javaObject)
+        internal Shift(ProxyManager proxyManager, org.mpxj.Shift javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -19,17 +19,17 @@ namespace MPXJ.Net
 
         public string Name => JavaObject.getName();
 
-        public ICollection<ShiftPeriod> Periods => _proxyManager.ProxyCollection<net.sf.mpxj.ShiftPeriod, ShiftPeriod>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPeriods());
+        public ICollection<ShiftPeriod> Periods => _proxyManager.ProxyCollection<org.mpxj.ShiftPeriod, ShiftPeriod>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPeriods());
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.Shift.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.Shift.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Shift.Builder JavaObject { get; }
+            public org.mpxj.Shift.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.Shift.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.Shift.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

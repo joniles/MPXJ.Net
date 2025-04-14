@@ -3,18 +3,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-	public class Notes : IJavaObjectProxy<net.sf.mpxj.Notes>
+	public class Notes : IJavaObjectProxy<org.mpxj.Notes>
     {
-        public net.sf.mpxj.Notes JavaObject { get; }
+        public org.mpxj.Notes JavaObject { get; }
 
-        internal Notes(net.sf.mpxj.Notes javaObject)
+        internal Notes(org.mpxj.Notes javaObject)
         {
             JavaObject = javaObject;
         }
 
         public Notes(string text)
         {
-            JavaObject = new net.sf.mpxj.Notes(text);
+            JavaObject = new org.mpxj.Notes(text);
         }
 
         public bool Empty => JavaObject.isEmpty();

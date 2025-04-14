@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class CostAccount : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.CostAccount>
+    public class CostAccount : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.CostAccount>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.CostAccount JavaObject { get; }
+        public org.mpxj.CostAccount JavaObject { get; }
 
-        internal CostAccount(ProxyManager proxyManager, net.sf.mpxj.CostAccount javaObject)
+        internal CostAccount(ProxyManager proxyManager, org.mpxj.CostAccount javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -31,15 +31,15 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.CostAccount.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.CostAccount.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.CostAccount.Builder JavaObject { get; }
+            public org.mpxj.CostAccount.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.CostAccount.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.CostAccount.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

@@ -2,11 +2,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class Currency : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.Currency>
+    public class Currency : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.Currency>
     {
-        public net.sf.mpxj.Currency JavaObject { get; }
+        public org.mpxj.Currency JavaObject { get; }
 
-        internal Currency(net.sf.mpxj.Currency javaObject)
+        internal Currency(org.mpxj.Currency javaObject)
         {
             JavaObject = javaObject;
         }
@@ -31,15 +31,15 @@ namespace MPXJ.Net
 
         public string NegativeCurrencyFormat => JavaObject.getNegativeCurrencyFormat();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.Currency.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.Currency.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Currency.Builder JavaObject { get; }
+            public org.mpxj.Currency.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.Currency.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.Currency.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int value)

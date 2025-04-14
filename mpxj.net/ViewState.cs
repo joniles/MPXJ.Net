@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ViewState : IJavaObjectProxy<net.sf.mpxj.ViewState>
+    public class ViewState : IJavaObjectProxy<org.mpxj.ViewState>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ViewState JavaObject { get; }
+        public org.mpxj.ViewState JavaObject { get; }
 
-        internal ViewState(ProxyManager proxyManager, net.sf.mpxj.ViewState javaObject)
+        internal ViewState(ProxyManager proxyManager, org.mpxj.ViewState javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;

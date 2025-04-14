@@ -3,18 +3,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class DateTimeRange : IJavaObjectProxy<net.sf.mpxj.LocalDateTimeRange>
+    public class DateTimeRange : IJavaObjectProxy<org.mpxj.LocalDateTimeRange>
     {
-        public net.sf.mpxj.LocalDateTimeRange JavaObject { get; }
+        public org.mpxj.LocalDateTimeRange JavaObject { get; }
 
-        internal DateTimeRange(net.sf.mpxj.LocalDateTimeRange javaObject)
+        internal DateTimeRange(org.mpxj.LocalDateTimeRange javaObject)
         {
             JavaObject = javaObject;
         }
 
         public DateTimeRange(DateTime? start, DateTime? end)
         {
-            JavaObject = new net.sf.mpxj.LocalDateTimeRange(start.ConvertType(), end.ConvertType());
+            JavaObject = new org.mpxj.LocalDateTimeRange(start.ConvertType(), end.ConvertType());
         }
 
         public DateTime? Start => JavaObject.getStart().ConvertType();

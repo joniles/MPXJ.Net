@@ -2,10 +2,10 @@
 {
     public class FastTrackReader : AbstractProjectReader
     {
-        internal FastTrackReader(net.sf.mpxj.fasttrack.FastTrackReader reader) : base(reader) { }
+        internal FastTrackReader(org.mpxj.fasttrack.FastTrackReader reader) : base(reader) { }
 
-        public FastTrackReader() : base(new net.sf.mpxj.fasttrack.FastTrackReader()) { }
+        public FastTrackReader() : base(new org.mpxj.fasttrack.FastTrackReader()) { }
 
-        public new net.sf.mpxj.fasttrack.FastTrackReader JavaObject => (net.sf.mpxj.fasttrack.FastTrackReader)base.JavaObject;
+        public new org.mpxj.fasttrack.FastTrackReader JavaObject => (org.mpxj.fasttrack.FastTrackReader)base.JavaObject;
     }
 }

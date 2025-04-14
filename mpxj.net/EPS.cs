@@ -6,15 +6,15 @@ namespace MPXJ.Net
     public class EPS
     {
         internal ProxyManager ProxyManager { get; }
-        public net.sf.mpxj.EPS JavaObject { get; }
+        public org.mpxj.EPS JavaObject { get; }
 
-        internal EPS(net.sf.mpxj.EPS javaObject)
+        internal EPS(org.mpxj.EPS javaObject)
         {
             ProxyManager = new ProxyManager();
             JavaObject = javaObject;
         }
 
-        public IList<EpsNode> EpsNodes => new ProxyList<net.sf.mpxj.EpsNode, EpsNode>(n => ProxyManager.ProxyObject(n),
+        public IList<EpsNode> EpsNodes => new ProxyList<org.mpxj.EpsNode, EpsNode>(n => ProxyManager.ProxyObject(n),
             n => n.JavaObject, JavaObject.getEpsNodes());
 
         public EpsNode RootEpsNode => ProxyManager.ProxyObject(JavaObject.getRootEpsNode());
@@ -23,7 +23,7 @@ namespace MPXJ.Net
             ProxyManager.ProxyObject(JavaObject.getEpsNodeByUniqueID(value.ConvertType()));
 
         public IList<EpsProjectNode> EpsProjectNodes =>
-            new ProxyList<net.sf.mpxj.EpsProjectNode, EpsProjectNode>(n => ProxyManager.ProxyObject(n),
+            new ProxyList<org.mpxj.EpsProjectNode, EpsProjectNode>(n => ProxyManager.ProxyObject(n),
                 n => n.JavaObject, JavaObject.getEpsProjectNodes());
 
         public EpsProjectNode GetProjectNodeByUniqueId(int value) =>

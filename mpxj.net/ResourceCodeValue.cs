@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ResourceCodeValue : ICodeValue, IJavaObjectProxy<net.sf.mpxj.ResourceCodeValue>
+    public class ResourceCodeValue : ICodeValue, IJavaObjectProxy<org.mpxj.ResourceCodeValue>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ResourceCodeValue JavaObject { get; }
+        public org.mpxj.ResourceCodeValue JavaObject { get; }
 
-        internal ResourceCodeValue(ProxyManager proxyManager, net.sf.mpxj.ResourceCodeValue javaObject)
+        internal ResourceCodeValue(ProxyManager proxyManager, org.mpxj.ResourceCodeValue javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -30,19 +30,19 @@ namespace MPXJ.Net
         
         public int? ParentValueUniqueId => JavaObject.getParentValueUniqueID().ConvertType();
         
-        public IList<ResourceCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ResourceCodeValue, ResourceCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ResourceCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ResourceCodeValue, ResourceCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ResourceCodeValue.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ResourceCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ResourceCodeValue.Builder JavaObject { get; }
+            public org.mpxj.ResourceCodeValue.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ResourceCodeValue.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ResourceCodeValue.Builder(file.JavaObject);
             }
 
             public Builder ResourceCode(ResourceCode value)

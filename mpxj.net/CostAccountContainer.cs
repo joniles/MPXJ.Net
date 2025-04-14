@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class CostAccountContainer : ProjectEntityContainer<net.sf.mpxj.CostAccount, CostAccount>
+    public class CostAccountContainer : ProjectEntityContainer<org.mpxj.CostAccount, CostAccount>
     {
-        public new net.sf.mpxj.CostAccountContainer JavaObject => (net.sf.mpxj.CostAccountContainer)base.JavaObject;
+        public new org.mpxj.CostAccountContainer JavaObject => (org.mpxj.CostAccountContainer)base.JavaObject;
 
-        internal CostAccountContainer(ProxyManager proxyManager, net.sf.mpxj.CostAccountContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal CostAccountContainer(ProxyManager proxyManager, org.mpxj.CostAccountContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

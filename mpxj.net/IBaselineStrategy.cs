@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-	public interface IBaselineStrategy : IJavaObjectProxy<net.sf.mpxj.BaselineStrategy>
+	public interface IBaselineStrategy : IJavaObjectProxy<org.mpxj.BaselineStrategy>
 	{
         void ClearBaseline(ProjectFile project, int index);
 

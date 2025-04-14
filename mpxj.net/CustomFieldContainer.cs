@@ -4,12 +4,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CustomFieldContainer : ProxyEnumerable<net.sf.mpxj.CustomField, CustomField>, IJavaObjectProxy<net.sf.mpxj.CustomFieldContainer>
+    public class CustomFieldContainer : ProxyEnumerable<org.mpxj.CustomField, CustomField>, IJavaObjectProxy<org.mpxj.CustomFieldContainer>
     {
         private readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.CustomFieldContainer JavaObject => (net.sf.mpxj.CustomFieldContainer)base.JavaObject;
+        public new org.mpxj.CustomFieldContainer JavaObject => (org.mpxj.CustomFieldContainer)base.JavaObject;
 
-        internal CustomFieldContainer(ProxyManager proxyManager, net.sf.mpxj.CustomFieldContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
+        internal CustomFieldContainer(ProxyManager proxyManager, org.mpxj.CustomFieldContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
         {
             _proxyManager = proxyManager;
         }
@@ -22,7 +22,7 @@ namespace MPXJ.Net
 
         public IFieldType GetFieldTypeByAlias(FieldTypeClass typeClass, string alias) => _proxyManager.ProxyObject(JavaObject.getFieldTypeByAlias(typeClass.ConvertType(), alias));
 
-        public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass) => _proxyManager.ProxyList<net.sf.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass.ConvertType()));
+        public IList<CustomField> GetCustomFieldsByFieldTypeClass(FieldTypeClass typeClass) => _proxyManager.ProxyList<org.mpxj.CustomField, CustomField>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCustomFieldsByFieldTypeClass(typeClass.ConvertType()));
 
         public int Size => JavaObject.size();
 

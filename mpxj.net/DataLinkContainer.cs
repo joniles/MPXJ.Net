@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class DataLinkContainer : ProxyList<net.sf.mpxj.DataLink, DataLink>
+    public class DataLinkContainer : ProxyList<org.mpxj.DataLink, DataLink>
     {
-        public new net.sf.mpxj.DataLinkContainer JavaObject => (net.sf.mpxj.DataLinkContainer)base.JavaObject;
+        public new org.mpxj.DataLinkContainer JavaObject => (org.mpxj.DataLinkContainer)base.JavaObject;
 
-        internal DataLinkContainer(ProxyManager proxyManager, net.sf.mpxj.DataLinkContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal DataLinkContainer(ProxyManager proxyManager, org.mpxj.DataLinkContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

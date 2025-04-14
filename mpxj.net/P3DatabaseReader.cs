@@ -5,11 +5,11 @@ namespace MPXJ.Net
 {
     public class P3DatabaseReader : AbstractProjectReader
     {
-        internal P3DatabaseReader(net.sf.mpxj.primavera.p3.P3DatabaseReader reader) : base(reader) { }
+        internal P3DatabaseReader(org.mpxj.primavera.p3.P3DatabaseReader reader) : base(reader) { }
 
-        public P3DatabaseReader() : base(new net.sf.mpxj.primavera.p3.P3DatabaseReader()) { }
+        public P3DatabaseReader() : base(new org.mpxj.primavera.p3.P3DatabaseReader()) { }
 
-        public new net.sf.mpxj.primavera.p3.P3DatabaseReader JavaObject => (net.sf.mpxj.primavera.p3.P3DatabaseReader)base.JavaObject;
+        public new org.mpxj.primavera.p3.P3DatabaseReader JavaObject => (org.mpxj.primavera.p3.P3DatabaseReader)base.JavaObject;
 
         public string ProjectName
         {
@@ -18,12 +18,12 @@ namespace MPXJ.Net
 
         public static ProjectFile SetProjectNameAndRead(string directory)
         {
-            return new ProjectFile(net.sf.mpxj.primavera.p3.P3DatabaseReader.setProjectNameAndRead(new java.io.File(directory)));
+            return new ProjectFile(org.mpxj.primavera.p3.P3DatabaseReader.setProjectNameAndRead(new java.io.File(directory)));
         }
 
         public static IList<string> ListProjectNames(string directory)
         {
-            return new ProxyList<string, string>(n => n, n=> n, net.sf.mpxj.primavera.p3.P3DatabaseReader.listProjectNames(directory));
+            return new ProxyList<string, string>(n => n, n=> n, org.mpxj.primavera.p3.P3DatabaseReader.listProjectNames(directory));
         }
     }
 }

@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class RoleCode : ICode, IJavaObjectProxy<net.sf.mpxj.RoleCode>
+    public class RoleCode : ICode, IJavaObjectProxy<org.mpxj.RoleCode>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.RoleCode JavaObject { get; }
+        public org.mpxj.RoleCode JavaObject { get; }
 
-        internal RoleCode(ProxyManager proxyManager, net.sf.mpxj.RoleCode javaObject)
+        internal RoleCode(ProxyManager proxyManager, org.mpxj.RoleCode javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -25,23 +25,23 @@ namespace MPXJ.Net
 
         public int? MaxLength => JavaObject.getMaxLength().ConvertType();
 
-        public IList<RoleCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
+        public IList<RoleCodeValue> Values => _proxyManager.ProxyList<org.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 
-        public IList<RoleCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<RoleCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public void AddValue(RoleCodeValue value) => JavaObject.addValue(value.JavaObject);
 
         public RoleCodeValue GetValueByUniqueID(int? id) => _proxyManager.ProxyObject(JavaObject.getValueByUniqueID(id.ConvertType()));
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.RoleCode.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.RoleCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.RoleCode.Builder JavaObject { get; }
+            public org.mpxj.RoleCode.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.RoleCode.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.RoleCode.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

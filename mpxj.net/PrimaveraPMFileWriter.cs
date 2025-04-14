@@ -2,9 +2,9 @@
 {
     public class PrimaveraPMFileWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.primavera.PrimaveraPMFileWriter JavaObject => (net.sf.mpxj.primavera.PrimaveraPMFileWriter)base.JavaObject;
+        public new org.mpxj.primavera.PrimaveraPMFileWriter JavaObject => (org.mpxj.primavera.PrimaveraPMFileWriter)base.JavaObject;
 
-        public PrimaveraPMFileWriter() : base(new net.sf.mpxj.primavera.PrimaveraPMFileWriter()) { }
+        public PrimaveraPMFileWriter() : base(new org.mpxj.primavera.PrimaveraPMFileWriter()) { }
 
         public bool WriteBaselines
         {

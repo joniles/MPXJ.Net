@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class ActivityCodeContainer : ProjectEntityContainer<net.sf.mpxj.ActivityCode, ActivityCode>
+    public class ActivityCodeContainer : ProjectEntityContainer<org.mpxj.ActivityCode, ActivityCode>
     {
-        public new net.sf.mpxj.ActivityCodeContainer JavaObject => (net.sf.mpxj.ActivityCodeContainer)base.JavaObject;
+        public new org.mpxj.ActivityCodeContainer JavaObject => (org.mpxj.ActivityCodeContainer)base.JavaObject;
 
-        internal ActivityCodeContainer(ProxyManager proxyManager, net.sf.mpxj.ActivityCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal ActivityCodeContainer(ProxyManager proxyManager, org.mpxj.ActivityCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

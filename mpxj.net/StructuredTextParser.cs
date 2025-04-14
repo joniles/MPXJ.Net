@@ -4,13 +4,13 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class StructuredTextParser : IJavaObjectProxy<net.sf.mpxj.primavera.StructuredTextParser>
+    public class StructuredTextParser : IJavaObjectProxy<org.mpxj.primavera.StructuredTextParser>
     {
-        public net.sf.mpxj.primavera.StructuredTextParser JavaObject { get; }
+        public org.mpxj.primavera.StructuredTextParser JavaObject { get; }
 
         public StructuredTextParser()
         {
-            JavaObject = new net.sf.mpxj.primavera.StructuredTextParser();
+            JavaObject = new org.mpxj.primavera.StructuredTextParser();
         }
 
         public bool RaiseExceptionOnParseError

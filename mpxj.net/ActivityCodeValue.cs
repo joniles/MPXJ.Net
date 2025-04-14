@@ -4,12 +4,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ActivityCodeValue : ICodeValue, IJavaObjectProxy<net.sf.mpxj.ActivityCodeValue>
+    public class ActivityCodeValue : ICodeValue, IJavaObjectProxy<org.mpxj.ActivityCodeValue>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ActivityCodeValue JavaObject { get; }
+        public org.mpxj.ActivityCodeValue JavaObject { get; }
 
-        internal ActivityCodeValue(ProxyManager proxyManager, net.sf.mpxj.ActivityCodeValue javaObject)
+        internal ActivityCodeValue(ProxyManager proxyManager, org.mpxj.ActivityCodeValue javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -33,19 +33,19 @@ namespace MPXJ.Net
         
         public int? ParentValueUniqueId => JavaObject.getParentValueUniqueID().ConvertType();
         
-        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCodeValue.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ActivityCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ActivityCodeValue.Builder JavaObject { get; }
+            public org.mpxj.ActivityCodeValue.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ActivityCodeValue.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ActivityCodeValue.Builder(file.JavaObject);
             }
             
             public Builder ActivityCode(ActivityCode value)

@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class FontBase : IJavaObjectProxy<net.sf.mpxj.mpp.FontBase>
+    public class FontBase : IJavaObjectProxy<org.mpxj.mpp.FontBase>
     {
-        public net.sf.mpxj.mpp.FontBase JavaObject { get; }
+        public org.mpxj.mpp.FontBase JavaObject { get; }
 
-        internal FontBase(net.sf.mpxj.mpp.FontBase javaObject)
+        internal FontBase(org.mpxj.mpp.FontBase javaObject)
         {
             JavaObject = javaObject;
         }

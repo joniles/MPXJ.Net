@@ -4,12 +4,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CostRateTableEntry : IJavaObjectProxy<net.sf.mpxj.CostRateTableEntry>
+    public class CostRateTableEntry : IJavaObjectProxy<org.mpxj.CostRateTableEntry>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.CostRateTableEntry JavaObject { get; }
+        public org.mpxj.CostRateTableEntry JavaObject { get; }
 
-        internal CostRateTableEntry(ProxyManager proxyManager, net.sf.mpxj.CostRateTableEntry javaObject)
+        internal CostRateTableEntry(ProxyManager proxyManager, org.mpxj.CostRateTableEntry javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -18,7 +18,7 @@ namespace MPXJ.Net
         public CostRateTableEntry(ProjectFile file, DateTime startDate, DateTime endDate, double? costPerUse, Rate[] rates)
         {
             _proxyManager = file._proxyManager;
-            JavaObject = new net.sf.mpxj.CostRateTableEntry(startDate.ConvertType(), endDate.ConvertType(), costPerUse.ConvertType(), rates.Select(r => r.JavaObject).ToArray());
+            JavaObject = new org.mpxj.CostRateTableEntry(startDate.ConvertType(), endDate.ConvertType(), costPerUse.ConvertType(), rates.Select(r => r.JavaObject).ToArray());
         }
 
         public DateTime? StartDate => JavaObject.getStartDate().ConvertType();

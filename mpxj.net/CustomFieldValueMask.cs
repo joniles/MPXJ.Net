@@ -2,18 +2,18 @@
 
 namespace MPXJ.Net
 {
-    public class CustomFieldValueMask : IJavaObjectProxy<net.sf.mpxj.CustomFieldValueMask>
+    public class CustomFieldValueMask : IJavaObjectProxy<org.mpxj.CustomFieldValueMask>
     {
-        public net.sf.mpxj.CustomFieldValueMask JavaObject { get; }
+        public org.mpxj.CustomFieldValueMask JavaObject { get; }
 
-        internal CustomFieldValueMask(net.sf.mpxj.CustomFieldValueMask javaObject)
+        internal CustomFieldValueMask(org.mpxj.CustomFieldValueMask javaObject)
         {
             JavaObject = javaObject;
         }
 
         public CustomFieldValueMask(int length, int level, string separator, CustomFieldValueDataType type)
         {
-            JavaObject = new net.sf.mpxj.CustomFieldValueMask(length, level, separator, type.ConvertType());
+            JavaObject = new org.mpxj.CustomFieldValueMask(length, level, separator, type.ConvertType());
         }
 
         public int Length => JavaObject.getLength();

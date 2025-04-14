@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ResourceAssignmentCode : ICode, IJavaObjectProxy<net.sf.mpxj.ResourceAssignmentCode>
+    public class ResourceAssignmentCode : ICode, IJavaObjectProxy<org.mpxj.ResourceAssignmentCode>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ResourceAssignmentCode JavaObject { get; }
+        public org.mpxj.ResourceAssignmentCode JavaObject { get; }
 
-        internal ResourceAssignmentCode(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentCode javaObject)
+        internal ResourceAssignmentCode(ProxyManager proxyManager, org.mpxj.ResourceAssignmentCode javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -25,23 +25,23 @@ namespace MPXJ.Net
 
         public int? MaxLength => JavaObject.getMaxLength().ConvertType();
 
-        public IList<ResourceAssignmentCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
+        public IList<ResourceAssignmentCodeValue> Values => _proxyManager.ProxyList<org.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 
-        public IList<ResourceAssignmentCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ResourceAssignmentCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public void AddValue(ResourceAssignmentCodeValue value) => JavaObject.addValue(value.JavaObject);
 
         public ResourceAssignmentCodeValue GetValueByUniqueID(int? id) => _proxyManager.ProxyObject(JavaObject.getValueByUniqueID(id.ConvertType()));
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ResourceAssignmentCode.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ResourceAssignmentCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ResourceAssignmentCode.Builder JavaObject { get; }
+            public org.mpxj.ResourceAssignmentCode.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ResourceAssignmentCode.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ResourceAssignmentCode.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

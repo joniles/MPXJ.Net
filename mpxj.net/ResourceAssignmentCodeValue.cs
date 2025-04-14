@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ResourceAssignmentCodeValue : ICodeValue, IJavaObjectProxy<net.sf.mpxj.ResourceAssignmentCodeValue>
+    public class ResourceAssignmentCodeValue : ICodeValue, IJavaObjectProxy<org.mpxj.ResourceAssignmentCodeValue>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ResourceAssignmentCodeValue JavaObject { get; }
+        public org.mpxj.ResourceAssignmentCodeValue JavaObject { get; }
 
-        internal ResourceAssignmentCodeValue(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentCodeValue javaObject)
+        internal ResourceAssignmentCodeValue(ProxyManager proxyManager, org.mpxj.ResourceAssignmentCodeValue javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -30,19 +30,19 @@ namespace MPXJ.Net
         
         public int? ParentValueUniqueId => JavaObject.getParentValueUniqueID().ConvertType();
         
-        public IList<ResourceAssignmentCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ResourceAssignmentCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ResourceAssignmentCodeValue.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ResourceAssignmentCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ResourceAssignmentCodeValue.Builder JavaObject { get; }
+            public org.mpxj.ResourceAssignmentCodeValue.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ResourceAssignmentCodeValue.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ResourceAssignmentCodeValue.Builder(file.JavaObject);
             }
 
             public Builder ResourceAssignmentCode(ResourceAssignmentCode value)

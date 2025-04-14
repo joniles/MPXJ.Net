@@ -4,16 +4,16 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectFile : IChildTaskContainer, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.ProjectFile>
+    public class ProjectFile : IChildTaskContainer, IChildResourceContainer, IJavaObjectProxy<org.mpxj.ProjectFile>
     {
         internal readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ProjectFile JavaObject { get; }
+        public org.mpxj.ProjectFile JavaObject { get; }
 
-        public ProjectFile() : this(new net.sf.mpxj.ProjectFile()) { }
+        public ProjectFile() : this(new org.mpxj.ProjectFile()) { }
 
-        internal ProjectFile(net.sf.mpxj.ProjectFile file) : this(new ProxyManager(), file) { }
+        internal ProjectFile(org.mpxj.ProjectFile file) : this(new ProxyManager(), file) { }
 
-        internal ProjectFile(ProxyManager proxyManager, net.sf.mpxj.ProjectFile file)
+        internal ProjectFile(ProxyManager proxyManager, org.mpxj.ProjectFile file)
         {
             _proxyManager = proxyManager;
             JavaObject = file;            
@@ -26,9 +26,9 @@ namespace MPXJ.Net
 
         public void RemoveTask(Task task) => JavaObject.removeTask(task.JavaObject);
 
-        public IList<Task> ChildTasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
+        public IList<Task> ChildTasks => _proxyManager.ProxyList<org.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildTasks());
 
-        public IList<Resource> ChildResources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
+        public IList<Resource> ChildResources => _proxyManager.ProxyList<org.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
 
         public TaskContainer Tasks => _proxyManager.ProxyObject(JavaObject.getTasks());
 
@@ -112,7 +112,7 @@ namespace MPXJ.Net
 
         public ProjectCalendar BaselineCalendar => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());
 
-        public IList<ProjectFile> Baselines => _proxyManager.ProxyList<net.sf.mpxj.ProjectFile, ProjectFile>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getBaselines());
+        public IList<ProjectFile> Baselines => _proxyManager.ProxyList<org.mpxj.ProjectFile, ProjectFile>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getBaselines());
 
         public void SetBaseline(ProjectFile baseline) => JavaObject.setBaseline(baseline.JavaObject);
 
@@ -122,7 +122,7 @@ namespace MPXJ.Net
 
         public void ClearBaseline(int index) => JavaObject.clearBaseline(index);
 
-        public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
+        public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<org.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (org.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
 
         public void ExpandSubprojects(bool replaceExternalTasks) => JavaObject.expandSubprojects(replaceExternalTasks);
 

@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class ResourceAssignmentCodeContainer : ProjectEntityContainer<net.sf.mpxj.ResourceAssignmentCode, ResourceAssignmentCode>
+    public class ResourceAssignmentCodeContainer : ProjectEntityContainer<org.mpxj.ResourceAssignmentCode, ResourceAssignmentCode>
     {
-        public new net.sf.mpxj.ResourceAssignmentCodeContainer JavaObject => (net.sf.mpxj.ResourceAssignmentCodeContainer)base.JavaObject;
+        public new org.mpxj.ResourceAssignmentCodeContainer JavaObject => (org.mpxj.ResourceAssignmentCodeContainer)base.JavaObject;
 
-        internal ResourceAssignmentCodeContainer(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignmentCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal ResourceAssignmentCodeContainer(ProxyManager proxyManager, org.mpxj.ResourceAssignmentCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

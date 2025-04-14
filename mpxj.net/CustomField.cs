@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CustomField : IJavaObjectProxy<net.sf.mpxj.CustomField>
+    public class CustomField : IJavaObjectProxy<org.mpxj.CustomField>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.CustomField JavaObject { get; }
+        public org.mpxj.CustomField JavaObject { get; }
 
-        internal CustomField(ProxyManager proxyManager, net.sf.mpxj.CustomField javaObject)
+        internal CustomField(ProxyManager proxyManager, org.mpxj.CustomField javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -32,7 +32,7 @@ namespace MPXJ.Net
             set => JavaObject.setUniqueID(value.ConvertType());
         }
 
-        public IList<CustomFieldValueMask> Masks => _proxyManager.ProxyList<net.sf.mpxj.CustomFieldValueMask, CustomFieldValueMask>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getMasks());
+        public IList<CustomFieldValueMask> Masks => _proxyManager.ProxyList<org.mpxj.CustomFieldValueMask, CustomFieldValueMask>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getMasks());
 
         public override string ToString() => JavaObject.toString();
     }

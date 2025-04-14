@@ -2,13 +2,13 @@
 
 namespace MPXJ.Net
 {
-    public class TimephasedCost : TimephasedItem<double?>, IJavaObjectProxy<net.sf.mpxj.TimephasedCost>
+    public class TimephasedCost : TimephasedItem<double?>, IJavaObjectProxy<org.mpxj.TimephasedCost>
     {
-        public new net.sf.mpxj.TimephasedCost JavaObject => (net.sf.mpxj.TimephasedCost)base.JavaObject;
+        public new org.mpxj.TimephasedCost JavaObject => (org.mpxj.TimephasedCost)base.JavaObject;
 
-        internal TimephasedCost(net.sf.mpxj.TimephasedCost javaObject) : base(javaObject) { }
+        internal TimephasedCost(org.mpxj.TimephasedCost javaObject) : base(javaObject) { }
 
-        public TimephasedCost() : base(new net.sf.mpxj.TimephasedCost()) { }
+        public TimephasedCost() : base(new org.mpxj.TimephasedCost()) { }
         
         public override double? TotalAmount
         {

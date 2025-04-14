@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class Relation : IJavaObjectProxy<net.sf.mpxj.Relation>
+    public class Relation : IJavaObjectProxy<org.mpxj.Relation>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Relation JavaObject { get; }
+        public org.mpxj.Relation JavaObject { get; }
 
-        internal Relation(ProxyManager proxyManager, net.sf.mpxj.Relation javaObject)
+        internal Relation(ProxyManager proxyManager, org.mpxj.Relation javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -25,15 +25,15 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.Relation.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.Relation.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Relation.Builder JavaObject { get; }
+            public org.mpxj.Relation.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.Relation.Builder();
+                JavaObject = new org.mpxj.Relation.Builder();
             }
 
             public Builder UniqueID(int? value)

@@ -2,10 +2,10 @@
 {
     public class SynchroReader : AbstractProjectReader
     {
-        internal SynchroReader(net.sf.mpxj.synchro.SynchroReader reader) : base(reader) { }
+        internal SynchroReader(org.mpxj.synchro.SynchroReader reader) : base(reader) { }
 
-        public SynchroReader() : base(new net.sf.mpxj.synchro.SynchroReader()) { }
+        public SynchroReader() : base(new org.mpxj.synchro.SynchroReader()) { }
 
-        public new net.sf.mpxj.synchro.SynchroReader JavaObject => (net.sf.mpxj.synchro.SynchroReader)base.JavaObject;
+        public new org.mpxj.synchro.SynchroReader JavaObject => (org.mpxj.synchro.SynchroReader)base.JavaObject;
     }
 }

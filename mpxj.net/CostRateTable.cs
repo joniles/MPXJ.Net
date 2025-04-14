@@ -3,11 +3,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CostRateTable : ProxyList<net.sf.mpxj.CostRateTableEntry, CostRateTableEntry>
+    public class CostRateTable : ProxyList<org.mpxj.CostRateTableEntry, CostRateTableEntry>
     {
-        public new net.sf.mpxj.CostRateTable JavaObject => (net.sf.mpxj.CostRateTable)base.JavaObject;
+        public new org.mpxj.CostRateTable JavaObject => (org.mpxj.CostRateTable)base.JavaObject;
 
-        internal CostRateTable(ProxyManager proxyManager, net.sf.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal CostRateTable(ProxyManager proxyManager, org.mpxj.CostRateTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public CostRateTableEntry GetEntryByDate(DateTime date) => _fromJava(JavaObject.getEntryByDate(date.ConvertType()));
 

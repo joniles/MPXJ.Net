@@ -3,11 +3,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public abstract class TimephasedItem<M> : IJavaObjectProxy<net.sf.mpxj.TimephasedItem>
+    public abstract class TimephasedItem<M> : IJavaObjectProxy<org.mpxj.TimephasedItem>
     {
-        public net.sf.mpxj.TimephasedItem JavaObject { get; }
+        public org.mpxj.TimephasedItem JavaObject { get; }
 
-        internal TimephasedItem(net.sf.mpxj.TimephasedItem javaObject)
+        internal TimephasedItem(org.mpxj.TimephasedItem javaObject)
         {
             JavaObject = javaObject;
         }

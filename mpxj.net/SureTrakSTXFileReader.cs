@@ -2,10 +2,10 @@
 {
     public class SureTrakSTXFileReader : AbstractProjectReader
     {
-        internal SureTrakSTXFileReader(net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader reader) : base(reader) { }
+        internal SureTrakSTXFileReader(org.mpxj.primavera.suretrak.SureTrakSTXFileReader reader) : base(reader) { }
 
-        public SureTrakSTXFileReader() : base(new net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader()) { }
+        public SureTrakSTXFileReader() : base(new org.mpxj.primavera.suretrak.SureTrakSTXFileReader()) { }
 
-        public new net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader JavaObject => (net.sf.mpxj.primavera.suretrak.SureTrakSTXFileReader)base.JavaObject;
+        public new org.mpxj.primavera.suretrak.SureTrakSTXFileReader JavaObject => (org.mpxj.primavera.suretrak.SureTrakSTXFileReader)base.JavaObject;
     }
 }
