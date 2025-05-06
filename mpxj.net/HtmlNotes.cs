@@ -2,13 +2,13 @@
 
 namespace MPXJ.Net
 {
-    public class HtmlNotes : Notes, IJavaObjectProxy<net.sf.mpxj.HtmlNotes>
+    public class HtmlNotes : Notes, IJavaObjectProxy<org.mpxj.HtmlNotes>
     {
-        public new net.sf.mpxj.HtmlNotes JavaObject => (net.sf.mpxj.HtmlNotes)base.JavaObject;
+        public new org.mpxj.HtmlNotes JavaObject => (org.mpxj.HtmlNotes)base.JavaObject;
 
-        internal HtmlNotes(net.sf.mpxj.HtmlNotes value) : base(value) { }
+        internal HtmlNotes(org.mpxj.HtmlNotes value) : base(value) { }
 
-        public HtmlNotes(string html) : base(new net.sf.mpxj.HtmlNotes(html)) { }
+        public HtmlNotes(string html) : base(new org.mpxj.HtmlNotes(html)) { }
 
         public string Html => JavaObject.getHtml();
     }

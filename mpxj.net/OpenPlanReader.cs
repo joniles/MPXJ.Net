@@ -2,10 +2,10 @@
 {
     public class OpenPlanReader : AbstractProjectReader
     {
-        internal OpenPlanReader(net.sf.mpxj.openplan.OpenPlanReader reader) : base(reader) { }
+        internal OpenPlanReader(org.mpxj.openplan.OpenPlanReader reader) : base(reader) { }
 
-        public OpenPlanReader() : base(new net.sf.mpxj.openplan.OpenPlanReader()) { }
+        public OpenPlanReader() : base(new org.mpxj.openplan.OpenPlanReader()) { }
 
-        public new net.sf.mpxj.openplan.OpenPlanReader JavaObject => (net.sf.mpxj.openplan.OpenPlanReader)base.JavaObject;
+        public new org.mpxj.openplan.OpenPlanReader JavaObject => (org.mpxj.openplan.OpenPlanReader)base.JavaObject;
     }
 }

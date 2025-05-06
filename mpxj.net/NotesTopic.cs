@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class NotesTopic : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.NotesTopic>
+    public class NotesTopic : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.NotesTopic>
     {
-        public net.sf.mpxj.NotesTopic JavaObject { get; }
+        public org.mpxj.NotesTopic JavaObject { get; }
 
-        internal NotesTopic(net.sf.mpxj.NotesTopic javaObject)
+        internal NotesTopic(org.mpxj.NotesTopic javaObject)
         {
             JavaObject = javaObject;
         }
@@ -25,16 +25,16 @@ namespace MPXJ.Net
 
         public bool AvailableForActivity => JavaObject.getAvailableForActivity();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.NotesTopic.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.NotesTopic.Builder>
         {
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.NotesTopic.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.NotesTopic.Builder(file.JavaObject);
             }
 
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.NotesTopic.Builder JavaObject { get; }
+            public org.mpxj.NotesTopic.Builder JavaObject { get; }
 
             public Builder UniqueID(int? value)
             {

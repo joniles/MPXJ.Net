@@ -17,13 +17,13 @@ namespace MPXJ.Net
             IList<ProjectFile> ReadAll();
         }
 
-        private class ProjectReaderProxy : IProjectReaderProxy, IJavaObjectProxy<net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy>
+        private class ProjectReaderProxy : IProjectReaderProxy, IJavaObjectProxy<org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy>
         {
             private readonly ReaderProxyManager _proxyManager = new ReaderProxyManager();
 
-            public net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy JavaObject { get; }
+            public org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy JavaObject { get; }
 
-            internal ProjectReaderProxy(net.sf.mpxj.reader.UniversalProjectReader.ProjectReaderProxy javaObject)
+            internal ProjectReaderProxy(org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy javaObject)
             {
                 JavaObject = javaObject;
             }
@@ -44,13 +44,13 @@ namespace MPXJ.Net
             {
                 // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
                 var proxyManager = new ProxyManager();
-                return JavaObject.readAll().toArray().Select(p => new ProjectFile(proxyManager, (net.sf.mpxj.ProjectFile)p)).ToList();
+                return JavaObject.readAll().toArray().Select(p => new ProjectFile(proxyManager, (org.mpxj.ProjectFile)p)).ToList();
             }
         }
 
-        public UniversalProjectReader() : base(new net.sf.mpxj.reader.UniversalProjectReader()) { }
+        public UniversalProjectReader() : base(new org.mpxj.reader.UniversalProjectReader()) { }
 
-        public new net.sf.mpxj.reader.UniversalProjectReader JavaObject => (net.sf.mpxj.reader.UniversalProjectReader)base.JavaObject;
+        public new org.mpxj.reader.UniversalProjectReader JavaObject => (org.mpxj.reader.UniversalProjectReader)base.JavaObject;
 
         public IProjectReaderProxy GetProjectReaderProxy(string name)
         {

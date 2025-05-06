@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class Location : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.Location>
+    public class Location : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.Location>
     {
-        public net.sf.mpxj.Location JavaObject { get; }
+        public org.mpxj.Location JavaObject { get; }
 
-        internal Location(net.sf.mpxj.Location javaObject)
+        internal Location(org.mpxj.Location javaObject)
         {
             JavaObject = javaObject;
         }
@@ -39,15 +39,15 @@ namespace MPXJ.Net
 
         public string StateCode => JavaObject.getStateCode();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.Location.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.Location.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Location.Builder JavaObject { get; }
+            public org.mpxj.Location.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.Location.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.Location.Builder(file.JavaObject);
             }
 
             public Builder AddressLine1(string value)

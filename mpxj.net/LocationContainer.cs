@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class LocationContainer : ProjectEntityContainer<net.sf.mpxj.Location, Location>
+    public class LocationContainer : ProjectEntityContainer<org.mpxj.Location, Location>
     {
-        public new net.sf.mpxj.LocationContainer JavaObject => (net.sf.mpxj.LocationContainer)base.JavaObject;
+        public new org.mpxj.LocationContainer JavaObject => (org.mpxj.LocationContainer)base.JavaObject;
 
-        internal LocationContainer(ProxyManager proxyManager, net.sf.mpxj.LocationContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal LocationContainer(ProxyManager proxyManager, org.mpxj.LocationContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

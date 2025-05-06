@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class GroupClause : IJavaObjectProxy<net.sf.mpxj.GroupClause>
+    public class GroupClause : IJavaObjectProxy<org.mpxj.GroupClause>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.GroupClause JavaObject { get; }
+        public org.mpxj.GroupClause JavaObject { get; }
 
-        internal GroupClause(ProxyManager proxyManager, net.sf.mpxj.GroupClause javaObject)
+        internal GroupClause(ProxyManager proxyManager, org.mpxj.GroupClause javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;

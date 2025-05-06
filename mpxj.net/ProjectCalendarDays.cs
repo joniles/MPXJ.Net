@@ -4,20 +4,20 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public abstract class ProjectCalendarDays : IJavaObjectProxy<net.sf.mpxj.ProjectCalendarDays>
+    public abstract class ProjectCalendarDays : IJavaObjectProxy<org.mpxj.ProjectCalendarDays>
     {
         internal readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ProjectCalendarDays JavaObject { get; }
+        public org.mpxj.ProjectCalendarDays JavaObject { get; }
 
-        internal ProjectCalendarDays(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarDays javaObject)
+        internal ProjectCalendarDays(ProxyManager proxyManager, org.mpxj.ProjectCalendarDays javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
         }
 
-        public static readonly TimeOnlyRange DefaultWorkingMorning = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
+        public static readonly TimeOnlyRange DefaultWorkingMorning = new TimeOnlyRange(org.mpxj.ProjectCalendarDays.DEFAULT_WORKING_MORNING);
 
-        public static readonly TimeOnlyRange DefaultWorkingAfternoon = new TimeOnlyRange(net.sf.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
+        public static readonly TimeOnlyRange DefaultWorkingAfternoon = new TimeOnlyRange(org.mpxj.ProjectCalendarDays.DEFAULT_WORKING_AFTERNOON);
 
         public string Name
         {

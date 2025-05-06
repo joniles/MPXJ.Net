@@ -6,11 +6,11 @@ namespace MPXJ.Net
 {
     public class MPDFileReader : AbstractProjectReader
     {
-        internal MPDFileReader(net.sf.mpxj.mpd.MPDFileReader reader) : base(reader) { }
+        internal MPDFileReader(org.mpxj.mpd.MPDFileReader reader) : base(reader) { }
 
-        public MPDFileReader() : base(new net.sf.mpxj.mpd.MPDFileReader()) { }
+        public MPDFileReader() : base(new org.mpxj.mpd.MPDFileReader()) { }
 
-        public new net.sf.mpxj.mpd.MPDFileReader JavaObject => (net.sf.mpxj.mpd.MPDFileReader)base.JavaObject;
+        public new org.mpxj.mpd.MPDFileReader JavaObject => (org.mpxj.mpd.MPDFileReader)base.JavaObject;
 
         public int ProjectID
         {

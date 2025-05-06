@@ -4,9 +4,9 @@ namespace MPXJ.Net
 {
     public class SDEFWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.sdef.SDEFWriter JavaObject => (net.sf.mpxj.sdef.SDEFWriter)base.JavaObject;
+        public new org.mpxj.sdef.SDEFWriter JavaObject => (org.mpxj.sdef.SDEFWriter)base.JavaObject;
 
-        public SDEFWriter() : base(new net.sf.mpxj.sdef.SDEFWriter()) { }
+        public SDEFWriter() : base(new org.mpxj.sdef.SDEFWriter()) { }
 
         public Encoding Encoding
         {

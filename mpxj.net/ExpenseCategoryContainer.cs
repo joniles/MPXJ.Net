@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class ExpenseCategoryContainer : ProjectEntityContainer<net.sf.mpxj.ExpenseCategory, ExpenseCategory>
+    public class ExpenseCategoryContainer : ProjectEntityContainer<org.mpxj.ExpenseCategory, ExpenseCategory>
     {
-        public new net.sf.mpxj.ExpenseCategoryContainer JavaObject => (net.sf.mpxj.ExpenseCategoryContainer)base.JavaObject;
+        public new org.mpxj.ExpenseCategoryContainer JavaObject => (org.mpxj.ExpenseCategoryContainer)base.JavaObject;
 
-        internal ExpenseCategoryContainer(ProxyManager proxyManager, net.sf.mpxj.ExpenseCategoryContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal ExpenseCategoryContainer(ProxyManager proxyManager, org.mpxj.ExpenseCategoryContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

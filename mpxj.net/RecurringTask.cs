@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-	public class RecurringTask : RecurringData, IJavaObjectProxy<net.sf.mpxj.RecurringTask>
+	public class RecurringTask : RecurringData, IJavaObjectProxy<org.mpxj.RecurringTask>
 	{
         private readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.RecurringTask JavaObject => (net.sf.mpxj.RecurringTask)base.JavaObject;
+        public new org.mpxj.RecurringTask JavaObject => (org.mpxj.RecurringTask)base.JavaObject;
 
-        internal RecurringTask(ProxyManager proxyManager, net.sf.mpxj.RecurringTask javaObject) : base(javaObject)
+        internal RecurringTask(ProxyManager proxyManager, org.mpxj.RecurringTask javaObject) : base(javaObject)
         {
             _proxyManager = proxyManager;
         }

@@ -2,10 +2,10 @@
 {
     public class ConceptDrawProjectReader : AbstractProjectReader
     {
-        internal ConceptDrawProjectReader(net.sf.mpxj.conceptdraw.ConceptDrawProjectReader reader) : base(reader) { }
+        internal ConceptDrawProjectReader(org.mpxj.conceptdraw.ConceptDrawProjectReader reader) : base(reader) { }
 
-        public ConceptDrawProjectReader() : base(new net.sf.mpxj.conceptdraw.ConceptDrawProjectReader()) { }
+        public ConceptDrawProjectReader() : base(new org.mpxj.conceptdraw.ConceptDrawProjectReader()) { }
 
-        public new net.sf.mpxj.conceptdraw.ConceptDrawProjectReader JavaObject => (net.sf.mpxj.conceptdraw.ConceptDrawProjectReader)base.JavaObject;
+        public new org.mpxj.conceptdraw.ConceptDrawProjectReader JavaObject => (org.mpxj.conceptdraw.ConceptDrawProjectReader)base.JavaObject;
     }
 }

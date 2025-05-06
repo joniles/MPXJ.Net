@@ -2,11 +2,11 @@
 {
     public class PhoenixReader : AbstractProjectReader
     {
-        internal PhoenixReader(net.sf.mpxj.phoenix.PhoenixReader reader) : base(reader) { }
+        internal PhoenixReader(org.mpxj.phoenix.PhoenixReader reader) : base(reader) { }
 
-        public PhoenixReader() : base(new net.sf.mpxj.phoenix.PhoenixReader()) { }
+        public PhoenixReader() : base(new org.mpxj.phoenix.PhoenixReader()) { }
 
-        public new net.sf.mpxj.phoenix.PhoenixReader JavaObject => (net.sf.mpxj.phoenix.PhoenixReader)base.JavaObject;
+        public new org.mpxj.phoenix.PhoenixReader JavaObject => (org.mpxj.phoenix.PhoenixReader)base.JavaObject;
 
         public bool UseActivityCodesForTaskHierarchy
         {

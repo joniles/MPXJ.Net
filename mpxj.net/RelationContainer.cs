@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class RelationContainer : ProjectEntityContainer<net.sf.mpxj.Relation, Relation>
+    public class RelationContainer : ProjectEntityContainer<org.mpxj.Relation, Relation>
     {
-        public new net.sf.mpxj.RelationContainer JavaObject => (net.sf.mpxj.RelationContainer)base.JavaObject;
+        public new org.mpxj.RelationContainer JavaObject => (org.mpxj.RelationContainer)base.JavaObject;
 
-        internal RelationContainer(ProxyManager proxyManager, net.sf.mpxj.RelationContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal RelationContainer(ProxyManager proxyManager, org.mpxj.RelationContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

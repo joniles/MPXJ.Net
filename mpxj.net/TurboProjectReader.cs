@@ -2,10 +2,10 @@
 {
     public class TurboProjectReader : AbstractProjectReader
     {
-        internal TurboProjectReader(net.sf.mpxj.turboproject.TurboProjectReader reader) : base(reader) { }
+        internal TurboProjectReader(org.mpxj.turboproject.TurboProjectReader reader) : base(reader) { }
 
-        public TurboProjectReader() : base(new net.sf.mpxj.turboproject.TurboProjectReader()) { }
+        public TurboProjectReader() : base(new org.mpxj.turboproject.TurboProjectReader()) { }
 
-        public new net.sf.mpxj.turboproject.TurboProjectReader JavaObject => (net.sf.mpxj.turboproject.TurboProjectReader)base.JavaObject;
+        public new org.mpxj.turboproject.TurboProjectReader JavaObject => (org.mpxj.turboproject.TurboProjectReader)base.JavaObject;
     }
 }

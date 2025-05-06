@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class Group : IJavaObjectProxy<net.sf.mpxj.Group>
+    public class Group : IJavaObjectProxy<org.mpxj.Group>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Group JavaObject { get; }
+        public org.mpxj.Group JavaObject { get; }
 
-        internal Group(ProxyManager proxyManager, net.sf.mpxj.Group javaObject)
+        internal Group(ProxyManager proxyManager, org.mpxj.Group javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -20,7 +20,7 @@ namespace MPXJ.Net
 
         public bool ShowSummaryTasks => JavaObject.getShowSummaryTasks();
 
-        public IList<GroupClause> GroupClauses => _proxyManager.ProxyList<net.sf.mpxj.GroupClause, GroupClause>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getGroupClauses());
+        public IList<GroupClause> GroupClauses => _proxyManager.ProxyList<org.mpxj.GroupClause, GroupClause>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getGroupClauses());
 
         public override string ToString() => JavaObject.toString();
     }

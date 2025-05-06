@@ -2,7 +2,7 @@
 
 namespace MPXJ.Net
 {
-    public interface IFieldContainer : IJavaObjectProxy<net.sf.mpxj.FieldContainer>
+    public interface IFieldContainer : IJavaObjectProxy<org.mpxj.FieldContainer>
     {
         void Set(IFieldType field, object value);
 

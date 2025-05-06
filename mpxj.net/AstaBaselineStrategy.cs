@@ -6,7 +6,7 @@
 
         private AstaBaselineStrategy() { }
 
-        public net.sf.mpxj.BaselineStrategy JavaObject => net.sf.mpxj.asta.AstaBaselineStrategy.INSTANCE;
+        public org.mpxj.BaselineStrategy JavaObject => org.mpxj.asta.AstaBaselineStrategy.INSTANCE;
 
         public void ClearBaseline(ProjectFile project, int index)
         {

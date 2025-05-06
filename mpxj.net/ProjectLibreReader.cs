@@ -2,10 +2,10 @@
 {
     public class ProjectLibreReader : AbstractProjectReader
     {
-        internal ProjectLibreReader(net.sf.mpxj.projectlibre.ProjectLibreReader reader) : base(reader) { }
+        internal ProjectLibreReader(org.mpxj.projectlibre.ProjectLibreReader reader) : base(reader) { }
 
-        public ProjectLibreReader() : base(new net.sf.mpxj.projectlibre.ProjectLibreReader()) { }
+        public ProjectLibreReader() : base(new org.mpxj.projectlibre.ProjectLibreReader()) { }
 
-        public new net.sf.mpxj.projectlibre.ProjectLibreReader JavaObject => (net.sf.mpxj.projectlibre.ProjectLibreReader)base.JavaObject;
+        public new org.mpxj.projectlibre.ProjectLibreReader JavaObject => (org.mpxj.projectlibre.ProjectLibreReader)base.JavaObject;
     }
 }

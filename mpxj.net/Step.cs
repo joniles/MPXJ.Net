@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class Step : IJavaObjectProxy<net.sf.mpxj.Step>
+    public class Step : IJavaObjectProxy<org.mpxj.Step>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Step JavaObject { get; }
+        public org.mpxj.Step JavaObject { get; }
 
-        internal Step(ProxyManager proxyManager, net.sf.mpxj.Step javaObject)
+        internal Step(ProxyManager proxyManager, org.mpxj.Step javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -24,15 +24,15 @@ namespace MPXJ.Net
         public Notes DescriptionObject => _proxyManager.ProxyObject(JavaObject.getDescriptionObject());
         public bool Complete => JavaObject.getComplete();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.Step.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.Step.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.Step.Builder JavaObject { get; }
+            public org.mpxj.Step.Builder JavaObject { get; }
 
             public Builder(Task task)
             {
                 _proxyManager = task._proxyManager;
-                JavaObject = new net.sf.mpxj.Step.Builder(task.JavaObject);
+                JavaObject = new org.mpxj.Step.Builder(task.JavaObject);
             }
 
             public Builder UniqueID(int? value)

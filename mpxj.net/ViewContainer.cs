@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class ViewContainer : ProxyList<net.sf.mpxj.View, IView>
+    public class ViewContainer : ProxyList<org.mpxj.View, IView>
     {
         private readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.ViewContainer JavaObject => (net.sf.mpxj.ViewContainer)base.JavaObject;
+        public new org.mpxj.ViewContainer JavaObject => (org.mpxj.ViewContainer)base.JavaObject;
 
-        internal ViewContainer(ProxyManager proxyManager, net.sf.mpxj.ViewContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
+        internal ViewContainer(ProxyManager proxyManager, org.mpxj.ViewContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
         {
             _proxyManager = proxyManager;
         }

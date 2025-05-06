@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class GraphicalIndicatorCriteria : GenericCriteria, IJavaObjectProxy<net.sf.mpxj.GraphicalIndicatorCriteria>
+    public class GraphicalIndicatorCriteria : GenericCriteria, IJavaObjectProxy<org.mpxj.GraphicalIndicatorCriteria>
     {
-        public new net.sf.mpxj.GraphicalIndicatorCriteria JavaObject => (net.sf.mpxj.GraphicalIndicatorCriteria)base.JavaObject;
+        public new org.mpxj.GraphicalIndicatorCriteria JavaObject => (org.mpxj.GraphicalIndicatorCriteria)base.JavaObject;
 
-        internal GraphicalIndicatorCriteria(ProxyManager proxyManager, net.sf.mpxj.GenericCriteria javaObject) : base(proxyManager, javaObject) { }
+        internal GraphicalIndicatorCriteria(ProxyManager proxyManager, org.mpxj.GenericCriteria javaObject) : base(proxyManager, javaObject) { }
 
         public int Indicator => JavaObject.getIndicator();
 

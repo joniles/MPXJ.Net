@@ -3,11 +3,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CustomFieldLookupTable : ProxyList<net.sf.mpxj.mpp.CustomFieldValueItem, CustomFieldValueItem>
+    public class CustomFieldLookupTable : ProxyList<org.mpxj.mpp.CustomFieldValueItem, CustomFieldValueItem>
     {
-        public new net.sf.mpxj.CustomFieldLookupTable JavaObject => (net.sf.mpxj.CustomFieldLookupTable)base.JavaObject;
+        public new org.mpxj.CustomFieldLookupTable JavaObject => (org.mpxj.CustomFieldLookupTable)base.JavaObject;
 
-        internal CustomFieldLookupTable(ProxyManager proxyManager, net.sf.mpxj.CustomFieldLookupTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal CustomFieldLookupTable(ProxyManager proxyManager, org.mpxj.CustomFieldLookupTable javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
 
         public Guid? GUID
         {
