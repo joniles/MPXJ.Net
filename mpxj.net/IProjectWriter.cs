@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MPXJ.Net
 {
-    public interface IProjectWriter : IJavaObjectProxy<net.sf.mpxj.writer.ProjectWriter>
+    public interface IProjectWriter : IJavaObjectProxy<org.mpxj.writer.ProjectWriter>
     {
         void Write(ProjectFile projectFile, string fileName);
 

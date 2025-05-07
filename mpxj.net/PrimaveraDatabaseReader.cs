@@ -6,11 +6,11 @@ namespace MPXJ.Net
 {
     public class PrimaveraDatabaseReader : AbstractProjectReader
     {
-        internal PrimaveraDatabaseReader(net.sf.mpxj.primavera.PrimaveraDatabaseReader reader) : base(reader) { }
+        internal PrimaveraDatabaseReader(org.mpxj.primavera.PrimaveraDatabaseReader reader) : base(reader) { }
 
-        public PrimaveraDatabaseReader() : base(new net.sf.mpxj.primavera.PrimaveraDatabaseReader()) { }
+        public PrimaveraDatabaseReader() : base(new org.mpxj.primavera.PrimaveraDatabaseReader()) { }
 
-        public new net.sf.mpxj.primavera.PrimaveraDatabaseReader JavaObject => (net.sf.mpxj.primavera.PrimaveraDatabaseReader)base.JavaObject;
+        public new org.mpxj.primavera.PrimaveraDatabaseReader JavaObject => (org.mpxj.primavera.PrimaveraDatabaseReader)base.JavaObject;
 
         public java.sql.Connection Connection
         {

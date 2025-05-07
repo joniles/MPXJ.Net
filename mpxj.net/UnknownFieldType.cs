@@ -2,12 +2,12 @@
 {
     internal class UnknownFieldType : IFieldType
     {
-        internal UnknownFieldType(net.sf.mpxj.FieldType javaObject)
+        internal UnknownFieldType(org.mpxj.FieldType javaObject)
         {
             JavaObject = javaObject;
         }
 
-        public net.sf.mpxj.FieldType JavaObject { get; }
+        public org.mpxj.FieldType JavaObject { get; }
 
         public FieldTypeClass FieldTypeClass => FieldTypeClass.Unknown;
 

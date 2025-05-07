@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class UnitOfMeasure : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.UnitOfMeasure>
+    public class UnitOfMeasure : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.UnitOfMeasure>
     {
-        public net.sf.mpxj.UnitOfMeasure JavaObject { get; }
+        public org.mpxj.UnitOfMeasure JavaObject { get; }
 
-        internal UnitOfMeasure(net.sf.mpxj.UnitOfMeasure javaObject)
+        internal UnitOfMeasure(org.mpxj.UnitOfMeasure javaObject)
         {
             JavaObject = javaObject;
         }
@@ -19,15 +19,15 @@ namespace MPXJ.Net
 
         public int? SequenceNumber => JavaObject.getSequenceNumber().ConvertType();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.UnitOfMeasure.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.UnitOfMeasure.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.UnitOfMeasure.Builder JavaObject { get; }
+            public org.mpxj.UnitOfMeasure.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.UnitOfMeasure.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.UnitOfMeasure.Builder(file.JavaObject);
             }
 
             public Builder Name(string value)

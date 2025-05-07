@@ -2,7 +2,7 @@
 {
 	public interface IFieldType
 	{
-        net.sf.mpxj.FieldType JavaObject { get; }
+        org.mpxj.FieldType JavaObject { get; }
 
         FieldTypeClass FieldTypeClass { get; }
 

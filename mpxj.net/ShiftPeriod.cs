@@ -3,13 +3,13 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ShiftPeriod : IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ShiftPeriod>
+    public class ShiftPeriod : IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.ShiftPeriod>
     {
         private readonly ProxyManager _proxyManager;
 
-        public net.sf.mpxj.ShiftPeriod JavaObject { get; }
+        public org.mpxj.ShiftPeriod JavaObject { get; }
 
-        internal ShiftPeriod(ProxyManager proxyManager, net.sf.mpxj.ShiftPeriod javaObject)
+        internal ShiftPeriod(ProxyManager proxyManager, org.mpxj.ShiftPeriod javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -23,15 +23,15 @@ namespace MPXJ.Net
 
         public Duration Duration => _proxyManager.ProxyObject(JavaObject.getDuration());
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ShiftPeriod.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ShiftPeriod.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ShiftPeriod.Builder JavaObject { get; }
+            public org.mpxj.ShiftPeriod.Builder JavaObject { get; }
 
             public Builder(ProjectFile file, Shift shift)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ShiftPeriod.Builder(file.JavaObject, shift.JavaObject);
+                JavaObject = new org.mpxj.ShiftPeriod.Builder(file.JavaObject, shift.JavaObject);
             }
 
             public Builder UniqueID(int? value)

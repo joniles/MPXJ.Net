@@ -8,11 +8,11 @@ namespace MPXJ.Net
 {
     public class PrimaveraXERFileReader : AbstractProjectReader
     {
-        internal PrimaveraXERFileReader(net.sf.mpxj.primavera.PrimaveraXERFileReader reader) : base(reader) { }
+        internal PrimaveraXERFileReader(org.mpxj.primavera.PrimaveraXERFileReader reader) : base(reader) { }
 
-        public PrimaveraXERFileReader() : base(new net.sf.mpxj.primavera.PrimaveraXERFileReader()) { }
+        public PrimaveraXERFileReader() : base(new org.mpxj.primavera.PrimaveraXERFileReader()) { }
 
-        public new net.sf.mpxj.primavera.PrimaveraXERFileReader JavaObject => (net.sf.mpxj.primavera.PrimaveraXERFileReader)base.JavaObject;
+        public new org.mpxj.primavera.PrimaveraXERFileReader JavaObject => (org.mpxj.primavera.PrimaveraXERFileReader)base.JavaObject;
 
         public Encoding Encoding
         {

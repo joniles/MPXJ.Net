@@ -5,7 +5,7 @@ namespace MPXJ.Net
 {
     internal static class EnumExtensionMethods
     {
-        internal static readonly Dictionary<net.sf.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<net.sf.mpxj.FieldType, IFieldType>();
+        internal static readonly Dictionary<org.mpxj.FieldType, IFieldType> FieldTypeDictionary = new Dictionary<org.mpxj.FieldType, IFieldType>();
 
         static EnumExtensionMethods()
         {
@@ -26,626 +26,626 @@ namespace MPXJ.Net
         }
 
         // DayType
-        public static net.sf.mpxj.DayType ConvertType(this DayType value)
+        public static org.mpxj.DayType ConvertType(this DayType value)
         {
-            return net.sf.mpxj.DayType.getInstance((int)value);
+            return org.mpxj.DayType.getInstance((int)value);
         }
 
-        public static net.sf.mpxj.DayType ConvertType(this DayType? value)
+        public static org.mpxj.DayType ConvertType(this DayType? value)
         {
-            return value == null ? null : net.sf.mpxj.DayType.getInstance((int)value);
+            return value == null ? null : org.mpxj.DayType.getInstance((int)value);
         }
 
-        public static DayType? ConvertType(this net.sf.mpxj.DayType value)
+        public static DayType? ConvertType(this org.mpxj.DayType value)
         {
             return value == null ? (DayType?)null : (DayType)value.getValue();
         }
 
         // TimeUnit
-        public static net.sf.mpxj.TimeUnit ConvertType(this TimeUnit value)
+        public static org.mpxj.TimeUnit ConvertType(this TimeUnit value)
         {
-            return net.sf.mpxj.TimeUnit.getInstance((int)value);
+            return org.mpxj.TimeUnit.getInstance((int)value);
         }
 
-        public static net.sf.mpxj.TimeUnit ConvertType(this TimeUnit? value)
+        public static org.mpxj.TimeUnit ConvertType(this TimeUnit? value)
         {
-            return value == null ? null : net.sf.mpxj.TimeUnit.getInstance((int)value);
+            return value == null ? null : org.mpxj.TimeUnit.getInstance((int)value);
         }
 
-        public static TimeUnit? ConvertType(this net.sf.mpxj.TimeUnit value)
+        public static TimeUnit? ConvertType(this org.mpxj.TimeUnit value)
         {
             return value == null ? (TimeUnit?)null : (TimeUnit)value.getValue();
         }
 
         // AccrueType
-        public static net.sf.mpxj.AccrueType ConvertType(this AccrueType value)
+        public static org.mpxj.AccrueType ConvertType(this AccrueType value)
         {
-            return net.sf.mpxj.AccrueType.getInstance((int)value);
+            return org.mpxj.AccrueType.getInstance((int)value);
         }
 
-        public static net.sf.mpxj.AccrueType ConvertType(this AccrueType? value)
+        public static org.mpxj.AccrueType ConvertType(this AccrueType? value)
         {
-            return value == null ? null : net.sf.mpxj.AccrueType.getInstance((int)value);
+            return value == null ? null : org.mpxj.AccrueType.getInstance((int)value);
         }
 
-        public static AccrueType? ConvertType(this net.sf.mpxj.AccrueType value)
+        public static AccrueType? ConvertType(this org.mpxj.AccrueType value)
         {
             return value == null ? (AccrueType?)null : (AccrueType)value.getValue();
         }
 
         // EarnedValueMethod
-        public static net.sf.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod value)
+        public static org.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod value)
         {
-            return net.sf.mpxj.EarnedValueMethod.getInstance((int)value);
+            return org.mpxj.EarnedValueMethod.getInstance((int)value);
         }
 
-        public static net.sf.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod? value)
+        public static org.mpxj.EarnedValueMethod ConvertType(this EarnedValueMethod? value)
         {
-            return value == null ? null : net.sf.mpxj.EarnedValueMethod.getInstance((int)value);
+            return value == null ? null : org.mpxj.EarnedValueMethod.getInstance((int)value);
         }
 
-        public static EarnedValueMethod? ConvertType(this net.sf.mpxj.EarnedValueMethod value)
+        public static EarnedValueMethod? ConvertType(this org.mpxj.EarnedValueMethod value)
         {
             return value == null ? (EarnedValueMethod?)null : (EarnedValueMethod)value.getValue();
         }
 
         // ActivityStatus
-        public static net.sf.mpxj.ActivityStatus ConvertType(this ActivityStatus value)
+        public static org.mpxj.ActivityStatus ConvertType(this ActivityStatus value)
         {
-            return net.sf.mpxj.ActivityStatus.values()[(int)value];
+            return org.mpxj.ActivityStatus.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ActivityStatus ConvertType(this ActivityStatus? value)
+        public static org.mpxj.ActivityStatus ConvertType(this ActivityStatus? value)
         {
-            return value == null ? null : net.sf.mpxj.ActivityStatus.values()[(int)value];
+            return value == null ? null : org.mpxj.ActivityStatus.values()[(int)value];
         }
 
-        public static ActivityStatus? ConvertType(this net.sf.mpxj.ActivityStatus value)
+        public static ActivityStatus? ConvertType(this org.mpxj.ActivityStatus value)
         {
             return value == null ? (ActivityStatus?)null : (ActivityStatus)value.ordinal();
         }
 
         // FieldTypeClass
-        public static net.sf.mpxj.FieldTypeClass ConvertType(this FieldTypeClass value)
+        public static org.mpxj.FieldTypeClass ConvertType(this FieldTypeClass value)
         {
-            return net.sf.mpxj.FieldTypeClass.values()[(int)value];
+            return org.mpxj.FieldTypeClass.values()[(int)value];
         }
 
-        public static net.sf.mpxj.FieldTypeClass ConvertType(this FieldTypeClass? value)
+        public static org.mpxj.FieldTypeClass ConvertType(this FieldTypeClass? value)
         {
-            return value == null ? null : net.sf.mpxj.FieldTypeClass.values()[(int)value];
+            return value == null ? null : org.mpxj.FieldTypeClass.values()[(int)value];
         }
 
-        public static FieldTypeClass? ConvertType(this net.sf.mpxj.FieldTypeClass value)
+        public static FieldTypeClass? ConvertType(this org.mpxj.FieldTypeClass value)
         {
             return value == null ? (FieldTypeClass?)null : (FieldTypeClass)value.ordinal();
         }
 
         // CustomFieldValueDataType
-        public static net.sf.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType value)
+        public static org.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType value)
         {
-            return net.sf.mpxj.CustomFieldValueDataType.values()[(int)value];
+            return org.mpxj.CustomFieldValueDataType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType? value)
+        public static org.mpxj.CustomFieldValueDataType ConvertType(this CustomFieldValueDataType? value)
         {
-            return value == null ? null : net.sf.mpxj.CustomFieldValueDataType.values()[(int)value];
+            return value == null ? null : org.mpxj.CustomFieldValueDataType.values()[(int)value];
         }
 
-        public static CustomFieldValueDataType? ConvertType(this net.sf.mpxj.CustomFieldValueDataType value)
+        public static CustomFieldValueDataType? ConvertType(this org.mpxj.CustomFieldValueDataType value)
         {
             return value == null ? (CustomFieldValueDataType?)null : (CustomFieldValueDataType)value.ordinal();
         }
 
         // TestOperator
-        public static net.sf.mpxj.TestOperator ConvertType(this TestOperator value)
+        public static org.mpxj.TestOperator ConvertType(this TestOperator value)
         {
-            return net.sf.mpxj.TestOperator.values()[(int)value];
+            return org.mpxj.TestOperator.values()[(int)value];
         }
 
-        public static net.sf.mpxj.TestOperator ConvertType(this TestOperator? value)
+        public static org.mpxj.TestOperator ConvertType(this TestOperator? value)
         {
-            return value == null ? null : net.sf.mpxj.TestOperator.values()[(int)value];
+            return value == null ? null : org.mpxj.TestOperator.values()[(int)value];
         }
 
-        public static TestOperator? ConvertType(this net.sf.mpxj.TestOperator value)
+        public static TestOperator? ConvertType(this org.mpxj.TestOperator value)
         {
             return value == null ? (TestOperator?)null : (TestOperator)value.ordinal();
         }
 
         // ActivityCodeScope
-        public static net.sf.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope value)
+        public static org.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope value)
         {
-            return net.sf.mpxj.ActivityCodeScope.values()[(int)value];
+            return org.mpxj.ActivityCodeScope.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope? value)
+        public static org.mpxj.ActivityCodeScope ConvertType(this ActivityCodeScope? value)
         {
-            return value == null ? null : net.sf.mpxj.ActivityCodeScope.values()[(int)value];
+            return value == null ? null : org.mpxj.ActivityCodeScope.values()[(int)value];
         }
 
-        public static ActivityCodeScope? ConvertType(this net.sf.mpxj.ActivityCodeScope value)
+        public static ActivityCodeScope? ConvertType(this org.mpxj.ActivityCodeScope value)
         {
             return value == null ? (ActivityCodeScope?)null : (ActivityCodeScope)value.ordinal();
         }
 
         // DataType
-        public static net.sf.mpxj.DataType ConvertType(this DataType value)
+        public static org.mpxj.DataType ConvertType(this DataType value)
         {
-            return net.sf.mpxj.DataType.values()[(int)value];
+            return org.mpxj.DataType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.DataType ConvertType(this DataType? value)
+        public static org.mpxj.DataType ConvertType(this DataType? value)
         {
-            return value == null ? null : net.sf.mpxj.DataType.values()[(int)value];
+            return value == null ? null : org.mpxj.DataType.values()[(int)value];
         }
 
-        public static DataType? ConvertType(this net.sf.mpxj.DataType value)
+        public static DataType? ConvertType(this org.mpxj.DataType value)
         {
             return value == null ? (DataType?)null : (DataType)value.ordinal();
         }
 
         // BackgroundPattern
-        public static net.sf.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern value)
+        public static org.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern value)
         {
-            return net.sf.mpxj.mpp.BackgroundPattern.values()[(int)value];
+            return org.mpxj.mpp.BackgroundPattern.values()[(int)value];
         }
 
-        public static net.sf.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern? value)
+        public static org.mpxj.mpp.BackgroundPattern ConvertType(this BackgroundPattern? value)
         {
-            return value == null ? null : net.sf.mpxj.mpp.BackgroundPattern.values()[(int)value];
+            return value == null ? null : org.mpxj.mpp.BackgroundPattern.values()[(int)value];
         }
 
-        public static BackgroundPattern? ConvertType(this net.sf.mpxj.mpp.BackgroundPattern value)
+        public static BackgroundPattern? ConvertType(this org.mpxj.mpp.BackgroundPattern value)
         {
             return value == null ? (BackgroundPattern?)null : (BackgroundPattern)value.ordinal();
         }
 
         // CalendarType
-        public static net.sf.mpxj.CalendarType ConvertType(this CalendarType value)
+        public static org.mpxj.CalendarType ConvertType(this CalendarType value)
         {
-            return net.sf.mpxj.CalendarType.values()[(int)value];
+            return org.mpxj.CalendarType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.CalendarType ConvertType(this CalendarType? value)
+        public static org.mpxj.CalendarType ConvertType(this CalendarType? value)
         {
-            return value == null ? null : net.sf.mpxj.CalendarType.values()[(int)value];
+            return value == null ? null : org.mpxj.CalendarType.values()[(int)value];
         }
 
-        public static CalendarType? ConvertType(this net.sf.mpxj.CalendarType value)
+        public static CalendarType? ConvertType(this org.mpxj.CalendarType value)
         {
             return value == null ? (CalendarType?)null : (CalendarType)value.ordinal();
         }
 
         // DateOrder
-        public static net.sf.mpxj.DateOrder ConvertType(this DateOrder value)
+        public static org.mpxj.DateOrder ConvertType(this DateOrder value)
         {
-            return net.sf.mpxj.DateOrder.values()[(int)value];
+            return org.mpxj.DateOrder.values()[(int)value];
         }
 
-        public static net.sf.mpxj.DateOrder ConvertType(this DateOrder? value)
+        public static org.mpxj.DateOrder ConvertType(this DateOrder? value)
         {
-            return value == null ? null : net.sf.mpxj.DateOrder.values()[(int)value];
+            return value == null ? null : org.mpxj.DateOrder.values()[(int)value];
         }
 
-        public static DateOrder? ConvertType(this net.sf.mpxj.DateOrder value)
+        public static DateOrder? ConvertType(this org.mpxj.DateOrder value)
         {
             return value == null ? (DateOrder?)null : (DateOrder)value.ordinal();
         }
 
         // ProjectTimeFormat
-        public static net.sf.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat value)
+        public static org.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat value)
         {
-            return net.sf.mpxj.ProjectTimeFormat.values()[(int)value];
+            return org.mpxj.ProjectTimeFormat.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat? value)
+        public static org.mpxj.ProjectTimeFormat ConvertType(this ProjectTimeFormat? value)
         {
-            return value == null ? null : net.sf.mpxj.ProjectTimeFormat.values()[(int)value];
+            return value == null ? null : org.mpxj.ProjectTimeFormat.values()[(int)value];
         }
 
-        public static ProjectTimeFormat? ConvertType(this net.sf.mpxj.ProjectTimeFormat value)
+        public static ProjectTimeFormat? ConvertType(this org.mpxj.ProjectTimeFormat value)
         {
             return value == null ? (ProjectTimeFormat?)null : (ProjectTimeFormat)value.ordinal();
         }
 
         // ProjectDateFormat
-        public static net.sf.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat value)
+        public static org.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat value)
         {
-            return net.sf.mpxj.ProjectDateFormat.values()[(int)value];
+            return org.mpxj.ProjectDateFormat.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat? value)
+        public static org.mpxj.ProjectDateFormat ConvertType(this ProjectDateFormat? value)
         {
-            return value == null ? null : net.sf.mpxj.ProjectDateFormat.values()[(int)value];
+            return value == null ? null : org.mpxj.ProjectDateFormat.values()[(int)value];
         }
 
-        public static ProjectDateFormat? ConvertType(this net.sf.mpxj.ProjectDateFormat value)
+        public static ProjectDateFormat? ConvertType(this org.mpxj.ProjectDateFormat value)
         {
             return value == null ? (ProjectDateFormat?)null : (ProjectDateFormat)value.ordinal();
         }
 
         // ScheduleFrom
-        public static net.sf.mpxj.ScheduleFrom ConvertType(this ScheduleFrom value)
+        public static org.mpxj.ScheduleFrom ConvertType(this ScheduleFrom value)
         {
-            return net.sf.mpxj.ScheduleFrom.values()[(int)value];
+            return org.mpxj.ScheduleFrom.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ScheduleFrom ConvertType(this ScheduleFrom? value)
+        public static org.mpxj.ScheduleFrom ConvertType(this ScheduleFrom? value)
         {
-            return value == null ? null : net.sf.mpxj.ScheduleFrom.values()[(int)value];
+            return value == null ? null : org.mpxj.ScheduleFrom.values()[(int)value];
         }
 
-        public static ScheduleFrom? ConvertType(this net.sf.mpxj.ScheduleFrom value)
+        public static ScheduleFrom? ConvertType(this org.mpxj.ScheduleFrom value)
         {
             return value == null ? (ScheduleFrom?)null : (ScheduleFrom)value.ordinal();
         }
 
 
         // CurrencySymbolPosition
-        public static net.sf.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition value)
+        public static org.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition value)
         {
-            return net.sf.mpxj.CurrencySymbolPosition.values()[(int)value];
+            return org.mpxj.CurrencySymbolPosition.values()[(int)value];
         }
 
-        public static net.sf.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition? value)
+        public static org.mpxj.CurrencySymbolPosition ConvertType(this CurrencySymbolPosition? value)
         {
-            return value == null ? null : net.sf.mpxj.CurrencySymbolPosition.values()[(int)value];
+            return value == null ? null : org.mpxj.CurrencySymbolPosition.values()[(int)value];
         }
 
-        public static CurrencySymbolPosition? ConvertType(this net.sf.mpxj.CurrencySymbolPosition value)
+        public static CurrencySymbolPosition? ConvertType(this org.mpxj.CurrencySymbolPosition value)
         {
             return value == null ? (CurrencySymbolPosition?)null : (CurrencySymbolPosition)value.ordinal();
         }
 
         // TaskType
-        public static net.sf.mpxj.TaskType ConvertType(this TaskType value)
+        public static org.mpxj.TaskType ConvertType(this TaskType value)
         {
-            return net.sf.mpxj.TaskType.values()[(int)value];
+            return org.mpxj.TaskType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.TaskType ConvertType(this TaskType? value)
+        public static org.mpxj.TaskType ConvertType(this TaskType? value)
         {
-            return value == null ? null : net.sf.mpxj.TaskType.values()[(int)value];
+            return value == null ? null : org.mpxj.TaskType.values()[(int)value];
         }
 
-        public static TaskType? ConvertType(this net.sf.mpxj.TaskType value)
+        public static TaskType? ConvertType(this org.mpxj.TaskType value)
         {
             return value == null ? (TaskType?)null : (TaskType)value.ordinal();
         }
 
         // FileVersion
-        public static net.sf.mpxj.FileVersion ConvertType(this FileVersion value)
+        public static org.mpxj.FileVersion ConvertType(this FileVersion value)
         {
-            return net.sf.mpxj.FileVersion.values()[(int)value];
+            return org.mpxj.FileVersion.values()[(int)value];
         }
 
-        public static net.sf.mpxj.FileVersion ConvertType(this FileVersion? value)
+        public static org.mpxj.FileVersion ConvertType(this FileVersion? value)
         {
-            return value == null ? null : net.sf.mpxj.FileVersion.values()[(int)value];
+            return value == null ? null : org.mpxj.FileVersion.values()[(int)value];
         }
 
-        public static FileVersion? ConvertType(this net.sf.mpxj.FileVersion value)
+        public static FileVersion? ConvertType(this org.mpxj.FileVersion value)
         {
             return value == null ? (FileVersion?)null : (FileVersion)value.ordinal();
         }
 
         // CodePage
-        public static net.sf.mpxj.CodePage ConvertType(this CodePage value)
+        public static org.mpxj.CodePage ConvertType(this CodePage value)
         {
-            return net.sf.mpxj.CodePage.values()[(int)value];
+            return org.mpxj.CodePage.values()[(int)value];
         }
 
-        public static net.sf.mpxj.CodePage ConvertType(this CodePage? value)
+        public static org.mpxj.CodePage ConvertType(this CodePage? value)
         {
-            return value == null ? null : net.sf.mpxj.CodePage.values()[(int)value];
+            return value == null ? null : org.mpxj.CodePage.values()[(int)value];
         }
 
-        public static CodePage? ConvertType(this net.sf.mpxj.CodePage value)
+        public static CodePage? ConvertType(this org.mpxj.CodePage value)
         {
             return value == null ? (CodePage?)null : (CodePage)value.ordinal();
         }
 
         // CriticalActivityType
-        public static net.sf.mpxj.CriticalActivityType ConvertType(this CriticalActivityType value)
+        public static org.mpxj.CriticalActivityType ConvertType(this CriticalActivityType value)
         {
-            return net.sf.mpxj.CriticalActivityType.values()[(int)value];
+            return org.mpxj.CriticalActivityType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.CriticalActivityType ConvertType(this CriticalActivityType? value)
+        public static org.mpxj.CriticalActivityType ConvertType(this CriticalActivityType? value)
         {
-            return value == null ? null : net.sf.mpxj.CriticalActivityType.values()[(int)value];
+            return value == null ? null : org.mpxj.CriticalActivityType.values()[(int)value];
         }
 
-        public static CriticalActivityType? ConvertType(this net.sf.mpxj.CriticalActivityType value)
+        public static CriticalActivityType? ConvertType(this org.mpxj.CriticalActivityType value)
         {
             return value == null ? (CriticalActivityType?)null : (CriticalActivityType)value.ordinal();
         }
 
         // RecurrenceType
-        public static net.sf.mpxj.RecurrenceType ConvertType(this RecurrenceType value)
+        public static org.mpxj.RecurrenceType ConvertType(this RecurrenceType value)
         {
-            return net.sf.mpxj.RecurrenceType.values()[(int)value];
+            return org.mpxj.RecurrenceType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.RecurrenceType ConvertType(this RecurrenceType? value)
+        public static org.mpxj.RecurrenceType ConvertType(this RecurrenceType? value)
         {
-            return value == null ? null : net.sf.mpxj.RecurrenceType.values()[(int)value];
+            return value == null ? null : org.mpxj.RecurrenceType.values()[(int)value];
         }
 
-        public static RecurrenceType? ConvertType(this net.sf.mpxj.RecurrenceType value)
+        public static RecurrenceType? ConvertType(this org.mpxj.RecurrenceType value)
         {
             return value == null ? (RecurrenceType?)null : (RecurrenceType)value.ordinal();
         }
 
         // RelationType
-        public static net.sf.mpxj.RelationType ConvertType(this RelationType value)
+        public static org.mpxj.RelationType ConvertType(this RelationType value)
         {
-            return net.sf.mpxj.RelationType.values()[(int)value];
+            return org.mpxj.RelationType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.RelationType ConvertType(this RelationType? value)
+        public static org.mpxj.RelationType ConvertType(this RelationType? value)
         {
-            return value == null ? null : net.sf.mpxj.RelationType.values()[(int)value];
+            return value == null ? null : org.mpxj.RelationType.values()[(int)value];
         }
 
-        public static RelationType? ConvertType(this net.sf.mpxj.RelationType value)
+        public static RelationType? ConvertType(this org.mpxj.RelationType value)
         {
             return value == null ? (RelationType?)null : (RelationType)value.ordinal();
         }
 
         // ResourceType
-        public static net.sf.mpxj.ResourceType ConvertType(this ResourceType value)
+        public static org.mpxj.ResourceType ConvertType(this ResourceType value)
         {
-            return net.sf.mpxj.ResourceType.values()[(int)value];
+            return org.mpxj.ResourceType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ResourceType ConvertType(this ResourceType? value)
+        public static org.mpxj.ResourceType ConvertType(this ResourceType? value)
         {
-            return value == null ? null : net.sf.mpxj.ResourceType.values()[(int)value];
+            return value == null ? null : org.mpxj.ResourceType.values()[(int)value];
         }
 
-        public static ResourceType? ConvertType(this net.sf.mpxj.ResourceType value)
+        public static ResourceType? ConvertType(this org.mpxj.ResourceType value)
         {
             return value == null ? (ResourceType?)null : (ResourceType)value.ordinal();
         }
 
         // WorkGroup
-        public static net.sf.mpxj.WorkGroup ConvertType(this WorkGroup value)
+        public static org.mpxj.WorkGroup ConvertType(this WorkGroup value)
         {
-            return net.sf.mpxj.WorkGroup.values()[(int)value];
+            return org.mpxj.WorkGroup.values()[(int)value];
         }
 
-        public static net.sf.mpxj.WorkGroup ConvertType(this WorkGroup? value)
+        public static org.mpxj.WorkGroup ConvertType(this WorkGroup? value)
         {
-            return value == null ? null : net.sf.mpxj.WorkGroup.values()[(int)value];
+            return value == null ? null : org.mpxj.WorkGroup.values()[(int)value];
         }
 
-        public static WorkGroup? ConvertType(this net.sf.mpxj.WorkGroup value)
+        public static WorkGroup? ConvertType(this org.mpxj.WorkGroup value)
         {
             return value == null ? (WorkGroup?)null : (WorkGroup)value.ordinal();
         }
 
         // BookingType
-        public static net.sf.mpxj.BookingType ConvertType(this BookingType value)
+        public static org.mpxj.BookingType ConvertType(this BookingType value)
         {
-            return net.sf.mpxj.BookingType.values()[(int)value];
+            return org.mpxj.BookingType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.BookingType ConvertType(this BookingType? value)
+        public static org.mpxj.BookingType ConvertType(this BookingType? value)
         {
-            return value == null ? null : net.sf.mpxj.BookingType.values()[(int)value];
+            return value == null ? null : org.mpxj.BookingType.values()[(int)value];
         }
 
-        public static BookingType? ConvertType(this net.sf.mpxj.BookingType value)
+        public static BookingType? ConvertType(this org.mpxj.BookingType value)
         {
             return value == null ? (BookingType?)null : (BookingType)value.ordinal();
         }
 
         // RateSource
-        public static net.sf.mpxj.RateSource ConvertType(this RateSource value)
+        public static org.mpxj.RateSource ConvertType(this RateSource value)
         {
-            return net.sf.mpxj.RateSource.values()[(int)value];
+            return org.mpxj.RateSource.values()[(int)value];
         }
 
-        public static net.sf.mpxj.RateSource ConvertType(this RateSource? value)
+        public static org.mpxj.RateSource ConvertType(this RateSource? value)
         {
-            return value == null ? null : net.sf.mpxj.RateSource.values()[(int)value];
+            return value == null ? null : org.mpxj.RateSource.values()[(int)value];
         }
 
-        public static RateSource? ConvertType(this net.sf.mpxj.RateSource value)
+        public static RateSource? ConvertType(this org.mpxj.RateSource value)
         {
             return value == null ? (RateSource?)null : (RateSource)value.ordinal();
         }
 
         // ResourceRequestType
-        public static net.sf.mpxj.ResourceRequestType ConvertType(this ResourceRequestType value)
+        public static org.mpxj.ResourceRequestType ConvertType(this ResourceRequestType value)
         {
-            return net.sf.mpxj.ResourceRequestType.values()[(int)value];
+            return org.mpxj.ResourceRequestType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ResourceRequestType ConvertType(this ResourceRequestType? value)
+        public static org.mpxj.ResourceRequestType ConvertType(this ResourceRequestType? value)
         {
-            return value == null ? null : net.sf.mpxj.ResourceRequestType.values()[(int)value];
+            return value == null ? null : org.mpxj.ResourceRequestType.values()[(int)value];
         }
 
-        public static ResourceRequestType? ConvertType(this net.sf.mpxj.ResourceRequestType value)
+        public static ResourceRequestType? ConvertType(this org.mpxj.ResourceRequestType value)
         {
             return value == null ? (ResourceRequestType?)null : (ResourceRequestType)value.ordinal();
         }
 
         // ConstraintType
-        public static net.sf.mpxj.ConstraintType ConvertType(this ConstraintType value)
+        public static org.mpxj.ConstraintType ConvertType(this ConstraintType value)
         {
-            return net.sf.mpxj.ConstraintType.values()[(int)value];
+            return org.mpxj.ConstraintType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ConstraintType ConvertType(this ConstraintType? value)
+        public static org.mpxj.ConstraintType ConvertType(this ConstraintType? value)
         {
-            return value == null ? null : net.sf.mpxj.ConstraintType.values()[(int)value];
+            return value == null ? null : org.mpxj.ConstraintType.values()[(int)value];
         }
 
-        public static ConstraintType? ConvertType(this net.sf.mpxj.ConstraintType value)
+        public static ConstraintType? ConvertType(this org.mpxj.ConstraintType value)
         {
             return value == null ? (ConstraintType?)null : (ConstraintType)value.ordinal();
         }
 
         // TaskMode
-        public static net.sf.mpxj.TaskMode ConvertType(this TaskMode value)
+        public static org.mpxj.TaskMode ConvertType(this TaskMode value)
         {
-            return net.sf.mpxj.TaskMode.values()[(int)value];
+            return org.mpxj.TaskMode.values()[(int)value];
         }
 
-        public static net.sf.mpxj.TaskMode ConvertType(this TaskMode? value)
+        public static org.mpxj.TaskMode ConvertType(this TaskMode? value)
         {
-            return value == null ? null : net.sf.mpxj.TaskMode.values()[(int)value];
+            return value == null ? null : org.mpxj.TaskMode.values()[(int)value];
         }
 
-        public static TaskMode? ConvertType(this net.sf.mpxj.TaskMode value)
+        public static TaskMode? ConvertType(this org.mpxj.TaskMode value)
         {
             return value == null ? (TaskMode?)null : (TaskMode)value.ordinal();
         }
 
         // PercentCompleteType
-        public static net.sf.mpxj.PercentCompleteType ConvertType(this PercentCompleteType value)
+        public static org.mpxj.PercentCompleteType ConvertType(this PercentCompleteType value)
         {
-            return net.sf.mpxj.PercentCompleteType.values()[(int)value];
+            return org.mpxj.PercentCompleteType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.PercentCompleteType ConvertType(this PercentCompleteType? value)
+        public static org.mpxj.PercentCompleteType ConvertType(this PercentCompleteType? value)
         {
-            return value == null ? null : net.sf.mpxj.PercentCompleteType.values()[(int)value];
+            return value == null ? null : org.mpxj.PercentCompleteType.values()[(int)value];
         }
 
-        public static PercentCompleteType? ConvertType(this net.sf.mpxj.PercentCompleteType value)
+        public static PercentCompleteType? ConvertType(this org.mpxj.PercentCompleteType value)
         {
             return value == null ? (PercentCompleteType?)null : (PercentCompleteType)value.ordinal();
         }
 
         // ActivityType
-        public static net.sf.mpxj.ActivityType ConvertType(this ActivityType value)
+        public static org.mpxj.ActivityType ConvertType(this ActivityType value)
         {
-            return net.sf.mpxj.ActivityType.values()[(int)value];
+            return org.mpxj.ActivityType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ActivityType ConvertType(this ActivityType? value)
+        public static org.mpxj.ActivityType ConvertType(this ActivityType? value)
         {
-            return value == null ? null : net.sf.mpxj.ActivityType.values()[(int)value];
+            return value == null ? null : org.mpxj.ActivityType.values()[(int)value];
         }
 
-        public static ActivityType? ConvertType(this net.sf.mpxj.ActivityType value)
+        public static ActivityType? ConvertType(this org.mpxj.ActivityType value)
         {
             return value == null ? (ActivityType?)null : (ActivityType)value.ordinal();
         }
 
         // ViewType
-        public static net.sf.mpxj.ViewType ConvertType(this ViewType value)
+        public static org.mpxj.ViewType ConvertType(this ViewType value)
         {
-            return net.sf.mpxj.ViewType.values()[(int)value];
+            return org.mpxj.ViewType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.ViewType ConvertType(this ViewType? value)
+        public static org.mpxj.ViewType ConvertType(this ViewType? value)
         {
-            return value == null ? null : net.sf.mpxj.ViewType.values()[(int)value];
+            return value == null ? null : org.mpxj.ViewType.values()[(int)value];
         }
 
-        public static ViewType? ConvertType(this net.sf.mpxj.ViewType value)
+        public static ViewType? ConvertType(this org.mpxj.ViewType value)
         {
             return value == null ? (ViewType?)null : (ViewType)value.ordinal();
         }
 
         // SaveVersion
-        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion value)
+        public static org.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion value)
         {
-            return net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+            return org.mpxj.mspdi.SaveVersion.values()[(int)value];
         }
 
-        public static net.sf.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion? value)
+        public static org.mpxj.mspdi.SaveVersion ConvertType(this SaveVersion? value)
         {
-            return value == null ? null : net.sf.mpxj.mspdi.SaveVersion.values()[(int)value];
+            return value == null ? null : org.mpxj.mspdi.SaveVersion.values()[(int)value];
         }
 
-        public static SaveVersion? ConvertType(this net.sf.mpxj.mspdi.SaveVersion value)
+        public static SaveVersion? ConvertType(this org.mpxj.mspdi.SaveVersion value)
         {
             return value == null ? (SaveVersion?)null : (SaveVersion)value.ordinal();
         }
 
         // FileFormat
-        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat value)
+        public static org.mpxj.writer.FileFormat ConvertType(this FileFormat value)
         {
-            return net.sf.mpxj.writer.FileFormat.values()[(int)value];
+            return org.mpxj.writer.FileFormat.values()[(int)value];
         }
 
-        public static net.sf.mpxj.writer.FileFormat ConvertType(this FileFormat? value)
+        public static org.mpxj.writer.FileFormat ConvertType(this FileFormat? value)
         {
-            return value == null ? null : net.sf.mpxj.writer.FileFormat.values()[(int)value];
+            return value == null ? null : org.mpxj.writer.FileFormat.values()[(int)value];
         }
 
-        public static FileFormat? ConvertType(this net.sf.mpxj.writer.FileFormat value)
+        public static FileFormat? ConvertType(this org.mpxj.writer.FileFormat value)
         {
             return value == null ? (FileFormat?)null : (FileFormat)value.ordinal();
         }
 
         // TotalSlackCalculationType
-        public static net.sf.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType value)
+        public static org.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType value)
         {
-            return net.sf.mpxj.TotalSlackCalculationType.values()[(int)value];
+            return org.mpxj.TotalSlackCalculationType.values()[(int)value];
         }
 
-        public static net.sf.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType? value)
+        public static org.mpxj.TotalSlackCalculationType ConvertType(this TotalSlackCalculationType? value)
         {
-            return value == null ? null : net.sf.mpxj.TotalSlackCalculationType.values()[(int)value];
+            return value == null ? null : org.mpxj.TotalSlackCalculationType.values()[(int)value];
         }
 
-        public static TotalSlackCalculationType? ConvertType(this net.sf.mpxj.TotalSlackCalculationType value)
+        public static TotalSlackCalculationType? ConvertType(this org.mpxj.TotalSlackCalculationType value)
         {
             return value == null ? (TotalSlackCalculationType?)null : (TotalSlackCalculationType)value.ordinal();
         }
 
         // RelationshipLagCalendar
-        public static net.sf.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar value)
+        public static org.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar value)
         {
-            return net.sf.mpxj.RelationshipLagCalendar.values()[(int)value];
+            return org.mpxj.RelationshipLagCalendar.values()[(int)value];
         }
 
-        public static net.sf.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar? value)
+        public static org.mpxj.RelationshipLagCalendar ConvertType(this RelationshipLagCalendar? value)
         {
-            return value == null ? null : net.sf.mpxj.RelationshipLagCalendar.values()[(int)value];
+            return value == null ? null : org.mpxj.RelationshipLagCalendar.values()[(int)value];
         }
 
-        public static RelationshipLagCalendar? ConvertType(this net.sf.mpxj.RelationshipLagCalendar value)
+        public static RelationshipLagCalendar? ConvertType(this org.mpxj.RelationshipLagCalendar value)
         {
             return value == null ? (RelationshipLagCalendar?)null : (RelationshipLagCalendar)value.ordinal();
         }
 
         // SchedulingProgressedActivities
-        public static net.sf.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities value)
+        public static org.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities value)
         {
-            return net.sf.mpxj.SchedulingProgressedActivities.values()[(int)value];
+            return org.mpxj.SchedulingProgressedActivities.values()[(int)value];
         }
 
-        public static net.sf.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities? value)
+        public static org.mpxj.SchedulingProgressedActivities ConvertType(this SchedulingProgressedActivities? value)
         {
-            return value == null ? null : net.sf.mpxj.SchedulingProgressedActivities.values()[(int)value];
+            return value == null ? null : org.mpxj.SchedulingProgressedActivities.values()[(int)value];
         }
 
-        public static SchedulingProgressedActivities? ConvertType(this net.sf.mpxj.SchedulingProgressedActivities value)
+        public static SchedulingProgressedActivities? ConvertType(this org.mpxj.SchedulingProgressedActivities value)
         {
             return value == null ? (SchedulingProgressedActivities?)null : (SchedulingProgressedActivities)value.ordinal();
         }
 
         // SkillLevel
-        public static net.sf.mpxj.SkillLevel ConvertType(this SkillLevel value)
+        public static org.mpxj.SkillLevel ConvertType(this SkillLevel value)
         {
-            return net.sf.mpxj.SkillLevel.values()[(int)value];
+            return org.mpxj.SkillLevel.values()[(int)value];
         }
 
-        public static net.sf.mpxj.SkillLevel ConvertType(this SkillLevel? value)
+        public static org.mpxj.SkillLevel ConvertType(this SkillLevel? value)
         {
-            return value == null ? null : net.sf.mpxj.SkillLevel.values()[(int)value];
+            return value == null ? null : org.mpxj.SkillLevel.values()[(int)value];
         }
 
-        public static SkillLevel? ConvertType(this net.sf.mpxj.SkillLevel value)
+        public static SkillLevel? ConvertType(this org.mpxj.SkillLevel value)
         {
             return value == null ? (SkillLevel?)null : (SkillLevel)value.ordinal();
         }

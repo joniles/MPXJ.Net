@@ -3,12 +3,12 @@ using System;
 
 namespace MPXJ.Net
 {
-	public class Availability: IJavaObjectProxy<net.sf.mpxj.Availability>
+	public class Availability: IJavaObjectProxy<org.mpxj.Availability>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Availability JavaObject { get; }
+        public org.mpxj.Availability JavaObject { get; }
 
-        internal Availability(ProxyManager proxyManager, net.sf.mpxj.Availability javaObject)
+        internal Availability(ProxyManager proxyManager, org.mpxj.Availability javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -16,7 +16,7 @@ namespace MPXJ.Net
 
         public Availability(DateTime? start, DateTime? end, double? units)
         {
-            JavaObject = new net.sf.mpxj.Availability(start.ConvertType(), end.ConvertType(), units.ConvertType());
+            JavaObject = new org.mpxj.Availability(start.ConvertType(), end.ConvertType(), units.ConvertType());
         }
 
         public DateTimeRange Range => _proxyManager.ProxyObject(JavaObject.getRange());

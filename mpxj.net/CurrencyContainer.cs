@@ -2,10 +2,10 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CurrencyContainer : ProjectEntityContainer<net.sf.mpxj.Currency, Currency>
+    public class CurrencyContainer : ProjectEntityContainer<org.mpxj.Currency, Currency>
     {
-        public new net.sf.mpxj.CurrencyContainer JavaObject => (net.sf.mpxj.CurrencyContainer)base.JavaObject;
+        public new org.mpxj.CurrencyContainer JavaObject => (org.mpxj.CurrencyContainer)base.JavaObject;
 
-        internal CurrencyContainer(ProxyManager proxyManager, net.sf.mpxj.CurrencyContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal CurrencyContainer(ProxyManager proxyManager, org.mpxj.CurrencyContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

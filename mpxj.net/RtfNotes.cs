@@ -2,13 +2,13 @@
 
 namespace MPXJ.Net
 {
-    public class RtfNotes : Notes, IJavaObjectProxy<net.sf.mpxj.RtfNotes>
+    public class RtfNotes : Notes, IJavaObjectProxy<org.mpxj.RtfNotes>
     {
-        public new net.sf.mpxj.RtfNotes JavaObject => (net.sf.mpxj.RtfNotes)base.JavaObject;
+        public new org.mpxj.RtfNotes JavaObject => (org.mpxj.RtfNotes)base.JavaObject;
 
-        internal RtfNotes(net.sf.mpxj.RtfNotes value) : base(value) { }
+        internal RtfNotes(org.mpxj.RtfNotes value) : base(value) { }
 
-        public RtfNotes(string rtf) : base(new net.sf.mpxj.RtfNotes(rtf)) { }
+        public RtfNotes(string rtf) : base(new org.mpxj.RtfNotes(rtf)) { }
 
         public string Rtf => JavaObject.getRtf();
     }

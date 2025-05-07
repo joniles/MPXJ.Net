@@ -7,9 +7,9 @@ namespace MPXJ.Net
 {
     public abstract class AbstractProjectReader : IProjectReader
     {
-        protected net.sf.mpxj.reader.AbstractProjectReader JavaObject { get; }
+        protected org.mpxj.reader.AbstractProjectReader JavaObject { get; }
 
-        protected AbstractProjectReader(net.sf.mpxj.reader.AbstractProjectReader javaObject)
+        protected AbstractProjectReader(org.mpxj.reader.AbstractProjectReader javaObject)
         {
             JavaObject = javaObject;
         }
@@ -22,7 +22,7 @@ namespace MPXJ.Net
 
         public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(stream.ConvertType()));
 
-        protected ProjectFile Read(net.sf.mpxj.ProjectFile file)
+        protected ProjectFile Read(org.mpxj.ProjectFile file)
         {
             return file == null ? null : new ProjectFile(file);
         }
@@ -31,7 +31,7 @@ namespace MPXJ.Net
         {
             // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
             var proxyManager = new ProxyManager();
-            return projects.toArray().Select(file => new ProjectFile(proxyManager, (net.sf.mpxj.ProjectFile)file)).ToList();
+            return projects.toArray().Select(file => new ProjectFile(proxyManager, (org.mpxj.ProjectFile)file)).ToList();
         }
 
     }

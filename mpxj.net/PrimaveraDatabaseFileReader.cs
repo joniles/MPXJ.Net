@@ -6,11 +6,11 @@ namespace MPXJ.Net
 {
     public class PrimaveraDatabaseFileReader : AbstractProjectReader
     {
-        internal PrimaveraDatabaseFileReader(net.sf.mpxj.primavera.PrimaveraDatabaseFileReader reader) : base(reader) { }
+        internal PrimaveraDatabaseFileReader(org.mpxj.primavera.PrimaveraDatabaseFileReader reader) : base(reader) { }
 
-        public PrimaveraDatabaseFileReader() : base(new net.sf.mpxj.primavera.PrimaveraDatabaseFileReader()) { }
+        public PrimaveraDatabaseFileReader() : base(new org.mpxj.primavera.PrimaveraDatabaseFileReader()) { }
 
-        public new net.sf.mpxj.primavera.PrimaveraDatabaseFileReader JavaObject => (net.sf.mpxj.primavera.PrimaveraDatabaseFileReader)base.JavaObject;
+        public new org.mpxj.primavera.PrimaveraDatabaseFileReader JavaObject => (org.mpxj.primavera.PrimaveraDatabaseFileReader)base.JavaObject;
 
         public int ProjectID
         {

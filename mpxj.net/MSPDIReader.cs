@@ -4,11 +4,11 @@ namespace MPXJ.Net
 {
     public class MSPDIReader : AbstractProjectReader
     {
-        internal MSPDIReader(net.sf.mpxj.mspdi.MSPDIReader reader) : base(reader) { }
+        internal MSPDIReader(org.mpxj.mspdi.MSPDIReader reader) : base(reader) { }
 
-        public MSPDIReader() : base(new net.sf.mpxj.mspdi.MSPDIReader()) { }
+        public MSPDIReader() : base(new org.mpxj.mspdi.MSPDIReader()) { }
 
-        public new net.sf.mpxj.mspdi.MSPDIReader JavaObject => (net.sf.mpxj.mspdi.MSPDIReader)base.JavaObject;
+        public new org.mpxj.mspdi.MSPDIReader JavaObject => (org.mpxj.mspdi.MSPDIReader)base.JavaObject;
 
         public Encoding Encoding
         {

@@ -2,11 +2,11 @@
 {
     public class SageReader : AbstractProjectReader
     {
-        internal SageReader(net.sf.mpxj.sage.SageReader reader) : base(reader) { }
+        internal SageReader(org.mpxj.sage.SageReader reader) : base(reader) { }
 
-        public SageReader() : base(new net.sf.mpxj.sage.SageReader()) { }
+        public SageReader() : base(new org.mpxj.sage.SageReader()) { }
 
-        public new net.sf.mpxj.sage.SageReader JavaObject => (net.sf.mpxj.sage.SageReader)base.JavaObject;
+        public new org.mpxj.sage.SageReader JavaObject => (org.mpxj.sage.SageReader)base.JavaObject;
 
         public bool IgnoreErrors
         {

@@ -2,12 +2,12 @@
 
 namespace MPXJ.Net
 {
-    public class Column : IJavaObjectProxy<net.sf.mpxj.Column>
+    public class Column : IJavaObjectProxy<org.mpxj.Column>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Column JavaObject { get; }
+        public org.mpxj.Column JavaObject { get; }
 
-        internal Column(ProxyManager proxyManager, net.sf.mpxj.Column javaObject)
+        internal Column(ProxyManager proxyManager, org.mpxj.Column javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;

@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class RoleCodeValue : ICodeValue, IJavaObjectProxy<net.sf.mpxj.RoleCodeValue>
+    public class RoleCodeValue : ICodeValue, IJavaObjectProxy<org.mpxj.RoleCodeValue>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.RoleCodeValue JavaObject { get; }
+        public org.mpxj.RoleCodeValue JavaObject { get; }
 
-        internal RoleCodeValue(ProxyManager proxyManager, net.sf.mpxj.RoleCodeValue javaObject)
+        internal RoleCodeValue(ProxyManager proxyManager, org.mpxj.RoleCodeValue javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -30,19 +30,19 @@ namespace MPXJ.Net
         
         public int? ParentValueUniqueId => JavaObject.getParentValueUniqueID().ConvertType();
         
-        public IList<RoleCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<RoleCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.RoleCodeValue, RoleCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.RoleCodeValue.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.RoleCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.RoleCodeValue.Builder JavaObject { get; }
+            public org.mpxj.RoleCodeValue.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.RoleCodeValue.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.RoleCodeValue.Builder(file.JavaObject);
             }
 
             public Builder RoleCode(RoleCode value)

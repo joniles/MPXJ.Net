@@ -2,11 +2,11 @@
 {
     public class MPPReader : AbstractProjectReader
     {
-        internal MPPReader(net.sf.mpxj.mpp.MPPReader reader) : base(reader) { }
+        internal MPPReader(org.mpxj.mpp.MPPReader reader) : base(reader) { }
 
-        public MPPReader() : base(new net.sf.mpxj.mpp.MPPReader()) { }
+        public MPPReader() : base(new org.mpxj.mpp.MPPReader()) { }
 
-        public new net.sf.mpxj.mpp.MPPReader JavaObject => (net.sf.mpxj.mpp.MPPReader)base.JavaObject;
+        public new org.mpxj.mpp.MPPReader JavaObject => (org.mpxj.mpp.MPPReader)base.JavaObject;
 
         public string ReadPassword
         {

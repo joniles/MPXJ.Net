@@ -2,20 +2,20 @@
 
 namespace MPXJ.Net
 {
-    public class Rate : IJavaObjectProxy<net.sf.mpxj.Rate>
+    public class Rate : IJavaObjectProxy<org.mpxj.Rate>
     {
-        public static readonly Rate Zero = new Rate(net.sf.mpxj.Rate.ZERO);
+        public static readonly Rate Zero = new Rate(org.mpxj.Rate.ZERO);
 
-        public net.sf.mpxj.Rate JavaObject { get; }
+        public org.mpxj.Rate JavaObject { get; }
 
-        internal Rate(net.sf.mpxj.Rate javaObject)
+        internal Rate(org.mpxj.Rate javaObject)
         {
             JavaObject = javaObject;
         }
 
         public Rate(double amount, TimeUnit time)
         {
-            JavaObject = new net.sf.mpxj.Rate(amount, time.ConvertType());
+            JavaObject = new org.mpxj.Rate(amount, time.ConvertType());
         }
 
         public double Amount => JavaObject.getAmount();

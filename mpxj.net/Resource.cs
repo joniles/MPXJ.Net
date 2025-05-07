@@ -5,21 +5,21 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class Resource : AbstractFieldContainer, IProjectEntityWithID, IChildResourceContainer, IJavaObjectProxy<net.sf.mpxj.Resource>
+    public class Resource : AbstractFieldContainer, IProjectEntityWithID, IChildResourceContainer, IJavaObjectProxy<org.mpxj.Resource>
     {
-        public new net.sf.mpxj.Resource JavaObject => (net.sf.mpxj.Resource)base.JavaObject;
+        public new org.mpxj.Resource JavaObject => (org.mpxj.Resource)base.JavaObject;
 
-        internal Resource(ProxyManager proxyManager, net.sf.mpxj.Resource javaObject) : base(proxyManager, javaObject) { }
+        internal Resource(ProxyManager proxyManager, org.mpxj.Resource javaObject) : base(proxyManager, javaObject) { }
 
         public Resource AddResource() => _proxyManager.ProxyObject(JavaObject.addResource());
 
         public void AddChildResource(Resource child) => JavaObject.addChildResource(child.JavaObject);
 
-        public IList<Resource> ChildResources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
+        public IList<Resource> ChildResources => _proxyManager.ProxyList<org.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
 
         public void AddResourceAssignment(ResourceAssignment assignment) => JavaObject.addResourceAssignment(assignment.JavaObject);
 
-        public IList<ResourceAssignment> TaskAssignments => _proxyManager.ProxyList<net.sf.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskAssignments());
+        public IList<ResourceAssignment> TaskAssignments => _proxyManager.ProxyList<org.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskAssignments());
 
         public string Name
         {
@@ -701,16 +701,16 @@ namespace MPXJ.Net
             set => JavaObject.setCurrency(value.JavaObject);
         }
 
-        public IDictionary<ResourceCode, ResourceCodeValue> ResourceCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ResourceCode, net.sf.mpxj.ResourceCodeValue, ResourceCode, ResourceCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceCodeValues());
+        public IDictionary<ResourceCode, ResourceCodeValue> ResourceCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ResourceCode, org.mpxj.ResourceCodeValue, ResourceCode, ResourceCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceCodeValues());
         
-        public IDictionary<RoleCode, RoleCodeValue> RoleCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.RoleCode, net.sf.mpxj.RoleCodeValue, RoleCode, RoleCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getRoleCodeValues());
+        public IDictionary<RoleCode, RoleCodeValue> RoleCodeValues => _proxyManager.ProxyDictionary<org.mpxj.RoleCode, org.mpxj.RoleCodeValue, RoleCode, RoleCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getRoleCodeValues());
         
         public Dictionary<Resource, SkillLevel> RoleAssignments
         {
             get
             {
                 var assignments = JavaObject.getRoleAssignments();
-                return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, assignments.entrySet()).ToDictionary(e => _proxyManager.ProxyObject((net.sf.mpxj.Resource)e.getKey()), e => (SkillLevel)((net.sf.mpxj.SkillLevel)e.getValue()).ConvertType());
+                return new ProxyEnumerable<java.util.Map.Entry, java.util.Map.Entry>(m => m, m => m, assignments.entrySet()).ToDictionary(e => _proxyManager.ProxyObject((org.mpxj.Resource)e.getKey()), e => (SkillLevel)((org.mpxj.SkillLevel)e.getValue()).ConvertType());
             }
         }
     }

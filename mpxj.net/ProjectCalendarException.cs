@@ -4,12 +4,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<net.sf.mpxj.ProjectCalendarException>
+    public class ProjectCalendarException : ProjectCalendarHours, IJavaObjectProxy<org.mpxj.ProjectCalendarException>
     {
         private readonly ProxyManager _proxyManager;
-        public new net.sf.mpxj.ProjectCalendarException JavaObject => (net.sf.mpxj.ProjectCalendarException)base.JavaObject;
+        public new org.mpxj.ProjectCalendarException JavaObject => (org.mpxj.ProjectCalendarException)base.JavaObject;
 
-        internal ProjectCalendarException(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject)
+        internal ProjectCalendarException(ProxyManager proxyManager, org.mpxj.ProjectCalendarException javaObject) : base(proxyManager, javaObject)
         {
             _proxyManager = proxyManager;
         }
@@ -28,7 +28,7 @@ namespace MPXJ.Net
 
         public bool Working => JavaObject.getWorking();
 
-        public IList<ProjectCalendarException> ExpandedExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedExceptions());
+        public IList<ProjectCalendarException> ExpandedExceptions => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedExceptions());
 
         public bool Contains(DateOnly date) => JavaObject.contains(date);
 

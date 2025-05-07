@@ -5,11 +5,11 @@ namespace MPXJ.Net
 {
     public class UniversalProjectWriter : IProjectWriter
     {
-        public net.sf.mpxj.writer.ProjectWriter JavaObject { get; }
+        public org.mpxj.writer.ProjectWriter JavaObject { get; }
 
         public UniversalProjectWriter(FileFormat format)
         {
-            JavaObject = new net.sf.mpxj.writer.UniversalProjectWriter(format.ConvertType());
+            JavaObject = new org.mpxj.writer.UniversalProjectWriter(format.ConvertType());
         }
 
         public void Write(ProjectFile projectFile, string fileName) => JavaObject.write(projectFile.JavaObject, fileName);

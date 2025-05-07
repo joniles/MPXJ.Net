@@ -4,11 +4,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ResourceAssignment : AbstractFieldContainer, IProjectEntityWithUniqueID, IJavaObjectProxy<net.sf.mpxj.ResourceAssignment>
+    public class ResourceAssignment : AbstractFieldContainer, IProjectEntityWithUniqueID, IJavaObjectProxy<org.mpxj.ResourceAssignment>
     {
-        public new net.sf.mpxj.ResourceAssignment JavaObject => (net.sf.mpxj.ResourceAssignment)base.JavaObject;
+        public new org.mpxj.ResourceAssignment JavaObject => (org.mpxj.ResourceAssignment)base.JavaObject;
 
-        internal ResourceAssignment(ProxyManager proxyManager, net.sf.mpxj.ResourceAssignment javaObject) : base(proxyManager, javaObject) { }
+        internal ResourceAssignment(ProxyManager proxyManager, org.mpxj.ResourceAssignment javaObject) : base(proxyManager, javaObject) { }
 
         public ResourceAssignmentWorkgroupFields AddWorkgroupAssignment() => _proxyManager.ProxyObject(JavaObject.addWorkgroupAssignment());
 
@@ -178,41 +178,41 @@ namespace MPXJ.Net
 
         public IList<TimephasedWork> TimephasedPlannedWork
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork());
+            get => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork());
             set => JavaObject.setTimephasedPlannedWork(value.ConvertType());
         }
 
         public IList<TimephasedWork> TimephasedActualWork
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualWork());
+            get => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualWork());
             set => JavaObject.setTimephasedActualWork(value.ConvertType());
         }
 
         public IList<TimephasedWork> TimephasedWork
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedWork());
+            get => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedWork());
             set => JavaObject.setTimephasedWork(value.ConvertType());
         }
         
-        public IList<TimephasedWork> TimephasedOvertimeWork => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedOvertimeWork());
+        public IList<TimephasedWork> TimephasedOvertimeWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedOvertimeWork());
 
         public IList<TimephasedWork> TimephasedActualOvertimeWork
         {
-            get => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualOvertimeWork());
+            get => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualOvertimeWork());
             set => JavaObject.setTimephasedActualOvertimeWork(value.ConvertType());
         }
         
-        public IList<TimephasedCost> TimephasedCost => _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedCost());
+        public IList<TimephasedCost> TimephasedCost => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedCost());
 
-        public IList<TimephasedCost> TimephasedActualCost => _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualCost());
+        public IList<TimephasedCost> TimephasedActualCost => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualCost());
 
         public bool HasTimephasedData => JavaObject.getHasTimephasedData();
 
-        public IList<TimephasedWork> GetTimephasedBaselineWork(int index) => _proxyManager.ProxyList<net.sf.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineWork(index));
+        public IList<TimephasedWork> GetTimephasedBaselineWork(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineWork(index));
 
         public void SetTimephasedBaselineWork(int index, List<TimephasedWork> data) => JavaObject.setTimephasedBaselineWork(index, data.ConvertType());
 
-        public IList<TimephasedCost> GetTimephasedBaselineCost(int index) => _proxyManager.ProxyList<net.sf.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineCost(index));
+        public IList<TimephasedCost> GetTimephasedBaselineCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineCost(index));
 
         public void SetTimephasedBaselineCost(int index, List<TimephasedCost> data) => JavaObject.setTimephasedBaselineCost(index, data.ConvertType());
         
@@ -612,7 +612,7 @@ namespace MPXJ.Net
             set => JavaObject.setRemainingLateFinish(value.ConvertType());
         }
 
-        public IDictionary<ResourceAssignmentCode, ResourceAssignmentCodeValue> ResourceAssignmentCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ResourceAssignmentCode, net.sf.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCode, ResourceAssignmentCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceAssignmentCodeValues());
+        public IDictionary<ResourceAssignmentCode, ResourceAssignmentCodeValue> ResourceAssignmentCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ResourceAssignmentCode, org.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCode, ResourceAssignmentCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceAssignmentCodeValues());
         
         public Rate GetEffectiveRate(DateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date.ConvertType()));
 

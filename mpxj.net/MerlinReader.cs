@@ -2,10 +2,10 @@
 {
     public class MerlinReader : AbstractProjectReader
     {
-        internal MerlinReader(net.sf.mpxj.merlin.MerlinReader reader) : base(reader) { }
+        internal MerlinReader(org.mpxj.merlin.MerlinReader reader) : base(reader) { }
 
-        public MerlinReader() : base(new net.sf.mpxj.merlin.MerlinReader()) { }
+        public MerlinReader() : base(new org.mpxj.merlin.MerlinReader()) { }
 
-        public new net.sf.mpxj.merlin.MerlinReader JavaObject => (net.sf.mpxj.merlin.MerlinReader)base.JavaObject;
+        public new org.mpxj.merlin.MerlinReader JavaObject => (org.mpxj.merlin.MerlinReader)base.JavaObject;
     }
 }

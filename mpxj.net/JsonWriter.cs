@@ -4,9 +4,9 @@ namespace MPXJ.Net
 {
     public class JsonWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.json.JsonWriter JavaObject => (net.sf.mpxj.json.JsonWriter)base.JavaObject;
+        public new org.mpxj.json.JsonWriter JavaObject => (org.mpxj.json.JsonWriter)base.JavaObject;
 
-        public JsonWriter() : base(new net.sf.mpxj.json.JsonWriter()) { }
+        public JsonWriter() : base(new org.mpxj.json.JsonWriter()) { }
 
         public Encoding Encoding
         {

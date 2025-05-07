@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class ExpenseCategory : IJavaObjectProxy<net.sf.mpxj.ExpenseCategory>
+    public class ExpenseCategory : IJavaObjectProxy<org.mpxj.ExpenseCategory>
     {
-        public net.sf.mpxj.ExpenseCategory JavaObject { get; }
+        public org.mpxj.ExpenseCategory JavaObject { get; }
 
-        internal ExpenseCategory(net.sf.mpxj.ExpenseCategory javaObject)
+        internal ExpenseCategory(org.mpxj.ExpenseCategory javaObject)
         {
             JavaObject = javaObject;
         }
@@ -19,15 +19,15 @@ namespace MPXJ.Net
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ExpenseCategory.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ExpenseCategory.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ExpenseCategory.Builder JavaObject { get; }
+            public org.mpxj.ExpenseCategory.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ExpenseCategory.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ExpenseCategory.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

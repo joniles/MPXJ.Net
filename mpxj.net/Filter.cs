@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class Filter : IJavaObjectProxy<net.sf.mpxj.Filter>
+    public class Filter : IJavaObjectProxy<org.mpxj.Filter>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Filter JavaObject { get; }
+        public org.mpxj.Filter JavaObject { get; }
 
-        internal Filter(ProxyManager proxyManager, net.sf.mpxj.Filter javaObject)
+        internal Filter(ProxyManager proxyManager, org.mpxj.Filter javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -29,7 +29,7 @@ namespace MPXJ.Net
         // TODO: handle map argument
         //bool Evaluate(FieldContainer container, Map<GenericCriteriaPrompt, Object> promptValues);(value);
 
-        public IList<GenericCriteriaPrompt> Prompts => _proxyManager.ProxyList<net.sf.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
+        public IList<GenericCriteriaPrompt> Prompts => _proxyManager.ProxyList<org.mpxj.GenericCriteriaPrompt, GenericCriteriaPrompt>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPrompts());
 
         public override string ToString() => JavaObject.toString();
     }

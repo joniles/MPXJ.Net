@@ -3,24 +3,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class UserDefinedField : IFieldType, IJavaObjectProxy<net.sf.mpxj.FieldType>
+    public class UserDefinedField : IFieldType, IJavaObjectProxy<org.mpxj.FieldType>
     {
-        public net.sf.mpxj.FieldType JavaObject { get; }
+        public org.mpxj.FieldType JavaObject { get; }
        
-        internal UserDefinedField(net.sf.mpxj.UserDefinedField javaObject)
+        internal UserDefinedField(org.mpxj.UserDefinedField javaObject)
         {
             JavaObject = javaObject;
         }
+        
+        public int? UniqueID => ((org.mpxj.UserDefinedField)JavaObject).getUniqueID().ConvertType();
 
-        [Obsolete("Please use UserDefinedField.Builder")]
-        public UserDefinedField(ProjectFile file, int? id, string internalName, string externalName, FieldTypeClass fieldTypeClass, bool summaryTaskOnly, DataType dataType)
-        {
-            JavaObject = new net.sf.mpxj.UserDefinedField(file.JavaObject, id.ConvertType(), internalName, externalName, fieldTypeClass.ConvertType(), summaryTaskOnly, dataType.ConvertType());
-        }
-
-        public int? UniqueID => ((net.sf.mpxj.UserDefinedField)JavaObject).getUniqueID().ConvertType();
-
-        public bool SummaryTaskOnly => ((net.sf.mpxj.UserDefinedField)JavaObject).getSummaryTaskOnly();
+        public bool SummaryTaskOnly => ((org.mpxj.UserDefinedField)JavaObject).getSummaryTaskOnly();
 
         public FieldTypeClass FieldTypeClass => JavaObject.getFieldTypeClass().ConvertType().Value;
 
@@ -30,17 +24,17 @@ namespace MPXJ.Net
 
         public DataType? DataType => JavaObject.getDataType().ConvertType();
 
-        public override string ToString() => ((net.sf.mpxj.UserDefinedField)JavaObject).toString();
+        public override string ToString() => ((org.mpxj.UserDefinedField)JavaObject).toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.UserDefinedField.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.UserDefinedField.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.UserDefinedField.Builder JavaObject { get; }
+            public org.mpxj.UserDefinedField.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.UserDefinedField.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.UserDefinedField.Builder(file.JavaObject);
             }
 
 

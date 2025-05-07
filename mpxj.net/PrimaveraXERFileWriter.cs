@@ -4,9 +4,9 @@ namespace MPXJ.Net
 {
     public class PrimaveraXERFileWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.primavera.PrimaveraXERFileWriter JavaObject => (net.sf.mpxj.primavera.PrimaveraXERFileWriter)base.JavaObject;
+        public new org.mpxj.primavera.PrimaveraXERFileWriter JavaObject => (org.mpxj.primavera.PrimaveraXERFileWriter)base.JavaObject;
 
-        public PrimaveraXERFileWriter() : base(new net.sf.mpxj.primavera.PrimaveraXERFileWriter()) { }
+        public PrimaveraXERFileWriter() : base(new org.mpxj.primavera.PrimaveraXERFileWriter()) { }
 
         public Encoding Encoding
         {

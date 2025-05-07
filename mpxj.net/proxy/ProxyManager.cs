@@ -29,214 +29,214 @@ namespace MPXJ.Net.Proxy
             _objectCache[GetKey(javaObject)] = netObject;
         }
 
-        internal UnitOfMeasure ProxyObject(net.sf.mpxj.UnitOfMeasure value)
+        internal UnitOfMeasure ProxyObject(org.mpxj.UnitOfMeasure value)
         {
             return ProxyObject(value, v => new UnitOfMeasure(v));
         }
 
-        internal Resource ProxyObject(net.sf.mpxj.Resource value)
+        internal Resource ProxyObject(org.mpxj.Resource value)
         {
             return ProxyObject(value, v => new Resource(this, v));
         }
 
-        internal ProjectCalendarWeek ProxyObject(net.sf.mpxj.ProjectCalendarWeek value)
+        internal ProjectCalendarWeek ProxyObject(org.mpxj.ProjectCalendarWeek value)
         {
             return ProxyObject(value, v => new ProjectCalendarWeek(this, v));
         }
 
-        internal ProjectCalendarException ProxyObject(net.sf.mpxj.ProjectCalendarException value)
+        internal ProjectCalendarException ProxyObject(org.mpxj.ProjectCalendarException value)
         {
             return ProxyObject(value, v => new ProjectCalendarException(this, v));
         }
 
-        internal ProjectCalendar ProxyObject(net.sf.mpxj.ProjectCalendar value)
+        internal ProjectCalendar ProxyObject(org.mpxj.ProjectCalendar value)
         {
             return ProxyObject(value, v => new ProjectCalendar(this, v));
         }
 
-        internal RecurringData ProxyObject(net.sf.mpxj.RecurringData value)
+        internal RecurringData ProxyObject(org.mpxj.RecurringData value)
         {
             return ProxyObject(value, v => new RecurringData(v));
         }
 
-        internal RecurringTask ProxyObject(net.sf.mpxj.RecurringTask value)
+        internal RecurringTask ProxyObject(org.mpxj.RecurringTask value)
         {
             return ProxyObject(value, v => new RecurringTask(this, v));
         }
 
-        internal ProjectCalendarHours ProxyObject(net.sf.mpxj.ProjectCalendarHours value)
+        internal ProjectCalendarHours ProxyObject(org.mpxj.ProjectCalendarHours value)
         {
             return ProxyObject(value, v => new ProjectCalendarHours(this, v));
         }
 
-        internal ProjectConfig ProxyObject(net.sf.mpxj.ProjectConfig value)
+        internal ProjectConfig ProxyObject(org.mpxj.ProjectConfig value)
         {
             return ProxyObject(value, v => new ProjectConfig(v));
         }
 
-        internal ProjectProperties ProxyObject(net.sf.mpxj.ProjectProperties value)
+        internal ProjectProperties ProxyObject(org.mpxj.ProjectProperties value)
         {
             return ProxyObject(value, v => new ProjectProperties(this, v));
         }
 
-        internal ResourceContainer ProxyObject(net.sf.mpxj.ResourceContainer value)
+        internal ResourceContainer ProxyObject(org.mpxj.ResourceContainer value)
         {
             return ProxyObject(value, v => new ResourceContainer(this, v));
         }
 
-        internal TaskContainer ProxyObject(net.sf.mpxj.TaskContainer value)
+        internal TaskContainer ProxyObject(org.mpxj.TaskContainer value)
         {
             return ProxyObject(value, v => new TaskContainer(this, v));
         }
 
-        internal RelationContainer ProxyObject(net.sf.mpxj.RelationContainer value)
+        internal RelationContainer ProxyObject(org.mpxj.RelationContainer value)
         {
             return ProxyObject(value, v => new RelationContainer(this, v));
         }
 
-        internal ResourceAssignmentContainer ProxyObject(net.sf.mpxj.ResourceAssignmentContainer value)
+        internal ResourceAssignmentContainer ProxyObject(org.mpxj.ResourceAssignmentContainer value)
         {
             return ProxyObject(value, v => new ResourceAssignmentContainer(this, v));
         }
 
-        internal ViewContainer ProxyObject(net.sf.mpxj.ViewContainer value)
+        internal ViewContainer ProxyObject(org.mpxj.ViewContainer value)
         {
             return ProxyObject(value, v => new ViewContainer(this, v));
         }
 
-        internal Task ProxyObject(net.sf.mpxj.Task value)
+        internal Task ProxyObject(org.mpxj.Task value)
         {
             return ProxyObject(value, v => new Task(this, v));
         }
 
-        internal ProjectFile ProxyObject(net.sf.mpxj.ProjectFile value)
+        internal ProjectFile ProxyObject(org.mpxj.ProjectFile value)
         {
             return ProxyObject(value, v => new ProjectFile(this, v));
         }
 
-        internal ResourceAssignment ProxyObject(net.sf.mpxj.ResourceAssignment value)
+        internal ResourceAssignment ProxyObject(org.mpxj.ResourceAssignment value)
         {
             return ProxyObject(value, v => new ResourceAssignment(this, v));
         }
 
-        internal ActivityCode ProxyObject(net.sf.mpxj.ActivityCode value)
+        internal ActivityCode ProxyObject(org.mpxj.ActivityCode value)
         {
             return ProxyObject(value, v => new ActivityCode(this, v));
         }
 
-        internal ActivityCodeValue ProxyObject(net.sf.mpxj.ActivityCodeValue value)
+        internal ActivityCodeValue ProxyObject(org.mpxj.ActivityCodeValue value)
         {
             return ProxyObject(value, v => new ActivityCodeValue(this, v));
         }
 
-        internal ProjectCode ProxyObject(net.sf.mpxj.ProjectCode value)
+        internal ProjectCode ProxyObject(org.mpxj.ProjectCode value)
         {
             return ProxyObject(value, v => new ProjectCode(this, v));
         }
 
-        internal ProjectCodeValue ProxyObject(net.sf.mpxj.ProjectCodeValue value)
+        internal ProjectCodeValue ProxyObject(org.mpxj.ProjectCodeValue value)
         {
             return ProxyObject(value, v => new ProjectCodeValue(this, v));
         }
 
-        internal ResourceCode ProxyObject(net.sf.mpxj.ResourceCode value)
+        internal ResourceCode ProxyObject(org.mpxj.ResourceCode value)
         {
             return ProxyObject(value, v => new ResourceCode(this, v));
         }
 
-        internal ResourceCodeValue ProxyObject(net.sf.mpxj.ResourceCodeValue value)
+        internal ResourceCodeValue ProxyObject(org.mpxj.ResourceCodeValue value)
         {
             return ProxyObject(value, v => new ResourceCodeValue(this, v));
         }
 
-        internal RoleCode ProxyObject(net.sf.mpxj.RoleCode value)
+        internal RoleCode ProxyObject(org.mpxj.RoleCode value)
         {
             return ProxyObject(value, v => new RoleCode(this, v));
         }
 
-        internal RoleCodeValue ProxyObject(net.sf.mpxj.RoleCodeValue value)
+        internal RoleCodeValue ProxyObject(org.mpxj.RoleCodeValue value)
         {
             return ProxyObject(value, v => new RoleCodeValue(this, v));
         }
 
-        internal ResourceAssignmentCode ProxyObject(net.sf.mpxj.ResourceAssignmentCode value)
+        internal ResourceAssignmentCode ProxyObject(org.mpxj.ResourceAssignmentCode value)
         {
             return ProxyObject(value, v => new ResourceAssignmentCode(this, v));
         }
 
-        internal ResourceAssignmentCodeValue ProxyObject(net.sf.mpxj.ResourceAssignmentCodeValue value)
+        internal ResourceAssignmentCodeValue ProxyObject(org.mpxj.ResourceAssignmentCodeValue value)
         {
             return ProxyObject(value, v => new ResourceAssignmentCodeValue(this, v));
         }
 
-        internal Relation ProxyObject(net.sf.mpxj.Relation value)
+        internal Relation ProxyObject(org.mpxj.Relation value)
         {
             return ProxyObject(value, v => new Relation(this, v));
         }
 
-        internal ExpenseItem ProxyObject(net.sf.mpxj.ExpenseItem value)
+        internal ExpenseItem ProxyObject(org.mpxj.ExpenseItem value)
         {
             return ProxyObject(value, v => new ExpenseItem(this, v));
         }
 
-        internal Step ProxyObject(net.sf.mpxj.Step value)
+        internal Step ProxyObject(org.mpxj.Step value)
         {
             return ProxyObject(value, v => new Step(this, v));
         }
 
-        internal Location ProxyObject(net.sf.mpxj.Location value)
+        internal Location ProxyObject(org.mpxj.Location value)
         {
             return ProxyObject(value, v => new Location(v));
         }
 
-        internal TimeOnlyRange ProxyObject(net.sf.mpxj.LocalTimeRange value)
+        internal TimeOnlyRange ProxyObject(org.mpxj.LocalTimeRange value)
         {
             return ProxyObject(value, v => new TimeOnlyRange(v));
         }
 
-        internal DateTimeRange ProxyObject(net.sf.mpxj.LocalDateTimeRange value)
+        internal DateTimeRange ProxyObject(org.mpxj.LocalDateTimeRange value)
         {
             return ProxyObject(value, v => new DateTimeRange(v));
         }
 
-        internal CostRateTableEntry ProxyObject(net.sf.mpxj.CostRateTableEntry value)
+        internal CostRateTableEntry ProxyObject(org.mpxj.CostRateTableEntry value)
         {
             return ProxyObject(value, v => new CostRateTableEntry(this, v));
         }
 
-        internal CostRateTable ProxyObject(net.sf.mpxj.CostRateTable value)
+        internal CostRateTable ProxyObject(org.mpxj.CostRateTable value)
         {
             return ProxyObject(value, v => new CostRateTable(this, v));
         }
 
-        internal Availability ProxyObject(net.sf.mpxj.Availability value)
+        internal Availability ProxyObject(org.mpxj.Availability value)
         {
             return ProxyObject(value, v => new Availability(this, v));
         }
 
-        internal AvailabilityTable ProxyObject(net.sf.mpxj.AvailabilityTable value)
+        internal AvailabilityTable ProxyObject(org.mpxj.AvailabilityTable value)
         {
             return ProxyObject(value, v => new AvailabilityTable(this, v));
         }
 
-        internal Notes ProxyObject(net.sf.mpxj.Notes value)
+        internal Notes ProxyObject(org.mpxj.Notes value)
         {
-            if (value is net.sf.mpxj.HtmlNotes h)
+            if (value is org.mpxj.HtmlNotes h)
             {
                 return ProxyObject(h);
             }
 
-            if (value is net.sf.mpxj.RtfNotes r)
+            if (value is org.mpxj.RtfNotes r)
             {
                 return ProxyObject(r);
             }
 
-            if (value is net.sf.mpxj.ParentNotes p)
+            if (value is org.mpxj.ParentNotes p)
             {
                 return ProxyObject(p);
             }
 
-            if (value is net.sf.mpxj.StructuredNotes s)
+            if (value is org.mpxj.StructuredNotes s)
             {
                 return ProxyObject(s);
             }
@@ -244,245 +244,245 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new Notes(v));
         }
 
-        internal HtmlNotes ProxyObject(net.sf.mpxj.HtmlNotes value)
+        internal HtmlNotes ProxyObject(org.mpxj.HtmlNotes value)
         {
             return ProxyObject(value, v => new HtmlNotes(v));
         }
 
-        internal RtfNotes ProxyObject(net.sf.mpxj.RtfNotes value)
+        internal RtfNotes ProxyObject(org.mpxj.RtfNotes value)
         {
             return ProxyObject(value, v => new RtfNotes(v));
         }
 
-        internal ParentNotes ProxyObject(net.sf.mpxj.ParentNotes value)
+        internal ParentNotes ProxyObject(org.mpxj.ParentNotes value)
         {
             return ProxyObject(value, v => new ParentNotes(this, v));
         }
 
-        internal StructuredNotes ProxyObject(net.sf.mpxj.StructuredNotes value)
+        internal StructuredNotes ProxyObject(org.mpxj.StructuredNotes value)
         {
             return ProxyObject(value, v => new StructuredNotes(this, v));
         }
 
-        internal ResourceAssignmentWorkgroupFields ProxyObject(net.sf.mpxj.ResourceAssignmentWorkgroupFields value)
+        internal ResourceAssignmentWorkgroupFields ProxyObject(org.mpxj.ResourceAssignmentWorkgroupFields value)
         {
             return ProxyObject(value, v => new ResourceAssignmentWorkgroupFields(v));
         }
 
-        internal WorkContour ProxyObject(net.sf.mpxj.WorkContour value)
+        internal WorkContour ProxyObject(org.mpxj.WorkContour value)
         {
             return ProxyObject(value, v => new WorkContour(v));
         }
 
-        internal CostAccount ProxyObject(net.sf.mpxj.CostAccount value)
+        internal CostAccount ProxyObject(org.mpxj.CostAccount value)
         {
             return ProxyObject(value, v => new CostAccount(this, v));
         }
 
-        internal Table ProxyObject(net.sf.mpxj.Table value)
+        internal Table ProxyObject(org.mpxj.Table value)
         {
             return ProxyObject(value, v => new Table(this, v));
         }
 
-        internal Filter ProxyObject(net.sf.mpxj.Filter value)
+        internal Filter ProxyObject(org.mpxj.Filter value)
         {
             return ProxyObject(value, v => new Filter(this, v));
         }
 
-        internal Group ProxyObject(net.sf.mpxj.Group value)
+        internal Group ProxyObject(org.mpxj.Group value)
         {
             return ProxyObject(value, v => new Group(this, v));
         }
 
-        internal GroupClause ProxyObject(net.sf.mpxj.GroupClause value)
+        internal GroupClause ProxyObject(org.mpxj.GroupClause value)
         {
             return ProxyObject(value, v => new GroupClause(this, v));
         }
 
-        internal DataLink ProxyObject(net.sf.mpxj.DataLink value)
+        internal DataLink ProxyObject(org.mpxj.DataLink value)
         {
             return ProxyObject(value, v => new DataLink(this, v));
         }
 
-        internal CustomField ProxyObject(net.sf.mpxj.CustomField value)
+        internal CustomField ProxyObject(org.mpxj.CustomField value)
         {
             return ProxyObject(value, v => new CustomField(this, v));
         }
 
-        internal ExpenseCategory ProxyObject(net.sf.mpxj.ExpenseCategory value)
+        internal ExpenseCategory ProxyObject(org.mpxj.ExpenseCategory value)
         {
             return ProxyObject(value, v => new ExpenseCategory(v));
         }
 
-        internal NotesTopic ProxyObject(net.sf.mpxj.NotesTopic value)
+        internal NotesTopic ProxyObject(org.mpxj.NotesTopic value)
         {
             return ProxyObject(value, v => new NotesTopic(v));
         }
 
-        internal ViewState ProxyObject(net.sf.mpxj.ViewState value)
+        internal ViewState ProxyObject(org.mpxj.ViewState value)
         {
             return ProxyObject(value, v => new ViewState(this, v));
         }
 
-        internal CustomFieldValueItem ProxyObject(net.sf.mpxj.mpp.CustomFieldValueItem value)
+        internal CustomFieldValueItem ProxyObject(org.mpxj.mpp.CustomFieldValueItem value)
         {
             return ProxyObject(value, v => new CustomFieldValueItem(v));
         }
 
-        internal GraphicalIndicator ProxyObject(net.sf.mpxj.GraphicalIndicator value)
+        internal GraphicalIndicator ProxyObject(org.mpxj.GraphicalIndicator value)
         {
             return ProxyObject(value, v => new GraphicalIndicator(this, v));
         }
 
-        internal GenericCriteria ProxyObject(net.sf.mpxj.GenericCriteria value)
+        internal GenericCriteria ProxyObject(org.mpxj.GenericCriteria value)
         {
             return ProxyObject(value, v => new GenericCriteria(this, v));
         }
 
-        internal GraphicalIndicatorCriteria ProxyObject(net.sf.mpxj.GraphicalIndicatorCriteria value)
+        internal GraphicalIndicatorCriteria ProxyObject(org.mpxj.GraphicalIndicatorCriteria value)
         {
             return ProxyObject(value, v => new GraphicalIndicatorCriteria(this, v));
         }
 
-        internal CustomFieldValueMask ProxyObject(net.sf.mpxj.CustomFieldValueMask value)
+        internal CustomFieldValueMask ProxyObject(org.mpxj.CustomFieldValueMask value)
         {
             return ProxyObject(value, v => new CustomFieldValueMask(v));
         }
 
-        internal GenericCriteriaPrompt ProxyObject(net.sf.mpxj.GenericCriteriaPrompt value)
+        internal GenericCriteriaPrompt ProxyObject(org.mpxj.GenericCriteriaPrompt value)
         {
             return ProxyObject(value, v => new GenericCriteriaPrompt(v));
         }
 
-        internal ProjectCalendarContainer ProxyObject(net.sf.mpxj.ProjectCalendarContainer value)
+        internal ProjectCalendarContainer ProxyObject(org.mpxj.ProjectCalendarContainer value)
         {
             return ProxyObject(value, v => new ProjectCalendarContainer(this, v));
         }
 
-        internal TableContainer ProxyObject(net.sf.mpxj.TableContainer value)
+        internal TableContainer ProxyObject(org.mpxj.TableContainer value)
         {
             return ProxyObject(value, v => new TableContainer(this, v));
         }
 
-        internal FilterContainer ProxyObject(net.sf.mpxj.FilterContainer value)
+        internal FilterContainer ProxyObject(org.mpxj.FilterContainer value)
         {
             return ProxyObject(value, v => new FilterContainer(this, v));
         }
 
-        internal GroupContainer ProxyObject(net.sf.mpxj.GroupContainer value)
+        internal GroupContainer ProxyObject(org.mpxj.GroupContainer value)
         {
             return ProxyObject(value, v => new GroupContainer(this, v));
         }
 
-        internal Column ProxyObject(net.sf.mpxj.Column value)
+        internal Column ProxyObject(org.mpxj.Column value)
         {
             return ProxyObject(value, v => new Column(this, v));
         }
 
-        internal TimephasedWork ProxyObject(net.sf.mpxj.TimephasedWork value)
+        internal TimephasedWork ProxyObject(org.mpxj.TimephasedWork value)
         {
             return ProxyObject(value, v => new TimephasedWork(v));
         }
 
-        internal TimephasedCost ProxyObject(net.sf.mpxj.TimephasedCost value)
+        internal TimephasedCost ProxyObject(org.mpxj.TimephasedCost value)
         {
             return ProxyObject(value, v => new TimephasedCost(v));
         }
 
-        internal IView ProxyObject(net.sf.mpxj.View value)
+        internal IView ProxyObject(org.mpxj.View value)
         {
             // TODO: implement view hierarchy
             return null;
         }
 
-        internal FontBase ProxyObject(net.sf.mpxj.mpp.FontBase value)
+        internal FontBase ProxyObject(org.mpxj.mpp.FontBase value)
         {
             return ProxyObject(value, v => new FontBase(v));
         }
 
-        internal UserDefinedField ProxyObject(net.sf.mpxj.UserDefinedField value)
+        internal UserDefinedField ProxyObject(org.mpxj.UserDefinedField value)
         {
             return ProxyObject(value, v => new UserDefinedField(v));
         }
 
-        internal FontStyle ProxyObject(net.sf.mpxj.mpp.FontStyle value)
+        internal FontStyle ProxyObject(org.mpxj.mpp.FontStyle value)
         {
             return ProxyObject(value, v => new FontStyle(this, v));
         }
 
-        internal CustomFieldLookupTable ProxyObject(net.sf.mpxj.CustomFieldLookupTable value)
+        internal CustomFieldLookupTable ProxyObject(org.mpxj.CustomFieldLookupTable value)
         {
             return ProxyObject(value, v => new CustomFieldLookupTable(this, v));
         }
 
-        internal Rate ProxyObject(net.sf.mpxj.Rate value)
+        internal Rate ProxyObject(org.mpxj.Rate value)
         {
             return ProxyObject(value, v => new Rate(v));
         }
 
-        internal Priority ProxyObject(net.sf.mpxj.Priority value)
+        internal Priority ProxyObject(org.mpxj.Priority value)
         {
             return ProxyObject(value, v => new Priority(v));
         }
 
-        internal Duration ProxyObject(net.sf.mpxj.Duration value)
+        internal Duration ProxyObject(org.mpxj.Duration value)
         {
             return ProxyObject(value, v => new Duration(v));
         }
 
-        internal DateOnlyRange ProxyObject(net.sf.mpxj.LocalDateRange value)
+        internal DateOnlyRange ProxyObject(org.mpxj.LocalDateRange value)
         {
             return ProxyObject(value, v => new DateOnlyRange(v));
         }
 
-        internal Shift ProxyObject(net.sf.mpxj.Shift value)
+        internal Shift ProxyObject(org.mpxj.Shift value)
         {
             return ProxyObject(value, v => new Shift(this, v));
         }
 
-        internal ShiftPeriod ProxyObject(net.sf.mpxj.ShiftPeriod value)
+        internal ShiftPeriod ProxyObject(org.mpxj.ShiftPeriod value)
         {
             return ProxyObject(value, v => new ShiftPeriod(this, v));
         }
 
-        internal Currency ProxyObject(net.sf.mpxj.Currency value)
+        internal Currency ProxyObject(org.mpxj.Currency value)
         {
             return ProxyObject(value, v => new Currency(v));
         }
 
-        internal EpsNode ProxyObject(net.sf.mpxj.EpsNode value)
+        internal EpsNode ProxyObject(org.mpxj.EpsNode value)
         {
             return ProxyObject(value, v => new EpsNode(this, v));
         }
 
-        internal EpsProjectNode ProxyObject(net.sf.mpxj.EpsProjectNode value)
+        internal EpsProjectNode ProxyObject(org.mpxj.EpsProjectNode value)
         {
             return ProxyObject(value, v => new EpsProjectNode(this,v));
         }
 
-        internal ShiftContainer ProxyObject(net.sf.mpxj.ShiftContainer value)
+        internal ShiftContainer ProxyObject(org.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));
         }
 
-        internal ShiftPeriodContainer ProxyObject(net.sf.mpxj.ShiftPeriodContainer value)
+        internal ShiftPeriodContainer ProxyObject(org.mpxj.ShiftPeriodContainer value)
         {
             return ProxyObject(value, v => new ShiftPeriodContainer(this, v));
         }
 
-        internal IFieldType ProxyObject(net.sf.mpxj.FieldType value)
+        internal IFieldType ProxyObject(org.mpxj.FieldType value)
         {
             if (value == null)
             {
                 return null;
             }
 
-            if (value is net.sf.mpxj.UserDefinedField udf)
+            if (value is org.mpxj.UserDefinedField udf)
             {
                 return ProxyObject(udf, v => new UserDefinedField(v));
             }
 
-            if (value.getFieldTypeClass() == net.sf.mpxj.FieldTypeClass.UNKNOWN)
+            if (value.getFieldTypeClass() == org.mpxj.FieldTypeClass.UNKNOWN)
             {
                 return ProxyObject(value, v => new UnknownFieldType(v));
             }
@@ -490,77 +490,77 @@ namespace MPXJ.Net.Proxy
             return EnumExtensionMethods.FieldTypeDictionary[value];
         }
 
-        internal CustomFieldContainer ProxyObject(net.sf.mpxj.CustomFieldContainer value)
+        internal CustomFieldContainer ProxyObject(org.mpxj.CustomFieldContainer value)
         {
             return ProxyObject(value, v => new CustomFieldContainer(this, v));
         }
 
-        internal ActivityCodeContainer ProxyObject(net.sf.mpxj.ActivityCodeContainer value)
+        internal ActivityCodeContainer ProxyObject(org.mpxj.ActivityCodeContainer value)
         {
             return ProxyObject(value, v => new ActivityCodeContainer(this, v));
         }
 
-        internal ProjectCodeContainer ProxyObject(net.sf.mpxj.ProjectCodeContainer value)
+        internal ProjectCodeContainer ProxyObject(org.mpxj.ProjectCodeContainer value)
         {
             return ProxyObject(value, v => new ProjectCodeContainer(this, v));
         }
 
-        internal ResourceCodeContainer ProxyObject(net.sf.mpxj.ResourceCodeContainer value)
+        internal ResourceCodeContainer ProxyObject(org.mpxj.ResourceCodeContainer value)
         {
             return ProxyObject(value, v => new ResourceCodeContainer(this, v));
         }
 
-        internal RoleCodeContainer ProxyObject(net.sf.mpxj.RoleCodeContainer value)
+        internal RoleCodeContainer ProxyObject(org.mpxj.RoleCodeContainer value)
         {
             return ProxyObject(value, v => new RoleCodeContainer(this, v));
         }
 
-        internal ResourceAssignmentCodeContainer ProxyObject(net.sf.mpxj.ResourceAssignmentCodeContainer value)
+        internal ResourceAssignmentCodeContainer ProxyObject(org.mpxj.ResourceAssignmentCodeContainer value)
         {
             return ProxyObject(value, v => new ResourceAssignmentCodeContainer(this, v));
         }
 
-        internal DataLinkContainer ProxyObject(net.sf.mpxj.DataLinkContainer value)
+        internal DataLinkContainer ProxyObject(org.mpxj.DataLinkContainer value)
         {
             return ProxyObject(value, v => new DataLinkContainer(this, v));
         }
 
-        internal ExpenseCategoryContainer ProxyObject(net.sf.mpxj.ExpenseCategoryContainer value)
+        internal ExpenseCategoryContainer ProxyObject(org.mpxj.ExpenseCategoryContainer value)
         {
             return ProxyObject(value, v => new ExpenseCategoryContainer(this, v));
         }
 
-        internal CostAccountContainer ProxyObject(net.sf.mpxj.CostAccountContainer value)
+        internal CostAccountContainer ProxyObject(org.mpxj.CostAccountContainer value)
         {
             return ProxyObject(value, v => new CostAccountContainer(this, v));
         }
 
-        internal UserDefinedFieldContainer ProxyObject(net.sf.mpxj.UserDefinedFieldContainer value)
+        internal UserDefinedFieldContainer ProxyObject(org.mpxj.UserDefinedFieldContainer value)
         {
             return ProxyObject(value, v => new UserDefinedFieldContainer(this, v));
         }
 
-        internal WorkContourContainer ProxyObject(net.sf.mpxj.WorkContourContainer value)
+        internal WorkContourContainer ProxyObject(org.mpxj.WorkContourContainer value)
         {
             return ProxyObject(value, v => new WorkContourContainer(this, v));
         }
 
-        internal NotesTopicContainer ProxyObject(net.sf.mpxj.NotesTopicContainer value)
+        internal NotesTopicContainer ProxyObject(org.mpxj.NotesTopicContainer value)
         {
             return ProxyObject(value, v => new NotesTopicContainer(this, v));
         }
 
-        internal LocationContainer ProxyObject(net.sf.mpxj.LocationContainer value)
+        internal LocationContainer ProxyObject(org.mpxj.LocationContainer value)
         {
             return ProxyObject(value, v => new LocationContainer(this, v));
         }
 
-        internal UnitOfMeasureContainer ProxyObject(net.sf.mpxj.UnitOfMeasureContainer value)
+        internal UnitOfMeasureContainer ProxyObject(org.mpxj.UnitOfMeasureContainer value)
         {
             return ProxyObject(value, v => new UnitOfMeasureContainer(this, v));
         }
 
-        internal CurrencyContainer ProxyObject(net.sf.mpxj.CurrencyContainer value)
+        internal CurrencyContainer ProxyObject(org.mpxj.CurrencyContainer value)
         {
             return ProxyObject(value, v => new CurrencyContainer(this, v));
         }
@@ -575,56 +575,56 @@ namespace MPXJ.Net.Proxy
             var key = o.GetType().FullName;
             switch (key)
             {
-                case "net.sf.mpxj.Duration":
-                    return ProxyObject((net.sf.mpxj.Duration)o);
+                case "org.mpxj.Duration":
+                    return ProxyObject((org.mpxj.Duration)o);
 
-                case "net.sf.mpxj.Rate":
-                    return ProxyObject((net.sf.mpxj.Rate)o);
+                case "org.mpxj.Rate":
+                    return ProxyObject((org.mpxj.Rate)o);
 
-                case "net.sf.mpxj.Resource":
-                    return ProxyObject((net.sf.mpxj.Resource)o);
+                case "org.mpxj.Resource":
+                    return ProxyObject((org.mpxj.Resource)o);
 
-                case "net.sf.mpxj.Task":
-                    return ProxyObject((net.sf.mpxj.Task)o);
+                case "org.mpxj.Task":
+                    return ProxyObject((org.mpxj.Task)o);
 
-                case "net.sf.mpxj.ResourceAssignment":
-                    return ProxyObject((net.sf.mpxj.ResourceAssignment)o);
+                case "org.mpxj.ResourceAssignment":
+                    return ProxyObject((org.mpxj.ResourceAssignment)o);
 
-                case "net.sf.mpxj.ProjectCalendarWeek":
-                    return ProxyObject((net.sf.mpxj.ProjectCalendarWeek)o);
+                case "org.mpxj.ProjectCalendarWeek":
+                    return ProxyObject((org.mpxj.ProjectCalendarWeek)o);
 
-                case "net.sf.mpxj.ProjectCalendarException":
-                    return ProxyObject((net.sf.mpxj.ProjectCalendarException)o);
+                case "org.mpxj.ProjectCalendarException":
+                    return ProxyObject((org.mpxj.ProjectCalendarException)o);
 
-                case "net.sf.mpxj.ProjectCalendar":
-                    return ProxyObject((net.sf.mpxj.ProjectCalendar)o);
+                case "org.mpxj.ProjectCalendar":
+                    return ProxyObject((org.mpxj.ProjectCalendar)o);
 
-                case "net.sf.mpxj.RecurringData":
-                    return ProxyObject((net.sf.mpxj.RecurringData)o);
+                case "org.mpxj.RecurringData":
+                    return ProxyObject((org.mpxj.RecurringData)o);
 
-                case "net.sf.mpxj.ProjectCalendarHours":
-                    return ProxyObject((net.sf.mpxj.ProjectCalendarHours)o);
+                case "org.mpxj.ProjectCalendarHours":
+                    return ProxyObject((org.mpxj.ProjectCalendarHours)o);
 
-                case "net.sf.mpxj.Notes":
-                    return ProxyObject((net.sf.mpxj.Notes)o);
+                case "org.mpxj.Notes":
+                    return ProxyObject((org.mpxj.Notes)o);
 
-                case "net.sf.mpxj.HtmlNotes":
-                    return ProxyObject((net.sf.mpxj.HtmlNotes)o);
+                case "org.mpxj.HtmlNotes":
+                    return ProxyObject((org.mpxj.HtmlNotes)o);
 
-                case "net.sf.mpxj.RtfNotes":
-                    return ProxyObject((net.sf.mpxj.RtfNotes)o);
+                case "org.mpxj.RtfNotes":
+                    return ProxyObject((org.mpxj.RtfNotes)o);
 
-                case "net.sf.mpxj.ParentNotes":
-                    return ProxyObject((net.sf.mpxj.ParentNotes)o);
+                case "org.mpxj.ParentNotes":
+                    return ProxyObject((org.mpxj.ParentNotes)o);
 
-                case "net.sf.mpxj.StructuredNotes":
-                    return ProxyObject((net.sf.mpxj.StructuredNotes)o);
+                case "org.mpxj.StructuredNotes":
+                    return ProxyObject((org.mpxj.StructuredNotes)o);
 
-                case "net.sf.mpxj.Priority":
-                    return ProxyObject((net.sf.mpxj.Priority)o);
+                case "org.mpxj.Priority":
+                    return ProxyObject((org.mpxj.Priority)o);
 
-                case "net.sf.mpxj.WorkContour":
-                    return ProxyObject((net.sf.mpxj.WorkContour)o);
+                case "org.mpxj.WorkContour":
+                    return ProxyObject((org.mpxj.WorkContour)o);
 
                 case "java.lang.Boolean":
                     return ((java.lang.Boolean)o).booleanValue();
@@ -660,68 +660,68 @@ namespace MPXJ.Net.Proxy
                     return ProxyDictionary<object, object, object, object>(k => k, k => k, v => v, v => v, (java.util.Map)o);
                 
                 // MPXJ Enums
-                case "net.sf.mpxj.AccrueType":
-                    return ((net.sf.mpxj.AccrueType)o).ConvertType();
+                case "org.mpxj.AccrueType":
+                    return ((org.mpxj.AccrueType)o).ConvertType();
 
-                case "net.sf.mpxj.BookingType":
-                    return ((net.sf.mpxj.BookingType)o).ConvertType();
+                case "org.mpxj.BookingType":
+                    return ((org.mpxj.BookingType)o).ConvertType();
 
-                case "net.sf.mpxj.CodePage":
-                    return ((net.sf.mpxj.CodePage)o).ConvertType();
+                case "org.mpxj.CodePage":
+                    return ((org.mpxj.CodePage)o).ConvertType();
 
-                case "net.sf.mpxj.CriticalActivityType":
-                    return ((net.sf.mpxj.CriticalActivityType)o).ConvertType();
+                case "org.mpxj.CriticalActivityType":
+                    return ((org.mpxj.CriticalActivityType)o).ConvertType();
 
-                case "net.sf.mpxj.CurrencySymbolPosition":
-                    return ((net.sf.mpxj.CurrencySymbolPosition)o).ConvertType();
+                case "org.mpxj.CurrencySymbolPosition":
+                    return ((org.mpxj.CurrencySymbolPosition)o).ConvertType();
 
-                case "net.sf.mpxj.DateOrder":
-                    return ((net.sf.mpxj.DateOrder)o).ConvertType();
+                case "org.mpxj.DateOrder":
+                    return ((org.mpxj.DateOrder)o).ConvertType();
 
-                case "net.sf.mpxj.FileVersion":
-                    return ((net.sf.mpxj.FileVersion)o).ConvertType();
+                case "org.mpxj.FileVersion":
+                    return ((org.mpxj.FileVersion)o).ConvertType();
 
-                case "net.sf.mpxj.EarnedValueMethod":
-                    return ((net.sf.mpxj.EarnedValueMethod)o).ConvertType();
+                case "org.mpxj.EarnedValueMethod":
+                    return ((org.mpxj.EarnedValueMethod)o).ConvertType();
 
-                case "net.sf.mpxj.TimeUnit":
-                    return ((net.sf.mpxj.TimeUnit)o).ConvertType();
+                case "org.mpxj.TimeUnit":
+                    return ((org.mpxj.TimeUnit)o).ConvertType();
 
-                case "net.sf.mpxj.ProjectDateFormat":
-                    return ((net.sf.mpxj.ProjectDateFormat)o).ConvertType();
+                case "org.mpxj.ProjectDateFormat":
+                    return ((org.mpxj.ProjectDateFormat)o).ConvertType();
 
-                case "net.sf.mpxj.ProjectTimeFormat":
-                    return ((net.sf.mpxj.ProjectTimeFormat)o).ConvertType();
+                case "org.mpxj.ProjectTimeFormat":
+                    return ((org.mpxj.ProjectTimeFormat)o).ConvertType();
 
-                case "net.sf.mpxj.ScheduleFrom":
-                    return ((net.sf.mpxj.ScheduleFrom)o).ConvertType();
+                case "org.mpxj.ScheduleFrom":
+                    return ((org.mpxj.ScheduleFrom)o).ConvertType();
 
-                case "net.sf.mpxj.TaskType":
-                    return ((net.sf.mpxj.TaskType)o).ConvertType();
+                case "org.mpxj.TaskType":
+                    return ((org.mpxj.TaskType)o).ConvertType();
 
-                case "net.sf.mpxj.ResourceType":
-                    return ((net.sf.mpxj.ResourceType)o).ConvertType();
+                case "org.mpxj.ResourceType":
+                    return ((org.mpxj.ResourceType)o).ConvertType();
 
-                case "net.sf.mpxj.ConstraintType":
-                    return ((net.sf.mpxj.ConstraintType)o).ConvertType();
+                case "org.mpxj.ConstraintType":
+                    return ((org.mpxj.ConstraintType)o).ConvertType();
 
-                case "net.sf.mpxj.TaskMode":
-                    return ((net.sf.mpxj.TaskMode)o).ConvertType();
+                case "org.mpxj.TaskMode":
+                    return ((org.mpxj.TaskMode)o).ConvertType();
 
-                case "net.sf.mpxj.ResourceRequestType":
-                    return ((net.sf.mpxj.ResourceRequestType)o).ConvertType();
+                case "org.mpxj.ResourceRequestType":
+                    return ((org.mpxj.ResourceRequestType)o).ConvertType();
 
-                case "net.sf.mpxj.RateSource":
-                    return ((net.sf.mpxj.RateSource)o).ConvertType();
+                case "org.mpxj.RateSource":
+                    return ((org.mpxj.RateSource)o).ConvertType();
                 
-                case "net.sf.mpxj.TotalSlackCalculationType":
-                    return ((net.sf.mpxj.TotalSlackCalculationType)o).ConvertType();
+                case "org.mpxj.TotalSlackCalculationType":
+                    return ((org.mpxj.TotalSlackCalculationType)o).ConvertType();
 
-                case "net.sf.mpxj.RelationshipLagCalendar":
-                    return ((net.sf.mpxj.RelationshipLagCalendar)o).ConvertType();
+                case "org.mpxj.RelationshipLagCalendar":
+                    return ((org.mpxj.RelationshipLagCalendar)o).ConvertType();
                 
-                case "net.sf.mpxj.WorkGroup":
-                    return ((net.sf.mpxj.WorkGroup)o).ConvertType();
+                case "org.mpxj.WorkGroup":
+                    return ((org.mpxj.WorkGroup)o).ConvertType();
                 
                 case "System.String":
                 case "System.Byte[]":

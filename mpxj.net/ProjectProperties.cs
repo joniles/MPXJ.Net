@@ -4,11 +4,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectProperties : AbstractFieldContainer, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectProperties>
+    public class ProjectProperties : AbstractFieldContainer, ITimeUnitDefaultsContainer<org.mpxj.ProjectProperties>
     {
-        public new net.sf.mpxj.ProjectProperties JavaObject => (net.sf.mpxj.ProjectProperties)base.JavaObject;
+        public new org.mpxj.ProjectProperties JavaObject => (org.mpxj.ProjectProperties)base.JavaObject;
 
-        internal ProjectProperties(ProxyManager proxyManager, net.sf.mpxj.ProjectProperties javaObject) : base(proxyManager, javaObject) { }
+        internal ProjectProperties(ProxyManager proxyManager, org.mpxj.ProjectProperties javaObject) : base(proxyManager, javaObject) { }
 
         public TimeUnit? DefaultDurationUnits
         {
@@ -1012,10 +1012,10 @@ namespace MPXJ.Net
             set => JavaObject.setProjectIsBaseline(value);
         }
 
-        public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<net.sf.mpxj.ProjectCode, net.sf.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
+        public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ProjectCode, org.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
         
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());
 
-        public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<net.sf.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (net.sf.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
+        public ISet<IFieldType> PopulatedFields => _proxyManager.ProxySet<org.mpxj.FieldType, IFieldType>(_proxyManager.ProxyObject, value => (org.mpxj.FieldType)value.GenericJavaObject(), JavaObject.getPopulatedFields());
     }
 }

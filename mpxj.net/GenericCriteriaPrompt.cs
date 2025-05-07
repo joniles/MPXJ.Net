@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class GenericCriteriaPrompt : IJavaObjectProxy<net.sf.mpxj.GenericCriteriaPrompt>
+    public class GenericCriteriaPrompt : IJavaObjectProxy<org.mpxj.GenericCriteriaPrompt>
     {
-        public net.sf.mpxj.GenericCriteriaPrompt JavaObject { get; }
+        public org.mpxj.GenericCriteriaPrompt JavaObject { get; }
 
-        internal GenericCriteriaPrompt(net.sf.mpxj.GenericCriteriaPrompt javaObject)
+        internal GenericCriteriaPrompt(org.mpxj.GenericCriteriaPrompt javaObject)
         {
             JavaObject = javaObject;
         }

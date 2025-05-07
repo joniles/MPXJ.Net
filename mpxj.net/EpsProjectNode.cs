@@ -5,9 +5,9 @@ namespace MPXJ.Net
     public class EpsProjectNode
     {
         internal ProxyManager ProxyManager { get; }
-        public net.sf.mpxj.EpsProjectNode JavaObject { get; }
+        public org.mpxj.EpsProjectNode JavaObject { get; }
 
-        internal EpsProjectNode(ProxyManager proxyManager, net.sf.mpxj.EpsProjectNode javaObject)
+        internal EpsProjectNode(ProxyManager proxyManager, org.mpxj.EpsProjectNode javaObject)
         {
             ProxyManager = proxyManager;
             JavaObject = javaObject;

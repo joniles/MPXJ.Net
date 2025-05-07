@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectCodeValue : ICodeValue, IJavaObjectProxy<net.sf.mpxj.ProjectCodeValue>
+    public class ProjectCodeValue : ICodeValue, IJavaObjectProxy<org.mpxj.ProjectCodeValue>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ProjectCodeValue JavaObject { get; }
+        public org.mpxj.ProjectCodeValue JavaObject { get; }
 
-        internal ProjectCodeValue(ProxyManager proxyManager, net.sf.mpxj.ProjectCodeValue javaObject)
+        internal ProjectCodeValue(ProxyManager proxyManager, org.mpxj.ProjectCodeValue javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -30,19 +30,19 @@ namespace MPXJ.Net
         
         public int? ParentValueUniqueId => JavaObject.getParentValueUniqueID().ConvertType();
         
-        public IList<ProjectCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ProjectCodeValue, ProjectCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ProjectCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ProjectCodeValue, ProjectCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public override string ToString() => JavaObject.toString();
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ProjectCodeValue.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ProjectCodeValue.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ProjectCodeValue.Builder JavaObject { get; }
+            public org.mpxj.ProjectCodeValue.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ProjectCodeValue.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ProjectCodeValue.Builder(file.JavaObject);
             }
 
             public Builder ProjectCode(ProjectCode value)

@@ -4,11 +4,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<net.sf.mpxj.ProjectCalendar>
+    public class ProjectCalendar : ProjectCalendarDays, IProjectEntityWithUniqueID, ITimeUnitDefaultsContainer<org.mpxj.ProjectCalendar>
     {
-        public new net.sf.mpxj.ProjectCalendar JavaObject => (net.sf.mpxj.ProjectCalendar)base.JavaObject;
+        public new org.mpxj.ProjectCalendar JavaObject => (org.mpxj.ProjectCalendar)base.JavaObject;
 
-        internal ProjectCalendar(ProxyManager proxyManager, net.sf.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
+        internal ProjectCalendar(ProxyManager proxyManager, org.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
 
         public int? MinutesPerDay => JavaObject.getMinutesPerDay().ConvertType();
 
@@ -50,7 +50,7 @@ namespace MPXJ.Net
 
         public void ClearWorkWeeks() => JavaObject.clearWorkWeeks();
 
-        public IList<ProjectCalendarWeek> WorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkWeeks());
+        public IList<ProjectCalendarWeek> WorkWeeks => _proxyManager.ProxyList<org.mpxj.ProjectCalendarWeek, ProjectCalendarWeek>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkWeeks());
 
         public ProjectCalendarException AddCalendarException(DateOnly date) => _proxyManager.ProxyObject(JavaObject.addCalendarException(date.ConvertType()));
 
@@ -62,11 +62,11 @@ namespace MPXJ.Net
 
         public void ClearCalendarExceptions() => JavaObject.clearCalendarExceptions();
 
-        public IList<ProjectCalendarException> CalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCalendarExceptions());
+        public IList<ProjectCalendarException> CalendarExceptions => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCalendarExceptions());
 
-        public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
+        public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
 
-        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptionsWithWorkWeeks());        
+        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptionsWithWorkWeeks());        
 
         public ProjectCalendar Parent
         {
@@ -104,9 +104,9 @@ namespace MPXJ.Net
             set => JavaObject.setUniqueID(value.ConvertType());
         }
 
-        public IList<Task> Tasks => _proxyManager.ProxyList<net.sf.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTasks());
+        public IList<Task> Tasks => _proxyManager.ProxyList<org.mpxj.Task, Task>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTasks());
 
-        public IList<Resource> Resources => _proxyManager.ProxyList<net.sf.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResources());
+        public IList<Resource> Resources => _proxyManager.ProxyList<org.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResources());
 
         public int ResourceCount => JavaObject.getResourceCount();
 
@@ -122,7 +122,7 @@ namespace MPXJ.Net
 
         public Duration GetWork(DateTime startDate, DateTime endDate, TimeUnit format) => _proxyManager.ProxyObject(JavaObject.getWork(startDate.ConvertType(), endDate.ConvertType(), format.ConvertType()));
 
-        public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<net.sf.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
+        public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 
         public override string ToString() => JavaObject.toString();
 

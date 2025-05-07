@@ -5,9 +5,9 @@ namespace MPXJ.Net
 {
     public class MPXWriter : AbstractProjectWriter
     {
-        public new net.sf.mpxj.mpx.MPXWriter JavaObject => (net.sf.mpxj.mpx.MPXWriter)base.JavaObject;
+        public new org.mpxj.mpx.MPXWriter JavaObject => (org.mpxj.mpx.MPXWriter)base.JavaObject;
 
-        public MPXWriter() : base(new net.sf.mpxj.mpx.MPXWriter()) { }
+        public MPXWriter() : base(new org.mpxj.mpx.MPXWriter()) { }
 
         public CultureInfo Culture
         {
@@ -20,6 +20,6 @@ namespace MPXJ.Net
             get => JavaObject.getUseLocaleDefaults();
             set => JavaObject.setUseLocaleDefaults(value);
         }
-        public static CultureInfo[] SupportedCultures => net.sf.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => l.ConvertType()).ToArray();
+        public static CultureInfo[] SupportedCultures => org.mpxj.mpx.MPXReader.getSupportedLocales().ToList().Select(l => l.ConvertType()).ToArray();
     }
 }

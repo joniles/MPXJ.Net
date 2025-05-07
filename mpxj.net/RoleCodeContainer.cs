@@ -2,10 +2,10 @@
 
 namespace MPXJ.Net
 {
-    public class RoleCodeContainer : ProjectEntityContainer<net.sf.mpxj.RoleCode, RoleCode>
+    public class RoleCodeContainer : ProjectEntityContainer<org.mpxj.RoleCode, RoleCode>
     {
-        public new net.sf.mpxj.RoleCodeContainer JavaObject => (net.sf.mpxj.RoleCodeContainer)base.JavaObject;
+        public new org.mpxj.RoleCodeContainer JavaObject => (org.mpxj.RoleCodeContainer)base.JavaObject;
 
-        internal RoleCodeContainer(ProxyManager proxyManager, net.sf.mpxj.RoleCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
+        internal RoleCodeContainer(ProxyManager proxyManager, org.mpxj.RoleCodeContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject) { }
     }
 }

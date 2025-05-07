@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ActivityCode : ICode, IJavaObjectProxy<net.sf.mpxj.ActivityCode>
+    public class ActivityCode : ICode, IJavaObjectProxy<org.mpxj.ActivityCode>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.ActivityCode JavaObject { get; }
+        public org.mpxj.ActivityCode JavaObject { get; }
 
-        internal ActivityCode(ProxyManager proxyManager, net.sf.mpxj.ActivityCode javaObject)
+        internal ActivityCode(ProxyManager proxyManager, org.mpxj.ActivityCode javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -30,23 +30,23 @@ namespace MPXJ.Net
 
         public int? MaxLength => JavaObject.getMaxLength().ConvertType();
 
-        public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
+        public IList<ActivityCodeValue> Values => _proxyManager.ProxyList<org.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getValues());
 
-        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<net.sf.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
+        public IList<ActivityCodeValue> ChildValues => _proxyManager.ProxyList<org.mpxj.ActivityCodeValue, ActivityCodeValue>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildValues());
 
         public void AddValue(ActivityCodeValue value) => JavaObject.addValue(value.JavaObject);
 
         public ActivityCodeValue GetValueByUniqueID(int? id) => _proxyManager.ProxyObject(JavaObject.getValueByUniqueID(id.ConvertType()));
 
-        public class Builder : IJavaObjectProxy<net.sf.mpxj.ActivityCode.Builder>
+        public class Builder : IJavaObjectProxy<org.mpxj.ActivityCode.Builder>
         {
             private readonly ProxyManager _proxyManager;
-            public net.sf.mpxj.ActivityCode.Builder JavaObject { get; }
+            public org.mpxj.ActivityCode.Builder JavaObject { get; }
 
             public Builder(ProjectFile file)
             {
                 _proxyManager = file._proxyManager;
-                JavaObject = new net.sf.mpxj.ActivityCode.Builder(file.JavaObject);
+                JavaObject = new org.mpxj.ActivityCode.Builder(file.JavaObject);
             }
 
             public Builder UniqueID(int? value)

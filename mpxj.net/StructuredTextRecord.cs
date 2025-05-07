@@ -4,23 +4,23 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class StructuredTextRecord : IJavaObjectProxy<net.sf.mpxj.primavera.StructuredTextRecord>
+    public class StructuredTextRecord : IJavaObjectProxy<org.mpxj.primavera.StructuredTextRecord>
     {
-        public net.sf.mpxj.primavera.StructuredTextRecord JavaObject { get; }
+        public org.mpxj.primavera.StructuredTextRecord JavaObject { get; }
 
-        internal StructuredTextRecord(net.sf.mpxj.primavera.StructuredTextRecord javaObject)
+        internal StructuredTextRecord(org.mpxj.primavera.StructuredTextRecord javaObject)
         {
             JavaObject = javaObject;
         }
 
         public StructuredTextRecord()
         {
-            JavaObject = new net.sf.mpxj.primavera.StructuredTextRecord();
+            JavaObject = new org.mpxj.primavera.StructuredTextRecord();
         }
 
         public StructuredTextRecord(Dictionary<string, string> attributes, List<StructuredTextRecord> children)
         {
-            JavaObject = new net.sf.mpxj.primavera.StructuredTextRecord(attributes.ConvertType(), children.ConvertType());
+            JavaObject = new org.mpxj.primavera.StructuredTextRecord(attributes.ConvertType(), children.ConvertType());
         }
 
         public string RecordName => JavaObject.getRecordName();
@@ -37,7 +37,7 @@ namespace MPXJ.Net
             }
         }
 
-        public IList<StructuredTextRecord> Children => new ProxyList<net.sf.mpxj.primavera.StructuredTextRecord, StructuredTextRecord>(v => new StructuredTextRecord(v), v => v.JavaObject, JavaObject.getChildren());
+        public IList<StructuredTextRecord> Children => new ProxyList<org.mpxj.primavera.StructuredTextRecord, StructuredTextRecord>(v => new StructuredTextRecord(v), v => v.JavaObject, JavaObject.getChildren());
 
         public StructuredTextRecord GetChild(string name)
         {

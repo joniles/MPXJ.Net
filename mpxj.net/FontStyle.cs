@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class FontStyle : IJavaObjectProxy<net.sf.mpxj.mpp.FontStyle>
+    public class FontStyle : IJavaObjectProxy<org.mpxj.mpp.FontStyle>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.mpp.FontStyle JavaObject { get; }
+        public org.mpxj.mpp.FontStyle JavaObject { get; }
 
-        internal FontStyle(ProxyManager proxyManager, net.sf.mpxj.mpp.FontStyle javaObject)
+        internal FontStyle(ProxyManager proxyManager, org.mpxj.mpp.FontStyle javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;

@@ -3,11 +3,11 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class ResourceAssignmentWorkgroupFields : IJavaObjectProxy<net.sf.mpxj.ResourceAssignmentWorkgroupFields>
+    public class ResourceAssignmentWorkgroupFields : IJavaObjectProxy<org.mpxj.ResourceAssignmentWorkgroupFields>
     {
-        public net.sf.mpxj.ResourceAssignmentWorkgroupFields JavaObject { get; }
+        public org.mpxj.ResourceAssignmentWorkgroupFields JavaObject { get; }
 
-        internal ResourceAssignmentWorkgroupFields(net.sf.mpxj.ResourceAssignmentWorkgroupFields javaObject)
+        internal ResourceAssignmentWorkgroupFields(org.mpxj.ResourceAssignmentWorkgroupFields javaObject)
         {
             JavaObject = javaObject;
         }

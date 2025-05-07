@@ -2,11 +2,11 @@
 
 namespace MPXJ.Net
 {
-    public class ProjectConfig : IJavaObjectProxy<net.sf.mpxj.ProjectConfig>
+    public class ProjectConfig : IJavaObjectProxy<org.mpxj.ProjectConfig>
     {
-        public net.sf.mpxj.ProjectConfig JavaObject { get; }
+        public org.mpxj.ProjectConfig JavaObject { get; }
 
-        internal ProjectConfig(net.sf.mpxj.ProjectConfig javaObject)
+        internal ProjectConfig(org.mpxj.ProjectConfig javaObject)
         {
             JavaObject = javaObject;
         }

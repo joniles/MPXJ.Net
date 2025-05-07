@@ -3,18 +3,18 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-    public class CustomFieldValueItem : IJavaObjectProxy<net.sf.mpxj.mpp.CustomFieldValueItem>
+    public class CustomFieldValueItem : IJavaObjectProxy<org.mpxj.mpp.CustomFieldValueItem>
     {
-        public net.sf.mpxj.mpp.CustomFieldValueItem JavaObject { get; }
+        public org.mpxj.mpp.CustomFieldValueItem JavaObject { get; }
 
-        internal CustomFieldValueItem(net.sf.mpxj.mpp.CustomFieldValueItem javaObject)
+        internal CustomFieldValueItem(org.mpxj.mpp.CustomFieldValueItem javaObject)
         {
             JavaObject = javaObject;
         }
 
         public CustomFieldValueItem(int uniqueID)
         {
-            JavaObject = new net.sf.mpxj.mpp.CustomFieldValueItem(uniqueID.ConvertType());
+            JavaObject = new org.mpxj.mpp.CustomFieldValueItem(uniqueID.ConvertType());
         }
 
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();

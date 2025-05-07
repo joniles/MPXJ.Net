@@ -3,12 +3,12 @@ using MPXJ.Net.Proxy;
 
 namespace MPXJ.Net
 {
-	public class Table : IJavaObjectProxy<net.sf.mpxj.Table>
+	public class Table : IJavaObjectProxy<org.mpxj.Table>
     {
         private readonly ProxyManager _proxyManager;
-        public net.sf.mpxj.Table JavaObject { get; }
+        public org.mpxj.Table JavaObject { get; }
 
-        internal Table(ProxyManager proxyManager, net.sf.mpxj.Table javaObject)
+        internal Table(ProxyManager proxyManager, org.mpxj.Table javaObject)
         {
             _proxyManager = proxyManager;
             JavaObject = javaObject;
@@ -20,7 +20,7 @@ namespace MPXJ.Net
 
         public bool ResourceFlag => JavaObject.getResourceFlag();
 
-        public IList<Column> Columns => _proxyManager.ProxyList<net.sf.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
+        public IList<Column> Columns => _proxyManager.ProxyList<org.mpxj.Column, Column>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getColumns());
 
         public override string ToString() => JavaObject.toString();
     }
