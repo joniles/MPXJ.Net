@@ -1012,6 +1012,18 @@ namespace MPXJ.Net
             set => JavaObject.setProjectIsBaseline(value);
         }
 
+        public bool EnableSummarization
+        {
+            get => JavaObject.getEnableSummarization();
+            set => JavaObject.setEnableSummarization(value);
+        }
+
+        public bool EnablePublication
+        {
+            get => JavaObject.getEnablePublication();
+            set => JavaObject.setEnablePublication(value);
+        }
+
         public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ProjectCode, org.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
         
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());

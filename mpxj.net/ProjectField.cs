@@ -184,7 +184,8 @@ namespace MPXJ.Net
         public static readonly ProjectField ProjectIsBaseline = new ProjectField(org.mpxj.ProjectField.PROJECT_IS_BASELINE);
         public static readonly ProjectField ProjectWebsiteUrl = new ProjectField(org.mpxj.ProjectField.PROJECT_WEBSITE_URL);
         public static readonly ProjectField Notes = new ProjectField(org.mpxj.ProjectField.NOTES);
-
+        public static readonly ProjectField EnableSummarization = new ProjectField(org.mpxj.ProjectField.ENABLE_SUMMARIZATION);
+        public static readonly ProjectField EnablePublication = new ProjectField(org.mpxj.ProjectField.ENABLE_PUBLICATION);
 
         private ProjectField(org.mpxj.ProjectField javaObject)
         {
