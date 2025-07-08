@@ -460,6 +460,16 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new EpsProjectNode(this,v));
         }
 
+        internal OpcProject ProxyObject(org.mpxj.opc.OpcProject value)
+        {
+            return ProxyObject(value, v => new OpcProject(v));
+        }
+
+        internal OpcProjectBaseline ProxyObject(org.mpxj.opc.OpcProjectBaseline value)
+        {
+            return ProxyObject(value, v => new OpcProjectBaseline(v));
+        }
+
         internal ShiftContainer ProxyObject(org.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));
