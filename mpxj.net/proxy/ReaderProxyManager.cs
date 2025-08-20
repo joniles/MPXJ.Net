@@ -4,6 +4,21 @@ namespace MPXJ.Net.Proxy
 {
     internal class ReaderProxyManager : AbstractProxyManager
     {
+        internal AstaMdbReader ProxyObject(org.mpxj.asta.AstaMdbReader value)
+        {
+            return ProxyObject(value, v => new AstaMdbReader(v));
+        }
+
+        internal AstaSqliteReader ProxyObject(org.mpxj.asta.AstaSqliteReader value)
+        {
+            return ProxyObject(value, v => new AstaSqliteReader(v));
+        }
+
+        internal AstaTextFileReader ProxyObject(org.mpxj.asta.AstaTextFileReader value)
+        {
+            return ProxyObject(value, v => new AstaTextFileReader(v));
+        }
+
         internal AstaFileReader ProxyObject(org.mpxj.asta.AstaFileReader value)
         {
             return ProxyObject(value, v => new AstaFileReader(v));
@@ -12,6 +27,11 @@ namespace MPXJ.Net.Proxy
         internal ConceptDrawProjectReader ProxyObject(org.mpxj.conceptdraw.ConceptDrawProjectReader value)
         {
             return ProxyObject(value, v => new ConceptDrawProjectReader(v));
+        }
+
+        internal EdrawProjectReader ProxyObject(org.mpxj.edrawproject.EdrawProjectReader value)
+        {
+            return ProxyObject(value, v => new EdrawProjectReader(v));
         }
 
         internal FastTrackReader ProxyObject(org.mpxj.fasttrack.FastTrackReader value)
@@ -59,16 +79,6 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new OpenPlanReader(v));
         }
 
-        internal P3DatabaseReader ProxyObject(org.mpxj.primavera.p3.P3DatabaseReader value)
-        {
-            return ProxyObject(value, v => new P3DatabaseReader(v));
-        }
-
-        internal P3PRXFileReader ProxyObject(org.mpxj.primavera.p3.P3PRXFileReader value)
-        {
-            return ProxyObject(value, v => new P3PRXFileReader(v));
-        }
-
         internal PhoenixReader ProxyObject(org.mpxj.phoenix.PhoenixReader value)
         {
             return ProxyObject(value, v => new PhoenixReader(v));
@@ -79,6 +89,16 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new PlannerReader(v));
         }
 
+        internal P3DatabaseReader ProxyObject(org.mpxj.primavera.p3.P3DatabaseReader value)
+        {
+            return ProxyObject(value, v => new P3DatabaseReader(v));
+        }
+
+        internal P3PRXFileReader ProxyObject(org.mpxj.primavera.p3.P3PRXFileReader value)
+        {
+            return ProxyObject(value, v => new P3PRXFileReader(v));
+        }
+        
         internal PrimaveraDatabaseFileReader ProxyObject(org.mpxj.primavera.PrimaveraDatabaseFileReader value)
         {
             return ProxyObject(value, v => new PrimaveraDatabaseFileReader(v));
@@ -92,6 +112,16 @@ namespace MPXJ.Net.Proxy
         internal PrimaveraXERFileReader ProxyObject(org.mpxj.primavera.PrimaveraXERFileReader value)
         {
             return ProxyObject(value, v => new PrimaveraXERFileReader(v));
+        }
+
+        internal SureTrakDatabaseReader ProxyObject(org.mpxj.primavera.suretrak.SureTrakDatabaseReader value)
+        {
+            return ProxyObject(value, v => new SureTrakDatabaseReader(v));
+        }
+
+        internal SureTrakSTXFileReader ProxyObject(org.mpxj.primavera.suretrak.SureTrakSTXFileReader value)
+        {
+            return ProxyObject(value, v => new SureTrakSTXFileReader(v));
         }
 
         internal ProjectCommanderReader ProxyObject(org.mpxj.projectcommander.ProjectCommanderReader value)
@@ -113,17 +143,7 @@ namespace MPXJ.Net.Proxy
         {
             return ProxyObject(value, v => new SDEFReader(v));
         }
-
-        internal SureTrakDatabaseReader ProxyObject(org.mpxj.primavera.suretrak.SureTrakDatabaseReader value)
-        {
-            return ProxyObject(value, v => new SureTrakDatabaseReader(v));
-        }
-
-        internal SureTrakSTXFileReader ProxyObject(org.mpxj.primavera.suretrak.SureTrakSTXFileReader value)
-        {
-            return ProxyObject(value, v => new SureTrakSTXFileReader(v));
-        }
-
+        
         internal SynchroReader ProxyObject(org.mpxj.synchro.SynchroReader value)
         {
             return ProxyObject(value, v => new SynchroReader(v));
@@ -144,11 +164,26 @@ namespace MPXJ.Net.Proxy
             var key = o.GetType().FullName;
             switch (key)
             {
+                case "org.mpxj.asta.AstaMdbReader":
+                    return ProxyObject((org.mpxj.asta.AstaMdbReader)o);
+
+                case "org.mpxj.asta.AstaSqliteReader":
+                    return ProxyObject((org.mpxj.asta.AstaSqliteReader)o);
+
+                case "org.mpxj.asta.AstaTextFileReader":
+                    return ProxyObject((org.mpxj.asta.AstaTextFileReader)o);
+
                 case "org.mpxj.asta.AstaFileReader":
                     return ProxyObject((org.mpxj.asta.AstaFileReader)o);
 
                 case "org.mpxj.conceptdraw.ConceptDrawProjectReader":
                     return ProxyObject((org.mpxj.conceptdraw.ConceptDrawProjectReader)o);
+
+                case "org.mpxj.edrawproject.EdrawProjectReader":
+                    return ProxyObject((org.mpxj.edrawproject.EdrawProjectReader)o);
+
+                case "org.mpxj.fasttrack.FastTrackReader":
+                    return ProxyObject((org.mpxj.fasttrack.FastTrackReader)o);
 
                 case "org.mpxj.ganttdesigner.GanttDesignerReader":
                     return ProxyObject((org.mpxj.ganttdesigner.GanttDesignerReader)o);
@@ -174,18 +209,18 @@ namespace MPXJ.Net.Proxy
                 case "org.mpxj.openplan.OpenPlanReader":
                     return ProxyObject((org.mpxj.openplan.OpenPlanReader)o);
 
-                case "org.mpxj.primavera.p3.P3DatabaseReader":
-                    return ProxyObject((org.mpxj.primavera.p3.P3DatabaseReader)o);
-
-                case "org.mpxj.primavera.p3.P3PRXFileReader":
-                    return ProxyObject((org.mpxj.primavera.p3.P3PRXFileReader)o);
-
                 case "org.mpxj.phoenix.PhoenixReader":
                     return ProxyObject((org.mpxj.phoenix.PhoenixReader)o);
 
                 case "org.mpxj.planner.PlannerReader":
                     return ProxyObject((org.mpxj.planner.PlannerReader)o);
 
+                case "org.mpxj.primavera.p3.P3DatabaseReader":
+                    return ProxyObject((org.mpxj.primavera.p3.P3DatabaseReader)o);
+
+                case "org.mpxj.primavera.p3.P3PRXFileReader":
+                    return ProxyObject((org.mpxj.primavera.p3.P3PRXFileReader)o);
+                
                 case "org.mpxj.primavera.PrimaveraDatabaseFileReader":
                     return ProxyObject((org.mpxj.primavera.PrimaveraDatabaseFileReader)o);
 
@@ -194,6 +229,12 @@ namespace MPXJ.Net.Proxy
 
                 case "org.mpxj.primavera.PrimaveraXERFileReader":
                     return ProxyObject((org.mpxj.primavera.PrimaveraXERFileReader)o);
+
+                case "org.mpxj.primavera.suretrak.SureTrakDatabaseReader":
+                    return ProxyObject((org.mpxj.primavera.suretrak.SureTrakDatabaseReader)o);
+
+                case "org.mpxj.primavera.suretrak.SureTrakSTXFileReader":
+                    return ProxyObject((org.mpxj.primavera.suretrak.SureTrakSTXFileReader)o);
 
                 case "org.mpxj.projectcommander.ProjectCommanderReader":
                     return ProxyObject((org.mpxj.projectcommander.ProjectCommanderReader)o);
@@ -206,13 +247,7 @@ namespace MPXJ.Net.Proxy
 
                 case "org.mpxj.sdef.SDEFReader":
                     return ProxyObject((org.mpxj.sdef.SDEFReader)o);
-
-                case "org.mpxj.primavera.suretrak.SureTrakDatabaseReader":
-                    return ProxyObject((org.mpxj.primavera.suretrak.SureTrakDatabaseReader)o);
-
-                case "org.mpxj.primavera.suretrak.SureTrakSTXFileReader":
-                    return ProxyObject((org.mpxj.primavera.suretrak.SureTrakSTXFileReader)o);
-
+                
                 case "org.mpxj.synchro.SynchroReader":
                     return ProxyObject((org.mpxj.synchro.SynchroReader)o);
 
@@ -221,7 +256,7 @@ namespace MPXJ.Net.Proxy
 
             }
 
-            throw new NotSupportedException();
+            throw new NotSupportedException($"Missing proxy for {key}");
         }
     }
 }
