@@ -59,8 +59,8 @@ namespace MPXJ.Net
 
         public EPS ListEPS() => new EPS(JavaObject.listEps());
         
-        public ProjectFile Read() => Read(JavaObject.read());
+        public ProjectFile Read() => Read(() => JavaObject.read());
 
-        public IList<ProjectFile> ReadAll() => ReadAll(JavaObject.readAll());
+        public IList<ProjectFile> ReadAll() => ReadAll(() => JavaObject.readAll());
     }
 }

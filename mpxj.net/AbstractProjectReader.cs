@@ -7,6 +7,13 @@ namespace MPXJ.Net
 {
     public abstract class AbstractProjectReader : IProjectReader
     {
+        private readonly List<IProjectListener> _listeners = new List<IProjectListener>();
+        private ProjectListenerAdapter _listenerAdapter;
+        
+        protected delegate org.mpxj.ProjectFile ReadDelegate();
+
+        protected delegate java.util.List ReadAllDelegate();
+        
         protected org.mpxj.reader.AbstractProjectReader JavaObject { get; }
 
         protected AbstractProjectReader(org.mpxj.reader.AbstractProjectReader javaObject)
@@ -14,25 +21,44 @@ namespace MPXJ.Net
             JavaObject = javaObject;
         }
 
-        public ProjectFile Read(string name) => Read(JavaObject.read(name));
-
-        public ProjectFile Read(Stream stream) => Read(JavaObject.read(stream.ConvertType()));
-
-        public IList<ProjectFile> ReadAll(string name) => ReadAll(JavaObject.readAll(name));
-
-        public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(JavaObject.readAll(stream.ConvertType()));
-
-        protected ProjectFile Read(org.mpxj.ProjectFile file)
+        public void AddProjectListener(IProjectListener listener)
         {
-            return file == null ? null : new ProjectFile(file);
+            if (_listeners.Count == 0)
+            {
+                _listenerAdapter = new ProjectListenerAdapter(_listeners);
+                JavaObject.addProjectListener(_listenerAdapter);
+            }
+            _listeners.Add(listener);    
+        }
+        
+        public ProjectFile Read(string name) => Read(() => JavaObject.read(name));
+
+        public ProjectFile Read(Stream stream) => Read(() => JavaObject.read(stream.ConvertType()));
+
+        public IList<ProjectFile> ReadAll(string name) => ReadAll(() => JavaObject.readAll(name));
+
+        public IList<ProjectFile> ReadAll(Stream stream) => ReadAll(() => JavaObject.readAll(stream.ConvertType()));
+
+        protected ProjectFile Read(ReadDelegate d)
+        {
+            var proxyManager = new ProxyManager();
+            if (_listenerAdapter != null)
+            {
+                _listenerAdapter.ProxyManager = proxyManager;
+            }
+            var file = d.Invoke();
+            return file == null ? null : new ProjectFile(proxyManager, file);
         }
 
-        protected IList<ProjectFile> ReadAll(java.util.List projects)
+        protected IList<ProjectFile> ReadAll(ReadAllDelegate d)
         {
-            // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
             var proxyManager = new ProxyManager();
+            if (_listenerAdapter != null)
+            {
+                _listenerAdapter.ProxyManager = proxyManager;
+            }
+            var projects = d.Invoke();
             return projects.toArray().Select(file => new ProjectFile(proxyManager, (org.mpxj.ProjectFile)file)).ToList();
         }
-
     }
 }
