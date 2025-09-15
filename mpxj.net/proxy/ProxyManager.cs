@@ -470,6 +470,11 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new OpcProjectBaseline(v));
         }
 
+        internal PwaProject ProxyObject(org.mpxj.pwa.PwaProject value)
+        {
+            return ProxyObject(value, v => new PwaProject(v));
+        }
+
         internal ShiftContainer ProxyObject(org.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));
