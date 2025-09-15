@@ -16,6 +16,6 @@ namespace MPXJ.Net
         
         public IList<PwaProject> GetProjects() => _proxyManager.ProxyList<org.mpxj.pwa.PwaProject, PwaProject>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjects());
 
-        public ProjectFile ReadProject(Guid id) => _proxyManager.ProxyObject(JavaObject.readProject(id.ConvertType()));
+        public ProjectFile ReadProject(Guid? id) => id == null ? null : _proxyManager.ProxyObject(JavaObject.readProject(id.ConvertType()));
     }
 }
