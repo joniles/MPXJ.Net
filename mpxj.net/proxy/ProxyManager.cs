@@ -475,6 +475,11 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new PwaProject(v));
         }
 
+        internal WebServicesProject ProxyObject(org.mpxj.primavera.webservices.WebServicesProject value)
+        {
+            return ProxyObject(value, v => new WebServicesProject(v));
+        }
+
         internal ShiftContainer ProxyObject(org.mpxj.ShiftContainer value)
         {
             return ProxyObject(value, v => new ShiftContainer(this, v));

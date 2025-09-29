@@ -650,11 +650,16 @@ namespace MPXJ.Net
             return value == null ? (SkillLevel?)null : (SkillLevel)value.ordinal();
         }
         
-        
         // OpcExportType
         public static org.mpxj.opc.OpcExportType ConvertType(this OpcExportType value)
         {
             return org.mpxj.opc.OpcExportType.values()[(int)value];
+        }
+        
+        // WebServicesExportType
+        public static org.mpxj.primavera.webservices.WebServicesExportType ConvertType(this WebServicesExportType value)
+        {
+            return org.mpxj.primavera.webservices.WebServicesExportType.values()[(int)value];
         }
     }
 }
