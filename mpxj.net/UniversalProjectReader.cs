@@ -19,12 +19,14 @@ namespace MPXJ.Net
 
         private class ProjectReaderProxy : IProjectReaderProxy, IJavaObjectProxy<org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy>
         {
+            private readonly ProjectListenerAdapter _listenerAdapter;
             private readonly ReaderProxyManager _proxyManager = new ReaderProxyManager();
 
             public org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy JavaObject { get; }
 
-            internal ProjectReaderProxy(org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy javaObject)
+            internal ProjectReaderProxy(ProjectListenerAdapter listenerAdapter, org.mpxj.reader.UniversalProjectReader.ProjectReaderProxy javaObject)
             {
+                _listenerAdapter = listenerAdapter;
                 JavaObject = javaObject;
             }
 
@@ -37,13 +39,21 @@ namespace MPXJ.Net
 
             ProjectFile IProjectReaderProxy.Read()
             {
-                return new ProjectFile(JavaObject.read());
+                var proxyManager = new ProxyManager();
+                if (_listenerAdapter != null)
+                {
+                    _listenerAdapter.ProxyManager = proxyManager;
+                }
+                return new ProjectFile(proxyManager, JavaObject.read());
             }
 
             IList<ProjectFile> IProjectReaderProxy.ReadAll()
             {
-                // ensure that all ProjectFile instances returned by ReadAll share the same proxy manager
                 var proxyManager = new ProxyManager();
+                if (_listenerAdapter != null)
+                {
+                    _listenerAdapter.ProxyManager = proxyManager;
+                }
                 return JavaObject.readAll().toArray().Select(p => new ProjectFile(proxyManager, (org.mpxj.ProjectFile)p)).ToList();
             }
         }
@@ -54,12 +64,12 @@ namespace MPXJ.Net
 
         public IProjectReaderProxy GetProjectReaderProxy(string name)
         {
-            return new ProjectReaderProxy(JavaObject.getProjectReaderProxy(name));
+            return new ProjectReaderProxy(_listenerAdapter, JavaObject.getProjectReaderProxy(name));
         }
 
         public IProjectReaderProxy GetProjectReaderProxy(Stream stream)
         {
-            return new ProjectReaderProxy(JavaObject.getProjectReaderProxy(stream.ConvertType()));
+            return new ProjectReaderProxy(_listenerAdapter, JavaObject.getProjectReaderProxy(stream.ConvertType()));
         }
     }
 }

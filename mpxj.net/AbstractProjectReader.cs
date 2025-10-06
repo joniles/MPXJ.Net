@@ -8,7 +8,7 @@ namespace MPXJ.Net
     public abstract class AbstractProjectReader : IProjectReader
     {
         private readonly List<IProjectListener> _listeners = new List<IProjectListener>();
-        private ProjectListenerAdapter _listenerAdapter;
+        internal ProjectListenerAdapter _listenerAdapter;
         
         protected delegate org.mpxj.ProjectFile ReadDelegate();
 
