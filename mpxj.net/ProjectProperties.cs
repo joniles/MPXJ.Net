@@ -142,6 +142,18 @@ namespace MPXJ.Net
             set => JavaObject.setDefaultCalendar(value?.JavaObject);
         }
 
+        public int? ActivityDefaultCalendarUniqueId
+        {
+            get => JavaObject.getActivityDefaultCalendarUniqueID().ConvertType();
+            set => JavaObject.setActivityDefaultCalendarUniqueID(value.ConvertType());
+        }
+
+        public ProjectCalendar ActivityDefaultCalendar
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getActivityDefaultCalendar());
+            set => JavaObject.setActivityDefaultCalendar(value?.JavaObject);
+        }
+
         public DateTime? StartDate
         {
             get => JavaObject.getStartDate().ConvertType();

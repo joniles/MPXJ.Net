@@ -186,7 +186,8 @@ namespace MPXJ.Net
         public static readonly ProjectField Notes = new ProjectField(org.mpxj.ProjectField.NOTES);
         public static readonly ProjectField EnableSummarization = new ProjectField(org.mpxj.ProjectField.ENABLE_SUMMARIZATION);
         public static readonly ProjectField EnablePublication = new ProjectField(org.mpxj.ProjectField.ENABLE_PUBLICATION);
-
+        public static readonly ProjectField ActivityDefaultCalendarUniqueId = new ProjectField(org.mpxj.ProjectField.ACTIVITY_DEFAULT_CALENDAR_UNIQUE_ID);
+        
         private ProjectField(org.mpxj.ProjectField javaObject)
         {
             JavaObject = javaObject;
