@@ -10,6 +10,8 @@ namespace MPXJ.Net
 
         internal Task(ProxyManager proxyManager, org.mpxj.Task javaObject) : base(proxyManager, javaObject) { }
 
+        public ProjectFile Parent => _proxyManager.ProxyObject(JavaObject.getParentFile());
+        
         public Relation AddPredecessor(Relation.Builder builder) => _proxyManager.ProxyObject(JavaObject.addPredecessor(builder.JavaObject));
 
         public RecurringTask AddRecurringTask() => _proxyManager.ProxyObject(JavaObject.addRecurringTask());
@@ -21,9 +23,7 @@ namespace MPXJ.Net
         public void AddActivityCodeValue(ActivityCodeValue value) => JavaObject.addActivityCodeValue(value?.JavaObject);
 
         public ResourceAssignment AddResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.addResourceAssignment(resource?.JavaObject));
-
-        public void AddResourceAssignment(ResourceAssignment assignment) => JavaObject.addResourceAssignment(assignment.JavaObject);
-
+        
         public ResourceAssignment GetExistingResourceAssignment(Resource resource) => _proxyManager.ProxyObject(JavaObject.getExistingResourceAssignment(resource.JavaObject));
 
         public IList<ResourceAssignment> ResourceAssignments => _proxyManager.ProxyList<org.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getResourceAssignments());

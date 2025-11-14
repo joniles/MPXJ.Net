@@ -20,6 +20,8 @@ namespace MPXJ.Net
             _proxyManager.PopulateCache(file, this);
         }
 
+        public ProjectContext ProjectContext => _proxyManager.ProxyObject(JavaObject.getProjectContext());
+        
         public ProjectConfig ProjectConfig => _proxyManager.ProxyObject(JavaObject.getProjectConfig());
 
         public Task AddTask() => _proxyManager.ProxyObject(JavaObject.addTask());
@@ -42,6 +44,8 @@ namespace MPXJ.Net
 
         public ProjectCalendarContainer Calendars => _proxyManager.ProxyObject(JavaObject.getCalendars());
 
+        public IList<ProjectCalendar> CalendarsForProject => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getCalendarsForProject());
+        
         public ProjectProperties ProjectProperties => _proxyManager.ProxyObject(JavaObject.getProjectProperties());
 
         public Resource AddResource() => _proxyManager.ProxyObject(JavaObject.addResource());

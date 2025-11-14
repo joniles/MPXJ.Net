@@ -11,13 +11,13 @@ namespace MPXJ.Net
 
         internal Resource(ProxyManager proxyManager, org.mpxj.Resource javaObject) : base(proxyManager, javaObject) { }
 
+        public ProjectContext ProjectContext => _proxyManager.ProxyObject(JavaObject.getProjectContext());
+        
         public Resource AddResource() => _proxyManager.ProxyObject(JavaObject.addResource());
 
         public void AddChildResource(Resource child) => JavaObject.addChildResource(child.JavaObject);
 
         public IList<Resource> ChildResources => _proxyManager.ProxyList<org.mpxj.Resource, Resource>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getChildResources());
-
-        public void AddResourceAssignment(ResourceAssignment assignment) => JavaObject.addResourceAssignment(assignment.JavaObject);
 
         public IList<ResourceAssignment> TaskAssignments => _proxyManager.ProxyList<org.mpxj.ResourceAssignment, ResourceAssignment>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTaskAssignments());
 

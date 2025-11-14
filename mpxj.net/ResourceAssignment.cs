@@ -10,6 +10,8 @@ namespace MPXJ.Net
 
         internal ResourceAssignment(ProxyManager proxyManager, org.mpxj.ResourceAssignment javaObject) : base(proxyManager, javaObject) { }
 
+        public ProjectFile Parent => _proxyManager.ProxyObject(JavaObject.getParentFile());
+        
         public ResourceAssignmentWorkgroupFields AddWorkgroupAssignment() => _proxyManager.ProxyObject(JavaObject.addWorkgroupAssignment());
 
         public int? UniqueID

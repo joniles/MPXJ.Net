@@ -2,12 +2,17 @@
 
 namespace MPXJ.Net
 {
-    public abstract class AbstractFieldContainer : ProjectEntity, IFieldContainer
+    public abstract class AbstractFieldContainer : IFieldContainer
     {
-        internal AbstractFieldContainer(ProxyManager proxyManager, org.mpxj.AbstractFieldContainer javaObject) : base(proxyManager, javaObject) { }
+        public org.mpxj.FieldContainer JavaObject { get; }
+        internal readonly ProxyManager _proxyManager;
 
-        public new org.mpxj.FieldContainer JavaObject => base.JavaObject;
-
+        internal AbstractFieldContainer(ProxyManager proxyManager, org.mpxj.AbstractFieldContainer javaObject)
+        {
+            JavaObject = javaObject;
+            _proxyManager = proxyManager;
+        }
+        
         public void Set(IFieldType field, object value) => JavaObject.set(field.JavaObject, value.GenericJavaObject());
 
         public object Get(IFieldType field) => _proxyManager.GenericProxyObject(JavaObject.get(field.JavaObject));

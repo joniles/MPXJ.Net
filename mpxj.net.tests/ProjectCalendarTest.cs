@@ -32,7 +32,7 @@ namespace MPXJ.Net
                 Assert.That(calendar.Personal, Is.False);
                 Assert.That(calendar.Type, Is.EqualTo(CalendarType.Global));
                 Assert.That(calendar.Derived, Is.False);
-                Assert.That(calendar.ParentFile, Is.EqualTo(project));
+                Assert.That(calendar.ProjectContext, Is.EqualTo(project.ProjectContext));
                 Assert.That(calendar.ToString(), Contains.Substring("[ProjectCalendar"));
                 Assert.That(calendar.DerivedCalendars, Has.Count.EqualTo(7));
                 Assert.That(calendar.Tasks, Has.Count.EqualTo(0));
