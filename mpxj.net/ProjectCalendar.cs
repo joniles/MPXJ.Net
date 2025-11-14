@@ -9,7 +9,7 @@ namespace MPXJ.Net
         public new org.mpxj.ProjectCalendar JavaObject => (org.mpxj.ProjectCalendar)base.JavaObject;
 
         internal ProjectCalendar(ProxyManager proxyManager, org.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
-
+        
         public int? MinutesPerDay => JavaObject.getMinutesPerDay().ConvertType();
 
         public int? MinutesPerWeek => JavaObject.getMinutesPerWeek().ConvertType();
@@ -124,11 +124,19 @@ namespace MPXJ.Net
 
         public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 
+        public IList<ProjectCalendar> DerivedCalendarsForProject(ProjectFile project) => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendarsForProject(project.JavaObject));
+        
         public override string ToString() => JavaObject.toString();
 
-        public ProjectFile ParentFile => _proxyManager.ProxyObject(JavaObject.getParentFile());
+        public ProjectContext ProjectContext => _proxyManager.ProxyObject(JavaObject.getProjectContext());
 
         public bool Derived => JavaObject.isDerived();
+
+        public bool IsParent => JavaObject.isParent();
+
+        public bool Default => JavaObject.getDefault();
+
+        public void SetDefault() => JavaObject.setDefault();
 
         public CalendarType? Type
         {
@@ -140,6 +148,12 @@ namespace MPXJ.Net
         {
             get => JavaObject.getPersonal();
             set => JavaObject.setPersonal(value);
+        }
+
+        public int? ProjectUniqueId
+        {
+            get => JavaObject.getProjectUniqueID().ConvertType();
+            set => JavaObject.setProjectUniqueID(value.ConvertType());
         }
     }
 }

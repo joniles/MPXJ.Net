@@ -79,6 +79,11 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new ProjectProperties(this, v));
         }
 
+        internal TimeUnitDefaults ProxyObject(org.mpxj.TimeUnitDefaults value)
+        {
+            return ProxyObject(value, v => new TimeUnitDefaults(v));
+        }
+
         internal ResourceContainer ProxyObject(org.mpxj.ResourceContainer value)
         {
             return ProxyObject(value, v => new ResourceContainer(this, v));
@@ -112,6 +117,11 @@ namespace MPXJ.Net.Proxy
         internal ProjectFile ProxyObject(org.mpxj.ProjectFile value)
         {
             return ProxyObject(value, v => new ProjectFile(this, v));
+        }
+
+        internal ProjectContext ProxyObject(org.mpxj.ProjectContext value)
+        {
+            return ProxyObject(value, v => new ProjectContext(this, v));
         }
 
         internal ResourceAssignment ProxyObject(org.mpxj.ResourceAssignment value)

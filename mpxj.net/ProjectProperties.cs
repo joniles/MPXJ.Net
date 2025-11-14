@@ -10,6 +10,8 @@ namespace MPXJ.Net
 
         internal ProjectProperties(ProxyManager proxyManager, org.mpxj.ProjectProperties javaObject) : base(proxyManager, javaObject) { }
 
+        public ProjectFile Parent => _proxyManager.ProxyObject(JavaObject.getParentFile());
+        
         public TimeUnit? DefaultDurationUnits
         {
             get => JavaObject.getDefaultDurationUnits().ConvertType();

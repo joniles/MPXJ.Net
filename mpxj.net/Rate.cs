@@ -21,7 +21,7 @@ namespace MPXJ.Net
         public double Amount => JavaObject.getAmount();
 
         public TimeUnit? Units => JavaObject.getUnits().ConvertType();
-
+        
         public override string ToString() => JavaObject.toString();
     }
 }
