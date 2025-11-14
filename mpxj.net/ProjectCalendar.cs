@@ -9,7 +9,7 @@ namespace MPXJ.Net
         public new org.mpxj.ProjectCalendar JavaObject => (org.mpxj.ProjectCalendar)base.JavaObject;
 
         internal ProjectCalendar(ProxyManager proxyManager, org.mpxj.ProjectCalendar javaObject) : base(proxyManager, javaObject) { }
-        
+
         public int? MinutesPerDay => JavaObject.getMinutesPerDay().ConvertType();
 
         public int? MinutesPerWeek => JavaObject.getMinutesPerWeek().ConvertType();
@@ -66,7 +66,7 @@ namespace MPXJ.Net
 
         public IList<ProjectCalendarException> ExpandedCalendarExceptions => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptions());
 
-        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptionsWithWorkWeeks());        
+        public IList<ProjectCalendarException> ExpandedCalendarExceptionsWithWorkWeeks => _proxyManager.ProxyList<org.mpxj.ProjectCalendarException, ProjectCalendarException>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getExpandedCalendarExceptionsWithWorkWeeks());
 
         public ProjectCalendar Parent
         {
@@ -125,7 +125,7 @@ namespace MPXJ.Net
         public IList<ProjectCalendar> DerivedCalendars => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendars());
 
         public IList<ProjectCalendar> DerivedCalendarsForProject(ProjectFile project) => _proxyManager.ProxyList<org.mpxj.ProjectCalendar, ProjectCalendar>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getDerivedCalendarsForProject(project.JavaObject));
-        
+
         public override string ToString() => JavaObject.toString();
 
         public ProjectContext ProjectContext => _proxyManager.ProxyObject(JavaObject.getProjectContext());
