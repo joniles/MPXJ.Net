@@ -13,9 +13,9 @@ namespace MPXJ.Net
             _proxyManager = proxyManager;
         }
 
-        public StructuredNotes(ProjectFile file, int uniqueId, NotesTopic topic, Notes notes) : base(new org.mpxj.StructuredNotes(file.JavaObject, uniqueId.ConvertType(), topic.JavaObject, notes.JavaObject))
+        public StructuredNotes(ProjectContext context, int uniqueId, NotesTopic topic, Notes notes) : base(new org.mpxj.StructuredNotes(context.JavaObject, uniqueId.ConvertType(), topic.JavaObject, notes.JavaObject))
         {
-            _proxyManager = file._proxyManager;
+            _proxyManager = context._proxyManager;
         }
 
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
