@@ -116,7 +116,7 @@ namespace MPXJ.Net
 
         public ProjectCalendar BaselineCalendar => _proxyManager.ProxyObject(JavaObject.getBaselineCalendar());
 
-        public IList<ProjectFile> Baselines => _proxyManager.ProxyList<org.mpxj.ProjectFile, ProjectFile>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getBaselines());
+        public IDictionary<int?, ProjectFile> Baselines => _proxyManager.ProxyDictionary<java.lang.Integer, org.mpxj.ProjectFile, int?, ProjectFile>(k => k.ConvertType(), k => k.ConvertType(), v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getBaselines());
 
         public void SetBaseline(ProjectFile baseline) => JavaObject.setBaseline(baseline.JavaObject);
 
