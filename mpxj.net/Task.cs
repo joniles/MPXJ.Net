@@ -1304,6 +1304,26 @@ namespace MPXJ.Net
             set => JavaObject.setFloatPathOrder(value.ConvertType());
         }
 
+        public double? SchedulePercentComplete => JavaObject.getSchedulePercentComplete().ConvertType();
+
+        public double? EstimatedWeight
+        {
+            get => JavaObject.getEstimatedWeight().ConvertType();
+            set => JavaObject.setEstimatedWeight(value.ConvertType());
+        }
+
+        public bool AutoComputeActuals
+        {
+            get => JavaObject.getAutoComputeActuals();
+            set => JavaObject.setAutoComputeActuals(value);
+        }
+
+        public double? OriginalBudget
+        {
+            get => JavaObject.getOriginalBudget().ConvertType();
+            set => JavaObject.setOriginalBudget(value.ConvertType());
+        }
+
         public bool ShowStartText => JavaObject.getShowStartText();
 
         public bool ShowFinishText => JavaObject.getShowFinishText();

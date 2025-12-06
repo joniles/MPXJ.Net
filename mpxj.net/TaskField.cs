@@ -999,6 +999,10 @@ namespace MPXJ.Net
         public static readonly TaskField MethodologyGuid = new TaskField(org.mpxj.TaskField.METHODOLOGY_GUID);
         public static readonly TaskField FloatPath = new TaskField(org.mpxj.TaskField.FLOAT_PATH);
         public static readonly TaskField FloatPathOrder = new TaskField(org.mpxj.TaskField.FLOAT_PATH_ORDER);
+        public static readonly TaskField ScheduPercentComplete = new TaskField(org.mpxj.TaskField.SCHEDULE_PERCENT_COMPLETE);
+        public static readonly TaskField EstimatedWeight = new TaskField(org.mpxj.TaskField.ESTIMATED_WEIGHT);
+        public static readonly TaskField AutoComputeActuals = new TaskField(org.mpxj.TaskField.AUTO_COMPUTE_ACTUALS);
+        public static readonly TaskField OriginalBudget = new TaskField(org.mpxj.TaskField.ORIGINAL_BUDGET);
         
         private TaskField(org.mpxj.TaskField javaObject)
         {
