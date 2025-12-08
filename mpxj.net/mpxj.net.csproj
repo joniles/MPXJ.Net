@@ -23,7 +23,7 @@ The Java version of MPXJ is dynamically retrieved and translated into a .Net ass
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="IKVM.Maven.Sdk" Version="1.10.0" />
+    <PackageReference Include="IKVM.Maven.Sdk" Version="1.11.0" />
     <MavenReference Include="net.sf.mpxj:mpxj" Version="15.0.0" />
   </ItemGroup>
 
