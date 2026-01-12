@@ -485,6 +485,11 @@ namespace MPXJ.Net.Proxy
             return ProxyObject(value, v => new PwaProject(v));
         }
 
+        internal MsPlannerProject ProxyObject(org.mpxj.msplanner.MsPlannerProject value)
+        {
+            return ProxyObject(value, v => new MsPlannerProject(v));
+        }
+
         internal WebServicesProject ProxyObject(org.mpxj.primavera.webservices.WebServicesProject value)
         {
             return ProxyObject(value, v => new WebServicesProject(v));
