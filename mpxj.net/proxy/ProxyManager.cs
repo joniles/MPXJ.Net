@@ -768,22 +768,22 @@ namespace MPXJ.Net.Proxy
 
         internal IList<N> ProxyList<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.List value)
         {
-            return ProxyObject(value, l => new ProxyList<M, N>(fromJava, toJava, l));
+            return ProxyObject(value, l => new ProxyList<M, N>(fromJava, toJava, l), typeof(N).Name);
         }
 
         internal ICollection<N> ProxyCollection<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Collection value)
         {
-            return ProxyObject(value, l => new ProxyCollection<M, N>(fromJava, toJava, l));
+            return ProxyObject(value, l => new ProxyCollection<M, N>(fromJava, toJava, l), typeof(N).Name);
         }
 
         internal ISet<N> ProxySet<M, N>(Func<M, N> fromJava, Func<N, M> toJava, java.util.Set value)
         {
-            return ProxyObject(value, l => new ProxySet<M, N>(fromJava, toJava, l));
+            return ProxyObject(value, l => new ProxySet<M, N>(fromJava, toJava, l), typeof(N).Name);
         }
 
         internal IDictionary<NK, NV> ProxyDictionary<MK, MV, NK, NV>(Func<MK, NK> keyFromJava, Func<NK, MK> keyToJava, Func<MV, NV> valueFromJava, Func<NV, MV> valueToJava, java.util.Map value)
         {
-            return ProxyObject(value, l => new ProxyDictionary<MK, MV, NK, NV>(this, keyFromJava, keyToJava, valueFromJava, valueToJava, l));
+            return ProxyObject(value, l => new ProxyDictionary<MK, MV, NK, NV>(this, keyFromJava, keyToJava, valueFromJava, valueToJava, l), typeof(NK).Name + "."  + typeof(NV).Name);
         }
     }
 }

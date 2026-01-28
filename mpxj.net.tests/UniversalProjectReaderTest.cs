@@ -11,6 +11,22 @@ namespace MPXJ.Net
             var project = new UniversalProjectReader().Read("TestData/Sample1.mpp");
             Assert.That(project, Is.Not.Null);
 
+            // While we're here, retrieve some ProxyList attributes from the project
+            // to ensure that caching is working as expected, particularly for Collections.emptyList().
+            foreach(var task in project.Tasks)
+            {
+                Assert.That(task.ToString(), Is.Not.Null);
+                foreach (var relation in task.Predecessors)
+                {
+                    Assert.That(relation.ToString(), Is.Not.Null);
+                }
+
+                foreach (var assignment in task.ResourceAssignments)
+                {
+                    Assert.That(assignment.ToString(), Is.Not.Null);
+                }
+            }
+            
             var config = project.ProjectConfig;
             Assert.That(config, Is.Not.Null);
 

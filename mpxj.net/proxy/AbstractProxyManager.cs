@@ -35,14 +35,17 @@ namespace MPXJ.Net.Proxy
             return o.JavaObject;
         }
 
-        protected N ProxyObject<M, N>(M o, Func<M, N> proxyFunction)
+        protected N ProxyObject<M, N>(M o, Func<M, N> proxyFunction, string prefix=null)
         {
             if (o == null)
             {
                 return default;
             }
 
-            var key = GetKey(o);
+            // The optional prefix is used to disambiguate collections.
+            // In particular different list types could generate the same key
+            // when Collections.emptyList() is returned by MPXJ.
+            var key = prefix == null ? GetKey(o) : prefix + "." + GetKey(o);
             if (!_objectCache.ContainsKey(key))
             {
                 _objectCache[key] = proxyFunction.Invoke(o);
