@@ -118,7 +118,7 @@ namespace MPXJ.Net
             //
             // Add the timephased data to the assignment
             //
-            assignment1.TimephasedWork = new TimephasedWork[] { day1, day2, day3 }.ToList();
+            assignment1.TimephasedWork = new[] { day1, day2, day3 }.ToList();
 
             //
             // Write the file

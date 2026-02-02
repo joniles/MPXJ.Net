@@ -467,7 +467,7 @@ namespace MPXJ.Net.Proxy
 
         internal EpsProjectNode ProxyObject(org.mpxj.EpsProjectNode value)
         {
-            return ProxyObject(value, v => new EpsProjectNode(this,v));
+            return ProxyObject(value, v => new EpsProjectNode(v));
         }
 
         internal OpcProject ProxyObject(org.mpxj.opc.OpcProject value)

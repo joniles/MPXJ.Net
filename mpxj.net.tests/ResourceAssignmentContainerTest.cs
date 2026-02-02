@@ -13,7 +13,7 @@ namespace MPXJ.Net
 
             var container = project.ResourceAssignments;
             Assert.That(container.JavaObject, Is.Not.Null);
-            Assert.That(container.PopulatedFields, Has.Count.EqualTo(22));
+            Assert.That(container.PopulatedFields, Has.Count.EqualTo(23));
             Assert.That(container.PopulatedFields.Contains(AssignmentField.UniqueId), Is.True);
             Assert.That(container.CustomFields, Has.Count.EqualTo(0));
             Assert.That(container.GetFieldTypeByAlias("foo"), Is.Null);
