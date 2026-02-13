@@ -16,10 +16,10 @@ namespace MPXJ.Net
             set => JavaObject.setTotalAmount(value.ConvertType());
         }
         
-        public override double? AmountPerDay
+        public override double? AmountPerHour
         {
-            get => ((java.lang.Number)JavaObject.getAmountPerDay()).ConvertType();
-            set => JavaObject.setAmountPerDay(value.ConvertType());
+            get => ((java.lang.Number)JavaObject.getAmountPerHour()).ConvertType();
+            set => JavaObject.setAmountPerHour(value.ConvertType());
         }
     }
 }

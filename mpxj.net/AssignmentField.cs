@@ -42,8 +42,11 @@ namespace MPXJ.Net
         public static readonly AssignmentField UniqueId = new AssignmentField(org.mpxj.AssignmentField.UNIQUE_ID);
         public static readonly AssignmentField TaskUniqueId = new AssignmentField(org.mpxj.AssignmentField.TASK_UNIQUE_ID);
         public static readonly AssignmentField ResourceUniqueId = new AssignmentField(org.mpxj.AssignmentField.RESOURCE_UNIQUE_ID);
-        public static readonly AssignmentField TimephasedWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_WORK);
-        public static readonly AssignmentField TimephasedActualWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ACTUAL_WORK);
+        public static readonly AssignmentField TimephasedRemainingRegularWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_REMAINING_REGULAR_WORK);
+        public static readonly AssignmentField TimephasedRemainingOvertimeWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_REMAINING_OVERTIME_WORK);
+        public static readonly AssignmentField TimephasedPlannedWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_PLANNED_WORK);
+        public static readonly AssignmentField TimephasedActualRegularWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ACTUAL_REGULAR_WORK);
+        public static readonly AssignmentField TimephasedActualIrregularWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ACTUAL_IRREGULAR_WORK);
         public static readonly AssignmentField TimephasedActualOvertimeWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ACTUAL_OVERTIME_WORK);
         public static readonly AssignmentField TimephasedBaselineWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_BASELINE_WORK);
         public static readonly AssignmentField TimephasedBaseline1Work = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_BASELINE1_WORK);

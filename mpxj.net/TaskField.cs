@@ -622,7 +622,7 @@ namespace MPXJ.Net
         public static readonly TaskField Tcpi = new TaskField(org.mpxj.TaskField.TCPI);
         public static readonly TaskField Warning = new TaskField(org.mpxj.TaskField.WARNING);
         public static readonly TaskField Unavailable = new TaskField(org.mpxj.TaskField.UNAVAILABLE);
-        public static readonly TaskField Splits = new TaskField(org.mpxj.TaskField.SPLITS);
+        public static readonly TaskField WorkSplits = new TaskField(org.mpxj.TaskField.WORK_SPLITS);
         public static readonly TaskField StartText = new TaskField(org.mpxj.TaskField.START_TEXT);
         public static readonly TaskField FinishText = new TaskField(org.mpxj.TaskField.FINISH_TEXT);
         public static readonly TaskField DurationText = new TaskField(org.mpxj.TaskField.DURATION_TEXT);

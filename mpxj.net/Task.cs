@@ -816,7 +816,7 @@ namespace MPXJ.Net
 
         public void SetFieldByAlias(string alias, object value) => JavaObject.setFieldByAlias(alias, value.GenericJavaObject());
 
-        public IList<DateTimeRange> Splits => _proxyManager.ProxyList<org.mpxj.LocalDateTimeRange, DateTimeRange>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getSplits());
+        public IList<DateTimeRange> WorkSplits => _proxyManager.ProxyList<org.mpxj.LocalDateTimeRange, DateTimeRange>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getWorkSplits());
 
         public void Remove() => JavaObject.remove();
 

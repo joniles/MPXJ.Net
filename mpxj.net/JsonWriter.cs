@@ -31,5 +31,11 @@ namespace MPXJ.Net
             get => JavaObject.getTimeUnits().ConvertType();
             set => JavaObject.setTimeUnits(value.ConvertType());
         }
+        
+        public bool WriteTimephasedData
+        {
+            get => JavaObject.getWriteTimephasedData();
+            set => JavaObject.setWriteTimephasedData(value);
+        }
     }
 }

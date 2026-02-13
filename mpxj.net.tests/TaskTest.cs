@@ -688,7 +688,7 @@ namespace MPXJ.Net
                 //Assert.That(task.Tcpi, Is.EqualTo(task.Get(TaskField.Tcpi)));
                 //Assert.That(task.Warning, Is.EqualTo(task.Get(TaskField.Warning)));
                 //Assert.That(task.Unavailable, Is.EqualTo(task.Get(TaskField.Unavailable)));
-                Assert.That(task.Splits, Is.EqualTo(task.Get(TaskField.Splits)));
+                Assert.That(task.WorkSplits, Is.EqualTo(task.Get(TaskField.WorkSplits)));
                 Assert.That(task.StartText, Is.EqualTo(task.Get(TaskField.StartText)));
                 Assert.That(task.FinishText, Is.EqualTo(task.Get(TaskField.FinishText)));
                 Assert.That(task.DurationText, Is.EqualTo(task.Get(TaskField.DurationText)));
