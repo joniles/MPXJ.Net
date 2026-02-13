@@ -588,6 +588,48 @@ namespace MPXJ.Net
 
         public IList<TimephasedCost> GetRawTimephasedBaselineCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineCost(index));
 
+        public IList<Duration> GetTimephasedPlannedWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedActualRegularWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualRegularWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedActualOvertimeWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualOvertimeWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedActualWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedRemainingRegularWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedRemainingRegularWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedRemainingOvertimeWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedRemainingOvertimeWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedRemainingWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedRemainingWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedWork(List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedWork(ranges.ConvertType(), units.ConvertType()));
+
+        public IList<Duration> GetTimephasedBaselineWork(int index, List<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineWork(index, ranges.ConvertType(), units.ConvertType()));
+
+        public IList<double?> GetTimephasedRemainingRegularCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingRegularCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedRemainingOvertimeCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingOvertimeCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedRemainingCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedActualRegularCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualRegularCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedActualOvertimeCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualOvertimeCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedActualCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedCost(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedBaselineCost(int index, List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedBaselineCost(index, ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedActualMaterial(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualMaterial(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedRemainingMaterial(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingMaterial(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedMaterial(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedMaterial(ranges.ConvertType()));
+
+        public IList<double?> GetTimephasedBaselineMaterial(int index, List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedBaselineMaterial(index, ranges.ConvertType()));
+
         public IDictionary<ResourceAssignmentCode, ResourceAssignmentCodeValue> ResourceAssignmentCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ResourceAssignmentCode, org.mpxj.ResourceAssignmentCodeValue, ResourceAssignmentCode, ResourceAssignmentCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceAssignmentCodeValues());
         
         public Rate GetEffectiveRate(DateTime date) => _proxyManager.ProxyObject(JavaObject.getEffectiveRate(date.ConvertType()));
