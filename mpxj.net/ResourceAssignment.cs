@@ -574,6 +574,26 @@ namespace MPXJ.Net
             set => JavaObject.setRemainingLateFinish(value.ConvertType());
         }
 
+        public double? ActualRegularCost => JavaObject.getActualRegularCost().ConvertType();
+
+        public double? RemainingRegularCost => JavaObject.getRemainingRegularCost().ConvertType();
+
+        public Duration ActualRegularWork => _proxyManager.ProxyObject(JavaObject.getActualRegularWork());
+
+        public Duration RemainingRegularWork => _proxyManager.ProxyObject(JavaObject.getRemainingRegularWork());
+
+        public double? PlannedMaterial => JavaObject.getPlannedMaterial().ConvertType();
+
+        public double? ActualMaterial => JavaObject.getActualMaterial().ConvertType();
+
+        public double? RemainingMaterial => JavaObject.getRemainingMaterial().ConvertType();
+
+        public double? Material => JavaObject.getMaterial().ConvertType();
+
+        public double? BaselineMaterial => JavaObject.getBaselineMaterial().ConvertType();
+
+        public double? GetBaselineMaterial(int baselineNumber) => JavaObject.getBaselineMaterial(baselineNumber).ConvertType();
+
         public IList<TimephasedWork> RawTimephasedPlannedWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedPlannedWork());
 
         public IList<TimephasedWork> RawTimephasedActualRegularWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedActualRegularWork());

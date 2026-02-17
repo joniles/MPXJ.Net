@@ -1324,6 +1324,14 @@ namespace MPXJ.Net
             set => JavaObject.setOriginalBudget(value.ConvertType());
         }
 
+        public double? ActualRegularCost => JavaObject.getActualRegularCost().ConvertType();
+
+        public double? RemainingRegularCost => JavaObject.getRemainingRegularCost().ConvertType();
+
+        public Duration ActualRegularWork => _proxyManager.ProxyObject(JavaObject.getActualRegularWork());
+
+        public Duration RemainingRegularWork => _proxyManager.ProxyObject(JavaObject.getRemainingRegularWork());
+        
         public bool ShowStartText => JavaObject.getShowStartText();
 
         public bool ShowFinishText => JavaObject.getShowFinishText();

@@ -701,6 +701,26 @@ namespace MPXJ.Net
             set => JavaObject.setCurrency(value.JavaObject);
         }
 
+        public double? ActualRegularCost => JavaObject.getActualRegularCost().ConvertType();
+
+        public double? RemainingRegularCost => JavaObject.getRemainingRegularCost().ConvertType();
+
+        public Duration ActualRegularWork => _proxyManager.ProxyObject(JavaObject.getActualRegularWork());
+
+        public Duration RemainingRegularWork => _proxyManager.ProxyObject(JavaObject.getRemainingRegularWork());
+
+        public double? PlannedMaterial => JavaObject.getPlannedMaterial().ConvertType();
+
+        public double? ActualMaterial => JavaObject.getActualMaterial().ConvertType();
+
+        public double? RemainingMaterial => JavaObject.getRemainingMaterial().ConvertType();
+
+        public double? Material => JavaObject.getMaterial().ConvertType();
+
+        public double? BaselineMaterial => JavaObject.getBaselineMaterial().ConvertType();
+
+        public double? GetBaselineMaterial(int baselineNumber) => JavaObject.getBaselineMaterial(baselineNumber).ConvertType();
+
         public IDictionary<ResourceCode, ResourceCodeValue> ResourceCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ResourceCode, org.mpxj.ResourceCodeValue, ResourceCode, ResourceCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceCodeValues());
         
         public IDictionary<RoleCode, RoleCodeValue> RoleCodeValues => _proxyManager.ProxyDictionary<org.mpxj.RoleCode, org.mpxj.RoleCodeValue, RoleCode, RoleCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getRoleCodeValues());
