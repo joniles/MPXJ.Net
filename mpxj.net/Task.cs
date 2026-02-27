@@ -1378,6 +1378,8 @@ namespace MPXJ.Net
 
         public IList<double?> GetTimephasedRemainingCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingCost(ranges.ConvertType()));
 
+        public IList<double?> GetTimephasedPlannedCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedPlannedCost(ranges.ConvertType()));
+        
         public IList<double?> GetTimephasedActualRegularCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualRegularCost(ranges.ConvertType()));
 
         public IList<double?> GetTimephasedActualOvertimeCost(List<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualOvertimeCost(ranges.ConvertType()));

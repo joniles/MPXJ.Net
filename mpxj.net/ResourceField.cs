@@ -566,8 +566,32 @@ namespace MPXJ.Net
         public static readonly ResourceField DefaultUnits = new ResourceField(org.mpxj.ResourceField.DEFAULT_UNITS);
         public static readonly ResourceField ShiftUniqueId = new ResourceField(org.mpxj.ResourceField.SHIFT_UNIQUE_ID);
         public static readonly ResourceField PrimaryRoleUniqueId = new ResourceField(org.mpxj.ResourceField.PRIMARY_ROLE_UNIQUE_ID);
-        public static readonly ResourceField CurrencyUniqueId = new ResourceField(org.mpxj.ResourceField.CURRENCY_UNIQUE_ID);
         public static readonly ResourceField Finish = new ResourceField(org.mpxj.ResourceField.FINISH);
+        public static readonly ResourceField ResourceCodeValues = new ResourceField(org.mpxj.ResourceField.RESOURCE_CODE_VALUES);
+        public static readonly ResourceField RoleCodeValues = new ResourceField(org.mpxj.ResourceField.ROLE_CODE_VALUES);
+        public static readonly ResourceField CurrencyUniqueId = new ResourceField(org.mpxj.ResourceField.CURRENCY_UNIQUE_ID);
+        public static readonly ResourceField PlannedWork = new ResourceField(org.mpxj.ResourceField.PLANNED_WORK);
+        public static readonly ResourceField ActualRegularWork = new ResourceField(org.mpxj.ResourceField.ACTUAL_REGULAR_WORK);
+        public static readonly ResourceField RemainingRegularWork = new ResourceField(org.mpxj.ResourceField.REMAINING_REGULAR_WORK);
+        public static readonly ResourceField ActualRegularCost = new ResourceField(org.mpxj.ResourceField.ACTUAL_REGULAR_COST);
+        public static readonly ResourceField RemainingRegularCost = new ResourceField(org.mpxj.ResourceField.REMAINING_REGULAR_COST);
+        public static readonly ResourceField PlannedMaterial = new ResourceField(org.mpxj.ResourceField.PLANNED_MATERIAL);
+        public static readonly ResourceField ActualMaterial = new ResourceField(org.mpxj.ResourceField.ACTUAL_MATERIAL);
+        public static readonly ResourceField RemainingMaterial= new ResourceField(org.mpxj.ResourceField.REMAINING_MATERIAL);
+        public static readonly ResourceField Material = new ResourceField(org.mpxj.ResourceField.MATERIAL);
+        public static readonly ResourceField BaselineMaterial = new ResourceField(org.mpxj.ResourceField.BASELINE_MATERIAL);
+        public static readonly ResourceField Baseline1Material = new ResourceField(org.mpxj.ResourceField.BASELINE1_MATERIAL);
+        public static readonly ResourceField Baseline2Material = new ResourceField(org.mpxj.ResourceField.BASELINE2_MATERIAL);
+        public static readonly ResourceField Baseline3Material = new ResourceField(org.mpxj.ResourceField.BASELINE3_MATERIAL);
+        public static readonly ResourceField Baseline4Material = new ResourceField(org.mpxj.ResourceField.BASELINE4_MATERIAL);
+        public static readonly ResourceField Baseline5Material = new ResourceField(org.mpxj.ResourceField.BASELINE5_MATERIAL);
+        public static readonly ResourceField Baseline6Material = new ResourceField(org.mpxj.ResourceField.BASELINE6_MATERIAL);
+        public static readonly ResourceField Baseline7Material = new ResourceField(org.mpxj.ResourceField.BASELINE7_MATERIAL);
+        public static readonly ResourceField Baseline8Material = new ResourceField(org.mpxj.ResourceField.BASELINE8_MATERIAL);
+        public static readonly ResourceField Baseline9Material = new ResourceField(org.mpxj.ResourceField.BASELINE9_MATERIAL);
+        public static readonly ResourceField Baseline10Material = new ResourceField(org.mpxj.ResourceField.BASELINE10_MATERIAL);
+        public static readonly ResourceField PlannedCost = new ResourceField(org.mpxj.ResourceField.PLANNED_COST);
+
 
         private ResourceField(org.mpxj.ResourceField javaObject)
         {
