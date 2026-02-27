@@ -516,6 +516,26 @@ namespace MPXJ.Net
         public static readonly AssignmentField RemainingLateStart = new AssignmentField(org.mpxj.AssignmentField.REMAINING_LATE_START);
         public static readonly AssignmentField RemainingLateFinish = new AssignmentField(org.mpxj.AssignmentField.REMAINING_LATE_FINISH);
         public static readonly AssignmentField RemainingAssignmentUnits = new AssignmentField(org.mpxj.AssignmentField.REMAINING_ASSIGNMENT_UNITS);
+        public static readonly AssignmentField ResourceAssignmentCodeValues = new AssignmentField(org.mpxj.AssignmentField.RESOURCE_ASSIGNMENT_CODE_VALUES);
+        public static readonly AssignmentField ActualRegularCost = new AssignmentField(org.mpxj.AssignmentField.ACTUAL_REGULAR_COST);
+        public static readonly AssignmentField RemainingRegularCost = new AssignmentField(org.mpxj.AssignmentField.REMAINING_REGULAR_COST);
+        public static readonly AssignmentField ActualRegularWork = new AssignmentField(org.mpxj.AssignmentField.ACTUAL_REGULAR_WORK);
+        public static readonly AssignmentField RemainingRegularWork = new AssignmentField(org.mpxj.AssignmentField.REMAINING_REGULAR_WORK);
+        public static readonly AssignmentField PlannedMaterial = new AssignmentField(org.mpxj.AssignmentField.PLANNED_MATERIAL);
+        public static readonly AssignmentField ActualMaterial = new AssignmentField(org.mpxj.AssignmentField.ACTUAL_MATERIAL);
+        public static readonly AssignmentField RemainingMaterial = new AssignmentField(org.mpxj.AssignmentField.REMAINING_MATERIAL);
+        public static readonly AssignmentField Material = new AssignmentField(org.mpxj.AssignmentField.MATERIAL);
+        public static readonly AssignmentField BaselineMaterial = new AssignmentField(org.mpxj.AssignmentField.BASELINE_MATERIAL);
+        public static readonly AssignmentField Baseline1Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE1_MATERIAL);
+        public static readonly AssignmentField Baseline2Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE2_MATERIAL);
+        public static readonly AssignmentField Baseline3Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE3_MATERIAL);
+        public static readonly AssignmentField Baseline4Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE4_MATERIAL);
+        public static readonly AssignmentField Baseline5Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE5_MATERIAL);
+        public static readonly AssignmentField Baseline6Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE6_MATERIAL);
+        public static readonly AssignmentField Baseline7Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE7_MATERIAL);
+        public static readonly AssignmentField Baseline8Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE8_MATERIAL);
+        public static readonly AssignmentField Baseline9Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE9_MATERIAL);
+        public static readonly AssignmentField Baseline10Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE10_MATERIAL);
         public static readonly AssignmentField Finish = new AssignmentField(org.mpxj.AssignmentField.FINISH);
 
         private AssignmentField(org.mpxj.AssignmentField javaObject)
