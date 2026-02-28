@@ -38,7 +38,7 @@ namespace MPXJ.Net
             Assert.That(timephasedWorkItem.AmountPerHour, Is.EqualTo(Duration.GetInstance(60, TimeUnit.Minutes)));
             Assert.That(timephasedWorkItem.Finish, Is.EqualTo(new DateTime(2023,8,1,17,0, 0)));
             Assert.That(timephasedWorkItem.Start, Is.EqualTo(new DateTime(2023,7,28,8,0, 0)));
-            Assert.That(timephasedWorkItem.TotalAmount, Is.EqualTo(Duration.GetInstance(24, TimeUnit.Hours)));
+            Assert.That(timephasedWorkItem.TotalAmount, Is.EqualTo(Duration.GetInstance(1440, TimeUnit.Minutes)));
         }
 
         [Test]
