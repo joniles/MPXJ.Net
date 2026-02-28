@@ -5,7 +5,8 @@ namespace MPXJ.Net
 {
     public class TaskContainer : ProjectEntityWithIDContainer<org.mpxj.Task, Task>
     {
-        private readonly ProxyManager _proxyManager;
+        private readonly ProxyManager _proxyManager = new ProxyManager();
+        
         public new org.mpxj.TaskContainer JavaObject => (org.mpxj.TaskContainer)base.JavaObject;
 
         internal TaskContainer(ProxyManager proxyManager, org.mpxj.TaskContainer javaObject) : base(proxyManager.ProxyObject, value => value.JavaObject, javaObject)
