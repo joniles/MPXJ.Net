@@ -1,5 +1,3 @@
-using MPXJ.Net.Proxy;
-
 namespace MPXJ.Net
 {
     public class EpsProjectNode

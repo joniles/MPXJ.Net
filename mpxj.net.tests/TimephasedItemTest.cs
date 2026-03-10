@@ -28,11 +28,11 @@ namespace MPXJ.Net
 
             var task = project.GetTaskByID(2);
             Assert.That(task.Name, Is.EqualTo("Task 1"));
-            Assert.That(task.ResourceAssignments.Count, Is.EqualTo(1));
+            Assert.That(task.ResourceAssignments, Has.Count.EqualTo(1));
 
             var assignment = task.ResourceAssignments[0];
             var timephasedWorkItems = assignment.RawTimephasedRemainingRegularWork;
-            Assert.That(timephasedWorkItems.Count, Is.EqualTo(1));
+            Assert.That(timephasedWorkItems, Has.Count.EqualTo(1));
 
             var timephasedWorkItem = timephasedWorkItems[0];
             Assert.That(timephasedWorkItem.AmountPerHour, Is.EqualTo(Duration.GetInstance(60, TimeUnit.Minutes)));
