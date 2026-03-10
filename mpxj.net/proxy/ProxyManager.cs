@@ -8,6 +8,8 @@ namespace MPXJ.Net.Proxy
 {    
     internal class ProxyManager : AbstractProxyManager
     {
+        private static readonly IList<object> EmptyList = new List<object>().AsReadOnly();
+        
         public ProxyManager()
         {
             //
@@ -688,6 +690,13 @@ namespace MPXJ.Net.Proxy
                 case "java.util.UUID":
                     return ((java.util.UUID)o).ConvertType();
 
+                case "java.util.Collections+EmptyList":
+                    return EmptyList;
+
+                case "java.util.ArrayList":
+                    // Best effort conversion leaving original Java types
+                    return ProxyList<object, object>(m => m, n => n, (java.util.List)o);
+                
                 case "java.util.Map":
                 case "java.util.HashMap":
                 case "java.util.TreeMap":

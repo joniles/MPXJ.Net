@@ -11,13 +11,7 @@
             get => JavaObject.getMicrosoftProjectCompatibleOutput();
             set => JavaObject.setMicrosoftProjectCompatibleOutput(value);
         }
-
-        public bool SplitTimephasedAsDays
-        {
-            get => JavaObject.getSplitTimephasedAsDays();
-            set => JavaObject.setSplitTimephasedAsDays(value);
-        }
-
+        
         public bool WriteTimephasedData
         {
             get => JavaObject.getWriteTimephasedData();

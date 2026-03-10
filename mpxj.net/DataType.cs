@@ -54,7 +54,14 @@
         Custom,
         RateSource,
         TaskMode,
-        StepList
+        StepList,
+        TotalSlackType,
+        RelationshipLagCalendar,
+        SchedulingProgressedActivities,
+        ActivityCodeValues,
+        CodeValues,
+        TimephasedWorkList,
+        TimephasedCostList
     }
 }
 

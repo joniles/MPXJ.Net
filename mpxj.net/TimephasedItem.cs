@@ -18,19 +18,13 @@ namespace MPXJ.Net
             set => JavaObject.setStart(value.ConvertType());
         }
         
-        public bool Modified
-        {
-            get => JavaObject.getModified();
-            set => JavaObject.setModified(value);
-        }
-        
         public DateTime? Finish
         {
             get => JavaObject.getFinish().ConvertType();
             set => JavaObject.setFinish(value.ConvertType());
         }
 
-        public abstract M AmountPerDay
+        public abstract M AmountPerHour
         {
             get;
             set;

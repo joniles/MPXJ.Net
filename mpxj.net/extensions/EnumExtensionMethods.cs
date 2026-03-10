@@ -661,5 +661,11 @@ namespace MPXJ.Net
         {
             return org.mpxj.primavera.webservices.WebServicesExportType.values()[(int)value];
         }
+        
+        // TimescaleUnits
+        public static org.mpxj.TimescaleUnits ConvertType(this TimescaleUnits value)
+        {
+            return org.mpxj.TimescaleUnits.values()[(int)value];
+        }
     }
 }

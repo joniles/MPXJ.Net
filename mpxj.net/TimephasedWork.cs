@@ -16,10 +16,10 @@ namespace MPXJ.Net
             set => JavaObject.setTotalAmount(value.JavaObject);
         }
         
-        public override Duration AmountPerDay
+        public override Duration AmountPerHour
         {
-            get => new Duration((org.mpxj.Duration)JavaObject.getAmountPerDay());
-            set => JavaObject.setAmountPerDay(value.JavaObject);
+            get => new Duration((org.mpxj.Duration)JavaObject.getAmountPerHour());
+            set => JavaObject.setAmountPerHour(value.JavaObject);
         }
     }
 }

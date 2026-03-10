@@ -622,7 +622,7 @@ namespace MPXJ.Net
         public static readonly TaskField Tcpi = new TaskField(org.mpxj.TaskField.TCPI);
         public static readonly TaskField Warning = new TaskField(org.mpxj.TaskField.WARNING);
         public static readonly TaskField Unavailable = new TaskField(org.mpxj.TaskField.UNAVAILABLE);
-        public static readonly TaskField Splits = new TaskField(org.mpxj.TaskField.SPLITS);
+        public static readonly TaskField WorkSplits = new TaskField(org.mpxj.TaskField.WORK_SPLITS);
         public static readonly TaskField StartText = new TaskField(org.mpxj.TaskField.START_TEXT);
         public static readonly TaskField FinishText = new TaskField(org.mpxj.TaskField.FINISH_TEXT);
         public static readonly TaskField DurationText = new TaskField(org.mpxj.TaskField.DURATION_TEXT);
@@ -1003,7 +1003,11 @@ namespace MPXJ.Net
         public static readonly TaskField EstimatedWeight = new TaskField(org.mpxj.TaskField.ESTIMATED_WEIGHT);
         public static readonly TaskField AutoComputeActuals = new TaskField(org.mpxj.TaskField.AUTO_COMPUTE_ACTUALS);
         public static readonly TaskField OriginalBudget = new TaskField(org.mpxj.TaskField.ORIGINAL_BUDGET);
-        
+        public static readonly TaskField ActualRegularWork = new TaskField(org.mpxj.TaskField.ACTUAL_REGULAR_WORK);
+        public static readonly TaskField RemainingRegularWork = new TaskField(org.mpxj.TaskField.REMAINING_REGULAR_WORK);
+        public static readonly TaskField ActualRegularCost = new TaskField(org.mpxj.TaskField.ACTUAL_REGULAR_COST);
+        public static readonly TaskField RemainingRegularCost = new TaskField(org.mpxj.TaskField.REMAINING_REGULAR_COST);
+
         private TaskField(org.mpxj.TaskField javaObject)
         {
             JavaObject = javaObject;
