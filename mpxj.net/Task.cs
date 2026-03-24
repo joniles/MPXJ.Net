@@ -1262,10 +1262,17 @@ namespace MPXJ.Net
             set => JavaObject.setActualWorkLabor(value?.JavaObject);
         }
 
+        [Obsolete("Use ActualWorkNonLabor")]
         public Duration ActualWorkNonlabor
         {
-            get => _proxyManager.ProxyObject(JavaObject.getActualWorkNonlabor());
-            set => JavaObject.setActualWorkNonlabor(value?.JavaObject);
+            get => _proxyManager.ProxyObject(JavaObject.getActualWorkNonLabor());
+            set => JavaObject.setActualWorkNonLabor(value?.JavaObject);
+        }
+
+        public Duration ActualWorkNonLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getActualWorkNonLabor());
+            set => JavaObject.setActualWorkNonLabor(value?.JavaObject);
         }
 
         public Duration PlannedWorkLabor
@@ -1274,10 +1281,17 @@ namespace MPXJ.Net
             set => JavaObject.setPlannedWorkLabor(value?.JavaObject);
         }
 
+        [Obsolete("Use PlannedWorkNonLabor")]
         public Duration PlannedWorkNonlabor
         {
-            get => _proxyManager.ProxyObject(JavaObject.getPlannedWorkNonlabor());
-            set => JavaObject.setPlannedWorkNonlabor(value?.JavaObject);
+            get => _proxyManager.ProxyObject(JavaObject.getPlannedWorkNonLabor());
+            set => JavaObject.setPlannedWorkNonLabor(value?.JavaObject);
+        }
+
+        public Duration PlannedWorkNonLabor
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getPlannedWorkNonLabor());
+            set => JavaObject.setPlannedWorkNonLabor(value?.JavaObject);
         }
 
         public Duration RemainingWorkLabor
@@ -1288,8 +1302,8 @@ namespace MPXJ.Net
 
         public Duration RemainingWorkNonLabor
         {
-            get => _proxyManager.ProxyObject(JavaObject.getRemainingWorkNonlabor());
-            set => JavaObject.setRemainingWorkNonlabor(value?.JavaObject);
+            get => _proxyManager.ProxyObject(JavaObject.getRemainingWorkNonLabor());
+            set => JavaObject.setRemainingWorkNonLabor(value?.JavaObject);
         }
 
         public int? FloatPath
@@ -1322,6 +1336,78 @@ namespace MPXJ.Net
         {
             get => JavaObject.getOriginalBudget().ConvertType();
             set => JavaObject.setOriginalBudget(value.ConvertType());
+        }
+        
+        public double? PlannedCostLabor
+        {
+            get => JavaObject.getPlannedCostLabor().ConvertType();
+            set => JavaObject.setPlannedCostLabor(value.ConvertType());
+        }
+
+        public double? PlannedCostNonLabor
+        {
+            get => JavaObject.getPlannedCostNonLabor().ConvertType();
+            set => JavaObject.setPlannedCostNonLabor(value.ConvertType());
+        }
+
+        public double? PlannedCostMaterial
+        {
+            get => JavaObject.getPlannedCostMaterial().ConvertType();
+            set => JavaObject.setPlannedCostMaterial(value.ConvertType());
+        }
+
+        public double? PlannedCostExpense
+        {
+            get => JavaObject.getPlannedCostExpense().ConvertType();
+            set => JavaObject.setPlannedCostExpense(value.ConvertType());
+        }
+
+        public double? ActualCostLabor
+        {
+            get => JavaObject.getActualCostLabor().ConvertType();
+            set => JavaObject.setActualCostLabor(value.ConvertType());
+        }
+
+        public double? ActualCostNonLabor
+        {
+            get => JavaObject.getActualCostNonLabor().ConvertType();
+            set => JavaObject.setActualCostNonLabor(value.ConvertType());
+        }
+
+        public double? ActualCostMaterial
+        {
+            get => JavaObject.getActualCostMaterial().ConvertType();
+            set => JavaObject.setActualCostMaterial(value.ConvertType());
+        }
+
+        public double? ActualCostExpense
+        {
+            get => JavaObject.getActualCostExpense().ConvertType();
+            set => JavaObject.setActualCostExpense(value.ConvertType());
+        }
+
+        public double? RemainingCostLabor
+        {
+            get => JavaObject.getRemainingCostLabor().ConvertType();
+            set => JavaObject.setRemainingCostLabor(value.ConvertType());
+        }
+
+        public double? RemainingCostNonLabor
+        {
+            get => JavaObject.getRemainingCostNonLabor().ConvertType();
+            set => JavaObject.setRemainingCostNonLabor(value.ConvertType());
+        }
+
+        public double? RemainingCostMaterial
+        {
+            get => JavaObject.getRemainingCostMaterial().ConvertType();
+            set => JavaObject.setRemainingCostMaterial(value.ConvertType());
+        }
+
+        public double? RemainingCostExpense
+        {
+            get => JavaObject.getRemainingCostExpense().ConvertType();
+            set => JavaObject.setRemainingCostExpense(value.ConvertType());
         }
 
         public double? ActualRegularCost => JavaObject.getActualRegularCost().ConvertType();

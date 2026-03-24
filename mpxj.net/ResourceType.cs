@@ -4,7 +4,8 @@
 	{
 		Material,
 		Work,
-		Cost
+		Cost,
+		NonLabor
 	}
 }
 
