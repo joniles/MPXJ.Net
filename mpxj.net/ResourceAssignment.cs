@@ -601,12 +601,20 @@ namespace MPXJ.Net
         public IList<TimephasedWork> RawTimephasedRemainingRegularWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedRemainingRegularWork());
         
         public IList<TimephasedWork> RawTimephasedActualOvertimeWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedActualOvertimeWork());
-
+        
         public IList<TimephasedWork> RawTimephasedRemainingOvertimeWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedRemainingOvertimeWork());
+        
+        public IList<TimephasedCost> RawTimephasedBudgetCost => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBudgetCost());
+
+        public IList<TimephasedWork> RawTimephasedBudgetWork => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBudgetWork());
         
         public IList<TimephasedWork> GetRawTimephasedBaselineWork(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineWork(index));
 
+        public IList<TimephasedWork> GetRawTimephasedBaselineBudgetWork(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedWork, TimephasedWork>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineBudgetWork(index));
+        
         public IList<TimephasedCost> GetRawTimephasedBaselineCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineCost(index));
+
+        public IList<TimephasedCost> GetRawTimephasedBaselineBudgetCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineBudgetCost(index));
         
         public IList<Duration> GetTimephasedPlannedWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork(ranges.ConvertType(), units.ConvertType()));
         
@@ -624,8 +632,12 @@ namespace MPXJ.Net
 
         public IList<Duration> GetTimephasedWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedWork(ranges.ConvertType(), units.ConvertType()));
 
+        public IList<Duration> GetTimephasedBudgetWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBudgetWork(ranges.ConvertType(), units.ConvertType()));
+        
         public IList<Duration> GetTimephasedBaselineWork(int index, IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineWork(index, ranges.ConvertType(), units.ConvertType()));
 
+        public IList<Duration> GetTimephasedBaselineBudgetWork(int index, IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedBaselineBudgetWork(index, ranges.ConvertType(), units.ConvertType()));
+        
         public IList<double?> GetTimephasedRemainingRegularCost(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingRegularCost(ranges.ConvertType()));
 
         public IList<double?> GetTimephasedRemainingOvertimeCost(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedRemainingOvertimeCost(ranges.ConvertType()));
@@ -642,8 +654,12 @@ namespace MPXJ.Net
 
         public IList<double?> GetTimephasedCost(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedCost(ranges.ConvertType()));
 
+        public IList<double?> GetTimephasedBudgetCost(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedBudgetCost(ranges.ConvertType()));
+        
         public IList<double?> GetTimephasedBaselineCost(int index, IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedBaselineCost(index, ranges.ConvertType()));
 
+        public IList<double?> GetTimephasedBaselineBudgetCost(int index, IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedBaselineBudgetCost(index, ranges.ConvertType()));
+        
         public IList<double?> GetTimephasedPlannedMaterial(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedPlannedMaterial(ranges.ConvertType()));
         
         public IList<double?> GetTimephasedActualMaterial(IList<DateTimeRange> ranges) => _proxyManager.ProxyList<java.lang.Number, double?>(value => value.ConvertType(), value => value.ConvertType(), JavaObject.getTimephasedActualMaterial(ranges.ConvertType()));

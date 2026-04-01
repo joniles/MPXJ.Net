@@ -536,6 +536,30 @@ namespace MPXJ.Net
         public static readonly AssignmentField Baseline8Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE8_MATERIAL);
         public static readonly AssignmentField Baseline9Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE9_MATERIAL);
         public static readonly AssignmentField Baseline10Material = new AssignmentField(org.mpxj.AssignmentField.BASELINE10_MATERIAL);
+        public static readonly AssignmentField RawTimephasedBudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaselineBudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaselineBudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline1BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE1_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline1BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE1_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline2BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE2_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline2BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE2_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline3BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE3_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline3BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE3_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline4BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE4_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline4BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE4_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline5BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE5_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline5BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE5_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline6BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE6_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline6BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE6_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline7BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE7_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline7BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE7_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline8BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE8_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline8BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE8_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline9BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE9_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline9BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE9_BUDGET_COST);
+        public static readonly AssignmentField RawTimephasedBaseline10BudgetWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE10_BUDGET_WORK);
+        public static readonly AssignmentField RawTimephasedBaseline10BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE10_BUDGET_COST);
         public static readonly AssignmentField Finish = new AssignmentField(org.mpxj.AssignmentField.FINISH);
 
         private AssignmentField(org.mpxj.AssignmentField javaObject)
