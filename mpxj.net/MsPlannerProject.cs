@@ -14,16 +14,20 @@ namespace MPXJ.Net
 
         public MsPlannerProject() { }
 
-        public Guid? ProjectId
-        {
-            get => JavaObject.getProjectId().ConvertType();
-            set => JavaObject.setProjectId(value.ConvertType());
-        }
+        public Guid? ProjectId => JavaObject.getProjectId().ConvertType();
 
-        public string ProjectName
-        {
-            get => JavaObject.getProjectName();
-            set => JavaObject.setProjectName(value);
-        }
+        public string ProjectName => JavaObject.getProjectName();
+
+        public DateTime? CreatedOn => JavaObject.getCreatedOn().ConvertType();
+
+        public DateTime? ModifiedOn => JavaObject.getModifiedOn().ConvertType();
+        
+        public string ProjectManagerName => JavaObject.getProjectManagerName();
+        
+        public Guid? PortfolioId => JavaObject.getPortfolioId().ConvertType();
+        
+        public string PortfolioName => JavaObject.getPortfolioName();
+
+        public int? StateCode => JavaObject.getStateCode().ConvertType();
     }
 }
