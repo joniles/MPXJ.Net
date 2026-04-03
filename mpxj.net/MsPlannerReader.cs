@@ -16,6 +16,8 @@ namespace MPXJ.Net
         
         public IList<MsPlannerProject> GetProjects() => _proxyManager.ProxyList<org.mpxj.msplanner.MsPlannerProject, MsPlannerProject>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getProjects());
 
+        public IList<MsPlannerPortfolio> GetPortfolios() => _proxyManager.ProxyList<org.mpxj.msplanner.MsPlannerPortfolio, MsPlannerPortfolio>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getPortfolios());
+        
         public ProjectFile ReadProject(Guid? id) => id == null ? null : _proxyManager.ProxyObject(JavaObject.readProject(id.ConvertType()));
     }
 }
