@@ -187,6 +187,8 @@ namespace MPXJ.Net
         public static readonly ProjectField EnableSummarization = new ProjectField(org.mpxj.ProjectField.ENABLE_SUMMARIZATION);
         public static readonly ProjectField EnablePublication = new ProjectField(org.mpxj.ProjectField.ENABLE_PUBLICATION);
         public static readonly ProjectField ActivityDefaultCalendarUniqueId = new ProjectField(org.mpxj.ProjectField.ACTIVITY_DEFAULT_CALENDAR_UNIQUE_ID);
+        public static readonly ProjectField ActivityDefaultPricePerUnit = new ProjectField(org.mpxj.ProjectField.ACTIVITY_DEFAULT_PRICE_PER_UNIT);
+        public static readonly ProjectField UpdateUnitsWhenCostsChangeOnResourceAssignments = new ProjectField(org.mpxj.ProjectField.UPDATE_UNITS_WHEN_COSTS_CHANGE_ON_RESOURCE_ASSIGNMENTS);
         
         private ProjectField(org.mpxj.ProjectField javaObject)
         {

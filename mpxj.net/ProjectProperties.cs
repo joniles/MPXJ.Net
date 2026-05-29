@@ -1038,6 +1038,18 @@ namespace MPXJ.Net
             set => JavaObject.setEnablePublication(value);
         }
 
+        public double? ActivityDefaultPricePerUnit
+        {
+            get => JavaObject.getActivityDefaultPricePerUnit().ConvertType();
+            set => JavaObject.setActivityDefaultPricePerUnit(value.ConvertType());
+        }
+
+        public bool UpdateUnitsWhenCostsChangeOnResourceAssignments
+        {
+            get => JavaObject.getUpdateUnitsWhenCostsChangeOnResourceAssignments();
+            set => JavaObject.setUpdateUnitsWhenCostsChangeOnResourceAssignments(value);
+        }
+        
         public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ProjectCode, org.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
         
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());
