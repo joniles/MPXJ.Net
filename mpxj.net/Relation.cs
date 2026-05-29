@@ -23,6 +23,8 @@ namespace MPXJ.Net
 
         public int? UniqueID => JavaObject.getUniqueID().ConvertType();
 
+        public bool Driving => JavaObject.getDriving();
+        
         public override string ToString() => JavaObject.toString();
 
         public class Builder : IJavaObjectProxy<org.mpxj.Relation.Builder>
