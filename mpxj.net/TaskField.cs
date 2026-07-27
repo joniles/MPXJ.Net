@@ -1007,6 +1007,18 @@ namespace MPXJ.Net
         public static readonly TaskField RemainingRegularWork = new TaskField(org.mpxj.TaskField.REMAINING_REGULAR_WORK);
         public static readonly TaskField ActualRegularCost = new TaskField(org.mpxj.TaskField.ACTUAL_REGULAR_COST);
         public static readonly TaskField RemainingRegularCost = new TaskField(org.mpxj.TaskField.REMAINING_REGULAR_COST);
+        public static readonly TaskField PlannedCostLabor = new TaskField(org.mpxj.TaskField.PLANNED_COST_LABOR);
+        public static readonly TaskField PlannedCostNonLabor = new TaskField(org.mpxj.TaskField.PLANNED_COST_NON_LABOR);
+        public static readonly TaskField PlannedCostMaterial = new TaskField(org.mpxj.TaskField.PLANNED_COST_MATERIAL);
+        public static readonly TaskField PlannedCostExpense = new TaskField(org.mpxj.TaskField.PLANNED_COST_EXPENSE);
+        public static readonly TaskField ActualCostLabor = new TaskField(org.mpxj.TaskField.ACTUAL_COST_LABOR);
+        public static readonly TaskField ActualCostNonLabor = new TaskField(org.mpxj.TaskField.ACTUAL_COST_NON_LABOR);
+        public static readonly TaskField ActualCostMaterial = new TaskField(org.mpxj.TaskField.ACTUAL_COST_MATERIAL);
+        public static readonly TaskField ActualCostExpense = new TaskField(org.mpxj.TaskField.ACTUAL_COST_EXPENSE);
+        public static readonly TaskField RemainingCostLabor = new TaskField(org.mpxj.TaskField.REMAINING_COST_LABOR);
+        public static readonly TaskField RemainingCostNonLabor = new TaskField(org.mpxj.TaskField.REMAINING_COST_NON_LABOR);
+        public static readonly TaskField RemainingCostMaterial = new TaskField(org.mpxj.TaskField.REMAINING_COST_MATERIAL);
+        public static readonly TaskField RemainingCostExpense = new TaskField(org.mpxj.TaskField.REMAINING_COST_EXPENSE);
 
         private TaskField(org.mpxj.TaskField javaObject)
         {
