@@ -12,7 +12,7 @@ namespace MPXJ.Net
             {
                 Assert.That(rate.Amount, Is.EqualTo(8));
                 Assert.That(rate.Units, Is.EqualTo(TimeUnit.Hours));
-                Assert.That(rate.ToString(), Is.EqualTo("8.0h"));
+                Assert.That(rate.ToString(), Is.EqualTo("8.0/h"));
             });
         }
     }
