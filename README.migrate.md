@@ -23,11 +23,11 @@ Remove the original MPXJ dependency from your project, and add the following:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="IKVM.Maven.Sdk" Version="1.11.0" />
+  <PackageReference Include="IKVM.Maven.Sdk" Version="1.12.1" />
 </ItemGroup>
 
 <ItemGroup>
-    <MavenReference Include="net.sf.mpxj:mpxj" Version="15.1.0" />
+    <MavenReference Include="net.sf.mpxj:mpxj" Version="16.9.0" />
 </ItemGroup>
 ```
 
