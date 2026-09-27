@@ -116,6 +116,12 @@ namespace MPXJ.Net
             set => JavaObject.setDelay(value?.JavaObject);
         }
 
+        public Duration RemainingDelay
+        {
+            get => _proxyManager.ProxyObject(JavaObject.getRemainingDelay());
+            set => JavaObject.setRemainingDelay(value?.JavaObject);
+        }
+
         public int? ResourceUniqueID
         {
             get => JavaObject.getResourceUniqueID().ConvertType();
