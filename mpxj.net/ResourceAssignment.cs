@@ -621,7 +621,9 @@ namespace MPXJ.Net
         public IList<TimephasedCost> GetRawTimephasedBaselineCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineCost(index));
 
         public IList<TimephasedCost> GetRawTimephasedBaselineBudgetCost(int index) => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedBaselineBudgetCost(index));
-        
+
+        public IList<TimephasedCost> RawTimephasedActualCost => _proxyManager.ProxyList<org.mpxj.TimephasedCost, TimephasedCost>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getRawTimephasedActualCost());
+
         public IList<Duration> GetTimephasedPlannedWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedPlannedWork(ranges.ConvertType(), units.ConvertType()));
         
         public IList<Duration> GetTimephasedActualRegularWork(IList<DateTimeRange> ranges, TimeUnit units) => _proxyManager.ProxyList<org.mpxj.Duration, Duration>(_proxyManager.ProxyObject, value => value.JavaObject, JavaObject.getTimephasedActualRegularWork(ranges.ConvertType(), units.ConvertType()));

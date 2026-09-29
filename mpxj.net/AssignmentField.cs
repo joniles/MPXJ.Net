@@ -562,6 +562,7 @@ namespace MPXJ.Net
         public static readonly AssignmentField RawTimephasedBaseline10BudgetCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE10_BUDGET_COST);
         public static readonly AssignmentField Finish = new AssignmentField(org.mpxj.AssignmentField.FINISH);
         public static readonly AssignmentField AssignmentRemainingDelay = new AssignmentField(org.mpxj.AssignmentField.ASSIGNMENT_REMAINING_DELAY);
+        public static readonly AssignmentField RawTimephasedActualCost = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_ACTUAL_COST);
 
         private AssignmentField(org.mpxj.AssignmentField javaObject)
         {
