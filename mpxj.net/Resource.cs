@@ -725,6 +725,12 @@ namespace MPXJ.Net
 
         public double? GetBaselineMaterial(int baselineNumber) => JavaObject.getBaselineMaterial(baselineNumber).ConvertType();
 
+        public bool AutoComputeActuals
+        {
+            get => JavaObject.getAutoComputeActuals();
+            set => JavaObject.setAutoComputeActuals(value);
+        }
+
         public IDictionary<ResourceCode, ResourceCodeValue> ResourceCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ResourceCode, org.mpxj.ResourceCodeValue, ResourceCode, ResourceCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getResourceCodeValues());
         
         public IDictionary<RoleCode, RoleCodeValue> RoleCodeValues => _proxyManager.ProxyDictionary<org.mpxj.RoleCode, org.mpxj.RoleCodeValue, RoleCode, RoleCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getRoleCodeValues());

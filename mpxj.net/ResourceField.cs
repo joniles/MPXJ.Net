@@ -591,7 +591,7 @@ namespace MPXJ.Net
         public static readonly ResourceField Baseline9Material = new ResourceField(org.mpxj.ResourceField.BASELINE9_MATERIAL);
         public static readonly ResourceField Baseline10Material = new ResourceField(org.mpxj.ResourceField.BASELINE10_MATERIAL);
         public static readonly ResourceField PlannedCost = new ResourceField(org.mpxj.ResourceField.PLANNED_COST);
-
+        public static readonly ResourceField AutoComputeActuals = new ResourceField(org.mpxj.ResourceField.AUTO_COMPUTE_ACTUALS);
 
         private ResourceField(org.mpxj.ResourceField javaObject)
         {
