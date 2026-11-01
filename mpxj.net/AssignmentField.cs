@@ -46,7 +46,7 @@ namespace MPXJ.Net
         public static readonly AssignmentField RawTimephasedRemainingOvertimeWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_REMAINING_OVERTIME_WORK);
         public static readonly AssignmentField RawTimephasedPlannedWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_PLANNED_WORK);
         public static readonly AssignmentField RawTimephasedActualRegularWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_ACTUAL_REGULAR_WORK);
-        public static readonly AssignmentField TimephasedActualIrregularWork = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ACTUAL_IRREGULAR_WORK);
+        public static readonly AssignmentField TimephasedAdditionalWorkingHours = new AssignmentField(org.mpxj.AssignmentField.TIMEPHASED_ADDITIONAL_WORKING_HOURS);
         public static readonly AssignmentField RawTimephasedActualOvertimeWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_ACTUAL_OVERTIME_WORK);
         public static readonly AssignmentField RawTimephasedBaselineWork = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE_WORK);
         public static readonly AssignmentField RawTimephasedBaseline1Work = new AssignmentField(org.mpxj.AssignmentField.RAW_TIMEPHASED_BASELINE1_WORK);
