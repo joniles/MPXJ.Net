@@ -1049,7 +1049,13 @@ namespace MPXJ.Net
             get => JavaObject.getUpdateUnitsWhenCostsChangeOnResourceAssignments();
             set => JavaObject.setUpdateUnitsWhenCostsChangeOnResourceAssignments(value);
         }
-        
+
+        public bool RecalculateActualUnitsAndCostWhenDurationPercentCompleteChanges
+        {
+            get => JavaObject.getRecalculateActualUnitsAndCostWhenDurationPercentCompleteChanges();
+            set => JavaObject.setRecalculateActualUnitsAndCostWhenDurationPercentCompleteChanges(value);
+        }
+
         public IDictionary<ProjectCode, ProjectCodeValue> ProjectCodeValues => _proxyManager.ProxyDictionary<org.mpxj.ProjectCode, org.mpxj.ProjectCodeValue, ProjectCode, ProjectCodeValue>(k => _proxyManager.ProxyObject(k), k => k.JavaObject, v => _proxyManager.ProxyObject(v), v => v.JavaObject, JavaObject.getProjectCodeValues());
         
         public ProjectFile ResourcePoolObject => new ProjectFile(_proxyManager, JavaObject.getResourcePoolObject());

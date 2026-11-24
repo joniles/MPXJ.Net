@@ -189,6 +189,7 @@ namespace MPXJ.Net
         public static readonly ProjectField ActivityDefaultCalendarUniqueId = new ProjectField(org.mpxj.ProjectField.ACTIVITY_DEFAULT_CALENDAR_UNIQUE_ID);
         public static readonly ProjectField ActivityDefaultPricePerUnit = new ProjectField(org.mpxj.ProjectField.ACTIVITY_DEFAULT_PRICE_PER_UNIT);
         public static readonly ProjectField UpdateUnitsWhenCostsChangeOnResourceAssignments = new ProjectField(org.mpxj.ProjectField.UPDATE_UNITS_WHEN_COSTS_CHANGE_ON_RESOURCE_ASSIGNMENTS);
+        public static readonly ProjectField RecalculateActualUnitsAndCostWhenDurationPercentCompleteChanges = new ProjectField(org.mpxj.ProjectField.RECALCULATE_ACTUAL_UNITS_AND_COST_WHEN_DURATION_PERCENT_COMPLETE_CHANGES);
         
         private ProjectField(org.mpxj.ProjectField javaObject)
         {
